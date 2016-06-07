@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.pop_wrap {min-width: 340px; max-width: 770px; height: 100%; padding: 0 27px; box-sizing:border-box; overflow-y: auto; border:1px #969696 solid; position: relative;}
+.pop_wrap.pop_layer {height: auto; position: absolute; top: 10%; left: 20%; padding: 0 0 30px; background: #fff; z-index: 1100;}
+.pop_wrap.pop_layer .pop_header {position: relative; border: 0;}
+.pop_wrap.pop_layer .pop_conts {margin: 0;padding: 30px 27px 0; margin-bottom: 30px;}
+.pop_wrap .pop_header {width:100%; min-width: 340px; max-width: 770px; position: fixed; top: 0; left: 0; padding: 0 27px; background: #fff; border-left: 1px solid #969696; border-right: 1px solid #969696; border-top: 1px solid #969696; box-sizing: border-box; z-index: 100;}
+.pop_wrap .pop_header h1, .pop_wrap .pop_header h2, .pop_wrap .pop_header h3, .pop_wrap .pop_header h4, .pop_wrap .pop_header h5, .pop_wrap .pop_header h6 {padding: 24px 0 11px 0; border-bottom: 1px solid #333;font-size: 22px;}
+.pop_wrap .pop_conts {padding: 27px 0;margin: 61px 0 30px; }
+.pop_wrap .pop_conts .pop_subTitle {font-size: 16px; font-weight: normal; padding: 30px 0 8px;}
+
+.pop_wrap.pop_layer .pop_footer {position: absolute; border: 0;}
+.pop_wrap .pop_footer {width: 100%; min-width: 340px; max-width: 770px; height: 30px; position: fixed; bottom: 0; left: 0; background: #ebebeb; border-left: 1px solid #969696; border-right: 1px solid #969696; border-bottom: 1px solid #969696; box-sizing: border-box;}
+.pop_wrap .pop_footer .pop_footerInner {width: 100%; padding: 0; background: #ebebeb; overflow: hidden; margin-top: 0; position: static; bottom: 0; line-height: 30px;}
+			.pop_footer .pop_footerInner .pop_check {float: left; padding: 0 0 0 27px}
+			.pop_footer .pop_footerInner .pop_close {position: absolute; top:10px; right: 27px; padding: 0;}
+
+
+
+/* 이메일 명세서 도움말 */
+.pop_wrap .pop_conts .pop_billPluginBox {margin:15px 0 0 0;border: 1px solid #ccc;}
+						 .pop_billPluginBox .pop_billPluginBoxTitle {padding:10px;background:#f1f1f1;}
+						 .pop_billPluginBox ul {padding:10px 10px 0 10px;}
+						 .pop_billPluginBox ul li {padding-bottom: 10px;}
+
+.pop_wrap .pop_conts .pop_billActiveGuide01 {width:100%; height:711px;position:relative;margin-top:15px;background: url('../images/pop/thumb/pop_thumb_emailHelpTab02_01.jpg') center bottom no-repeat;}
+			.pop_conts .pop_billActiveGuide01 span, .pop_conts .pop_billActiveGuide01 span, .pop_conts .pop_billActiveGuide01 span, .pop_conts .pop_billActiveGuide01 span {position: absolute;left:0;top: 0;}
+
+
+.pop_wrap .pop_conts .pop_billActiveGuide02 {width:100%; height:653px;position:relative;margin-top:15px;background: url('../images/pop/thumb/pop_thumb_emailHelpTab02_02.jpg') center bottom no-repeat;}
+.pop_wrap .pop_conts .pop_billActiveGuide03 {width:100%; height:326px;position:relative;margin-top:15px;background: url('../images/pop/thumb/pop_thumb_emailHelpTab02_03.jpg') center bottom no-repeat;}
+.pop_wrap .pop_conts .pop_billActiveGuide04 {width:100%; height:385px;position:relative;margin-top:15px;background: url('../images/pop/thumb/pop_thumb_emailHelpTab02_04.jpg') center bottom no-repeat;}
+
+/* 가입상품 조회/관리 */
+.pop_prod_wrap {}
+.pop_prod_wrap .pop_txt_prod_syt1 {font-weight: bold;}
+.pop_prod_wrap .pop_txt_prod_syt2 {}
+
+.pop_prod_wrap .btnWrap{margin:28px 0 0 0; text-align: center;}
+.pop_prod_wrap .btnWrap a {margin:0 0 0 6px;}
+.pop_prod_wrap .btnWrap a:first-child {margin:0;}
