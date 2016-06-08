@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] 영문 명세서 도움말 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My Page] 지로 납부 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
@@ -36,21 +36,54 @@
 
 		<!-- s : header -->
 		<div class="pop_header">
-			<h1>영문 명세서 도움말</h1>
+			<h1>지로 납부</h1>
 		</div>
 		<!-- e : header -->
 
 		<!-- s : contents -->
 		<div class="pop_conts">
 
-			<h2 class="pop_subTitle pt0">영문 명세서 신청</h2>
-			<ul class="bulletList">
-				<li>영문 명세서는 <span class="emp01">모바일 상품 전용 서비스</span>입니다.</li>
-				<li>영문 명세서를 신청하시면, 고객님이 이용중인 명세서 (이메일 명세서, 우편 명세서 등)가 영문으로 제공됩니다.</li>
-				<li>다른 주소로 명세서를 받고자 하실 경우 My올레 &gt; 명세서관리 &gt; 명세서 수령방법 변경 &gt; 청구 주소 변경에서 정확한 주소로 수정해 주시면, 정확하고 안전하게 명세서를 받으실 수 있습니다.</li>
-				<li>우편 명세서를 수령하시는 고객님 중 정보보호를 위해 명세서 내 핸드폰 번호가 <br>표시되지 않게 하시려면 명세서관리 &gt; 명세서 수령방법 변경 &gt; 명세서 신청/변경에서 전화번호 숨김을 선택해주세요.</li>
-				
-			</ul>
+			<div class="comm_tableBrdr">
+				<table class="comm_table" summary="청구주소, 납부일 순서로 지로 납부 정보를 변경할 수 있는 표 입니다.">
+					<caption>지로 납부 변경 정보</caption>
+					<colgroup>
+						<col width="25%" />
+						<col width="*" />
+						<col width="88px" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">청구주소</th>
+							<td class="last">
+								<dl class="pop_bill_addrList">
+									<dt><img src="../../images/icon/bill_addType02.gif" alt="도로명주소"/></dt>
+									<dd >서초구 서초동 효령로 ********</dd>
+									<dt class="mb0"><img src="../../images/icon/bill_addType01.gif" alt="지번주소"/></dt>
+									<dd class="mb0">서초구 서초동 방배3동 1001-1번지 KTDS</dd>
+								</dl>
+							</td>
+							<td class="last">
+								<a href="" class="btnSty1">변경</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="paymentDate">납부일</label>
+							</th>
+							<td class="last" colspan="2">
+								<select id="paymentDate" >
+									<option>매월 27일</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="alignCenter mt28">
+				<a href="" class="defaultBtn comm_btn_red01">변경하기</a>
+			</div>
+
 		</div>
 		<!-- e : contents -->
 

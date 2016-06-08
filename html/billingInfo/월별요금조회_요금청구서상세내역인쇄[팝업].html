@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] 모바일 전체회선 월별요금 내역 신청 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My Page] 요금청구서 상세내역 인쇄 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
@@ -36,60 +36,77 @@
 
 		<!-- s : header -->
 		<div class="pop_header">
-			<h1>모바일 전체회선 월별요금 내역 신청</h1>
+			<h1>요금청구서 상세내역 인쇄</h1>
 		</div>
 		<!-- e : header -->
 
 		<!-- s : contents -->
 		<div class="pop_conts">
 
-			<div class="comm_tableBrdr">
-				<table class="comm_table" summary="내역 신청월, 수신메일주소 순서로 모바일 전체회선 월별요금 내역 신청을 할 수 있는 표 입니다.">
-					<caption>모바일 전체회선 월별요금 내역 신청</caption>
+			<p class="bulletIcon">2016년 05월 요금 상세내역입니다. (사용기간 : 2016.04~04.30)</p>
+			<div class="comm_tableBrdr mt12 mb27">
+				<table class="comm_table" summary="요금 상세 항목, 할인전, 할인, 할인 후 순서로 요금 상세내역을 확인 할 수 있는 표 입니다.">
+					<caption>요금청구서 상세내역</caption>
 					<colgroup>
-						<col width="25%" />
 						<col width="*" />
+						<col width="25%" />
+						<col width="25%" />
+						<col width="25%" />
 					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">요금 상세 항목</th>
+							<th scope="col">할인전</th>
+							<th scope="col">할인</th>
+							<th scope="col" class="last">할인 후</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td class="left emp01">합계</td>
+							<td class="right num emp01">7,217원</td>
+							<td class="right num emp01">0</td>
+							<td class="right num emp01 last">7,217원</td>
+						</tr>
+					</tfoot>
 					<tbody>
 						<tr>
-							<th scope="row" class="left">
-								<label for="listApplyMonth">내역 신청월</label>
-							</th>
-							<td class="last">
-								<select id="listApplyMonth">
-									<option>2016년 5월</option>
-									<option>2016년 6월</option>
-									<option>2016년 7월</option>
-								</select>
-							</td>
+							<td class="left">기본료</td>
+							<td class="right num">5,200원</td>
+							<td class="right num">0</td>
+							<td class="right num last">5,200원</td>
 						</tr>
 						<tr>
-							<th scope="row" class="left">
-								<label for="mailAddr">수신메일주소</label>
-							</th>
-							<td class="last">
-								<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15" />
-								<span>@</span>
-								<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled" />
-								<select id="emailAddr2" class="comm_mailInput03" title="메일 도메인을 선택해주세요." onchange="$.ktBizMailChg(this); return false;">
-									<option value="">선택하세요.</option>
-									<option value="naver.com">naver.com</option>
-									<option value="daum.net">daum.net</option>
-									<option value="hanmail.net">hanmail.net</option>
-									<option value="nate.com">nate.com</option>
-									<option value="gmail.com">gmail.com</option>
-									<option value="kornet.net">kornet.net</option>
-									<option value="self">직접 입력</option>
-								</select>
-							</td>
+							<td class="left">시내통화료</td>
+							<td class="right num">78원</td>
+							<td class="right num">0</td>
+							<td class="right num last">78원</td>
+						</tr>
+						<tr>
+							<td class="left">이동전화에 건 통화료</td>
+							<td class="right num">841원</td>
+							<td class="right num">0</td>
+							<td class="right num last">841원</td>
+						</tr>
+						<tr>
+							<td class="left">인터넷전화 통화료</td>
+							<td class="right num">98원</td>
+							<td class="right num">0</td>
+							<td class="right num last">98원</td>
+						</tr>
+						<tr>
+							<td class="left">착신통화전환 이용료</td>
+							<td class="right num">1,000원</td>
+							<td class="right num">0</td>
+							<td class="right num last">1,000원</td>
 						</tr>
 					</tbody>
+					
 				</table>
 			</div>
-			<p class="mt25 bulletDg">전체회선의 월별요금내역은 이메일로 받으실 수 있습니다. 회선 수에 따라 첨부파일의 데이터 크기가 커질 수 있으니, 받으실 메일 주소의 여유 저장공간을 확인해 주시기 바랍니다.</p>
 
-			<div class="alignCenter mt28">
-				<a href="" class="defaultBtn comm_btn_red01">신청</a>
+			<div class="posR2 absolute top15 right0">
+				<a href="" class="btnSty1 icon_print"><span>상세내역 인쇄</span></a>
 			</div>
 
 		</div>
