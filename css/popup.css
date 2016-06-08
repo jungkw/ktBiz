@@ -48,3 +48,28 @@
 .pop_prod_wrap .pop_prod_title_center p {margin-top:12px;}
 .pop_prod_wrap .pop_prod_agree {margin-top:30px; color:#666; font-size:12px;}
 .pop_prod_wrap .btnWrap {margin-top:25px; text-align:center;}
+
+
+
+
+/* 신청/변경 */
+.pop_wrap .pop_svc .subList li {background:url(../images/icon/comm_icon_minus_smallBullet.gif) no-repeat 0 9px;}
+
+.pop_svc {font-size:14px; color:#555; line-height:1.4;}
+.pop_svc .bulletIcon {background-position:0 8px;}
+.pop_svc .btnWrap {margin:28px 0 0 0; text-align:center;}
+.pop_svc .infoBox {margin:30px 0 0 0; padding:10px; background:#f9f9f9; border:1px solid #d7d7d7;}
+.pop_svc .infoBox p {padding: 0 0 0 10px; font-size:12px; background: url(../images/icon/comm_icon_square_smallBullet.png) no-repeat 0 8px;}
+.pop_svc .infoBox p + p {margin:5px 0 0 0;}
+
+.pop_svcTv,
+.pop_svcTv .pop_header,
+.pop_svcTv .pop_footer {max-width:817px;}
+.pop_svc .pop_svcTvHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_tv.jpg) no-repeat 100% 0;}
+.pop_svc .pop_svcTvIframe iframe {height:3269px;}
+
+.pop_svcSky,
+.pop_svcSky .pop_header,
+.pop_svcSky .pop_footer {max-width:817px;}
+.pop_svc .pop_svcSkyHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_skylife.jpg) no-repeat 100% 0;}
+.pop_svc .pop_svcSkyIframe iframe {height:2671px;}
