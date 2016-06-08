@@ -117,7 +117,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 /* btn size */
 .btnSty {display:inline-block; color:#333;border:1px solid #bbb; text-align: center; background: #fff;}
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#333 !important; text-decoration: none !important;}
-.btnSty.big {height:31px;padding:0 20px; font-size:14px; line-height: 31px;}
+.btnSty.big {height:31px;padding:0 30px; font-size:14px; line-height: 31px;}
 .btnSty.mid {height:28px;padding:0 11px; font-size:12px; line-height: 28px;}
 
 .btnSmall {height:12px; display:inline-block; font-size:12px;color:#000;line-height: 12px; text-align: center; text-decoration: underline !important;}
