@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] TV Skylife 채널안내 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My Page] 가입정보 조회</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
@@ -32,23 +32,56 @@
 <body>
 
 
-	<div class="pop_wrap pop_svcSky">
+	<div class="pop_wrap">
 
 		<!-- s : header -->
 		<div class="pop_header">
-			<h1>TV 채널 안내</h1>
+			<h1>핸드폰 개통이력 조회</h1>
 		</div>
 		<!-- e : header -->
 
 		<!-- s : contents -->
 		<div class="pop_conts">
-			<div class="pop_svc">
-				<div class="pop_svcSkyHeader">
-					<h2 class="pop_subTitle pt0">olleh tv skylife</h2>
-					<p>국내 최다 HD 채널로 아날로그 방송보다 5배 이상,<br />DVD보다 2~3배의 선명한 화질로 실감나게 즐기는<br />olleh tv skylife 채널 서비스</p>
+
+			<div class="pop_prod_wrap">
+				<div class="pop_prod_title">
+					<div class="pop_prod_title_center icon_blank">
+						<p class="pop_txt_prod_syt1">핸드폰 개통이력 조회</p>
+						<p>고객님의 개통된 핸드폰 번호에 대한 모든 개통이력을 확인할 수 있습니다.</p>
+					</div>
 				</div>
-				<div class="pop_svcSkyIframe">
-					<iframe name="tv_channel_skylife" id="tv_channel_skylife" src="http://tv.olleh.com/renewal_sub/skylife/skylife_pop.asp" "autoResize(this)" border="0" frameborder="0" width="100%" scrolling="no" title="TV채널안내 olleh tv skylife"></iframe>
+				<h2 class="pop_subTitle pt0">개통이력 조회 대상 번호 선택</h2>
+				<ul class="bulletList">
+					<li>개통이력 조회를 원하는 핸드폰 번호를 선택한 후, [조회]버튼을 클릭해주세요.</li>
+					<li>핸드폰 정보는 명의자가 사용중인 모든 핸드폰 번호입니다. (현재 일시정지 된 핸드폰 번호 포함)</li>
+				</ul>
+
+				<div class="comm_tableBrdr mt10">
+					<table class="comm_table" summary="조회를 원하는 핸드폰 번호를 선택 할 수 있습니다.">
+						<caption>개통이력 조회 대상 번호</caption>
+						<colgroup>
+							<col width="25%" />
+							<col />
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">선택</th>
+							<th scope="col">핸드폰 번호</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="center">
+									<span><input type="radio" name="radio" id="radio01" class="mr5" /></span>
+								</td>
+								<td class="last center"><label for="radio01">010-1234-*678</label></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="btnWrap">
+				  <a href="#" class="btnSty1">조회</a>
 				</div>
 			</div>
 
@@ -64,6 +97,10 @@
 			</div>
 		</div>
 		<!-- e : footer -->
+
+		<div class="pop_headCloseWrap">
+			<a href="" class="pop_btn_close pop_headClose"><img src="../../images/btn/pop_btn_headClose.png" alt="닫기"></a>
+		</div>
 	</div>
 
 </body>
