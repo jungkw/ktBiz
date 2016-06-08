@@ -6,7 +6,7 @@
 .pop_wrap.pop_layer .pop_conts {margin: 0;padding: 30px 27px 0; margin-bottom: 30px;}
 .pop_wrap .pop_header {width:100%; min-width: 340px; max-width: 770px; position: fixed; top: 0; left: 0; padding: 0 27px; background: #fff; border-left: 1px solid #969696; border-right: 1px solid #969696; border-top: 1px solid #969696; box-sizing: border-box; z-index: 100;}
 .pop_wrap .pop_header h1, .pop_wrap .pop_header h2, .pop_wrap .pop_header h3, .pop_wrap .pop_header h4, .pop_wrap .pop_header h5, .pop_wrap .pop_header h6 {padding: 24px 0 11px 0; font-weight: bold; border-bottom: 1px solid #333;font-size: 22px;}
-.pop_wrap .pop_conts {padding: 27px 0;margin: 61px 0 30px; }
+.pop_wrap .pop_conts {padding: 27px 0;margin: 61px 0 30px; position: relative;}
 .pop_wrap .pop_conts .pop_subTitle {font-size: 16px; color:#333; font-weight: bold; padding: 30px 0 12px;}
 .pop_wrap .pop_headCloseWrap {width: 100%; min-width: 340px; max-width: 770px; position: fixed;top:21px;left:0;z-index: 110;}
 .pop_wrap .pop_headCloseWrap .pop_headClose {display:block;width:18px;height:17px;float:right;margin-right: 30px;}
@@ -36,6 +36,9 @@
 .pop_wrap .pop_conts .pop_billOutlookEx02 {width:100%; height:429px;position:relative;margin-top:25px;background: url('../images/pop/thumb/pop_thumb_emailHelpTab04_02.jpg') center bottom no-repeat;}
 
 
+/* 지로 납부 */
+.pop_wrap .pop_bill_addrList dt {float:left;margin-right: 10px;}
+.pop_wrap .pop_bill_addrList dt,.pop_wrap .pop_bill_addrList dd {margin-bottom:8px;}
 
 
 /* 가입상품 조회/관리 */

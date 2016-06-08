@@ -9,6 +9,26 @@ $(document).ready(function(){
 
 
 
+    /**
+    * email chg fn
+    * @param {object} this
+    */
+    $.ktBizMailChg = function(obj){
+        var $obj = $(obj);
+        var $target = $('.comm_mailInput02');
+        var $val = $obj.val();
+        if($val=="self"){
+          $target.prop("disabled", false).focus();
+        }else{
+          $target.prop("disabled", true);
+          $target.val($val)
+          if($val==""){
+            $target.val("");
+          }
+        }
+        return false;
+    };
+
 
     /**
     * select box chg fn

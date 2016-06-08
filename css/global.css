@@ -43,8 +43,8 @@ ul.comm_tab ul.comm_subTab li.first {border-left:0;padding-left:18px;}
 .comm_tableBrdr {border-top:1px solid #888;}
 .comm_table {width:100%; }
 .comm_table th, .comm_table td {color: #000;text-align: center;font-size:14px;border-right: 1px solid #f2f2f2;border-bottom: 1px solid #ccc;background: #f9f9f9;font-weight: bold;}
-.comm_table th {padding: 15px 0 15px 18px;}
-.comm_table td {padding: 15px 0 15px 20px;color: #555;text-align: left;background: #fff;font-weight: normal;}
+.comm_table th {padding: 15px 18px;}
+.comm_table td {padding: 15px 20px;color: #555;text-align: left;background: #fff;font-weight: normal;}
 .comm_table th.last, .comm_table td.last {border-right:0;}
 .comm_table tr.tbline th, .comm_table tr.tbline td {border-top:1px solid #ccc; }
 
@@ -59,9 +59,9 @@ ul.comm_tab ul.comm_subTab li.first {border-left:0;padding-left:18px;}
 
 
 /* bullet */
-ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 7px; line-height: 18px;}
-.bulletIcon {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 7px;}
-
+ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 6px; line-height: 18px;}
+.bulletIcon {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 5px;}
+.bulletDg {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 2px;}
 .pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.gif') no-repeat left 1px;}
 
 
@@ -99,7 +99,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .commBtnWrap a {margin:0 0 0 6px;}
 .commBtnWrap a:first-child {margin:0;}
 
-.defaultBtn {width:87px;height: 33px;display:inline-block;color:#fff;font-size:14px;line-height: 33px;text-align: center;}
+.defaultBtn {width:87px;height: 31px;display:inline-block;color:#fff;font-size:14px;line-height: 31px;text-align: center;}
 .defaultBtn:hover, .defaultBtn:focus, .defaultBtn:active {color:#fff !important; text-decoration: none !important;}
 .defaultBtn.comm_btn_red01, .defaultBtn.comm_btn_red02, .defaultBtn.comm_btn_red03 {background:#ed1c24;border:1px solid #db151c;} 
 .defaultBtn.comm_btn_gray01, .defaultBtn.comm_btn_gray02, .defaultBtn.comm_btn_gray03 {background:#5d5d5d;border:1px solid #3d3d3d;} 
@@ -148,6 +148,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .ml32 {margin-left:32px;}
 .ml38 {margin-left:38px;} 
 .ml40 {margin-left:40px;}
+.ml75 {margin-left:75px;}
 .ml95 {margin-left:95px;}
 .ml110 {margin-left:110px;}
 .ml142 {margin-left:142px;}
@@ -189,6 +190,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .mr5 {margin-right:5px;}
 .mr8 {margin-right:5px;}
 .mr40 {margin-right:40px;}
+.mb0 {margin-bottom:0 !important;}
 .mb2 {margin-bottom:2px;}
 .mb5 {margin-bottom:5px;}
 .mb6 {margin-bottom:6px;}
@@ -197,6 +199,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .mb10 {margin-bottom:10px}
 .mb14 {margin-bottom:14px;}
 .mb20 {margin-bottom:20px;}
+.mb27 {margin-bottom:27px;}
 .mb29 {margin-bottom:29px;}
 .mb40 {margin-bottom:40px;}
 
@@ -218,6 +221,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .font11 {font-size:11px;}
 .font14 {font-size:14px !important;}
 .font16 {font-size:16px;}
+.font20 {font-size:20px;}
 .alignLeft {text-align:left;}
 .alignCenter {text-align:center;}
 .alignRight {text-align:right;}
@@ -244,6 +248,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .w55 {width:55px}
 .w65 {width:65px}
 .w67 {width:67px}
+.w70 {width:70px}
 .w75 {width:75px}
 .w78 {width:78px}
 .w85 {width:85px}
@@ -281,3 +286,12 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 /* color */
 .black {color:#000;}
 .gray {color:#999;}
+
+.absolute {position: absolute;}
+.relative {position: relative;}
+.top15 {top:15px;}
+.top18 {top:18px;}
+.top96 {top:96px;}
+.right0 {right:0;}
+.left0 {left:0;}
+.left20 {left:20px;}
