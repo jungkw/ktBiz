@@ -1,8 +1,11 @@
 @charset "utf-8";
 
 /* title */
-.comm_scnTitle {margin:0 0 22px 0; font-size:16px; color: #333;}
-
+.commTitleWrap {position: relative; min-height:30px;}
+.commTitleWrap .comm_scnTitle {position: absolute; top:-3px; left:0; font-size:18px; color: #333; font-weight:bold;}
+.commTitleWrap .comm_scnTitle1 {position: relative; top:-2px; left:0; font-size:16px; color: #333; font-weight:bold;}
+.commTitleWrap .posR1 {position: absolute; bottom:8px; right:0;}
+.commTitleWrap .posR2 {position: absolute; top:-5px; right:0;}
 
 /* select box */
 .comm_selectbox {width:390px;height: 32px;position: relative;border:1px solid #d6d6d6;cursor: pointer;box-sizing: border-box;}
@@ -37,8 +40,9 @@ ul.comm_tab ul.comm_subTab li.first {border-left:0;padding-left:18px;}
 /* table */
 .comm_tableBrdr {border-top:1px solid #888;}
 .comm_table {width:100%; }
-.comm_table th, .comm_table td {padding: 15px 10px;color: #000;text-align: center;font-size:14px;border-right: 1px solid #f2f2f2;border-bottom: 1px solid #ccc;background: #f9f9f9;font-weight: bold;}
-.comm_table td {color: #555;text-align: left;background: #fff;font-weight: normal;}
+.comm_table th, .comm_table td {color: #000;text-align: center;font-size:14px;border-right: 1px solid #f2f2f2;border-bottom: 1px solid #ccc;background: #f9f9f9;font-weight: bold;}
+.comm_table th {padding: 15px 0 15px 18px;}
+.comm_table td {padding: 15px 0 15px 20px;color: #555;text-align: left;background: #fff;font-weight: normal;}
 .comm_table th.last, .comm_table td.last {border-right:0;}
 .comm_table tr.tbline th, .comm_table tr.tbline td {border-top:1px solid #ccc; }
 
@@ -48,13 +52,15 @@ ul.comm_tab ul.comm_subTab li.first {border-left:0;padding-left:18px;}
 .comm_table th.right, .comm_table td.right {text-align:right;}
 .comm_table th.center, .comm_table td.center {text-align:center;}
 .comm_table td.first, .comm_table th.first {border-left: 1px solid #f2f2f2;}
-.comm_table .textLink a {font-size:14px;}
+.comm_table .textLink a {font-size:inherit; color:inherit; text-decoration: none;}
 .comm_table .num {font-size:16px;}
 
 
 /* bullet */
 ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 7px; line-height: 18px;}
 .bulletIcon {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 7px;}
+
+.pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.gif') no-repeat left 1px;}
 
 
 /* paging */
@@ -86,6 +92,11 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 
 
 /* button */
+.commBtnWrap{text-align: center;}
+.commBtnWrap.right {text-align: right;}
+.commBtnWrap a {margin:0 0 0 6px;}
+.commBtnWrap a:first-child {margin:0;}
+
 .defaultBtn {width:87px;height: 33px;display:inline-block;color:#fff;font-size:14px;line-height: 33px;text-align: center;}
 .defaultBtn:hover, .defaultBtn:focus, .defaultBtn:active {color:#fff !important; text-decoration: none !important;}
 .defaultBtn.comm_btn_red01, .defaultBtn.comm_btn_red02, .defaultBtn.comm_btn_red03 {background:#ed1c24;border:1px solid #db151c;} 
@@ -96,6 +107,9 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .iconBtn {height:24px;padding:0 9px;display:inline-block;font-size:12px;color:#333;border:1px solid #e0e0e0;line-height: 24px;text-align: center;}
 .iconBtn:hover, .iconBtn:focus, .iconBtn:active {color:#333 !important; text-decoration: none !important;}
 .iconBtn.comm_btn_white01 span {padding:0 9px 0 0;background: url('../images/icon/comm_icon_red_arrow.gif') no-repeat right center;}
+
+.btnSty1 {height:28px;padding:0 11px; display:inline-block; font-size:12px;color:#666;border:1px solid #e0e0e0;line-height: 28px; text-align: center; background: #fff;}
+.btnSty1.icon_print span {padding:0 0 0 25px;background:url('../images/icon/comm_icon_print.png') no-repeat left center;}
 
 
 
@@ -156,6 +170,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .mt39 {margin-top:39px;}
 .mt40 {margin-top:40px !important;}
 .mt49 {margin-top:49px;}
+.mt50 {margin-top:50px;}
 .mt57 {margin-top:57px;}
 .pt0 {padding-top:0px !important;}
 .pt5 {padding-top:5px !important;}

@@ -156,7 +156,7 @@ div#cfmOllehLnb div.cfmOllehSrvLnb {padding:24px 0 25px 18px;border-bottom:1px s
 #cfmOllehContainer:after {content: ".";display: block;height: 0;overflow: hidden;clear: both;}
 .cfmOllehcontsLnbOn {float: right;width: 770px !important;height: auto;margin: 0;}
 .cfmOllehContsHeader {height: 40px;border-bottom: 1px solid #eee;}
-.cfmOllehContsTit {float: left;}
+.cfmOllehContsTit {float:left; padding:7px 0 0 0;}
 .cfmOllehContsLocation {max-width: 530px;padding: 11px 10px 0 0;float: right;font-family: "Malgun Gothic", "Dotum", sans-serif;font-size: 11px;line-height: 14px;text-indent: -20px;}
 .cfmOllehContsLocation a {margin: 0 1px;padding: 0;background: none;color: #545454;font-weight: normal;font-size: 11px;}
 .cfmOllehContsLocation a:hover {color: #ed1c24;text-decoration: underline;}
