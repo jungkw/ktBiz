@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+.prodLink.blk {color:#000;}
+.prodTxt1 {color:#555; font-size: 14px;}
+
 .prodCategoryWrap {position:relative; height:130px; background:url('../images/common/prod_bg_category.gif') repeat-x left top; border: 1px solid #000;}
 .prodCategoryWrap .viewWrap {position:absolute; top:0; left:0; overflow: hidden;}
 
@@ -11,16 +14,26 @@
 .prodDetailWrap .innerWrap1 .prodName {display:block; padding:10px 0 0 0; font-size:16px; text-align: center; color:#000;}
 .prodDetailWrap .innerWrap1 .prodInfo {float:left; display:inline-block; width: 490px;}
 .prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr {border-top: 1px solid #ccc;}
+.prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr th {background: #fff;}
 .prodDetailWrap .innerWrap1 .prodInfo .txtWrap {margin:-5px 0 -1px 0; padding:0 130px 0 0;}
 .prodDetailWrap .innerWrap1 .prodInfo .mgR13 {margin:0 13px 0 0;}
 .prodDetailWrap .innerWrap2 {overflow:hidden; padding:0 0 50px 20px;}
 .prodDetailWrap .innerWrap2 .inner {float:left; width: 354px; margin:0 20px 0 0;}
 .prodDetailWrap .innerWrap2 .inner .txtWrap {padding:0 60px 0 0;}
 .prodDetailWrap .innerWrap2 .inner .txtWrap .btn{right:23px;}
+.prodDetailWrap .innerWrap2 .inner .comm_tableBrdr th {background: #fff;}
 .prodDetailWrap .txtWrap {position: relative;}
 .prodDetailWrap .txtWrap .date {display: block; font-size: 12px;}
 .prodDetailWrap .txtWrap .btn {display:inline-block; position: absolute; top:50%; right:0; height:12px; margin:-6px 0 0 0; color:#000; font-size: 12px; line-height:1; text-decoration: underline;}
 .prodDetailWrap .txtWrap .btn.red {color:#ef1c25;}
 
-.prodLink.blk {color:#000;}
-.prodTxt1 {color:#555; font-size: 14px;}
+.prodPhoneCareService {overflow: hidden;}
+.prodPhoneCareService li {float:left; width:146px; margin:0 0 0 10px;}
+.prodPhoneCareService li:first-child {margin:0;}
+.prodPhoneCareService .phoneCareWrap {position:relative; display:block; height:160px; border: 1px solid #e0e0e0;}
+.prodPhoneCareService .phoneCareWrap span {position:absolute; bottom:16px; left:0; width: 100%; display: block; text-align: center; line-height:1.58;}
+.prodPhoneCareService .phoneCareWrap.ic1 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
+.prodPhoneCareService .phoneCareWrap.ic2 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
+.prodPhoneCareService .phoneCareWrap.ic3 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
+.prodPhoneCareService .phoneCareWrap.ic4 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
+.prodPhoneCareService .phoneCareWrap.ic5 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
