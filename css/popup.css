@@ -6,8 +6,8 @@
 .pop_wrap.pop_layer .pop_conts {margin: 0;padding: 30px 27px 0; margin-bottom: 30px;}
 .pop_wrap .pop_header {width:100%; min-width: 340px; max-width: 770px; position: fixed; top: 0; left: 0; padding: 0 27px; background: #fff; border-left: 1px solid #969696; border-right: 1px solid #969696; border-top: 1px solid #969696; box-sizing: border-box; z-index: 100;}
 .pop_wrap .pop_header h1, .pop_wrap .pop_header h2, .pop_wrap .pop_header h3, .pop_wrap .pop_header h4, .pop_wrap .pop_header h5, .pop_wrap .pop_header h6 {padding: 24px 0 11px 0; font-weight: bold; border-bottom: 1px solid #333;font-size: 22px;}
-.pop_wrap .pop_conts {padding: 27px 0;margin: 61px 0 30px; }
-.pop_wrap .pop_conts .pop_subTitle {font-size: 16px; color:#333; font-weight: bold; padding: 30px 0 15px;}
+.pop_wrap .pop_conts {padding: 27px 0;margin: 61px 0 30px; position: relative;}
+.pop_wrap .pop_conts .pop_subTitle {font-size: 16px; color:#333; font-weight: bold; padding: 30px 0 12px;}
 .pop_wrap .pop_headCloseWrap {width: 100%; min-width: 340px; max-width: 770px; position: fixed;top:21px;left:0;z-index: 110;}
 .pop_wrap .pop_headCloseWrap .pop_headClose {display:block;width:18px;height:17px;float:right;margin-right: 30px;}
 
@@ -36,15 +36,53 @@
 .pop_wrap .pop_conts .pop_billOutlookEx02 {width:100%; height:429px;position:relative;margin-top:25px;background: url('../images/pop/thumb/pop_thumb_emailHelpTab04_02.jpg') center bottom no-repeat;}
 
 
+/* 지로 납부 */
+.pop_wrap .pop_bill_addrList dt {float:left;margin-right: 10px;}
+.pop_wrap .pop_bill_addrList dt,.pop_wrap .pop_bill_addrList dd {margin-bottom:8px;}
 
 
 /* 가입상품 조회/관리 */
 .pop_prod_wrap {font-size:14px; color:#555; line-height:1.4;}
-.pop_prod_wrap .icon_blank {padding-left:20px;}
-.pop_prod_wrap .pop_txt_prod_syt1 {font-size:16px; color:#333; font-weight: bold; line-height:1.2;}
-.pop_prod_wrap .pop_txt_prod_syt2 {}
+.pop_prod_wrap .prodIntroWrap {position:relative; min-height: 100px; padding:0 0 0 134px;}
+.pop_prod_wrap .prodtxtSyt1 {font-size:16px; color:#333; font-weight: bold; line-height:1.2;}
+.pop_prod_wrap .prodtxtSyt2 {font-size:11px; color:#666;}
+.pop_prod_wrap .prodtxtSyt3 {color:#555; line-height: 1.4;}
+.pop_prod_wrap .prodtxtSyt3.mg4m {margin:-4px 0 0 0;}
+.pop_prod_wrap .bulletList {margin:-9px 0 0 0;}
+
+
 .pop_prod_wrap .pop_prod_title {margin-bottom:30px; padding:30px 42px; text-align:center; }
 .pop_prod_wrap .pop_prod_title_center {display:inline-block; text-align:left;}
 .pop_prod_wrap .pop_prod_title_center p {margin-top:12px;}
 .pop_prod_wrap .pop_prod_agree {margin-top:30px; color:#666; font-size:12px;}
 .pop_prod_wrap .btnWrap {margin-top:25px; text-align:center;}
+
+.pop_prod_wrap .innerTable th,
+.pop_prod_wrap .innerTable td {padding:15px 5px; font-size:12px; text-align:center; border-right:none;}
+.pop_prod_wrap .innerTable td span.num {font-size:12px;}
+
+
+
+
+/* 신청/변경 */
+.pop_wrap .pop_svc .subList li {background:url(../images/icon/comm_icon_minus_smallBullet.gif) no-repeat 0 9px;}
+
+.pop_svc {font-size:14px; color:#555; line-height:1.4;}
+.pop_svc .bulletIcon {background-position:0 8px;}
+.pop_svc .btnWrap {margin:28px 0 0 0; text-align:center;}
+.pop_svc .infoBox {margin:30px 0 0 0; padding:10px; background:#f9f9f9; border:1px solid #d7d7d7;}
+.pop_svc .infoBox p {padding: 0 0 0 10px; font-size:12px; background: url(../images/icon/comm_icon_square_smallBullet.png) no-repeat 0 8px;}
+.pop_svc .infoBox p + p {margin:5px 0 0 0;}
+
+.pop_svcTv,
+.pop_svcTv .pop_header,
+.pop_svcTv .pop_footer {max-width:817px;}
+.pop_svc .pop_svcTvHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_tv.jpg) no-repeat 100% 0;}
+.pop_svc .pop_svcTvIframe iframe {height:3269px;}
+
+.pop_svcSky,
+.pop_svcSky .pop_header,
+.pop_svcSky .pop_footer {max-width:817px;}
+.pop_svc .pop_svcSkyHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_skylife.jpg) no-repeat 100% 0;}
+.pop_svc .pop_svcSkyIframe iframe {height:2671px;}
+
