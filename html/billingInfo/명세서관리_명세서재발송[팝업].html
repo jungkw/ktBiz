@@ -44,8 +44,8 @@
 		<div class="pop_conts">
 
 			<div>
-				<span class="mr10"><input type="radio" name="billType" id="emailType" class="mr5" checked="" onclick="$('.commConts').hide(); $('.comm_conts01').show();"><label for="emailType" class="vm">이메일 명세서</label></span>
-				<span><input type="radio" name="billType" id="letterType" class="mr5" onclick="$('.commConts').hide(); $('.comm_conts02').show();"><label for="letterType" class="vm">우편명세서</label></span>
+				<span class="mr10"><input type="radio" name="billType" id="emailType" class="mr5" checked="" onclick="$('.commConts').hide(); $('.comm_conts01').show();" /><label for="emailType" class="vm">이메일 명세서</label></span>
+				<span><input type="radio" name="billType" id="letterType" class="mr5" onclick="$('.commConts').hide(); $('.comm_conts02').show();" /><label for="letterType" class="vm">우편명세서</label></span>
 			</div>
 
 
@@ -57,8 +57,8 @@
 					<table class="comm_table" summary="재발송 이메일 주소를 입력할 수 있는 표 입니다.">
 						<caption>재발송 이메일 주소 입력</caption>
 						<colgroup>
-							<col width="25%">
-							<col width="*">
+							<col width="25%" />
+							<col width="*" />
 						</colgroup>
 						<tbody>
 							<tr>
@@ -66,9 +66,9 @@
 									<label for="mailAddr">재발송 이메일 주소</label>
 								</th>
 								<td class="last" colspan="2">
-									<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15">
+									<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15" />
 									<span>@</span>
-									<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled">
+									<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled" />
 									<select id="emailAddr2" class="comm_mailInput03" title="메일 도메인을 선택해주세요." onchange="$.ktBizMailChg(this); return false;">
 										<option value="">선택하세요.</option>
 										<option value="naver.com">naver.com</option>
@@ -185,9 +185,9 @@
 									<label for="addrUpdate">받으실 주소</label>
 								</th>
 								<td class="last">
-									<p><input type="text" id="addrUpdate" disabled="" class="mr5"><a href="" class="btnSty mid" target="_blank" title="새창열림">우편번호검색</a></p>
-									<p class="mt8"><input type="text" class="w100p" disabled="" title="기본주소가 노출됩니다."></p>
-									<p class="mt8"><input type="text" class="w100p" disabled="" title="상세주소가 노출됩니다."></p>
+									<p><input type="text" id="addrUpdate" disabled="" class="mr5" /><a href="" class="btnSty mid" target="_blank" title="새창열림">우편번호검색</a></p>
+									<p class="mt8"><input type="text" class="w100p" disabled="" title="기본주소가 노출됩니다." /></p>
+									<p class="mt8"><input type="text" class="w100p" disabled="" title="상세주소가 노출됩니다." /></p>
 								</td>
 							</tr>
 						</tbody>
@@ -195,7 +195,7 @@
 				</div>
 
 				<p class="alignCenter mt12">
-					<span ><input type="checkbox" name="smaeChk" id="smaeChk" class="mr5" checked=""><label for="smaeChk">현재 청구 주소와 동일</label></span>
+					<span ><input type="checkbox" name="smaeChk" id="smaeChk" class="mr5" checked="" /><label for="smaeChk">현재 청구 주소와 동일</label></span>
 				</p>
 				<div class="alignCenter mt28">
 					<a href="" class="btnSty big red"><span>신청/변경</span></a>

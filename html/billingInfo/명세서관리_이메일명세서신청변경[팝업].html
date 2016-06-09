@@ -57,9 +57,9 @@
 								<label for="mailAddr">이메일 주소</label>
 							</th>
 							<td class="last" colspan="2">
-								<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15">
+								<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15" />
 								<span>@</span>
-								<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled">
+								<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled" />
 								<select id="emailAddr2" class="comm_mailInput03" title="메일 도메인을 선택해주세요." onchange="$.ktBizMailChg(this); return false;">
 									<option value="">선택하세요.</option>
 									<option value="naver.com">naver.com</option>
@@ -75,8 +75,8 @@
 						<tr>
 							<th scope="row">발송여부 선택</th>
 							<td class="last">
-								<span class="mr10"><input type="radio" name="sendYN" id="sendY" class="mr5" checked=""><label for="sendYN">명세서 발송</label></span>
-								<span class="mr10"><input type="radio" name="sendYN" id="sendN" class="mr5"><label for="sendN">명세서 발송 제외</label></span>
+								<span class="mr10"><input type="radio" name="sendYN" id="sendY" class="mr5" checked="" /><label for="sendY">명세서 발송</label></span>
+								<span class="mr10"><input type="radio" name="sendYN" id="sendN" class="mr5" /><label for="sendN">명세서 발송 제외</label></span>
 								
 							</td>
 							<td class="last">
@@ -87,8 +87,8 @@
 						<tr>
 							<th scope="row">보안메일 여부</th>
 							<td class="last" colspan="2">
-								<span class="mr10"><input type="radio" name="secretYN" id="secretY" class="mr5" checked=""><label for="secretY">보안메일</label></span>
-								<span><input type="radio" name="secretYN" id="secretN" class="mr5"><label for="secretN">일반메일</label></span>
+								<span class="mr10"><input type="radio" name="secretYN" id="secretY" class="mr5" checked="" /><label for="secretY">보안메일</label></span>
+								<span><input type="radio" name="secretYN" id="secretN" class="mr5" /><label for="secretN">일반메일</label></span>
 							</td>
 						</tr>
 						
