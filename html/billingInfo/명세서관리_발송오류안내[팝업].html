@@ -1,0 +1,124 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 법인 My Page 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My Page] 발송오류안내 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>	
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+
+</head>
+
+
+
+<body>
+
+
+	<div class="pop_wrap">
+
+		<!-- s : header -->
+		<div class="pop_header">
+			<h1>발송오류안내</h1>
+		</div>
+		<!-- e : header -->
+
+		<!-- s : contents -->
+		<div class="pop_conts">
+
+			<dl >
+				<dt class="pop_subTitle pt0">
+					네트워크 에러
+				</dt>
+				<dd>네트워크 에러는 송,수신쪽의 네트워크 장애로 발송 실패되는 경우입니다.</dd>
+
+				<dt class="pop_subTitle">
+					메일 저장공간 부족
+				</dt>
+				<dd>메일을 수신/저장하는 시스템의 스토리지에 공간이 부족한 경우에 발생합니다. 이에 대한 DSN코드 값은 452번과 552번 코드를 반환하게 됩니다. 452번의 경우 메일 서버가 동작하는 시스템의 저장공간이 부족한 경우에 반환되며, 552번의 경우 사용자에게 할당된 저장공간이 초과된 경우에 발생합니다.</dd>
+
+				<dt class="pop_subTitle">
+					존재하지 않는 도메인
+				</dt>
+				<dd>이메일 주소에 지정된 도메인이 실제로 존재하지 않는 경우에 해당됩니다. 예를 들어, aaa.co.kk 와 같이 도메인 구조에 맞지 않는 주소가 입력된 경우나  m00-00m.co.kr 처럼 도메인 자체가 아예 등록되어있지 않은 경우에 발생합니다.</dd>
+
+				<dt class="pop_subTitle">
+					계정 없음
+				</dt>
+				<dd>실제 도메인은 존재하나 해당 메일 수신업체에 사용자 계정이 없는 경우입니다.</dd>
+
+				<dt class="pop_subTitle">
+					휴먼계정
+				</dt>
+				<dd>도메인과 사용자 계정이 존재하나 수신업체에서 해당 계정을 휴면계정으로 처리하는 경우에 해당합니다.</dd>
+
+				<dt class="pop_subTitle">
+					정의되지 않는 에러
+				</dt>
+				<dd>메일 수신업체로부터 받은 발송에러 메세지 내용이 모호하여 명확하지 않는 경우입니다.</dd>
+
+				<dt class="pop_subTitle">
+					메일주소 오류
+				</dt>
+				<dd>회원 가입시에 기록하게 되어있는 이메일 주소의 규칙이 맞지 않는 경우에 발생하는 에러입니다. 예를 들어, 아이디와 도메인을 구분하는 @표기가 빠져있다던가, 또는 @표기가 여러 번 중복되어 표시되는 경우, 도메인 주소에 '.' 대신 ',' 가 들어있는 경우 등 입니다.</dd>
+
+				<dt class="pop_subTitle">
+					도메인 네임서버 찾지 못함
+				</dt>
+				<dd>메일 발송서버가 네트워크를 통해 수신 메일서버를 찾아가는 과정에서 수신 메일서버의 정확한 위치를 알려주는 도메인 네임 서버를 먼저 찾게 되는데 이 도메인 네임서버를 찾지 못하는 경우 입니다. 이 에러는 해당 도메인 네임 서버가 일시 기능정지 되었을 때도  발생할 수 있습니다.</dd>
+
+				<dt class="pop_subTitle">
+					메일전송 중에 전송이 중단된 경우
+				</dt>
+				<dd>메일 발송 서버와 메일 수신 서버간의 메일을 전달하는 단계에서 서버가 연결이 끊긴다거나 트랙잭션이 발생하여 더이상 메일 전달이 안되는 경우입니다.</dd>
+
+				<dt class="pop_subTitle">
+					수신 메일서버 없음
+				</dt>
+				<dd>도메인 정보를 알려주는 도메인 네임 서버에 해당 수신 도메인은 존재하나 수신 메일서버 정보가 없을 경우로  인해 발송서버가 수신 메일서버를 찾지 못하는 경우입니다.</dd>
+
+				<dt class="pop_subTitle">
+					스팸처리, 수신거부
+				</dt>
+				<dd>수신 서버에서 발송서버를 스팸서버로 인지하여 수신을 하지 않고 BLOCKING 하는 경우와 고객께서 수신 이메일 설정에서 발송서버 정보를 수신거부나 스팸 설정으로 등록하여 결과적으로 수신이 되지 않는 경우입니다.</dd>
+
+				<dt class="pop_subTitle">
+					메일 서비스 중지 도메인
+				</dt>
+				<dd>메일서비스를 하던 도메인에서 메일 서비스를 중지한다는 정보를 입수 했을 경우, 즉 100% 메일 발송에 실패나는 경우라고 판단될 경우를 말합니다. 메일서비스를 중지한 메일주소를 가지고 고객님께서는 정상 발송 될 수 있도록 다른 메일주소로 고객센터에 문의하셔서 수정하셔야 합니다.</dd>
+			</dl>
+
+		</div>
+		<!-- e : contents -->
+
+		<!-- s : footer -->
+		<div class="pop_footer">
+			<div class="pop_footerInner">
+				<p class="pop_close">
+					<a href="" ><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+				</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+
+</body>
+</html>
+

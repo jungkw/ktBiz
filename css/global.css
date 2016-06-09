@@ -65,6 +65,7 @@ ul.comm_tab ul.comm_subTab li.first {border-left:0;padding-left:18px;}
 ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 6px; line-height: 18px;}
 .bulletIcon {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 5px;}
 .bulletDg {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 2px;}
+.bulletMinus {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_minus_smallBullet.gif') no-repeat 0 7px;}
 .pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.gif') no-repeat left 1px;}
 
 

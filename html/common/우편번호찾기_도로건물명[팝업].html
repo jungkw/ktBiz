@@ -1,0 +1,3540 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 법인 My Page 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My Page] 우편번호 찾기(도로/건물명) 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>	
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript" type="text/javascript">
+
+
+  function init(){
+    var sg = "R";
+
+    if(sg == "R"){    //도로명 선택시
+      document.getElementById('roadArea').style.display = "";
+      document.getElementById('buildingArea').style.display = "none";
+    } else {        //건물명 선택시
+      document.getElementById('roadArea').style.display = "none";
+      document.getElementById('buildingArea').style.display = "";
+    }
+    document.getElementById('dongMyun1').focus();
+
+  }
+
+  function fSelfSubmit1() {
+    var frm = document.main;
+    if (browser_name == "firefox") {
+      var x=document.getElementById("AREA2");
+      x.innerHTML = "";
+    } else {
+      while (frm.AREA2.options.length) frm.AREA2.options.remove(0);
+    }
+
+    var jongOption0 = document.createElement("option");
+    jongOption0.value = '';
+    jongOption0.text  = '군,구,동 선택';
+    if (browser_name == "firefox")
+      frm.AREA2.add(jongOption0, null);
+    else
+      frm.AREA2.add(jongOption0);
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '강남구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '강동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '강북구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '강서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '관악구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '광진구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '구로구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '금천구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '노원구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '도봉구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '동대문구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '동작구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '마포구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '서대문구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '서초구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '성동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '17';
+      jongOption0.text  = '성북구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '18';
+      jongOption0.text  = '송파구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '19';
+      jongOption0.text  = '양천구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '20';
+      jongOption0.text  = '영등포구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '21';
+      jongOption0.text  = '용산구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '22';
+      jongOption0.text  = '은평구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '23';
+      jongOption0.text  = '종로구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '24';
+      jongOption0.text  = '중구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='01') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '25';
+      jongOption0.text  = '중랑구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '강서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '금정구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '기장군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '남구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '동래구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '부산진구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '북구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '사상구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '사하구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '수영구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '연제구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '영도구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '중구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='02') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '해운대구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '남구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '달서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '달성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '북구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '수성구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='03') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '중구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '강화군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '계양구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '남구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '남동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '부평구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '연수구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '옹진군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='04') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '중구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='05') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '대덕구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='05') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='05') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='05') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '유성구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='05') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '중구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='06') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '광산구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='06') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '남구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='06') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='06') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '북구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='06') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '서구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='07') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '남구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='07') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '동구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='07') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '북구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='07') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '울주군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='07') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '중구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '강릉시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '고성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '동해시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '삼척시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '속초시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '양구군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '양양군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '영월군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '원주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '인제군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '정선군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '철원군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '춘천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '태백시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '평창군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '홍천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '17';
+      jongOption0.text  = '화천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='08') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '18';
+      jongOption0.text  = '횡성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '가평군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '고양시 덕양구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '고양시 일산구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '과천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '광명시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '광주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '구리시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '군포시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '김포시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '남양주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '동두천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '부천시 소사구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '부천시 오정구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '부천시 원미구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '성남시 분당구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '성남시 수정구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '17';
+      jongOption0.text  = '성남시 중원구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '18';
+      jongOption0.text  = '수원시 권선구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '19';
+      jongOption0.text  = '수원시 영통구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '20';
+      jongOption0.text  = '수원시 장안구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '21';
+      jongOption0.text  = '수원시 팔달구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '22';
+      jongOption0.text  = '시흥시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '23';
+      jongOption0.text  = '안산시 단원구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '24';
+      jongOption0.text  = '안산시 상록구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '25';
+      jongOption0.text  = '안성시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '26';
+      jongOption0.text  = '안양시 동안구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '27';
+      jongOption0.text  = '안양시 만안구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '28';
+      jongOption0.text  = '양주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '29';
+      jongOption0.text  = '양평군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '30';
+      jongOption0.text  = '여주군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '31';
+      jongOption0.text  = '연천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '32';
+      jongOption0.text  = '오산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '33';
+      jongOption0.text  = '용인시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '34';
+      jongOption0.text  = '의왕시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '35';
+      jongOption0.text  = '의정부시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '36';
+      jongOption0.text  = '이천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '37';
+      jongOption0.text  = '파주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '38';
+      jongOption0.text  = '평택시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '39';
+      jongOption0.text  = '포천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '40';
+      jongOption0.text  = '하남시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='09') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '41';
+      jongOption0.text  = '화성시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '괴산군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '단양군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '보은군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '영동군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '옥천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '음성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '제천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '증평군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '진천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '청원군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '청주시 상당구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '청주시 흥덕구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='10') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '충주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '계룡시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '공주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '금산군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '논산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '당진시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '보령시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '부여군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '서산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '서천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '아산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '연기군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '예산군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '천안시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '청양군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '태안군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '홍성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='11') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '17';
+      jongOption0.text  = '세종시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '고창군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '군산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '김제시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '남원시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '무주군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '부안군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '순창군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '완주군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '익산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '임실군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '장수군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '전주시 덕진구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '전주시 완산구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '정읍시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='12') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '진안군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '강진군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '고흥군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '곡성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '광양시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '구례군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '나주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '담양군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '목포시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '무안군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '보성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '순천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '신안군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '여수시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '영광군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '영암군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '완도군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '17';
+      jongOption0.text  = '장성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '18';
+      jongOption0.text  = '장흥군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '19';
+      jongOption0.text  = '진도군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '20';
+      jongOption0.text  = '함평군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '21';
+      jongOption0.text  = '해남군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='13') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '22';
+      jongOption0.text  = '화순군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '경산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '경주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '고령군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '구미시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '군위군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '김천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '문경시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '봉화군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '상주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '성주군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '안동시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '영덕군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '영양군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '영주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '영천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '예천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '17';
+      jongOption0.text  = '울릉군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '18';
+      jongOption0.text  = '울진군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '19';
+      jongOption0.text  = '의성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '20';
+      jongOption0.text  = '청도군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '21';
+      jongOption0.text  = '청송군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '22';
+      jongOption0.text  = '칠곡군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '23';
+      jongOption0.text  = '포항시 남구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='14') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '24';
+      jongOption0.text  = '포항시 북구';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '거제시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '거창군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '고성군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '김해시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '05';
+      jongOption0.text  = '남해군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '06';
+      jongOption0.text  = '마산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '07';
+      jongOption0.text  = '밀양시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '08';
+      jongOption0.text  = '사천시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '09';
+      jongOption0.text  = '산청군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '10';
+      jongOption0.text  = '양산시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '11';
+      jongOption0.text  = '의령군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '12';
+      jongOption0.text  = '진주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '13';
+      jongOption0.text  = '진해시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '14';
+      jongOption0.text  = '창녕군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '15';
+      jongOption0.text  = '창원시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '16';
+      jongOption0.text  = '통영시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '17';
+      jongOption0.text  = '하동군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '18';
+      jongOption0.text  = '함안군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '19';
+      jongOption0.text  = '함양군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='15') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '20';
+      jongOption0.text  = '합천군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='16') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '01';
+      jongOption0.text  = '남제주군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='16') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '02';
+      jongOption0.text  = '북제주군';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='16') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '03';
+      jongOption0.text  = '서귀포시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+    if(frm.AREA1.options[frm.AREA1.selectedIndex].value=='16') {
+      var jongOption0 = document.createElement("option");
+      jongOption0.value = '04';
+      jongOption0.text  = '제주시';
+
+      if (browser_name == "firefox")
+        frm.AREA2.add(jongOption0, null);
+      else
+        frm.AREA2.add(jongOption0);
+    }
+  
+
+  }
+
+  function fSelfSubmit2(){
+    var f = document.main;
+
+    area1 = f.AREA1.options[f.AREA1.selectedIndex].text;
+    areaCode1 = f.AREA1.options[f.AREA1.selectedIndex].value;
+    area2 = f.AREA2.options[f.AREA2.selectedIndex].text;
+    areaCode2 = f.AREA2.options[f.AREA2.selectedIndex].value;
+
+    document.main.sel_AREA1.value = area1;
+    document.main.sel_AREA2.value = area2;
+
+    document.main.sel_Code1.value = areaCode1;
+    document.main.sel_Code2.value = areaCode2;
+  }
+
+
+  function isEmpty(input) {
+      if (input.value == null || input.value.replace(/ /gi,"") == "") {
+          return true;
+      }
+      return false;
+  }
+  function checkLength(val) {
+
+    if (val.length < 2) {
+      return false;
+    }
+
+    return true;
+  }
+  function changeValue(obj) {
+    var pos = 0;
+    var val = obj.value;
+        var invalidChars = "~`!@#$%^&*()_+|\"':;?/><., []\\=-{}";
+        for (i=0; i<invalidChars.length; i++) {
+      badChar = invalidChars.charAt(i);
+      if ((pos = val.indexOf(badChar, 0)) > -1) {
+        obj.value = val.substring(0, pos);
+      }
+        }
+  }
+
+  function checkValue(val) {
+        var invalidChars = "~`!@#$%^&*()_+|\"':;?/><.,[]\\=-{}";
+        for (i=0; i<invalidChars.length; i++) {
+      badChar = invalidChars.charAt(i)
+      if (val.indexOf(badChar,0) > -1) {
+        return false;
+      }
+        }
+    return true;
+  }
+
+    function search2() {
+      var gubunVal = document.main.searchGubun.value;
+        var chknull = document.main.dongMyun1.value;
+        var chknull2 = document.main.dongMyun2.value;
+    var chkFlag = true;
+
+    chknull = Trim(chknull);
+    chknull2 = Trim(chknull2);
+
+
+    if(gubunVal == "R"){    //도로명 검색
+      if(chknull == "" || isEmpty(document.main.dongMyun1)) {
+              alert('우편번호를 검색하실 도로명을 입력해 주세요.');
+        document.main.dongMyun1.focus();
+        return false;
+          } else {
+        if (!checkValue(chknull)) {
+          alert('올바른 도로명을 입력하십시오.');
+          document.main.dongMyun1.value = "";
+          document.main.dongMyun1.focus();
+          return false;
+        }
+        if (!checkLength(chknull)) {
+          alert('두자리 이상 도로명을 입력하십시오.');
+          document.main.dongMyun1.focus();
+          return false;
+        }
+        else {
+          document.main.dongMyun.value = chknull;
+          document.main.sel_AREA2.value = document.main.dongMyun3.value;
+                  document.main.currPageNo.value = "0";
+                  document.main.totPageCnt.value = "";
+          document.main.submit();
+          return false;
+        }
+          }
+    } else {          //건물명 검색
+      if(document.main.sel_AREA2.value == ""){
+        alert("지역 및 구,군,동을 선택해주세요.");
+        return false;
+      }
+
+      if(chknull2 == "" || isEmpty(document.main.dongMyun2)) {
+              alert('우편번호를 검색하실 건물명을 입력해 주세요.');
+        document.main.dongMyun2.focus();
+        return false;
+          } else {
+        if (!checkValue(chknull2)) {
+          alert('올바른 건물명을 입력하십시오.');
+          document.main.dongMyun2.value = "";
+          document.main.dongMyun2.focus();
+          return false;
+        }
+        if (!checkLength(chknull2)) {
+          alert('두자리 이상 건물명을 입력하십시오.');
+          document.main.dongMyun2.focus();
+          return false;
+        }
+        else {
+          document.main.dongMyun.value = chknull2;
+                  document.main.currPageNo.value = "0";
+                  document.main.totPageCnt.value = "";
+          document.main.submit();
+        }
+          }
+    }
+
+    }
+
+
+    function search() {
+    document.main.action = "ComPostSearch.action";
+        var chknull = document.main.dongMyun.value;
+    var chkFlag = true;
+    chknull = Trim(chknull);
+
+        if(chknull == "" || isEmpty(document.main.dongMyun)) {
+            alert('우편번호를 검색하실 동이름을 입력해 주세요.');
+      document.main.dongMyun.focus();
+      return false;
+        }
+    else {
+      if (!checkValue(chknull)) {
+        alert('올바른 동명을 입력하십시오.');
+        document.main.dongMyun.value = "";
+        document.main.dongMyun.focus();
+        return false;
+      }
+      if (!checkLength(chknull)) {
+        alert('두자리 이상 동명을 입력하십시오.');
+        document.main.dongMyun.focus();
+        return false;
+      }
+        }
+
+        if (document.main.h_dongMyun.value != "" && document.main.dongMyun.value == document.main.h_dongMyun.value) {
+            return false;
+        } else {
+            document.main.currPageNo.value = "0";
+            document.main.totPageCnt.value = "";
+
+        }
+
+    document.main.dongMyun.value = chknull;
+    return true;
+    }
+  function Trim(strVal)
+  {
+    while (strVal.search(/^\s/) != -1)
+        strVal = strVal.replace(/^\s/,"");
+
+    while (strVal.search(/\s$/) != -1)
+        strVal = strVal.replace(/\s$/,"");
+
+    return strVal;
+  }
+
+    function ReturnAddr(zip1, zip2, addr, addr2) {
+        // 숫자 및 특수문제 제거
+        var chklen = addr2.length;
+        var cpAddr2 = addr2;
+        for(var i=cpAddr2.length; i>0; i--) {
+            var chkAddr2  = cpAddr2.substring(i-1, i);
+            var hangulN = chkAddr2.search(/[(!|~|'|@|#|$|%|^|&|*|+|-|=|{|]|}|[|:|;|~|"|~|'|<|>|?|/|||\|0-9)]/);  // 숫자 및 특수문자 금지
+            //var hangulN = chkAddr2.search(/[(ㄱ-ㅎ|a-z|A-Z)]/);  // 한글, 영문, 숫자만 허용
+
+            if(chkAddr2 != "-") {
+                if(hangulN == -1) {
+                    break;
+                } else {
+                    chklen = i-1;
+                }
+            }
+        }
+
+
+        // 숫자 및 특수문자를 제외시킨 문자열
+        addr2   = addr2.substring(0, chklen);
+
+        // 해당 form에 넣기
+        if ("G"=="R"){
+            opener.document.form.r_adrZip_pre.value                 = zip2;
+            opener.document.form.r_adrPrimaryLn.value               = addr;
+            opener.document.form.r_adrSecondaryLn.value             = addr2;
+            if (opener.document.form.guidnPlacNm) {
+              opener.autoguidnPlacNmSet();
+            }
+
+            try{
+             opener.document.form.b_adrsTypeCd[0].checked     = false;    //P:구주소, N:신주소
+             opener.document.form.b_adrsTypeCd[1].checked     = true;   //P:구주소, N:신주소
+            }catch(e) { }
+            try{
+             opener.document.form.adrs_type_cd.value      = "N";    //P:구주소, N:신주소
+            }catch(e) { }
+        } else if ("G"=="O"){
+            opener.document.form.o_adrZip_pre.value                 = zip2;
+            opener.document.form.o_adrPrimaryLn.value               = addr;
+            opener.document.form.o_adrSecondaryLn.value             = addr2;
+            try{
+             opener.document.form.b_adrsTypeCd[0].checked     = false;    //P:구주소, N:신주소
+             opener.document.form.b_adrsTypeCd[1].checked     = true;   //P:구주소, N:신주소
+            }catch(e) { }
+            try{
+               opener.document.form.adrs_type_cd.value      = "N";    //P:구주소, N:신주소
+            }catch(e) { }
+        } else if ("G"=="B"){
+
+            opener.document.acntSearch.b_adrZip_pre.value         = zip2;
+            opener.document.acntSearch.b_adrPrimaryLn.value       = addr;
+            opener.document.acntSearch.b_adrSecondaryLn.value     = addr2;
+            try{
+             opener.document.acntSearch.b_adrsTypeCd[0].checked     = false;    //P:구주소, N:신주소
+             opener.document.acntSearch.b_adrsTypeCd[1].checked     = true;   //P:구주소, N:신주소
+            }catch(e) { }
+            try{
+             opener.document.acntSearch.adrs_type_cd.value      = "N";    //P:구주소, N:신주소
+            }catch(e) { }
+
+        } else if ("G"=="G"){
+            opener.form.zipCode.value                = zip1;
+            opener.form.zipCode1.value               = zip2;
+            opener.form.userAddr1.value              = addr;
+            opener.form.userAddr2.value              = addr2;
+            try{
+             opener.document.form.b_adrsTypeCd[0].checked     = false;    //P:구주소, N:신주소
+             opener.document.form.b_adrsTypeCd[1].checked     = true;   //P:구주소, N:신주소
+            }catch(e) { }
+
+            try{
+             opener.document.form.adrs_type_cd.value      = "N";    //P:구주소, N:신주소
+            }catch(e) { }
+
+        }  else if ("G"=="041130"){
+            opener.frmMileage.adrZip.value           = zip1;
+            opener.frmMileage.adrPrimaryLn.value     = addr;
+            opener.frmMileage.adrSecondaryLn.value   = addr2;
+            try{
+             opener.document.frmMileage.b_adrsTypeCd[0].checked     = false;    //P:구주소, N:신주소
+             opener.document.frmMileage.b_adrsTypeCd[1].checked     = true;   //P:구주소, N:신주소
+            }catch(e) { }
+            try{
+             opener.document.frmMileage.adrs_type_cd.value      = "N";    //P:구주소, N:신주소
+            }catch(e) { }
+        }  else if ("G"=="addr"){
+            opener.frmA.txtZip.value                 = zip1;
+            opener.frmA.txtAddr1.value               = addr;
+            opener.frmA.txtAddr2.value               = addr2;
+        } else if ("G"=="admin"){
+          parent.opener.document.sendForm.ZIP_CODE.value      = zip2;
+            parent.opener.document.sendForm.ADDRESS.value       = addr;
+            parent.opener.document.sendForm.ADDRESS2.value      = addr2;
+          parent.self.close();
+        }  else if ("G"=="E"){
+          opener.form1.zip_code1.value                = zip1;
+            opener.form1.fndt_adrs_sbst.value              = addr;
+            opener.form1.mnt_adrs_sbst.value              = addr2;
+        }  else if ("G"=="P"){
+              opener.form1.company_zip_no1.value                = zip1
+            opener.form1.company_addr.value              = addr;
+            opener.form1.company_mnt_addr.value              = addr2;
+            try{
+             opener.document.form1.b_adrsTypeCd[0].checked      = false;    //P:구주소, N:신주소
+             opener.document.form1.b_adrsTypeCd[1].checked      = true;   //P:구주소, N:신주소
+            }catch(e) { }
+            try{
+              opener.document.form1.adrs_type_cd.value        = "N";    //P:구주소, N:신주소
+            }catch(e) { }
+
+
+            opener.form1.company_mnt_addr.focus();
+        } else if ("G"=="K"){
+            opener.document.formBillAddr.b_adrZip_pre.value         = zip2;
+            opener.document.formBillAddr.b_adrPrimaryLn_pre.value       = addr;
+            opener.document.formBillAddr.b_adrSecondaryLn_pre.value     = addr2;
+            try{
+             opener.document.formBillAddr.b_adrsTypeCd[0].checked     = false;    //P:구주소, N:신주소
+             opener.document.formBillAddr.b_adrsTypeCd[1].checked     = true;   //P:구주소, N:신주소
+            }catch(e) { }
+            try{
+              opener.document.formBillAddr.adrs_type_cd.value       = "N";    //P:구주소, N:신주소
+            }catch(e){ }
+
+        }else if ("G"=="olleh" || "G"=="olleh2"){
+            window.opener.document.form2.zipCode.value                = zip1;
+            window.opener.document.form2.zipCode1.value               = zip2;
+            window.opener.document.form2.userAddr1.value              = addr;
+            window.opener.document.form2.userAddr2.value              = addr2;
+
+    }
+
+        self.close();
+        return;
+    }
+
+  function displaySearchField(param){
+    if(param == "R"){   //도로명 선택시
+      document.getElementById('roadArea').style.display = "";
+      document.getElementById('buildingArea').style.display = "none";
+    } else {        //건물명 선택시
+      document.getElementById('roadArea').style.display = "none";
+      document.getElementById('buildingArea').style.display = "";
+    }
+
+    //검색필드 초기화
+    document.main.dongMyun1.value = "";
+    document.main.dongMyun2.value = "";
+  }
+
+
+    function goPage(page) {
+        var f = document.main;
+        f.currPageNo.value = page;
+        f.realPageNo.value = page;
+        f.dongMyun.value = f.h_dongMyun.value;
+        f.submit();
+
+    }
+/*
+    function keyPress() {
+        var f = document.main;
+        if (event.keyCode == 13) {
+            f.currPageNo.value = "0";
+            f.totPageCnt.value = "";
+        }
+    }
+*/
+    function processKey() {
+        if( (event.ctrlKey == true && (event.keyCode == 78 || event.keyCode == 82)) ||
+            (event.keyCode >= 112 && event.keyCode <= 123)) {
+            event.keyCode = 0;
+            event.cancelBubble = true;
+            event.returnValue = false;
+            alert('죄송합니다. 특수 Key를 사용하실수 없습니다.');
+        }
+    }
+    document.onkeydown = processKey;
+
+    function click() {
+        if ( (event.button==2) ||  (event.button==3)) {
+            alert('죄송합니다. 마우스를 사용하실수 없습니다.');
+        }
+    }
+    document.onmousedown=click ;
+
+
+
+</script>
+
+
+
+</head>
+
+
+
+<body onload="init();">
+
+
+	<div class="pop_wrap">
+
+		<!-- s : header -->
+		<div class="pop_header">
+			<h1>우편번호 찾기</h1>
+		</div>
+		<!-- e : header -->
+
+		<!-- s : contents -->
+		<div class="pop_conts">
+			
+			<!-- s : 탭 영역 -->
+			<div class="comm_tabWrap mt0">
+				<div class="line"></div>
+				<ul class="comm_tab">
+					<li class="first on"><a href="우편번호찾기_도로건물명[팝업].html">도로/건물명</a></li>
+					<li><a href="우편번호찾기_지번주소[팝업].html" >지번주소</a></li>
+				</ul>
+			</div>
+			<!-- e : 탭 영역 -->
+
+                    <h2 class="blind">도로/건물명으로 찾기</h2>
+                    <form name="main" method="post" action="/NewComPostSearch.action" onsubmit="return search2();">
+                        <fieldset>
+                            <legend>도로/건물명 우편번호 검색 필드</legend>
+                            <input type="hidden" id="sel_AREA1" name="sel_AREA1" value="" />
+                            <input type="hidden" id="sel_AREA2" name="sel_AREA2" value="" />
+                            <input type="hidden" id="sel_Code1" name="sel_Code1" value="" />
+
+                            <input type="hidden" id="sel_Code2" name="sel_Code2" value="" />
+                            <input type="hidden" id="dongMyun" name="dongMyun" value="" />
+
+                            <p class="bulletIcon">도로, 건물 이름을 입력하세요. (예: 송학길, 역삼로)</p>
+                            <div class="mt12 pop_comm_zipGrayBox">
+                                <label for="searchGubun" class="blind">도로/건물명</label>
+                                <select name="searchGubun" id="searchGubun" onchange="javascript:displaySearchField(this.value);" title="도로/건물명" class="mr5">
+                                    <option value="R" selected="selected">도로명</option>
+                                    <option value="B" >건물명</option>
+                                </select>
+                                <label for="dongMyun1" class="blind">도로명</label>
+                                <input type="text" id="dongMyun1" name="dongMyun1" value="" class="mr20"  maxlength="20" size="20" title="도로명"/>
+
+                                <label for="dongMyun3">건물번호 :</label><input type="text" id="dongMyun3" name="dongMyun3" size="10" value="" title="건물번호" class="mr5 ml5" />
+                                <a href="" class="btnSty mid" onclick="search2();" >조회</a>
+                          </div>
+                        </fieldset>
+                    </form>
+
+                    <div class="commTitleWrap mt25">
+                        <span class="pointTxt posR1">해당 <b class="emp01">주소를 클릭</b>하시면 자동 입력이 됩니다.</span>
+                    </div>
+                    <div class="comm_tableBrdr">
+                        <table class="comm_table" summary="우편번호, 주소의 순서로 목록을 나타내는 표입니다" >
+                            <caption>우편 번호 상세 테이블</caption>
+                            <colgroup>
+                              <col width="20%" />
+                              <col width="*" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col" class="cocmBrdFisrLine">우편번호</th>
+                                <th scope="col" class="">주소</th>
+                              </tr>
+                            </thead>
+
+                              <tbody><tr>
+                                <th scope="row" class="fNormal">39061</th>
+                                <td class="last">
+                                  <a href="javascript:self.close()" onclick="ReturnAddr('39061','39061','경북 군위군 부계면 치산효령로 ','(부계면) ')">
+                                    경북 군위군 부계면 치산효령로 (부계면) 
+                                  </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row" class="fNormal">39062</th>
+                                <td class="last">
+                                  <a href="javascript:self.close()" onclick="ReturnAddr('39062','39062','경북 군위군 부계면 치산효령로 ','(부계면) ')">
+                                    경북 군위군 부계면 치산효령로 (부계면) 
+                                  </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row" class="fNormal">39060</th>
+                                <td class="last">
+                                  <a href="javascript:self.close()" onclick="ReturnAddr('39060','39060','경북 군위군 산성면 치산효령로 ','(산성면) ')">
+                                    경북 군위군 산성면 치산효령로 (산성면) 
+                                  </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td class="last center" colspan="2">검색된 주소가 없습니다.</td>
+                              </tr>
+                            
+                          </tbody>
+                        </table>
+
+                    </div>
+                    <div class="comm_paging">
+                      <a href="" class="comm_pagingBtn prevBtn">
+                        <img src="../../images/btn/comm_btn_paging_spr.png" alt="이전 10페이지 보기">
+                      </a><a href="#" class="on" title="현재 페이지">11</a><a href="">12</a><a href="">13</a><a href="">14</a><a href="">15</a><a href="">16</a><a href="">17</a><a href="">18</a><a href="">19</a><a href="">20</a><a href="" class="comm_pagingBtn nextBtn">
+                        <img src="../../images/btn/comm_btn_paging_spr.png" alt="다음 10페이지 보기">
+                      </a>
+                    </div>
+
+
+
+		</div>
+		<!-- e : contents -->
+
+		<!-- s : footer -->
+		<div class="pop_footer">
+			<div class="pop_footerInner">
+				<p class="pop_close">
+					<a href="" ><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+				</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+
+</body>
+</html>
+

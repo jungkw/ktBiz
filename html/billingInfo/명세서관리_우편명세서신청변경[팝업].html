@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] 영문 명세서 도움말 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My Page] 우편명세서 신청/변경 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
@@ -36,21 +36,71 @@
 
 		<!-- s : header -->
 		<div class="pop_header">
-			<h1>영문 명세서 도움말</h1>
+			<h1>우편명세서 신청/변경</h1>
 		</div>
 		<!-- e : header -->
 
 		<!-- s : contents -->
 		<div class="pop_conts">
 
-			<h2 class="pop_subTitle pt0">영문 명세서 신청</h2>
-			<ul class="bulletList">
-				<li>영문 명세서는 <span class="emp01">모바일 상품 전용 서비스</span>입니다.</li>
-				<li>영문 명세서를 신청하시면, 고객님이 이용중인 명세서 (이메일 명세서, 우편 명세서 등)가 영문으로 제공됩니다.</li>
-				<li>다른 주소로 명세서를 받고자 하실 경우 My올레 &gt; 명세서관리 &gt; 명세서 수령방법 변경 &gt; 청구 주소 변경에서 정확한 주소로 수정해 주시면, 정확하고 안전하게 명세서를 받으실 수 있습니다.</li>
-				<li>우편 명세서를 수령하시는 고객님 중 정보보호를 위해 명세서 내 핸드폰 번호가 <br>표시되지 않게 하시려면 명세서관리 &gt; 명세서 수령방법 변경 &gt; 명세서 신청/변경에서 전화번호 숨김을 선택해주세요.</li>
-				
-			</ul>
+			<div class="comm_tableBrdr mt12">
+				<table class="comm_table" summary="카드종류, 카드번호, 유효기간, 승인회차 순서로 카드정보를 입력할 수 있는 표 입니다.">
+					<caption>카드정보 입력</caption>
+					<colgroup>
+						<col width="25%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<label for="cardType">카드종류</label>
+							</th>
+							<td class="last">
+								<select id="cardType">
+									<option>비씨카드</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="cardNum">카드번호</label>
+							</th>
+							<td class="last">
+								<input type="text" size="16" maxlength="16" id="cardNum"/>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="cardDate">유효기간</label>
+							</th>
+							<td class="last">
+								<select id="cardDate" title="월을 선택해주세요." class="mr5">
+									<option>01</option>
+								</select><span class="vm">월</span>
+								<select title="년도를 선택해주세요." class="ml8 mr5">
+									<option>2016</option>
+								</select><span class="vm">년</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="cardAuthCount">승인회차</label>
+							</th>
+							<td class="last">
+								<select id="cardAuthCount" >
+									<option>1회차</option>
+								</select>
+								<p class="mt8">체크카드 사용장의 경우 1회차 선택 시 요금청구서 도착이전에 출금이 일어날 수 있습니다.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="alignCenter mt28">
+				<a href="" class="btnSty big red"><span>변경하기</span></a>
+			</div>
+
 		</div>
 		<!-- e : contents -->
 
