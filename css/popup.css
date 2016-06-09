@@ -517,16 +517,67 @@
 .pop_svc .infoBox {margin:30px 0 0 0; padding:10px; background:#f9f9f9; border:1px solid #d7d7d7;}
 .pop_svc .infoBox p {padding: 0 0 0 10px; font-size:12px; background: url(../images/icon/comm_icon_square_smallBullet.png) no-repeat 0 8px;}
 .pop_svc .infoBox p + p {margin:5px 0 0 0;}
-
+/* tv 채널안내 */
 .pop_svcTv,
 .pop_svcTv .pop_header,
 .pop_svcTv .pop_footer {max-width:817px;}
 .pop_svc .pop_svcTvHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_tv.jpg) no-repeat 100% 0;}
 .pop_svc .pop_svcTvIframe iframe {height:3269px;}
-
+/* skylife 채널안내*/
 .pop_svcSky,
 .pop_svcSky .pop_header,
 .pop_svcSky .pop_footer {max-width:817px;}
 .pop_svc .pop_svcSkyHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_skylife.jpg) no-repeat 100% 0;}
 .pop_svc .pop_svcSkyIframe iframe {height:2671px;}
+/* 패키지부가서비스란? */
+.pop_svc .pop_svcPkgPrice {width:495px;background:url(../images/pop/pop_svc_pkg_bg.gif) no-repeat 100% 0;}
+/* my time plan */
+.pop_svc .pop_svcMytime select {width:90%; font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
+/* 수신차단 번호 등록*/
+.pop_svc .pop_svcBlockNum select {width:20%; font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
+.pop_svc .pop_svcBlockNum input[type=text] {width:70%; font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
+/* 인터넷 부가서비스 */
+.pop_svcAddon,
+.pop_svcAddon .pop_header,
+.pop_svcAddon .pop_footer {max-width:800px;}
+.pop_svcAddon .price .price-ori {color:#000; font-size:16px;}
+.pop_svcAddon .price .price-ori span {color:#ef1c25; font-weight:bold;}
+.pop_svcAddon .price .price-bat {}
+.pop_svcAddon .pop_section_title {margin:20px 0 7px; color:#333; font-weight:bold;}
+.pop_svcAddonHeader {position:relative; height:235px;}
+.pop_svcAddonHeader.family {background:url(../images/pop/pop_svc_family_bg.png) no-repeat 100% 100%;}
+.pop_svcAddonHeader .price {position:absolute; top:60px; left:0;}
+.pop_svcAddonHeader .benefit {position:absolute; top:100px; width:420px;  max-width:420px; margin-top:21px; overflow:hidden;}
+.pop_svcAddonHeader .benefit ul {float:left; max-width:100%;border:solid 1px #e0e0e0; vertical-align:middle; overflow:hidden; padding:6px 10px 9px 0;}
+.pop_svcAddonHeader .benefit ul li{float:left; min-height:26px; margin-left:13px; padding-left:33px; font-size:11px; line-height:13px; vertical-align:middle; }
+.pop_svcAddonHeader .benefit ul li.icon_not {background:url(../../images/icon/comm_icon_not.gif) no-repeat;}
+.pop_svcAddonHeader .benefit ul li.icon_computer {background:url(../../images/icon/comm_icon_computer.gif) no-repeat;}
+.pop_svcAddonHeader .benefit ul li.icon_mobile {background:url(../../images/icon/comm_icon_mobile.gif) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

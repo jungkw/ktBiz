@@ -1,0 +1,553 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 법인 My Page 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My Page] 부가서비스 My time plan 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+
+	<!-- 기존 스크립트 -->
+	<script language="javascript" type="text/javascript">
+	<!--
+
+	    var PANELCHECK = "null";
+	    var B_session = "true";
+	    var KTFSERVLET = "ktfServlet";
+	//-->
+	</script>
+
+	<script language="javascript" type="text/javascript">
+	<!--
+
+
+	function top07() {
+
+	    alert("죄송합니다. 고객님은 멤버스플러스 대상이 아닙니다");
+
+	}
+	//-->
+	</script>
+
+	<script language="javascript" type="text/javascript">
+	<!--
+	    function log_out() {
+	    //formLogOut.submit();
+	    //location.href="http://ktflogon.show.co.kr/Logon/Logoff.asp?URL=http://csmobile.biz.olleh.com";
+	    location.href= NoSSL("/doLogout.html");
+	    //setTimeout("log_out_action()",4000);
+	  }
+	  function log_out_action() {
+	    location.href="/doLogout.action";
+	  }
+
+
+
+	//-->
+	</script>
+	<!-- //SSL js -->
+	<script language='javascript' src="/js/SSLlib.js"></script>
+	<script language=JavaScript src="/js/blocking.js"></script>
+	<script language='javascript' >
+	function NoSSLsubmit(ifrm) {
+	  ifrm.action = NoSSL(ifrm.action);
+	  ifrm.submit();
+	}
+	browserCheck();
+
+	</script>
+
+
+
+
+	<script>
+	  //$("title").html("[상품관리] 부가서비스 - My time plan popup :: 모바일법인고객센터 ::");
+
+	  /* var storedHash = window.location.hash;
+	  function checkHash() {
+	    if (window.location.hash != storedHash) {
+	    window.location.hash = storedHash;
+	    }
+	  }
+	  function onLoadBackBtn() {
+
+	    //web browser
+	    var _href = window.location.href;
+	    _href = _href.replace(";","");
+	    _href = _href.replace("(","");
+	    _href = _href.replace(")","");
+	    _href = _href.replace("[","");
+	    _href = _href.replace("]","");
+	    _href = _href.replace("{","");
+	    _href = _href.replace("}","");
+	    _href += "#";
+	    window.location.href = _href;
+	    setTimeout("changeHashAgain()", "10");
+
+	    //app web
+	    document.addEventListener("deviceready", onDeviceReady, false);
+
+	    window.setInterval("checkHash()", 10);
+	  }
+
+	  function onDeviceReady() {
+	      document.addEventListener("backbutton", onBackKey, false);
+	  }
+
+	  function onBackKey() {
+	      //무반응으로 만들려면 위를 주석처리.
+	      //navigator.notification.confirm('msg', onBackKeyResult, 'title', 'N, Y');
+	   } */
+
+	  function onBackKeyResult(index) {
+	      if(index == 2) {
+	        navigator.app.exitApp();
+	      }
+	  }
+
+	  /* function changeHashAgain() {
+	    var _href = window.location.href;
+	    _href = _href.replace(";","");
+	    _href = _href.replace("(","");
+	    _href = _href.replace(")","");
+	    _href = _href.replace("[","");
+	    _href = _href.replace("]","");
+	    _href = _href.replace("{","");
+	    _href = _href.replace("}","");
+	    _href += "1";
+	    window.location.href = _href;
+	  } */
+
+
+	  function popResize(){
+	    var innerBody = document.getElementById("PopupWrap");
+	    var innerHeight = parseInt(innerBody.scrollHeight);
+	    innerWidth = parseInt(innerBody.scrollWidth + 10);
+	    innerHeight = (innerBody.scrollHeight) * 2 - innerBody.offsetHeight;
+	    window.resizeTo(innerWidth,innerHeight+90);
+	   }
+
+	  function reset(){
+
+	    $('#selectUserDate').val("");
+	    $('#selectUserDate2').val("");
+	  }
+
+	   function confirmok(){
+
+	     var ind = "0";
+	     var whereForm = "";
+	     var ftrSoc = "";
+
+	     var param = $('#selectUserDate').val();
+	     var param2 = $('#tmpCd').val();
+
+	     //var param3 = $('#selectUserDate2').val();
+	     //var param4 = $('#tmpCd2').val();
+
+
+	     var txt = $('#selectUserDate option:selected').attr("desc");
+	     //var txt2 = $('#selectUserDate2 option:selected').attr("desc");
+
+
+	     var a1 = $('#selectUserDate option:selected').attr("a1");
+	     var a2 = $('#selectUserDate option:selected').attr("a2");
+
+	     //var a3 = $('#selectUserDate2 option:selected').attr("a1");
+	     //var a4 = $('#selectUserDate2 option:selected').attr("a2");
+
+	     if(ftrSoc == 'MYTMPLAN1'){
+
+	      if($('#selectUserDate').val() == ''){
+	         alert('서비스 시간대를 선택하세요.');
+	         return;
+	      }
+
+	      if(param == param2){
+
+	        alert('변경된 내용이 없습니다. 다시 선택하세요.');
+	         return;
+
+	       }
+
+	     }
+
+	     /* if(ftrSoc == 'MYTMPLAN2'){
+
+	       if($('#selectUserDate').val() == '' && $('#selectUserDate2').val() == ''){
+	         alert('서비스 시간대를 선택하세요.');
+	         return;
+	      }
+
+	       if(param3 == param4 && param == param2){
+
+	         alert('변경된 내용이 없습니다. 다시 선택하세요.');
+	         return;
+
+	       }
+
+	     }
+
+	    if(ftrSoc == 'MYTMPLAN2'){
+	      if($('#selectUserDate').val() == '' && $('#selectUserDate2').val() != ''){
+
+	        alert('서비스 시간대는 총 두개를 선택하셔야 합니다.');
+	         return;
+
+	      } */
+
+	      if($('#selectUserDate').val() != '' && $('#selectUserDate2').val() == ''){
+	        alert('서비스 시간대는 총 두개를 선택하셔야 합니다.');
+	         return;
+
+
+	      }
+
+	      if($('#selectUserDate').val() == ''){
+	         alert('서비스 시간대를 선택하세요.');
+	         return;
+	      }
+
+	      /* if($('#selectUserDate2').val() == ''){
+	        alert('서비스 시간대를 선택하세요.');
+	         return;
+
+	      } */
+
+
+	      var timeAry1 = new Array();
+	      //var timeAry2 = new Array();
+
+	      var cnt1 = 0;
+	      var cnt2 = 0;
+
+	      a1 = Number(a1);
+	      a2 = Number(a2);
+	      //a3 = Number(a3);
+	      //a4 = Number(a4);
+
+	      for(var i = a1; i <= a2; i++){
+
+	        if(i == a1){
+	          continue;
+	        } timeAry1[cnt1] = i;
+	        cnt1++;
+
+	      }
+
+
+	      /* for(var y = a3; y <= a4; y++){
+
+	        if(y == a3){
+	          continue;
+	        } timeAry2[cnt2] = y;
+	        cnt2++;
+	      } */
+
+
+	      /* var passYn = 'Y';
+
+	      for(var l = 0; l < timeAry1.length;l++){
+	        for(var z = 0; z < timeAry2.length;z++){
+
+
+	          if(timeAry1[l] == timeAry2[z]){
+
+
+	            passYn = 'N';
+	          }
+
+	        }
+	      }
+
+	      if(passYn == 'N'){
+	        alert('서비스 시간대 선택1,2는 중복시간대 선택이 불가합니다. 다시 선택하세요.');
+	        return;
+	      }
+
+	      if($('#selectUserDate').val() == $('#selectUserDate2').val()){
+	        alert('서비스 시간대 선택1,2가 동일합니다. 다시 선택하세요.');
+	        return;
+	      }
+	     } */
+
+
+
+
+	     var confirmTxt = '';
+
+	    /*  if(ftrSoc == 'MYTMPLAN2'){
+	       param = $('#selectUserDate').val() + ":" + $('#selectUserDate2').val();
+	     } */
+
+	     if(ftrSoc == 'MYTMPLAN1'){
+
+	       confirmTxt = txt + " 까지의 시간을 신청/변경합니다.";
+
+	     } else {
+
+	       confirmTxt = txt + ", " +txt2+ " 까지의 시간을 신청/변경합니다.";
+	     }
+
+
+	     var clickCount = document.popupForm.clickCount.value;
+
+	     if(clickCount == 0) {
+	       if (confirm(confirmTxt)) {
+
+	         clickCount = clickCount + 1;            // 클릭한 카운트 갯수에 1을 더함
+	               document.popupForm.clickCount.value = clickCount;
+
+	         if(whereForm== "frmnewfire"){
+
+	           document.popupForm.ftrNewParam.value = param;
+	           document.popupForm.submit();
+
+	         } else {
+
+	           window.opener.document.form.ftrNewParam[ind].value = param;
+	           try{
+	                  window.opener.limit_mmss_check('14');
+	               }catch(err){
+	            alert(err);
+	             } finally {
+	              self.close();
+	             }
+
+	         }
+	       }
+	     } else {
+
+	       alert("선택하신 서비스 시간대를 등록 중이며, 다소 시간이 소요될 수 있습니다.\n\n등록이 완료될 때가지 잠시만 기다려 주세요.");
+	           return;
+
+	     }
+
+	   }
+	</script>
+	<!-- // 기존 스크립트 -->
+
+</head>
+
+
+
+<body onload="javascript:popResize();">
+	<iframe name="log_out" style="display:none;" src="/blank.html" title="빈프레임" ></iframe>
+
+
+
+	<form name="formLogOut" method="post" target="log_out" action="http://ktflogon.show.co.kr/Logon/Logoff.asp">
+	    <input type="hidden" name="URL" value="http://csmobile.biz.olleh.com/blank.html" />
+	</form>
+
+
+
+	<div class="pop_wrap">
+
+		<!-- s : header -->
+		<div class="pop_header">
+			<h1>My time plan</h1>
+		</div>
+		<!-- e : header -->
+
+		<!-- s : contents -->
+		<div class="pop_conts">
+			<div class="pop_svc">
+				<input type="hidden" name="tmpCd" id="tmpCd" value="" />
+				<input type="hidden" name="tmpCd2" id="tmpCd2" value="" />
+
+				<h2 class="pop_subTitle pt0">서비스 시간대 선택</h2>
+				<div class="comm_tableBrdr pop_svcMytime">
+					<table class="comm_table" summary="원하는 서비스 시간대를 선택 할 수 있습니다.">
+						<caption>시간대 선택</caption>
+						<colgroup>
+							<col width="30%" />
+							<col width="70%" />
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">서비스 시간대 선택</th>
+							<td>
+								<select id="selectUserDate" title="서비스 시간대 선택">
+									<option value="">선택하세요</option>
+
+									<option value="24" desc="00시 부터 03시" a1="0" a2="3">
+										0시 ~ 3시
+									</option>
+
+									<option value="1" desc="01시 부터 04시" a1="1" a2="4">
+										1시 ~ 4시
+									</option>
+
+									<option value="2" desc="02시 부터 05시" a1="2" a2="5">
+										2시 ~ 5시
+									</option>
+
+									<option value="3" desc="03시 부터 06시" a1="3" a2="6">
+										3시 ~ 6시
+									</option>
+
+									<option value="4" desc="04시 부터 07시" a1="4" a2="7">
+										4시 ~ 7시
+									</option>
+
+									<option value="5" desc="05시 부터 08시" a1="5" a2="8">
+										5시 ~ 8시
+									</option>
+
+									<option value="6" desc="06시 부터 09시" a1="6" a2="9">
+										6시 ~ 9시
+									</option>
+
+									<option value="7" desc="07시 부터 10시" a1="7" a2="10">
+										7시 ~ 10시
+									</option>
+
+									<option value="8" desc="08시 부터 11시" a1="8" a2="11">
+										8시 ~ 11시
+									</option>
+
+									<option value="9" desc="09시 부터 12시" a1="9" a2="12">
+										9시 ~ 12시
+									</option>
+
+									<option value="10" desc="10시 부터 13시" a1="10" a2="13">
+										10시 ~ 13시
+									</option>
+
+									<option value="11" desc="11시 부터 14시" a1="11" a2="14">
+										11시 ~ 14시
+									</option>
+
+									<option value="12" desc="12시 부터 15시" a1="12" a2="15">
+										12시 ~ 15시
+									</option>
+
+									<option value="13" desc="13시 부터 16시" a1="13" a2="16">
+										13시 ~ 16시
+									</option>
+
+									<option value="14" desc="14시 부터 17시" a1="14" a2="17">
+										14시 ~ 17시
+									</option>
+
+									<option value="15" desc="15시 부터 18시" a1="15" a2="18">
+										15시 ~ 18시
+									</option>
+
+									<option value="16" desc="16시 부터 19시" a1="16" a2="19">
+										16시 ~ 19시
+									</option>
+
+									<option value="17" desc="17시 부터 20시" a1="17" a2="20">
+										17시 ~ 20시
+									</option>
+
+									<option value="18" desc="18시 부터 21시" a1="18" a2="21">
+										18시 ~ 21시
+									</option>
+
+									<option value="19" desc="19시 부터 22시" a1="19" a2="22">
+										19시 ~ 22시
+									</option>
+
+									<option value="20" desc="20시 부터 23시" a1="20" a2="23">
+										20시 ~ 23시
+									</option>
+
+									<option value="21" desc="21시 부터 24시" a1="21" a2="24">
+										21시 ~ 24시
+									</option>
+
+								</select>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="infoBox">
+					<h2 class="blind">주의사항</h2>
+					<p>월중 신청/해지 시, 해당월 월정액은 일할 적용됩니다.</p>
+					<p>olleh LTE my time plan 서비스 이용 시간대 변경은 즉시 적용 됩니다.</p>
+					<p>시간대 변경은 월 2회 가능합니다.</p>
+					<p>해지 시, 당월 재가입은 불가능합니다.</p>
+					<p>컨텐츠 팩 상품(예. 올레tv 모바일 팩 등)과 동시 가입한 고객이 해당 시간대에서 컨텐츠를 사용 시, 컨텐츠 팩 상품 데이터부터 선차감 적용됩니다.<br />
+						예) My time plan과 올레tv 모바일 팩을 동시에 가입한 경우, 올레tv 모바일팩 10GB를 모두 소진한 후에 My time plan의 데이터가 사용됩니다.</p>
+					<p>My time plan 데이터로 음성통화(mVoIP) 사용은 불가합니다.</p>
+					<p>My time plan 시간대에서 mVoIP(예. 보이스톡, 스카이프 등)을 이용하시면 요금제의 기본 데이터 에서 차감됩니다.</p>
+					<p>LTE 데이터쉐어링 및 테더링은 이용하실 수 없습니다.</p>
+					<p>서비스 시간이 종료되면, 기본제공 데이터에서 차감됩니다.<br />
+						예) 17-20시 My time plan을 이용하고 있는 고객이 19시-20시에 20분 동안 데이터를 사용한 경우, 20시 My time plan 시간이 종료되어 초과 사용한 20분은 기본 데이터에서 차감됩니다.</p>
+				</div>
+
+				<form name="popupForm" id="popupForm" method="post" action="/SvcRegularSocChge.action">
+
+						<input type="hidden" name="ENCRYPT_R_ENCKEY" value="" />
+						<input type="hidden" name="ENCRYPT_S_searchAcntNo" value="" />
+						<input type="hidden" name="ENCRYPT_S_searchCtn" value="" />
+						<input type="hidden" name="ENCRYPT_S_svcCntrNo" value="" />
+						<input type="hidden" name="searchAcntNo">
+						<input type="hidden" name="searchCtn">
+						<input type="hidden" name="svcCntrNo">
+
+						<input type="hidden" name="ftrSoc" id="ftrSoc" value="" />
+						<input type="hidden" name="ftrDescription" id="ftrDescription" value="" />
+						<input type="hidden" name="ftr" id="ftr" value="" />
+						<input type="hidden" name="featureCode" id="featureCode" value="" />
+						<input type="hidden" name="bundleInd" id="bundleInd" value="" />
+						<input type="hidden" name="serviceType" id="serviceType" value="R" />
+						<input type="hidden" name="ftrParamNum" id="ftrParamNum" value="" />
+						<input type="hidden" name="ftrOldParam" id="ftrOldParam" value="" />
+						<input type="hidden" name="ENCRYPT_S_ftrOldParam" id="ENCRYPT_S_ftrOldParam" value="" />
+						<input type="hidden" name="defaultParam" id="defaultParam" value="" />
+						<input type="hidden" name="ENCRYPT_S_defaultParam" id="ENCRYPT_S_defaultParam " value="" />
+						<input type="hidden" name="ftrOrgUse" id="ftrOrgUse" value="" />
+						<input type="hidden" name="ftrUseYN" id="ftrUseYN" value="true" />
+						<input type="hidden" name="brandCd" id="brandCd" value=""/>
+						<input type="hidden" name="mainCd" id="mainCd" value="14" />
+						<input type="hidden" name="ftrNewParam" id="ftrNewParam" value="" />
+						<input type="hidden" name="returnUrl" id="returnUrl value="CLOSE2" />
+						<input type="hidden" id="clickCount" name="clickCount"  value="0" />
+
+					</form>
+
+					<div class="btnWrap">
+						<a href="javascript:confirmok()" class="btnSty big red"><span>선택</span></a>
+					</div>
+			</div>
+		</div>
+		<!-- e : contents -->
+
+		<!-- s : footer -->
+		<div class="pop_footer">
+			<div class="pop_footerInner">
+				<p class="pop_close">
+					<a href="#close" onclick="window.close(); return false;"><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+				</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+
+</body>
+</html>
+

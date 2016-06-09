@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] 부가서비스 My time plan 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My Page] 부가서비스 신청/해지 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
@@ -25,25 +25,114 @@
 	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
 
+	<!-- 기존 스크립트 -->
+	<script language="javascript" type="text/javascript">
+	<!--
+
+	    var PANELCHECK = "null";
+	    var B_session = "true";
+	    var KTFSERVLET = "ktfServlet";
+	//-->
+	</script>
+
+	<script language="javascript" type="text/javascript">
+	<!--
+
+
+	function top07() {
+
+	    alert("죄송합니다. 고객님은 멤버스플러스 대상이 아닙니다");
+
+	}
+	//-->
+	</script>
+	<!-- // 기존 스크립트 -->
 </head>
 
 
 
-<body>
+<body onunload="chkClose();">
+	<iframe name="log_out" title="빈프레임" src="/blank.html" style="display: none;"></iframe>
 
+	<form name="formLogOut" action="http://ktflogon.show.co.kr/Logon/Logoff.asp" method="post" target="log_out">
+	    <input name="URL" type="hidden" value="http://csmobile.biz.olleh.com/blank.html">
+	</form>
+	<script language="javascript" type="text/javascript">
+	<!--
+	    function log_out() {
+	    //formLogOut.submit();
+	    //location.href="http://ktflogon.show.co.kr/Logon/Logoff.asp?URL=http://csmobile.biz.olleh.com";
+	    location.href= NoSSL("/doLogout.html");
+	    //setTimeout("log_out_action()",4000);
+	  }
+	  function log_out_action() {
+	    location.href="/doLogout.action";
+	  }
+
+
+
+	//-->
+	</script>
+	<!-- //SSL js -->
+	<script language="javascript" src="/js/SSLlib.js"></script>
+	<script language="JavaScript" src="/js/blocking.js"></script>
+	<script language="javascript">
+	function NoSSLsubmit(ifrm) {
+	  ifrm.action = NoSSL(ifrm.action);
+	  ifrm.submit();
+	}
+	browserCheck();
+
+	</script>
+
+
+	<link href="/css/prodsystem.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+	<script type="text/javascript">
+	<!--
+	  //$("title").html("[요금제,부가서비스] 부가서비스 신청/해지 팝업 - :: 모바일법인고객센터 :");
+
+	    var actionCnt =0;
+	    function goInsert(){
+	        actionCnt++;
+	        window.returnValue ="Y";
+	        window.close();
+	    }
+	    function goCancel(){
+	        actionCnt++;
+	        window.returnValue = "N";
+	        window.close();
+	    }
+	    function goSpecialSuggest(){
+	        actionCnt++;
+	        window.returnValue="Suggest:";
+	        window.close();
+	    }
+	    function chkClose(){
+	        if (actionCnt ==0 ) {
+	            goCancel();
+	        }
+	    }
+	    //-->
+	</script>
 
 	<div class="pop_wrap">
 
 		<!-- s : header -->
 		<div class="pop_header">
-			<h1>My time plan</h1>
+			<h1>부가서비스 신청/해지</h1>
 		</div>
 		<!-- e : header -->
 
 		<!-- s : contents -->
 		<div class="pop_conts">
 			<div class="pop_svc">
-				<h2 class="pop_subTitle pt0">서비스 시간대 선택</h2>
 				<div class="comm_tableBrdr">
 					<table class="comm_table" summary="신청된 요금제와 해지된 부가서비스를 확인 할 수 있습니다.">
 						<caption>부가서비스 신청 및 해지 내역</caption>
@@ -69,6 +158,12 @@
 						</tbody>
 					</table>
 				</div>
+				<p class="bulletIcon mt10">변경하신 요금제는 즉시 적용되어 과금처리 되어집니다.</p>
+
+				<div class="btnWrap">
+					<a href="javascript:goInsert();" class="btnSty big red"><span>확인</span></a>
+					<a href="javascript:goCancel();" class="btnSty big blk"><span>취소</span></a>
+				</div>
 
 				<div class="infoBox">
 					<h2 class="blind">주의사항</h2>
@@ -76,8 +171,8 @@
 					<p>해지시 바로 재가입이 불가능한 부가서비스가 있으므로 주의바랍니다. (부가서비스 신청/변경 화면 하단의 "알아두세요" 참조)</p>
 					<p>부가서비스 월중 신청/해지 시 해당 월 월정액 및 무료제공 혜택은 각각 일할 적용 됩니다. 단, dosirak파티 상품은 30일 단위로 선결제되는 상품으로 일할 적용되지 않습니다.</p>
 				</div>
-
 			</div>
+
 		</div>
 		<!-- e : contents -->
 
@@ -85,7 +180,7 @@
 		<div class="pop_footer">
 			<div class="pop_footerInner">
 				<p class="pop_close">
-					<a href="" ><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+					<a href="javascript:goCancel();"><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
 				</p>
 			</div>
 		</div>
