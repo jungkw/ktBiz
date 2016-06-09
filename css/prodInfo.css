@@ -15,6 +15,7 @@
 .prodDetailWrap .innerWrap1 .prodInfo {float:left; display:inline-block; width: 490px;}
 .prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr {border-top: 1px solid #ccc;}
 .prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr th {background: #fff;}
+.prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr td {padding:15px 0 15px 20px}
 .prodDetailWrap .innerWrap1 .prodInfo .txtWrap {margin:-5px 0 -1px 0; padding:0 130px 0 0;}
 .prodDetailWrap .innerWrap1 .prodInfo .mgR13 {margin:0 13px 0 0;}
 .prodDetailWrap .innerWrap2 {overflow:hidden; padding:0 0 50px 20px;}
@@ -22,6 +23,7 @@
 .prodDetailWrap .innerWrap2 .inner .txtWrap {padding:0 60px 0 0;}
 .prodDetailWrap .innerWrap2 .inner .txtWrap .btn{right:23px;}
 .prodDetailWrap .innerWrap2 .inner .comm_tableBrdr th {background: #fff;}
+.prodDetailWrap .innerWrap2 .inner .comm_tableBrdr td {padding:15px 0 15px 20px}
 .prodDetailWrap .txtWrap {position: relative;}
 .prodDetailWrap .txtWrap .date {display: block; font-size: 12px;}
 .prodDetailWrap .txtWrap .btn {display:inline-block; position: absolute; top:50%; right:0; height:12px; margin:-6px 0 0 0; color:#000; font-size: 12px; line-height:1; text-decoration: underline;}

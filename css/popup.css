@@ -50,10 +50,6 @@
 .pop_prod_wrap .prodtxtSyt3.mg4m {margin:-4px 0 0 0;}
 .pop_prod_wrap .bulletList {margin:-9px 0 0 0;}
 
-
-.pop_prod_wrap .pop_prod_title {margin-bottom:30px; padding:30px 42px; text-align:center; }
-.pop_prod_wrap .pop_prod_title_center {display:inline-block; text-align:left;}
-.pop_prod_wrap .pop_prod_title_center p {margin-top:12px;}
 .pop_prod_wrap .pop_prod_agree {margin-top:30px; color:#666; font-size:12px;}
 .pop_prod_wrap .btnWrap {margin-top:25px; text-align:center;}
 
@@ -61,6 +57,9 @@
 .pop_prod_wrap .innerTable td {padding:15px 5px; font-size:12px; text-align:center; border-right:none;}
 .pop_prod_wrap .innerTable td span.num {font-size:12px;}
 
+.pop_prod_wrap .coprightWrap {margin:21px 0; text-align:center;}
+.pop_prod_wrap .coprightWrap .txtDate {margin:10px 0 0 0;}
+.pop_prod_wrap .coprightWrap .ktImg {margin:10px 0 0 0;}
 
 
 
