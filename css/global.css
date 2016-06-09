@@ -102,12 +102,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .commBtnWrap a {margin:0 0 0 6px;}
 .commBtnWrap a:first-child {margin:0;}
 
-.defaultBtn {width:87px;height: 31px;display:inline-block;color:#fff;font-size:14px;line-height: 31px;text-align: center;}
-.defaultBtn:hover, .defaultBtn:focus, .defaultBtn:active {color:#fff !important; text-decoration: none !important;}
-.defaultBtn.comm_btn_red01, .defaultBtn.comm_btn_red02, .defaultBtn.comm_btn_red03 {background:#ed1c24;border:1px solid #db151c;} 
-.defaultBtn.comm_btn_gray01, .defaultBtn.comm_btn_gray02, .defaultBtn.comm_btn_gray03 {background:#5d5d5d;border:1px solid #3d3d3d;} 
-.defaultBtn.comm_btn_red02, .defaultBtn.comm_btn_gray02 {width:117px;}
-.defaultBtn.comm_btn_red03, .defaultBtn.comm_btn_gray03 {width:auto;padding:0 15px;}
+
 
 .iconBtn {height:24px;padding:0 9px;display:inline-block;font-size:12px;color:#333;border:1px solid #e0e0e0;line-height: 24px;text-align: center;}
 .iconBtn:hover, .iconBtn:focus, .iconBtn:active {color:#333 !important; text-decoration: none !important;}
