@@ -35,6 +35,7 @@ a:hover, a:active, a:focus {color:#ef1c25 !important;text-decoration:underline !
 input[type=text], input[type=password] {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-size: 14px;padding:0 9px;}
 textarea {border: 1px solid #ccc;box-sizing: border-box;}
 select {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-size: 14px;padding:0 9px;}
+.clear {clear:both;}
 
 /* skip navigation */
 .cfmOllehSkipNavi {position:absolute;top:0;left:0;width:100%;height:1px;line-height:1px;z-index:2100;}
@@ -54,7 +55,7 @@ select {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-size: 14
 .cfmOllehY15Util li a:hover img, .cfmOllehY15Util li a:focus img, .cfmOllehY15Util li a.on img {margin: -12px 0 0 0;}
 .cfmOllehY15UtilAr {position: absolute;top: 5px;right: 0;}
 .cfmOllehY15UtilAr li {float: left;line-height: 14px;padding: 0 9px 0 0;margin: 0 9px 0 0;background: url('../images/common/cfm_olleh_y15_util_line.png') no-repeat right 3px;}
-.cfmOllehY15UtilAr li.last {margin: 0;padding: 0;background: none;}
+.cfmOllehY15UtilAr li.last {margin: 0;padding: 0;background: none;font-weight: bold}
 .cfmOllehY15UtilAr li a {font-size: 12px;color: #8c8c8c;letter-spacing: -1px;}
 .cfmOllehY15UtilAr li a:hover {color: #ed1c24;text-decoration: underline;}
 .cfmOllehGnb-menu {margin: 0 273px 0 166px;}
@@ -87,23 +88,26 @@ select {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-size: 14
 .cfmOllehGnb-submenu-item .group-link {color: #666;}
 .cfmOllehGnb-submenu-item .group-link:hover {color: #ed1c24;text-decoration: underline;}
 .cfmOllehMainCommonSearch {position: absolute;top: 45px;right: 100px;width: 184px;height: 30px;padding: 6px 0 0 10px;background: url('../images/common/cfm_olleh_search_bg.gif') no-repeat 0 0;}
-.cfmOllehMainCommonSearch input.text {width: 143px;padding:5px 0;border: 0;font-family: 'Malgun Gothic', dotum, sans-serif;font-size: 13px;color: #7c7f83}
+.cfmOllehMainCommonSearch input.text {width: 143px;height:24px;padding:5px 0;border: 0;font-family: 'Malgun Gothic', dotum, sans-serif;font-size: 13px;color: #7c7f83}
 .cfmOllehMainCommonSearch input.cfmSearchButtonSearch {position: absolute;top: 0;right: 0;padding: 10px;}
 .cfmOllehButtonTotal {display: block;width: 89px;height: 56px;position: absolute;right: 0;top: 45px;text-indent: -99999em;background: url('../images/common/cfm_button_total_menu.png') no-repeat;}
 .cfmOllehButtonTotal.on {background-position: 0 -56px;}
 .cfmOllehTotalSection {display: none;position: absolute;top: 100px;left: 0;width: 980px;padding: 5px 0 0 0;background: url('../images/common/cfm_total_top_bg.png') no-repeat 0 0;z-index: 2010;}
 .cfmOllehTotalSection.on {display: block;}
 .cfmOllehTotalSection .cfmOllehTotalSectionMiddle {padding: 0 0 5px 0;background: url('../images/common/cfm_total_bottom_bg.png') no-repeat 0 100%;}
-.cfmOllehTotalSection .cfmOllehTotalSectionCont {padding: 23px 40px 16px 40px;background: url('../images/common/cfm_total_repeat_bg.png') repeat-y 0 0;}
+.cfmOllehTotalSection .cfmOllehTotalSectionCont {padding: 25px 40px 16px 40px;background: url('../images/common/cfm_total_repeat_bg.png') repeat-y 0 0;}
 .cfmOllehTotalSection .cfmOllehTotalSectionCont-group {margin: 0 0 30px 0;}
-.cfmOllehTotalSection .cfmOllehTotalTitle {padding: 0 0 8px 0;border-bottom: 1px solid #f0f0f0;color: #ed1c24;font-size: 16px;font-weight: bold;line-height: 18px;}
+.cfmOllehTotalSection .cfmOllehTotalSectionCont-group.sectionCont-left {width:420px;float:left;}
+.cfmOllehTotalSection .cfmOllehTotalSectionCont-group.sectionCont-right {width:450px;float:right;}
+.cfmOllehTotalSection .cfmOllehTotalTitle {padding: 0 0 13px 0;border-bottom: 1px solid #d6d6d6;color: #ed1c24;font-size: 16px;font-weight: bold;line-height: 18px;}
 .cfmOllehTotalSection .cfmOllehTotalMenuList {width: 100%;margin: 10px 0 0 0;padding: 0 0 8px 0;overflow: hidden;}
 .cfmOllehTotalSection .cfmOllehTotalMenuList li {float: left;width: 150px;line-height: 16px;}
-.cfmOllehTotalSection .cfmOllehTotalMenuList li h4 {padding: 0 !important;}
-.cfmOllehTotalSection .cfmOllehTotalMenuList li h4 a {font-size: 12px;color: #666;font-weight: bold;}
+.cfmOllehTotalSection .cfmOllehTotalMenuList li.w120 {width:120px;}
+.cfmOllehTotalSection .cfmOllehTotalMenuList li h4 {padding: 0 !important;margin-bottom:2px;}
+.cfmOllehTotalSection .cfmOllehTotalMenuList li h4 a {font-size: 14px;color: #454545;font-weight: bold;}
 .cfmOllehTotalSection .cfmOllehTotalMenuList li h4 a:hover, .cfmOllehTotalSection .cfmOllehTotalMenuList li h4 a:focus {color: #ed1c24;text-decoration: underline;}
 .cfmOllehTotalSection .cfmOllehTotalMenuList li ul {padding: 6px 0 0 0;overflow: hidden;}
-.cfmOllehTotalSection .cfmOllehTotalMenuList li ul li {margin: 3px 0 0 0;}
+.cfmOllehTotalSection .cfmOllehTotalMenuList li ul li {margin: 4px 0 0 0;}
 .cfmOllehTotalSection .cfmOllehTotalMenuList li ul li a {font-size: 12px;color: #666;}
 .cfmOllehTotalSection .cfmOllehTotalMenuList li ul li a:hover, .cfmOllehTotalSection .cfmOllehTotalMenuList li ul li a:focus {color: #ed1c24;text-decoration: underline;}
 
