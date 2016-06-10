@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] 가입정보 조회</title>
+	<title>[My Page] 핸드폰 변경이력 [팝업]</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
@@ -36,7 +36,7 @@
 
 		<!-- s : header -->
 		<div class="pop_header">
-			<h1>핸드폰 개통이력 조회</h1>
+			<h1>핸드폰 변경이력</h1>
 		</div>
 		<!-- e : header -->
 
@@ -46,58 +46,48 @@
 			<div class="pop_prod_wrap">
 				<!-- s : title -->
 				<div class="commTitleWrap">
-					<h2 class="comm_scnTitle1"><span>개통이력 조회 대상 핸드폰 정보</span></h2>
+					<p class="comm_scnTitle1"><span>010-1234-*678 번호의 핸드폰 모델 변경이력 입니다.</span></p>
 				</div>
 				<!-- e : title -->
-				<p class="prodtxtSyt3 mg4m">010-1234-*678의 핸드폰 정보입니다.</p>
 				
-				<!-- s : title -->
-				<div class="commTitleWrap mt25">
-					<h2 class="comm_scnTitle1"><span>핸드폰 정보 확인(모델명)</span></h2>
-				</div>
-				<!-- e : title -->
+				<!-- s : 세로 테이블 -->
 				<div class="comm_tableBrdr">
-					<table class="comm_table" summary="핸드폰 모델명과 일련번호를 확인 할 수 있습니다.">
-						<caption>개통이력 조회 대상 핸드폰</caption>
+					<table class="comm_table" summary="핸드폰 모델명, 신청일자, 해지일자를 확인 할 수 있습니다.">
+						<caption>핸드폰 모델 변경이력</caption>
 						<colgroup>
-							<col width="50%" />
-							<col width="50%" />
+							<col width="34%">
+							<col width="33%">
+							<col width="33%">
 						</colgroup>
+						
 						<thead>
-						<tr>
-							<th scope="col">핸드폰 모델명</th>
-							<td class="last center">
-								SM-N916K
-							</td>
-						</tr>
+							<tr>
+								<th scope="col" class="center">핸드폰 모델명</th>
+								<th scope="col" class="center">신청일자</th>
+								<th scope="col" class="center last">해지일자</th>
+							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th scope="col">일련번호</th>
-								<td class="last center">
-									0101***
-								</td>
+								<td class="center">SM-N916K</td>
+								<td class="center">2015/10/11</td>
+								<td class="center last">사용중</td>
+							</tr>
+							<tr>
+								<td class="center">LG-F320K</td>
+								<td class="center">2015/10/11</td>
+								<td class="center last">사용중</td>
+							</tr>
+							<tr>
+								<td class="center">SHW-M250K</td>
+								<td class="center">2015/10/11</td>
+								<td class="center last">사용중</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-
-				<!-- s : title -->
-				<div class="commTitleWrap mt30">
-					<h2 class="comm_scnTitle1"><span>핸드폰 개통이력 조회 이용방법</span></h2>
-				</div>
-				<!-- e : title -->
-				<ul class="bulletList">
-					<li>핸드폰 개통이력 조회를 하시려면 SMS 인증 또는 아이핀 인증을 통한 본인인증이 필요합니다.</li>
-					<li>핸드폰 SMS 인증을 통해 통화내역 조회, 일시정지, 신청/해제 등의 서비스를 이용할 수 있으므로 본인 핸드폰 및 인증번호 관리에 주의를 기울여 주시기 바랍니다.<br />또한 kt는 전산시스템 문제를 제외하고는 타인의 핸드폰 습득으로 인한 개인정보 유출 및 기타 서비스 이용에 대해서는 어떠한 책임도 부담하지 않음을 유의하셔야 합니다.</li>
-				</ul>
-
-				<p class="pop_prod_agree"><input type="checkbox" name="check" id="check01" class="mr5" /><label for="check01">동의합니다.</label></p>
-
-				<div class="btnWrap">
-				  <a href="#" class="btnSty big">SMS인증</a>
-				  <a href="#" class="btnSty big">아이핀인증</a>
-				</div>
+				<!-- e : 세로 테이블 -->
+				
 			</div>
 
 		</div>
@@ -112,6 +102,10 @@
 			</div>
 		</div>
 		<!-- e : footer -->
+
+		<div class="pop_headCloseWrap">
+			<a href="" class="pop_btn_close pop_headClose"><img src="../../images/btn/pop_btn_headClose.png" alt="닫기"></a>
+		</div>
 	</div>
 
 </body>
