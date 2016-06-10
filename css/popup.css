@@ -64,6 +64,12 @@
 .pop_prod_wrap .coprightWrap .txtDate {margin:10px 0 0 0;}
 .pop_prod_wrap .coprightWrap .ktImg {margin:10px 0 0 0;}
 
+.pop_prod_wrap .grayBoxWrap {padding:17px 20px; background: #f5f5f5;}
+.pop_prod_wrap .grayBoxWrap .tLine{margin:20px 0 0 0; padding:20px 0 0 0; border-top: 1px solid #d7d7d7;}
+
+.pop_prod_wrap .prodNotifyWrap li {padding:0;}
+.pop_prod_wrap .mIcon {padding:0 0 0 15px; margin:0 0 0 15px; background-position: 0 10px;}
+
 
 
 
