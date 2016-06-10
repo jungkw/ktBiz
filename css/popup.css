@@ -587,6 +587,20 @@
 
 .pop_svcAddonRecom {padding-top:40px; height:172px; overflow:hidden;}
 .pop_svcAddonRecom .title {font-weight:bold; color:#333;}
+
+.comm_detailTabWrap {margin:20px 0;}
+.comm_detailTabWrap .comm_stab:after {content:''; display:block; clear:both;}
+.comm_detailTabWrap .comm_stab li {float:left; margin-right:3px;}
+.comm_detailTabWrap .comm_stab a {position:relative; display:block; border:1px solid #e0e0e0; color:#555; padding:0 25px 0 10px; height:28px; line-height:26px;}
+.comm_detailTabWrap .comm_stab a:after {content:''; position:absolute; top:50%; right:10px; display:block; margin-top:-1px; border-top:4px solid #ef1c25; border-left:4px solid transparent; border-right:4px solid transparent;}
+.comm_detailTabWrap .comm_stab li.on a {color:#ef1c25;}
+.comm_detailTabWrap .comm_stab li.on a:after {margin-top:-5px; border-top-color:transparent; border-bottom:4px solid #ef1c25;}
+
+.pop_svcAddonRecom .recom_opt_banner1{ float:right;position:relative; width:236px; height:172px; display:block; overflow:hidden; }
+.pop_svcAddonRecom .recom_opt_banner1 .list_scr{position:relative; display:block; width:236px; height:138px; overflow:hidden; margin-top:8px;}
+.pop_svcAddonRecom .recom_opt_banner1 ul.list {position:absolute; display:block; height:auto; }
+.pop_svcAddonRecom .recom_opt_banner1 ul.prdCardList{display:block; height:138px; overflow:hidden; width:3999px; max-width:none; }
+.pop_svcAddonRecom .recom_opt_banner1 ul.prdCardList li {margin-right:10px; width:234px;}
 .pop_svcAddonRecom .recom_prd_banner2{ float:left;position:relative; width:482px; height:172px; display:block; overflow:hidden; }
 .pop_svcAddonRecom .recom_prd_banner2 .list_scr{position:relative; z-index:1; display:block; width:auto; height:138px; overflow:hidden; margin-top:8px;}
 .pop_svcAddonRecom .recom_prd_banner2 .list {position:absolute;}
@@ -596,11 +610,6 @@
 .pop_svcAddonRecom .in_prev{right:16px; background:url(../images/pop/pop_btn_svc_prev.gif) center top no-repeat;}
 .pop_svcAddonRecom .in_next{right:0px; background:url(../images/pop/pop_btn_svc_next.gif) center top no-repeat;}
 .pop_svcAddonRecom .disable {opacity:.2; cursor:default; }
-.pop_svcAddonRecom .recom_opt_banner1{ float:right;position:relative; width:236px; height:172px; display:block; overflow:hidden; }
-.pop_svcAddonRecom .recom_opt_banner1 .list_scr{position:relative; display:block; width:236px; height:138px; overflow:hidden; margin-top:8px;}
-.pop_svcAddonRecom .recom_opt_banner1 ul.list {position:absolute; display:block; height:auto; }
-.pop_svcAddonRecom .recom_opt_banner1 ul.prdCardList{display:block; height:138px; overflow:hidden; width:3999px; max-width:none; }
-.pop_svcAddonRecom .recom_opt_banner1 ul.prdCardList li {margin-right:10px; width:234px;}
 
 
 

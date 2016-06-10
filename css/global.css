@@ -36,7 +36,17 @@ ul.comm_tab > li.on > a:hover, ul.comm_tab > li.on > a:focus, ul.comm_tab > li.o
 ul.comm_tab ul.comm_subTab {width:100%;height: 22px;position:absolute;left:0;top:49px;border-bottom:1px solid #d9d9d9}
 ul.comm_tab ul.comm_subTab li {height:12px;float:left;padding:0 11px; color:#666; font-size:12px; line-height: 12px; background: #fff; border-left:1px solid #d9d9d9}
 ul.comm_tab ul.comm_subTab li.first {border-left:0;padding-left:18px;}
-			    ul.comm_subTab li.on a {font-weight: bold; color: #ef1c25} 
+			    ul.comm_subTab li.on a {font-weight: bold; color: #ef1c25}
+
+
+/* tab style2*/
+.comm_detailTabWrap {margin:20px 0;}
+.comm_detailTabWrap .comm_stab:after {content:''; display:block; clear:both;}
+.comm_detailTabWrap .comm_stab li {float:left; margin-right:3px;}
+.comm_detailTabWrap .comm_stab a {position:relative; display:block; border:1px solid #e0e0e0; color:#555; padding:0 25px 0 10px; height:28px; line-height:26px;}
+.comm_detailTabWrap .comm_stab a:after {content:''; position:absolute; top:50%; right:10px; display:block; margin-top:-1px; border-top:4px solid #ef1c25; border-left:4px solid transparent; border-right:4px solid transparent;}
+.comm_detailTabWrap .comm_stab li.on a {color:#ef1c25;}
+.comm_detailTabWrap .comm_stab li.on a:after {margin-top:-5px; border-top-color:transparent; border-bottom:4px solid #ef1c25;}
 
 
 /* table */
@@ -160,7 +170,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .ml28 {margin-left:28px;}
 .ml30 {margin-left:30px;}
 .ml32 {margin-left:32px;}
-.ml38 {margin-left:38px;} 
+.ml38 {margin-left:38px;}
 .ml40 {margin-left:40px;}
 .ml75 {margin-left:75px;}
 .ml95 {margin-left:95px;}
@@ -225,7 +235,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 .pl10 {padding-left:10px;}
 .pl15 {padding-left:15px;}
 .pl20 {padding-left:20px;}
-.pl28 {padding-left:28px !important;} 
+.pl28 {padding-left:28px !important;}
 .pl30 {padding-left:30px;}
 .pl60 {padding-left:60px;}
 .pl130 {padding-left:130px;}
