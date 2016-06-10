@@ -567,15 +567,20 @@
 
 .pop_svcAddonHeader {position:relative; height:235px;}
 .pop_svcAddonHeader.family {background:url(../images/pop/pop_svc_family_bg.png) no-repeat 100% 100%;}
+.pop_svcAddonHeader.clean {background:url(../images/pop/pop_svc_clean_bg.png) no-repeat 100% 100%;}
+.pop_svcAddonHeader.time {background:url(../images/pop/pop_svc_time_bg.png) no-repeat 100% 100%;}
+.pop_svcAddonHeader.kids {background:url(../images/pop/pop_svc_kids_bg.png) no-repeat 100% 100%;}
 .pop_svcAddonHeader .price {position:absolute; top:50px; left:0;}
 .pop_svcAddonHeader .price .price-ori {font-size:24px;}
 .pop_svcAddonHeader .price .price-ori span {font-size:26px;}
 .pop_svcAddonHeader .benefit {position:absolute; top:100px; width:420px; max-width:420px; margin-top:21px; overflow:hidden;}
 .pop_svcAddonHeader .benefit ul {float:left; max-width:100%;border:solid 1px #e0e0e0; vertical-align:middle; overflow:hidden; padding:6px 10px 9px 0;}
 .pop_svcAddonHeader .benefit ul li{float:left; min-height:26px; margin-left:13px; padding-left:33px; font-size:11px; line-height:13px; vertical-align:middle; }
+.pop_svcAddonHeader .benefit ul li.singleLine {padding-top:8px; min-height:19px;}
 .pop_svcAddonHeader .benefit ul li.icon_not {background:url(../../images/icon/comm_icon_not.gif) no-repeat;}
 .pop_svcAddonHeader .benefit ul li.icon_computer {background:url(../../images/icon/comm_icon_computer.gif) no-repeat;}
 .pop_svcAddonHeader .benefit ul li.icon_mobile {background:url(../../images/icon/comm_icon_mobile.gif) no-repeat;}
+.pop_svcAddonHeader .benefit ul li.icon_union {background:url(../../images/icon/comm_icon_union.gif) no-repeat;}
 
 .pop_svcAddonRecom {padding-top:40px; height:172px; overflow:hidden;}
 .pop_svcAddonRecom .title {font-weight:bold; color:#333;}
@@ -585,8 +590,8 @@
 .pop_svcAddonRecom .recom_prd_banner2 ul.prdCardList{display:block; width:3999px !important; max-width:3999px; height:138px; overflow:hidden;}
 .pop_svcAddonRecom .recom_prd_banner2 ul.prdCardList li {margin-right:10px;}
 .pop_svcAddonRecom .in_prev, .pop_svcAddonRecom .in_next{display:block; position:absolute; top:0; width:17px; height:17px; border:0; text-indent:-9999px; font-size:0;}
-.pop_svcAddonRecom .in_prev{right:16px; background:url(/storage/wDic/img/ncommon/btn_arr_prev.gif) center top no-repeat;}
-.pop_svcAddonRecom .in_next{right:0px; background:url(/storage/wDic/img/ncommon/btn_arr_next.gif) center top no-repeat;}
+.pop_svcAddonRecom .in_prev{right:16px; background:url(../images/pop/pop_btn_svc_prev.gif) center top no-repeat;}
+.pop_svcAddonRecom .in_next{right:0px; background:url(../images/pop/pop_btn_svc_next.gif) center top no-repeat;}
 .pop_svcAddonRecom .disable {opacity:.2; cursor:default; }
 .pop_svcAddonRecom .recom_opt_banner1{ float:right;position:relative; width:236px; height:172px; display:block; overflow:hidden; }
 .pop_svcAddonRecom .recom_opt_banner1 .list_scr{position:relative; display:block; width:236px; height:138px; overflow:hidden; margin-top:8px;}
