@@ -391,22 +391,47 @@ $(document).ready(function(){
 
                           gnbItem += "<!-- s : section item01 -->";
                         gnbItem += "<div class='cfmOllehTotalSectionCont-group'>";
-                          gnbItem += "<h3 class='cfmOllehTotalTitle'>미정</h3>";
+                          gnbItem += "<h3 class='cfmOllehTotalTitle'>My페이지</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href='javascript:depth2_1111();'>회원정보 조회</a></h4></li>";
-                            gnbItem += "<li>";
-                              gnbItem += "<h4><a href='javascript:depth2_1211();'>회원정보 수정</a></h4>";
+                              gnbItem += "<h4><a href=''>요금조회/납부</a></h4>";
+                              gnbItem += "<ul class='inlinst'>";
+                                gnbItem += "<li><a href=''>명세서 조회</a></li>";
+                                gnbItem += "<li><a href=''>월별요금조회</a></li>";
+                                gnbItem += "<li><a href=''>실시간 요금</a></li>";
+                                gnbItem += "<li><a href=''>분리납부내역 조회</a></li>";
+                                gnbItem += "<li><a href=''>요금납부</a></li>";
+                                gnbItem += "<li><a href=''>납부방법 변경</a></li>";
+                                gnbItem += "<li><a href=''>명세서 관리</a></li>";
+                              gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href='javascript:depth2_1411();'>회선정보 조회</a></h4>";
+                              gnbItem += "<h4><a href=''>가입상품 조회/관리</a></h4>";
+                              gnbItem += "<ul class='inlist'>";
+                                gnbItem += "<li><a href=''>내상품조회</a></li>";
+                                gnbItem += "<li><a href=''>사용량조회</a></li>";
+                              gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href='javascript:depth2_1611();'>신청/변경 현황</a></h4>";
+                              gnbItem += "<h4><a href=''>신청/변경</a></h4>";
+                              gnbItem += "<ul class='inlist'>";
+                                gnbItem += "<li><a href=''>요금제 신청</a></li>";
+                                gnbItem += "<li><a href=''>부가서비스 신청</a></li>";
+                                gnbItem += "<li><a href=''>번호변경</a></li>";
+                                gnbItem += "<li><a href=''>일시정지</a></li>";
+                                gnbItem += "<li><a href=''>설치장소 변경</a></li>";
+                                gnbItem += "<li><a href=''>명의변경</a></li>";
+                                gnbItem += "<li><a href=''>분실신고</a></li>";
+                                gnbItem += "<li><a href=''>상품 신청/문의 (대량구매)</a></li>";
+                                gnbItem += "<li><a href=''>신청/변경 현황</a></li>";
+                              gnbItem += "</ul>";
                             gnbItem += "</li>";
+                           
                           gnbItem += "</ul>";
                         gnbItem += "</div>";
                         gnbItem += "<!-- e : section item01 -->";
+
+
 
                         gnbItem += "<!-- s : section item02 -->";
                         gnbItem += "<div class='cfmOllehTotalSectionCont-group'>";
