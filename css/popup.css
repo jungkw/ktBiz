@@ -572,10 +572,9 @@
 .pop_svcAddon .pop_footer {max-width:800px;}
 .pop_svcAddon .price .price-ori {color:#000; font-size:16px;}
 .pop_svcAddon .price .price-ori span {color:#ef1c25; font-weight:bold;}
-.pop_svcAddon .price .price-bat {}
 .pop_svcAddon .pop_section_title {margin:20px 0 7px; color:#333; font-weight:bold;}
 
-.pop_svcAddonHeader {position:relative; height:235px;}
+.pop_svcAddonHeader {position:relative; height:240px;}
 .pop_svcAddonHeader .price {position:absolute; top:50px; left:0;}
 .pop_svcAddonHeader .price .price-ori {font-size:24px;}
 .pop_svcAddonHeader .price .price-ori span {font-size:26px;}
