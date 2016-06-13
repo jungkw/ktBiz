@@ -145,6 +145,7 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 
 
 /* global css */
+.placeholder.active {color:#999;} 
 .textLink a.detail {padding:0 8px 0 0; text-decoration: underline; color:#00a5b8; background: url('../images/icon/comm_icon_red_arrow.gif') no-repeat right center; color:#ed1c24;}
 .fl {float:left;}
 .fr {float:right;}

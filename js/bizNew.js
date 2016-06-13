@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 
+
     /* cfmOllehTotalSection close */
     $('.cfmOllehTotalSectionCont > .cfmOllehTotalSectionCont-group:last > .cfmOllehTotalMenuList:last > li:last > h4 > a:last').focusout(function(){
           $('.cfmOllehTotalSection').removeClass('on');
@@ -18,6 +19,7 @@ $(document).ready(function(){
         var $target = $('.comm_mailInput02');
         var $val = $obj.val();
         if($val=="self"){
+          $target.val("");
           $target.prop("disabled", false).focus();
         }else{
           $target.prop("disabled", true);
@@ -27,6 +29,29 @@ $(document).ready(function(){
           }
         }
         return false;
+    };
+
+
+
+    /**
+    * input placeholder fn
+    */
+    $.ktBizPlaceholder = function(){
+      var $target = $('.placeholder');
+      var $targetValue = $target.val();
+      $target.addClass('active');
+
+      $target.focus(function(){
+          if($targetValue == $target.val()){
+              $target.val('').removeClass('active');
+          }
+      }).focusout(function(){
+          if(!this.value){
+            $target.val($targetValue).addClass('active');
+          }
+      });
+     
+      return false;
     };
 
 
@@ -58,6 +83,7 @@ $(document).ready(function(){
     */
     $.ktBizPopClick = function(obj){
         var $target = $($(obj).attr('href'));
+        $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
         $target.show();
         $target.find('.pop_conts').attr('tabindex',0).focus();
         $target.find('.pop_close a, .pop_btn_close').click(function(){
@@ -138,6 +164,8 @@ $(document).ready(function(){
         }
         return false;
     }
+
+    $.ktBizPlaceholder();
 
 });
     
