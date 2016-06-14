@@ -228,7 +228,7 @@ $(document).ready(function(){
 
                   gnbItem += "<!-- s : gnb item01 -->";
                   gnbItem += "<li class='cfmOllehGnb-menu-item'>";
-                      gnbItem += "<a href='' class='link myPage'>My페이지</a>";
+                      gnbItem += "<a href='' class='link myPage on'>My페이지</a>";
 
                       gnbItem += "<div class='cfmOllehGnb-submenu'>";
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -1077,8 +1077,7 @@ $(document).ready(function(){
             $('#'+$depth4Number).closest('li').addClass('cfmOllehLnbLastSelected');
             $('#'+$depth1Number+', #'+$depth3Number).attr('title','하위메뉴 닫기');
           };
-          $.ktBizGnbView.code($code);
-
+          /*$.ktBizGnbView.code($code);*/
           return false;
 
       };
