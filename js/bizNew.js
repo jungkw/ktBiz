@@ -1134,7 +1134,7 @@ $(document).ready(function(){
       /* common footer include fn */
       $.ktBizFooterView = function(){
             var footerItem = "";
-                  footerItem += "<h2 class='blind'>올레닷컴 주요메뉴</h2>";
+                  footerItem += "<h2 class='blind'>올레닷컴(기업) 주요메뉴</h2>";
                   footerItem += "<ul class='cfmOllehNewFooterMenu'>";
                       
                     footerItem += "<li>";
@@ -1219,7 +1219,7 @@ $(document).ready(function(){
 
 
                   footerItem += "<div class='cfmfooterOllehMain'>";
-                  footerItem += "<h2 class='blind'>올레 약관 및 소개</h2>";
+                  footerItem += "<h2 class='blind'>올레(기업) 약관 및 소개</h2>";
                   footerItem += "<ul class='info'>";
                     footerItem += "<li>";
                       footerItem += "<a href='http://www.kt.com/main.jsp' title='새창열림' target='_blank' >회사소개</a>";
