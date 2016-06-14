@@ -5,7 +5,8 @@
 .roundBox:after {content:''; position:absolute; bottom:0; left:0; display:block; width:100%; height:9px; background:url(../images/index_bg_round_bottom.png) no-repeat 0 100%;}
 .roundBtn {position:relative;box-sizing:border-box; margin-right:3px; padding:0 6px 0 9px; min-width:49px; height:30px; color:#333; font-size:12px; line-height:28px; background:url(../images/index_bg_roundbtn_l.png) no-repeat!important; text-align:center;}
 .roundBtn:after {content:''; position:absolute; top:0; right:-3px; display:block; width:3px; height:100%; background:url(../images/index_bg_roundbtn_r.png) no-repeat 100% 0;}
-.roundBtn:hover {color:inherit!important; text-decoration:none!important;}
+.roundBtn:focus,
+.roundBtn:hover {color:#333!important; text-decoration:none!important;}
 .roundFillBox {position:relative; box-sizing:border-box; background-image:url(../images/index_bg_roundbtn_fl.png)!important; background-repeat:no-repeat!important;}
 .roundFillBox:after {content:''; position:absolute; top:0; right:0; display:block; width:5px; height:100%; background:url(../images/index_bg_roundbtn_fr.png) no-repeat 100% 0;}
 .indexTitle {margin-bottom:12px;}
@@ -36,17 +37,32 @@
 .cfmOllehMainBill .billTermTxt {margin:57px 0 0 13px; color:#555; font-size:14px;}
 .cfmOllehMainBill .billTermSelect {margin-top:10px;}
 .cfmOllehMainBill .billTermSelect:after {content:''; display:block; clear:both;}
-.cfmOllehMainBill .billTermSelect .comm_selectbox {float:left; width:347px; height:38px; color:#333; font-size:14px; background:url(../images/index_bg_select.png) no-repeat; border:0;}
+.cfmOllehMainBill .billTermSelectWrap {float:left; width:347px; height:38px; background:url(../images/index_bg_select.png) no-repeat;}
+.cfmOllehMainBill .billTermSelect .comm_selectbox {box-sizing:border-box; width:100%; height:100%; color:#333; font-size:14px;}
 .cfmOllehMainBill .billTermSelect .comm_selectbox > select {height:38px;}
 .cfmOllehMainBill .billTermSelect .comm_selectbox > label,
 .cfmOllehMainBill .billTermSelect .comm_selectbox > p {top:11px;}
+.cfmOllehMainBill .billTermSelect .comm_selectbox.on {border: 1px dotted #000;}
+.chrome .cfmOllehMainBill .billTermSelect .comm_selectbox.on,
+.Safari .cfmOllehMainBill .billTermSelect .comm_selectbox.on {border:2px solid #6fa1d9;}
+.chrome .cfmOllehMainBill .billTermSelect .comm_selectbox.on > label,
+.Safari .cfmOllehMainBill .billTermSelect .comm_selectbox.on > label {top:10px; left:11px;}
+.chrome .cfmOllehMainBill .billTermSelect .comm_selectbox.on > p,
+.Safari .cfmOllehMainBill .billTermSelect .comm_selectbox.on > p {top:10px; left:89px;}
+
+
 .cfmOllehMainBill .billTermSelect .submit {float:right; width:62px; height:38px; line-height:38px; text-align:center; color:#fff; font-size:14px; font-weight:bold; background:url(../images/index_bg_btn_submit.png) no-repeat;}
+.cfmOllehMainBill .billTermSelect .submit:focus,
 .cfmOllehMainBill .billTermSelect .submit:hover {color:#fff!important; text-decoration:none!important;}
+.firefox .cfmOllehMainBill .billTermSelect .submit:focus {outline:1px dotted #000;}
 .cfmOllehMainBill .billTermLink {margin-top:15px; text-align:right;}
 .cfmOllehMainBill .billTermLink a {display:inline-block; padding-right:24px; width:105px; height:16px; background:url(../images/icon/index_icon_note.png) no-repeat 100% 0;}
-.cfmOllehMainBill .billTermLink a:hover {color:inherit!important; text-decoration:none!important;}
+.cfmOllehMainBill .billTermLink a:focus,
+.cfmOllehMainBill .billTermLink a:hover {text-decoration:none!important;}
 .cfmOllehMainBill .billTermLink a span {position:relative; display:block; height:14px; font-size:14px; line-height:14px; border-bottom:1px solid #9a9a9a; letter-spacing:-0.025em; word-spacing:-0.025em; color:#000; font-weight:bold;}
 .cfmOllehMainBill .billTermLink a span:after {content:''; position:absolute; bottom:-2px; left:0; display:block; width:100%; border-top:1px solid #c8c8c8;}
+.cfmOllehMainBill .billTermLink a:focus span,
+.cfmOllehMainBill .billTermLink a:hover span {color:#ef1c25; border-color:#ef1c25;}
 .cfmOllehMainBill .billTermPrice {margin-top:53px;}
 .cfmOllehMainBill .billTermPrice h4 {padding-left:4px;}
 .cfmOllehMainBill .billTermPrice h4 .em {font-family:Arial, sans-serif; font-size:36px; line-height:29px; vertical-align:middle; letter-spacing:-0.05em; word-spacing:-0.05em;}
@@ -64,6 +80,7 @@
 .cfmOllehMainBill .billDetailList li h4.bg03 {background-color:#f2beb4;}
 .cfmOllehMainBill .billDetailList li h4.bg04 {background-color:#e8c5d0;}
 .cfmOllehMainBill .billDetailList li > div {position:relative; margin:21px 11px 0 22px; line-height:27px; font-size:16px;}
+.cfmOllehMainBill .billDetailList li > div .d {display:inline-block; height:75px; font-size:75px; line-height:75px; vertical-align:middle;}
 .cfmOllehMainBill .billDetailList li > div a {position:absolute; top:0; right:0;}
 .cfmOllehMainBill .billDetailList li.addr {position:relative; margin-right:0; width:100%; height:42px; background:url(../images/index_bg_bill_addr.png) no-repeat; overflow:hidden;}
 .cfmOllehMainBill .billDetailList li.addr h4 {float:left; height:42px; line-height:40px;}
@@ -71,7 +88,9 @@
 .cfmOllehMainBill .billDetailList li.addr a {position:absolute; top:6px; right:11px;}
 .cfmOllehMainBill .billDetail .reissue {margin-top:13px; padding-right:14px; color:#333; font-size:14px; text-align:right; letter-spacing:-0.025em; word-spacing:-0.025em;}
 .cfmOllehMainBill .billDetail .reissue a {display:inline-block; margin-left:8px; width:105px; height:30px; line-height:28px; font-size:12px; color:#fff; text-align:center; background:url(../images/index_bg_btn_reissue.png) no-repeat;}
+.cfmOllehMainBill .billDetail .reissue a:focus,
 .cfmOllehMainBill .billDetail .reissue a:hover {color:#fff!important; text-decoration:none!important;}
+.firefox .cfmOllehMainBill .billDetail .reissue a:focus {outline:1px dotted #000;}
 
 .cfmOllehMainBillCaution {margin:8px auto 0; width:980px; text-align:right;}
 .cfmOllehMainBillCaution p {float:right; padding:0 12px 0 24px; height:18px; line-height:14px; color:#555; font-size:12px; background:url(../images/icon/comm_icon_point2.png) no-repeat 0 50%; letter-spacing:-0.025em; word-spacing:-0.025em;}
