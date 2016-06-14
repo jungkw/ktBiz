@@ -96,15 +96,17 @@
 				<div class="billTerm">
 					<p class="billTermTxt">사용기간: 2016.03.01~2016.03.31</p>
 					<div class="billTermSelect">
-						<div class="comm_selectbox">
-							<label for="comm_select">명세서번호</label>
-							<select id="comm_select" class="comm_select" onchange="$.ktBizSelect(this); return false;">
-								<option>014213121* (010-0000-0000)</option>
-								<option>424213231*</option>
-								<option>224295211*</option>
-								<option>924433478*</option>
-							</select>
-							<p><span class="blind">현재 선택하신 명세서번호는</span> <span class="selectTxt">014213121* (010-0000-0000)</span> <span class="blind">입니다.</span></p>
+						<div class="billTermSelectWrap">
+							<div class="comm_selectbox">
+								<label for="comm_select">명세서번호</label>
+								<select id="comm_select" class="comm_select" onchange="$.ktBizSelect(this); return false;">
+									<option>014213121* (010-0000-0000)</option>
+									<option>424213231*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+								</select>
+								<p><span class="blind">현재 선택하신 명세서번호는</span> <span class="selectTxt">014213121* (010-0000-0000)</span> <span class="blind">입니다.</span></p>
+							</div>
 						</div>
 						<a href="#" class="submit">조회</a>
 					</div>
@@ -142,7 +144,7 @@
 						<li class="left">
 							<h4 class="bg03 roundFillBox">납부 계정정보</h4>
 							<div>
-								비씨 (4140-****-****-****)
+								<span>비씨 (4140-****-****-****)</span>
 							</div>
 						</li>
 						<li>
