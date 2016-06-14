@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* index common */
+.roundBox {position:relative; box-sizing:border-box; background:url(../images/index_bg_round_top.png) no-repeat!important;}
+.roundBox:after {content:''; position:absolute; bottom:0; left:0; display:block; width:100%; height:9px; background:url(../images/index_bg_round_bottom.png) no-repeat 0 100%;}
+.roundBtn {position:relative;box-sizing:border-box; margin-right:3px; padding:0 6px 0 9px; min-width:49px; height:30px; color:#333; font-size:12px; line-height:27px; background:url(../images/index_bg_roundbtn_l.png) no-repeat!important; text-align:center;}
+.roundBtn:after {content:''; position:absolute; top:0; right:-3px; display:block; width:3px; height:100%; background:url(../images/index_bg_roundbtn_r.png) no-repeat 100% 0;}
+.roundBtn:hover {color:inherit!important; text-decoration:none!important;}
+.roundFillBox {position:relative; box-sizing:border-box; background-image:url(../images/index_bg_roundbtn_fl.png)!important; background-repeat:no-repeat!important;}
+.roundFillBox:after {content:''; position:absolute; top:0; right:0; display:block; width:5px; height:100%; background:url(../images/index_bg_roundbtn_fr.png) no-repeat 100% 0;}
+.indexTitle {margin-bottom:12px;}
+.em {color:#ed2a25;}
+/* // index common */
+
+.cfmOllehMain {line-height:1; color:#000;}
+.cfmOllehMainHeader {margin:40px auto 0; padding:20px 0; width:980px; overflow:hidden;}
+.cfmOllehMainHeader .userInfo {float:left; margin:5px 22px; width:448px;}
+.cfmOllehMainHeader .userInfoName {padding-left:15px; height:45px; color:#333; font-size:26px; border-bottom:1px solid #bcbcbc; letter-spacing:-0.025em; word-spacing:-0.025em;}
+.cfmOllehMainHeader .userInfoName span {font-weight:bold;}
+.cfmOllehMainHeader .userInfoDetail {position:relative;}
+.cfmOllehMainHeader .userInfoDetail ul {padding:6px 0 0 15px;}
+.cfmOllehMainHeader .userInfoDetail li {margin-top:9px; font-size:14px; letter-spacing:-0.025em; word-spacing:-0.025em;}
+.cfmOllehMainHeader .userInfoEdit {position:absolute; top:11px; right:0;}
+
+.cfmOllehMainHeader .userBill {position:relative; float:left; padding:10px 22px; width:350px; border-left:1px dashed #d0d0d0;}
+.cfmOllehMainHeader .userBill:after {content:''; position:absolute; top:8px; right:-92px; width:96px; height:141px; background:url(../images/icon/index_icon_bill.png) no-repeat;}
+.cfmOllehMainHeader .userBillSummary {margin-top:5px; height:35px; font-size:16px; font-weight:bold; color:#333; border-bottom:1px solid #bcbcbc; letter-spacing:-0.05em; word-spacing:-0.05em;}
+.cfmOllehMainHeader .userBillTotal {margin-top:25px; color:#333; font-weight:bold;}
+.cfmOllehMainHeader .userBillTotal h4 {font-size:16px; font-weight:bold; letter-spacing:-0.025em; word-spacing:-0.025em;}
+.cfmOllehMainHeader .userBillTotal p {margin-top:12px; font-size:26px;}
+.cfmOllehMainHeader .userBillTotalPrice {display:inline-block; margin-right:4px; font-size:44px; font-family:Arial, sans-serif; font-weight:normal; color:#ed2a25; letter-spacing:-0.05em; word-spacing:-0.05em; vertical-align:-4px;}
+
+.cfmOllehMainBill {margin:40px auto 0; width:980px;}
+.cfmOllehMainBill:after {content:''; display:block; clear:both;}
+.cfmOllehMainBill .billTerm {float:left; box-sizing:border-box; padding:0 39px 0 38px; width:491px; height:354px; background:url(../images/index_bg_bill01.png) no-repeat;}
+.cfmOllehMainBill .billTermTxt {margin:57px 0 0 13px; color:#555; font-size:14px;}
+.cfmOllehMainBill .billTermSelect {margin-top:10px;}
+.cfmOllehMainBill .billTermSelect:after {content:''; display:block; clear:both;}
+.cfmOllehMainBill .billTermSelect .comm_selectbox {float:left; width:347px; height:38px; color:#333; font-size:14px; background:url(../images/index_bg_select.png) no-repeat; border:0;}
+.cfmOllehMainBill .billTermSelect .comm_selectbox > select {height:38px;}
+.cfmOllehMainBill .billTermSelect .comm_selectbox > label,
+.cfmOllehMainBill .billTermSelect .comm_selectbox > p {top:11px;}
+.cfmOllehMainBill .billTermSelect .submit {float:right; width:62px; height:38px; line-height:38px; text-align:center; color:#fff; font-size:14px; font-weight:bold; background:url(../images/index_bg_btn_submit.png) no-repeat;}
+.cfmOllehMainBill .billTermSelect .submit:hover {color:#fff!important; text-decoration:none!important;}
+.cfmOllehMainBill .billTermLink {margin-top:15px; text-align:right;}
+.cfmOllehMainBill .billTermLink a {display:inline-block; padding-right:24px; width:100px; height:16px; background:url(../images/icon/index_icon_note.png) no-repeat 100% 0;}
+.cfmOllehMainBill .billTermLink a span {position:relative; display:block; height:14px; font-size:14px; line-height:14px; border-bottom:1px solid #9a9a9a; letter-spacing:-0.025em; word-spacing:-0.025em; color:#000; font-weight:bold;}
+.cfmOllehMainBill .billTermLink a span:after {content:''; position:absolute; bottom:-2px; left:0; display:block; width:100%; border-top:1px solid #c8c8c8;}
+.cfmOllehMainBill .billTermPrice {margin-top:53px;}
+.cfmOllehMainBill .billTermPrice h4 {padding-left:4px;}
+.cfmOllehMainBill .billTermPrice h4 .em {font-family:Arial, sans-serif; font-size:36px; line-height:29px; vertical-align:middle; letter-spacing:-0.05em; word-spacing:-0.05em;}
+.cfmOllehMainBill .billTermPrice p {margin-top:30px; padding-right:13px; color:#333; font-size:26px; font-weight:bold; text-align:right;}
+.cfmOllehMainBill .billTermPrice p .em {margin-right:4px; font-family:Arial, sans-serif; font-size:44px; font-weight:normal; vertical-align:-4px; letter-spacing:-0.05em; word-spacing:-0.05em;}
+
+.cfmOllehMainBill .billDetail {float:left; box-sizing:border-box; width:489px; height:354px; background:url(../images/index_bg_bill02.png) no-repeat;}
+.cfmOllehMainBill .billDetailList {padding:14px 14px 0 14px; overflow:hidden;}
+.cfmOllehMainBill .billDetailList li {float:left; width:228px; height:119px;}
+.cfmOllehMainBill .billDetailList li.left {position:relative; margin-right:5px;}
+.cfmOllehMainBill .billDetailList li.left:after {content:''; position:absolute; top:49px; right:-3px; height:57px; border-right:1px solid #dadada;}
+.cfmOllehMainBill .billDetailList li h4 {padding-left:20px; height:36px; line-height:36px; color:#222; font-size:17px; font-weight:bold; letter-spacing:-0.05em; word-spacing:-0.05em;}
+.cfmOllehMainBill .billDetailList li h4.bg01 {background-color:#f4d495;}
+.cfmOllehMainBill .billDetailList li h4.bg02 {background-color:#f0c9a9;}
+.cfmOllehMainBill .billDetailList li h4.bg03 {background-color:#f2beb4;}
+.cfmOllehMainBill .billDetailList li h4.bg04 {background-color:#e8c5d0;}
+.cfmOllehMainBill .billDetailList li > div {position:relative; margin:21px 11px 0 22px; line-height:27px; font-size:16px;}
+.cfmOllehMainBill .billDetailList li > div a {position:absolute; top:0; right:0;}
+.cfmOllehMainBill .billDetailList li.addr {position:relative; margin-right:0; width:100%; height:42px; background:url(../images/index_bg_bill_addr.png) no-repeat; overflow:hidden;}
+.cfmOllehMainBill .billDetailList li.addr h4 {float:left; height:42px; line-height:40px;}
+.cfmOllehMainBill .billDetailList li.addr p {float:left; margin-left:19px; height:42px; line-height:40px; font-size:16px;}
+.cfmOllehMainBill .billDetailList li.addr a {position:absolute; top:6px; right:11px;}
+.cfmOllehMainBill .billDetail .reissue {margin-top:13px; padding-right:14px; color:#333; font-size:14px; text-align:right; letter-spacing:-0.025em; word-spacing:-0.025em;}
+.cfmOllehMainBill .billDetail .reissue a {display:inline-block; margin-left:8px; width:105px; height:30px; line-height:28px; font-size:12px; color:#fff; text-align:center; background:url(../images/index_bg_btn_reissue.png) no-repeat;}
+.cfmOllehMainBill .billDetail .reissue a:hover {color:#fff!important; text-decoration:none!important;}
+
+.cfmOllehMainBillCaution {margin:8px auto 0; width:980px; text-align:right;}
+.cfmOllehMainBillCaution p {float:right; padding:0 12px 0 24px; height:18px; line-height:14px; color:#555; font-size:12px; background:url(../images/icon/comm_icon_point2.png) no-repeat 0 50%; letter-spacing:-0.025em; word-spacing:-0.025em;}
+
+.cfmOllehMainPrd {margin:50px auto 0; width:980px;}
+.cfmOllehMainPrd .prdItem {margin-top:7px; overflow:hidden; letter-spacing:-0.05em; word-spacing:-0.05em;}
+.cfmOllehMainPrd .prdItem h4 {position:relative; float:left; padding-left:202px; width:272px; height:104px; line-height:104px; text-align:center; font-size:23px; font-weight:bold; z-index:1;}
+.cfmOllehMainPrd .prdItem h4.mobile {background:url(../images/icon/index_prd_mobile.png) no-repeat;}
+.cfmOllehMainPrd .prdItem h4.tv {background:url(../images/icon/index_prd_tv.png) no-repeat;}
+.cfmOllehMainPrd .prdItem h4.internet {background:url(../images/icon/index_prd_internet.png) no-repeat;}
+.cfmOllehMainPrd .prdItem h4.tel {background:url(../images/icon/index_prd_tel.png) no-repeat;}
+.cfmOllehMainPrd .prdItem .amount {float:left; margin:22px 0; width:324px; height:58px; line-height:58px; font-size:21px; font-weight:bold; text-align:center; border-left:1px solid #c6c6c6;}
+.cfmOllehMainPrd .prdItem a {float:left; margin:22px 0; width:160px; height:58px; border-left:1px solid #c6c6c6; text-align:center; color:#222; font-size:17px; line-height:58px; background:url(../images/index_bg_arrow.png) no-repeat 120px 50%;}
+
+.cfmOllehMainLink {margin:40px auto 0; width:980px;}
+.cfmOllehMainLink ul {padding:24px 0 23px; font-size:0; text-align:center;}
+.cfmOllehMainLink li {display:inline-block; width:130px;}
+.cfmOllehMainLink li a {display:block; height:72px; text-indent:-9999px; background:url(../images/icon/index_link_sprite.png) no-repeat;}
+.cfmOllehMainLink li a.item01 {background-position:18px 0;}
+.cfmOllehMainLink li a.item02 {background-position:-112px 0;}
+.cfmOllehMainLink li a.item03 {background-position:-242px 0;}
+.cfmOllehMainLink li a.item04 {background-position:-372px 0;}
+.cfmOllehMainLink li a.item05 {background-position:-502px 0;}
+.cfmOllehMainLink li a.item06 {background-position:-632px 0;}
+.cfmOllehMainLink li a.item07 {background-position:-762px 0;}
+
+.cfmOllehMainBottom {margin:40px 0; padding:17px 0 15px; background:#f8f8f8; border-top:1px solid #bcbcbc; border-bottom:1px solid #bcbcbc;}
+.cfmOllehMainBottom .info {margin:0 auto; width:978px; height:38px; border-left:1px solid #c2c2c2; border-right:1px solid #c2c2c2;}
+.cfmOllehMainBottom .info:after {content:''; display:block; clear:both;}
+.cfmOllehMainBottom .info h3 {float:left; margin:9px 64px 0 23px;}
+.cfmOllehMainBottom .info li {float:left; margin-top:10px;}
+.cfmOllehMainBottom .info li + li {margin-left:44px;}
+.cfmOllehMainBottom .info p {float:left; margin:10px 0 0 64px;}
+

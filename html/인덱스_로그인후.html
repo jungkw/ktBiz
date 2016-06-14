@@ -1,0 +1,242 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 법인 My Page 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 모바일법인고객센터</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/index.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+
+</head>
+
+
+
+<body>
+<h1 class="blind">올레닷컴 - 모바일법인고객센터</h1>
+<div id="cfmOllehWrap">
+
+	<!-- s : skip Navigation -->
+	<ul class="cfmOllehSkipNavi" id="cfmOllehSkipNavi">
+		<li><a href="#cfmOllehMain" ><span>본문으로 바로가기</span></a></li>
+		<li><a href="http://inside.olleh.com/html/WebAccessibility/Info.asp"><span>웹접근성 도움말 페이지로 이동하기</span></a></li>
+	</ul>
+	<!-- e : skip Navigation -->
+
+	<!-- s : gnb wrap -->
+	<div id="cfmOllehGnb">
+		<script type="text/javascript">$.ktBizGnbView();</script>
+	</div>
+	<!-- e : gnb wrap -->
+
+
+	<!-- s : main container -->
+	<div id="cfmOllehMain">
+    <h2 class="blind">본문 영역</h2>
+
+		<div class="cfmOllehMain">
+			<!-- 회원기본정보 -->
+			<div class="cfmOllehMainHeader roundBox">
+				<div class="userInfo">
+					<h3 class="blind">고객정보</h3>
+					<p class="userInfoName">
+						<span>홍길*(ktkt***)님</span> 안녕하세요.
+					</p>
+					<div class="userInfoDetail">
+						<ul>
+							<li>회원등급 : 법인마스터골드</li>
+							<li>유효기간 : 2017-05-05</li>
+							<li>법인명 : 주식회사 케이티</li>
+							<li>사업자등록번호 : 123-45-67890</li>
+						</ul>
+						<a href="#" class="userInfoEdit roundBtn">회원정보 수정</a>
+					</div>
+				</div>
+				<!-- // .userInfo -->
+
+				<div class="userBill">
+					<h3 class="blind">명세서 정보</h3>
+					<p class="userBillSummary">
+						2016년 <span class="em">04</span>월 기준 총 <span class="em">23</span>개의 명세서가 있습니다.
+					</p>
+					<div class="userBillTotal">
+						<h4>통합청구금액</h4>
+						<p><span class="userBillTotalPrice">123,128,600</span>원</p>
+					</div>
+				</div>
+				<!-- // .userBill -->
+			</div>
+			<!-- // 회원기본정보 -->
+
+			<!-- 명세서 조회 -->
+			<div class="cfmOllehMainBill">
+				<h3 class="indexTitle">
+					<img src="../images/title/index_title_bill.png" alt="명세서 조회" />
+				</h3>
+
+				<div class="billTerm">
+					<p class="billTermTxt">사용기간: 2016.03.01~2016.03.31</p>
+					<div class="billTermSelect">
+						<div class="comm_selectbox">
+							<label for="comm_select">명세서번호</label>
+							<select id="comm_select" class="comm_select" onchange="$.ktBizSelect(this); return false;">
+								<option>014213121* (010-0000-0000)</option>
+								<option>424213231*</option>
+								<option>224295211*</option>
+								<option>924433478*</option>
+							</select>
+							<p><span class="blind">현재 선택하신 명세서번호는</span> <span class="selectTxt">014213121* (010-0000-0000)</span> <span class="blind">입니다.</span></p>
+						</div>
+						<a href="#" class="submit">조회</a>
+					</div>
+					<div class="billTermLink">
+						<a href="#"><span>명세서 상세보기</span></a>
+					</div>
+
+					<div class="billTermPrice">
+						<h4>
+							<span class="em">4</span>
+							<img src="../../images/title/index_title_price.png" alt="월 청구 금액" />
+						</h4>
+						<p><span class="em">3,128,600</span>원</p>
+					</div>
+				</div>
+				<!-- // .billTerm -->
+
+				<div class="billDetail">
+					<h4 class="blind">명세서 상세정보</h4>
+					<ul class="billDetailList">
+						<li class="left">
+							<h4 class="bg01 roundFillBox">납부 방법</h4>
+							<div>
+								신용카드납부
+								<a href="#" class="roundBtn" title="납부 방법 변경">변경</a>
+							</div>
+						</li>
+						<li>
+							<h4 class="bg02 roundFillBox">납부 유형</h4>
+							<div>
+								우편명세서
+								<a href="#" class="roundBtn" title="납부 유형 변경">변경</a>
+							</div>
+						</li>
+						<li class="left">
+							<h4 class="bg03 roundFillBox">납부 계정정보</h4>
+							<div>
+								비씨 (4140-****-****-****)
+							</div>
+						</li>
+						<li>
+							<h4 class="bg04 roundFillBox">납부 기준일</h4>
+							<div>
+								25일
+								<a href="" class="roundBtn">납부확인서 인쇄</a>
+							</div>
+						</li>
+						<li class="addr">
+							<h4>청구지 정보</h4>
+							<p>경기도 성남시 분당구 불정로 *****</p>
+							<a href="#" class="roundBtn" title="청구지 정보 변경">변경</a>
+						</li>
+					</ul>
+					<p class="reissue">지난 명세서를 받지 못하셨나요? <a href="#">명세서 재발행</a></p>
+				</div>
+				<!-- // .billDetail -->
+			</div>
+			<div class="cfmOllehMainBillCaution">
+				<p class="pointTxt2">명세서 정보는 실제 발행된 시점 이후 변경된 사항이 있을 경우 상이할 수 있습니다.</p>
+			</div>
+			<!-- // 명세서 조회 -->
+
+			<!-- 가입상품정보 -->
+			<div class="cfmOllehMainPrd">
+				<h3 class="indexTitle">
+					<img src="../images/title/index_title_prd.png" alt="가입 상품 정보" />
+				</h3>
+				<div class="prdItem roundBox">
+					<h4 class="mobile">모바일</h4>
+					<p class="amount">가입 회선수 <span class="em">100</span>개</p>
+					<a href="#" class="detail" title="모바일상품 상세보기">상세보기</a>
+				</div>
+				<div class="prdItem roundBox">
+					<h4 class="tv">TV</h4>
+					<p class="amount">가입 회선수 <span class="em">100</span>개</p>
+					<a href="#" class="detail" title="TV상품 상세보기">상세보기</a>
+				</div>
+				<div class="prdItem roundBox">
+					<h4 class="internet">인터넷</h4>
+					<p class="amount">가입 회선수 <span class="em">100</span>개</p>
+					<a href="#" class="detail" title="인터넷상품 상세보기">상세보기</a>
+				</div>
+				<div class="prdItem roundBox">
+					<h4 class="tel">전화</h4>
+					<p class="amount">가입 회선수 <span class="em">100</span>개</p>
+					<a href="#" class="detail" title="전화상품 상세보기">상세보기</a>
+				</div>
+			</div>
+			<!-- // 가입상품정보 -->
+
+			<!-- 바로가기 -->
+			<div class="cfmOllehMainLink">
+				<h3 class="indexTitle">
+					<img src="../images/title/index_title_link.png" alt="바로가기" />
+				</h3>
+				<ul class="roundBox">
+					<li><a href="#" class="item01">법인폰 본인확인</a></li>
+					<li><a href="#" class="item02">월별 요금조회</a></li>
+					<li><a href="#" class="item03">인터넷 사용계약서</a></li>
+					<li><a href="#" class="item04">번호변경</a></li>
+					<li><a href="#" class="item05">분실신고</a></li>
+					<li><a href="#" class="item06">설치장소 변경</a></li>
+					<li><a href="#" class="item07">대량구매 문의</a></li>
+				</ul>
+			</div>
+			<!-- // 바로가기 -->
+
+			<!-- 이용/가입안내 -->
+			<div class="cfmOllehMainBottom">
+				<div class="info">
+					<h3><img src="../images/title/index_title_bottom01.png" alt="이용/가입안내" /></h3>
+					<ul>
+						<li><a href="#" class="item01"><img src="../images/title/index_title_bottom02.png" alt="회원 가입안내" /></a></li>
+						<li><a href="#" class="item02"><img src="../images/title/index_title_bottom03.png" alt="이메일 상담" /></a></li>
+						<li><a href="#" class="item03"><img src="../images/title/index_title_bottom04.png" alt="회원등급 신청서" /></a></li>
+					</ul>
+					<p><img src="../images/title/index_title_bottom05.png" alt="문의 080-789-0116/114+통화" /></p>
+				</div>
+			</div>
+			<!-- // 이용/가입안내 -->
+		</div>
+  </div>
+	<!-- e : main container -->
+
+
+	<!-- s : footer -->
+	<div id="cfmOllehFooter">
+		<script type="text/javascript">$.ktBizFooterView();</script>
+	</div>
+	<!-- e : footer -->
+</div>
+
+</body>
+</html>
+
