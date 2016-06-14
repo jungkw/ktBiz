@@ -80,18 +80,12 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 
 
 /* paging */
-.comm_paging {width: 100%; position: relative; text-align: center; margin:30px 0 0; overflow: hidden;}
-.comm_paging .pagingCount {position: absolute;top:2px; right: 0;}
-.comm_paging .pagingCount span {font-size: 11px;color:#666;display: inline-block;padding-left: 7px;}
-.comm_paging .pagingCount .nowCount {font-weight: bold;}
-.comm_paging a.comm_pagingBtn {width: 15px; height: 22px;overflow: hidden;}
-.comm_paging a {width:23px; height:22px; margin:0 3px 0 4px;display:inline-block;font-family: verdana; vertical-align: middle;border:1px solid #cacaca; line-height: 22px; color: #666;text-align: center;font-weight: normal;}
-.comm_paging a.prevBtn {margin:0 6px 0 0;}
-.comm_paging a.nextBtn {margin:0 0 0 7px;}
-.comm_paging a.nextBtn img {margin: 2px -16px 0 0}
-.comm_paging a.prevBtn img {margin: 2px 0 0 -16px}
-.comm_paging a.on {background:#ef1c25;font-weight: bold;color: #fff; text-decoration: underline;}
-.comm_paging a.on:hover, .comm_paging a.on:focus, .comm_paging a.on:active {color:#fff !important;}
+.comm_paging {width: 100%; position: relative; text-align: center; margin:15px 0 0 0; overflow: hidden;}
+.comm_paging a.comm_pagingBtn {width: 22px; height: 22px;border: 0;}
+.comm_paging a.comm_pagingBtn img {vertical-align: middle;}
+.comm_paging a {display:inline-block;padding:0 6px; font-size: 15px;line-height: 22px;color: #333;vertical-align: middle;}
+.comm_paging a.on {font-weight: bold; color:#de2428}
+.comm_paging a.comm_pagingBtn:hover {text-decoration: none}
 
 
 /* notify */
@@ -121,9 +115,13 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 
 
 /* btn size */
-.btnSty {display:inline-block; color:#333;border:1px solid #bbb; text-align: center; background: #fff;vertical-align: middle;}
+.btnSty {display:inline-block; color:#333;border:1px solid #bbb; text-align: center; background: #fff;vertical-align: middle;
+border-radius: 3px 3px 3px 3px;
+-moz-border-radius: 3px 3px 3px 3px;
+-webkit-border-radius: 3px 3px 3px 3px;
+}
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#333 !important; text-decoration: none !important;}
-.btnSty.big {height:31px;padding:0 30px; font-size:14px; line-height: 31px;}
+.btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 34px;}
 .btnSty.mid {height:28px;padding:0 11px; font-size:12px; line-height: 28px;}
 
 .btnSmall {height:12px; display:inline-block; font-size:12px;color:#000;line-height: 12px; text-align: center; text-decoration: underline !important;}
@@ -135,11 +133,10 @@ ul.bulletList li {margin: 5px 0 0 0; padding: 0 0 0 15px; background: url('../im
 /* btn color */
 .btnSty.red {background: #ed1c24; color:#fff; border:1px solid #db1c24;}
 .btnSty.red:hover, .btnSty.red:focus, .btnSty.red:active {color:#fff !important;}
-.btnSty.blk {background: #5d5d5d; color:#fff; border:1px solid #3d3d3d;}
+.btnSty.blk {background: #333; color:#fff; border:1px solid #000;}
 .btnSty.blk:hover, .btnSty.blk:focus, .btnSty.blk:active {color:#fff !important;}
 .btnSty.gray {background: #404040;color:#fff; border:1px solid #404040;}
 .btnSty.gray:hover, .btnSty.gray:focus, .btnSty.gray:active {color:#fff !important;}
-
 
 
 
