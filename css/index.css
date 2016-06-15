@@ -103,6 +103,10 @@
 .cfmOllehMainBill .billDetail .reissue a:hover {color:#fff!important; text-decoration:none!important;}
 .firefox .cfmOllehMainBill .billDetail .reissue a:focus {outline:1px dotted #000;}
 
+.cfmOllehMainBill .billDetailList li.account > div {margin-top:0; font-size:0; height:70px;}
+.cfmOllehMainBill .billDetailList li.account .middleBlock {display: inline-block; height: 100%; vertical-align: middle;}
+.cfmOllehMainBill .billDetailList li.account .txt {display: inline-block; line-height: 1.2; vertical-align: middle; font-size: 16px;}
+
 .cfmOllehMainBillCaution {margin:8px auto 0; width:980px; text-align:right;}
 .cfmOllehMainBillCaution p {float:right; padding:0 12px 0 24px; height:18px; line-height:18px; color:#555; font-size:12px; background:url(../images/icon/comm_icon_point2.png) no-repeat 0 50%; letter-spacing:-0.025em; word-spacing:-0.025em;}
 
