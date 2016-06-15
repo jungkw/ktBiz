@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] 부가서비스 My time plan 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My페이지] 부가서비스 My time plan 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
@@ -24,6 +24,7 @@
 	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
 
 	<!-- 기존 스크립트 -->
 	<script language="javascript" type="text/javascript">
@@ -386,98 +387,100 @@
 						<tr>
 							<th scope="row">서비스 시간대 선택</th>
 							<td>
-								<select id="selectUserDate" title="서비스 시간대 선택">
-									<option value="">선택하세요</option>
+								<div class="selectWrap">
+									<select id="selectUserDate" title="서비스 시간대 선택">
+										<option value="">선택하세요</option>
 
-									<option value="24" desc="00시 부터 03시" a1="0" a2="3">
-										0시 ~ 3시
-									</option>
+										<option value="24" desc="00시 부터 03시" a1="0" a2="3">
+											0시 ~ 3시
+										</option>
 
-									<option value="1" desc="01시 부터 04시" a1="1" a2="4">
-										1시 ~ 4시
-									</option>
+										<option value="1" desc="01시 부터 04시" a1="1" a2="4">
+											1시 ~ 4시
+										</option>
 
-									<option value="2" desc="02시 부터 05시" a1="2" a2="5">
-										2시 ~ 5시
-									</option>
+										<option value="2" desc="02시 부터 05시" a1="2" a2="5">
+											2시 ~ 5시
+										</option>
 
-									<option value="3" desc="03시 부터 06시" a1="3" a2="6">
-										3시 ~ 6시
-									</option>
+										<option value="3" desc="03시 부터 06시" a1="3" a2="6">
+											3시 ~ 6시
+										</option>
 
-									<option value="4" desc="04시 부터 07시" a1="4" a2="7">
-										4시 ~ 7시
-									</option>
+										<option value="4" desc="04시 부터 07시" a1="4" a2="7">
+											4시 ~ 7시
+										</option>
 
-									<option value="5" desc="05시 부터 08시" a1="5" a2="8">
-										5시 ~ 8시
-									</option>
+										<option value="5" desc="05시 부터 08시" a1="5" a2="8">
+											5시 ~ 8시
+										</option>
 
-									<option value="6" desc="06시 부터 09시" a1="6" a2="9">
-										6시 ~ 9시
-									</option>
+										<option value="6" desc="06시 부터 09시" a1="6" a2="9">
+											6시 ~ 9시
+										</option>
 
-									<option value="7" desc="07시 부터 10시" a1="7" a2="10">
-										7시 ~ 10시
-									</option>
+										<option value="7" desc="07시 부터 10시" a1="7" a2="10">
+											7시 ~ 10시
+										</option>
 
-									<option value="8" desc="08시 부터 11시" a1="8" a2="11">
-										8시 ~ 11시
-									</option>
+										<option value="8" desc="08시 부터 11시" a1="8" a2="11">
+											8시 ~ 11시
+										</option>
 
-									<option value="9" desc="09시 부터 12시" a1="9" a2="12">
-										9시 ~ 12시
-									</option>
+										<option value="9" desc="09시 부터 12시" a1="9" a2="12">
+											9시 ~ 12시
+										</option>
 
-									<option value="10" desc="10시 부터 13시" a1="10" a2="13">
-										10시 ~ 13시
-									</option>
+										<option value="10" desc="10시 부터 13시" a1="10" a2="13">
+											10시 ~ 13시
+										</option>
 
-									<option value="11" desc="11시 부터 14시" a1="11" a2="14">
-										11시 ~ 14시
-									</option>
+										<option value="11" desc="11시 부터 14시" a1="11" a2="14">
+											11시 ~ 14시
+										</option>
 
-									<option value="12" desc="12시 부터 15시" a1="12" a2="15">
-										12시 ~ 15시
-									</option>
+										<option value="12" desc="12시 부터 15시" a1="12" a2="15">
+											12시 ~ 15시
+										</option>
 
-									<option value="13" desc="13시 부터 16시" a1="13" a2="16">
-										13시 ~ 16시
-									</option>
+										<option value="13" desc="13시 부터 16시" a1="13" a2="16">
+											13시 ~ 16시
+										</option>
 
-									<option value="14" desc="14시 부터 17시" a1="14" a2="17">
-										14시 ~ 17시
-									</option>
+										<option value="14" desc="14시 부터 17시" a1="14" a2="17">
+											14시 ~ 17시
+										</option>
 
-									<option value="15" desc="15시 부터 18시" a1="15" a2="18">
-										15시 ~ 18시
-									</option>
+										<option value="15" desc="15시 부터 18시" a1="15" a2="18">
+											15시 ~ 18시
+										</option>
 
-									<option value="16" desc="16시 부터 19시" a1="16" a2="19">
-										16시 ~ 19시
-									</option>
+										<option value="16" desc="16시 부터 19시" a1="16" a2="19">
+											16시 ~ 19시
+										</option>
 
-									<option value="17" desc="17시 부터 20시" a1="17" a2="20">
-										17시 ~ 20시
-									</option>
+										<option value="17" desc="17시 부터 20시" a1="17" a2="20">
+											17시 ~ 20시
+										</option>
 
-									<option value="18" desc="18시 부터 21시" a1="18" a2="21">
-										18시 ~ 21시
-									</option>
+										<option value="18" desc="18시 부터 21시" a1="18" a2="21">
+											18시 ~ 21시
+										</option>
 
-									<option value="19" desc="19시 부터 22시" a1="19" a2="22">
-										19시 ~ 22시
-									</option>
+										<option value="19" desc="19시 부터 22시" a1="19" a2="22">
+											19시 ~ 22시
+										</option>
 
-									<option value="20" desc="20시 부터 23시" a1="20" a2="23">
-										20시 ~ 23시
-									</option>
+										<option value="20" desc="20시 부터 23시" a1="20" a2="23">
+											20시 ~ 23시
+										</option>
 
-									<option value="21" desc="21시 부터 24시" a1="21" a2="24">
-										21시 ~ 24시
-									</option>
+										<option value="21" desc="21시 부터 24시" a1="21" a2="24">
+											21시 ~ 24시
+										</option>
 
-								</select>
+									</select>
+								</div>
 							</td>
 						</tr>
 						</tbody>
