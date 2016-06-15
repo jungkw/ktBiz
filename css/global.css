@@ -39,7 +39,7 @@ ul.comm_tab ul.comm_subTab li.first {border-left:0;padding-left:18px;}
 .comm_detailTabWrap {margin:20px 0;}
 .comm_detailTabWrap .comm_stab:after {content:''; display:block; clear:both;}
 .comm_detailTabWrap .comm_stab li {float:left; margin-right:3px;}
-.comm_detailTabWrap .comm_stab a {position:relative; display:block; border:1px solid #e0e0e0; color:#555; padding:0 25px 0 10px; height:28px; line-height:26px;}
+.comm_detailTabWrap .comm_stab a {position:relative; display:block; border:1px solid #e0e0e0; color:#555; padding:0 25px 0 10px; height:28px; line-height:26px; background:#fff;}
 .comm_detailTabWrap .comm_stab a:after {content:''; position:absolute; top:50%; right:10px; display:block; margin-top:-1px; border-top:4px solid #ef1c25; border-left:4px solid transparent; border-right:4px solid transparent;}
 .comm_detailTabWrap .comm_stab li.on a {color:#ef1c25;}
 .comm_detailTabWrap .comm_stab li.on a:after {margin-top:-5px; border-top-color:transparent; border-bottom:4px solid #ef1c25;}

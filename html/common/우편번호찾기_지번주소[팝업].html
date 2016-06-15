@@ -15,15 +15,16 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My Page] 우편번호 찾기(지번주소) 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My페이지] 우편번호 찾기(지번주소) 팝업 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
 	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
-	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>	
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
 
         <script type="text/JavaScript">
 
@@ -45,7 +46,7 @@
     var pos = 0;
     var val = obj.value;
         var invalidChars = "~`!@#$%^&*()_+|\"':;?/><., []\\=-{}";
-        for (i=0; i<invalidChars.length; i++) {       
+        for (i=0; i<invalidChars.length; i++) {
       badChar = invalidChars.charAt(i);
       if ((pos = val.indexOf(badChar, 0)) > -1) {
         obj.value = val.substring(0, pos);
@@ -55,7 +56,7 @@
 
   function checkValue(val) {
         var invalidChars = "~`!@#$%^&*()_+|\"':;?/><., []\\=-{}";
-        for (i=0; i<invalidChars.length; i++) {         
+        for (i=0; i<invalidChars.length; i++) {
       badChar = invalidChars.charAt(i)
       if (val.indexOf(badChar,0) > -1) {
         return false;
@@ -73,13 +74,13 @@
         if(chknull == "" || isEmpty(document.main.dongMyun)) {
             alert('우편번호를 검색하실 동이름을 입력해 주세요.');
       document.main.dongMyun.focus();
-        } 
+        }
     else {
       if (!checkValue(chknull)) {
         alert('올바른 동명을 입력하십시오.');
         document.main.dongMyun.value = "";
         document.main.dongMyun.focus();
-      } 
+      }
       if (!checkLength(chknull)) {
         alert('두자리 이상 동명을 입력하십시오.');
         document.main.dongMyun.focus();
@@ -102,40 +103,40 @@
             alert('우편번호를 검색하실 동이름을 입력해 주세요.');
       document.main.dongMyun.focus();
       return false;
-        } 
+        }
     else {
       if (!checkValue(chknull)) {
         alert('올바른 동명을 입력하십시오.');
         document.main.dongMyun.value = "";
         document.main.dongMyun.focus();
         return false;
-      } 
+      }
       if (!checkLength(chknull)) {
         alert('두자리 이상 동명을 입력하십시오.');
         document.main.dongMyun.focus();
         return false;
-      } 
+      }
         }
-        
+
         if (document.main.h_dongMyun.value != "" && document.main.dongMyun.value == document.main.h_dongMyun.value) {
             return false;
         } else {
             document.main.currPageNo.value = "0";
             document.main.totPageCnt.value = "";
-        
+
         }
-        
+
     document.main.dongMyun.value = chknull;
     return true;
     }
   function Trim(strVal)
-  {          
+  {
      while (strVal.search(/^\s/) != -1)
-        strVal = strVal.replace(/^\s/,"");     
-     
-     while (strVal.search(/\s$/) != -1)     
-        strVal = strVal.replace(/\s$/,"");          
-               
+        strVal = strVal.replace(/^\s/,"");
+
+     while (strVal.search(/\s$/) != -1)
+        strVal = strVal.replace(/\s$/,"");
+
     return strVal;
   }
 
@@ -173,7 +174,7 @@
              opener.document.form.b_adrsTypeCd[0].checked     = true;   //P:구주소, N:신주소
              opener.document.form.b_adrsTypeCd[1].checked     = false;    //P:구주소, N:신주소
             }catch(e) { }
-            
+
             try{
               opener.document.form.adrs_type_cd.value       = "P";    //P:구주소, N:신주소
             }catch(e) { }
@@ -211,7 +212,7 @@
             try{
               opener.document.form.adrs_type_cd.value  = "P";   //P:구주소, N:신주소
             }catch(e) { }
-            
+
         }  else if ("G"=="041130"){
             opener.frmMileage.adrZip.value           = zip1;
             opener.frmMileage.adrPrimaryLn.value     = addr;
@@ -220,7 +221,7 @@
              opener.document.frmMileage.b_adrsTypeCd[0].checked     = true;   //P:구주소, N:신주소
              opener.document.frmMileage.b_adrsTypeCd[1].checked     = false;    //P:구주소, N:신주소
             }catch(e) { }
-            
+
             try{
               opener.document.frmMileage.adrs_type_cd.value  = "P";   //P:구주소, N:신주소
             }catch(e) { }
@@ -239,12 +240,12 @@
           parent.opener.document.sendForm.ZIP_CODE.value      = zip2;
             parent.opener.document.sendForm.ADDRESS.value       = addr;
             parent.opener.document.sendForm.ADDRESS2.value      = addr2;
-            
+
             try{
              opener.document.sendForm.b_adrsTypeCd[0].checked     = true;   //P:구주소, N:신주소
              opener.document.sendForm.b_adrsTypeCd[1].checked     = false;    //P:구주소, N:신주소
             }catch(e) { }
-            
+
             try{
               opener.document.sendForm.adrs_type_cd.value  = "P";   //P:구주소, N:신주소
             }catch(e) { }
@@ -257,7 +258,7 @@
              opener.document.form1.b_adrsTypeCd[0].checked      = true;   //P:구주소, N:신주소
              opener.document.form1.b_adrsTypeCd[1].checked      = false;    //P:구주소, N:신주소
             }catch(e) { }
-            
+
             try{
               opener.document.form1.adrs_type_cd.value   = "P";   //P:구주소, N:신주소
             }catch(e) { }
@@ -266,12 +267,12 @@
             opener.form1.company_addr.value              = addr;
             opener.form1.company_mnt_addr.value              = addr2;
             opener.form1.company_mnt_addr.focus();
-            
+
             try{
              opener.document.form1.b_adrsTypeCd[0].checked      = true;   //P:구주소, N:신주소
              opener.document.form1.b_adrsTypeCd[1].checked      = false;    //P:구주소, N:신주소
             }catch(e) { }
-            
+
             try{
               opener.document.form1.adrs_type_cd.value   = "P";   //P:구주소, N:신주소
             }catch(e) { }
@@ -289,18 +290,18 @@
             }catch(e) { }
 
     }
-        
+
         self.close();
         return;
     }
-    
+
     function goPage(page) {
         var f = document.main;
         f.currPageNo.value = page;
         f.realPageNo.value = page;
         f.dongMyun.value = f.h_dongMyun.value;
         f.submit();
-        
+
     }
 /*
     function keyPress() {
@@ -310,30 +311,30 @@
             f.totPageCnt.value = "";
         }
     }
-*/    
+*/
     function processKey() {
-  
-  
-    
+
+
+
     <!-- 특수키 -->
         if( (event.ctrlKey == true && (event.keyCode == 78 || event.keyCode == 82)) ||
             (event.keyCode >= 112 && event.keyCode <= 123)) {
             event.keyCode = 0;
             event.cancelBubble = true;
             event.returnValue = false;
-            alert('죄송합니다. 특수 Key를 사용하실수 없습니다.'); 
+            alert('죄송합니다. 특수 Key를 사용하실수 없습니다.');
         }
     }
     document.onkeydown = processKey;
 
-    function click() { 
+    function click() {
         if ( (event.button==2) ||  (event.button==3)) {
             alert('죄송합니다. 마우스를 사용하실수 없습니다.');
-        } 
-    } 
+        }
+    }
     document.onmousedown=click ;
-    
-    
+
+
 
 </script>
 
@@ -411,7 +412,7 @@
                                     <th scope="row" class="fNormal">06000</th>
                                     <td class="last">
                                       <a href="#" onclick="ReturnAddr('06000','06000','서울 강남구 압구정동 ','미성아파트 ')">
-                                        서울 강남구 압구정동 미성아파트 
+                                        서울 강남구 압구정동 미성아파트
                                       </a>
                                     </td>
                                   </tr>
@@ -419,17 +420,17 @@
                                     <th scope="row" class="fNormal">06006</th>
                                     <td class="last">
                                       <a href="#" onclick="ReturnAddr('06006','06006','서울 강남구 압구정동 ','한양아파트 ')">
-                                        서울 강남구 압구정동 한양아파트 
+                                        서울 강남구 압구정동 한양아파트
                                       </a>
                                     </td>
                                   </tr>
                                   <tr>
-                                    
+
                                     <td class="last center" colspan="2">
                                         검색된 주소가 없습니다.
                                     </td>
                                   </tr>
-                            
+
                           </tbody>
                         </table>
 
@@ -454,7 +455,7 @@
 		<div class="pop_footer">
 			<div class="pop_footerInner">
 				<p class="pop_close">
-					<a href="" ><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+					<a href="" >닫기</a>
 				</p>
 			</div>
 		</div>
