@@ -27,6 +27,7 @@
 	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNewSelectBox.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
 
 </head>
 
@@ -82,18 +83,53 @@
 
 				<!-- s : 컨텐츠 영역 -->
 
-				<!-- s : select box -->
-				<div class="comm_select" style="width:200px;">
-					<span class="ctrl"><span class="arrow"></span></span>
-					<div class="myValue selected">Option1</div>
-					<ul class="iList" style="position: absolute;">
-						<li class=""><input name="c" id="c0" class="option" type="radio" checked="checked"><label for="c0">Select Option1</label></li>
-						<li class=""><input name="c" id="c1" class="option" type="radio" value=""><label for="c1">Option_1</label></li>
-						<li class="hover"><input name="c" id="c2" class="option" type="radio" value=""><label for="c2">Option_2</label></li>
-						<li><input name="c" id="c3" class="option" type="radio" value=""><label for="c3">Option_3</label></li>
+
+
+				<!-- s : 라디오 -->
+				<div class="comm_radio">
+					<input type="radio" name="radioEx" id="radioEx01"/><i></i>
+					<label for="radioEx01">라디오01</label>
+				</div>
+				<div class="comm_radio ml15">
+					<input type="radio" name="radioEx" id="radioEx02" /><i></i>
+					<label for="radioEx02">라디오02</label>
+				</div>
+				<!-- e : 라디오 -->
+
+				<br/>
+
+				<!-- s : 체크박스 -->
+				<div class="comm_checkbox">
+					<input type="checkbox" name="checkEx" id="checkEx01"/><i></i>
+					<label for="checkEx01">체크박스01</label>
+				</div>
+				<div class="comm_checkbox ml15">
+					<input type="checkbox" name="checkEx" id="checkEx02" /><i></i>
+					<label for="checkEx02">체크박스02</label>
+				</div>
+				<!-- e : 체크박스 -->
+
+				<br/><br/><br/><br/><br/>
+
+				<!-- s : 컨텐츠 용 탭 -->
+				<h4 class="fBold " style="font-size:18px;color:#000">본문 컨텐츠 성 탭</h4>
+
+				<div class="comm_tabs style01" style="width:610px;">
+					<ul>
+						<li><a href="#">이용중인 서비스</a></li>
+						<li class="selected"><a href="#">실시간 요금조회</a></li>
+						<li><a href="#">월별 요금조회</a></li>
+						<li><a href="#">사용량 조회</a></li>
+						<li><a href="#">알 조회</a></li>
 					</ul>
 				</div>
-				<!-- e : select box -->
+
+				<div>
+				</div>
+
+				<!-- e : 컨텐츠 용 탭 -->
+
+
 
 
 
@@ -328,7 +364,18 @@
 							</tr>
 							<tr>
 								<th scope="row" class="left"><label for="case02">인풋 옆에 버튼</label></th>
-								<td class="last"><input type="text" id="case02" class="mr5" /><button type="button">검색</button></td>
+								<td class="last">
+									<input type="text" id="case02" class="mr5" /><button type="button">검색</button>
+									<!-- s : 셀렉트 -->
+									<div class="selectWrap" title="셀렉트박스">
+										<select id="selectbox01">
+											<option>옵션01</option>
+											<option>옵션02</option>
+											<option>옵션03</option>
+										</select>
+									</div>
+									<!-- e : 셀렉트 -->
+								</td>
 							</tr>
 							<tr>
 								<th scope="row" class="right"><label for="case03">텍스트 추가</label></th>
@@ -671,8 +718,32 @@
 
 				<!-- e : paging -->
 
+				<br /><br /><br />
 
-
+				<!-- s : 셀렉트 -->
+				<div class="selectWrap" title="셀렉트박스">
+					<select id="selectbox01">
+						<option>옵션01</option>
+						<option>옵션02</option>
+						<option>옵션03</option>
+					</select>
+				</div>
+				<!-- e : 셀렉트 -->
+				
+				<br /><br /><br />
+				
+				<p>셀렉 박스 넓이값 넣을 경우</p>
+				<!-- s : 셀렉트 -->
+				<div class="selectWrap w100" title="셀렉트박스">
+					<select id="selectbox01">
+						<option>옵션01</option>
+						<option>옵션02</option>
+						<option>옵션03</option>
+					</select>
+				</div>
+				<!-- e : 셀렉트 -->
+				
+				<br /><br /><br />
 
 
 				<!-- s : bullet -->

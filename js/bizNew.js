@@ -61,9 +61,6 @@ $(document).ready(function(){
 
     $.ktBizSelect = function(){};
 
-
-
-
     $.ktBizSelect.index = function(obj){
         var $obj = $(obj);
         var text = $obj.children("option:selected").text();
@@ -80,6 +77,13 @@ $(document).ready(function(){
     };
 
     $.ktBizSelect.index.focus();
+
+
+	/**
+    * global select box
+    */
+	$('.selectWrap select').selectric();
+
 
     /**
     * layerPopup accessibility focus fn
@@ -1141,90 +1145,6 @@ $(document).ready(function(){
       /* common footer include fn */
       $.ktBizFooterView = function(){
             var footerItem = "";
-                  footerItem += "<h2 class='blind'>올레닷컴(기업) 주요메뉴</h2>";
-                  footerItem += "<ul class='cfmOllehNewFooterMenu'>";
-                      
-                    footerItem += "<li>";
-
-                      footerItem += "<a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=1&amp;depth2=1' >전화</a>";
-                      footerItem += "<ul>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=1&amp;depth2=1' >인터넷전화</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=1&amp;depth2=2' >일반전화</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=1&amp;depth2=3' >국제전화</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=1&amp;depth2=4' >전국대표번호</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=1&amp;depth2=5' >무료전화080</a></li>";
-                      footerItem += "</ul>";  
-
-                    footerItem += "</li>";    
-
-                    footerItem += "<li>";
-
-                      footerItem += "<a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=2&amp;depth2=1' >인터넷/데이터</a>";
-                      footerItem += "<ul>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=2&amp;depth2=1' >인터넷</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=2&amp;depth2=2' >전용회선</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=2&amp;depth2=3' >글로벌데이터</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=2&amp;depth2=4' >ucloud biz</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=2&amp;depth2=5' >IDC</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=2&amp;depth2=6' >Managed</a></li>";
-                      footerItem += "</ul>";  
-
-                    footerItem += "</li>";    
-
-                    footerItem += "<li>";
-                      footerItem += "<a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=3&amp;depth2=1' >모바일</a>";
-                      footerItem += "<ul>";               
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=3&amp;depth2=1' >요금제</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=3&amp;depth2=2' >특화 서비스</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=3&amp;depth2=3' >모바일웍스</a></li>";
-                      footerItem += "</ul>";  
-
-                    footerItem += "</li>";    
-
-                    footerItem += "<li>";
-
-                      footerItem += "<a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=4&amp;depth2=1' >IoT</a>";
-                      footerItem += "<ul>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=4&amp;depth2=1' >이동체</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=4&amp;depth2=2' >케어/보안</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=4&amp;depth2=3' >환경/방재</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=4&amp;depth2=4' >IoT무선서비스</a></li>";
-                      footerItem += "</ul>";  
-
-                    footerItem += "</li>";    
-
-                    footerItem += "<li>";
-                      footerItem += "<a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=5&amp;depth2=1' >기업솔루션</a>";
-                      footerItem += "<ul>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=5&amp;depth2=1' >bizmeka</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=5&amp;depth2=2' >기업보안</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=5&amp;depth2=3' >스마트빌딩</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=5&amp;depth2=4' >스마트에너지</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/submain.do?idx=5&amp;depth2=5' >디지털사이니지</a></li>";
-                      footerItem += "</ul>";  
-
-                    footerItem += "</li>";    
-
-                    footerItem += "<li>";
-                      footerItem += "<a href='http://biz.olleh.com/biz/wBiz/customer/findMyItemMain.do?idx=6' >맞춤 컨설팅</a>";
-                      footerItem += "<ul>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/customer/findMyItemMain.do?idx=6' >내게 맞는 상품찾기</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/customer/consultMain.do?idx=6' >온라인 컨설팅 신청</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/customer/consultQnaMain.do?idx=6' >1:1 문의</a></li>";
-                      footerItem += "</ul>";
-                    footerItem += "</li>";
-                    footerItem += "<li>";
-                      footerItem += "<a href='http://biz.olleh.com/biz/wBiz/customer/faqMain.do' >이용안내</a>";
-                      footerItem += "<ul>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/customer/faqMain.do' >FAQ</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/customer/fileMain.do' >신청서 다운로드</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/customer/contactInfoMain.do' >연락처 안내</a></li>";
-                        footerItem += "<li><a href='http://biz.olleh.com/biz/wBiz/customer/noticeMain.do' >공지사항</a></li>";
-                      footerItem += "</ul>";        
-                    footerItem += "</li>";
-                  footerItem += "</ul>";
-
-
                   footerItem += "<div class='cfmfooterOllehMain'>";
                   footerItem += "<h2 class='blind'>올레(기업) 약관 및 소개</h2>";
                   footerItem += "<ul class='info'>";
