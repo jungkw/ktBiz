@@ -349,3 +349,16 @@ border-radius: 3px 3px 3px 3px;
 .chrome .comm_checkbox input:focus + i, .Safari .comm_checkbox input:focus + i {background-position: -2px -2px;}
 .chrome .comm_checkbox input:checked + i, .Safari .comm_checkbox input:checked + i {background-position: -23px 0;}
 .chrome .comm_checkbox input:checked:focus + i, .Safari .comm_checkbox input:checked:focus + i {background-position: -26px -2px;}
+
+
+/* tab */
+.comm_tabs {width:100%;}
+
+
+.comm_tabs.style01 {margin:30px auto 0 auto;overflow: hidden;}
+.comm_tabs.style01 li {float:left;margin:0 0 0 40px;}
+.comm_tabs.style01 li:first-child {margin:0;}
+.comm_tabs.style01 li a {display:block;padding:0 0 11px 0; font-size:15px;color:#666;text-decoration:none;}
+.comm_tabs.style01 li a:hover, .comm_tabs.style01 li a:active, .comm_tabs.style01 li a:focus {color:#666 !important;text-decoration: none !important}
+.comm_tabs.style01 li.selected a{border-bottom:2px solid #df2428;font-weight:bold;color:#df2428;}
+.comm_tabs.style01 li.selected a:hover, .comm_tabs.style01 li.selected a:active, .comm_tabs.style01 li.selected a:focus {color:#df2428 !important;}
