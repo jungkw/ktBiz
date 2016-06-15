@@ -44,15 +44,15 @@
 <script type="text/javascript">
 	$(function(){
 		$('.remote-btn01').on('click',function(){
-			$('.comm_selectbox').show();
-			$('#comm_select').focus()
+			$('.index_selectbox').show();
+			$('#index_select').focus()
 			$('.billTermSelectBtn').hide();
 			alert('변경완료. 현재상태 select box');
 			return false;
 		});
 
 		$('.remote-btn02').click(function(){
-			$('.comm_selectbox').hide();
+			$('.index_selectbox').hide();
 			$('.billTermSelectBtn').show().focus();
 			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
 			return false;
@@ -134,9 +134,9 @@
 						
 						<div class="billTermSelectWrap">
 							<!-- 30개 이하 일 경우 -->
-							<div class="comm_selectbox" style="display: none">
-								<label for="comm_select">명세서번호</label>
-								<select id="comm_select" class="comm_select" onchange="$.ktBizSelect(this); return false;">
+							<div class="index_selectbox" style="display: none">
+								<label for="index_select">명세서번호</label>
+								<select id="index_select" class="index_select" onchange="$.ktBizSelect.index(this); return false;">
 									<option>014213121*</option>
 									<option>014213121* (010-0000-0000)*</option>
 									<option>224295211*</option>

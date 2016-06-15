@@ -11,6 +11,13 @@
 .roundFillBox:after {content:''; position:absolute; top:0; right:0; display:block; width:5px; height:100%; background:url(../images/index_bg_roundbtn_fr.png) no-repeat 100% 0;}
 .indexTitle {margin-bottom:12px;}
 .em {color:#ed2a25;}
+
+.index_selectbox {width:390px;height: 32px;position: relative;border:1px solid #d6d6d6;cursor: pointer;box-sizing: border-box;}
+.index_selectbox label {display:block;position: absolute;top:7px;left:12px;cursor: pointer;z-index: 10;}
+.index_selectbox select {width:100%;height: 32px;min-height:30px;position:relative;line-height: 30px;padding:0 10px;opacity: 0;filter: alpha(opacity=0);cursor: pointer;z-index: 20;}
+.index_selectbox p {position: absolute;top:7px; left:90px;z-index: 0;}
+.index_selectbox.on {border: 1px dotted #000;}
+
 /* // index common */
 
 .cfmOllehMain {line-height:1; color:#000;}
@@ -38,21 +45,21 @@
 .cfmOllehMainBill .billTermSelect {margin-top:10px;}
 .cfmOllehMainBill .billTermSelect:after {content:''; display:block; clear:both;}
 .cfmOllehMainBill .billTermSelectWrap {float:left; width:347px; height:38px; background:url(../images/index_bg_select.png) no-repeat;}
-.cfmOllehMainBill .billTermSelect .comm_selectbox {box-sizing:border-box; width:100%; height:100%; color:#333; font-size:14px;}
-.cfmOllehMainBill .billTermSelect .comm_selectbox > select {height:38px;}
-.cfmOllehMainBill .billTermSelect .comm_selectbox > label,
-.cfmOllehMainBill .billTermSelect .comm_selectbox > p {top:11px;}
-.cfmOllehMainBill .billTermSelect .comm_selectbox.on {border: 1px dotted #000;}
+.cfmOllehMainBill .billTermSelect .index_selectbox {box-sizing:border-box; width:100%; height:100%; color:#333; font-size:14px;}
+.cfmOllehMainBill .billTermSelect .index_selectbox > select {height:38px;}
+.cfmOllehMainBill .billTermSelect .index_selectbox > label,
+.cfmOllehMainBill .billTermSelect .index_selectbox > p {top:11px;}
+.cfmOllehMainBill .billTermSelect .index_selectbox.on {border: 1px dotted #000;}
 .cfmOllehMainBill .billTermSelectBtn {height: 38px;display: block; line-height: 38px;color: #000;padding:0 13px;font-size:14px;}
 .cfmOllehMainBill .billTermSelectBtn span {margin-left: 3px;}
 .cfmOllehMainBill .billTermSelectBtn:hover, .cfmOllehMainBill .billTermSelectBtn:focus, .cfmOllehMainBill .billTermSelectBtn:active {color:#000 !important;text-decoration: none !important;}
 
-.chrome .cfmOllehMainBill .billTermSelect .comm_selectbox.on,
-.Safari .cfmOllehMainBill .billTermSelect .comm_selectbox.on {border:2px solid #6fa1d9;}
-.chrome .cfmOllehMainBill .billTermSelect .comm_selectbox.on > label,
-.Safari .cfmOllehMainBill .billTermSelect .comm_selectbox.on > label {top:10px; left:11px;}
-.chrome .cfmOllehMainBill .billTermSelect .comm_selectbox.on > p,
-.Safari .cfmOllehMainBill .billTermSelect .comm_selectbox.on > p {top:10px; left:89px;}
+.chrome .cfmOllehMainBill .billTermSelect .index_selectbox.on,
+.Safari .cfmOllehMainBill .billTermSelect .index_selectbox.on {border:2px solid #6fa1d9;}
+.chrome .cfmOllehMainBill .billTermSelect .index_selectbox.on > label,
+.Safari .cfmOllehMainBill .billTermSelect .index_selectbox.on > label {top:10px; left:11px;}
+.chrome .cfmOllehMainBill .billTermSelect .index_selectbox.on > p,
+.Safari .cfmOllehMainBill .billTermSelect .index_selectbox.on > p {top:10px; left:89px;}
 
 
 .cfmOllehMainBill .billTermSelect .submit {float:right; width:62px; height:38px; line-height:38px; text-align:center; color:#fff; font-size:14px; font-weight:bold; background:url(../images/index_bg_btn_submit.png) no-repeat;}

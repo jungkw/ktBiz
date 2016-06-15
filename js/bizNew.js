@@ -57,25 +57,29 @@ $(document).ready(function(){
 
     /**
     * select box chg fn
-    * @param {object} this.
     */
 
-    $.ktBizSelect = function(obj){
+    $.ktBizSelect = function(){};
+
+
+
+
+    $.ktBizSelect.index = function(obj){
         var $obj = $(obj);
         var text = $obj.children("option:selected").text();
         $obj.siblings("p").children('.selectTxt').text(text);
     };
 
 
-    $.ktBizSelect.focus = function(){
-        $(".comm_select").focusin(function(){
+    $.ktBizSelect.index.focus = function(){
+        $(".index_select").focusin(function(){
             $(this).parent('div').addClass('on');
         }).focusout(function(){
             $(this).parent('div').removeClass('on')
         });
     };
 
-    $.ktBizSelect.focus();
+    $.ktBizSelect.index.focus();
 
     /**
     * layerPopup accessibility focus fn

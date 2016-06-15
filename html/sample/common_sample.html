@@ -25,13 +25,14 @@
 	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNewSelectBox.js" type="text/javascript"></script>
 
 </head>
 
 
 
 <body>
-<h1 class="blind">올레닷컴 Biz My페이지</h1>
+<h1 class="blind">올레닷컴(기업)</h1>
 <div id="cfmOllehWrap">
 
 	<!-- s : skip Navigation -->
@@ -81,15 +82,15 @@
 				<!-- s : 컨텐츠 영역 -->
 
 				<!-- s : select box -->
-				<div class="comm_selectbox">
-					<label for="comm_select">명세서번호</label>
-					<select id="comm_select" class="comm_select" onchange="$.ktBizSelect(this); return false;">
-						<option >014213121* (010-0000-0000)</option>
-						<option>424213231*</option>
-						<option>224295211*</option>
-						<option>924433478*</option>
-					</select>
-					<p><span class="blind">현재 선택하신 명세서번호는</span> <span class="selectTxt">014213121* (010-0000-0000)</span> <span class="blind">입니다.</span></p>
+				<div class="comm_select" style="width:200px;">
+					<span class="ctrl"><span class="arrow"></span></span>
+					<div class="myValue selected">Option1</div>
+					<ul class="iList" style="position: absolute;">
+						<li class=""><input name="c" id="c0" class="option" type="radio" checked="checked"><label for="c0">Select Option1</label></li>
+						<li class=""><input name="c" id="c1" class="option" type="radio" value=""><label for="c1">Option_1</label></li>
+						<li class="hover"><input name="c" id="c2" class="option" type="radio" value=""><label for="c2">Option_2</label></li>
+						<li><input name="c" id="c3" class="option" type="radio" value=""><label for="c3">Option_3</label></li>
+					</ul>
 				</div>
 				<!-- e : select box -->
 
