@@ -133,6 +133,51 @@ border-radius: 3px 3px 3px 3px;
 .btnSty.gray:hover, .btnSty.gray:focus, .btnSty.gray:active {color:#fff !important;}
 
 
+/* select */
+.selectWrap {position:relative; display:inline-block; vertical-align: middle;}
+.selectric-wrapper {position: relative; cursor: pointer;}
+
+.selectric-responsive {width: 100%;}
+
+.selectric {position: relative; background:url('../images/common/bg_selectbox_right.png') no-repeat right top;}
+.selectric:after {content:''; position: absolute; top:0; left:0; width:2px; height:30px; background:url('../images/common/bg_selectbox_left.png') no-repeat left top;}
+.selectric .label {display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 38px 0 10px; font-size: 13px; line-height: 28px; color: #444; height: 30px; -webkit-user-select: none;  -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.selectric .button {display: block; position: absolute; right: 0; top: 0; width: 30px; height: 30px; text-align: center; font: 0/0 a;}
+
+.selectric-hover .selectric {/*border:1px solid #df2428;*/}
+.selectric-hover .selectric .button {}
+
+.selectric-open {z-index: 9999;}
+.selectric-open .selectric {background:url('../images/common/bg_selectbox_right_up.png') no-repeat right top;}
+.selectric-open .selectric:after {background:url('../images/common/bg_selectbox_left_selected.png') no-repeat left top;}
+.selectric-open .selectric-items {display: block;}
+
+.selectric-disabled {filter: alpha(opacity=50);opacity: 0.5;cursor: default;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+
+.selectric-hide-select {position: relative; overflow: hidden; width: 0; height: 0;}
+.selectric-hide-select select {position: absolute; left: -100%; display: none;}
+
+.selectric-input {position: absolute !important; top: 0 !important; left: 0 !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; margin: 0 !important; padding: 0 !important; width: 1px !important; height: 1px !important; outline: none !important; border: none !important; *font: 0/0 a !important; background: none !important;}
+
+.selectric-temp-show {position: absolute !important; visibility: hidden !important; display: block !important;}
+
+/* Items box */
+.selectric-items {display: none; position: absolute; top: 100%; left: 0; min-width: 100%; padding:0 0 5px 0; background: #fff; border: 1px solid #df2428; border-top:none; z-index: -1; box-sizing: border-box;}
+.selectric-items:before {content:''; position: absolute; bottom: -1px; left: -1px; width: 3px; height:4px; background:url('../images/common/bg_selectbox_bottom_l.png') no-repeat left bottom;}
+.selectric-items:after {content:''; position: absolute; bottom: -1px; right: -1px; width: 3px; height:4px; background:url('../images/common/bg_selectbox_bottom_r.png') no-repeat left bottom;}
+.selectric-items .selectric-scroll {height: 100%; overflow: auto;}
+.selectric-above .selectric-items {top: auto; bottom: 100%;}
+.selectric-items ul,
+.selectric-items li {padding:0; margin: 0; font-size: 13px; line-height:22px; min-height: 22px;}
+.selectric-items li {display: block; padding: 0 9px; color: #333; cursor: pointer;}
+.selectric-items li:first-child {margin:-5px 0 0 0;}
+.selectric-items li.selected {background: #fff; color: #df2428;}
+.selectric-items li:hover {color:#df2428;}
+.selectric-items .disabled {filter: alpha(opacity=50); opacity: 0.5; cursor: default !important; background: none !important; color: #666 !important; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.selectric-items .selectric-group .selectric-group-label {font-weight: bold; padding-left: 10px; cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background: none; color: #444;}
+.selectric-items .selectric-group.disabled li {filter: alpha(opacity=100); opacity: 1;}
+.selectric-items .selectric-group li {padding-left: 25px;}
+
 
 
 /* global css */

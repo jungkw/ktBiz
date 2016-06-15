@@ -78,6 +78,13 @@ $(document).ready(function(){
 
     $.ktBizSelect.index.focus();
 
+
+	/**
+    * global select box
+    */
+	$('.selectWrap select').selectric();
+
+
     /**
     * layerPopup accessibility focus fn
     * @param {object} this.
