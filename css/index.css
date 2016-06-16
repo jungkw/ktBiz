@@ -12,11 +12,12 @@
 .indexTitle {margin-bottom:12px;}
 .em {color:#ed2a25;}
 
-.index_selectbox {width:390px;height: 32px;position: relative;border:1px solid #d6d6d6;cursor: pointer;box-sizing: border-box;}
+/*.index_selectbox {width:390px;height: 32px;position: relative;border:1px solid #d6d6d6;cursor: pointer;box-sizing: border-box;}
 .index_selectbox label {display:block;position: absolute;top:7px;left:12px;cursor: pointer;z-index: 10;}
 .index_selectbox select {width:100%;height: 32px;min-height:30px;position:relative;line-height: 30px;padding:0 10px;opacity: 0;filter: alpha(opacity=0);cursor: pointer;z-index: 20;}
 .index_selectbox p {position: absolute;top:7px; left:90px;z-index: 0;}
 .index_selectbox.on {border: 1px dotted #000;}
+*/
 
 .chrome .cfmOllehMainBill .billTermSelect .index_selectbox.on,
 .Safari .cfmOllehMainBill .billTermSelect .index_selectbox.on {border:2px solid #6fa1d9;}
@@ -51,11 +52,13 @@
 .cfmOllehMainBill .billTermSelect {margin-top:10px;}
 .cfmOllehMainBill .billTermSelect:after {content:''; display:block; clear:both;}
 .cfmOllehMainBill .billTermSelectWrap {float:left; width:347px; height:38px; background:url(../images/index_bg_select.png) no-repeat;}
+/*
 .cfmOllehMainBill .billTermSelect .index_selectbox {box-sizing:border-box; width:100%; height:100%; color:#333; font-size:14px;}
 .cfmOllehMainBill .billTermSelect .index_selectbox > select {height:38px;}
 .cfmOllehMainBill .billTermSelect .index_selectbox > label,
 .cfmOllehMainBill .billTermSelect .index_selectbox > p {top:11px;}
 .cfmOllehMainBill .billTermSelect .index_selectbox.on {border: 1px dotted #000;}
+*/
 .cfmOllehMainBill .billTermSelectBtn {height: 38px;display: block; line-height: 38px;color: #000;padding:0 13px;font-size:14px;}
 .cfmOllehMainBill .billTermSelectBtn span {margin-left: 3px;}
 .cfmOllehMainBill .billTermSelectBtn:hover, .cfmOllehMainBill .billTermSelectBtn:focus, .cfmOllehMainBill .billTermSelectBtn:active {color:#000 !important;text-decoration: none !important;}
@@ -139,4 +142,35 @@
 .cfmOllehMainBottom .info li {float:left; margin-top:10px;}
 .cfmOllehMainBottom .info li + li {margin-left:44px;}
 .cfmOllehMainBottom .info p {float:left; margin:10px 0 0 64px;}
+
+
+/* select */
+.index_selectbox {position:relative; width:347px;}
+.index_selectbox .selectric-wrapper {position: relative; cursor: pointer;}
+.index_selectbox .selectric-responsive {width: 100%;}
+
+.index_selectbox .selectric {position: relative; background:url('../images/index_selectbox_right.png') no-repeat right top;}
+.index_selectbox .selectric:after {content:''; position: absolute; top:0; left:0; width:2px; height:38px; background:url('../images/index_selectbox_left.png') no-repeat left top;}
+.index_selectbox .selectric .label {display: block !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 38px 0 95px; font-size:14px; line-height: 36px; color: #333; height: 38px; -webkit-user-select: none;  -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.index_selectbox .selectric .selectDesc {display: block !important; font-size:14px; line-height: 36px; color: #333; height: 38px;}
+.index_selectbox .selectric .button {display: block; position: absolute; right: 0; top: 0; width: 30px; height: 38px; text-align: center; font: 0/0 a;}
+
+
+.index_selectbox .selectric-open {z-index: 9999;}
+.index_selectbox .selectric-open .selectric {background:url('../images/index_selectbox_right_up.png') no-repeat right top;}
+.index_selectbox .selectric-open .selectric:after {background:url('../images/index_selectbox_left_selected.png') no-repeat left top;}
+.index_selectbox .selectric-open .selectric-items {display: block; border:1px solid #666; border-top:none;}
+
+.index_selectbox .selectric-disabled {filter: alpha(opacity=50);opacity: 0.5;cursor: default;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+
+.index_selectbox .selectric-hide-select {position: relative; overflow: hidden; width: 0; height: 0;}
+.index_selectbox .selectric-hide-select select {position: absolute; left: -100%; display: none;}
+
+.index_selectbox .selectric-input {position: absolute !important; top: 0 !important; left: 0 !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; margin: 0 !important; padding: 0 !important; width: 1px !important; height: 1px !important; outline: none !important; border: none !important; *font: 0/0 a !important; background: none !important;}
+
+.index_selectbox .selectric-temp-show {position: absolute !important; visibility: hidden !important; display: block !important;}
+
+.index_selectbox .selectric-items:before {content:''; position: absolute; bottom: -1px; left: -1px; width: 3px; height:4px; background:url('../images/index_selectbox_bottom_l.png') no-repeat left bottom;}
+.index_selectbox .selectric-items:after {content:''; position: absolute; bottom: -1px; right: -1px; width: 3px; height:4px; background:url('../images/index_selectbox_bottom_r.png') no-repeat left bottom;}
+.index_selectbox .selectric-items li {font-size:14px;}
 

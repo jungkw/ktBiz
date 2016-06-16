@@ -84,6 +84,13 @@ $(document).ready(function(){
     */
 	$('.selectWrap select').selectric();
 
+	/**
+    * main select box
+    */
+	$('.index_selectbox select').selectric({
+		maxHeight: 440
+	});
+
 
     /**
     * layerPopup accessibility focus fn
