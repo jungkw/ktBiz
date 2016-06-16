@@ -358,93 +358,94 @@
 
 		<!-- s : contents -->
 		<div class="pop_conts">
-			<form name="formLogOut" method="post" target="log_out" action="http://ktflogon.show.co.kr/Logon/Logoff.asp">
-                        <input type="hidden" name="URL" value="http://csmobile.biz.olleh.com/blank.html" />
-                    </form>
+			<div class="pop_contsContainer">
+        <form name="formLogOut" method="post" target="log_out" action="http://ktflogon.show.co.kr/Logon/Logoff.asp">
+                  <input type="hidden" name="URL" value="http://csmobile.biz.olleh.com/blank.html" />
+              </form>
 
-			<!-- s : 탭 영역 -->
-			<div class="comm_tabWrap mt0">
-				<div class="line"></div>
-				<ul class="comm_tab">
-					<li class="first"><a href="우편번호찾기_도로건물명[팝업].html">도로/건물명</a></li>
-					<li class="on"><a href="우편번호찾기_지번주소[팝업].html" >지번주소</a></li>
-				</ul>
-			</div>
-			<!-- e : 탭 영역 -->
+        <!-- s : 탭 영역 -->
+              <div class="comm_tabs style03">
+                <ul class="tabList_item02"> <!-- tabList_item02 / tabList_item03 / tabList_item04 / tabList_item05 -->
+                  <li class=""><a href="우편번호찾기_도로건물명[팝업].html">도로/건물명</a></li>
+                  <li class="selected"><a href="우편번호찾기_지번주소[팝업].html">지번주소</a></li>
+                </ul>
+              </div>
+              <!-- e : 탭 영역 -->
 
-                    <h2 class="blind">지번주소로 찾기</h2>
-                    <form name="main" method="post" action="/ComPostSearch.action.action" onsubmit="return search();">
-                        <fieldset>
-                            <legend>지번주소 우편번호 검색 필드</legend>
-                            <input type="hidden" size="15" name="linkType" value="G" />
-                            <input type="hidden" name = "currPageNo" value="0"/>
-                            <input type="hidden" name = "h_dongMyun" value=""/>
-                            <input type="hidden" name="realPageNo" value="1"/>
-                            <input type="hidden" name = "totPageCnt" value ="0"/>
+              <h2 class="blind">지번주소로 찾기</h2>
+              <form name="main" method="post" action="/ComPostSearch.action.action" onsubmit="return search();">
+                  <fieldset>
+                      <legend>지번주소 우편번호 검색 필드</legend>
+                      <input type="hidden" size="15" name="linkType" value="G" />
+                      <input type="hidden" name = "currPageNo" value="0"/>
+                      <input type="hidden" name = "h_dongMyun" value=""/>
+                      <input type="hidden" name="realPageNo" value="1"/>
+                      <input type="hidden" name = "totPageCnt" value ="0"/>
 
-                            <p class="bulletIcon">찾고자 하는 주소의 동(읍/면/리)를 입력하세요. ex) 압구정, 태평로2가, 양촌리</p>
-                            <div class="mt12 pop_comm_zipGrayBox">
-                                <label for="areaName">지역명</label><input type="text" id="areaName" size="32" name="dongMyun" value="" onkeyup="changeValue(this)" class="ml5 mr5" />
-                                <a href="" class="btnSty mid" onclick="search2();" >조회</a>
-                          </div>
-                        </fieldset>
-                    </form>
-
-                    <div class="commTitleWrap mt25">
-                        <span class="pointTxt posR1">해당 <b class="emp01">주소를 클릭</b>하시면 자동 입력이 됩니다.</span>
+                      <p class="bulletIcon mt20">찾고자 하는 주소의 동(읍/면/리)를 입력하세요. ex) 압구정, 태평로2가, 양촌리</p>
+                      <div class="mt12 pop_comm_box">
+                          <label for="areaName">지역명</label><input type="text" id="areaName" size="32" name="dongMyun" value="" onkeyup="changeValue(this)" class="ml5 mr5" />
+                          <a href="" class="btnSty mid" onclick="search2();" >조회</a>
                     </div>
-                    <div class="comm_tableBrdr">
-                        <table class="comm_table" summary="우편번호, 주소의 순서로 목록을 나타내는 표입니다" >
-                            <caption>우편 번호 상세 테이블</caption>
-                            <colgroup>
-                              <col width="20%" />
-                              <col width="*" />
-                            </colgroup>
-                            <thead>
-                              <tr>
-                                <th scope="col" class="cocmBrdFisrLine">우편번호</th>
-                                <th scope="col" class="">주소</th>
-                              </tr>
-                            </thead>
+                  </fieldset>
+              </form>
 
-                              <tbody>
-                                <tr>
-                                    <th scope="row" class="fNormal">06000</th>
-                                    <td class="last">
-                                      <a href="#" onclick="ReturnAddr('06000','06000','서울 강남구 압구정동 ','미성아파트 ')">
-                                        서울 강남구 압구정동 미성아파트
-                                      </a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row" class="fNormal">06006</th>
-                                    <td class="last">
-                                      <a href="#" onclick="ReturnAddr('06006','06006','서울 강남구 압구정동 ','한양아파트 ')">
-                                        서울 강남구 압구정동 한양아파트
-                                      </a>
-                                    </td>
-                                  </tr>
-                                  <tr>
+              <div class="commTitleWrap mt25">
+                  <span class="pointTxt posR1">해당 <b class="emp01">주소를 클릭</b>하시면 자동 입력이 됩니다.</span>
+              </div>
+              <div class="comm_tableBrdr mt40">
+                  <table class="comm_table" summary="우편번호, 주소의 순서로 목록을 나타내는 표입니다" >
+                      <caption>우편 번호 상세 테이블</caption>
+                      <colgroup>
+                        <col width="20%" />
+                        <col width="*" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="cocmBrdFisrLine">우편번호</th>
+                          <th scope="col" class="">주소</th>
+                        </tr>
+                      </thead>
 
-                                    <td class="last center" colspan="2">
-                                        검색된 주소가 없습니다.
-                                    </td>
-                                  </tr>
+                        <tbody>
+                          <tr>
+                              <th scope="row" class="fNormal">06000</th>
+                              <td class="last">
+                                <a href="#" onclick="ReturnAddr('06000','06000','서울 강남구 압구정동 ','미성아파트 ')">
+                                  서울 강남구 압구정동 미성아파트
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="fNormal">06006</th>
+                              <td class="last">
+                                <a href="#" onclick="ReturnAddr('06006','06006','서울 강남구 압구정동 ','한양아파트 ')">
+                                  서울 강남구 압구정동 한양아파트
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
 
-                          </tbody>
-                        </table>
+                              <td class="last center" colspan="2">
+                                  검색된 주소가 없습니다.
+                              </td>
+                            </tr>
 
-                    </div>
-                    <div class="comm_paging">
-                      <p class="pagingCount">
-                        <span class="nowCount">3</span><span>/</span><span class="allCount">10pages</span>
-                      </p>
-                      <a href="" class="comm_pagingBtn prevBtn">
-                        <img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
-                      </a><a href="#" class="on" title="현재 페이지">11</a><a href="">12</a><a href="">13</a><a href="">14</a><a href="">15</a><a href="">16</a><a href="">17</a><a href="">18</a><a href="">19</a><a href="">20</a><a href="" class="comm_pagingBtn nextBtn">
-                        <img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
-                      </a>
-                    </div>
+                    </tbody>
+                  </table>
+
+              </div>
+              <div class="comm_paging">
+                <p class="pagingCount">
+                  <span class="nowCount">3</span><span>/</span><span class="allCount">10pages</span>
+                </p>
+                <a href="" class="comm_pagingBtn prevBtn">
+                  <img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
+                </a><a href="#" class="on" title="현재 페이지">11</a><a href="">12</a><a href="">13</a><a href="">14</a><a href="">15</a><a href="">16</a><a href="">17</a><a href="">18</a><a href="">19</a><a href="">20</a><a href="" class="comm_pagingBtn nextBtn">
+                  <img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
+                </a>
+              </div>
+      </div>
 
 
 

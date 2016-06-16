@@ -131,35 +131,38 @@
 
 		<!-- s : contents -->
 		<div class="pop_conts">
-			<div class="pop_svc">
-				<div class="comm_tableBrdr">
-					<table class="comm_table" summary="신청된 요금제와 해지된 부가서비스를 확인 할 수 있습니다.">
-						<caption>부가서비스 신청 및 해지 내역</caption>
-						<colgroup>
-							<col width="50%" />
-							<col width="50%" />
-						</colgroup>
-						<thead>
-						<tr>
-							<th scope="col">신청된 부가서비스</th>
-							<th scope="col">해지된 부가서비스</th>
-						</tr>
-						</thead>
-						<tbody>
+			<div class="pop_contsContainer">
+				<div class="pop_svc">
+					<div class="comm_tableBrdr">
+						<table class="comm_table" summary="신청된 요금제와 해지된 부가서비스를 확인 할 수 있습니다.">
+							<caption>부가서비스 신청 및 해지 내역</caption>
+							<colgroup>
+								<col width="50%" />
+								<col width="50%" />
+							</colgroup>
+							<thead>
 							<tr>
-								<td class="center">
-									<span class="fBold">[없음]</span>
-								</td>
-								<td class="last center">
-									정보제공사업자번호차단
-								</td>
+								<th scope="col">신청된 부가서비스</th>
+								<th scope="col">해지된 부가서비스</th>
 							</tr>
-						</tbody>
-					</table>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="center">
+										<span class="fBold">[없음]</span>
+									</td>
+									<td class="last center">
+										정보제공사업자번호차단
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="bulletIcon mt10">변경하신 요금제는 즉시 적용되어 과금처리 되어집니다.</p>
 				</div>
-				<p class="bulletIcon mt10">변경하신 요금제는 즉시 적용되어 과금처리 되어집니다.</p>
+			</div>
 
-				<div class="btnWrap">
+				<div class="pop_contsBtns">
 					<a href="javascript:goInsert();" class="btnSty big red"><span>확인</span></a>
 					<a href="javascript:goCancel();" class="btnSty big blk"><span>취소</span></a>
 				</div>
@@ -172,8 +175,6 @@
 						<li>부가서비스 월중 신청/해지 시 해당 월 월정액 및 무료제공 혜택은 각각 일할 적용 됩니다. 단, dosirak파티 상품은 30일 단위로 선결제되는 상품으로 일할 적용되지 않습니다.</li.
 					</ul>
 				</div>
-			</div>
-
 		</div>
 		<!-- e : contents -->
 

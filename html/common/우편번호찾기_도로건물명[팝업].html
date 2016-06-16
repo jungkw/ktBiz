@@ -3423,106 +3423,106 @@
 		<!-- s : contents -->
 		<div class="pop_conts">
       <div class="pop_contsContainer">
-              <!-- s : 탭 영역 -->
-              <div class="comm_tabWrap mt0">
-                <div class="line"></div>
-                <ul class="comm_tab">
-                  <li class="first on"><a href="우편번호찾기_도로건물명[팝업].html">도로/건물명</a></li>
-                  <li><a href="우편번호찾기_지번주소[팝업].html" >지번주소</a></li>
-                </ul>
-              </div>
-              <!-- e : 탭 영역 -->
+        <!-- s : 탭 영역 -->
+        <div class="comm_tabs style03">
+          <ul class="tabList_item02"> <!-- tabList_item02 / tabList_item03 / tabList_item04 / tabList_item05 -->
+            <li class="selected"><a href="우편번호찾기_도로건물명[팝업].html">도로/건물명</a></li>
+            <li class=""><a href="우편번호찾기_지번주소[팝업].html">지번주소</a></li>
+          </ul>
+        </div>
+        <!-- e : 탭 영역 -->
 
-                            <h2 class="blind">도로/건물명으로 찾기</h2>
-                            <form name="main" method="post" action="/NewComPostSearch.action" onsubmit="return search2();">
-                                <fieldset>
-                                    <legend>도로/건물명 우편번호 검색 필드</legend>
-                                    <input type="hidden" id="sel_AREA1" name="sel_AREA1" value="" />
-                                    <input type="hidden" id="sel_AREA2" name="sel_AREA2" value="" />
-                                    <input type="hidden" id="sel_Code1" name="sel_Code1" value="" />
+          <h2 class="blind">도로/건물명으로 찾기</h2>
+          <form name="main" method="post" action="/NewComPostSearch.action" onsubmit="return search2();">
+              <fieldset>
+                  <legend>도로/건물명 우편번호 검색 필드</legend>
+                  <input type="hidden" id="sel_AREA1" name="sel_AREA1" value="" />
+                  <input type="hidden" id="sel_AREA2" name="sel_AREA2" value="" />
+                  <input type="hidden" id="sel_Code1" name="sel_Code1" value="" />
 
-                                    <input type="hidden" id="sel_Code2" name="sel_Code2" value="" />
-                                    <input type="hidden" id="dongMyun" name="dongMyun" value="" />
+                  <input type="hidden" id="sel_Code2" name="sel_Code2" value="" />
+                  <input type="hidden" id="dongMyun" name="dongMyun" value="" />
 
-                                    <p class="bulletIcon">도로, 건물 이름을 입력하세요. (예: 송학길, 역삼로)</p>
-                                    <div class="mt12 pop_comm_zipGrayBox">
-                                        <label for="searchGubun" class="blind">도로/건물명</label>
-                                        <select name="searchGubun" id="searchGubun" onchange="javascript:displaySearchField(this.value);" title="도로/건물명" class="mr5">
-                                            <option value="R" selected="selected">도로명</option>
-                                            <option value="B" >건물명</option>
-                                        </select>
-                                        <label for="dongMyun1" class="blind">도로명</label>
-                                        <input type="text" id="dongMyun1" name="dongMyun1" value="" class="mr20"  maxlength="20" size="20" title="도로명"/>
+                  <p class="bulletIcon mt20">도로, 건물 이름을 입력하세요. (예: 송학길, 역삼로)</p>
+                  <div class="mt12 pop_comm_box">
+                      <label for="searchGubun" class="blind">도로/건물명</label>
+                      <div class="selectWrap">
+                        <select name="searchGubun" id="searchGubun" onchange="javascript:displaySearchField(this.value);" title="도로/건물명" class="mr5">
+                            <option value="R" selected="selected">도로명</option>
+                            <option value="B" >건물명</option>
+                        </select>
+                      </div>
+                      <label for="dongMyun1" class="blind">도로명</label>
+                      <input type="text" id="dongMyun1" name="dongMyun1" value="" class="mr20"  maxlength="20" size="20" title="도로명"/>
 
-                                        <label for="dongMyun3">건물번호 :</label><input type="text" id="dongMyun3" name="dongMyun3" size="10" value="" title="건물번호" class="mr5 ml5" />
-                                        <a href="" class="btnSty mid" onclick="search2();" >조회</a>
-                                  </div>
-                                </fieldset>
-                            </form>
+                      <label for="dongMyun3">건물번호 :</label><input type="text" id="dongMyun3" name="dongMyun3" size="10" value="" title="건물번호" class="mr5 ml5" />
+                      <a href="" class="btnSty mid" onclick="search2();" >조회</a>
+                </div>
+              </fieldset>
+          </form>
 
-                            <div class="commTitleWrap mt25">
-                                <span class="pointTxt posR1">해당 <b class="emp01">주소를 클릭</b>하시면 자동 입력이 됩니다.</span>
-                            </div>
-                            <div class="comm_tableBrdr">
-                                <table class="comm_table" summary="우편번호, 주소의 순서로 목록을 나타내는 표입니다" >
-                                    <caption>우편 번호 상세 테이블</caption>
-                                    <colgroup>
-                                      <col width="20%" />
-                                      <col width="*" />
-                                    </colgroup>
-                                    <thead>
-                                      <tr>
-                                        <th scope="col" class="cocmBrdFisrLine">우편번호</th>
-                                        <th scope="col" class="">주소</th>
-                                      </tr>
-                                    </thead>
+          <div class="commTitleWrap mt25">
+              <span class="pointTxt posR1">해당 <b class="emp01">주소를 클릭</b>하시면 자동 입력이 됩니다.</span>
+          </div>
+          <div class="comm_tableBrdr mt40">
+              <table class="comm_table" summary="우편번호, 주소의 순서로 목록을 나타내는 표입니다" >
+                  <caption>우편 번호 상세 테이블</caption>
+                  <colgroup>
+                    <col width="20%" />
+                    <col width="*" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="cocmBrdFisrLine">우편번호</th>
+                      <th scope="col" class="">주소</th>
+                    </tr>
+                  </thead>
 
-                                      <tbody><tr>
-                                        <th scope="row" class="fNormal">39061</th>
-                                        <td class="last">
-                                          <a href="javascript:self.close()" onclick="ReturnAddr('39061','39061','경북 군위군 부계면 치산효령로 ','(부계면) ')">
-                                            경북 군위군 부계면 치산효령로 (부계면)
-                                          </a>
-                                        </td>
-                                      </tr>
+                    <tbody><tr>
+                      <th scope="row" class="fNormal">39061</th>
+                      <td class="last">
+                        <a href="javascript:self.close()" onclick="ReturnAddr('39061','39061','경북 군위군 부계면 치산효령로 ','(부계면) ')">
+                          경북 군위군 부계면 치산효령로 (부계면)
+                        </a>
+                      </td>
+                    </tr>
 
-                                      <tr>
-                                        <th scope="row" class="fNormal">39062</th>
-                                        <td class="last">
-                                          <a href="javascript:self.close()" onclick="ReturnAddr('39062','39062','경북 군위군 부계면 치산효령로 ','(부계면) ')">
-                                            경북 군위군 부계면 치산효령로 (부계면)
-                                          </a>
-                                        </td>
-                                      </tr>
+                    <tr>
+                      <th scope="row" class="fNormal">39062</th>
+                      <td class="last">
+                        <a href="javascript:self.close()" onclick="ReturnAddr('39062','39062','경북 군위군 부계면 치산효령로 ','(부계면) ')">
+                          경북 군위군 부계면 치산효령로 (부계면)
+                        </a>
+                      </td>
+                    </tr>
 
-                                      <tr>
-                                        <th scope="row" class="fNormal">39060</th>
-                                        <td class="last">
-                                          <a href="javascript:self.close()" onclick="ReturnAddr('39060','39060','경북 군위군 산성면 치산효령로 ','(산성면) ')">
-                                            경북 군위군 산성면 치산효령로 (산성면)
-                                          </a>
-                                        </td>
-                                      </tr>
+                    <tr>
+                      <th scope="row" class="fNormal">39060</th>
+                      <td class="last">
+                        <a href="javascript:self.close()" onclick="ReturnAddr('39060','39060','경북 군위군 산성면 치산효령로 ','(산성면) ')">
+                          경북 군위군 산성면 치산효령로 (산성면)
+                        </a>
+                      </td>
+                    </tr>
 
-                                      <tr>
-                                          <td class="last center" colspan="2">검색된 주소가 없습니다.</td>
-                                      </tr>
+                    <tr>
+                        <td class="last center" colspan="2">검색된 주소가 없습니다.</td>
+                    </tr>
 
-                                  </tbody>
-                                </table>
+                </tbody>
+              </table>
 
-                            </div>
-                            <div class="comm_paging">
-                              <p class="pagingCount">
-                                <span class="nowCount">3</span><span>/</span><span class="allCount">10pages</span>
-                              </p>
-                              <a href="" class="comm_pagingBtn prevBtn">
-                                <img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
-                              </a><a href="#" class="on" title="현재 페이지">11</a><a href="">12</a><a href="">13</a><a href="">14</a><a href="">15</a><a href="">16</a><a href="">17</a><a href="">18</a><a href="">19</a><a href="">20</a><a href="" class="comm_pagingBtn nextBtn">
-                                <img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
-                              </a>
-                            </div>
-
+          </div>
+          <div class="comm_paging">
+            <p class="pagingCount">
+              <span class="nowCount">3</span><span>/</span><span class="allCount">10pages</span>
+            </p>
+            <a href="" class="comm_pagingBtn prevBtn">
+              <img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
+            </a><a href="#" class="on" title="현재 페이지">11</a><a href="">12</a><a href="">13</a><a href="">14</a><a href="">15</a><a href="">16</a><a href="">17</a><a href="">18</a><a href="">19</a><a href="">20</a><a href="" class="comm_pagingBtn nextBtn">
+              <img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
+            </a>
+          </div>
         </div>
 		</div>
 		<!-- e : contents -->
