@@ -120,33 +120,60 @@ $(document).ready(function(){
     * @param {string} contents division level.
     */
     $.ktBizTabs = function(type, obj, division){
-        var $obj = $(obj);
         var $target = $($(obj).attr('href')); // 노출될 division
         var $parents = $(obj).closest('li'); // this의 자신 부모 li
         var $friend = $parents.closest('ul').children('li'); // 자신 부모 li 의 같은 레벨의 li 들 
         var $tabWrap = $parents.closest('ul').parents('div.comm_tabs'); // 현재 탭 wrapper
         var $subTab = $(obj).next('ul'); // sub ul
         var $division = $('#'+division); // 노출될 division의 wrapper
-        
-        $.ktBizTabs.type01($target, $parents, $tabWrap, $division);
+
+        if(type=="02"){
+          $.ktBizTabs.type02($target, $parents, $division, $friend);
+        }else{
+          $.ktBizTabs.type01($target, $parents, $tabWrap, $division, $subTab);
+        }
         
         return false;
     };
 
 
-    $.ktBizTabs.type01 = function($obj, $target, $parents, $tabWrap, $division){
+    /**
+    * tab 1depth contents module
+    * @param {object} contents class object
+    * @param {object} this parents li object
+    * @param {object} this wrapper object
+    * @param {object} conetns wrapper object
+    * @param {object} sub list ul object
+    */
+    $.ktBizTabs.type01 = function($target, $parents, $tabWrap, $division, $subTab){
         if(!$parents.hasClass('selected')){
             $division.children('div').hide();
             $target.show();
-
             $tabWrap.find('li').removeClass('selected');
-            $obj.addClass('selected');
-
+            $parents.addClass('selected');
+            $subTab.children('li').eq(0).addClass('selected');
         }
         return false;
     };
 
 
+    /**
+    * tab 2depth contents module
+    * @param {object} contents class object
+    * @param {object} this parents li object
+    * @param {object} conetns wrapper object
+    * @param {object} this parents all li object
+    */
+    $.ktBizTabs.type02 = function($target, $parents, $division, $friend){
+        $division.children('div').hide();
+        $target.show();
+        $friend.removeClass('selected');
+        $parents.addClass('selected');
+        return false;
+    }
+
+
+    // category tab focus fn
     $.ktBizTabs.focus = function(){
       $('.tabsCategory_sub_item > li > a').each(function(){
           $(this).bind('focusin', function(){
