@@ -79,7 +79,7 @@ $(document).ready(function(){
     $.ktBizSelect.index.focus();
 
 
-	/**
+    /**
     * global select box
     */
 	$('.selectWrap select').selectric();
@@ -92,8 +92,13 @@ $(document).ready(function(){
     $.ktBizPopClick = function(obj){
         var $target = $($(obj).attr('href'));
         var $mask =$target.prev('.pop_mask');
+        var $wh = $(window).height();
+        var $lh = $target.height();
+        var $setTop = ($wh-$lh)/2;
+
+
         $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
-        $target.show();
+        $target.show().css('top',$setTop+'px');
         $mask.show();
         $target.find('.pop_conts').attr('tabindex',0).focus();
         $target.find('.pop_close a, .pop_btn_close').click(function(){
@@ -110,28 +115,55 @@ $(document).ready(function(){
 
     /**
     * tab & contents module
-    * @param {number} tab 1depth or 2depth (01, 02)
+    * @param {number} tab style number
     * @param {object} this.
-    * @param {string} contents division name.
+    * @param {string} contents division level.
     */
-    $.ktBizTabMenu = function(type, obj, name){
-        var $target = $($(obj).attr('href'));
-        var $parents = $(obj).closest('li');
-        var $friend = $parents.closest('ul').children('li');
-        var $tabWrap = $parents.closest('ul').parents('div.comm_tabWrap');
-        var $subTab = $(obj).next('ul');
-        if(!$parents.hasClass('on')){
-            if(type==01){
-                $.ktBizTabMenu.depth01($target, $parents, $friend, $tabWrap, $subTab, name);
-            }else{
-                $.ktBizTabMenu.depth02($target,$parents, $friend, name, obj);
-            }
-        };
+    $.ktBizTabs = function(type, obj, division){
+        var $obj = $(obj);
+        var $target = $($(obj).attr('href')); // 노출될 division
+        var $parents = $(obj).closest('li'); // this의 자신 부모 li
+        var $friend = $parents.closest('ul').children('li'); // 자신 부모 li 의 같은 레벨의 li 들 
+        var $tabWrap = $parents.closest('ul').parents('div.comm_tabs'); // 현재 탭 wrapper
+        var $subTab = $(obj).next('ul'); // sub ul
+        var $division = $('#'+division); // 노출될 division의 wrapper
+        
+        $.ktBizTabs.type01($target, $parents, $tabWrap, $division);
         
         return false;
     };
 
-    /* $.ktBizTabMenu case depth01 fn */
+
+    $.ktBizTabs.type01 = function($obj, $target, $parents, $tabWrap, $division){
+        if(!$parents.hasClass('selected')){
+            $division.children('div').hide();
+            $target.show();
+
+            $tabWrap.find('li').removeClass('selected');
+            $obj.addClass('selected');
+
+        }
+        return false;
+    };
+
+
+    $.ktBizTabs.focus = function(){
+      $('.tabsCategory_sub_item > li > a').each(function(){
+          $(this).bind('focusin', function(){
+            $(this).addClass('focusin');
+            $(this).parents('li').addClass('focusin');
+          }).bind('focusout', function(){
+            $(this).removeClass('focusin');
+            $(this).parents('li').removeClass('focusin');
+          });
+        });
+    }
+    $.ktBizTabs.focus();
+
+
+    
+
+    /*
     $.ktBizTabMenu.depth01 = function($target, $parents, $friend, $tabWrap, $subTab, name) {
         $friend.children('ul').hide();
         if($subTab.length < 1){
@@ -150,7 +182,6 @@ $(document).ready(function(){
         $target.show();
     }
 
-    /* $.ktBizTabMenu case depth02 fn */
     $.ktBizTabMenu.depth02 = function($target, $parents, $friend, name, obj) {
         $friend.removeClass('on');
         $parents.addClass('on');
@@ -158,6 +189,7 @@ $(document).ready(function(){
         $target.show();
     }
 
+    */
 
     /* notify toggle btn fn */
     $.ktBizNotifyToggle = function(){
