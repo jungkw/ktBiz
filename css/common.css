@@ -161,7 +161,7 @@ div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li a:hover,
 div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li a:focus {color:#ed1c24;text-decoration:underline;}
 div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont {margin:18px 0 0 0;padding: 0 0 15px 0;background:#fff;}
 div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li {font-size:14px;line-height:16px;}
-div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li a {padding:13px 30px 0 17px;background:url('../images/common/cfm_olleh_lnb_1depth_plus.png') no-repeat 156px 21px;color:#575757;font-weight:normal;font-size:13px;line-height:16px;}
+div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li a {padding:13px 30px 0 27px;background:url('../images/common/cfm_olleh_lnb_1depth_plus.png') no-repeat 156px 21px;color:#575757;font-weight:normal;font-size:13px;line-height:16px;}
 div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li.cfmOllehLnbNewListContSelected a {background:url('../images/common/cfm_olleh_lnb_1depth_minus.png') no-repeat 156px 24px;font-weight:bold;}
 div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li.cfmOllehLnbNewListNonDepthSelected a {background:none;color:#ed1c24;font-weight:bold;}
 div#cfmOllehLnb ul.cfmOllehLnbNewList li ul.cfmOllehLnbNewListCont li.cfmOllehLnbNewNoDepth a {padding-top:13px;background:none;}
