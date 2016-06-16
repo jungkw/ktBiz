@@ -28,7 +28,7 @@
 
 
 
-<script type="text/javascript" type="text/javascript">
+<script type="text/javascript">
 
 
   function init(){
@@ -3084,24 +3084,24 @@
   }
 
   function checkValue(val) {
-        var invalidChars = "~`!@#$%^&*()_+|\"':;?/><.,[]\\=-{}";
-        for (i=0; i<invalidChars.length; i++) {
+    var invalidChars = "~`!@#$%^&*()_+|\"':;?/><.,[]\\=-{}";
+    for (i=0; i<invalidChars.length; i++) {
       badChar = invalidChars.charAt(i)
       if (val.indexOf(badChar,0) > -1) {
         return false;
       }
-        }
+    }
     return true;
   }
 
     function search2() {
-      var gubunVal = document.main.searchGubun.value;
+        var gubunVal = document.main.searchGubun.value;
         var chknull = document.main.dongMyun1.value;
         var chknull2 = document.main.dongMyun2.value;
-    var chkFlag = true;
+        var chkFlag = true;
 
-    chknull = Trim(chknull);
-    chknull2 = Trim(chknull2);
+      chknull = Trim(chknull);
+      chknull2 = Trim(chknull2);
 
 
     if(gubunVal == "R"){    //도로명 검색

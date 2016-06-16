@@ -43,82 +43,81 @@
 
 		<!-- s : contents -->
 		<div class="pop_conts">
-
-			<!-- s : 탭 영역 -->
-			<div class="comm_tabWrap mt0">
-				<div class="line"></div>
-				<ul class="comm_tab">
-					<li class="first on"><a href="#comm_tabConts01" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">이용안내</a></li>
-					<li><a href="#comm_tabConts02" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;" style="width:190px;">Active X 설치를 위한 설정</a></li>
-					<li><a href="#comm_tabConts03" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">웹아웃룩 설정</a></li>
-					<li><a href="#comm_tabConts04" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">아웃룩익스프레스 설정</a></li>
-				</ul>
-			</div>
-			<!-- e : 탭 영역 -->
-
-			<!-- s : 탭 이용안내 -->
-			<div id="comm_tabConts01" class="comm_tabConts">
-				<h2 class="pop_subTitle pt0">이용안내</h2>
-				<p>e-Mail명세서는 매월 고객님께 <span class="emp01">사용하신 이용요금을 통하여 받아 보실 수 있도록 암호화</span> 하여 보내집니다. 보안 메일을 원하지 않으시면 암호화 해지된 메일을 보내드립니다.</p>
-				<p class="mt10">암호화된 명세서의 요금 내역을 보시려면 먼저 전용 Plug-In을 설치하셔야 하며(최초 1회만 설치, 자동으로 설치됨), 이미 설치되어 있는 경우는 별도 설치가 필요 없습니다.</p>
-				<p class="mt10">e-Mail명세서는 소중한 고객님의 정보를 보호하기 위하여 <span class="emp01">개인이신 경우 고객님의 주민등록번호 뒷자리 7자리, 사업자이신 경우 사업자등록번호 뒷자리 5자리</span>를 입력하여 보실 수 있도록 암호화되어 있습니다.</p>
-				<p class="mt10">e-Mail명세서를 인쇄하실 때에는 명세서 전용 인쇄 Plug-In을 설치하신 후 명세서에서 책갈피에 있는 인쇄버튼을 클리하시어 인쇄하시기 바랍니다.</p>
-
-				<div class="pop_billPluginBox">
-					<div class="pop_billPluginBoxTitle">
-						<h3 class="pop_subTitle pt0 pb0">명세서 전용 Plug-In을 설치하셔야 하는 경우</h3>
-					</div>
-					<ul class="etc_box_inner">
-						<li>- 컴퓨터를 포맷하신 후 암호화 된 메일을 보실 경우</li>
-						<li>- e-Mail 명세서 전용 Plug-In을 삭제하신 경우</li>
-						<li>- e-Mail 명세서를 처음으로 받으시는 경우 등</li>
+			<div class="pop_contsContainer">
+				<!-- s : 탭 영역 -->
+				<div class="comm_tabs style03 pop_emailHelpTab mb20">
+					<ul class="tabList_item04"> <!-- tabList_item02 / tabList_item03 / tabList_item04 / tabList_item05 -->
+						<li class="selected"><a href="#popTabConts01" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;">이용안내</a></li>
+						<li><a href="#popTabConts02" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;">Active X 설치를 위한 설정</a></li>
+						<li><a href="#popTabConts03" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;">웹아웃룩 설정</a></li>
+						<li><a href="#popTabConts04" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;">아웃룩익스프레스 설정</a></li>
 					</ul>
 				</div>
+				<!-- e : 탭 영역 -->
 
-				<h3 class="pop_subTitle">보안메일 보는 방법</h3>
-				<ol class="pop_comm_box">
-					<li class="fl"><img src="../../images/pop/thumb/pop_thumb_emailHelpTab01_01.gif" alt="Step1. 첨부파일 열기"/></li>
-					<li class="fl"><img src="../../images/pop/thumb/pop_thumb_emailHelpTab01_02.gif" alt="Step2. E-Mail 명세서 비밀번호 입력. 개인:주민등록번호 뒤 7자리, 사업자:사업자등록번호 뒤에서부터 7자리(법인등록번호아님)"/></li>
-					<li class="fl"><img src="../../images/pop/thumb/pop_thumb_emailHelpTab01_03.gif" alt="Step3. 명세서보기"/></li>
-				</ol>
-			</div>
-			<!-- e : 탭 이용안내 -->
+				<div id="pop_tabs01">
+					<!-- s : 탭 이용안내 -->
+					<div id="popTabConts01">
+						<h2 class="pop_subTitle pt0">이용안내</h2>
+						<p>e-Mail명세서는 매월 고객님께 <span class="emp01">사용하신 이용요금을 통하여 받아 보실 수 있도록 암호화</span> 하여 보내집니다. 보안 메일을 원하지 않으시면 암호화 해지된 메일을 보내드립니다.</p>
+						<p class="mt10">암호화된 명세서의 요금 내역을 보시려면 먼저 전용 Plug-In을 설치하셔야 하며(최초 1회만 설치, 자동으로 설치됨), 이미 설치되어 있는 경우는 별도 설치가 필요 없습니다.</p>
+						<p class="mt10">e-Mail명세서는 소중한 고객님의 정보를 보호하기 위하여 <span class="emp01">개인이신 경우 고객님의 주민등록번호 뒷자리 7자리, 사업자이신 경우 사업자등록번호 뒷자리 5자리</span>를 입력하여 보실 수 있도록 암호화되어 있습니다.</p>
+						<p class="mt10">e-Mail명세서를 인쇄하실 때에는 명세서 전용 인쇄 Plug-In을 설치하신 후 명세서에서 책갈피에 있는 인쇄버튼을 클리하시어 인쇄하시기 바랍니다.</p>
 
-			<!-- s : 탭 Active X 설치를 위한 설정 -->
-			<div id="comm_tabConts02" class="comm_tabConts" style="display: none">
-				<h2 class="pop_subTitle pt0">Active X 설치를 위한 설정</h2>
-				<div class="pop_comm_box">
-					<p >Mail 보기 버튼 위치에 빨간색 X표시만 보일 경우에는 <span class="emp01">명세서 암호화 Plug-In 수동설치</span>를 해주시기 바랍니다.</p>
-					<p class="pop_billActiveGuide01"><span>윈도우 좌하단 [시작]-[설정]-[제어판]-[인터넷옵션]-[보안탭]에서 이 영역에 적용할 보안 수준을 기본수준으로 변경하신 후 확인해 주시기 바랍니다.</span></p>
-					<p class="pop_billActiveGuide02"><span>인터넷 익스플로러 실행 후 [도구]-[인터넷 옵션]-[고급]-[멀티미디어]에서 그림표시를 체크 하시고, [고급]-[탐색]에서 URL 항상 UTF-8로 보냄에 체크가 되어 있으면 체크를 풀어주신 후 반드시 윈도우 재부팅하신 후 확인하시기 바랍니다.</span></p>
-					<p class="pop_billActiveGuide03"><span>e-Mail명세서를 여신 후 상단의 상태표시줄을 클릭 하신 후 Active X 컨트롤 설치를 선택하시기 바랍니다.</span></p>
-					<p class="pop_billActiveGuide04"><span>보안 경고창이 뜨면 설치를 선택 하시기 바랍니다.</span></p>
+						<div class="pop_billPluginBox">
+							<div class="pop_billPluginBoxTitle">
+								<h3 class="pop_subTitle pt0 pb0">명세서 전용 Plug-In을 설치하셔야 하는 경우</h3>
+							</div>
+							<ul class="etc_box_inner">
+								<li>- 컴퓨터를 포맷하신 후 암호화 된 메일을 보실 경우</li>
+								<li>- e-Mail 명세서 전용 Plug-In을 삭제하신 경우</li>
+								<li>- e-Mail 명세서를 처음으로 받으시는 경우 등</li>
+							</ul>
+						</div>
+
+						<h3 class="pop_subTitle">보안메일 보는 방법</h3>
+						<ol class="pop_comm_box">
+							<li class="fl"><img src="../../images/pop/thumb/pop_thumb_emailHelpTab01_01.gif" alt="Step1. 첨부파일 열기"/></li>
+							<li class="fl"><img src="../../images/pop/thumb/pop_thumb_emailHelpTab01_02.gif" alt="Step2. E-Mail 명세서 비밀번호 입력. 개인:주민등록번호 뒤 7자리, 사업자:사업자등록번호 뒤에서부터 7자리(법인등록번호아님)"/></li>
+							<li class="fl"><img src="../../images/pop/thumb/pop_thumb_emailHelpTab01_03.gif" alt="Step3. 명세서보기"/></li>
+						</ol>
+					</div>
+					<!-- e : 탭 이용안내 -->
+
+					<!-- s : 탭 Active X 설치를 위한 설정 -->
+					<div id="popTabConts02" style="display: none">
+						<h2 class="pop_subTitle pt0">Active X 설치를 위한 설정</h2>
+						<div class="pop_comm_box">
+							<p >Mail 보기 버튼 위치에 빨간색 X표시만 보일 경우에는 <span class="emp01">명세서 암호화 Plug-In 수동설치</span>를 해주시기 바랍니다.</p>
+							<p class="pop_billActiveGuide01"><span>윈도우 좌하단 [시작]-[설정]-[제어판]-[인터넷옵션]-[보안탭]에서 이 영역에 적용할 보안 수준을 기본수준으로 변경하신 후 확인해 주시기 바랍니다.</span></p>
+							<p class="pop_billActiveGuide02"><span>인터넷 익스플로러 실행 후 [도구]-[인터넷 옵션]-[고급]-[멀티미디어]에서 그림표시를 체크 하시고, [고급]-[탐색]에서 URL 항상 UTF-8로 보냄에 체크가 되어 있으면 체크를 풀어주신 후 반드시 윈도우 재부팅하신 후 확인하시기 바랍니다.</span></p>
+							<p class="pop_billActiveGuide03"><span>e-Mail명세서를 여신 후 상단의 상태표시줄을 클릭 하신 후 Active X 컨트롤 설치를 선택하시기 바랍니다.</span></p>
+							<p class="pop_billActiveGuide04"><span>보안 경고창이 뜨면 설치를 선택 하시기 바랍니다.</span></p>
+						</div>
+
+					</div>
+					<!-- e : 탭 Active X 설치를 위한 설정 -->
+
+					<!-- s : 탭 웹아웃룩 설정 -->
+					<div id="popTabConts03" style="display: none">
+						<h2 class="pop_subTitle pt0">웹아웃룩 설정</h2>
+						<div class="pop_comm_box">
+							<p class="pop_billOutlook01"><span>웹아웃룩에서 e-Mail명세서 보안메일을 볼수 없을 경우에는 <b class="emp01">웹페이지로 보기</b>를 클릭하시면 첨부파일 형태인 e-Mail명세서 보안메일을 여실 수 있습니다.</span></p>
+						</div>
+					</div>
+					<!-- e : 탭 웹아웃룩 설정 -->
+
+					<!-- s : 탭 아웃룩익스프레스 설정 -->
+					<div id="popTabConts04" style="display: none">
+						<h2 class="pop_subTitle pt0">아웃룩익스프레스 설정</h2>
+						<div class="pop_comm_box">
+							<p class="pop_billOutlookEx01"><span>아웃룩 익스프레스에서 명세서를 열 때 Internet Explorer창의 주소 아래에 아래와 같은 문구가 보이며 명세서가 열리지 않을 경우, "보안 설정이 웹 사이트에서 컴퓨터에 설치된 ActiveX 컨트롤을 실행하는것을 허용하지 않기 때문에..."</span></p>
+							<p class="pop_billOutlookEx02"><span>아웃룩 익스프레스를 열고 [도구]-[옵션]-]보안]에서 인터넷(보안수준은 낮고, 기능성 높음)(Z)에 체크하시고 바이러스 가능성이 있는 첨부 파일을 저장하거나 열수 없음(N)에 체크를 제거하신후 명세서를 확인하시기 바랍니다.</span></p>
+						</div>
+					</div>
+					<!-- e : 탭 아웃룩익스프레스 설정 -->
 				</div>
-
 			</div>
-			<!-- e : 탭 Active X 설치를 위한 설정 -->
-
-			<!-- s : 탭 웹아웃룩 설정 -->
-			<div id="comm_tabConts03" class="comm_tabConts" style="display: none">
-				<h2 class="pop_subTitle pt0">웹아웃룩 설정</h2>
-				<div class="pop_comm_box">
-					<p class="pop_billOutlook01"><span>웹아웃룩에서 e-Mail명세서 보안메일을 볼수 없을 경우에는 <b class="emp01">웹페이지로 보기</b>를 클릭하시면 첨부파일 형태인 e-Mail명세서 보안메일을 여실 수 있습니다.</span></p>
-				</div>
-			</div>
-			<!-- e : 탭 웹아웃룩 설정 -->
-
-			<!-- s : 탭 아웃룩익스프레스 설정 -->
-			<div id="comm_tabConts04" class="comm_tabConts" style="display: none">
-				<h2 class="pop_subTitle pt0">아웃룩익스프레스 설정</h2>
-				<div class="pop_comm_box">
-					<p class="pop_billOutlookEx01"><span>아웃룩 익스프레스에서 명세서를 열 때 Internet Explorer창의 주소 아래에 아래와 같은 문구가 보이며 명세서가 열리지 않을 경우, "보안 설정이 웹 사이트에서 컴퓨터에 설치된 ActiveX 컨트롤을 실행하는것을 허용하지 않기 때문에..."</span></p>
-					<p class="pop_billOutlookEx02"><span>아웃룩 익스프레스를 열고 [도구]-[옵션]-]보안]에서 인터넷(보안수준은 낮고, 기능성 높음)(Z)에 체크하시고 바이러스 가능성이 있는 첨부 파일을 저장하거나 열수 없음(N)에 체크를 제거하신후 명세서를 확인하시기 바랍니다.</span></p>
-				</div>
-			</div>
-			<!-- e : 탭 아웃룩익스프레스 설정 -->
-
-
-
 		</div>
 		<!-- e : contents -->
 

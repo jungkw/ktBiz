@@ -79,7 +79,7 @@
 ul.bulletList li {margin:4px 0 0 0;padding:0 0 0 10px;font-size:13px;line-height:21px;color:#666;background:url(../images/icon/comm_icon_circle_smallBullet.png) no-repeat 0 10px;}
 ul.bulletList li:first-child {margin:0;}
 .bulletIcon {margin:0; padding: 0 0 0 10px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 7px; line-height:1.3; color:#666; font-size:13px;}
-.bulletDg {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 2px;}
+.bulletDg {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 5px;}
 .bulletMinus {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_minus_smallBullet.gif') no-repeat 0 9px;}
 .pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.gif') no-repeat left 1px;}
 
@@ -107,7 +107,7 @@ ul.bulletList li:first-child {margin:0;}
 
 
 /* noti box. */
-.comm_noticeBox {margin:20px 30px;border:1px solid #ccc;background:#fff;border-radius:4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;}
+.comm_noticeBox {margin:20px 0;border:1px solid #ccc;background:#fff;border-radius:4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;}
 .comm_noticeBox .title {padding:18px 0 21px 20px;border-bottom:1px solid #ddd;line-height:1;color:#666;font-size:21px;font-weight:normal;}
 .comm_noticeBox .stitle {padding:20px 0 0 20px;font-size:15px;font-weight:normal;}
 .comm_noticeBox .notice-list {margin:14px 20px 17px;}
