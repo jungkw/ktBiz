@@ -36,7 +36,7 @@
 			var target = getUrlParameter();
 
 			$('#' + target[0] ).trigger('click');
-			
+
 		});
 	</script>
 
@@ -147,8 +147,44 @@
 
 						<div class="billTermSelectWrap">
 							<!-- 30개 이하 일 경우 -->
-							<div class="index_selectbox" style="display: none">
-								<label for="index_select">명세서번호</label>
+							<div class="index_selectbox" style="display: ">
+								<!-- s : 셀렉트 -->
+								
+								<select id="index_select" onchange="$.ktBizSelect.index(this); return false;" title="명세서번호">
+									<option>107576548**** (010-0000-0000)</option>
+									<option>014213121* (010-0000-0000)*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>924433478*</option>
+									<option>014213121*</option>
+									<option>014213121* (010-0000-0000)*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>924433478*</option>
+									<option>014213121*</option>
+									<option>014213121* (010-0000-0000)*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>924433478*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>924433478*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>014213121* (010-0000-0000)*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>924433478*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>924433478*</option>
+									<option>224295211*</option>
+									<option>924433478*</option>
+									<option>924433478*</option>
+								</select>
+								<!-- e : 셀렉트 -->
+								
+								<!-- <label for="index_select">명세서번호</label>
 								<select id="index_select" class="index_select" onchange="$.ktBizSelect.index(this); return false;">
 									<option>014213121*</option>
 									<option>014213121* (010-0000-0000)*</option>
@@ -182,11 +218,13 @@
 									<option>924433478*</option>
 								</select>
 								<p><span class="blind">현재 선택하신 명세서번호는</span> <span class="selectTxt">014213121*</span> <span class="blind">입니다.</span></p>
+								-->
+								
 							</div>
 							<!--// 30개 이하 일 경우 -->
 
 							<!-- 30개 초과 일 경우 -->
-							<a href="#billLayerPop" title="명세서번호 선택 레이어 열림" id="billPopOpen" class="billTermSelectBtn"  onclick="$.ktBizPopClick(this); return false;">명세서번호<span> 014213121* (010-0000-0000)</span></a>
+							<a href="#billLayerPop" title="명세서번호 선택 레이어 열림" id="billPopOpen" class="billTermSelectBtn"  onclick="$.ktBizPopClick(this); return false;" style="display: none">명세서번호<span> 014213121* (010-0000-0000)</span></a>
 
 
 							<!-- s : 명세서번호 레이어 팝업 -->
@@ -233,9 +271,9 @@
 
 												<div class="comm_paging">
 													<a href="#" class="comm_pagingBtn prevBtn">
-														<img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기">
+														<img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
 													</a><a href="#" class="on" title="현재 페이지">11</a><a href="#">12</a><a href="#">13</a><a href="#">14</a><a href="#">15</a><a href="#">16</a><a href="#">17</a><a href="#">18</a><a href="#">19</a><a href="#">20</a><a href="#" class="comm_pagingBtn nextBtn">
-														<img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기">
+														<img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
 													</a>
 												</div>
 										</div>

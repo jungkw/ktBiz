@@ -43,77 +43,79 @@
 
 		<!-- s : contents -->
 		<div class="pop_conts">
+			<div class="pop_contsContainer">
 
-			<p>가입자 본인의 신용카드로만 변경 가능합니다.</p>
-			<p class="mt10">(타인의 카드로 변경을 원하실 경우에는 가까운 대리점으로 신청하시기 바랍니다.)</p>
-			<div class="comm_tableBrdr mt20">
-				<table class="comm_table" summary="카드종류, 카드번호, 유효기간, 승인회차 순서로 카드정보를 입력할 수 있는 표 입니다.">
-					<caption>카드정보 입력</caption>
-					<colgroup>
-						<col width="25%" />
-						<col width="*" />
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row">
-								<label for="cardType">카드종류</label>
-							</th>
-							<td class="last">
-								<div class="selectWrap">
-									<select id="cardType">
-										<option>비씨카드</option>
-									</select>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">
-								<label for="cardNum">카드번호</label>
-							</th>
-							<td class="last">
-								<input type="text" size="16" maxlength="16" id="cardNum"/>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">
-								<label for="cardDate">유효기간</label>
-							</th>
-							<td class="last">
-								<div class="selectWrap">
-									<select id="cardDate" title="월을 선택해주세요." class="mr5">
-										<option>01</option>
-									</select>
-								</div>
-								<span class="vm">월</span>
-								<div class="selectWrap">
-									<select title="년도를 선택해주세요." class="ml8 mr5">
-										<option>2016</option>
-									</select>
-								</div>
-								<span class="vm">년</span>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">
-								<label for="cardAuthCount">승인회차</label>
-							</th>
-							<td class="last desc">
-								<div class="selectWrap">
-									<select id="cardAuthCount" >
-										<option>1회차</option>
-									</select>
-								</div>
-								<p class="mt8">체크카드 사용장의 경우 1회차 선택 시 요금청구서 도착이전에 출금이 일어날 수 있습니다.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<p>가입자 본인의 신용카드로만 변경 가능합니다.</p>
+				<p class="mt10">(타인의 카드로 변경을 원하실 경우에는 가까운 대리점으로 신청하시기 바랍니다.)</p>
+				<div class="comm_tableBrdr mt20">
+					<table class="comm_table" summary="카드종류, 카드번호, 유효기간, 승인회차 순서로 카드정보를 입력할 수 있는 표 입니다.">
+						<caption>카드정보 입력</caption>
+						<colgroup>
+							<col width="25%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<label for="cardType">카드종류</label>
+								</th>
+								<td class="last">
+									<div class="selectWrap">
+										<select id="cardType">
+											<option>비씨카드</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="cardNum">카드번호</label>
+								</th>
+								<td class="last">
+									<input type="text" size="16" maxlength="16" id="cardNum"/>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="cardDate">유효기간</label>
+								</th>
+								<td class="last">
+									<div class="selectWrap">
+										<select id="cardDate" title="월을 선택해주세요." class="mr5">
+											<option>01</option>
+										</select>
+									</div>
+									<span class="vm">월</span>
+									<div class="selectWrap">
+										<select title="년도를 선택해주세요." class="ml8 mr5">
+											<option>2016</option>
+										</select>
+									</div>
+									<span class="vm">년</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<label for="cardAuthCount">승인회차</label>
+								</th>
+								<td class="last desc">
+									<div class="selectWrap">
+										<select id="cardAuthCount" >
+											<option>1회차</option>
+										</select>
+									</div>
+									<p class="mt8">체크카드 사용장의 경우 1회차 선택 시 요금청구서 도착이전에 출금이 일어날 수 있습니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
 			</div>
 
-			<div class="alignCenter mt28">
+			<div class="pop_contsBtns">
 				<a href="" class="btnSty big red"><span>변경하기</span></a>
 			</div>
-
 		</div>
 		<!-- e : contents -->
 
