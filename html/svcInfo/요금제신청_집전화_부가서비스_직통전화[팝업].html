@@ -128,237 +128,240 @@
 
 		<!-- s : contents -->
 		<div class="pop_conts">
-			<div class="pop_svc">
-				<div class="pop_svcAddonHeader family">
-					<h2 class="pop_subTitle pt0">직통번호를 입력해두면 입력없이 바로 연결되는 서비스</h2>
-					<img class="prdImg" src="../../images/pop/pop_svc_direct_bg.png" alt="인터넷, 스마트폰 유해사이트 차단 및 시간관리" />
-					<div class="price">
-						<p class="price-ori"><span>무료제공</span></p>
-					</div>
-					<div class="benefit">
-						<ul>
-							<li><img src="../../images/icon/comm_icon_tel.gif" alt="집전화" /><span>입력없이<br />자동연결</span></li>
-							<li><img src="../../images/icon/comm_icon_tel.gif" alt="집전화" /><span>무료제공</span></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="pop_svcAddonBody">
-					<!-- s : 탭 영역 -->
-					<div class="comm_tabWrap">
-						<div class="line"></div>
-						<ul class="comm_tab">
-							<li class="first on"><a href="#comm_tabConts01" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">요금 및 혜택</a></li>
-							<li><a href="#comm_tabConts02" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">상세안내</a></li>
-						</ul>
-					</div>
-					<!-- e : 탭 영역 -->
-
-					<!-- s : 탭 컨텐츠 1 -->
-					<div id="comm_tabConts01" class="comm_tabConts">
-						<h3 class="blind">요금 및 혜택</h3>
-						<div class="mb20">
-							<img src="../../images/pop/pop_svc_no1.jpg" alt="국가고객만족도(NCSI) 유선전화 부문 18년 연속 1위 (1999년~2016년)"/>
+			<div class="pop_contsContainer">
+				<div class="pop_svc">
+					<div class="pop_svcAddonHeader family">
+						<h2 class="pop_subTitle pt0">직통번호를 입력해두면 입력없이 바로 연결되는 서비스</h2>
+						<img class="prdImg" src="../../images/pop/pop_svc_direct_bg.png" alt="인터넷, 스마트폰 유해사이트 차단 및 시간관리" />
+						<div class="price">
+							<p class="price-ori"><span>무료제공</span></p>
 						</div>
-
-						<div class="comm_tableBrdr">
-							<table class="comm_table" summary="보고계시는 서비스의 요금을 확인할 수 있습니다.">
-								<caption>직통전화 부가서비스 요금</caption>
-								<thead>
-									<tr>
-										<th scope="col">구분</th>
-										<th scope="col">요금</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="center">이용요금</td>
-										<td class="center">무료</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="benefit">
+							<ul>
+								<li><img src="../../images/icon/comm_icon_tel.gif" alt="집전화" /><span>입력없이<br />자동연결</span></li>
+								<li><img src="../../images/icon/comm_icon_tel.gif" alt="집전화" /><span>무료제공</span></li>
+							</ul>
 						</div>
+					</div>
 
+					<div class="pop_svcAddonBody">
 						<!-- s : 탭 영역 -->
-						<div class="comm_detailTabWrap">
-							<ul class="comm_stab">
-								<li><a href="#comm_tabContsSub01" onclick="$.ktBizTabMenu(01, this, 'comm_tabContsSub'); return false;">사용방법</a></li>
+						<div class="comm_tabs style03 mt20 mb20">
+							<ul class="tabList_item02"> <!-- tabList_item02 / tabList_item03 / tabList_item04 / tabList_item05 -->
+								<li class="selected"><a href="#popTabConts01" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;">요금 및 혜택</a></li>
+								<li><a href="#popTabConts02" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;">상세안내</a></li>
 							</ul>
 						</div>
 						<!-- e : 탭 영역 -->
 
-						<!-- s : 탭 컨텐츠 1 -->
-						<div id="comm_tabContsSub01" class="comm_tabContsSub" style="display:none;">
-							<h5 class="blind">사용방법</h5>
-							<div class="comm_tableBrdr mt20">
-								<table class="comm_table" summary="서비스 구분, 사용방법 순서로 제공 기능 사용 정보를 나타낸 표입니다">
-									<caption>직통전화 사용방법</caption>
-									<colgroup>
-										<col width="40%" />
-										<col width="60%" />
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">구분</th>
-											<th scope="col">사용방법</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="center">지정할 때</td>
-											<td class="center">* → 33 → 직통희망전화 → *</td>
-										</tr>
-										<tr>
-											<td class="center">직통전화로 통화	</td>
-											<td class="center">송수화기 들고 7초간 기다림</td>
-										</tr>
-										<tr>
-											<td class="center">일반전화로 통화</td>
-											<td class="center">송수화기 들고 7초 이내 전화를 건다.</td>
-										</tr>
-										<tr>
-											<td class="center">취소할 때</td>
-											<td class="center"># → 33→ *</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<!-- e : 탭 컨텐츠 1 -->
-					</div>
-					<!-- e : 탭 컨텐츠 1 -->
+						<div id="pop_tabs01"><!-- s : 탭 컨텐츠 1 -->
+							<div id="popTabConts01">
+								<h3 class="blind">요금 및 혜택</h3>
+								<div class="mb20">
+									<img src="../../images/pop/pop_svc_no1.jpg" alt="국가고객만족도(NCSI) 유선전화 부문 18년 연속 1위 (1999년~2016년)"/>
+								</div>
 
-					<!-- s : 탭 컨텐츠 2 -->
-					<div id="comm_tabConts02" class="comm_tabConts" style="display:none;">
-						<h5 class="blind">상세안내</h5>
-						<p class="bulletIcon">직통번호를 입력해 두면 직통으로 연결됩니다.</p>
-						<p class="bulletIcon">자주 쓰는 전화번호를 등록하시면 매번 전화번호를 입력할 필요 없이 7초 이후에 자동으로 연결되는 서비스로 무료로 이용 가능합니다.</p>
-						<p class="bulletIcon textLink">위 상품은 온라인(올레닷컴), 전화상담(국번없이 100번) 및 직접방문(올레플라자/대리점 <a href="http://help.olleh.com/plaza/KtStoreSearch.do" class="detail" target="_blank" title="새창으로 열기">매장찾기</a> )을 통해 신청 가능합니다.</p>
-					</div>
-					<!-- e : 탭 컨텐츠 2 -->
+								<div class="comm_tableBrdr">
+									<table class="comm_table" summary="보고계시는 서비스의 요금을 확인할 수 있습니다.">
+										<caption>직통전화 부가서비스 요금</caption>
+										<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">요금</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="center">이용요금</td>
+												<td class="center">무료</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 
-					<div class="pop_svcAddonRecom">
-						<!-- 추천상품 -->
-						<div class="recom_prd_banner2" id="recommantBanner2">
-							<h5 class="title"><img src="/storage/wDic/img/ntitle/h5_reccomant_prod.gif" alt="추천 상품" /></h5>
-							<div class="list_scr">
-								<ul class="list prdCardList">
-								<li>
-										<a href="/wDic/my2Outproduct.do?ItemCode=192" title="페이지 이동" class="hideAkc hidekAc">
-											<span class="ptitle">집전화<!-- 순 광대역 안심무한 요금제1 --></span>
-											<span class="pprice">3분당<strong>39</strong> 원</span>
-											<span class="pimg">
-												<img src="../../images/pop/pop_svc_recom_t02.png" alt="집전화 이미지" />
-											</span>
-											<span class="pprice2">(부가세 포함 42.9원/시내 통화 이용료)</span>
-											<span class="overBox">
-												<span class="potitle">집전화</span>
-												<span class="potxt">17년 연속 고객만족도 1위의 대한민국 대표 집전화</span>
-												<span class="poprice">3분당<strong>39</strong> 원</span>
-												<span class="poprice2">(부가세 포함 42.9원/시내 통화 이용료)</span>
-											</span>
-										</a>
-									</li>
-								<li>
-										<a href="/wDic/my2Outproduct.do?ItemCode=974" title="페이지 이동" class="hideAkc hidekAc">
-											<span class="ptitle">olleh 집전화 무한요금제<!-- 순 광대역 안심무한 요금제1 --></span>
-											<span class="pprice">월<strong>5,500</strong> 원~</span>
-											<span class="pimg">
-												<img src="../../images/pop/pop_svc_recom_t04.png" alt="olleh 집전화 무한요금제 이미지" />
-											</span>
-											<span class="pprice2">(부가세 포함 6,050원~/3년약정 및 결합기준)</span>
-											<span class="overBox">
-												<span class="potitle">olleh 집전화 무한요금제</span>
-												<span class="potxt">기본료 수준의 월정액으로 마음껏 통화하는 집전화 요금제</span>
-												<span class="poprice">월<strong>5,500</strong> 원~</span>
-												<span class="poprice2">(부가세 포함 6,050원~/3년약정 및 결합기준)</span>
-											</span>
-										</a>
-									</li>
-								</ul>
+								<!-- s : 탭 영역 -->
+								<div class="comm_tabs styleDetail mt20 mb20">
+									<ul class="tabList_item02"> <!-- tabList_item02 / tabList_item03 / tabList_item04 / tabList_item05 -->
+										<li><a href="#comm_tabContsSub01" onclick="$.ktBizTabs(01, this, 'comm_tabContsSub'); return false;">사용방법</a></li>
+									</ul>
+								</div>
+								<!-- e : 탭 영역 -->
+
+								<div id="comm_tabContsSub">
+									<!-- s : 탭 컨텐츠 1 -->
+									<div id="comm_tabContsSub01" class="comm_tabContsSub" style="display:none;">
+										<h5 class="blind">사용방법</h5>
+										<div class="comm_tableBrdr mt20">
+											<table class="comm_table" summary="서비스 구분, 사용방법 순서로 제공 기능 사용 정보를 나타낸 표입니다">
+												<caption>직통전화 사용방법</caption>
+												<colgroup>
+													<col width="40%" />
+													<col width="60%" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">구분</th>
+														<th scope="col">사용방법</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="center">지정할 때</td>
+														<td class="center">* → 33 → 직통희망전화 → *</td>
+													</tr>
+													<tr>
+														<td class="center">직통전화로 통화	</td>
+														<td class="center">송수화기 들고 7초간 기다림</td>
+													</tr>
+													<tr>
+														<td class="center">일반전화로 통화</td>
+														<td class="center">송수화기 들고 7초 이내 전화를 건다.</td>
+													</tr>
+													<tr>
+														<td class="center">취소할 때</td>
+														<td class="center"># → 33→ *</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<!-- e : 탭 컨텐츠 1 -->
+								</div>
 							</div>
-							<a href="javascript:;" class="in_prev hideAkc hidekAc" title="이전" style="display: none;"><span class="ico">이전</span></a>
-							<a href="javascript:;" class="in_next hideAkc hidekAc" title="다음" style="display: none;"><span class="ico">다음</span></a>
-						</div>
-						<!-- //추천상품 -->
-						<!-- 추천부가서비스 -->
-						<div class="recom_opt_banner1" id="recommantBanner1">
-							<h5 class="title"><img src="/storage/wDic/img/ntitle/h5_reccomant_opt_service.gif" alt="추천 부가서비스" /></h5>
-							<div class="list_scr">
-								<ul class="list prdCardList">
-								<li>
-										<a href="/wDic/my2Outproduct.do?ItemCode=176" title="페이지 이동" class="hideAkc hidekAc">
-											<span class="ptitle">패스콜</span>
-											<span class="pprice">기본료 <strong>1,000</strong> 원</span>
-											<span class="pimg">
-												<img src="../../images/pop/pop_svc_recom_t01.png" alt="패스콜 이미지" />
-											</span>
-											<span class="pprice2">(부가세 포함 1,100원)</span>
-											<span class="overBox">
-												<span class="potitle">패스콜</span>
-												<span class="potxt">전화를 받지 못할 경우 다른 전화나 사서함으로 연결해주는 서비스</span>
-												<span class="poprice">기본료 <strong>1,000</strong> 원</span>
-												<span class="poprice2">(부가세 포함 1,100원)</span>
-											</span>
-										</a>
-									</li>
-								<li>
-										<a href="/wDic/my2Outproduct.do?ItemCode=384" title="페이지 이동" class="hideAkc hidekAc">
-											<span class="ptitle">링고비즈플러스</span>
-											<span class="pprice">월<strong>4,000</strong> 원</span>
-											<span class="pimg">
-												<img src="../../images/pop/pop_svc_recom_t03.png" alt="링고비즈플러스 이미지" />
-											</span>
-											<span class="pprice2">(부가세 포함 4,400원)</span>
-											<span class="overBox">
-												<span class="potitle">링고비즈플러스</span>
-												<span class="potxt">상황별로 기업의 정보를 안내해 주는 고품질의 통화연결음 서비스</span>
-												<span class="poprice">월<strong>4,000</strong> 원</span>
-												<span class="poprice2">(부가세 포함 4,400원)</span>
-											</span>
-										</a>
-									</li>
-								<li>
-										<a href="/wDic/my2Outproduct.do?ItemCode=853" title="페이지 이동" class="hideAkc hidekAc">
-											<span class="ptitle">주소변경서비스(kt-moving)</span>
-											<span class="pprice"><strong></strong> 무료제공</span>
-											<span class="pimg">
-												<img src="../../images/pop/pop_svc_recom_t05.png" alt="주소변경서비스(kt-moving) 이미지" />
-											</span>
-											<span class="pprice2"></span>
-											<span class="overBox">
-												<span class="potitle">주소변경서비스(kt-moving)</span>
-												<span class="potxt">일괄적으로 변경된 주소를 알려주는 서비스</span>
-												<span class="poprice"><strong></strong>무료제공</span>
-												<span class="poprice2"></span>
-											</span>
-										</a>
-									</li>
-								</ul>
+							<!-- e : 탭 컨텐츠 1 -->
+
+							<!-- s : 탭 컨텐츠 2 -->
+							<div id="popTabConts02" style="display:none;">
+								<h5 class="blind">상세안내</h5>
+								<p class="bulletIcon">직통번호를 입력해 두면 직통으로 연결됩니다.</p>
+								<p class="bulletIcon">자주 쓰는 전화번호를 등록하시면 매번 전화번호를 입력할 필요 없이 7초 이후에 자동으로 연결되는 서비스로 무료로 이용 가능합니다.</p>
+								<p class="bulletIcon textLink">위 상품은 온라인(올레닷컴), 전화상담(국번없이 100번) 및 직접방문(올레플라자/대리점 <a href="http://help.olleh.com/plaza/KtStoreSearch.do" class="detail" target="_blank" title="새창으로 열기">매장찾기</a> )을 통해 신청 가능합니다.</p>
 							</div>
-							<a href="javascript:;" class="in_prev disable hideAkc hidekAc" title="이전"><span class="ico">이전</span></a>
-							<a href="javascript:;" class="in_next hideAkc hidekAc" title="다음"><span class="ico">다음</span></a>
+							<!-- e : 탭 컨텐츠 2 --></div>
+
+						<div class="pop_svcAddonRecom">
+							<!-- 추천상품 -->
+							<div class="recom_prd_banner2" id="recommantBanner2">
+								<h5 class="title"><img src="/storage/wDic/img/ntitle/h5_reccomant_prod.gif" alt="추천 상품" /></h5>
+								<div class="list_scr">
+									<ul class="list prdCardList">
+									<li>
+											<a href="/wDic/my2Outproduct.do?ItemCode=192" title="페이지 이동" class="hideAkc hidekAc">
+												<span class="ptitle">집전화<!-- 순 광대역 안심무한 요금제1 --></span>
+												<span class="pprice">3분당<strong>39</strong> 원</span>
+												<span class="pimg">
+													<img src="../../images/pop/pop_svc_recom_t02.png" alt="집전화 이미지" />
+												</span>
+												<span class="pprice2">(부가세 포함 42.9원/시내 통화 이용료)</span>
+												<span class="overBox">
+													<span class="potitle">집전화</span>
+													<span class="potxt">17년 연속 고객만족도 1위의 대한민국 대표 집전화</span>
+													<span class="poprice">3분당<strong>39</strong> 원</span>
+													<span class="poprice2">(부가세 포함 42.9원/시내 통화 이용료)</span>
+												</span>
+											</a>
+										</li>
+									<li>
+											<a href="/wDic/my2Outproduct.do?ItemCode=974" title="페이지 이동" class="hideAkc hidekAc">
+												<span class="ptitle">olleh 집전화 무한요금제<!-- 순 광대역 안심무한 요금제1 --></span>
+												<span class="pprice">월<strong>5,500</strong> 원~</span>
+												<span class="pimg">
+													<img src="../../images/pop/pop_svc_recom_t04.png" alt="olleh 집전화 무한요금제 이미지" />
+												</span>
+												<span class="pprice2">(부가세 포함 6,050원~/3년약정 및 결합기준)</span>
+												<span class="overBox">
+													<span class="potitle">olleh 집전화 무한요금제</span>
+													<span class="potxt">기본료 수준의 월정액으로 마음껏 통화하는 집전화 요금제</span>
+													<span class="poprice">월<strong>5,500</strong> 원~</span>
+													<span class="poprice2">(부가세 포함 6,050원~/3년약정 및 결합기준)</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<a href="javascript:;" class="in_prev hideAkc hidekAc" title="이전" style="display: none;"><span class="ico">이전</span></a>
+								<a href="javascript:;" class="in_next hideAkc hidekAc" title="다음" style="display: none;"><span class="ico">다음</span></a>
+							</div>
+							<!-- //추천상품 -->
+							<!-- 추천부가서비스 -->
+							<div class="recom_opt_banner1" id="recommantBanner1">
+								<h5 class="title"><img src="/storage/wDic/img/ntitle/h5_reccomant_opt_service.gif" alt="추천 부가서비스" /></h5>
+								<div class="list_scr">
+									<ul class="list prdCardList">
+									<li>
+											<a href="/wDic/my2Outproduct.do?ItemCode=176" title="페이지 이동" class="hideAkc hidekAc">
+												<span class="ptitle">패스콜</span>
+												<span class="pprice">기본료 <strong>1,000</strong> 원</span>
+												<span class="pimg">
+													<img src="../../images/pop/pop_svc_recom_t01.png" alt="패스콜 이미지" />
+												</span>
+												<span class="pprice2">(부가세 포함 1,100원)</span>
+												<span class="overBox">
+													<span class="potitle">패스콜</span>
+													<span class="potxt">전화를 받지 못할 경우 다른 전화나 사서함으로 연결해주는 서비스</span>
+													<span class="poprice">기본료 <strong>1,000</strong> 원</span>
+													<span class="poprice2">(부가세 포함 1,100원)</span>
+												</span>
+											</a>
+										</li>
+									<li>
+											<a href="/wDic/my2Outproduct.do?ItemCode=384" title="페이지 이동" class="hideAkc hidekAc">
+												<span class="ptitle">링고비즈플러스</span>
+												<span class="pprice">월<strong>4,000</strong> 원</span>
+												<span class="pimg">
+													<img src="../../images/pop/pop_svc_recom_t03.png" alt="링고비즈플러스 이미지" />
+												</span>
+												<span class="pprice2">(부가세 포함 4,400원)</span>
+												<span class="overBox">
+													<span class="potitle">링고비즈플러스</span>
+													<span class="potxt">상황별로 기업의 정보를 안내해 주는 고품질의 통화연결음 서비스</span>
+													<span class="poprice">월<strong>4,000</strong> 원</span>
+													<span class="poprice2">(부가세 포함 4,400원)</span>
+												</span>
+											</a>
+										</li>
+									<li>
+											<a href="/wDic/my2Outproduct.do?ItemCode=853" title="페이지 이동" class="hideAkc hidekAc">
+												<span class="ptitle">주소변경서비스(kt-moving)</span>
+												<span class="pprice"><strong></strong> 무료제공</span>
+												<span class="pimg">
+													<img src="../../images/pop/pop_svc_recom_t05.png" alt="주소변경서비스(kt-moving) 이미지" />
+												</span>
+												<span class="pprice2"></span>
+												<span class="overBox">
+													<span class="potitle">주소변경서비스(kt-moving)</span>
+													<span class="potxt">일괄적으로 변경된 주소를 알려주는 서비스</span>
+													<span class="poprice"><strong></strong>무료제공</span>
+													<span class="poprice2"></span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<a href="javascript:;" class="in_prev disable hideAkc hidekAc" title="이전"><span class="ico">이전</span></a>
+								<a href="javascript:;" class="in_next hideAkc hidekAc" title="다음"><span class="ico">다음</span></a>
+							</div>
+							<!-- //추천부가서비스 -->
 						</div>
-						<!-- //추천부가서비스 -->
 					</div>
+
 				</div>
 
+				<input type="hidden" name="seq_ti_code_0" id="seq_ti_code_0" value="1817"></input>
+				<input type="hidden" name="tab_file_0"  id="tab_file_0" value="default_20160530132153.html"></input>
+				<script type="text/javascript">
+				  if($("#tab_file_0").val() != undefined) {
+				    if($("#tab_file_0").val() != ''  ) {
+				      fn_setContents('prdCmsDetailTabContent', $("#tab_file_0").val());
+				    }
+				  }
+				  if($("#seq_ti_code_0").val() != ''){
+				    if($("#seq_ti_code_0").val() != ''){
+				      fn_getItemTabInfo($("#seq_ti_code_0").val());
+				    }
+				  }
+				</script>
 			</div>
-
-			<input type="hidden" name="seq_ti_code_0" id="seq_ti_code_0" value="1817"></input>
-			<input type="hidden" name="tab_file_0"  id="tab_file_0" value="default_20160530132153.html"></input>
-			<script type="text/javascript">
-			  if($("#tab_file_0").val() != undefined) {
-			    if($("#tab_file_0").val() != ''  ) {
-			      fn_setContents('prdCmsDetailTabContent', $("#tab_file_0").val());
-			    }
-			  }
-			  if($("#seq_ti_code_0").val() != ''){
-			    if($("#seq_ti_code_0").val() != ''){
-			      fn_getItemTabInfo($("#seq_ti_code_0").val());
-			    }
-			  }
-			</script>
 		</div>
 		<!-- e : contents -->
 
