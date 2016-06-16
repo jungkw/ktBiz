@@ -26,9 +26,8 @@
 	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
-	<script language="javascript" src="../../js/bizNewSelectBox.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
-
+	<script language="javascript" src="../../js/bizNewSelectBox.js" type="text/javascript"></script>
 </head>
 
 
@@ -57,7 +56,7 @@
 		<!-- s : lnb -->
 
 		<div id="cfmOllehLnb" accesskey="4">
-			<script type="text/javascript">$.ktBizLnbView('BBBA2')</script>
+			<script type="text/javascript">$.ktBizLnbView('BADC')</script>
 		</div>
 
 		<!-- e : lnb -->
@@ -86,6 +85,9 @@
 
 
 				<!-- s : 라디오 -->
+
+				<h4 class="fBold " style="font-size:18px;color:#000;margin-bottom:20px;">라디오 박스</h4>
+
 				<div class="comm_radio">
 					<input type="radio" name="radioEx" id="radioEx01"/><i></i>
 					<label for="radioEx01">라디오01</label>
@@ -96,9 +98,11 @@
 				</div>
 				<!-- e : 라디오 -->
 
-				<br/>
+				<br/><br/><br/><br/><br/>
 
 				<!-- s : 체크박스 -->
+				<h4 class="fBold " style="font-size:18px;color:#000;margin-bottom:20px;">체크 박스</h4>
+
 				<div class="comm_checkbox">
 					<input type="checkbox" name="checkEx" id="checkEx01"/><i></i>
 					<label for="checkEx01">체크박스01</label>
@@ -116,184 +120,156 @@
 
 				<div class="comm_tabs style01" style="width:610px;">
 					<ul>
-						<li><a href="#">이용중인 서비스</a></li>
-						<li class="selected"><a href="#">실시간 요금조회</a></li>
-						<li><a href="#">월별 요금조회</a></li>
-						<li><a href="#">사용량 조회</a></li>
-						<li><a href="#">알 조회</a></li>
+						<li class="selected"><a href="#tabsConts01" onclick="$.ktBizTabs(01, this, 'comm_tabs01'); return false;">이용중인 서비스</a></li>
+						<li><a href="#tabsConts02" onclick="$.ktBizTabs(02, this, 'comm_tabs01'); return false;">실시간 요금조회</a></li>
+						<li><a href="#tabsConts03" onclick="$.ktBizTabs(02, this, 'comm_tabs01'); return false;">월별 요금조회</a></li>
+						<li><a href="#tabsConts04" onclick="$.ktBizTabs(01, this, 'comm_tabs01'); return false;">사용량 조회</a></li>
+						<li><a href="#tabsConts05" onclick="$.ktBizTabs(01, this, 'comm_tabs01'); return false;">알 조회</a></li>
 					</ul>
 				</div>
-
-				<div>
-				</div>
-
 				<!-- e : 컨텐츠 용 탭 -->
 
-
-
-
-
-
-				<!-- s : 탭 영역 -->
-				<div class="comm_tabWrap">
-					<div class="line"></div>
-					<ul class="comm_tab">
-						<li class="first on"><a href="#comm_tabConts01" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">탭 타이틀 1</a></li>
-						<li><a href="#comm_tabConts02" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">탭 타이틀 2</a></li>
-						<li><a href="#comm_tabConts03" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts'); return false;">탭 타이틀 3</a></li>
-					</ul>
+				<!-- s : 컨텐츠 용 탭의 컨텐츠 영역 -->
+				<div id="comm_tabs01">
+					<div id="tabsConts01">
+						<h4 class="blind">이용중인 서비스</h4>
+						컨텐츠 01
+					</div>
+					<div id="tabsConts02" style="display:none">
+						<h4 class="blind">실시간 요금조회</h4>
+						컨텐츠 02
+					</div>
+					<div id="tabsConts03" style="display:none">
+						<h4 class="blind">월별 요금조회</h4>
+						컨텐츠 03
+					</div>
+					<div id="tabsConts04" style="display:none">
+						<h4 class="blind">사용량 조회</h4>
+						컨텐츠 04
+					</div>
+					<div id="tabsConts05" style="display:none">
+						<h4 class="blind">알 조회</h4>
+						컨텐츠 05
+					</div>
 				</div>
-				<!-- e : 탭 영역 -->
+				<!-- e : 컨텐츠 용 탭의 컨텐츠 영역 -->
+				
 
-				<!-- s : 탭 컨텐츠 1 -->
-				<div id="comm_tabConts01" class="comm_tabConts">
-					<h4 class="blind">탭 컨텐츠 1</h4>
-					탭 컨텐츠 1
+				<br/><br/><br/><br/><br/>
 
-				</div>
-				<!-- e : 탭 컨텐츠 1 -->
+				<!-- s : 카테고리 용 탭 -->
+				<h4 class="fBold " style="font-size:18px;color:#000;margin-bottom:20px;">카테고리 성격 탭</h4>
 
-				<!-- s : 탭 컨텐츠 2 -->
-				<div id="comm_tabConts02" class="comm_tabConts" style="display: none;">
-					<h4 class="blind">탭 컨텐츠 2</h4>
-					탭 컨텐츠 2
-				</div>
-				<!-- e : 탭 컨텐츠 2 -->
+				<div class="comm_tabs style02">
 
-				<!-- s : 탭 컨텐츠 3 -->
-				<div id="comm_tabConts03" class="comm_tabConts"  style="display: none">
-					<h4 class="blind">탭 컨텐츠 3</h4>
-					탭 컨텐츠 3
-				</div>
-				<!-- e : 탭 컨텐츠 3 -->
-
-
-
-
-
-				<!-- s : 탭 2depth 일 경우 -->
-				<div class="comm_tabWrap tab2depth">
-					<div class="line"></div>
-					<ul class="comm_tab">
-						<li class="first on">
-							<a href="#comm_tabConts01_01" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts2depth'); return false;">탭 타이틀 1</a>
-							<ul class="comm_subTab">
-								<li class="first on"><a href="#comm_tabConts01_01" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;" >서브 타이틀 01-01</a></li>
-								<li><a href="#comm_tabConts01_02" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;">서브 타이틀 01-02</a></li>
-								<li><a href="#comm_tabConts01_03" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;">서브 타이틀 01-03</a></li>
-								<li><a href="#comm_tabConts01_04" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;">서브 타이틀 01-04</a></li>
+					<ul class="tabsCategory" style="width:610px">
+						<li><a href="#tabSubConts01" onclick="$.ktBizTabs(01, this, 'comm_tabs02'); return false;">카테고리 01</a></li>
+						<li class="selected">
+							<a href="#tabSubConts02-01" onclick="$.ktBizTabs(01, this, 'comm_tabs02'); return false;">카테고리 02</a>
+							<ul class="tabsCategory_sub_item">
+								<li class="selected"><a href="#tabSubConts02-01" onclick="$.ktBizTabs(02, this, 'comm_tabs02'); return false;">서브02-01</a></li>
+								<li><a href="#tabSubConts02-02" onclick="$.ktBizTabs(02, this, 'comm_tabs02'); return false;">서브02-02</a></li>
+								<li><a href="#tabSubConts02-03" onclick="$.ktBizTabs(02, this, 'comm_tabs02'); return false;">서브02-03</a></li>
+								<li><a href="#tabSubConts02-04" onclick="$.ktBizTabs(02, this, 'comm_tabs02'); return false;">서브02-04</a></li>
+								<li><a href="#tabSubConts02-05" onclick="$.ktBizTabs(02, this, 'comm_tabs02'); return false;">서브02-05</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#comm_tabConts02_01" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts2depth'); return false;">탭 타이틀 2</a>
-							<ul class="comm_subTab" style="display: none">
-								<li class="first"><a href="#comm_tabConts02_01" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;">서브 타이틀 02-01</a></li>
-								<li><a href="#comm_tabConts02_02" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;">서브 타이틀 02-02</a></li>
-								<li><a href="#comm_tabConts02_03" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;">서브 타이틀 02-03</a></li>
-								<li><a href="#comm_tabConts02_04" onclick="$.ktBizTabMenu(02, this, 'comm_tabConts2depth'); return false;">서브 타이틀 02-04</a></li>
+							<a href="#tabSubConts03-01" onclick="$.ktBizTabs(01, this, 'comm_tabs02'); return false;">카테고리 03</a>
+							<ul class="tabsCategory_sub_item">
+								<li class=""><a href="#tabSubConts03-01" onclick="$.ktBizTabs(02, this, 'comm_tabs02'); return false;">서브03-01</a></li>
 							</ul>
 						</li>
-						<li><a href="#comm_tabConts03_01" onclick="$.ktBizTabMenu(01, this, 'comm_tabConts2depth'); return false;">탭 타이틀 3</a></li>
+						<li><a href="#tabSubConts04" onclick="$.ktBizTabs(01, this, 'comm_tabs02'); return false;" >카테고리 04</a></li>
+						<li><a href="#tabSubConts05" onclick="$.ktBizTabs(01, this, 'comm_tabs02'); return false;" >카테고리 05</a></li>
+					</ul>
+
+				</div>
+				<!-- e : 카테고리 용 탭 -->
+
+
+
+				<!-- s : 카테고리 용 탭의 컨텐츠 영역 -->
+				<div id="comm_tabs02">
+					<div id="tabSubConts01" style="display:none">
+						<h4 class="blind">카테고리 01</h4>
+						카테고리 01
+					</div>
+
+
+					<div id="tabSubConts02-01">
+						<h4 class="blind">카테고리 02</h4>
+						<h5 class="blind">서브 02-01</h5>
+						서브02-01
+					</div>
+					<div id="tabSubConts02-02" style="display:none">
+						<h4 class="blind">카테고리 02</h4>
+						<h5 class="blind">서브 02-02</h5>
+						서브02-02
+					</div>
+					<div id="tabSubConts02-03" style="display:none">
+						<h4 class="blind">카테고리 02</h4>
+						<h5 class="blind">서브 02-03</h5>
+						서브02-03
+					</div>
+					<div id="tabSubConts02-04" style="display:none">
+						<h4 class="blind">카테고리 02</h4>
+						<h5 class="blind">서브 02-04</h5>
+						서브02-04
+					</div>
+					<div id="tabSubConts02-05" style="display:none">
+						<h4 class="blind">카테고리 02</h4>
+						<h5 class="blind">서브 02-05</h5>
+						서브02-05
+					</div>
+
+					<div id="tabSubConts03-01" style="display:none">
+						<h4 class="blind">카테고리 03-01</h4>
+						<h5 class="blind">서브 03-01</h5>
+						서브 03-01
+					</div>
+
+					<div id="tabSubConts04" style="display:none">
+						<h4 class="blind">카테고리 04</h4>
+						카테고리 04
+					</div>
+					<div id="tabSubConts05" style="display:none">
+						<h4 class="blind">카테고리 05</h4>
+						카테고리 05
+					</div>
+
+				</div>
+				<!-- e : 카테고리 용 탭의 컨텐츠 영역 -->
+
+
+
+
+				<br/><br/><br/><br/><br/>
+
+				<!-- s : 팝업용 탭 -->
+				<h4 class="fBold " style="font-size:18px;color:#000; margin-bottom:20px;">팝업용 탭</h4>
+
+				<div class="comm_tabs style03">
+					<ul class="tabList_item02"> <!-- tabList_item02 / tabList_item03 / tabList_item04 / tabList_item05 -->
+						<li class="selected"><a href="#popTabConts01" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;">탭 01</a></li>
+						<li><a href="#popTabConts02" onclick="$.ktBizTabs(01, this, 'pop_tabs01'); return false;" >탭 02</a></li>
 					</ul>
 				</div>
-				<!-- e : 탭 2depth 일 경우 -->
+				<!-- e : 팝업용 탭 -->
 
-				<!-- s : 탭 컨텐츠 01-01 -->
-				<div id="comm_tabConts01_01" class="comm_tabConts2depth">
-					<h4 class="blind">탭 컨텐츠 01-01</h4>
-					탭 컨텐츠 01-01
+
+				<!-- s : 팝업용 탭의 컨텐츠 영역 -->
+				<div id="pop_tabs01">
+					<div id="popTabConts01">
+						<h4 class="blind">컨텐츠 01</h4>
+						컨텐츠 01
+					</div>
+					<div id="popTabConts02" style="display:none">
+						<h4 class="blind">컨텐츠 02</h4>
+						컨텐츠 02
+					</div>
 				</div>
-				<!-- e : 탭 컨텐츠 01-01 -->
-
-				<!-- s : 탭 컨텐츠 01-02 -->
-				<div id="comm_tabConts01_02" class="comm_tabConts2depth" style="display: none;">
-					<h4 class="blind">탭 탭 컨텐츠 01-02</h4>
-					탭 컨텐츠 01-02
-				</div>
-				<!-- e : 탭 컨텐츠 01-02 -->
-
-				<!-- s : 탭 컨텐츠 01-03 -->
-				<div id="comm_tabConts01_03" class="comm_tabConts2depth"  style="display: none">
-					<h4 class="blind">탭 컨텐츠 01-03</h4>
-					탭 컨텐츠 01-03
-				</div>
-				<!-- e : 탭 컨텐츠 01-03 -->
-
-				<!-- s : 탭 컨텐츠 01-04 -->
-				<div id="comm_tabConts01_04" class="comm_tabConts2depth"  style="display: none">
-					<h4 class="blind">탭 컨텐츠 01-04</h4>
-					탭 컨텐츠 01-04
-				</div>
-				<!-- e : 탭 컨텐츠 01-04 -->
-
-				<!-- s : 탭 컨텐츠 02-01 -->
-				<div id="comm_tabConts02_01" class="comm_tabConts2depth" style="display: none">
-					<h4 class="blind">탭 컨텐츠 02-01</h4>
-					탭 컨텐츠 02-01
-				</div>
-				<!-- e : 탭 컨텐츠 02-01 -->
-
-				<!-- s : 탭 컨텐츠 02-02 -->
-				<div id="comm_tabConts02_02" class="comm_tabConts2depth" style="display: none;">
-					<h4 class="blind">탭 탭 컨텐츠 02-02</h4>
-					탭 컨텐츠 02-02
-				</div>
-				<!-- e : 탭 컨텐츠 02-02 -->
-
-				<!-- s : 탭 컨텐츠 02-03 -->
-				<div id="comm_tabConts02_03" class="comm_tabConts2depth"  style="display: none">
-					<h4 class="blind">탭 컨텐츠 02-03</h4>
-					탭 컨텐츠 02-03
-				</div>
-				<!-- e : 탭 컨텐츠 02-03 -->
-
-				<!-- s : 탭 컨텐츠 02-04 -->
-				<div id="comm_tabConts02_04" class="comm_tabConts2depth"  style="display: none">
-					<h4 class="blind">탭 컨텐츠 02-04</h4>
-					탭 컨텐츠 02-04
-				</div>
-				<!-- e : 탭 컨텐츠 02-04 -->
-
-
-				<!-- s : 탭 컨텐츠 03-01 -->
-				<div id="comm_tabConts03_01" class="comm_tabConts2depth"  style="display: none">
-					<h4 class="blind">탭 컨텐츠 03-01</h4>
-					탭 컨텐츠 03-01
-				</div>
-				<!-- e : 탭 컨텐츠 03-01 -->
-
-
-				<!-- s : 탭스타일2 탭 영역 -->
-				<div class="comm_detailTabWrap">
-					<ul class="comm_stab">
-						<li class="on"><a href="#comm_tabContsSub01" onclick="$.ktBizTabMenu(01, this, 'comm_tabContsSub'); return false;">인터넷 유해물 차단</a></li>
-						<li><a href="#comm_tabContsSub02" onclick="$.ktBizTabMenu(01, this, 'comm_tabContsSub'); return false;">인터넷 이용시간 관리</a></li>
-						<li><a href="#comm_tabContsSub03" onclick="$.ktBizTabMenu(01, this, 'comm_tabContsSub'); return false;">스마트폰 유해물 차단</a></li>
-					</ul>
-				</div>
-				<!-- e : 탭스타일2 탭 영역 -->
-
-				<!-- s : 탭 컨텐츠 1 -->
-				<div id="comm_tabContsSub01" class="comm_tabContsSub">
-					<h4 class="blind">탭 컨텐츠 1</h4>
-					탭 컨텐츠 1
-
-				</div>
-				<!-- e : 탭 컨텐츠 1 -->
-
-				<!-- s : 탭 컨텐츠 2 -->
-				<div id="comm_tabContsSub02" class="comm_tabContsSub" style="display: none;">
-					<h4 class="blind">탭 컨텐츠 2</h4>
-					탭 컨텐츠 2
-				</div>
-				<!-- e : 탭 컨텐츠 2 -->
-
-				<!-- s : 탭 컨텐츠 3 -->
-				<div id="comm_tabContsSub03" class="comm_tabContsSub"  style="display: none">
-					<h4 class="blind">탭 컨텐츠 3</h4>
-					탭 컨텐츠 3
-				</div>
-				<!-- e : 탭 컨텐츠 3 -->
+				<!-- e : 팝업용 탭의 컨텐츠 영역 -->
 
 
 
@@ -729,9 +705,9 @@
 					</select>
 				</div>
 				<!-- e : 셀렉트 -->
-				
+
 				<br /><br /><br />
-				
+
 				<p>셀렉 박스 넓이값 넣을 경우</p>
 				<!-- s : 셀렉트 -->
 				<div class="selectWrap w100" title="셀렉트박스">
@@ -742,7 +718,7 @@
 					</select>
 				</div>
 				<!-- e : 셀렉트 -->
-				
+
 				<br /><br /><br />
 
 

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-.pop_layerWrap {position: absolute;top:200px;left:50%;margin-left:-375px;z-index: 4010;}
-.pop_wrap {min-width: 340px; max-width: 750px; height: 100%; box-sizing:border-box;  border:1px #333 solid; position: relative;background: #f0f0f0;overflow-y:auto;}
+.pop_layerWrap {position: fixed;top:170px;left:50%;margin-left:-375px;z-index: 4010;}
+.pop_wrap {min-width: 340px; max-width: 750px; height: 100%; font-size:14px; box-sizing:border-box;  border:1px #333 solid; position: relative;background: #f0f0f0;overflow-y:auto;}
 .pop_wrap .pop_header {padding: 22px 0 27px; text-align:center;background: #fff; border-bottom: 1px solid #ccc;background: #fff}
 .pop_wrap .pop_header h1, .pop_wrap .pop_header h2, .pop_wrap .pop_header h3, .pop_wrap .pop_header h4, .pop_wrap .pop_header h5, .pop_wrap .pop_header h6 {font-size: 21px;font-weight: bold;color: #333;}
 .pop_wrap .pop_conts {position: relative; padding:30px 29px; }
@@ -43,8 +43,8 @@
 
 
 /*  명세서 번호 선택 */
-.pop_wrap .pop_billSrchWhiteBox {padding:30px; background: #fff; border: 1px solid #ccc;margin:0 0 28px 0;}
-.pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:66px;margin:20px 0 0 0;}
+.pop_wrap .pop_billSrchWhiteBox {padding:20px 30px; background: #fff; border: 1px solid #ccc;margin:0 0 28px 0;}
+.pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:66px;margin:10px 0 0 0;}
 .pop_wrap .pop_billSrchWhiteBox p.billDesc {font-size: 15px; line-height: 21px; }
 .pop_wrap .pop_billSrchWhiteBox input {width:100%;}
 .pop_wrap .pop_billSrchWhiteBox a {position: absolute; top:0;right: 0;}
@@ -547,17 +547,18 @@
 /* tv 채널안내 */
 .pop_svcTv,
 .pop_svcTv .pop_header,
-.pop_svcTv .pop_footer {max-width:817px;}
-.pop_svc .pop_svcTvHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_tv.jpg) no-repeat 100% 0;}
-.pop_svc .pop_svcTvIframe iframe {height:3269px;}
+.pop_svcTv .pop_footer {max-width:840px;}
+.pop_svc .pop_svcTvHeader {padding:15px 0 0 15px; height:130px; background:#fff url(../images/pop/img_visual_tv_channel_tv.jpg) no-repeat 100% 15px;}
+.pop_svc .pop_svcTvIframe iframe {height:3350px; background:#fff;}
 /* skylife 채널안내*/
 .pop_svcSky,
 .pop_svcSky .pop_header,
-.pop_svcSky .pop_footer {max-width:817px;}
-.pop_svc .pop_svcSkyHeader {height:130px; background:url(../images/pop/img_visual_tv_channel_skylife.jpg) no-repeat 100% 0;}
-.pop_svc .pop_svcSkyIframe iframe {height:2671px;}
+.pop_svcSky .pop_footer {max-width:840px;}
+.pop_svc .pop_svcSkyHeader {padding:15px 0 0 15px; height:130px; background:#fff url(../images/pop/img_visual_tv_channel_skylife.jpg) no-repeat 100% 15px;}
+.pop_svc .pop_svcSkyIframe iframe {height:2750px; background:#fff;}
 /* 패키지부가서비스란? */
-.pop_svc .pop_svcPkgPrice {width:495px;background:url(../images/pop/pop_svc_pkg_bg.gif) no-repeat 100% 0;}
+.pop_svc .pop_svcPkgPrice {box-sizing:border-box; padding:50px 0; width:100%; background:#fff url(../images/pop/pop_svc_pkg_bg.png) no-repeat 50% 50px;}
+.pop_svc .pop_svcPkgPrice h2, .pop_svc .pop_svcPkgPrice p {margin:0 auto; width:495px;}
 /* my time plan */
 .pop_svc .pop_svcMytime select {width:90%; font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
 /* 수신차단 번호 등록*/
@@ -586,20 +587,20 @@
 
 .pop_svcAddon,
 .pop_svcAddon .pop_header,
-.pop_svcAddon .pop_footer {max-width:800px;}
+.pop_svcAddon .pop_footer {max-width:805px;}
 .pop_svcAddon .price .price-ori {color:#000; font-size:16px;}
 .pop_svcAddon .price .price-ori span {color:#ef1c25; font-weight:bold;}
 .pop_svcAddon .pop_section_title {margin:20px 0 7px; color:#333; font-weight:bold;}
 
-.pop_svcAddonHeader {position:relative; height:240px;}
-.pop_svcAddonHeader .price {position:absolute; top:50px; left:0;}
+.pop_svcAddonHeader {position:relative; padding:20px 0 20px 20px; height:260px; background:#fff;}
+.pop_svcAddonHeader .price {position:absolute; top:50px; left:20px;}
 .pop_svcAddonHeader .price .price-ori {font-size:24px;}
 .pop_svcAddonHeader .price .price-ori span {font-size:26px;}
-.pop_svcAddonHeader .benefit {position:absolute; top:100px; width:420px; max-width:420px; margin-top:21px; overflow:hidden;}
+.pop_svcAddonHeader .benefit {position:absolute; top:100px; left:20px; width:420px; max-width:420px; margin-top:21px; overflow:hidden;}
 .pop_svcAddonHeader .benefit ul {float:left; max-width:100%;border:solid 1px #e0e0e0; vertical-align:middle; overflow:hidden; padding:6px 10px 9px 0;}
 .pop_svcAddonHeader .benefit ul li{float:left; min-height:26px; margin-left:13px; font-size:11px; line-height:13px; vertical-align:middle; }
 .pop_svcAddonHeader .benefit ul li span {display:inline-block; margin-left:5px; min-width:80px; vertical-align:middle;}
-.pop_svcAddonHeader .prdImg {float:right;margin-top:-58px;}
+.pop_svcAddonHeader .prdImg {float:right;margin-top:-48px;}
 
 .pop_svcAddonRecom {padding-top:40px; height:172px; overflow:hidden;}
 .pop_svcAddonRecom .title {font-weight:bold; color:#333;}

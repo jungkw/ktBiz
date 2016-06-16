@@ -79,7 +79,7 @@ $(document).ready(function(){
     $.ktBizSelect.index.focus();
 
 
-	/**
+    /**
     * global select box
     */
 	$('.selectWrap select').selectric();
@@ -92,8 +92,13 @@ $(document).ready(function(){
     $.ktBizPopClick = function(obj){
         var $target = $($(obj).attr('href'));
         var $mask =$target.prev('.pop_mask');
+        var $wh = $(window).height();
+        var $lh = $target.height();
+        var $setTop = ($wh-$lh)/2;
+
+
         $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
-        $target.show();
+        $target.show().css('top',$setTop+'px');
         $mask.show();
         $target.find('.pop_conts').attr('tabindex',0).focus();
         $target.find('.pop_close a, .pop_btn_close').click(function(){
@@ -110,28 +115,82 @@ $(document).ready(function(){
 
     /**
     * tab & contents module
-    * @param {number} tab 1depth or 2depth (01, 02)
+    * @param {number} tab style number
     * @param {object} this.
-    * @param {string} contents division name.
+    * @param {string} contents division level.
     */
-    $.ktBizTabMenu = function(type, obj, name){
-        var $target = $($(obj).attr('href'));
-        var $parents = $(obj).closest('li');
-        var $friend = $parents.closest('ul').children('li');
-        var $tabWrap = $parents.closest('ul').parents('div.comm_tabWrap');
-        var $subTab = $(obj).next('ul');
-        if(!$parents.hasClass('on')){
-            if(type==01){
-                $.ktBizTabMenu.depth01($target, $parents, $friend, $tabWrap, $subTab, name);
-            }else{
-                $.ktBizTabMenu.depth02($target,$parents, $friend, name, obj);
-            }
-        };
+    $.ktBizTabs = function(type, obj, division){
+        var $target = $($(obj).attr('href')); // 노출될 division
+        var $parents = $(obj).closest('li'); // this의 자신 부모 li
+        var $friend = $parents.closest('ul').children('li'); // 자신 부모 li 의 같은 레벨의 li 들 
+        var $tabWrap = $parents.closest('ul').parents('div.comm_tabs'); // 현재 탭 wrapper
+        var $subTab = $(obj).next('ul'); // sub ul
+        var $division = $('#'+division); // 노출될 division의 wrapper
+
+        if(type=="02"){
+          $.ktBizTabs.type02($target, $parents, $division, $friend);
+        }else{
+          $.ktBizTabs.type01($target, $parents, $tabWrap, $division, $subTab);
+        }
         
         return false;
     };
 
-    /* $.ktBizTabMenu case depth01 fn */
+
+    /**
+    * tab 1depth contents module
+    * @param {object} contents class object
+    * @param {object} this parents li object
+    * @param {object} this wrapper object
+    * @param {object} conetns wrapper object
+    * @param {object} sub list ul object
+    */
+    $.ktBizTabs.type01 = function($target, $parents, $tabWrap, $division, $subTab){
+        if(!$parents.hasClass('selected')){
+            $division.children('div').hide();
+            $target.show();
+            $tabWrap.find('li').removeClass('selected');
+            $parents.addClass('selected');
+            $subTab.children('li').eq(0).addClass('selected');
+        }
+        return false;
+    };
+
+
+    /**
+    * tab 2depth contents module
+    * @param {object} contents class object
+    * @param {object} this parents li object
+    * @param {object} conetns wrapper object
+    * @param {object} this parents all li object
+    */
+    $.ktBizTabs.type02 = function($target, $parents, $division, $friend){
+        $division.children('div').hide();
+        $target.show();
+        $friend.removeClass('selected');
+        $parents.addClass('selected');
+        return false;
+    }
+
+
+    // category tab focus fn
+    $.ktBizTabs.focus = function(){
+      $('.tabsCategory_sub_item > li > a').each(function(){
+          $(this).bind('focusin', function(){
+            $(this).addClass('focusin');
+            $(this).parents('li').addClass('focusin');
+          }).bind('focusout', function(){
+            $(this).removeClass('focusin');
+            $(this).parents('li').removeClass('focusin');
+          });
+        });
+    }
+    $.ktBizTabs.focus();
+
+
+    
+
+    /*
     $.ktBizTabMenu.depth01 = function($target, $parents, $friend, $tabWrap, $subTab, name) {
         $friend.children('ul').hide();
         if($subTab.length < 1){
@@ -150,7 +209,6 @@ $(document).ready(function(){
         $target.show();
     }
 
-    /* $.ktBizTabMenu case depth02 fn */
     $.ktBizTabMenu.depth02 = function($target, $parents, $friend, name, obj) {
         $friend.removeClass('on');
         $parents.addClass('on');
@@ -158,6 +216,7 @@ $(document).ready(function(){
         $target.show();
     }
 
+    */
 
     /* notify toggle btn fn */
     $.ktBizNotifyToggle = function(){
@@ -219,10 +278,10 @@ $(document).ready(function(){
             gnbItem += "<!-- s : customer center util menu -->";
             gnbItem += "<ul class='cfmOllehY15UtilAr'>";
             gnbItem += "<li>";
-                gnbItem += "<a href=''>로그인</a>";
+                gnbItem += "<a href='#'>로그인</a>";
               gnbItem += "</li> ";
               gnbItem += "<li>";
-                gnbItem += "<a href=''>회원가입</a>";
+                gnbItem += "<a href='#'>회원가입</a>";
               gnbItem += "</li> ";
               gnbItem += "<li class='last'>";
                 gnbItem += "<a href='http://biz.olleh.com/biz/wBiz/customer/faqMain.do'>고객센터</a>";
@@ -239,7 +298,7 @@ $(document).ready(function(){
 
                   gnbItem += "<!-- s : gnb item01 -->";
                   gnbItem += "<li class='cfmOllehGnb-menu-item'>";
-                      gnbItem += "<a href='' class='link myPage on'>My페이지</a>";
+                      gnbItem += "<a href='#' class='link myPage on'>My페이지</a>";
 
                       gnbItem += "<div class='cfmOllehGnb-submenu'>";
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -248,36 +307,35 @@ $(document).ready(function(){
                           gnbItem += "</div>"; 
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>요금조회/납부</a>";
+                                gnbItem += "<a href='#' class='group-heading'>요금조회/납부</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>명세서 조회</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>월별요금조회</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>실시간 요금</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>분리납부내역 조회</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>요금납부</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>납부방법 변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>명세서 관리</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 조회</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>월별요금조회</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>실시간 요금</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>사용량 조회</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>분리납부내역 조회</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>납부방법 변경</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 관리</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>가입상품 조회/관리</a>";
+                                gnbItem += "<a href='#' class='group-heading'>가입상품 조회/관리</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>내상품 조회 </a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>사용량조회</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>내상품 조회 </a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>신청/변경</a>";
+                                gnbItem += "<a href='#' class='group-heading'>신청/변경</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>요금제 신청</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>부가서비스 신청</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>번호변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>일시정지</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>설치장소 변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>명의변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>분실신고</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>상품 신청/문의(대량구매)</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>신청/변경 현황</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금제 신청</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>부가서비스 신청</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>번호변경</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>일시정지</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>설치장소 변경</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>분실신고</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>상품 신청/문의(대량구매)</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>신청/변경 현황</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -287,7 +345,7 @@ $(document).ready(function(){
 
                   gnbItem += "<!-- s : gnb item02 -->";
                   gnbItem += "<li class='cfmOllehGnb-menu-item phone'>";
-                      gnbItem += "<a href='' class='link phone'>전화</a>";
+                      gnbItem += "<a href='#' class='link phone'>전화</a>";
 
                       gnbItem += "<div class='cfmOllehGnb-submenu'>";
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -297,42 +355,42 @@ $(document).ready(function(){
 
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>인터넷전화</a>";
+                                gnbItem += "<a href='#' class='group-heading'>인터넷전화</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz 인터넷전화</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>kt biz 인터넷전화 centrex</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz 인터넷전화</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>kt biz 인터넷전화 centrex</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>일반전화</a>";
+                                gnbItem += "<a href='#' class='group-heading'>일반전화</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>ISDN PRI</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>이너텔</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>구내교환 DID/DOD</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>이너텔c-type</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>m이너텔</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>ISDN PRI</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>이너텔</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>구내교환 DID/DOD</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>이너텔c-type</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>m이너텔</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>국제전화</a>";
+                                gnbItem += "<a href='#' class='group-heading'>국제전화</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>국제전화 express</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>800단일번호서비스</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>국제클로버서비스</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>001 biz 요금제</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz 글로벌 메시징</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>국제전화 express</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>800단일번호서비스</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>국제클로버서비스</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>001 biz 요금제</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz 글로벌 메시징</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>전국대표번호</a>";
+                                gnbItem += "<a href='#' class='group-heading'>전국대표번호</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>전국대표번호</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>전국대표번호</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item next-item'>";
-                                gnbItem += "<a href='' class='group-heading'>무료전화080</a>";
+                                gnbItem += "<a href='#' class='group-heading'>무료전화080</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>무료전화080</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>무료전화080</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -343,7 +401,7 @@ $(document).ready(function(){
 
                   gnbItem += "<!-- s : gnb item03 -->";
                   gnbItem += "<li class='cfmOllehGnb-menu-item internetData'>";
-                      gnbItem += "<a href='' class='link internetData'>인터넷/데이터</a>";
+                      gnbItem += "<a href='#' class='link internetData'>인터넷/데이터</a>";
 
                       gnbItem += "<div class='cfmOllehGnb-submenu'>";
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -353,52 +411,52 @@ $(document).ready(function(){
 
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>인터넷</a>";
+                                gnbItem += "<a href='#' class='group-heading'>인터넷</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>kt biz GiGA office</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz kornet</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz VPN</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>kt biz GiGA office</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz kornet</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz VPN</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>전용회선</a>";
+                                gnbItem += "<a href='#' class='group-heading'>전용회선</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>일반전용회선</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>방송전용회선</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>CCTV전용회선</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>일반전용회선</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>방송전용회선</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>CCTV전용회선</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>글로벌데이터</a>";
+                                gnbItem += "<a href='#' class='group-heading'>글로벌데이터</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>글로벌데이터</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>글로벌데이터</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>ucloud biz</a>";
+                                gnbItem += "<a href='#' class='group-heading'>ucloud biz</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh ucloud biz</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh ucloud biz</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item next-item''>";
-                                gnbItem += "<a href='' class='group-heading'>IDC</a>";
+                                gnbItem += "<a href='#' class='group-heading'>IDC</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz 코로케이션</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>서버호스팅</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>MSP</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>보안서비스</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>백업서비스</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz CDN</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz 코로케이션</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>서버호스팅</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>MSP</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>보안서비스</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>백업서비스</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz CDN</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item next-item''>";
-                                gnbItem += "<a href='' class='group-heading'>Managed</a>";
+                                gnbItem += "<a href='#' class='group-heading'>Managed</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>Managed 네트워크</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>Managed 무선랜</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>Managed IP-PBX</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>Managed Device</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>Managed 서버</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>Managed 네트워크</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>Managed 무선랜</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>Managed IP-PBX</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>Managed Device</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>Managed 서버</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -410,7 +468,7 @@ $(document).ready(function(){
 
                   gnbItem += "<!-- s : gnb item04 -->";
                   gnbItem += "<li class='cfmOllehGnb-menu-item mobile'>";
-                      gnbItem += "<a href='' class='link mobile'>모바일</a>";
+                      gnbItem += "<a href='#' class='link mobile'>모바일</a>";
 
                       gnbItem += "<div class='cfmOllehGnb-submenu'>";
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -420,31 +478,31 @@ $(document).ready(function(){
 
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>요금제</a>";
+                                gnbItem += "<a href='#' class='group-heading'>요금제</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>biz data 기본형</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>biz data 무제한</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>biz data 대용량</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>biz data 기본형</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>biz data 무제한</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>biz data 대용량</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>특화 서비스</a>";
+                                gnbItem += "<a href='#' class='group-heading'>특화 서비스</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>kt 기업전용 LTE</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>법인명의 본인확인</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>법인 마케팅서비스</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz data box</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>분리과금</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>올레 콘텐츠박스</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>LTE 데이터쿠폰</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>kt 기업전용 LTE</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>법인명의 본인확인</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>법인 마케팅서비스</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz data box</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>분리과금</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>올레 콘텐츠박스</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>LTE 데이터쿠폰</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='' class='group-heading'>모바일웍스</a>";
+                                gnbItem += "<a href='#' class='group-heading'>모바일웍스</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz MDM</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz MAM</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz MCM</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz MDM</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz MAM</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz MCM</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               
@@ -457,7 +515,7 @@ $(document).ready(function(){
 
                   gnbItem += "<!-- s : gnb item05 -->";
                       gnbItem += "<li class='cfmOllehGnb-menu-item iot'>";
-                          gnbItem += "<a href='' class='link iot'>IoT</a>";
+                          gnbItem += "<a href='#' class='link iot'>IoT</a>";
 
                           gnbItem += "<div class='cfmOllehGnb-submenu'>";
                               gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -467,36 +525,36 @@ $(document).ready(function(){
 
                               gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                                 gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>이동체</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>이동체</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz 브랜드택시</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz DTG</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz 브랜드택시</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz DTG</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>케어/보안</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>케어/보안</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>어린이 안심서비스</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>U안심알리미</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh 똑똑</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh CCTV telecop</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh CCTV telecop plus</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh CCTV</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>페이스캅</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh 통합보안 Package</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>어린이 안심서비스</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>U안심알리미</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh 똑똑</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh CCTV telecop</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh CCTV telecop plus</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh CCTV</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>페이스캅</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh 통합보안 Package</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>환경/방재</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>환경/방재</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>MOS</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>Smart Toner</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>MOS</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>Smart Toner</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>IoT무선서비스</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>IoT무선서비스</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>IoT무선서비스</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>IoT무선서비스</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   
@@ -509,7 +567,7 @@ $(document).ready(function(){
 
                       gnbItem += "<!-- s : gnb item06 -->";
                       gnbItem += "<li class='cfmOllehGnb-menu-item bizSolution'>";
-                          gnbItem += "<a href='' class='link bizSolution'>기업솔루션</a>";
+                          gnbItem += "<a href='#' class='link bizSolution'>기업솔루션</a>";
 
                           gnbItem += "<div class='cfmOllehGnb-submenu'>";
                               gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -519,47 +577,47 @@ $(document).ready(function(){
 
                               gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                                 gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>bizemeka</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>bizemeka</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>bizmeka 그룹웨어</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>화상회의</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh bizmeka 365 esd</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>bizmeka 콜센터</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>bizmeka 전자회로 기판 관리서비스</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz 크로샷</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz say</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>전화회의 MeetMe</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>bizmeka 그룹웨어</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>화상회의</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh bizmeka 365 esd</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>bizmeka 콜센터</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>bizmeka 전자회로 기판 관리서비스</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz 크로샷</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz say</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>전화회의 MeetMe</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>기업보안</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>기업보안</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz Secure IP</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz 파밍 차단</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>Managed 보안</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz Secure IP</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz 파밍 차단</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>Managed 보안</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>스마트빌딩</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>스마트빌딩</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>광대역무선통합인프라</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz smart CMS</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz 통합 SI/FMS</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>광대역무선통합인프라</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz smart CMS</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz 통합 SI/FMS</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>스마트에너지</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>스마트에너지</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>olleh biz BEMS</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>에너지효율화사업</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>에너지 진단</a></li>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>그린리모델링</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz BEMS</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>에너지효율화사업</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>에너지 진단</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>그린리모델링</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item next-item''>";
-                                    gnbItem += "<a href='' class='group-heading'>디지털사이니지</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>디지털사이니지</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>메가/메디 프레임</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>메가/메디 프레임</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   
@@ -571,7 +629,7 @@ $(document).ready(function(){
 
                       gnbItem += "<!-- s : gnb item07 -->";
                       gnbItem += "<li class='cfmOllehGnb-menu-item consulting'>";
-                          gnbItem += "<a href='' class='link consulting'>맞춤 컨설팅</a>";
+                          gnbItem += "<a href='#' class='link consulting'>맞춤 컨설팅</a>";
 
                           gnbItem += "<div class='cfmOllehGnb-submenu'>";
                               gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
@@ -581,21 +639,21 @@ $(document).ready(function(){
 
                               gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                                 gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>내게 맞는 상품 찾기</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>내게 맞는 상품 찾기</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>내게 맞는 상품 찾기</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>내게 맞는 상품 찾기</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>온라인 컨설팅 신청</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>온라인 컨설팅 신청</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>온라인 컨설팅 신청</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>온라인 컨설팅 신청</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                   gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                    gnbItem += "<a href='' class='group-heading'>1:1문의</a>";
+                                    gnbItem += "<a href='#' class='group-heading'>1:1문의</a>";
                                     gnbItem += "<ul class='group-list'>";
-                                      gnbItem += "<li class='group-item'><a href='' class='group-link'>1:1문의</a></li>";
+                                      gnbItem += "<li class='group-item'><a href='#' class='group-link'>1:1문의</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
                                  
@@ -635,36 +693,35 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>My페이지</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>요금조회/납부</a></h4>";
+                              gnbItem += "<h4><a href='#'>요금조회/납부</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>명세서 조회</a></li>";
-                                gnbItem += "<li><a href=''>월별요금조회</a></li>";
-                                gnbItem += "<li><a href=''>실시간 요금</a></li>";
-                                gnbItem += "<li><a href=''>분리납부내역 조회</a></li>";
-                                gnbItem += "<li><a href=''>요금납부</a></li>";
-                                gnbItem += "<li><a href=''>납부방법 변경</a></li>";
-                                gnbItem += "<li><a href=''>명세서 관리</a></li>";
+                                gnbItem += "<li><a href='#'>명세서 조회</a></li>";
+                                gnbItem += "<li><a href='#'>월별요금조회</a></li>";
+                                gnbItem += "<li><a href='#'>실시간 요금</a></li>";
+                                gnbItem += "<li><a href='#'>분리납부내역 조회</a></li>";
+                                gnbItem += "<li><a href='#'>요금납부</a></li>";
+                                gnbItem += "<li><a href='#'>납부방법 변경</a></li>";
+                                gnbItem += "<li><a href='#'>명세서 관리</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>가입상품 조회/관리</a></h4>";
+                              gnbItem += "<h4><a href='#'>가입상품 조회/관리</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href=''>내상품조회</a></li>";
-                                gnbItem += "<li><a href=''>사용량조회</a></li>";
+                                gnbItem += "<li><a href='#'>내상품조회</a></li>";
+                                gnbItem += "<li><a href='#'>사용량조회</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>신청/변경</a></h4>";
+                              gnbItem += "<h4><a href='#'>신청/변경</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href=''>요금제 신청</a></li>";
-                                gnbItem += "<li><a href=''>부가서비스 신청</a></li>";
-                                gnbItem += "<li><a href=''>번호변경</a></li>";
-                                gnbItem += "<li><a href=''>일시정지</a></li>";
-                                gnbItem += "<li><a href=''>설치장소 변경</a></li>";
-                                gnbItem += "<li><a href=''>명의변경</a></li>";
-                                gnbItem += "<li><a href=''>분실신고</a></li>";
-                                gnbItem += "<li><a href=''>상품 신청/문의 (대량구매)</a></li>";
-                                gnbItem += "<li><a href=''>신청/변경 현황</a></li>";
+                                gnbItem += "<li><a href='#'>요금제 신청</a></li>";
+                                gnbItem += "<li><a href='#'>부가서비스 신청</a></li>";
+                                gnbItem += "<li><a href='#'>번호변경</a></li>";
+                                gnbItem += "<li><a href='#'>일시정지</a></li>";
+                                gnbItem += "<li><a href='#'>설치장소 변경</a></li>";
+                                gnbItem += "<li><a href='#'>분실신고</a></li>";
+                                gnbItem += "<li><a href='#'>상품 신청/문의 (대량구매)</a></li>";
+                                gnbItem += "<li><a href='#'>신청/변경 현황</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                            
@@ -679,42 +736,42 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>전화</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>인터넷전화</a></h4>";
+                              gnbItem += "<h4><a href='#'>인터넷전화</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>olleh biz 인터넷전화</a></li>";
-                                gnbItem += "<li><a href=''>kt biz 인터넷전화 centrex</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz 인터넷전화</a></li>";
+                                gnbItem += "<li><a href='#'>kt biz 인터넷전화 centrex</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>일반전화</a></h4>";
+                              gnbItem += "<h4><a href='#'>일반전화</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href=''>ISDN PRI</a></li>";
-                                gnbItem += "<li><a href=''>이너텔</a></li>";
-                                gnbItem += "<li><a href=''>구내교환 DID/DOD</a></li>";
-                                gnbItem += "<li><a href=''>이너텔c-type</a></li>";
-                                gnbItem += "<li><a href=''>m이너텔</a></li>";
+                                gnbItem += "<li><a href='#'>ISDN PRI</a></li>";
+                                gnbItem += "<li><a href='#'>이너텔</a></li>";
+                                gnbItem += "<li><a href='#'>구내교환 DID/DOD</a></li>";
+                                gnbItem += "<li><a href='#'>이너텔c-type</a></li>";
+                                gnbItem += "<li><a href='#'>m이너텔</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>국제전화</a></h4>";
+                              gnbItem += "<h4><a href='#'>국제전화</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href=''>국제전화 express</a></li>";
-                                gnbItem += "<li><a href=''>800단일번호서비스</a></li>";
-                                gnbItem += "<li><a href=''>국제클로버서비스</a></li>";
-                                gnbItem += "<li><a href=''>001 biz 요금제</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz 글로벌 메시징</a></li>";
+                                gnbItem += "<li><a href='#'>국제전화 express</a></li>";
+                                gnbItem += "<li><a href='#'>800단일번호서비스</a></li>";
+                                gnbItem += "<li><a href='#'>국제클로버서비스</a></li>";
+                                gnbItem += "<li><a href='#'>001 biz 요금제</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz 글로벌 메시징</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>전국대표번호</a></h4>";
+                              gnbItem += "<h4><a href='#'>전국대표번호</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href=''>전국대표번호</a></li>";
+                                gnbItem += "<li><a href='#'>전국대표번호</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>무료전화080</a></h4>";
+                              gnbItem += "<h4><a href='#'>무료전화080</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href=''>무료전화080</a></li>";
+                                gnbItem += "<li><a href='#'>무료전화080</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -726,52 +783,52 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>인터넷/데이터</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>인터넷</a></h4>";
+                              gnbItem += "<h4><a href='#'>인터넷</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>kt biz GiGa office</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz kornet</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz VPN</a></li>";
+                                gnbItem += "<li><a href='#'>kt biz GiGa office</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz kornet</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz VPN</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>전용회선</a></h4>";
+                              gnbItem += "<h4><a href='#'>전용회선</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>일반전용회선</a></li>";
-                                gnbItem += "<li><a href=''>방송전용회선</a></li>";
-                                gnbItem += "<li><a href=''>CCTV전용회선</a></li>";
+                                gnbItem += "<li><a href='#'>일반전용회선</a></li>";
+                                gnbItem += "<li><a href='#'>방송전용회선</a></li>";
+                                gnbItem += "<li><a href='#'>CCTV전용회선</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>글로벌데이터</a></h4>";
+                              gnbItem += "<h4><a href='#'>글로벌데이터</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>글로벌데이터</a></li>";
+                                gnbItem += "<li><a href='#'>글로벌데이터</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>ucloud biz</a></h4>";
+                              gnbItem += "<h4><a href='#'>ucloud biz</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>olleh ucloud biz</a></li>";
+                                gnbItem += "<li><a href='#'>olleh ucloud biz</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>IDC</a></h4>";
+                              gnbItem += "<h4><a href='#'>IDC</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>olleh biz 코로케이션</a></li>";
-                                gnbItem += "<li><a href=''>서버호스팅</a></li>";
-                                gnbItem += "<li><a href=''>MSP</a></li>";
-                                gnbItem += "<li><a href=''>보안서비스</a></li>";
-                                gnbItem += "<li><a href=''>백업서비스</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz CDN</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz 코로케이션</a></li>";
+                                gnbItem += "<li><a href='#'>서버호스팅</a></li>";
+                                gnbItem += "<li><a href='#'>MSP</a></li>";
+                                gnbItem += "<li><a href='#'>보안서비스</a></li>";
+                                gnbItem += "<li><a href='#'>백업서비스</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz CDN</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>Managed</a></h4>";
+                              gnbItem += "<h4><a href='#'>Managed</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>Managed 네트워크</a></li>";
-                                gnbItem += "<li><a href=''>Managed 무선랜</a></li>";
-                                gnbItem += "<li><a href=''>Managed IP-PBX</a></li>";
-                                gnbItem += "<li><a href=''>Managed Device</a></li>";
-                                gnbItem += "<li><a href=''>Managed 서버</a></li>";
+                                gnbItem += "<li><a href='#'>Managed 네트워크</a></li>";
+                                gnbItem += "<li><a href='#'>Managed 무선랜</a></li>";
+                                gnbItem += "<li><a href='#'>Managed IP-PBX</a></li>";
+                                gnbItem += "<li><a href='#'>Managed Device</a></li>";
+                                gnbItem += "<li><a href='#'>Managed 서버</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -784,31 +841,31 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>모바일</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>요금제</a></h4>";
+                              gnbItem += "<h4><a href='#'>요금제</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>biz data 기본형</a></li>";
-                                gnbItem += "<li><a href=''>biz data 무제한</a></li>";
-                                gnbItem += "<li><a href=''>biz data 대용량</a></li>";
+                                gnbItem += "<li><a href='#'>biz data 기본형</a></li>";
+                                gnbItem += "<li><a href='#'>biz data 무제한</a></li>";
+                                gnbItem += "<li><a href='#'>biz data 대용량</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>특화 서비스</a></h4>";
+                              gnbItem += "<h4><a href='#'>특화 서비스</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>kt 기업전용 LTE</a></li>";
-                                gnbItem += "<li><a href=''>법인명의 본인확인</a></li>";
-                                gnbItem += "<li><a href=''>법인 마케팅서비스</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz data box</a></li>";
-                                gnbItem += "<li><a href=''>분리과금</a></li>";
-                                gnbItem += "<li><a href=''>올레 콘텐츠박스</a></li>";
-                                gnbItem += "<li><a href=''>LTE 데이터쿠폰</a></li>";
+                                gnbItem += "<li><a href='#'>kt 기업전용 LTE</a></li>";
+                                gnbItem += "<li><a href='#'>법인명의 본인확인</a></li>";
+                                gnbItem += "<li><a href='#'>법인 마케팅서비스</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz data box</a></li>";
+                                gnbItem += "<li><a href='#'>분리과금</a></li>";
+                                gnbItem += "<li><a href='#'>올레 콘텐츠박스</a></li>";
+                                gnbItem += "<li><a href='#'>LTE 데이터쿠폰</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li class='w120'>";
-                              gnbItem += "<h4><a href=''>모바일웍스</a></h4>";
+                              gnbItem += "<h4><a href='#'>모바일웍스</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>olleh biz MDM</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz MAM</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz MCM</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz MDM</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz MAM</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz MCM</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -821,36 +878,36 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>IoT</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>이동체</a></h4>";
+                              gnbItem += "<h4><a href='#'>이동체</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>olleh biz 브랜드택시</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz DTG</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz 브랜드택시</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz DTG</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>케어/보안</a></h4>";
+                              gnbItem += "<h4><a href='#'>케어/보안</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>어린이 안심서비스</a></li>";
-                                gnbItem += "<li><a href=''>U안심알리미</a></li>";
-                                gnbItem += "<li><a href=''>olleh 똑똑</a></li>";
-                                gnbItem += "<li><a href=''>olleh CCTV telecop</a></li>";
-                                gnbItem += "<li><a href=''>olleh CCTV telecop plus</a></li>";
-                                gnbItem += "<li><a href=''>olleh CCTV</a></li>";
-                                gnbItem += "<li><a href=''>페이스캅</a></li>";
-                                gnbItem += "<li><a href=''>olleh 통합보안 package</a></li>";
+                                gnbItem += "<li><a href='#'>어린이 안심서비스</a></li>";
+                                gnbItem += "<li><a href='#'>U안심알리미</a></li>";
+                                gnbItem += "<li><a href='#'>olleh 똑똑</a></li>";
+                                gnbItem += "<li><a href='#'>olleh CCTV telecop</a></li>";
+                                gnbItem += "<li><a href='#'>olleh CCTV telecop plus</a></li>";
+                                gnbItem += "<li><a href='#'>olleh CCTV</a></li>";
+                                gnbItem += "<li><a href='#'>페이스캅</a></li>";
+                                gnbItem += "<li><a href='#'>olleh 통합보안 package</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>환경/방재</a></h4>";
+                              gnbItem += "<h4><a href='#'>환경/방재</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>MOS</a></li>";
-                                gnbItem += "<li><a href=''>Smart Toner</a></li>";
+                                gnbItem += "<li><a href='#'>MOS</a></li>";
+                                gnbItem += "<li><a href='#'>Smart Toner</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li class='mt25'>";
-                              gnbItem += "<h4><a href=''>IoT무선서비스</a></h4>";
+                              gnbItem += "<h4><a href='#'>IoT무선서비스</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>IoT무선서비스</a></li>";
+                                gnbItem += "<li><a href='#'>IoT무선서비스</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -864,58 +921,58 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>기업솔루션</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>bizemeka</a></h4>";
+                              gnbItem += "<h4><a href='#'>bizemeka</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>bizemeka 그룹웨어</a></li>";
-                                gnbItem += "<li><a href=''>화상회의</a></li>";
-                                gnbItem += "<li><a href=''>olleh bizmeka 365 esd</a></li>";
-                                gnbItem += "<li><a href=''>bizmeka 콜센터</a></li>";
-                                gnbItem += "<li><a href=''>bizmeka 에듀</a></li>";
-                                gnbItem += "<li><a href=''>bizmeka 전자회로 기판 관리서비스</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz 크로샷</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz say</a></li>";
-                                gnbItem += "<li><a href=''>전화회의 MeetMe</a></li>";
+                                gnbItem += "<li><a href='#'>bizemeka 그룹웨어</a></li>";
+                                gnbItem += "<li><a href='#'>화상회의</a></li>";
+                                gnbItem += "<li><a href='#'>olleh bizmeka 365 esd</a></li>";
+                                gnbItem += "<li><a href='#'>bizmeka 콜센터</a></li>";
+                                gnbItem += "<li><a href='#'>bizmeka 에듀</a></li>";
+                                gnbItem += "<li><a href='#'>bizmeka 전자회로 기판 관리서비스</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz 크로샷</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz say</a></li>";
+                                gnbItem += "<li><a href='#'>전화회의 MeetMe</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>기업보안</a></h4>";
+                              gnbItem += "<h4><a href='#'>기업보안</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>olleh biz Secure IP</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz 파밍 차단</a></li>";
-                                gnbItem += "<li><a href=''>Managed 보안</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz Secure IP</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz 파밍 차단</a></li>";
+                                gnbItem += "<li><a href='#'>Managed 보안</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>스마트빌딩</a></h4>";
+                              gnbItem += "<h4><a href='#'>스마트빌딩</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>광대역무선통합인프라</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz smart CMS</a></li>";
-                                gnbItem += "<li><a href=''>olleh biz 통합 SI/FMS</a></li>";
+                                gnbItem += "<li><a href='#'>광대역무선통합인프라</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz smart CMS</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz 통합 SI/FMS</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>스마트 에너지</a></h4>";
+                              gnbItem += "<h4><a href='#'>스마트 에너지</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>olleh biz BEMS</a></li>";
-                                gnbItem += "<li><a href=''>에너지효율화사업</a></li>";
-                                gnbItem += "<li><a href=''>에너지 진단</a></li>";
-                                gnbItem += "<li><a href=''>그린리모델링</a></li>";
+                                gnbItem += "<li><a href='#'>olleh biz BEMS</a></li>";
+                                gnbItem += "<li><a href='#'>에너지효율화사업</a></li>";
+                                gnbItem += "<li><a href='#'>에너지 진단</a></li>";
+                                gnbItem += "<li><a href='#'>그린리모델링</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>디지털사이니지</a></h4>";
+                              gnbItem += "<h4><a href='#'>디지털사이니지</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>메가/메디 프레임</a></li>";
+                                gnbItem += "<li><a href='#'>메가/메디 프레임</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>Managed</a></h4>";
+                              gnbItem += "<h4><a href='#'>Managed</a></h4>";
                               gnbItem += "<ul class='inlinst'>";
-                                gnbItem += "<li><a href=''>Managed 네트워크</a></li>";
-                                gnbItem += "<li><a href=''>Managed 무선랜</a></li>";
-                                gnbItem += "<li><a href=''>Managed IP-PBX</a></li>";
-                                gnbItem += "<li><a href=''>Managed Device</a></li>";
-                                gnbItem += "<li><a href=''>Managed 서버</a></li>";
+                                gnbItem += "<li><a href='#'>Managed 네트워크</a></li>";
+                                gnbItem += "<li><a href='#'>Managed 무선랜</a></li>";
+                                gnbItem += "<li><a href='#'>Managed IP-PBX</a></li>";
+                                gnbItem += "<li><a href='#'>Managed Device</a></li>";
+                                gnbItem += "<li><a href='#'>Managed 서버</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                           gnbItem += "</ul>";
@@ -929,12 +986,12 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>맞춤 컨설팅</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>내게 맞는 상품 찾기</a></h4></li>";
+                              gnbItem += "<h4><a href='#'>내게 맞는 상품 찾기</a></h4></li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>온라인 컨설팅 신청</a></h4>";
+                              gnbItem += "<h4><a href='#'>온라인 컨설팅 신청</a></h4>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>1:1 문의</a></h4>";
+                              gnbItem += "<h4><a href='#'>1:1 문의</a></h4>";
                             gnbItem += "</li>";
                           gnbItem += "</ul>";
                         gnbItem += "</div>";
@@ -947,15 +1004,15 @@ $(document).ready(function(){
                           gnbItem += "<h3 class='cfmOllehTotalTitle'>고객센터</h3>";
                           gnbItem += "<ul class='cfmOllehTotalMenuList'>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>FAQ</a></h4></li>";
+                              gnbItem += "<h4><a href='#'>FAQ</a></h4></li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>신청서 다운로드</a></h4>";
+                              gnbItem += "<h4><a href='#'>신청서 다운로드</a></h4>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>연락처 안내</a></h4>";
+                              gnbItem += "<h4><a href='#'>연락처 안내</a></h4>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href=''>공지사항</a></h4>";
+                              gnbItem += "<h4><a href='#'>공지사항</a></h4>";
                             gnbItem += "</li>";
                           gnbItem += "</ul>";
                         gnbItem += "</div>";
@@ -977,96 +1034,121 @@ $(document).ready(function(){
       $.ktBizLnbView = function(code){
 
         var lnbItem = "";
-              lnbItem += "<h2 class='blind'>My페이지 LNB 메뉴 영역</h2>";
+              lnbItem += "<h2 class='blind'>올레닷컴(기업) LNB 메뉴 영역</h2>";
               lnbItem += "<div id='cfmOllehLnb'>";
                 lnbItem += "<h3 id='cfmOllehLnbTitle' class='cfmOllehLnbTitle' >My페이지</h3>";
-                lnbItem += "<ul id='cfmOllehLnbNewList' class='cfmOllehLnbNewList'>";
+                lnbItem += "<ul id='li_BA' class='cfmOllehLnbNewList' style='display:none'>";
                   
                   lnbItem += "<!-- s : 요금조회/납부 -->";
-                  lnbItem += "<li id='li_BA' class=''>";
-                    lnbItem += "<a href='' onclick='$.ktBizLnbView.click(this); return false;' id='BA' title='하위메뉴 열기'>요금조회/납부</a>";
-                    lnbItem += "<ul id='sub_BA' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' onclick='' id='BAA'>명세서 조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' onclick='' id='BAB'>월별요금조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' onclick='' id='BAC'>실시간요금</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' onclick='' id='BAD'>분리납부내역 조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' onclick='' id='BAE'>요금납부</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' onclick='' id='BAF'>납부방법 변경</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' onclick='' id='BAG'>명세서 관리</a>";
-                      lnbItem += "</li>";
-
-                    lnbItem += "</ul>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth' >";
+                    lnbItem += "<a href='#'  id='BAA' >명세서 조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<!-- e : 요금조회/납부 -->";
-
-
-                  lnbItem += "<!-- s : 가입상품 조회/관리 -->";
-                  lnbItem += "<li id='li_BB' class=''>";
-                    lnbItem += "<a href='' id='BB' onclick='$.ktBizLnbView.click(this); return false;' title='하위메뉴 열기'>가입상품 조회/관리</a>";
-                    lnbItem += "<ul id='sub_BB' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='' id='BBA'>내 상품 조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li id='li_BBB' class=''>";
-                        lnbItem += "<a href='' onclick='$.ktBizLnbView.click(this); return false;'  id='BBBA' title='하위메뉴 열기'>사용량 조회</a>";
-                        lnbItem += "<ul id='sub_BBBA' style='display: none;'>";
-                          lnbItem += "<li class=''><a href='' id='BBBA0'>모바일</a></li>";
-                          lnbItem += "<li class=''><a href='' id='BBBA1'>기가인터넷</a></li>";
-                          lnbItem += "<li class=''><a href='' id='BBBA2'>WiBro</a></li>";
-                        lnbItem += "</ul>";
-                      lnbItem += "</li>";
-
-                    lnbItem += "</ul>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAB'>월별요금조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<!-- e : 가입상품 조회/관리 -->";
-
-
-                  lnbItem += "<li id='li_BC' class=''>";
-                    lnbItem += "<a href='' id='BC' onclick='$.ktBizLnbView.click(this); return false;' title='하위메뉴 열기'>신청/변경</a>";
-                    lnbItem += "<ul id='sub_BC' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='' id='BCA'>요금제 신청</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='' id='BCB'>부가서비스 신청</a></li>";
-                      lnbItem += "<li id='li_BCC' class=''>";
-                        lnbItem += "<a href='' onclick='$.ktBizLnbView.click(this); return false;' id='BCCA' title='하위메뉴 열기'>번호 변경</a>";
-                        lnbItem += "<ul id='sub_BCCA' style='display: none;'>";
-                          lnbItem += "<li class=''><a href='' id='BCCA0'>모바일</a></li>";
-                          lnbItem += "<li class=''><a href='' id='BCCA1'>일반전화</a></li>";
-                        lnbItem += "</ul>";
-                      lnbItem += "</li>";
-
-                      lnbItem += "<li id='li_BCD' class=''>";
-                        lnbItem += "<a href='' onclick='$.ktBizLnbView.click(this); return false;' id='BCDA' title='하위메뉴 열기'>일시정지</a>";
-                        lnbItem += "<ul id='sub_BCDA' style='display: none;'>";
-                          lnbItem += "<li class=''><a href='' id='BCDA0'>모바일 신청/해제</a></li>";
-                          lnbItem += "<li class=''><a href='' id='BCDA1'>모바일 이력조회</a></li>";
-                          lnbItem += "<li class=''><a href='' id='BCDA2'>일반전화 신청/해제</a></li>";
-                        lnbItem += "</ul>";
-                      lnbItem += "</li>";
-
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='' id='BCE'>설치장소변경</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='' id='BCF'>명의변경</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='' id='BCG'>분실신고</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='' id='BCH'>상품신청/문의(대량구매)</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='' id='BCI'>신청/변경 현황</a></li>";
-
-                    lnbItem += "</ul>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAC'>실시간 요금</a>";
                   lnbItem += "</li>";
-
+                  lnbItem += "<li id='li_BAD' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAD' title='하위메뉴 열기'>사용량 조회</a>";
+                      lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BADA'>모바일</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BADB'>기가인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BADC'>WiBro</a></li>";
+                      lnbItem += "</ul>";
+                lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAE'>분리납부내역 조회</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAF'>요금납부</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAG'>납부방법 변경</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAH'>명세서 관리</a>";
+                  lnbItem += "</li>";
 
                 lnbItem += "</ul>";
+                lnbItem += "<!-- e : 요금조회/납부 -->";
+
+
+                lnbItem += "<!-- s : 가입상품 조회/관리 -->";
+                lnbItem += "<ul id='li_BB' class='cfmOllehLnbNewList' style='display:none'>";
+                  
+                  lnbItem += "<li id='li_BBA' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>사용량 조회</a>";
+                      lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAA'>모바일</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAB'>인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAC'>tv</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAD'>일반전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAE'>인터넷전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAF'>WiBro</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAG'>WiFi</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+
+                lnbItem += "</ul>";
+                lnbItem += "<!-- e : 가입상품 조회/관리 -->";
+
+
+                lnbItem += "<ul id='li_BC' class='cfmOllehLnbNewList' style='display:none'>";
+
+                  lnbItem += "<li class='cfmOllehNewDontDepth' >";
+                    lnbItem += "<a href='#'  id='BCA' >요금제 신청</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BCB'>부가서비스 신청</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCC' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCC' title='하위메뉴 열기'>번호변경</a>";
+                      lnbItem += "<ul id='sub_BCC' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCCA'>모바일</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCCB'>일반전화</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCD' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCD' title='하위메뉴 열기'>일시정지</a>";
+                      lnbItem += "<ul id='sub_BCD' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDA'>모바일 신청/해제</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDB'>모바일 이력조회</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDC'>일반전화 신청/해제</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCE' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCE' title='하위메뉴 열기'>설치장소 변경</a>";
+                      lnbItem += "<ul id='sub_BCE' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEA'>인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEB'>일반전화</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCF' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCF' title='하위메뉴 열기'>명의변경</a>";
+                      lnbItem += "<ul id='sub_BCF' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFA'>인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFB'>tv</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFC'>일반전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFD'>인터넷전화</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+
+                  lnbItem += "<li id='li_BCG' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCG' title='하위메뉴 열기'>분실신고</a>";
+                      lnbItem += "<ul id='sub_BCG' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCGA'>신청/해제</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BCH'>상품 신청/문의(대량구매)</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BCI'>신청/변경 현황</a>";
+                  lnbItem += "</li>";
+
+                lnbItem += "</ul>"; 
               lnbItem += "</div>";
 
           document.write(lnbItem);
@@ -1076,13 +1158,26 @@ $(document).ready(function(){
           var $depth2Number = $code.substring(0,3);
           var $depth3Number = $code.substring(0,4);
           var $depth4Number = $code.substring(0,5);
+          var $depth1NameArray =[["BA","BB","BC"],["요금조회/납부", "가입상품 조회/관리", "신청/변경"]];
+          var $lnbTitle;
+          for(var i =0; i <= $depth1NameArray.length; i++){
+              if($depth1NameArray[0][i] == $depth1Number){
+                lnbTitle = $depth1NameArray[1][i];
+                break;
+              }
+          };
+
+          $('#cfmOllehLnbTitle').empty().text(lnbTitle);
           if($code.length==3){
-            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected');
-            $('#sub_'+$depth1Number).show();
+            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
             $('#'+$depth2Number).closest('li').addClass('cfmOllehLnbtSelectedNoDepth');
-            $('#'+$depth1Number).attr('title','하위메뉴 닫기');
+          }else if($code.length==4){
+            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
+            $('#li_'+$depth2Number).addClass('cfmOllehNewSelected');
+            $('#sub_'+$depth2Number).show();
+            $('#'+$depth3Number).closest('li').addClass('cfmOllehLnbtSelectedNoDepth');
           }else if($code.length==5){
-            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected');
+            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
             $('#li_'+$depth2Number).addClass('cfmOllehLnbNewListContSelected');
             $('#sub_'+$depth1Number+', #sub_'+$depth3Number).show();
             $('#'+$depth4Number).closest('li').addClass('cfmOllehLnbLastSelected');
@@ -1101,7 +1196,7 @@ $(document).ready(function(){
           var $obj = $(obj);
           var $code = $obj.attr('id');
           var $parent = $obj.closest('li');
-          if($code.length == '2'){
+          if($code.length == '3'){
               $parent.toggleClass('cfmOllehNewSelected');
               $obj.attr('title','하위메뉴 닫기'); 
               if(!$parent.hasClass('cfmOllehNewSelected')){
