@@ -296,3 +296,12 @@ function ktPlazaDisplay(index) {
   }
   document.getElementById("con" + index).style.display = "block";
 }
+
+//주소창 파라미터 가져오기 (코딩 현황판에서 사용됩니다.)
+function getUrlParameter() {
+
+	var sPageURL = window.location.search.substring(1);
+	var sURLVariables = sPageURL.split('#');
+	
+	return sURLVariables;
+}
