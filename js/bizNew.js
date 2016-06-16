@@ -186,55 +186,6 @@ $(document).ready(function(){
         });
     }
     $.ktBizTabs.focus();
-
-
-    
-
-    /*
-    $.ktBizTabMenu.depth01 = function($target, $parents, $friend, $tabWrap, $subTab, name) {
-        $friend.children('ul').hide();
-        if($subTab.length < 1){
-            $tabWrap.removeClass('tab2depth');
-        }else{
-            $tabWrap.addClass('tab2depth');
-            $friend.children('ul').children('li').removeClass('on');
-            $subTab.children('li').eq(0).addClass('on');
-        }
-        if($tabWrap.hasClass('tab2depth')){
-            $subTab.show();   
-        }
-        $friend.removeClass('on');
-        $parents.addClass('on');
-        $('.'+name).hide();
-        $target.show();
-    }
-
-    $.ktBizTabMenu.depth02 = function($target, $parents, $friend, name, obj) {
-        $friend.removeClass('on');
-        $parents.addClass('on');
-        $('.'+name).hide();
-        $target.show();
-    }
-
-    */
-
-    /* notify toggle btn fn */
-    $.ktBizNotifyToggle = function(){
-        var $obj = $('a.comm_notifyToggle');
-        var $conts = $('.comm_notify > ul');
-        var $img = $obj.find('img');
-        if($conts.css('display') == 'block'){
-            $obj.removeClass('reverse');
-            $img.attr("alt","알려드립니다 내용 펼치기");
-            $conts.hide();
-        }else{
-            $obj.addClass('reverse');
-            $img.attr("alt","알려드립니다 내용 숨기기");
-            $conts.show();
-        }
-        return false;
-    }
-
     $.ktBizPlaceholder();
 
 });
