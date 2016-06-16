@@ -312,6 +312,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>월별요금조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>실시간 요금</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>사용량 조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>분리납부내역 조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>납부방법 변경</a></li>";
@@ -322,7 +323,6 @@ $(document).ready(function(){
                                 gnbItem += "<a href='#' class='group-heading'>가입상품 조회/관리</a>";
                                 gnbItem += "<ul class='group-list'>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>내상품 조회 </a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>사용량조회</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -1034,95 +1034,121 @@ $(document).ready(function(){
       $.ktBizLnbView = function(code){
 
         var lnbItem = "";
-              lnbItem += "<h2 class='blind'>My페이지 LNB 메뉴 영역</h2>";
+              lnbItem += "<h2 class='blind'>올레닷컴(기업) LNB 메뉴 영역</h2>";
               lnbItem += "<div id='cfmOllehLnb'>";
                 lnbItem += "<h3 id='cfmOllehLnbTitle' class='cfmOllehLnbTitle' >My페이지</h3>";
-                lnbItem += "<ul id='cfmOllehLnbNewList' class='cfmOllehLnbNewList'>";
+                lnbItem += "<ul id='li_BA' class='cfmOllehLnbNewList' style='display:none'>";
                   
                   lnbItem += "<!-- s : 요금조회/납부 -->";
-                  lnbItem += "<li id='li_BA' class=''>";
-                    lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;' id='BA' title='하위메뉴 열기'>요금조회/납부</a>";
-                    lnbItem += "<ul id='sub_BA' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' onclick='' id='BAA'>명세서 조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' onclick='' id='BAB'>월별요금조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' onclick='' id='BAC'>실시간요금</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' onclick='' id='BAD'>분리납부내역 조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' onclick='' id='BAE'>요금납부</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' onclick='' id='BAF'>납부방법 변경</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' onclick='' id='BAG'>명세서 관리</a>";
-                      lnbItem += "</li>";
-
-                    lnbItem += "</ul>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth' >";
+                    lnbItem += "<a href='#'  id='BAA' >명세서 조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<!-- e : 요금조회/납부 -->";
-
-
-                  lnbItem += "<!-- s : 가입상품 조회/관리 -->";
-                  lnbItem += "<li id='li_BB' class=''>";
-                    lnbItem += "<a href='#' id='BB' onclick='$.ktBizLnbView.click(this); return false;' title='하위메뉴 열기'>가입상품 조회/관리</a>";
-                    lnbItem += "<ul id='sub_BB' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'>";
-                        lnbItem += "<a href='#' id='BBA'>내 상품 조회</a>";
-                      lnbItem += "</li>";
-                      lnbItem += "<li id='li_BBB' class=''>";
-                        lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBBA' title='하위메뉴 열기'>사용량 조회</a>";
-                        lnbItem += "<ul id='sub_BBBA' style='display: none;'>";
-                          lnbItem += "<li class=''><a href='#' id='BBBA0'>모바일</a></li>";
-                          lnbItem += "<li class=''><a href='#' id='BBBA1'>기가인터넷</a></li>";
-                          lnbItem += "<li class=''><a href='#' id='BBBA2'>WiBro</a></li>";
-                        lnbItem += "</ul>";
-                      lnbItem += "</li>";
-
-                    lnbItem += "</ul>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAB'>월별요금조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<!-- e : 가입상품 조회/관리 -->";
-
-
-                  lnbItem += "<li id='li_BC' class=''>";
-                    lnbItem += "<a href='#' id='BC' onclick='$.ktBizLnbView.click(this); return false;' title='하위메뉴 열기'>신청/변경</a>";
-                    lnbItem += "<ul id='sub_BC' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCA'>요금제 신청</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCB'>부가서비스 신청</a></li>";
-                      lnbItem += "<li id='li_BCC' class=''>";
-                        lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;' id='BCCA' title='하위메뉴 열기'>번호 변경</a>";
-                        lnbItem += "<ul id='sub_BCCA' style='display: none;'>";
-                          lnbItem += "<li class=''><a href='#' id='BCCA0'>모바일</a></li>";
-                          lnbItem += "<li class=''><a href='#' id='BCCA1'>일반전화</a></li>";
-                        lnbItem += "</ul>";
-                      lnbItem += "</li>";
-
-                      lnbItem += "<li id='li_BCD' class=''>";
-                        lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;' id='BCDA' title='하위메뉴 열기'>일시정지</a>";
-                        lnbItem += "<ul id='sub_BCDA' style='display: none;'>";
-                          lnbItem += "<li class=''><a href='#' id='BCDA0'>모바일 신청/해제</a></li>";
-                          lnbItem += "<li class=''><a href='#' id='BCDA1'>모바일 이력조회</a></li>";
-                          lnbItem += "<li class=''><a href='#' id='BCDA2'>일반전화 신청/해제</a></li>";
-                        lnbItem += "</ul>";
-                      lnbItem += "</li>";
-
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCE'>설치장소변경</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCG'>분실신고</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCH'>상품신청/문의(대량구매)</a></li>";
-                      lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCI'>신청/변경 현황</a></li>";
-
-                    lnbItem += "</ul>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAC'>실시간 요금</a>";
                   lnbItem += "</li>";
-
+                  lnbItem += "<li id='li_BAD' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAD' title='하위메뉴 열기'>사용량 조회</a>";
+                      lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BADA'>모바일</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BADB'>기가인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BADC'>WiBro</a></li>";
+                      lnbItem += "</ul>";
+                lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAE'>분리납부내역 조회</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAF'>요금납부</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAG'>납부방법 변경</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BAH'>명세서 관리</a>";
+                  lnbItem += "</li>";
 
                 lnbItem += "</ul>";
+                lnbItem += "<!-- e : 요금조회/납부 -->";
+
+
+                lnbItem += "<!-- s : 가입상품 조회/관리 -->";
+                lnbItem += "<ul id='li_BB' class='cfmOllehLnbNewList' style='display:none'>";
+                  
+                  lnbItem += "<li id='li_BBA' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>사용량 조회</a>";
+                      lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAA'>모바일</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAB'>인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAC'>tv</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAD'>일반전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAE'>인터넷전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAF'>WiBro</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAG'>WiFi</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+
+                lnbItem += "</ul>";
+                lnbItem += "<!-- e : 가입상품 조회/관리 -->";
+
+
+                lnbItem += "<ul id='li_BC' class='cfmOllehLnbNewList' style='display:none'>";
+
+                  lnbItem += "<li class='cfmOllehNewDontDepth' >";
+                    lnbItem += "<a href='#'  id='BCA' >요금제 신청</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BCB'>부가서비스 신청</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCC' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCC' title='하위메뉴 열기'>번호변경</a>";
+                      lnbItem += "<ul id='sub_BCC' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCCA'>모바일</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCCB'>일반전화</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCD' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCD' title='하위메뉴 열기'>일시정지</a>";
+                      lnbItem += "<ul id='sub_BCD' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDA'>모바일 신청/해제</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDB'>모바일 이력조회</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDC'>일반전화 신청/해제</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCE' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCE' title='하위메뉴 열기'>설치장소 변경</a>";
+                      lnbItem += "<ul id='sub_BCE' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEA'>인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEB'>일반전화</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BCF' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCF' title='하위메뉴 열기'>명의변경</a>";
+                      lnbItem += "<ul id='sub_BCF' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFA'>인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFB'>tv</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFC'>일반전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFD'>인터넷전화</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+
+                  lnbItem += "<li id='li_BCG' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCG' title='하위메뉴 열기'>분실신고</a>";
+                      lnbItem += "<ul id='sub_BCG' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCGA'>신청/해제</a></li>";
+                      lnbItem += "</ul>";
+                  lnbItem += "</li>";
+
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BCH'>상품 신청/문의(대량구매)</a>";
+                  lnbItem += "</li>";
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BCI'>신청/변경 현황</a>";
+                  lnbItem += "</li>";
+
+                lnbItem += "</ul>"; 
               lnbItem += "</div>";
 
           document.write(lnbItem);
@@ -1132,13 +1158,26 @@ $(document).ready(function(){
           var $depth2Number = $code.substring(0,3);
           var $depth3Number = $code.substring(0,4);
           var $depth4Number = $code.substring(0,5);
+          var $depth1NameArray =[["BA","BB","BC"],["요금조회/납부", "가입상품 조회/관리", "신청/변경"]];
+          var $lnbTitle;
+          for(var i =0; i <= $depth1NameArray.length; i++){
+              if($depth1NameArray[0][i] == $depth1Number){
+                lnbTitle = $depth1NameArray[1][i];
+                break;
+              }
+          };
+
+          $('#cfmOllehLnbTitle').empty().text(lnbTitle);
           if($code.length==3){
-            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected');
-            $('#sub_'+$depth1Number).show();
+            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
             $('#'+$depth2Number).closest('li').addClass('cfmOllehLnbtSelectedNoDepth');
-            $('#'+$depth1Number).attr('title','하위메뉴 닫기');
+          }else if($code.length==4){
+            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
+            $('#li_'+$depth2Number).addClass('cfmOllehNewSelected');
+            $('#sub_'+$depth2Number).show();
+            $('#'+$depth3Number).closest('li').addClass('cfmOllehLnbtSelectedNoDepth');
           }else if($code.length==5){
-            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected');
+            $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
             $('#li_'+$depth2Number).addClass('cfmOllehLnbNewListContSelected');
             $('#sub_'+$depth1Number+', #sub_'+$depth3Number).show();
             $('#'+$depth4Number).closest('li').addClass('cfmOllehLnbLastSelected');
@@ -1157,7 +1196,7 @@ $(document).ready(function(){
           var $obj = $(obj);
           var $code = $obj.attr('id');
           var $parent = $obj.closest('li');
-          if($code.length == '2'){
+          if($code.length == '3'){
               $parent.toggleClass('cfmOllehNewSelected');
               $obj.attr('title','하위메뉴 닫기'); 
               if(!$parent.hasClass('cfmOllehNewSelected')){
