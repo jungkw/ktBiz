@@ -221,7 +221,7 @@ border-radius: 3px 3px 3px 3px;
 .comm_circuitSearch .circuitInputCont {float:right;margin-right:41px;}
 .comm_circuitSearch .selectric.circuitCase02 {height:30px;display: inline-block;vertical-align: middle;}
 .comm_circuitSearch .selectric.circuitCase02:hover, .comm_circuitSearch .selectric.circuitCase02:focus {color:#444 !important;text-decoration: none !important}
-.comm_circuitSearch .selectric.circuitCase02 span {position: absolute;top:0;left:10px;width:195px;height:30px;line-height: 28px;font-size: 13px}
+.comm_circuitSearch .selectric.circuitCase02 span {position: absolute;top:0;left:10px;width:185px;height:30px;line-height: 28px;font-size: 13px}
 .comm_circuitSearch .circuitCase02.circuitInputPop {height: 30px;display:inline-block;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; padding:0 7px;line-height: 28px;font-size: 13px; color: #666; border-radius:2px; vertical-align: middle;}
 .comm_circuitSearch .circuitCase02.circuitInputPop:hover, .comm_circuitSearch .circuitCase02.circuitInputPop:focus {color:#444 !important;text-decoration: none !important}
 
