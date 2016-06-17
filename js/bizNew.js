@@ -66,33 +66,10 @@ $(document).ready(function(){
       return false;
     };
 
-     /**
-    * label placeholder fn
-    */
-    /*
-    $.ktBizLabelPlaceholder = function(){
-      var $obj = $('.labelPlaceholder');
-      var $target = $target.prev('input')
-      var $targetValue = $target.val();
-      $obj.addClass('blind');
+    
 
-      $target.focus(function(){
-          if($targetValue == $target.val()){
-              $target.val('');
-              $obj.removeClass('blind');
-          }
-      }).focusout(function(){
-          if(!this.value){
-            $target.val($targetValue);
-            $obj.addClass('blind');
-          }
-      });
-     
-      return false;
-    };
 
-    $.ktBizLabelPlaceholder();
-*/
+
 
     /**
     * select box chg fn
@@ -1305,3 +1282,72 @@ $(document).ready(function(){
             
             document.write(footerItem); 
       };
+
+
+
+$(function(){
+
+  /*
+  * 신청/변경 함수 코어
+  */
+  $.ktBizSvc = function() {
+      $.ktBizMobilePause();
+  }
+
+
+  /*
+  * 일시정지
+  */
+  $.ktBizMobilePause = function(){
+      $.ktBizMobilePause.labelPlaceholder();
+      $.ktBizMobilePause.pwdChk();
+  };
+
+   /**
+    *  일시정지 비밀번호 입력/확인
+    */
+    $.ktBizMobilePause.labelPlaceholder = function(){
+      var $obj = $('.pwdInput');
+      var target = $obj.attr('for');
+      var $target = $('#'+target);
+      var $targetValue;
+
+      $obj.focus(function(){
+          target = $(this).attr('id');
+          $target = $('#'+target);
+          $targetValue = $target.val();
+
+          if($targetValue == $target.val()){
+              $(this).prev('label').addClass('hidden');
+          }
+      }).focusout(function(){
+           target = $(this).attr('id');
+          $target = $('#'+target);
+          $targetValue = $target.val();
+
+          if(!this.value){
+            $target.val($targetValue);
+            $(this).prev('label').removeClass('hidden');
+          }
+      });
+      return false;
+    };
+
+
+    /*
+    * 일시정지 비밀번호 설정 체크박스
+    */
+    $.ktBizMobilePause.pwdChk = function(){
+        $('#setPwd').click(function(){
+            if($("#setPwd").is(":checked")){
+              $('.pwdInput').attr('disabled',false);
+            }else{
+              $('.pwdInput').attr('disabled',true);
+            }
+        });
+    }
+    $.ktBizSvc();
+
+    
+
+});
