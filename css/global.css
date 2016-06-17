@@ -218,7 +218,7 @@ border-radius: 3px 3px 3px 3px;
 .comm_circuitSearch p.desc {padding:0 0 12px 0;color:#333;font-size: 15px;line-height: 15px;border-bottom: 1px dashed #cbcbcb;}
 .comm_circuitSearch .circuitSearchFn {padding:13px 0 0 0;}
 .comm_circuitSearch .circuitSearchFn .circuitRadioGroup {width:250px;float:left;margin-top:4px;}
-.comm_circuitSearch .circuitInputCont {float:right;margin-right:42px;}
+.comm_circuitSearch .circuitInputCont {float:right;margin-right:41px;}
 
 /* global css */
 .placeholder.active {color:#999;}
@@ -278,6 +278,7 @@ border-radius: 3px 3px 3px 3px;
 .mt28 {margin-top:28px;}
 .mt29 {margin-top:29px;}
 .mt30 {margin-top:30px !important;}
+.mt34 {margin-top:34px !important;}
 .mt39 {margin-top:39px;}
 .mt40 {margin-top:40px !important;}
 .mt49 {margin-top:49px;}
