@@ -174,7 +174,8 @@ border-radius: 3px 3px 3px 3px;
 .selectric-open .selectric:after {background:url('../images/common/bg_selectbox_left_selected.png') no-repeat left top;}
 .selectric-open .selectric-items {display: block;}
 
-.selectric-disabled {filter: alpha(opacity=50);opacity: 0.5;cursor: default;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.selectric-disabled .selectric {background:url('../images/common/bg_selectbox_right_disable.png') no-repeat right top;}
+.selectric-disabled .selectric:after {background:url('../images/common/bg_selectbox_left_disable.png') no-repeat left top;}
 
 .selectric-hide-select {position: relative; overflow: hidden; width: 0; height: 0;}
 .selectric-hide-select select {position: absolute; left: -100%; display: none;}
@@ -218,6 +219,12 @@ border-radius: 3px 3px 3px 3px;
 .comm_circuitSearch .circuitSearchFn {padding:13px 0 0 0;}
 .comm_circuitSearch .circuitSearchFn .circuitRadioGroup {width:250px;float:left;margin-top:4px;}
 .comm_circuitSearch .circuitInputCont {float:right;margin-right:41px;}
+.comm_circuitSearch .selectric.circuitCase02 {height:30px;display: inline-block;vertical-align: middle;}
+.comm_circuitSearch .selectric.circuitCase02:hover, .comm_circuitSearch .selectric.circuitCase02:focus {color:#444 !important;text-decoration: none !important}
+.comm_circuitSearch .selectric.circuitCase02 span {position: absolute;top:0;left:10px;width:195px;height:30px;line-height: 28px;font-size: 13px}
+.comm_circuitSearch .circuitCase02.circuitInputPop {height: 30px;display:inline-block;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; padding:0 7px;line-height: 28px;font-size: 13px; color: #666; border-radius:2px; vertical-align: middle;}
+.comm_circuitSearch .circuitCase02.circuitInputPop:hover, .comm_circuitSearch .circuitCase02.circuitInputPop:focus {color:#444 !important;text-decoration: none !important}
+
 
 /* global css */
 .placeholder.active {color:#999;}

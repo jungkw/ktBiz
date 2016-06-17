@@ -35,6 +35,37 @@
 
 
 <body>
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('.remote-btn01').on('click',function(){
+			$('.circuitCase01').show().focus();
+			$('.circuitCase02').hide();
+			alert('변경완료. 현재상태 select box');
+			return false;
+		});
+
+		$('.remote-btn02').click(function(){
+			$('.circuitCase01').hide();
+			$('.circuitCase02').show().focus();
+			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
+			return false;
+		});
+	});
+</script>
+<div class="ui-remote">
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn01">휴대폰 30이하 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
+	<button type="button" class="remote-btn02">휴대폰 30초과 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
+</div>
+<!-- e : UI GUIDE -->
 <h1 class="blind">올레닷컴(기업)</h1>
 <div id="cfmOllehWrap">
 
@@ -109,32 +140,119 @@
 									<!-- e : radio Group -->
 
 
+									
 									<!-- s : select Contents -->
 									<div class="circuitSelectCont">
 										<label for="selectbox01" class="blind">상품 선택</label>
 										<div class="selectWrap w115">
-											<select id="selectbox01">
+											<select id="selectbox01" disabled="true">
 												<option>모바일</option>
 											</select>
 										</div>
 
 										<label for="selectbox02" class="blind">회선 선택</label>
-										<div class="selectWrap w195">
+										
+										<div class="selectWrap w195 circuitCase01">
 											<select id="selectbox02">
 												<option>010-1234-5678 [대표]</option>
 											</select>
 										</div>
-										<a href="" class="btnSty mid blk w26">조회</a>
+										<!-- s : 핸드폰 번호가 30개 초과시 -->
+										<a href="#billLayerPop"  id="billPopOpen01"class="selectric w195 circuitCase02" title="레이어열림" style="display: none" onclick="$.ktBizPopClick(this); return false;" >
+											<span>010-1234-5678 [대표]</span>
+										</a>
+										<!-- e : 핸드폰 번호가 30개 초과시 -->
+										<a href="#" class="btnSty mid blk w26">조회</a>
 									</div>
 									<!-- e : select Contents -->
 
 									<!-- s : Input Contents -->
 									<div class="circuitInputCont" style="display:none">
 										<label for="circuitInput" class="blind">회선번호 입력</label>
-										<input type="text" id="circuitInput" class="w195" />
-										<a href="" class="btnSty mid blk w26">조회</a>
+										<input type="text" id="circuitInput" class="w195 circuitCase01" />
+										<a href="#billLayerPop" id="billPopOpen02" class="circuitCase02 circuitInputPop w195" style="display: none" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">회선번호 찾기 레이어 팝업 열림</span></a>
+										<a href="#" class="btnSty mid blk w26">조회</a>
 									</div>
 									<!-- e : Input Contents -->
+
+
+									<!-- s : 핸드폰 번호가 30개 초과시  -->
+									<div class="circuitCase02 " style="display:none">
+
+										<!-- s : 레이어 팝업 -->
+										<div class="pop_mask"></div>
+										<div class="pop_layerWrap" id="billLayerPop" style="width:630px; display: none">
+
+											<div class="pop_wrap commBillPop">
+
+												<!-- s : header -->
+												<div class="pop_header">
+													<h4>명세서 번호 선택</h4>
+													
+													<!-- s : 검색 영역 -->
+													<div class="pop_billSrchWhiteBox">
+														<fieldset>
+															<legend>명세서 번호 검색 필드</legend>
+															<label for="billNumTxt" class="blind">명세서 번호</label>
+															<input type="text" id="billNumTxt" class="placeholder" value="예) 01012345678" /><a href="#" class="btnSty big blk"><span>검색</span></a>
+														</fieldset>
+													</div>
+													<!-- e : 검색 영역 -->
+												</div>
+												<!-- e : header -->
+
+												<!-- s : contents -->
+												<div class="pop_conts" >
+													<div class="pop_contsContainer">
+														<p class="pop_scnTitle">찾으시려는 명세서 번호를 선택하세요.</p>
+														<ul class="pop_billNumListBox mt15">
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">98798456455</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">21324687984</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">64654987978</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">57987454132</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														</ul>
+
+														<div class="comm_paging">
+															<a href="#" class="comm_pagingBtn prevBtn">
+																<img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
+															</a><a href="#" class="on" title="현재 페이지">11</a><a href="#">12</a><a href="#">13</a><a href="#">14</a><a href="#">15</a><a href="#" class="comm_pagingBtn nextBtn">
+																<img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
+															</a>
+														</div>
+													</div>
+												</div>
+												<!-- e : contents -->
+											</div>
+											<!-- s : footer -->
+											<div class="pop_footer">
+												<div class="pop_footerInner">
+													<p class="pop_close">
+														<a href="#billPopOpen01" >닫기</a>
+													</p>
+												</div>
+											</div>
+											<!-- e : footer -->
+										</div>
+										<!-- e : 레이어 팝업 -->
+									</div>
+									<!-- e : 핸드폰 번호가 30개 초과시  -->
+
 								</div>
 							</fieldset>
 						</div>

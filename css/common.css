@@ -35,6 +35,7 @@ a:hover, a:active, a:focus {color:#ef1c25 !important;text-decoration:underline !
 input[type=text], input[type=password] {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; padding:0 7px;line-height: 28px;font-size: 13px; color: #666; border-radius:2px; vertical-align: middle;}
 textarea {padding:7px;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
 select {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-size: 14px;padding:0 0 0 9px;}
+select:disabled, input[type=text]:disabled, input[type=password]:disabled {background: #ebebe4}
 .clear {clear:both;}
 
 /* skip navigation */

@@ -61,9 +61,9 @@
 .pop_wrap .pop_billNumListBox li {display:inline-block; width:25%;padding:11px 0; float: left; text-align: center;}
 .pop_wrap .pop_billNumListBox a {color:#666;font-size: 15px;}
 
-/*메인 명세서 조회 팝업만 예외 케이스 */
-.pop_wrap.mainBillPop .pop_header {padding:22px 0 25px}
-.pop_wrap.mainBillPop .pop_header h4 {padding:0 0 0 30px; text-align: left;}
+/*명세서 조회 팝업만 예외 케이스 */
+.pop_wrap.commBillPop .pop_header {padding:22px 0 25px}
+.pop_wrap.commBillPop .pop_header h4 {padding:0 0 0 30px; text-align: left;}
 
 
 
