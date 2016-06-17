@@ -159,7 +159,7 @@
 					</div>
 				</div>
 				<!-- e : 컨텐츠 용 탭의 컨텐츠 영역 -->
-				
+
 
 				<br/><br/><br/><br/><br/>
 
@@ -535,6 +535,7 @@
 				<br /><br />
 
 				<!-- s : 가로 테이블 예시 3-->
+				<p class="mb10">th 좌우에 필요없는 라인이 겹칠경우 각 th에 noLeft혹은 noRight클래스추가</p>
 				<div class="comm_tableBrdr">
 					<table class="comm_table" summary="납부방법, 자동이체, CD/ATM, 인터넷 지로, 장표납부, 대리점/영업일 순으로 납부 방법 입금 확인일을 확인할 수 있는 표입니다.">
 							<caption>납부방법 입금 확인일</caption>
@@ -583,6 +584,7 @@
 				<br /><br />
 
 				<!-- s : 세로 테이블 예시 1-->
+				<p class="mb10">th 오른쪽 꽉찬보더 사용시 tbody에 fullBorder클래스 추가</p>
 				<div class="comm_tableBrdr">
 					<table class="comm_table" summary="본인, 법정대리인 별 법정대리인 동의에 필요한 서류 안내입니다.">
 							<caption>법정대리인 동의 필요서류</caption>
@@ -591,14 +593,14 @@
 								<col style="width:15%;" />
 								<col style="width:70%;" />
 							</colgroup>
-							<tbody>
+							<tbody class="fullBorder">
 								<tr>
-									<th scope="row" rowspan="2" class="fullBorder">미성년자</th>
-									<th scope="row" class="fullBorder">본인</th>
+									<th scope="row" rowspan="2" >미성년자</th>
+									<th scope="row">본인</th>
 									<td class="last">가입고객 신분증, 가족증명서류, 법정 대리인 동의서 (인감날인), 법정 대리인 인감증명서, 법정 대리인 신분증</td>
 								</tr>
 								<tr>
-									<th scope="row" class="fullBorder">법정대리인</th>
+									<th scope="row">법정대리인</th>
 									<td class="last">가입고객 신분증, 가족증명서류, 법정 대리인 신분증, 법정 대리인 동의서</td>
 								</tr>
 							</tbody>
