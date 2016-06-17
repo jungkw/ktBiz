@@ -125,9 +125,9 @@ border-radius: 3px 3px 3px 3px;
 }
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#df2428 !important; text-decoration: none !important; border-color:#df2428;}
 .btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 32px;}
-.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 25px;}
-.btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 21px;}
-.btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 15px;}
+.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 28px;}
+.btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 24px;}
+.btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 18px;}
 .btnSty.big.arr {padding:0 28px 0 14px; background-image:url(../images/btn/comm_btn_bg_arrowB2.png); background-repeat:no-repeat; background-position:100% 0;}
 .btnSty.big.arr:hover, .btnSty.big.arr:focus, .btnSty.big.arr:active {background-position:100% -36px;}
 .btnSty.mid.arr {padding:0 23px 0 9px; background-image:url(../images/btn/comm_btn_bg_arrowB.png); background-repeat:no-repeat; background-position:100% 0;}
@@ -203,14 +203,16 @@ border-radius: 3px 3px 3px 3px;
 .selectric-items .selectric-group li {padding-left: 25px;}
 
 /* contents */
-.comm_contsInner {width:100%;}
 .comm_contsInner.grayBox {background: url('../images/bg/comm_bg_gray_conts.png');}
 .comm_contsInner.whiteBox {background: url('../images/bg/comm_bg_white_conts.png') }
 .comm_contsInner .comm_contsInner.grayBox {padding:0 29px;background: url('../images/bg/comm_bg_gray_contsTop.png') 0 0 no-repeat;}
 
 /* search common */
-.comm_circuitSearch {padding:25px 27px;border:1px solid #ddd; border-top:1px solid #333;}
-
+.comm_circuitSearch {padding:25px 27px;margin-bottom:30px;border:1px solid #ddd; border-top:1px solid #333;background: #fff;}
+.comm_circuitSearch p.desc {padding:0 0 12px 0;color:#333;font-size: 15px;line-height: 15px;border-bottom: 1px dashed #cbcbcb;}
+.comm_circuitSearch .circuitSearchFn {padding:13px 0 0 0;}
+.comm_circuitSearch .circuitSearchFn .circuitRadioGroup {width:250px;float:left;margin-top:4px;}
+.comm_circuitSearch .circuitInputCont {float:right;margin-right:42px;}
 
 /* global css */
 .placeholder.active {color:#999;}
@@ -339,9 +341,11 @@ border-radius: 3px 3px 3px 3px;
 .w100p {width:100% !important;}
 .w19 {width:19px}
 .w20 {width:20px}
+.w26 {width:26px}
 .w30 {width:30px}
 .w39 {width:39px}
 .w40 {width:40px}
+.w45 {width:45px}
 .w46 {width:46px}
 .w50 {width:50px}
 .w55 {width:55px}
@@ -355,6 +359,7 @@ border-radius: 3px 3px 3px 3px;
 .w100 {width:100px}
 .w106 {width:106px}
 .w107 {width:107px}
+.w115 {width:115px;}
 .w125{width:125px}
 .w140 {width:140px}
 .w148 {width:148px}

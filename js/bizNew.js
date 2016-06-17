@@ -9,6 +9,18 @@ $(document).ready(function(){
     });
 
 
+    /**
+    * comm search fn
+    */
+    $.ktBizCommSearch = function(){
+        $("input[name='circuitSearchRadio']").on( "click", function(){
+            var $target = $(this).val();
+            $('.circuitInputCont, .circuitSelectCont').hide();
+            $('.'+$target).show();
+        });
+    }
+    $.ktBizCommSearch();
+
 
     /**
     * email chg fn
@@ -54,6 +66,33 @@ $(document).ready(function(){
       return false;
     };
 
+     /**
+    * label placeholder fn
+    */
+    /*
+    $.ktBizLabelPlaceholder = function(){
+      var $obj = $('.labelPlaceholder');
+      var $target = $target.prev('input')
+      var $targetValue = $target.val();
+      $obj.addClass('blind');
+
+      $target.focus(function(){
+          if($targetValue == $target.val()){
+              $target.val('');
+              $obj.removeClass('blind');
+          }
+      }).focusout(function(){
+          if(!this.value){
+            $target.val($targetValue);
+            $obj.addClass('blind');
+          }
+      });
+     
+      return false;
+    };
+
+    $.ktBizLabelPlaceholder();
+*/
 
     /**
     * select box chg fn
@@ -194,6 +233,8 @@ $(document).ready(function(){
     }
     $.ktBizTabs.focus();
     $.ktBizPlaceholder();
+
+
 
 });
     

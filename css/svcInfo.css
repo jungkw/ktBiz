@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* 일시정지 */
+.mobilePauseBottomDot {padding:0 0 13px 0;border-bottom:1px dashed #cbcbcb;}
+.mobilePauseSetPwd {padding:10px 0 0 0;position: relative;}
+.mobilePauseSetPwd .pwdInput {width:112px;}
+.mobilePauseSetPwd .pwdLabel {width:112px;height:30px;position: absolute; top:15px;color: #666;font-size:12px;}
+.mobilePauseSetPwd .setPwdLabel {left:8px;}
+.mobilePauseSetPwd .chkPwdLabel {left:125px;}
