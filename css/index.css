@@ -172,5 +172,5 @@
 
 .index_selectbox .selectric-items:before {content:''; position: absolute; bottom: -1px; left: -1px; width: 3px; height:4px; background:url('../images/index_selectbox_bottom_l.png') no-repeat left bottom;}
 .index_selectbox .selectric-items:after {content:''; position: absolute; bottom: -1px; right: -1px; width: 3px; height:4px; background:url('../images/index_selectbox_bottom_r.png') no-repeat left bottom;}
-.index_selectbox .selectric-items li {font-size:14px;}
+.index_selectbox .selectric-items li {font-size:14px; text-indent: 86px;}
 .selectric-above .selectric-items {top:0 !important;}
