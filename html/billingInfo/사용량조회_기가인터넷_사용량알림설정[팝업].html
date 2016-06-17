@@ -44,61 +44,66 @@
 		<!-- s : contents -->
 		<div class="pop_conts">
 
-			<p>기가인터넷 사용량이 80%, 100%가 되었을 때, 사용량에 대한 알림 서비스를 받으실 수 있습니다. 아래의 방법 중 사용량 알림을 받으실 수신처 정보를 입력하신 후 ‘알림설정‘ 버튼을 클릭해주세요.</p>
-			<div class="comm_tableBrdr mt12">
-				<table class="comm_table" summary="SMS, 이메일 구분에 따라서, 구분, 수신처, 설정/취소를 할 수 있는 표 입니다.">
-					<caption>사용량 알림 설정</caption>
-					<colgroup>
-						<col width="12%" />
-						<col width="*" />
-						<col width="17%" />
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">구분</th>
-							<th scope="col">수신처</th>
-							<th scope="col" class="last">설정/취소</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="center">SMS</td>
-							<td >
-								<p class="mb8">SMS 사용량 알림 서비스를 받기 위해서 SMS 인증 절차가 필요합니다.</p>
-								<p>수신번호 : 010-000-0000</p>
-							</td>
-							<td class="last center">
-								<a href="" class="btnSty mid">알림취소</a>
-							</td>
-						</tr>
-						<tr>
-							<td class="center"><label for="mailAddr">이메일</label></td>
-							<td>
-								<p class="mb8">이메일 주소를 입력해주세요.</p>
-								<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15" />
-								<span>@</span>
-								<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled" />
-								<select id="emailAddr2" class="comm_mailInput03" title="메일 도메인을 선택해주세요." onchange="$.ktBizMailChg(this); return false;">
-									<option value="">선택하세요.</option>
-									<option value="naver.com">naver.com</option>
-									<option value="daum.net">daum.net</option>
-									<option value="hanmail.net">hanmail.net</option>
-									<option value="nate.com">nate.com</option>
-									<option value="gmail.com">gmail.com</option>
-									<option value="kornet.net">kornet.net</option>
-									<option value="self">직접 입력</option>
-								</select>
-							</td>
-							<td class="center last">
-								<a href="" class="btnSty mid">알림설정</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<p class="bulletDg mt10">설정된 수신처 정보에 변경이 있으신 경우, 알림 설정 취소 후 다시 설정해주세요.</p>
+			<div class="pop_contsContainer">
+				<p>기가인터넷 사용량이 80%, 100%가 되었을 때, 사용량에 대한 알림 서비스를 받으실 수 있습니다. 아래의 방법 중 사용량 알림을 받으실 수신처 정보를 입력하신 후 ‘알림설정‘ 버튼을 클릭해주세요.</p>
+				<div class="comm_tableBrdr mt12">
+					<table class="comm_table" summary="SMS, 이메일 구분에 따라서, 구분, 수신처, 설정/취소를 할 수 있는 표 입니다.">
+						<caption>사용량 알림 설정</caption>
+						<colgroup>
+							<col width="12%" />
+							<col width="*" />
+							<col width="17%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구분</th>
+								<th scope="col">수신처</th>
+								<th scope="col" class="last">설정/취소</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="center">SMS</td>
+								<td >
+									<p class="mb8">SMS 사용량 알림 서비스를 받기 위해서 SMS 인증 절차가 필요합니다.</p>
+									<p>수신번호 : 010-000-0000</p>
+								</td>
+								<td class="last center">
+									<a href="" class="btnSty mid">알림취소</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="center"><label for="mailAddr">이메일</label></td>
+								<td>
+									<p class="mb8">이메일 주소를 입력해주세요.</p>
+									<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15" />
+									<span>@</span>
+									<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled" />
+									<div class="selectWrap">
+										<select id="emailAddr2" class="comm_mailInput03" title="메일 도메인을 선택해주세요." onchange="$.ktBizMailChg(this); return false;">
+											<option value="">선택하세요.</option>
+											<option value="naver.com">naver.com</option>
+											<option value="daum.net">daum.net</option>
+											<option value="hanmail.net">hanmail.net</option>
+											<option value="nate.com">nate.com</option>
+											<option value="gmail.com">gmail.com</option>
+											<option value="kornet.net">kornet.net</option>
+											<option value="self">직접 입력</option>
+										</select>
+									</div>
+								</td>
+								<td class="center last">
+									<a href="" class="btnSty mid">알림설정</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="bulletDg mt10">설정된 수신처 정보에 변경이 있으신 경우, 알림 설정 취소 후 다시 설정해주세요.</p>
 
-			<div class="alignCenter mt28">
+			</div>
+
+			<div class="pop_contsBtns">
 				<a href="" class="btnSty big red"><span>설정</span></a>
 				<a href="" class="btnSty big blk"><span>취소</span></a>
 			</div>
