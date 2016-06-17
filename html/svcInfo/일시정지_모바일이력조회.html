@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My페이지] 모바일 신청/해제 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My페이지] 모바일 이력조회 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
@@ -86,10 +86,7 @@
 
 				<!-- s : gray box -->
 				<div class="comm_contsInner grayBox">
-					<div class="comm_contsInner grayBox">
-						<div class="commTitleWrap pt34">
-							<h4 class="comm_scnTitle02">휴대폰 일시정지 해제</h4>
-						</div>
+					<div class="comm_contsInner grayBox pt34">
 
 						<!-- s : search common -->
 						<div class="comm_circuitSearch">
@@ -144,13 +141,56 @@
 						<!-- e : search common -->
 
 
-						<!-- s :  search result -->
+						<!-- s :  일시정지 이력조회 -->
 						<div class="commTitleWrap">
-							<h4 class="comm_scnTitle02">일시정지 휴대폰번호 리스트</h4>
+							<h4 class="comm_scnTitle02">
+								<span class="emp01">010-1234-5678</span>님 일시정지 이력조회
+							</h4>
 						</div>
+						<div class="comm_tableBrdr">
+							<table class="comm_table" summary="일시정지 이력에 대한 조회기간을 선택을 할 수 있는 표 입니다.">
+								<caption>조회기간 선택 표</caption>
+								<colgroup>
+									<col width="18%" />
+									<col width="*" />
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row" class="left">조회기간 선택</th>
+										<td class="last">
+											<div class="comm_radio">
+												<input type="radio" name="searchDate" id="years" checked="" /><i></i>
+												<label for="years">최근 1년간</label>
+											</div>
+											<div class="comm_radio ml15">
+												<input type="radio" name="searchDate" id="allDate" /><i></i>
+												<label for="allDate">전체 사용기간</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">휴대폰번호</th>
+										<td class="last">010-1234-5678</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<p class="mobilePauseHistoryDesc">상세내역 조회는 최대 100건까지만 가능합니다.</p>
+						<!-- e :  일시정지 이력조회 -->
+
+
+
+
+						<!-- s :  일시정지 상세내역 -->
+						<div class="commTitleWrap mt30">
+							<h4 class="comm_scnTitle02">일시정지 상세내역</h4>
+						</div>
+
 						<div class="comm_tableBrdr pb30">
-							<table class="comm_table" summary="일시정지 휴대폰 번호의 정로를 휴대폰번호, 정지일자, 비밀번호, 정지해제 정보를 확인할 수 있는 표 입니다.">
-								<caption>일시정지 휴대폰 정보</caption>
+							<table class="comm_table" summary="일시 정지 시작일, 일시 정지 종료일, 일시정지구분, 정지일수를 확인할 수 있는 표 입니다.">
+								<caption>일시정지 상세내역 표</caption>
 								<colgroup>
 									<col width="25%" />
 									<col width="25%" />
@@ -160,23 +200,66 @@
 
 								<thead>
 									<tr>
-										<th scope="col">휴대폰번호</th>
-										<th scope="col">정지일자</th>
-										<th scope="col">비밀번호</th>
-										<th scope="col" class="last">정지해제</th>
+										<th scope="col">일시 정지 시작일</th>
+										<th scope="col">일시 정지 종료일</th>
+										<th scope="col">일시정지구분</th>
+										<th scope="col" class="last">정지일수</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td class="center">010-1234-5678</td>
-										<td class="center">2016.06.01</td>
-										<td class="center">*****</td>
-										<td class="last center"><a href="" class="btnSty mid arr">일시정지 해제</a></td>
+										<td colspan="4" class="noContents last">
+											해당 기간내 일시정지 내역이 없습니다.
+										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
-						<!-- e : search result -->
+						<!-- s :  일시정지 상세내역 -->
+
+
+						<!-- s : 기간내의 일시정지 내역 -->
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02">
+								<span class="emp01">2016년 1월 1일 부터 현재까지의</span> 일시정지 내역입니다.
+							</h4>
+						</div>
+
+						<div class="comm_tableBrdr pb30">
+							<table class="comm_table" summary="가능횟수/가능일수, 이용정지 누적일수, 누적횟수/누적일수, 발신정지 가능일수, 잔여횟수/잔여일수, 이용중단 전환 예정일을 확인 할 수 있는 표 입니다.">
+								<caption>기간내의 일시정지 내역</caption>
+								<colgroup>
+									<col width="25%" />
+									<col width="25%" />
+									<col width="25%" />
+									<col width="25%" />
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row" class="left">가능횟수/가능일수</th>
+										<td >2회 / 180일</td>
+										<th scope="row" class="left">이용정지 누적일수</th>
+										<td class="last">0일</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">누적횟수/누적일수</th>
+										<td >0회 / 0일</td>
+										<th scope="row" class="left">발신정지 가능일수</th>
+										<td class="last">30일</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">잔여횟수/잔여일수</th>
+										<td >2회 / 180일</td>
+										<th scope="row" class="left">이용중단 전환 예정일</th>
+										<td class="last"></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<!-- e : 기간내의 일시정지 내역 -->
+
 					</div>
 					<div class="comm_contsInner grayBox bottom"></div>
 				</div>
