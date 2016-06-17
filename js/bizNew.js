@@ -114,7 +114,7 @@ $(document).ready(function(){
     */
     $.ktBizPopClick = function(obj){
         var $target = $($(obj).attr('href'));
-        var $mask =$target.prev('.pop_mask');
+        /*var $mask =$target.prev('.pop_mask');*/
         var $wh = $(window).height();
         var $lh = $target.height();
         var $setTop = ($wh-$lh)/2;
@@ -122,11 +122,11 @@ $(document).ready(function(){
 
         $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
         $target.show().css('top',$setTop+'px');
-        $mask.show();
+        /*$mask.show();*/
         $target.find('.pop_wrap').attr('tabindex',0).focus();
         $target.find('.pop_close a, .pop_btn_close').click(function(){
             $target.hide();
-            $mask.hide();
+            /*$mask.hide();*/
             obj.focus();
             $target.find('.pop_conts').removeAttr('tabIndex');
             return false;
