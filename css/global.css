@@ -360,7 +360,7 @@ border-radius: 3px 3px 3px 3px;
 .w106 {width:106px}
 .w107 {width:107px}
 .w115 {width:115px;}
-.w125{width:125px}
+.w125 {width:125px}
 .w140 {width:140px}
 .w148 {width:148px}
 .w149 {width:149px}
@@ -490,3 +490,10 @@ border-radius: 3px 3px 3px 3px;
 .comm_tabs.styleDetail ul a:after {content:''; position:absolute; top:50%; right:10px; display:block; margin-top:-1px; border-top:4px solid #ef1c25; border-left:4px solid transparent; border-right:4px solid transparent;}
 .comm_tabs.styleDetail ul li.selected a {color:#ef1c25;}
 .comm_tabs.styleDetail ul li.selected a:after {margin-top:-5px; border-top-color:transparent; border-bottom:4px solid #ef1c25;}
+
+
+/* telphone num */
+.comm_inputTel {overflow:hidden;}
+.comm_inputTel input {float:left; width:46px;}
+.comm_inputTel span {float:left; width:14px; line-height:27px; text-align:center;}
+
