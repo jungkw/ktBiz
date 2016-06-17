@@ -5,6 +5,7 @@
 
 /* title */
 .commTitleWrap {position: relative;}
+.commTitleWrap:after {content:''; display:block; clear:both;}
 .commTitleWrap .comm_scnTitle01 {font-size:23px;line-height: 26px;color: #333;font-weight: bold;}
 .commTitleWrap .comm_scnTitle02 {margin-bottom:15px;font-size:21px;line-height: 26px;color:#333;}
 .commTitleWrap .comm_scnTitle03 {margin-bottom:15px;font-size:19px;line-height: 23px;color:#333;}
@@ -301,6 +302,7 @@ border-radius: 3px 3px 3px 3px;
 .mr2 {margin-right:10px;}
 .mr5 {margin-right:5px;}
 .mr8 {margin-right:5px;}
+.mr30 {margin-right:30px;}
 .mr40 {margin-right:40px;}
 .mb0 {margin-bottom:0 !important;}
 .mb2 {margin-bottom:2px;}
@@ -335,7 +337,9 @@ border-radius: 3px 3px 3px 3px;
 .pr17 {padding-right:17px !important;}
 .pr20 {padding-right:20px !important;}
 .pr30 {padding-right:30px !important;}
-.font11 {font-size:11px;}
+.font11 {font-size:11px!important;}
+.font12 {font-size:12px!important;}
+.font13 {font-size:13px!important;}
 .font14 {font-size:14px !important;}
 .font16 {font-size:16px;}
 .font20 {font-size:20px;}
@@ -410,8 +414,9 @@ border-radius: 3px 3px 3px 3px;
 .black {color:#000;}
 .gray {color:#999;}
 
-.absolute {position: absolute;}
+.absolute {position: absolute; z-index:1;}
 .relative {position: relative;}
+.top0 {top:0;}
 .top15 {top:15px;}
 .top18 {top:18px;}
 .top30 {top:30px;}
@@ -423,7 +428,7 @@ border-radius: 3px 3px 3px 3px;
 
 
 /* radio  */
-.comm_radio, .comm_checkbox {position: relative;display: inline-block;}
+.comm_radio, .comm_checkbox {position: relative;display: inline-block; min-width:24px; min-height:24px;}
 .comm_radio input, .comm_checkbox input {width:22px;height:22px;opacity: 0;display:block;position:absolute;left:0;right:0;z-index: 10}
 .comm_radio input:focus + i {background-position: -49px -1px;border: 1px dotted #000;}
 .comm_radio input.active:focus + i {border:0;}

@@ -44,56 +44,59 @@
 		<!-- s : contents -->
 		<div class="pop_conts">
 
-			<div class="pop_prod_wrap">
-				<div class="prodIntroWrap">
+			<div class="pop_contsContainer">
+				<div class="pop_prod_wrap">
+					<div class="prodIntroWrap">
+						<!-- s : title -->
+						<div class="commTitleWrap mt20">
+							<h2 class="comm_scnTitle02"><span>핸드폰 개통이력 조회</span></h2>
+						</div>
+						<!-- e : title -->
+						<p class="prodtxtSyt3 mg4m">고객님의 개통된 핸드폰 번호에 대한<br />모든 개통이력을 확인할 수 있습니다.</p>
+					</div>
+
 					<!-- s : title -->
-					<div class="commTitleWrap mt20">
-						<h2 class="comm_scnTitle1"><span>핸드폰 개통이력 조회</span></h2>
+					<h2 class="pop_subTitle">개통이력 조회 대상 번호 선택</h2>
 					</div>
 					<!-- e : title -->
-					<p class="prodtxtSyt3 mg4m">고객님의 개통된 핸드폰 번호에 대한<br />모든 개통이력을 확인할 수 있습니다.</p>
-				</div>
+					<ul class="bulletList">
+						<li>개통이력 조회를 원하는 핸드폰 번호를 선택한 후, [조회]버튼을 클릭해주세요.</li>
+						<li>핸드폰 정보는 명의자가 사용중인 모든 핸드폰 번호입니다. (현재 일시정지 된 핸드폰 번호 포함)</li>
+					</ul>
 
-				<!-- s : title -->
-				<div class="commTitleWrap mt20">
-					<h2 class="comm_scnTitle1"><span>개통이력 조회 대상 번호 선택</span></h2>
-				</div>
-				<!-- e : title -->
-				<ul class="bulletList">
-					<li>개통이력 조회를 원하는 핸드폰 번호를 선택한 후, [조회]버튼을 클릭해주세요.</li>
-					<li>핸드폰 정보는 명의자가 사용중인 모든 핸드폰 번호입니다. (현재 일시정지 된 핸드폰 번호 포함)</li>
-				</ul>
-
-				<div class="comm_tableBrdr mt10">
-					<table class="comm_table" summary="조회를 원하는 핸드폰 번호를 선택 할 수 있습니다.">
-						<caption>개통이력 조회 대상 번호</caption>
-						<colgroup>
-							<col width="25%" />
-							<col />
-						</colgroup>
-						<thead>
-						<tr>
-							<th scope="col">선택</th>
-							<th scope="col">핸드폰 번호</th>
-						</tr>
-						</thead>
-						<tbody>
+					<div class="comm_tableBrdr mt20">
+						<table class="comm_table" summary="조회를 원하는 핸드폰 번호를 선택 할 수 있습니다.">
+							<caption>개통이력 조회 대상 번호</caption>
+							<colgroup>
+								<col width="25%" />
+								<col />
+							</colgroup>
+							<thead>
 							<tr>
-								<td class="center">
-									<span><input type="radio" name="radio" id="radio01" class="mr5" /></span>
-								</td>
-								<td class="last center"><label for="radio01">010-1234-*678</label></td>
+								<th scope="col">선택</th>
+								<th scope="col">핸드폰 번호</th>
 							</tr>
-						</tbody>
-					</table>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="center">
+										<div class="comm_checkbox">
+											<input type="checkbox" name="radio" id="radio01" class="mr5" />
+											<i></i>
+											<label for="radio01" class="blind">010-1234-*678 번호 선택</label>
+										</div>
+									</td>
+									<td class="last center"><label for="radio01">010-1234-*678</label></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 
-				<div class="btnWrap">
+				<div class="pop_contsBtns">
 				  <a href="#" class="btnSty big">조회</a>
 				</div>
 			</div>
-
-		</div>
 		<!-- e : contents -->
 
 		<!-- s : footer -->

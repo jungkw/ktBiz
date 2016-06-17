@@ -17,7 +17,6 @@
 .prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr th {background: #fff;}
 .prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr td {padding:15px 0 15px 20px}
 .prodDetailWrap .innerWrap1 .prodInfo .txtWrap {margin:-5px 0 -1px 0; padding:0 130px 0 0;}
-.prodDetailWrap .innerWrap1 .prodInfo .mgR13 {margin:0 13px 0 0;}
 .prodDetailWrap .innerWrap2 {overflow:hidden; padding:0 0 50px 20px;}
 .prodDetailWrap .innerWrap2 .inner {float:left; width: 354px; margin:0 20px 0 0;}
 .prodDetailWrap .innerWrap2 .inner .txtWrap {padding:0 60px 0 0;}
@@ -26,7 +25,7 @@
 .prodDetailWrap .innerWrap2 .inner .comm_tableBrdr td {padding:15px 0 15px 20px}
 .prodDetailWrap .txtWrap {position: relative;}
 .prodDetailWrap .txtWrap .date {display: block; font-size: 12px;}
-.prodDetailWrap .txtWrap .btn {display:inline-block; position: absolute; top:50%; right:0; height:12px; margin:-6px 0 0 0; color:#000; font-size: 12px; line-height:1; text-decoration: underline;}
+.prodDetailWrap .txtWrap .btnSty {position: absolute; top:50%; right:10px; margin-top:-10px}
 .prodDetailWrap .txtWrap .btn.red {color:#ef1c25;}
 
 .prodPhoneCareService {overflow: hidden;}
@@ -39,3 +38,6 @@
 .prodPhoneCareService .phoneCareWrap.ic3 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
 .prodPhoneCareService .phoneCareWrap.ic4 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
 .prodPhoneCareService .phoneCareWrap.ic5 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
+
+.prodInfoLinkList {margin-top:50px;}
+.prodInfoLinkList .btnSty {margin:0; letter-spacing:-1px;}
