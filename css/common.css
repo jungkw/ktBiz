@@ -184,7 +184,7 @@ div#cfmOllehLnb div.cfmOllehSrvLnb {padding:24px 0 25px 18px;border-bottom:1px s
 
 
 /* contents Body */
-#cfmOllehContainer {width: 980px;margin: 32px auto 100px;}
+#cfmOllehContainer {width: 980px;margin: 32px auto 70px;}
 #cfmOllehContainer:after {content: ".";display: block;height: 0;overflow: hidden;clear: both;}
 .cfmOllehcontsLnbOn {float: right;width: 770px !important;height: auto;margin: 0;}
 .cfmOllehContsHeader {height: 40px;border-bottom: 1px solid #eee;}

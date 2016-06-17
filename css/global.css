@@ -122,10 +122,10 @@ border-radius: 3px 3px 3px 3px;
 -webkit-border-radius: 3px 3px 3px 3px;
 }
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#df2428 !important; text-decoration: none !important; border-color:#df2428;}
-.btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 32px;}
-.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 28px;}
-.btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 24px;}
-.btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 18px;}
+.btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 30px;}
+.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 26px;}
+.btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 22px;}
+.btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 16px;}
 .btnSty.big.arr {padding:0 28px 0 14px; background-image:url(../images/btn/comm_btn_bg_arrowB2.png); background-repeat:no-repeat; background-position:100% 0;}
 .btnSty.big.arr:hover, .btnSty.big.arr:focus, .btnSty.big.arr:active {background-position:100% -36px;}
 .btnSty.mid.arr {padding:0 23px 0 9px; background-image:url(../images/btn/comm_btn_bg_arrowB.png); background-repeat:no-repeat; background-position:100% 0;}
