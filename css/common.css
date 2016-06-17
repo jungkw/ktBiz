@@ -30,7 +30,7 @@ a,a:active,a:focus,a:hover,a:link,a:visited{text-decoration:none}
 a {font-size: 12px;color: #666;text-decoration: none;}
 a:hover, a:active, a:focus {color:#ef1c25 !important;text-decoration:underline !important;}
 .textLink a {text-decoration:underline;color:#00a5b8}
-.blind {display:block;position:absolute;left:-1000%;top:0;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;}
+.blind {display:block;position:absolute;left:-1000%;top:0;width:0;height:0;font-size:0;line-height:0;overflow:hidden;}
 .checkbox, .radio {width:13px;height:13px;margin-right:5px;vertical-align:top;}
 input[type=text], input[type=password] {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; padding:0 7px;line-height: 28px;font-size: 13px; color: #666; border-radius:2px; vertical-align: middle;}
 textarea {padding:7px;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
