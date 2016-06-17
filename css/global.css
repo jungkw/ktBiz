@@ -123,10 +123,10 @@ border-radius: 3px 3px 3px 3px;
 -webkit-border-radius: 3px 3px 3px 3px;
 }
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#df2428 !important; text-decoration: none !important; border-color:#df2428;}
-.btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 32px;}
-.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 28px;}
-.btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 24px;}
-.btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 18px;}
+.btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 30px;}
+.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 26px;}
+.btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 22px;}
+.btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 16px;}
 .btnSty.big.arr {padding:0 28px 0 14px; background-image:url(../images/btn/comm_btn_bg_arrowB2.png); background-repeat:no-repeat; background-position:100% 0;}
 .btnSty.big.arr:hover, .btnSty.big.arr:focus, .btnSty.big.arr:active {background-position:100% -36px;}
 .btnSty.mid.arr {padding:0 23px 0 9px; background-image:url(../images/btn/comm_btn_bg_arrowB.png); background-repeat:no-repeat; background-position:100% 0;}
@@ -175,7 +175,8 @@ border-radius: 3px 3px 3px 3px;
 .selectric-open .selectric:after {background:url('../images/common/bg_selectbox_left_selected.png') no-repeat left top;}
 .selectric-open .selectric-items {display: block;}
 
-.selectric-disabled {filter: alpha(opacity=50);opacity: 0.5;cursor: default;-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.selectric-disabled .selectric {background:url('../images/common/bg_selectbox_right_disable.png') no-repeat right top;}
+.selectric-disabled .selectric:after {background:url('../images/common/bg_selectbox_left_disable.png') no-repeat left top;}
 
 .selectric-hide-select {position: relative; overflow: hidden; width: 0; height: 0;}
 .selectric-hide-select select {position: absolute; left: -100%; display: none;}
@@ -185,7 +186,7 @@ border-radius: 3px 3px 3px 3px;
 .selectric-temp-show {position: absolute !important; visibility: hidden !important; display: block !important;}
 
 /* Items box */
-.selectric-items {display: none; position: absolute; top: 100%; left: 0; min-width: 100%; padding:0 0 5px 0; background: #fff; border: 1px solid #df2428; border-top:none; z-index: -1; box-sizing: border-box;}
+.selectric-items {display: none; position: absolute; top: 100%; left: 0; min-width: 100%; background: #fff; border: 1px solid #df2428; border-top:none; z-index: -1; box-sizing: border-box;}
 .selectric-items:before {content:''; position: absolute; bottom: -1px; left: -1px; width: 3px; height:4px; background:url('../images/common/bg_selectbox_bottom_l.png') no-repeat left bottom;}
 .selectric-items:after {content:''; position: absolute; bottom: -1px; right: -1px; width: 3px; height:4px; background:url('../images/common/bg_selectbox_bottom_r.png') no-repeat left bottom;}
 .selectric-items .selectric-scroll {height: 100%; overflow: auto;}
@@ -196,6 +197,7 @@ border-radius: 3px 3px 3px 3px;
 .selectric-items li:first-child {margin:-5px 0 0 0;}
 .selectric-items li.selected {background: #fff; color: #df2428;}
 .selectric-items li:hover {color:#df2428;}
+.selectric-items li.last {margin:0 0 5px 0;}
 .selectric-items .disabled {filter: alpha(opacity=50); opacity: 0.5; cursor: default !important; background: none !important; color: #666 !important; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 .selectric-items .selectric-group .selectric-group-label {font-weight: bold; padding-left: 10px; cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background: none; color: #444;}
 .selectric-items .selectric-group.disabled li {filter: alpha(opacity=100); opacity: 1;}
@@ -217,7 +219,13 @@ border-radius: 3px 3px 3px 3px;
 .comm_circuitSearch p.desc {padding:0 0 12px 0;color:#333;font-size: 15px;line-height: 15px;border-bottom: 1px dashed #cbcbcb;}
 .comm_circuitSearch .circuitSearchFn {padding:13px 0 0 0;}
 .comm_circuitSearch .circuitSearchFn .circuitRadioGroup {width:250px;float:left;margin-top:4px;}
-.comm_circuitSearch .circuitInputCont {float:right;margin-right:42px;}
+.comm_circuitSearch .circuitInputCont {float:right;margin-right:41px;}
+.comm_circuitSearch .selectric.circuitCase02 {height:30px;display: inline-block;vertical-align: middle;}
+.comm_circuitSearch .selectric.circuitCase02:hover, .comm_circuitSearch .selectric.circuitCase02:focus {color:#444 !important;text-decoration: none !important}
+.comm_circuitSearch .selectric.circuitCase02 span {position: absolute;top:0;left:10px;width:185px;height:30px;line-height: 28px;font-size: 13px}
+.comm_circuitSearch .circuitCase02.circuitInputPop {height: 30px;display:inline-block;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; padding:0 7px;line-height: 28px;font-size: 13px; color: #666; border-radius:2px; vertical-align: middle;}
+.comm_circuitSearch .circuitCase02.circuitInputPop:hover, .comm_circuitSearch .circuitCase02.circuitInputPop:focus {color:#444 !important;text-decoration: none !important}
+
 
 /* global css */
 .placeholder.active {color:#999;}
@@ -277,6 +285,7 @@ border-radius: 3px 3px 3px 3px;
 .mt28 {margin-top:28px;}
 .mt29 {margin-top:29px;}
 .mt30 {margin-top:30px !important;}
+.mt34 {margin-top:34px !important;}
 .mt39 {margin-top:39px;}
 .mt40 {margin-top:40px !important;}
 .mt49 {margin-top:49px;}

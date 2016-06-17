@@ -9,3 +9,5 @@
 .mobilePauseSetPwd .chkPwdLabel {left:117px;}
 p.mobilePauseDesc {width:380px;margin:10px 0 0 0;padding-left:17px;color:#666;font-size:13px;background: url('../images/icon/svc_icon_warning.png') 0 7px no-repeat;}
 .clientMemo {font-size: 13px;color:#666;}
+
+p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../images/icon/svc_icon_warning_red.png') 0 2px no-repeat;line-height: 13px;}

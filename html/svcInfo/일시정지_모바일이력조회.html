@@ -1,0 +1,435 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 모바일 이력조회 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/svcInfo.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNewSelectBox.js" type="text/javascript"></script>
+
+</head>
+
+
+
+<body>
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('.remote-btn01').on('click',function(){
+			$('.circuitCase01').show().focus();
+			$('.circuitCase02').hide();
+			alert('변경완료. 현재상태 select box');
+			return false;
+		});
+
+		$('.remote-btn02').click(function(){
+			$('.circuitCase01').hide();
+			$('.circuitCase02').show().focus();
+			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
+			return false;
+		});
+	});
+</script>
+<div class="ui-remote">
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn01">휴대폰 30이하 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
+	<button type="button" class="remote-btn02">휴대폰 30초과 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
+</div>
+<!-- e : UI GUIDE -->
+<h1 class="blind">올레닷컴(기업)</h1>
+<div id="cfmOllehWrap">
+
+	<!-- s : skip Navigation -->
+	<ul class="cfmOllehSkipNavi" id="cfmOllehSkipNavi">
+		<li><a href="#cfmOllehConts" ><span>본문으로 바로가기</span></a></li>
+		<li><a href="http://inside.olleh.com/html/WebAccessibility/Info.asp"><span>웹접근성 도움말 페이지로 이동하기</span></a></li>
+	</ul>
+	<!-- e : skip Navigation -->
+
+	<!-- s : gnb wrap -->
+	<div id="cfmOllehGnb">
+		<script type="text/javascript">$.ktBizGnbView();</script>
+	</div>
+	<!-- e : gnb wrap -->
+
+
+	<!-- s : cont container -->
+	<div id="cfmOllehContainer">
+
+		<!-- s : lnb -->
+
+		<div id="cfmOllehLnb" accesskey="4">
+			<script type="text/javascript">$.ktBizLnbView('BCDA')</script>
+		</div>
+
+		<!-- e : lnb -->
+
+
+
+		<!-- s : content Body wrap -->
+		<hr />
+		<div id="cfmOllehConts" class="cfmOllehcontsLnbOn" accesskey="1">
+		<h2 class="blind">본문 영역</h2>
+			<div class="cfmOllehContsHeader">
+				<h3 class="cfmOllehContsTit"><img src="../../images/myservice/join_info_title4.gif" alt="메뉴명 미확정으로 해당 영역은 수정하지 않았습니다." /></h3>
+				<div class="cfmOllehContsLocation">
+					<!--<script type="text/javascript">ktBizLocationBar();</script>-->
+					<a href="#home" class="home" onclick="" accesskey="0">
+						<img src="../../images/common/cfm_olleh_icon_home.png" alt="사이트 메인으로" />
+					</a> &gt;&nbsp; <a href="#home" onclick="">신청/변경</a> &gt; <a href="">일시정지</a> &gt; <a href="">모바일 신청/해제</a>
+				</div>
+			</div>
+
+			<!-- s : content Body -->
+			<div class="cfmOllehContsMain">
+
+				<!-- s : 컨텐츠 영역 -->
+
+				<!-- s : gray box -->
+				<div class="comm_contsInner grayBox">
+					<div class="comm_contsInner grayBox pt34">
+
+						<!-- s : search common -->
+						<div class="comm_circuitSearch">
+							<fieldset>
+								<legend>휴대폰 번호 선택</legend>
+								<p class="desc">조회를 원하는 휴대폰 번호를 찾아주세요.</p>
+								<div class="circuitSearchFn">
+
+									<!-- s : radio Group -->
+									<div class="circuitRadioGroup">
+										<div class="comm_radio">
+											<input type="radio" name="circuitSearchRadio" id="circuitSearchRadio01" value="circuitSelectCont" checked="" /><i></i>
+											<label for="circuitSearchRadio01">선택하기</label>
+										</div>
+										<div class="comm_radio ml15">
+											<input type="radio" name="circuitSearchRadio" id="circuitSearchRadio02" value="circuitInputCont"/><i></i>
+											<label for="circuitSearchRadio02">직접 입력</label>
+										</div>
+									</div>
+									<!-- e : radio Group -->
+
+
+									
+									<!-- s : select Contents -->
+									<div class="circuitSelectCont">
+										<label for="selectbox01" class="blind">상품 선택</label>
+										<div class="selectWrap w115">
+											<select id="selectbox01" disabled="true">
+												<option>모바일</option>
+											</select>
+										</div>
+
+										<label for="selectbox02" class="blind">회선 선택</label>
+										
+										<div class="selectWrap w195 circuitCase01">
+											<select id="selectbox02">
+												<option>010-1234-5678 [대표]</option>
+											</select>
+										</div>
+										<!-- s : 핸드폰 번호가 30개 초과시 -->
+										<a href="#billLayerPop"  id="billPopOpen01"class="selectric w195 circuitCase02" title="레이어열림" style="display: none" onclick="$.ktBizPopClick(this); return false;" >
+											<span>010-1234-5678 [대표]</span>
+										</a>
+										<!-- e : 핸드폰 번호가 30개 초과시 -->
+										<a href="#" class="btnSty mid blk w26">조회</a>
+									</div>
+									<!-- e : select Contents -->
+
+									<!-- s : Input Contents -->
+									<div class="circuitInputCont" style="display:none">
+										<label for="circuitInput" class="blind">회선번호 입력</label>
+										<input type="text" id="circuitInput" class="w195 circuitCase01" />
+										<a href="#billLayerPop" id="billPopOpen02" class="circuitCase02 circuitInputPop w195" style="display: none" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">회선번호 찾기 레이어 팝업 열림</span></a>
+										<a href="#" class="btnSty mid blk w26">조회</a>
+									</div>
+									<!-- e : Input Contents -->
+
+
+									<!-- s : 핸드폰 번호가 30개 초과시  -->
+									<div class="circuitCase02 " style="display:none">
+
+										<!-- s : 레이어 팝업 -->
+										<div class="pop_mask"></div>
+										<div class="pop_layerWrap" id="billLayerPop" style="width:630px; display: none">
+
+											<div class="pop_wrap commBillPop">
+
+												<!-- s : header -->
+												<div class="pop_header">
+													<h4>명세서 번호 선택</h4>
+													
+													<!-- s : 검색 영역 -->
+													<div class="pop_billSrchWhiteBox">
+														<fieldset>
+															<legend>명세서 번호 검색 필드</legend>
+															<label for="billNumTxt" class="blind">명세서 번호</label>
+															<input type="text" id="billNumTxt" class="placeholder" value="예) 01012345678" /><a href="#" class="btnSty big blk"><span>검색</span></a>
+														</fieldset>
+													</div>
+													<!-- e : 검색 영역 -->
+												</div>
+												<!-- e : header -->
+
+												<!-- s : contents -->
+												<div class="pop_conts" >
+													<div class="pop_contsContainer">
+														<p class="pop_scnTitle">찾으시려는 명세서 번호를 선택하세요.</p>
+														<ul class="pop_billNumListBox mt15">
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">98798456455</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">21324687984</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">64654987978</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">57987454132</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+															<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														</ul>
+
+														<div class="comm_paging">
+															<a href="#" class="comm_pagingBtn prevBtn">
+																<img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
+															</a><a href="#" class="on" title="현재 페이지">11</a><a href="#">12</a><a href="#">13</a><a href="#">14</a><a href="#">15</a><a href="#" class="comm_pagingBtn nextBtn">
+																<img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
+															</a>
+														</div>
+													</div>
+												</div>
+												<!-- e : contents -->
+											</div>
+											<!-- s : footer -->
+											<div class="pop_footer">
+												<div class="pop_footerInner">
+													<p class="pop_close">
+														<a href="#billPopOpen01" >닫기</a>
+													</p>
+												</div>
+											</div>
+											<!-- e : footer -->
+										</div>
+										<!-- e : 레이어 팝업 -->
+									</div>
+									<!-- e : 핸드폰 번호가 30개 초과시  -->
+
+								</div>
+							</fieldset>
+						</div>
+						<!-- e : search common -->
+
+
+						<!-- s :  일시정지 이력조회 -->
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02">
+								<span class="emp01">010-1234-5678</span>님 일시정지 이력조회
+							</h4>
+						</div>
+						<div class="comm_tableBrdr">
+							<table class="comm_table" summary="일시정지 이력에 대한 조회기간을 선택을 할 수 있는 표 입니다.">
+								<caption>조회기간 선택 표</caption>
+								<colgroup>
+									<col width="18%" />
+									<col width="*" />
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row" class="left">조회기간 선택</th>
+										<td class="last">
+											<div class="comm_radio">
+												<input type="radio" name="searchDate" id="years" checked="" /><i></i>
+												<label for="years">최근 1년간</label>
+											</div>
+											<div class="comm_radio ml15">
+												<input type="radio" name="searchDate" id="allDate" /><i></i>
+												<label for="allDate">전체 사용기간</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">휴대폰번호</th>
+										<td class="last">010-1234-5678</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<p class="mobilePauseHistoryDesc">상세내역 조회는 최대 100건까지만 가능합니다.</p>
+						<!-- e :  일시정지 이력조회 -->
+
+
+
+
+						<!-- s :  일시정지 상세내역 -->
+						<div class="commTitleWrap mt30">
+							<h4 class="comm_scnTitle02">일시정지 상세내역</h4>
+						</div>
+
+						<div class="comm_tableBrdr pb30">
+							<table class="comm_table" summary="일시 정지 시작일, 일시 정지 종료일, 일시정지구분, 정지일수를 확인할 수 있는 표 입니다.">
+								<caption>일시정지 상세내역 표</caption>
+								<colgroup>
+									<col width="25%" />
+									<col width="25%" />
+									<col width="25%" />
+									<col width="25%" />
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">일시 정지 시작일</th>
+										<th scope="col">일시 정지 종료일</th>
+										<th scope="col">일시정지구분</th>
+										<th scope="col" class="last">정지일수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="4" class="noContents last">
+											해당 기간내 일시정지 내역이 없습니다.
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- s :  일시정지 상세내역 -->
+
+
+						<!-- s : 기간내의 일시정지 내역 -->
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02">
+								<span class="emp01">2016년 1월 1일 부터 현재까지의</span> 일시정지 내역입니다.
+							</h4>
+						</div>
+
+						<div class="comm_tableBrdr pb30">
+							<table class="comm_table" summary="가능횟수/가능일수, 이용정지 누적일수, 누적횟수/누적일수, 발신정지 가능일수, 잔여횟수/잔여일수, 이용중단 전환 예정일을 확인 할 수 있는 표 입니다.">
+								<caption>기간내의 일시정지 내역</caption>
+								<colgroup>
+									<col width="25%" />
+									<col width="25%" />
+									<col width="25%" />
+									<col width="25%" />
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row" class="left">가능횟수/가능일수</th>
+										<td >2회 / 180일</td>
+										<th scope="row" class="left">이용정지 누적일수</th>
+										<td class="last">0일</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">누적횟수/누적일수</th>
+										<td >0회 / 0일</td>
+										<th scope="row" class="left">발신정지 가능일수</th>
+										<td class="last">30일</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">잔여횟수/잔여일수</th>
+										<td >2회 / 180일</td>
+										<th scope="row" class="left">이용중단 전환 예정일</th>
+										<td class="last"></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<!-- e : 기간내의 일시정지 내역 -->
+
+					</div>
+					<div class="comm_contsInner grayBox bottom"></div>
+				</div>
+				<!-- e : gray box -->
+
+				
+
+				<div class="comm_noticeBox mt30">
+					<h4 class="title">꼭 확인하세요!</h4>
+					<ul class="notice-list">
+						<li>
+							연간 일시 정지 가능 기간은 년 최대 180일이고, 연 2회까지 가능합니다. <br/>(일시정지 신청 예시)
+							<ul>
+								<li class="noIcon">2011년 12월 정지 후 2012년 1월에 정지 복구 시 2012년 정지 횟수 및 기간에 포함됩니다.</li>
+								<li class="noIcon">2012년 1월1일 일시정지하여 1월3일 복구하고 1월5일 다시 일시정지를 할 경우 잔여기간은 1월5일부터 178일간 정지가능</li>
+							</ul>
+						</li>
+						<li>일시정지 기간 선택시 설정하신 해제일 00시에 자동으로 일시정지가 해제됩니다.</li>
+						<li>일시정지 기간 미선택시 신청일로 부터 180일 경과 후 바로 이용 중단되며, 이용 중단시 바로 무과금 됩니다.</li>
+						<li>이용중단 3개월 이후 직권해지 대상자에 포함됩니다.(*2008년11월1일 이전 일시 정지 고객도 동일 적용)</li>
+						<li>분실정지 일수는 일시정지 180일에 포함되지 않습니다.</li>				
+						<li>일시 정지 시 월정액 : 3,500(부가세 포함 3,850원)</li>
+						<li>발신정지는 30일만 가능하며, 30일 이후에는 착발신정지로 전환됩니다.</li>
+						<li>
+							<p>이용중단 전환 예정일 3일전에 이용중단 내용을 문자메세지로 알려드립니다.</p>
+							<p>일시정지 신청 후 이용중단 상태로 자동전환시 명세서를 통해 안내해드립니다.</p>
+						</li>
+						<li>고객님이 직접 일시정지 기간을 설정하실 수 있습니다. 단, 일시정지 가능일수에 한합니다.</li>
+						<li>
+							<p>분실신고 해제 후 분실정지에 해당하는 기본료인 3,500(부가세 포함 3,850원)이 부가됩니다.</p>
+							<p>일시정지 비밀번호 분실시 신분증(본인확인 수단)을 지참하여 가까운 kt Plaza 혹은 고객센터 방문 후 해제 가능합니다.</p>
+						</li>
+					</ul>
+				</div>
+
+				<!-- e : 컨텐츠 영역  -->
+
+			</div>
+			<!-- e : content Body -->
+		</div>
+		<hr />
+		<!-- e : content Body wrap -->
+	</div>
+	<!-- e : cont container -->
+
+
+	<!-- s : footer -->
+	<div id="cfmOllehFooter">
+		<script type="text/javascript">$.ktBizFooterView();</script>
+	</div>
+	<!-- e : footer -->
+</div>
+</body>
+</html>
+

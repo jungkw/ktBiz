@@ -123,7 +123,7 @@ $(document).ready(function(){
         $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
         $target.show().css('top',$setTop+'px');
         $mask.show();
-        $target.find('.pop_conts').attr('tabindex',0).focus();
+        $target.find('.pop_wrap').attr('tabindex',0).focus();
         $target.find('.pop_close a, .pop_btn_close').click(function(){
             $target.hide();
             $mask.hide();

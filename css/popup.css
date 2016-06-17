@@ -53,14 +53,18 @@
 
 
 /*  명세서 번호 선택 */
-.pop_wrap .pop_billSrchWhiteBox {padding:20px 30px; background: #fff; border: 1px solid #ccc;margin:0 0 28px 0;}
-.pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:66px;margin:10px 0 0 0;}
-.pop_wrap .pop_billSrchWhiteBox p.billDesc {font-size: 15px; line-height: 21px; }
-.pop_wrap .pop_billSrchWhiteBox input {width:100%; height:36px; line-height:34px;}
+.pop_wrap .pop_billSrchWhiteBox {position:absolute; top:16px; right:29px; background: #fff;}
+.pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:66px;}
+.pop_wrap .pop_billSrchWhiteBox input {width:253px; height:36px; line-height:34px;}
 .pop_wrap .pop_billSrchWhiteBox a {position: absolute; top:0;right: 0;}
 .pop_wrap .pop_billNumListBox {padding:15px 0;border:1px solid #ccc; border-top:1px solid #333;background: #fff;overflow: hidden;}
-.pop_wrap .pop_billNumListBox li {width:25%;padding:15px 0;float: left;text-align: center;}
+.pop_wrap .pop_billNumListBox li {display:inline-block; width:25%;padding:11px 0; float: left; text-align: center;}
 .pop_wrap .pop_billNumListBox a {color:#666;font-size: 15px;}
+
+/*명세서 조회 팝업만 예외 케이스 */
+.pop_wrap.commBillPop .pop_header {padding:22px 0 25px}
+.pop_wrap.commBillPop .pop_header h4 {padding:0 0 0 30px; text-align: left;}
+
 
 
 /* 지로 납부 */
@@ -186,5 +190,18 @@
 .pop_svcAddonRecom .in_prev{right:16px; background:url(../images/pop/pop_btn_svc_prev.gif) center top no-repeat;}
 .pop_svcAddonRecom .in_next{right:0px; background:url(../images/pop/pop_btn_svc_next.gif) center top no-repeat;}
 .pop_svcAddonRecom .disable {opacity:.2; cursor:default; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
