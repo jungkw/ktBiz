@@ -57,7 +57,7 @@
 .pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:66px;}
 .pop_wrap .pop_billSrchWhiteBox input {width:253px; height:36px; line-height:34px; font-size:14px;}
 .pop_wrap .pop_billSrchWhiteBox a {position: absolute; top:0;right: 0;}
-.pop_wrap .pop_billNumListBox {padding:15px 0;border:1px solid #ccc; border-top:1px solid #333;background: #fff;overflow: hidden;}
+.pop_wrap .pop_billNumListBox {padding:12px 0 15px 0;border:1px solid #ccc; border-top:1px solid #333;background: #fff;overflow: hidden;}
 .pop_wrap .pop_billNumListBox li {display:inline-block; width:25%;padding:11px 0; float: left; text-align: center;}
 .pop_wrap .pop_billNumListBox a {color:#666;font-size: 15px;}
 
