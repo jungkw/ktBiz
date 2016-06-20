@@ -6,7 +6,9 @@
 .roundBtn {position:relative;box-sizing:border-box; margin-right:3px; padding:0 6px 0 9px; min-width:49px; height:30px; color:#333; font-size:12px; line-height:29px; background:url(../images/index_bg_roundbtn_l.png) no-repeat!important; text-align:center;}
 .roundBtn:after {content:''; position:absolute; top:0; right:-3px; display:block; width:3px; height:100%; background:url(../images/index_bg_roundbtn_r.png) no-repeat 100% 0;}
 .roundBtn:focus,
-.roundBtn:hover {color:#333!important; text-decoration:none!important;}
+.roundBtn:hover {text-decoration:none!important; background:url(../images/index_bg_roundbtn_l_active.png) no-repeat!important;}
+.roundBtn:focus:after,
+.roundBtn:hover:after {background:url(../images/index_bg_roundbtn_r_active.png) no-repeat 100% 0;}
 .roundFillBox {position:relative; box-sizing:border-box; background-image:url(../images/index_bg_roundbtn_fl.png)!important; background-repeat:no-repeat!important;}
 .roundFillBox:after {content:''; position:absolute; top:0; right:0; display:block; width:5px; height:100%; background:url(../images/index_bg_roundbtn_fr.png) no-repeat 100% 0;}
 .indexTitle {margin-bottom:12px;}
@@ -174,3 +176,6 @@
 .index_selectbox .selectric-items:after {content:''; position: absolute; bottom: -1px; right: -1px; width: 3px; height:4px; background:url('../images/index_selectbox_bottom_r.png') no-repeat left bottom;}
 .index_selectbox .selectric-items li {font-size:14px; text-indent: 86px;}
 .selectric-above .selectric-items {top:0 !important;}
+
+
+.pop_wrap .pop_scnTitle.mg16m {margin:-16px 0 0 0;}  /* 메인 명세서 조회 예외 케이스 */
