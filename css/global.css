@@ -9,6 +9,7 @@
 .commTitleWrap .comm_scnTitle01 {font-size:23px;line-height: 26px;color: #333;font-weight: bold;}
 .commTitleWrap .comm_scnTitle02 {margin-bottom:15px;font-size:21px;line-height: 26px;color:#333;}
 .commTitleWrap .comm_scnTitle03 {margin-bottom:15px;font-size:19px;line-height: 23px;color:#333;}
+.commTitleWrap .rightBtn {position: absolute;top:0;right:0;}
 
 .chrome .index_selectbox.on, .Safari .index_selectbox.on {width:386px;height: 28px;border:2px solid #a6c8ff; border-radius: 3px; box-sizing: unset;}
 .chrome .index_selectbox.on > label, .Safari .index_selectbox.on > label {top:6px;left:11px;}
@@ -311,6 +312,7 @@ border-radius: 3px 3px 3px 3px;
 .mb7{margin-bottom:7px;}
 .mb8{margin-bottom:8px;}
 .mb10 {margin-bottom:10px}
+.mb12 {margin-bottom:12px}
 .mb14 {margin-bottom:14px;}
 .mb20 {margin-bottom:20px;}
 .mb27 {margin-bottom:27px;}
@@ -320,7 +322,8 @@ border-radius: 3px 3px 3px 3px;
 
 .pb0 {padding-bottom:0 !important}
 .pb10 {padding-bottom:10px;}
-.pb30 {padding-bottom:30px;}
+.pb26 {padding-bottom:26px !important;}
+.pb30 {padding-bottom:30px !important;}
 .pb40 {padding-bottom:40px !important;}
 .pl0 {padding-left:0 !important;}
 .pl5 {padding-left:5px !important;}
@@ -419,6 +422,7 @@ border-radius: 3px 3px 3px 3px;
 .top15 {top:15px;}
 .top18 {top:18px;}
 .top30 {top:30px;}
+.top32 {top:32px !important;}
 .top115 {top:115px;}
 .right0 {right:0;}
 .right30 {right:30px;}
