@@ -33,6 +33,7 @@
 .comm_table td.lineL {border-left:1px solid #eaeaea;}
 .comm_table td.title {padding-left:30px;color:#333;text-align:left;}
 .comm_table td.tit {padding-left:20px;color:#333;text-align:left;}
+.comm_table td.gray {color:#666;}
 .comm_table td.right em.vat {display:inline-block;}
 .comm_table td .num {font-size:18px;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
 .comm_table td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
@@ -226,6 +227,9 @@ border-radius: 3px 3px 3px 3px;
 .comm_circuitSearch .selectric.circuitCase02 span {position: absolute;top:0;left:10px;width:185px;height:30px;line-height: 28px;font-size: 13px}
 .comm_circuitSearch .circuitCase02.circuitInputPop {height: 30px;display:inline-block;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; padding:0 7px;line-height: 28px;font-size: 13px; color: #666; border-radius:2px; vertical-align: middle;}
 .comm_circuitSearch .circuitCase02.circuitInputPop:hover, .comm_circuitSearch .circuitCase02.circuitInputPop:focus {color:#444 !important;text-decoration: none !important}
+.comm_circuitSearch .circuitSearchFn .circuitLabel {display:inline-block; margin-right:7px; color:#333; font-size:15px; vertical-align:middle;}
+.comm_circuitSearch .circuitSearchFn .circuitInlineCont {display:inline-block;}
+.comm_circuitSearch .circuitSearchFn .circuitDesc {display:inline-block; margin-left:6px; vertical-align:middle;}
 
 
 /* global css */
