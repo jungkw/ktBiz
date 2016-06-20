@@ -30,6 +30,628 @@
 	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNewSelectBox.js" type="text/javascript"></script>
 
+	<!-- 레이어 팝업 보여주기용. -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var target = getUrlParameter();
+
+			$('#' + target[0] ).trigger('click');
+
+		});
+	</script>
+
+	<!-- s : 기존소스유자 -->
+	<script language="javascript" type="text/javascript">
+	<!--
+
+			var PANELCHECK = "null";
+			var B_session = "true";
+			var KTFSERVLET = "ktfServlet";
+	//-->
+	</script>
+
+	<script language="javascript" type="text/javascript">
+	<!--
+
+
+	function top07() {
+
+			alert("죄송합니다. 고객님은 멤버스플러스 대상이 아닙니다");
+
+	}
+	//-->
+	</script>
+
+	<iframe name="log_out" style="display:none;" src="/blank.html" title="빈프레임" ></iframe>
+
+
+
+	<form name="formLogOut" method="post" target="log_out" action="http://ktflogon.show.co.kr/Logon/Logoff.asp">
+			<input type="hidden" name="URL" value="http://csmobile.biz.olleh.com/blank.html" />
+	</form>
+	<script language="javascript" type="text/javascript">
+	<!--
+			function log_out() {
+			//formLogOut.submit();
+			//location.href="http://ktflogon.show.co.kr/Logon/Logoff.asp?URL=http://csmobile.biz.olleh.com";
+			location.href= NoSSL("/doLogout.html");
+			//setTimeout("log_out_action()",4000);
+		}
+		function log_out_action() {
+			location.href="/doLogout.action";
+		}
+
+
+
+	//-->
+	</script>
+	<!-- //SSL js -->
+	<script	language='javascript' src="/js/SSLlib.js"></script>
+	<script language=JavaScript src="/js/blocking.js"></script>
+	<script	language='javascript' >
+	function NoSSLsubmit(ifrm) {
+		ifrm.action = NoSSL(ifrm.action);
+		ifrm.submit();
+	}
+	browserCheck();
+
+	</script>
+
+
+
+
+
+
+	<link rel="stylesheet" href="/css/phonemanage.css" type="text/css" />
+
+	<script type="text/javascript">
+	var chkeck_cnt = 0;
+
+	function selectLostInfo(){ //핸드폰번호로조회
+
+		acntSearch.action ="PcsLostAdd.action";
+		SSLsubmit(document.acntSearch);
+	}
+
+	function prePopup(){
+		if('D' == 'D' || 'D' == 'G'){
+			document.acntSearch.clickTest.value = "Y";
+			pop_billSearch();
+		}
+
+	}
+
+	function numDataFormat(argObj) {
+	    var numValue = argObj.value.substr(argObj.value.length -1, 1);
+	    if (numValue != "/" && numValue != "-") {
+	        if (isNaN(numValue)) {
+	            alert("죄송합니다.\n\n연락 전화번호는 숫자로만 입력해 주세요.");
+	            argObj.value =  "";
+	            return;
+	        }
+	    }
+	}
+
+	function formInit() { //취소
+		SSLsubmit(document.formCancle);
+	}
+
+			function chkValue(){
+				frm  = document.acntSearch;
+				var chkAgree = document.getElementById("chkAgree");
+
+		 		if (chkAgree.checked) {
+		  			frm.strPwdInsert.disabled 	= false;
+		  			frm.strPwdOk.disabled 	= false;
+	       			//frm.strPwdInsert.style.backgroundColor  = "#ffffff"
+	       			//frm.strPwdOk.style.backgroundColor  = "#ffffff"
+		  		} else {
+		  			frm.strPwdInsert.disabled 	= true;
+		  			frm.strPwdOk.disabled 	= true;
+	       			//frm.strPwdInsert.style.backgroundColor  = "#efefef"
+	       			//frm.strPwdOk.style.backgroundColor  = "#efefef"
+				}
+
+			}
+
+
+	function cfu_ok() {
+
+				// =====================================
+				// 고도화 2차 START 2014.02.24
+				// ★★★[KSH] <R14-35> 수정권한여부 추가
+				// =====================================
+				var AuthDataChgInd = 'Y';
+
+				if(AuthDataChgInd == "N") {
+					alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+					return;
+				}
+				// 고도화 2차 END
+
+				frm  = document.acntSearch;
+
+				var chkAgree = document.getElementById("chkAgree");
+
+
+
+				if (chkAgree.checked) {
+
+				if( frm.guideYn.value != "C" ) {
+				    if( frm.strPwdInsert.value == "" ) {
+			            alert("일시정지 해제시 입력에 필요한 비밀번호 숫자 4~8자리 입력해주세요. ");
+			            frm.strPwdInsert.focus();
+			            return;
+			        }
+			        if( frm.strPwdInsert.value.length < 4 || frm.strPwdInsert.value.length > 8 ) {
+			            alert("비밀번호는 숫자 4~8자리로 입력해주세요. ");
+			            frm.strPwdInsert.focus();
+			            return;
+			        }
+			        if( frm.strPwdOk.value == "" ) {
+			            alert("일시정지 해제시 입력에 필요한 비밀번호 숫자 4~8자리 입력해주세요. ");
+			            frm.strPwdOk.focus();
+			            return;
+			        }
+
+			        if( frm.strPwdOk.value.length < 4 || frm.strPwdOk.value.length > 8 ) {
+			            alert("비밀번호는 숫자 4~8자리로 입력해주세요. ");
+			            frm.strPwdOk.focus();
+			            return;
+			        }
+			        if( frm.strPwdInsert.value !=  frm.strPwdOk.value  ) {
+			            alert("비밀번호 입력/확인은 동일한 비밀번호를 입력해주세요. ");
+			            frm.strPwdOk.focus();
+			            return;
+			        }
+			        if (isNaN(frm.strPwdInsert.value)) {
+			            alert("비밀번호는 숫자 4~8자리로 입력해주세요.");
+			            frm.strPwdInsert.value = "";
+			            frm.strPwdInsert.focus();
+			            return;
+			        }
+			        if (isNaN(frm.strPwdOk.value)) {
+			            alert("비밀번호는 숫자 4~8자리로 입력해주세요.");
+			            frm.strPwdOk.value = "";
+			            frm.strPwdOk.focus();
+			            return;
+			        }
+		        }
+		     }
+
+
+		//alert('D');
+		if('D' == 'D'){
+
+			if(acntSearch.clickTest.value == "Y"){
+				alert("조회하기를 먼저 해주세요.");
+				return;
+			}
+		}
+
+		// [무선상품통합 DAY180-유지훈-일자(20100104): 결함수정 )]
+	    if (("N" == "Y")) {
+	        alert("죄송합니다.\n\n고객님께서는 고장접수 처리 진행중인 기기 입니다.\n\n\n자세한 내용은 KT 고객센터(휴대폰SHOW 고객센터, 일반전화1588-0010)나 \n가까운 KT Plaza로 문의 바랍니다.");
+	        return;
+	        // 박준호 reutrn false에서 return으로 수정..
+	    }
+
+
+	    //유효성 체크
+
+
+	        // add by bijaroo 2005-08-19 국제로밍폰 금지
+	        if (("N" == "Y1")) {
+	            alert("죄송합니다.\n\n고객님께서는 국제로밍 서비스를 사용중 이므로 분실접수가 불가합니다.\n\n국제로밍 서비스를 해지 후, 분실접수를 처리해 주세요.");
+	            return;
+	        }
+
+	        // add by bijaroo 2005-08-19 임대로밍 로밍폰 금지
+	        if (("N" == "Y2")) {
+	            alert("죄송합니다.\n\n고객님께서는 국제임대로밍 서비스를 사용중 이므로 분실접수가 불가합니다.\n\n국제로밍 서비스를 해지 후, 분실접수를 처리해 주세요.");
+	            return;
+	        }
+
+	        if ("true" == "false") {
+	            alert("죄송합니다.\n\n신고하시려는 단말기는 분실신고를 하실 수 없습니다.\n\n자세한 내용은 KT 고객센터(휴대폰SHOW 고객센터, 일반전화1588-0010)나 \n가까운 KT Plaza로 문의 바랍니다.");
+	            return;
+	        }
+	        if ("N" == "Y") {
+	            alert("죄송합니다.\n\n멀티큐 비즈를 사용하시는 고객께서는 분실신고를 신청하실 수 없습니다.\n\n자세한 사항은 KT 고객센터(휴대폰:SHOW 고객센터, 일반전화:1588-0010)나 \n가까운 KT Plaza로 문의하시기 바랍니다.");
+	            return;
+	        }
+	        // 2005.11.25. CHOI. WISE 버전업 - 국제로밍 서비스를 사용자 분실신고 금지 처리
+	        if ("N" == "Y" || "" == "Y") {
+	            alert("죄송합니다.\n\n현재 고객님은 국제로밍 서비스를 사용중 이므로 분실접수가 불가합니다.\n\n장기로밍 SIM 임대 해지 후, 분실접수를 처리해 주십시오.");
+	            return;
+	        }
+	        if("N" == "Y"){
+	            alert("죄송합니다.\n\n고객님께서는 분실 후 우수고객기기변경 시 중고폰 배상금 면제고객이므로\n분실신고를 하실 수 없습니다.\n\n자세한 내용은 KT 고객센터(휴대폰SHOW 고객센터, 일반전화1588-0010)나 \n가까운 KT Plaza로 문의 바랍니다.");
+	            return;
+	        }
+
+
+
+	        //분실신고가 가능한 경우 체크 로직 시작
+
+
+	        if (acntSearch.telNoDdd.value == "" || isNaN(acntSearch.telNoDdd.value)) {
+	            alert("연락전화번호 중 지역번호(앞3자리)를 입력해 주세요.");
+	            acntSearch.telNoDdd.focus();
+	            return;
+	        }else if (acntSearch.telNoDdd.value != "02"  && acntSearch.telNoDdd.value != "031" && acntSearch.telNoDdd.value != "032" && acntSearch.telNoDdd.value != "033" &&
+	            acntSearch.telNoDdd.value != "041" && acntSearch.telNoDdd.value != "042" && acntSearch.telNoDdd.value != "043" && acntSearch.telNoDdd.value != "051" &&
+	            acntSearch.telNoDdd.value != "052" && acntSearch.telNoDdd.value != "053" && acntSearch.telNoDdd.value != "054" && acntSearch.telNoDdd.value != "055" &&
+	            acntSearch.telNoDdd.value != "061" && acntSearch.telNoDdd.value != "062" && acntSearch.telNoDdd.value != "063" && acntSearch.telNoDdd.value != "064" &&
+	            acntSearch.telNoDdd.value != "011" && acntSearch.telNoDdd.value != "016" && acntSearch.telNoDdd.value != "017" && acntSearch.telNoDdd.value != "018" &&
+	            acntSearch.telNoDdd.value != "019" && acntSearch.telNoDdd.value != "010") {
+	            alert("죄송합니다.\n\n연락 전화번호에서 고객님께서 입력하신 지역번호(앞3자리)가\n잘못 입력되었습니다.\n\n다시 확인해 주세요.");
+	            acntSearch.telNoDdd.focus();
+	            return;
+	        }
+	        if (acntSearch.telNoKuk.value == "" || acntSearch.telNoKuk.value.length < 3 || isNaN(acntSearch.telNoKuk.value)) {
+	            alert("연락전화번호 중 국번(중간 3~4자리)을 입력해 주세요.");
+	            acntSearch.telNoKuk.focus();
+	            return;
+	        }
+	        if (acntSearch.telNoNo.value == "" || acntSearch.telNoNo.value.length < 4 || isNaN(acntSearch.telNoNo.value)) {
+	            alert("연락전화번호 중 마지막 번호(뒤 4자리)를 입력해 주세요.");
+	            acntSearch.telNoNo.focus();
+	            return;
+	        }
+	        if (acntSearch.telNoKuk.value.length == 3)     acntSearch.telNoKuk.value = "0" + acntSearch.telNoKuk.value;
+
+
+	        if (acntSearch.loseCont.value == "") {
+	            alert("분실내용을 입력해 주세요.");
+	            acntSearch.loseCont.focus();
+	            return;
+	        }
+
+	        if(acntSearch.loseCont.value.length > 40) {
+	            alert("분실내용은 40자를 초과할 수 없습니다.");
+	            acntSearch.loseCont.focus();
+	            return;
+	        }
+
+
+	if(chkeck_cnt == 0) {
+
+	        			var guideYn = document.acntSearch.guideYn.value;
+	        			if (guideYn == "Y") {
+	        			//착신전환 서비스 가입여부
+
+	           							alert("분실 신고전 착신전환 가입시 최대 30일간 무료제공됩니다.\n\n" +
+	                 						"[요금제,부가서비스 > MY 가입상품 > MY 부가서비스]에서 착신전환 서비스 가입하세요.");
+	           							okButton_click();
+	           							return;
+
+
+
+
+	        		  } else {
+	            				okButton_click();
+	        			}
+
+
+			}else {
+		        alert("처리중입니다. 다소 시간이 소요될 수 있습니다.\n\n조회가 완료될 때가지 잠시만 기다려 주세요.");
+		    }
+
+	}//end of func cfu_ok
+
+
+	function okButton_click() {
+
+		if('D' == 'D'){
+			if(acntSearch.clickTest.value == "Y"){
+				alert("조회하기를 먼저 해주세요.");
+				return;
+			}
+		}
+
+		// =====================================
+		// 고도화 2차 START 2014.02.24
+		// ★★★[KSH] <R14-35> 수정권한여부 추가
+		// =====================================
+		var AuthDataChgInd = 'Y';
+
+		if(AuthDataChgInd == "N") {
+			alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+			return;
+		}
+		// 고도화 2차 END
+
+
+
+
+	                // 0711_DR-2008-07507-WCDMA 단말기 분실 정지 안내 문구 수정 요청
+	                // alert 메시지 변경 및 프로세스 변경
+	                if (document.acntSearch.loseType[document.acntSearch.loseType.selectedIndex].value=="H"
+	                        && document.acntSearch.guideYn[document.acntSearch.guideYn.selectedIndex].value!="C"  ) {
+	                    alert("분실유형을 단말기로 선택시에는 [정지없음]만 선택 가능하므로 정지없음으로 분실신고 됩니다.");
+	                    for (var i = 0 ; i< acntSearch.guideYn.length;i++) {
+	                            if (acntSearch.guideYn.options[i].value=="C") {
+	                                acntSearch.guideYn.options[i].selected = true;
+	                                break;
+	                            }
+	                    }
+	                }
+
+	                //국내분실일 경우에만 해당
+					if(document.acntSearch.loseLocation.value == 'N'){
+		                // 0711_DR-2008-07507-WCDMA 단말기 분실 정지 안내 문구 수정 요청
+		                // alert 메시지 변경 및 프로세스 변경
+		                if ( (document.acntSearch.loseType[document.acntSearch.loseType.selectedIndex].value=="A"
+		                        || document.acntSearch.loseType[document.acntSearch.loseType.selectedIndex].value=="U" )
+		                        && document.acntSearch.guideYn[document.acntSearch.guideYn.selectedIndex].value=="C"  ) {
+		                    alert("모두 분실(단말기+USIM) 혹은 USIM 분실은 정지없음을 선택할수 없으므로 [발신정지(착신가능)]으로 분실신고 됩니다.");
+		                    for (var i = 0 ; i< acntSearch.guideYn.length;i++) {
+		                            if (acntSearch.guideYn.options[i].value=="Y") {
+		                                acntSearch.guideYn.options[i].selected = true;
+		                                break;
+		                            }
+		                    }
+
+		                    if (document.acntSearch.strPwdInsert.disabled == true ) {
+						      alert("일시정지 해제시 입력에 필요한 비밀번호 숫자 4~8자리 입력해주세요.");
+						      document.acntSearch.strPwdInsert.disabled = false;
+						      document.getElementById("strPwdInsert").style.backgroundColor="";
+						      document.acntSearch.strPwdOk.disabled = false;
+						      document.getElementById("strPwdOk").style.backgroundColor="";
+						      return;
+						    }
+
+		                }
+	                }
+	                else{
+	                	if(document.acntSearch.loseType.value != "H" && document.acntSearch.guideYn.value != "N"){
+							document.acntSearch.guideYn.value = 'N';
+							alert('해외분실일 경우 [발착신정지]만 선택 가능합니다.');
+
+		                    if (document.acntSearch.strPwdInsert.disabled == true ) {
+						      alert("일시정지 해제시 입력에 필요한 비밀번호 숫자 4~8자리 입력해주세요.");
+						      document.acntSearch.strPwdInsert.disabled = false;
+						      document.getElementById("strPwdInsert").style.backgroundColor="";
+						      document.acntSearch.strPwdOk.disabled = false;
+						      document.getElementById("strPwdOk").style.backgroundColor="";
+						      return;
+						    }
+
+						}
+	                }
+
+
+	 			// [무선상품통합 DAY180-유지훈-일자(20100104): 결함수정 )]
+	    		if (("N" == "Y")) {
+	        		alert("죄송합니다.\n\n고객님께서는 고장접수 처리 진행중인 기기 입니다.\n\n\n\n자세한 내용은 KT 고객센터(휴대폰SHOW 고객센터, 일반전화1588-0010)나 \n가까운 KT Plaza로 문의 바랍니다.");
+	        		return;
+	    		}
+
+	            // add by bijaroo 2005-08-19 국제로밍폰 금지
+	            if (("N" == "Y")) {
+	                alert("죄송합니다.\n\n고객님께서는 국제로밍 서비스를 사용중 이므로 분실접수가 불가합니다.\n\n국제로밍 서비스를 해지 후, 분실접수를 처리해 주세요.");
+	                return;
+	            }
+
+	            if ("true" == "false") {
+	                alert("죄송합니다.\n\n신고하시려는 단말기는 분실신고를 하실 수 없습니다.\n\n자세한 내용은 KT 고객센터(휴대폰SHOW 고객센터, 일반전화1588-0010)나 \n가까운 KT Plaza로 문의 바랍니다.");
+	                return;
+	            }
+
+	            // 2003.02.22. HSHA. WISE V21.26 버전업 - 멀티큐비즈CP과금용 사용자 분실신고 금지 처리
+	            if ("N" == "Y") {
+	                alert("죄송합니다.\n\n멀티큐 비즈를 사용하시는 고객께서는 분실신고를 신청하실 수 없습니다.\n\n자세한 사항은 KT 고객센터(휴대폰:SHOW 고객센터, 일반전화:1588-0010)나 \n가까운 KT Plaza로 문의하시기 바랍니다.");
+	                return;
+	            }
+
+	            // 2005.11.25. CHOI. WISE 버전업 - 국제로밍 서비스를 사용자 분실신고 금지 처리
+	            if ("N" == "Y" || "" == "Y") {
+	                alert("죄송합니다.\n\n현재 고객님은 국제로밍 서비스를 사용중 이므로 분실접수가 불가합니다.\n\n장기로밍 SIM 임대 해지 후, 분실접수를 처리해 주십시오.");
+	                return;
+	            }
+
+	            if("N" == "Y"){
+	                alert("죄송합니다.\n\n고객님께서는 분실 후 우수고객기기변경 시 중고폰 배상금 면제고객이므로\n분실신고를 하실 수 없습니다.\n\n자세한 내용은 KT 고객센터(휴대폰SHOW 고객센터, 일반전화1588-0010)나 \n가까운 KT Plaza로 문의 바랍니다.");
+	                return;
+	            }
+
+	            if("N" == "Y"){
+	                alert("죄송합니다.\n\n고객님께서는 임대폰을 사용 중이므로 분실신고를 하실 수 없습니다.\n\n자세한 내용은 KT 고객센터(휴대폰SHOW 고객센터, 일반전화1588-0010)나 \n가까운 KT Plaza로 문의 바랍니다.");
+	                return;
+	            }
+
+
+
+	            ////////////// 분실신고가 가능한 경우 체크 로직 시작 /////////////
+	            if (acntSearch.telNoDdd.value == "" || isNaN(acntSearch.telNoDdd.value)) {
+	                alert("연락전화번호 중 지역번호(앞3자리)를 입력해 주세요.");
+	                acntSearch.telNoDdd.focus();
+	                return;
+	            }else if (acntSearch.telNoDdd.value != "02"  && acntSearch.telNoDdd.value != "031" && acntSearch.telNoDdd.value != "032" && acntSearch.telNoDdd.value != "033" &&
+	                acntSearch.telNoDdd.value != "041" && acntSearch.telNoDdd.value != "042" && acntSearch.telNoDdd.value != "043" && acntSearch.telNoDdd.value != "051" &&
+	                acntSearch.telNoDdd.value != "052" && acntSearch.telNoDdd.value != "053" && acntSearch.telNoDdd.value != "054" && acntSearch.telNoDdd.value != "055" &&
+	                acntSearch.telNoDdd.value != "061" && acntSearch.telNoDdd.value != "062" && acntSearch.telNoDdd.value != "063" && acntSearch.telNoDdd.value != "064" &&
+	                acntSearch.telNoDdd.value != "011" && acntSearch.telNoDdd.value != "016" && acntSearch.telNoDdd.value != "017" && acntSearch.telNoDdd.value != "018" &&
+	                acntSearch.telNoDdd.value != "019" && acntSearch.telNoDdd.value != "010") {
+	                alert("죄송합니다.\n\n연락 전화번호에서 고객님께서 입력하신 지역번호(앞3자리)가\n잘못 입력되었습니다.\n\n다시 확인해 주세요.");
+	                acntSearch.telNoDdd.focus();
+	                return;
+	            }
+
+	            if (acntSearch.telNoKuk.value == "" || acntSearch.telNoKuk.value.length < 3 || isNaN(acntSearch.telNoKuk.value)) {
+	                alert("연락전화번호 중 국번(중간 3~4자리)을 입력해 주세요.");
+	                acntSearch.telNoKuk.focus();
+	                return;
+	            }
+	            if (acntSearch.telNoNo.value == "" || acntSearch.telNoNo.value.length < 4 || isNaN(acntSearch.telNoNo.value)) {
+	                alert("연락전화번호 중 마지막 번호(뒤 4자리)를 입력해 주세요.");
+	                acntSearch.telNoNo.focus();
+	                return;
+	            }
+
+	            if (acntSearch.telNoKuk.value.length == 3)     acntSearch.telNoKuk.value = "0" + acntSearch.telNoKuk.value;
+
+	           if (acntSearch.loseCont.value == "") {
+	                alert("분실내용을 입력해 주세요.");
+	                acntSearch.loseCont.focus();
+	                return;
+	            }
+
+
+	            if (acntSearch.loseCont.value.length > 40) {
+	                alert("분실내용은 40자를 초과할 수 없습니다.");
+	                acntSearch.loseCont.focus();
+	                return;
+	            }
+	            // 수정시 미납고객이거나 일시정지 기간이 30일이 넘으면 발착신 수정 불가능
+
+	            formSave.loseDate.value           = check_date_YMD("2016/06/20");
+	            formSave.loseCont.value           = acntSearch.loseCont.value;
+	            formSave.strPwdInsert.value       = acntSearch.strPwdInsert.value;
+	            formSave.guideYn.value            = acntSearch.guideYn.options[acntSearch.guideYn.selectedIndex].value;
+	            formSave.contactTelno.value       = acntSearch.telNoDdd.value + acntSearch.telNoKuk.value + acntSearch.telNoNo.value;
+	            formSave.userName.value           = "장순";
+	            formSave.runMode.value            = "I";
+	            formSave.subStatus.value          = "";
+
+	            document.formSave.loseLocation.value = document.acntSearch.loseLocation.value;
+
+	            //wcdma 번호 이동성 추가
+	            formSave.imei.value               = "";
+	            formSave.iccId.value              = "";
+
+	                formSave.loseType.value           = acntSearch.loseType.options[acntSearch.loseType.selectedIndex].value;
+
+
+	            formSave.reqNo.value              = "0"
+	            formSave.approvalNo.value         = ""
+	            formSave.ENCRYPT_S_ban.value      = "lUTuQz%2BQZf4617I4bSGz8g%3D%3D";
+	            formSave.ENCRYPT_S_ctn.value      = "IUiM9eLk4%2Bhn0BT21kF7WA%3D%3D";
+	            formSave.esn.value                = "352903050788099";
+	            formSave.msn.value                = "0076809";
+	            formSave.modelId.value            = "6995";
+	            formSave.reqDate.value            = "";
+	            formSave.findStatus.value         = "";
+	            formSave.findReqNo.value          = "";
+	            formSave.returnDate.value         = "";
+	            formSave.keepYn.value             = "N";
+	            formSave.returnOrganization.value = "";
+	            formSave.updateflg.value          = "I";
+	            formSave.subscriberStatus.value   = "A";
+	            formSave.ENCRYPT_S_subscriberNo.value = "IUiM9eLk4%2Bhn0BT21kF7WA%3D%3D";
+
+	            formSave.reqName.value               = "";
+	            formSave.ENCRYPT_S_contractNum.value = "8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D";
+	            formSave.customerId.value            = "483002811";
+
+
+	            //굿타임 보험상품 관련 20060418 최 영
+
+
+	            var message = "";
+
+	                    message = message + "고객님께서 입력하신 분실신고 내용은 다음과 같습니다.\n\n";
+	                    message = message + "고       객       명 : " + formSave.userName.value + "\n";
+	                    message = message + "연 락 가 능 번 호 : " + "(" + acntSearch.telNoDdd.value + ")" + acntSearch.telNoKuk.value + "-" + acntSearch.telNoNo.value + "\n";
+	                    message = message + "고 객 요 청 사 항 : " + acntSearch.guideYn.options[acntSearch.guideYn.selectedIndex].text + "\n";
+	                    message = message + "위 사항으로 분실신고를 신청하시겠습니까?";
+
+	            // 2004.06.18. HSHA. Members 버전업(2004년 06월) - 굿타임 방문 서비스 분리에 따른 주석 처리
+		if(chkeck_cnt == 0) {
+	            if(confirm(message)){
+	            	formSave.charset = 'euc-kr';
+	            	chkeck_cnt = 1;
+	            	SSLsubmit(document.formSave);
+	            }else{
+	                return;
+	            }
+		}else {
+	        alert("처리중입니다. 다소 시간이 소요될 수 있습니다.\n\n조회가 완료될 때가지 잠시만 기다려 주세요.");
+	    }
+
+	    }//end of func
+
+	    function isEmpty(input) {
+	        if (input.value == null || input.value.replace(/ /gi,"") == "") {
+	            return true;
+	        }
+	        return false;
+	    }
+
+	    function check_date_YMD(strVal) {
+	        //alert(strVal);
+	        var num = strVal;
+	        while (num.search("/") != -1){
+	            num = num.replace("/","");
+	        }
+	        return num;
+	    }
+
+	    function startPage() {
+
+	        if ("A" == "P" || "A" == "F" || "A" == "K") {        //수정
+	        	acntSearch.telNoDdd.value  = "";
+	        	acntSearch.telNoKuk.value  = "";
+	        	acntSearch.telNoNo.value   = "";
+	            acntSearch.loseCont.value  = "";
+	            acntSearch.loseLocation.value  = "N";
+
+	            for ( var i = 0; i< acntSearch.guideYn.options.length; i++) {
+	                if ("Y" == acntSearch.guideYn.options[i].value) {
+	                	acntSearch.guideYn.options[i].selected = true;
+	                    break;
+	                }
+
+	            }
+
+	            for (var i = 0 ; i< acntSearch.loseType.options.length;i++) {
+
+	                if (""== acntSearch.loseType.options[i].value) {
+	                	acntSearch.loseType.options[i].selected = true;
+	                }
+	            }
+
+
+
+	        }
+	    }
+
+	    function fn_lostcancel(){   // 분실해제
+	    	//2009 1130   분실해제 처리시 멤버스에서 당분간 해제 처리 못함.
+	    	find_layer('hide','sub_pop');
+	    	alert("시스템 업그레이드로 인해 불편을 드려죄송합니다.\n분실정지해제는 고객센터(휴대폰 100번)를 통해 가능합니다.");
+
+	    	return;
+
+
+	    }
+
+
+			function pwdCk(input) {
+			   // alert(input.value);
+				if (input.value == "C") {
+				    document.acntSearch.strPwdInsert.value = "";
+					document.acntSearch.strPwdInsert.disabled = true;
+					document.getElementById("strPwdInsert").style.backgroundColor="#DCDCDC";
+					document.acntSearch.strPwdOk.value = "";
+					document.acntSearch.strPwdOk.disabled = true;
+					document.getElementById("strPwdOk").style.backgroundColor="#DCDCDC";
+				}else{
+				    if (document.acntSearch.strPwdInsert.disabled == true ) {
+				      document.acntSearch.strPwdInsert.disabled = false;
+				      document.getElementById("strPwdInsert").style.backgroundColor="";
+				      document.acntSearch.strPwdOk.disabled = false;
+				      document.getElementById("strPwdOk").style.backgroundColor="";
+				    }
+				}
+				return false;
+			}
+
+	</script>
+	<!-- e : 기존소스유지 -->
+
 </head>
 
 
@@ -46,7 +668,7 @@
 <script type="text/javascript">
 	$(function(){
 		$('.remote-btn01').on('click',function(){
-			$('.circuitCase01').show().focus();
+			$('.circuitCase01').show();
 			$('.circuitCase02').hide();
 			alert('변경완료. 현재상태 select box');
 			return false;
@@ -54,7 +676,7 @@
 
 		$('.remote-btn02').click(function(){
 			$('.circuitCase01').hide();
-			$('.circuitCase02').show().focus();
+			$('.circuitCase02').show();
 			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
 			return false;
 		});
@@ -119,8 +741,40 @@
 					<div class="comm_contsInner grayBox">
 						<div class="commTitleWrap pt34">
 							<h4 class="comm_scnTitle02">신청/해제</h4>
+							<span class="rightBtn top32">
+								<a href="#closeInfoLayerPop" class="btnSty mid blk arr" id="closeInfoPopOpen" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">가입해지안내</a>
+							</span>
+							<div class="pop_layerWrap" id="closeInfoLayerPop" style="display:none;">
+								<div class="pop_wrap">
+
+									<!-- s : header -->
+									<div class="pop_header">
+										<h1>가입해지</h1>
+									</div>
+									<!-- e : header -->
+
+									<!-- s : contents -->
+									<div class="pop_conts">
+										<div class="pop_contsContainer">
+											<p>휴대폰을 해지하기 위해서는 담당영업대표 또는 가입대리점에 신청해 주시기 바랍니다.</p>
+										</div>
+									</div>
+									<!-- e : contents -->
+
+								</div>
+								<!-- s : footer -->
+								<div class="pop_footer">
+									<div class="pop_footerInner">
+										<p class="pop_close">
+											<a href="#closeInfoPopOpen" >닫기</a>
+										</p>
+									</div>
+								</div>
+								<!-- e : footer -->
+							</div>
 						</div>
 
+						<form method="post" name="acntSearch">
 						<!-- s : search common -->
 						<div class="comm_circuitSearch">
 							<fieldset>
@@ -141,7 +795,7 @@
 									<!-- e : radio Group -->
 
 
-									
+
 									<!-- s : select Contents -->
 									<div class="circuitSelectCont">
 										<label for="selectbox01" class="blind">상품 선택</label>
@@ -152,7 +806,7 @@
 										</div>
 
 										<label for="selectbox02" class="blind">회선 선택</label>
-										
+
 										<div class="selectWrap w195 circuitCase01">
 											<select id="selectbox02">
 												<option>010-1234-5678 [대표]</option>
@@ -163,7 +817,20 @@
 											<span>010-1234-5678 [대표]</span>
 										</a>
 										<!-- e : 핸드폰 번호가 30개 초과시 -->
-										<a href="#" class="btnSty mid blk w26">조회</a>
+										<a href="javascript:selectLostInfo();" class="btnSty mid blk w26">조회</a>
+
+										<!-- 전화번호 조회시 넘어오는 값 -->
+										<input type="hidden" name="searchBan"    value=""/> <!-- ban 조회 B, ctn 조회 S-->
+										<input type="hidden" name="searchAcntNo" value=""/><!-- ban -->
+										<input type="hidden" name="searchCtn"    value=""/> <!-- 전화번호 -->
+										<input type="hidden" name="svcCntrNo"    value=""/><!-- 서비스번호 -->
+										<input type="hidden" name="clickTest"    value="N" /> <!-- 조회버튼 제어 -->
+										<!-- 화면 암호화 시작 -->
+										<input type="hidden" name="ENCRYPT_R_ENCKEY"        value="JLT5BwNxqH81ZFBWpvw12fQ44ehaIurPemJkbabjB8cokd1YQL9%2FFLN0CeZXU%2Fk9X4tOClMgAi3habuzUZaHND4HnCY64DSWyTTIG5hF%2FdV2cLrpkH6WLNxBWi%2FMzyF9dsNrnpzPQiavmD%2Bq98ilV0o2R04eLA5JtbmLBgzMLMs%3D"/>
+										<input type="hidden" name="ENCRYPT_S_searchAcntNo"  value="lUTuQz%2BQZf4617I4bSGz8g%3D%3D"/>       <!-- 암호화 ban -->
+										<input type="hidden" name="ENCRYPT_S_searchCtn"     value="IUiM9eLk4%2Bhn0BT21kF7WA%3D%3D"/>       <!-- 암호화 대표번호 -->
+										<input type="hidden" name="ENCRYPT_S_svcCntrNo"     value="8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D"/> <!-- 암호화 서비스번호 -->
+										<!-- 화면 암호화 끝   -->
 									</div>
 									<!-- e : select Contents -->
 
@@ -189,7 +856,7 @@
 												<!-- s : header -->
 												<div class="pop_header">
 													<h4>명세서 번호 선택</h4>
-													
+
 													<!-- s : 검색 영역 -->
 													<div class="pop_billSrchWhiteBox">
 														<fieldset>
@@ -259,7 +926,6 @@
 						</div>
 						<!-- e : search common -->
 
-
 						<!-- s :  search result -->
 						<div class="comm_tableBrdr mt20 pb30">
 							<table class="comm_table" summary="신고일자, 고객명, 휴대폰 번호, 분실지역, 연락처분실유형, 고객요청사항, 연락전화번호, 분실내용, 분실해제 비밀번호 순서로 분실신고 신청 정보를 입력할 수 있는 표 입니다.">
@@ -286,14 +952,14 @@
 										<th scope="row" class="left">분실지역</th>
 										<td class="last">
 											<div class="comm_radio">
-												<input type="radio" name="location" id="dom" />
+												<input type="radio" name="loseLocation" id="loseLocation" value="N" checked="checked" />
 												<i></i>
-												<label for="dom">국내분실</label>
+												<label for="loseLocation">국내분실</label>
 											</div>
 											<div class="comm_radio ml15">
-												<input type="radio" name="location" id="int" />
+												<input type="radio" name="loseLocation" id="loseLocation2" value="Y" />
 												<i></i>
-												<label for="int">해외분실</label>
+												<label for="loseLocation2">해외분실</label>
 											</div>
 										</td>
 									</tr>
@@ -301,39 +967,42 @@
 										<th scope="row" class="left">연락처분실유형</th>
 										<td class="last">
 											<div class="comm_checkbox">
-												<input type="checkbox" name="device" id="device" />
+												<input type="checkbox" name="loseType" id="loseType" value="H" checked="checked" />
 												<i></i>
-												<label for="device">휴대폰 분실</label>
+												<label for="loseType">휴대폰 분실</label>
 											</div>
 											<div class="comm_checkbox ml15">
-												<input type="checkbox" name="usim" id="usim" />
+												<input type="checkbox" name="loseType" id="loseType2" value="U" checked="checked" />
 												<i></i>
-												<label for="usim">USIM 카드 분실</label>
+												<label for="loseType2">USIM 카드 분실</label>
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<th scope="row" class="left">고객요청사항</th>
+										<th scope="row" class="left">
+											<label for="guideYn">고객요청사항</label>
+										</th>
 										<td class="last">
 											<div class="selectWrap w170">
-												<select id="clientDesc">
-													<option>발신정지(착신가능)</option>
-													<option>착발신정지</option>
-												</select>
+												<select name="guideYn" id="guideYn" onchange="javascript:pwdCk(this);" title="고객요청사항">
+                        	<option value="Y">발신정지(착신가능)</option>
+                          <option value="N">발착신정지</option>
+                          <option value="C">정지없음</option>
+                        </select>
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<th scope="row" class="left vt">
-											<label for="telFist">연락전화번호</label>
+											<label for="telNoDdd">연락전화번호</label>
 										</th>
 										<td class="last">
 											<div class="comm_inputTel">
-												<input type="text" id="telFirst" name="telFirst" title="연락전화번호 첫번째자리" maxlength="4" />
+												<input name="telNoDdd" id="telNoDdd" type="text" size="3" maxlength="3" onblur="numDataFormat(this);" title="연락전화번호 앞자리"/>
 												<span>-</span>
-												<input type="text" id="telMid" name="telMid" title="연락전화번호 가운데자리" maxlength="4" />
+												<input name="telNoKuk" type="text"  size="4" maxlength="4" onblur="numDataFormat(this);" title="연락전화번호 가운데자리"/>
 												<span>-</span>
-												<input type="text" id="telLast" name="telLast" title="연락전화번호 끝자리" maxlength="4" />
+												<input name="telNoNo" type="text"  size="4" maxlength="4" onblur="numDataFormat(this);" title="연락전화번호 뒷자리"/>
 											</div>
 											<p class="mobilePauseDesc">실제 연락 가능하신 전화번호</p>
 										</td>
@@ -343,7 +1012,7 @@
 											<label for="lostDesc">분실내용</label>
 										</th>
 										<td class="last">
-											<textarea id="lostDesc" class="w100p h100 clientMemo" cols="30" rows="10"></textarea>
+											<textarea name="loseCont" id="loseCont" class="w100p h100 clientMemo" cols="30" rows="10" size="65" maxlength="40" value="" title="분실내용"></textarea>
 										</td>
 									</tr>
 									<tr>
@@ -351,15 +1020,16 @@
 										<td class="last">
 											<div class="mobilePauseBottomDot">
 												<div class="comm_checkbox">
-													<input name="setPwd" id="setPwd" type="checkbox" /><i></i>
-													<label for="setPwd">비밀번호 설정(4~8자리 숫자)</label>
+													<input type="checkbox" id="chkAgree" name="chkAgree" onclick="chkValue();" title="비밀번호설정" />
+													<i></i>
+													<label for="chkAgree">비밀번호 설정(4~8자리 숫자)</label>
 												</div>
 											</div>
 											<div class="mobilePauseSetPwd">
-												<label for="pwdInput" class="setPwdLabel pwdLabel labelPlaceholder">비밀번호 입력</label>
-												<input id="pwdInput" class="pwdInput" maxlength="8" disabled="true" type="password" />
-												<label for="pwdchk" class="chkPwdLabel pwdLabel labelPlaceholder">비밀번호 확인</label>
-												<input id="pwdchk" class="pwdInput" maxlength="8" disabled="true" type="password" />
+												<label for="strPwdInsert" class="setPwdLabel pwdLabel labelPlaceholder">비밀번호 입력</label>
+												<input type="password" id="strPwdInsert" size="30" name="strPwdInsert" maxlength="" value="" title="비밀번호 입력" />
+												<label for="strPwdOk" class="chkPwdLabel pwdLabel labelPlaceholder">비밀번호 확인</label>
+												<input type="password" id="strPwdOk" size="30" name="strPwdOk" maxlength="" value="" title="비밀번호 확인"  />
 											</div>
 											<p class="mobilePauseDesc">분실정지 신청시에 설정한 비밀번호 입력 후 해제가 가능합니다. 숫자 4~8자리로 입력해주세요.</p>
 										</td>
@@ -367,7 +1037,83 @@
 								</tbody>
 							</table>
 						</div>
+						</form>
 						<!-- e : search result -->
+						<form name="formSave" method="post" action="PcsLostAddChge.action">
+							<!-- target="iframe_empty" -->
+							<input type="hidden" name="runMode"/>
+							<input type="hidden" name="subStatus"/>
+							<input type="hidden" name="reqNo"/>
+							<input type="hidden" name="approvalNo"/>
+							<input type="hidden" name="ban"/>
+							<input type="hidden" name="userName"/>
+							<input type="hidden" name="ctn"/>
+							<input type="hidden" name="esn"/>
+							<input type="hidden" name="msn"/>
+							<input type="hidden" name="modelId"/>
+							<input type="hidden" name="loseDate"/>
+							<input type="hidden" name="losePlace"/>
+							<input type="hidden" name="loseCont"/>
+							<input type="hidden" name="guideYn"/>
+							<input type="hidden" name="reqDate"/>
+							<input type="hidden" name="findStatus"/>
+							<input type="hidden" name="findReqNo"/>
+							<input type="hidden" name="returnDate"/>
+							<input type="hidden" name="keepYn"/>
+							<input type="hidden" name="returnOrganization"/>
+							<input type="hidden" name="reqName"/>
+							<input type="hidden" name="contactTelno"/>
+							<input type="hidden" name="updateflg"/>
+							<input type="hidden" name="subscriberStatus"/>
+							<input type="hidden" name="subscriberNo"/>
+							<input type="hidden" name="contractNum"/>
+							<input type="hidden" name="customerId"/>
+							<!--  <input type="hidden" name="cfu_yn"/> -->
+							<input type="hidden" name="imei"/>
+							<input type="hidden" name="iccId"/>
+							<input type="hidden" name="loseType"/>
+							<input type="hidden" name="loseLocation"/>
+							<input type="hidden" name="strPwdInsert" />
+
+							<input type="hidden" name="requestStatus" value=""/>
+							<input type="hidden" name="reqOrgId" value=""/>
+							<input type="hidden" name="serviceDate" value="null"/>
+							<input type="hidden" name="zipCode" value=""/>
+							<input type="hidden" name="userAddr1" value=""/>
+							<input type="hidden" name="userAddr2" value=""/>
+							<input type="hidden" name="visitDate" value=""/>
+
+							<input type="hidden" name="searchAcntNo2" value=""/>
+							<input type="hidden" name="searchCtn2" value=""/>
+							<input type="hidden" name="customerId2" value="483002811"/>
+							<input type="hidden" name="g3_ind2" value="03"/>
+							<input type="hidden" name="oldContractNum2" value=""/>
+							<input type="hidden" name="svcCntrNo2" value=""/>
+							<input type="hidden" name="ColDelinqStatus2" value="N"/>
+
+							<input type="hidden" name="ENCRYPT_R_ENCKEY"        value="JLT5BwNxqH81ZFBWpvw12fQ44ehaIurPemJkbabjB8cokd1YQL9%2FFLN0CeZXU%2Fk9X4tOClMgAi3habuzUZaHND4HnCY64DSWyTTIG5hF%2FdV2cLrpkH6WLNxBWi%2FMzyF9dsNrnpzPQiavmD%2Bq98ilV0o2R04eLA5JtbmLBgzMLMs%3D"/>
+							<input type="hidden" name="ENCRYPT_S_ban"/>
+							<input type="hidden" name="ENCRYPT_S_ctn"/>
+							<input type="hidden" name="ENCRYPT_S_subscriberNo"/>
+							<input type="hidden" name="ENCRYPT_S_searchAcntNo2"  value="lUTuQz%2BQZf4617I4bSGz8g%3D%3D"/>       <!-- 암호화 ban -->
+							<input type="hidden" name="ENCRYPT_S_searchCtn2"     value="IUiM9eLk4%2Bhn0BT21kF7WA%3D%3D"/>       <!-- 암호화 대표번호 -->
+							<input type="hidden" name="ENCRYPT_S_svcCntrNo2" value="8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D"/>
+							<input type="hidden" name="ENCRYPT_S_oldContractNum2" value="8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D"/>
+							<input type="hidden" name="ENCRYPT_S_contractNum" value="8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D"/>
+
+							</form>
+							<form name="formCancle" method="post" action="PcsLostAdd.action"/>
+								<input type="hidden" name="searchAcntNo" value=""/>
+								<input type="hidden" name="searchCtn" value=""/>
+								<input type="hidden" name="svcCntrNo" value=""/>
+								<!-- 화면 암호화 시작 -->
+							<input type="hidden" name="ENCRYPT_R_ENCKEY"        value="JLT5BwNxqH81ZFBWpvw12fQ44ehaIurPemJkbabjB8cokd1YQL9%2FFLN0CeZXU%2Fk9X4tOClMgAi3habuzUZaHND4HnCY64DSWyTTIG5hF%2FdV2cLrpkH6WLNxBWi%2FMzyF9dsNrnpzPQiavmD%2Bq98ilV0o2R04eLA5JtbmLBgzMLMs%3D"/>
+							<input type="hidden" name="ENCRYPT_S_searchAcntNo"  value="lUTuQz%2BQZf4617I4bSGz8g%3D%3D"/>       <!-- 암호화 ban -->
+							<input type="hidden" name="ENCRYPT_S_searchCtn"     value="IUiM9eLk4%2Bhn0BT21kF7WA%3D%3D"/>       <!-- 암호화 대표번호 -->
+							<input type="hidden" name="ENCRYPT_S_svcCntrNo"     value="8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D"/> <!-- 암호화 서비스번호 -->
+							<!-- 화면 암호화 끝   -->
+						</form>
+						<!-- 기타내용 끝// -->
 					</div>
 				</div>
 
