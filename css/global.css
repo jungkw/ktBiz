@@ -124,7 +124,7 @@ border-radius: 3px 3px 3px 3px;
 -webkit-border-radius: 3px 3px 3px 3px;
 }
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#df2428 !important; text-decoration: none !important; border-color:#df2428;}
-.btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 30px;}
+.btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 34px;}
 .btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 26px;}
 .btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 22px;}
 .btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 16px;}
