@@ -73,7 +73,7 @@
 .cfmOllehMainBill .billTermLink a {display:inline-block; padding-right:24px; width:105px; height:16px; background:url(../images/icon/index_icon_note.png) no-repeat 100% 0;}
 .cfmOllehMainBill .billTermLink a:focus,
 .cfmOllehMainBill .billTermLink a:hover {text-decoration:none!important;}
-.cfmOllehMainBill .billTermLink a span {position:relative; display:block; height:14px; font-size:14px; line-height:14px; border-bottom:1px solid #9a9a9a; letter-spacing:-0.025em; word-spacing:-0.025em; color:#000; font-weight:700;}
+.cfmOllehMainBill .billTermLink a span {position:relative; height:14px; font-size:14px; line-height:14px; border-bottom:1px solid #9a9a9a; letter-spacing:-0.025em; word-spacing:-0.025em; color:#000; font-weight:700;}
 .cfmOllehMainBill .billTermLink a span:after {content:''; position:absolute; bottom:-2px; left:0; display:block; width:100%; border-top:1px solid #c8c8c8;}
 .cfmOllehMainBill .billTermLink a:focus span,
 .cfmOllehMainBill .billTermLink a:hover span {color:#ef1c25; border-color:#ef1c25;}
