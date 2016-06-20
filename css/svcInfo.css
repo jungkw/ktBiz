@@ -4,7 +4,7 @@
 .mobilePauseBottomDot {padding:0 0 13px 0;border-bottom:1px dashed #cbcbcb;}
 .mobilePauseSetPwd {padding:10px 0 0 0;position: relative;}
 .mobilePauseSetPwd .pwdInput {width:112px;}
-.mobilePauseSetPwd .pwdLabel {width:104px;height:25px;position: absolute; top:10px;color: #666;font-size:12px;padding:5px 0 0 8px;}
+.mobilePauseSetPwd .pwdLabel {width:104px;height:25px;position: absolute; top:10px;color: #666;font-size:12px;padding:3px 0 0 8px;}
 .mobilePauseSetPwd .setPwdLabel {left:0px;}
 .mobilePauseSetPwd .chkPwdLabel {left:117px;}
 p.mobilePauseDesc {width:380px;margin:10px 0 0 0;padding-left:17px;color:#666;font-size:13px;background: url('../images/icon/svc_icon_warning.png') 0 7px no-repeat;}
