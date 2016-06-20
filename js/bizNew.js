@@ -1088,9 +1088,9 @@ $(document).ready(function(){
                   lnbItem += "<li id='li_BCD' class=''>";
                       lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCD' title='하위메뉴 열기'>일시정지</a>";
                       lnbItem += "<ul id='sub_BCD' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDA'>모바일 신청/해제</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDB'>모바일 이력조회</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDC'>일반전화 신청/해제</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDA'>신청</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDB'>해제</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDC'>이력조회</a></li>";
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
                   lnbItem += "<li id='li_BCE' class=''>";
