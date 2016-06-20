@@ -46,7 +46,7 @@
 <script type="text/javascript">
 	$(function(){
 		$('.remote-btn01').on('click',function(){
-			$('.circuitCase01').show().focus();
+			$('.circuitCase01').show();
 			$('.circuitCase02').hide();
 			alert('변경완료. 현재상태 select box');
 			return false;
@@ -54,7 +54,7 @@
 
 		$('.remote-btn02').click(function(){
 			$('.circuitCase01').hide();
-			$('.circuitCase02').show().focus();
+			$('.circuitCase02').show();
 			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
 			return false;
 		});

@@ -58,7 +58,6 @@
 	$(function(){
 		$('.remote-btn01').on('click',function(){
 			$('.index_selectbox').show();
-			$('#index_select').focus()
 			$('.billTermSelectBtn').hide();
 			alert('변경완료. 현재상태 select box');
 			return false;
@@ -66,7 +65,7 @@
 
 		$('.remote-btn02').click(function(){
 			$('.index_selectbox').hide();
-			$('.billTermSelectBtn').show().focus();
+			$('.billTermSelectBtn').show();
 			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
 			return false;
 		});
