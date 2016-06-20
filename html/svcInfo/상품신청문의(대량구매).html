@@ -130,22 +130,23 @@
 											<td class="last">
 												<input type="text" id="companyName" value="지어소프트 ****" disabled="true" />
 											</td>
+										</tr>
 										<tr>
 											<th scope="row" class="left">회사 주소</th>
 											<td class="last">
 												<div class="radioGroup">
 													<div class="comm_radio">
-														<input type="radio" name="adrs_type_cd" id="rdEmail2" checked="true"><i></i>
+														<input type="radio" name="adrs_type_cd" id="rdEmail2" checked="true" /><i></i>
 														<label for="rdEmail2">지번주소</label>
 													</div>
 													<div class="comm_radio ml15">
-														<input type="radio" name="adrs_type_cd" id="rdEmail3" ><i></i>
+														<input type="radio" name="adrs_type_cd" id="rdEmail3" /><i></i>
 														<label for="rdEmail3">새주소</label>
 													</div>
 												</div>
-												<p class="mt8"><input type="text" disabled="true" class="mr5" title="번지수가 노출됩니다."><a href="#postLayerPop" class="btnSty mid" id="postPopOpen" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">우편번호찾기</a></p>
-												<p class="mt8"><input type="text" class="w100p" disabled="true" title="기본주소가 노출됩니다."></p>
-												<p class="mt8"><input type="text" class="w100p" disabled="true" title="상세주소가 노출됩니다."></p>
+												<p class="mt8"><input type="text" disabled="true" class="mr5" title="번지수가 노출됩니다." /><a href="#postLayerPop" class="btnSty mid" id="postPopOpen" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">우편번호찾기</a></p>
+												<p class="mt8"><input type="text" class="w100p" disabled="true" title="기본주소가 노출됩니다." /></p>
+												<p class="mt8"><input type="text" class="w100p" disabled="true" title="상세주소가 노출됩니다." /></p>
 											</td>
 										</tr>
 										<tr>
@@ -210,9 +211,9 @@
 										<tr>
 											<th scope="row" class="left"><label for="mailAddr">이메일 주소</label></th>
 											<td class="last">
-												<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15">
+												<input id="mailAddr" type="text" class="comm_mailInput01" size="15" maxlength="15" />
 												<span>@</span>
-												<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled">
+												<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled" />
 												<div class="selectWrap">
 													<select id="emailAddr2" class="comm_mailInput03" title="메일 도메인을 선택해주세요." onchange="$.ktBizMailChg(this); return false;">
 														<option value="">선택하세요.</option>
@@ -289,7 +290,7 @@
 						        </div>
 						        <!-- e : 탭 영역 -->
 
-						          <h6 class="blind">도로/건물명으로 찾기</h2>
+						          <h6 class="blind">도로/건물명으로 찾기</h6>
 						          <form name="main" method="post" action="/NewComPostSearch.action" onsubmit="return search2();">
 						              <fieldset>
 						                  <legend>우편번호 검색 필드</legend>
