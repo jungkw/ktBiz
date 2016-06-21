@@ -11,3 +11,5 @@ p.mobilePauseDesc {width:380px;margin:10px 0 0 0;padding-left:17px;color:#666;fo
 .clientMemo {font-size: 13px;color:#666;}
 
 p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../images/icon/svc_icon_warning_red.png') 0 2px no-repeat;line-height: 13px;}
+
+.svcInfo_planList {background:#fff; border:1px solid #ddd; border-bottom:0;}
