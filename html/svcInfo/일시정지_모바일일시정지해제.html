@@ -106,7 +106,7 @@
 					<!--<script type="text/javascript">ktBizLocationBar();</script>-->
 					<a href="#home" class="home" onclick="" accesskey="0">
 						<img src="../../images/common/cfm_olleh_icon_home.png" alt="사이트 메인으로" />
-					</a> &gt;&nbsp; <a href="#home" onclick="">신청/변경</a> &gt; <a href="">일시정지</a> &gt; <a href="">해제</a>
+					</a><a href="" onclick="">My페이지</a> &gt; <a href="#home" onclick="">신청/변경</a> &gt; <a href="">일시정지</a> &gt; <a href="">해제</a>
 				</div>
 			</div>
 
@@ -157,12 +157,12 @@
 										
 										<div class="selectWrap w195 circuitCase01">
 											<select id="selectbox02">
-												<option>010-1234-5678 [대표]</option>
+												<option>010-1234-5678</option>
 											</select>
 										</div>
 										<!-- s : 핸드폰 번호가 30개 초과시 -->
 										<a href="#billLayerPop"  id="billPopOpen01"class="selectric w195 circuitCase02" title="레이어열림" style="display: none" onclick="$.ktBizPopClick(this); return false;" >
-											<span>010-1234-5678 [대표]</span>
+											<span>010-1234-5678</span>
 										</a>
 										<!-- e : 핸드폰 번호가 30개 초과시 -->
 										<a href="#" class="btnSty mid blk w26">조회</a>
@@ -172,7 +172,7 @@
 									<!-- s : Input Contents -->
 									<div class="circuitInputCont" style="display:none">
 										<label for="circuitInput" class="blind">회선번호 입력</label>
-										<input type="text" id="circuitInput" class="w195 circuitCase01" />
+										<input type="text" id="circuitInput" class="w195 circuitCase01placeholder" value="예) 01012345678" />
 										<a href="#billLayerPop" id="billPopOpen02" class="circuitCase02 circuitInputPop w195" style="display: none" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">회선번호 찾기 레이어 팝업 열림</span></a>
 										<a href="#" class="btnSty mid blk w26">조회</a>
 									</div>
@@ -306,27 +306,19 @@
 					<h4 class="title">꼭 확인하세요!</h4>
 					<ul class="notice-list">
 						<li>
-							연간 일시 정지 가능 기간은 년 최대 180일이고, 연 2회까지 가능합니다. <br/>(일시정지 신청 예시)
+							연간 일시정지 가능 기간은 년 최대 180일이고, 연 2회까지 가능합니다. <br/>(일시정지 신청 예시) 
 							<ul>
 								<li class="noIcon">2011년 12월 정지 후 2012년 1월에 정지 복구 시 2012년 정지 횟수 및 기간에 포함됩니다.</li>
 								<li class="noIcon">2012년 1월1일 일시정지하여 1월3일 복구하고 1월5일 다시 일시정지를 할 경우 잔여기간은 1월5일부터 178일간 정지가능</li>
 							</ul>
 						</li>
-						<li>일시정지 기간 선택시 설정하신 해제일 00시에 자동으로 일시정지가 해제됩니다.</li>
 						<li>일시정지 기간 미선택시 신청일로 부터 180일 경과 후 바로 이용 중단되며, 이용 중단시 바로 무과금 됩니다.</li>
-						<li>이용중단 3개월 이후 직권해지 대상자에 포함됩니다.(*2008년11월1일 이전 일시 정지 고객도 동일 적용)</li>
-						<li>분실정지 일수는 일시정지 180일에 포함되지 않습니다.</li>
-						<li>일시 정지 시 월정액 : 3,500(부가세 포함 3,850원)</li>
+						<li>이용중단 3개월 이후 직권해지 대상자에 포함됩니다.(*2008년11월1일 이전 일시정지 고객도 동일 적용)</li>
+						<li>분실정지 일수는 일시정지 180일에 포함되지 않습니다. </li>	
+						<li>일시정지 시 월정액 : 3,500(부가세 포함 3,850원)</li>
 						<li>발신정지는 30일만 가능하며, 30일 이후에는 착발신정지로 전환됩니다.</li>
-						<li>
-							<p>이용중단 전환 예정일 3일전에 이용중단 내용을 문자메세지로 알려드립니다.</p>
-							<p>일시정지 신청 후 이용중단 상태로 자동전환시 명세서를 통해 안내해드립니다.</p>
-						</li>
-						<li>고객님이 직접 일시정지 기간을 설정하실 수 있습니다. 단, 일시정지 가능일수에 한합니다.</li>
-						<li>
-							<p>분실신고 해제 후 분실정지에 해당하는 기본료인 3,500(부가세 포함 3,850원)이 부가됩니다.</p>
-							<p>일시정지 비밀번호 분실시 신분증(본인확인 수단)을 지참하여 가까운 kt Plaza 혹은 고객센터 방문 후 해제 가능합니다.</p>
-						</li>
+						<li>일시정지 신청 후 이용중단 상태로 자동전환시 명세서를 통해 안내해드립니다.</li>
+						<li>일시정지 비밀번호 분실시 본인확인 수단(신분증, 사업자등록증, 위임장 등)을 지참하여 가까운 kt Plaza 혹은 고객센터 방문 후 해제 가능합니다.</li>
 					</ul>
 				</div>
 

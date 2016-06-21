@@ -728,7 +728,7 @@
 					<!--<script type="text/javascript">ktBizLocationBar();</script>-->
 					<a href="#home" class="home" onclick="" accesskey="0">
 						<img src="../../images/common/cfm_olleh_icon_home.png" alt="사이트 메인으로" />
-					</a> &gt;&nbsp; <a href="#home" onclick="">신청/변경</a> &gt; <a href="">분실신고</a> &gt; <a href="">신청/해제</a>
+					</a><a href="" onclick="">My페이지</a> &gt; <a href="#home" onclick="">신청/변경</a> &gt; <a href="">분실신고</a> &gt; <a href="">신청/해제</a>
 				</div>
 			</div>
 
@@ -809,12 +809,12 @@
 
 										<div class="selectWrap w195 circuitCase01">
 											<select id="selectbox02">
-												<option>010-1234-5678 [대표]</option>
+												<option>010-1234-5678</option>
 											</select>
 										</div>
 										<!-- s : 핸드폰 번호가 30개 초과시 -->
 										<a href="#billLayerPop"  id="billPopOpen01"class="selectric w195 circuitCase02" title="레이어열림" style="display: none" onclick="$.ktBizPopClick(this); return false;" >
-											<span>010-1234-5678 [대표]</span>
+											<span>010-1234-5678</span>
 										</a>
 										<!-- e : 핸드폰 번호가 30개 초과시 -->
 										<a href="javascript:selectLostInfo();" class="btnSty mid blk w26">조회</a>
@@ -837,7 +837,7 @@
 									<!-- s : Input Contents -->
 									<div class="circuitInputCont" style="display:none">
 										<label for="circuitInput" class="blind">회선번호 입력</label>
-										<input type="text" id="circuitInput" class="w195 circuitCase01" />
+										<input type="text" id="circuitInput" class="w195 circuitCase01 placeholder" value="예) 01012345678" />
 										<a href="#billLayerPop" id="billPopOpen02" class="circuitCase02 circuitInputPop w195" style="display: none" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">회선번호 찾기 레이어 팝업 열림</span></a>
 										<a href="#" class="btnSty mid blk w26">조회</a>
 									</div>
@@ -1022,7 +1022,7 @@
 												<div class="comm_checkbox">
 													<input type="checkbox" id="chkAgree" name="chkAgree" onclick="chkValue();" title="비밀번호설정" />
 													<i></i>
-													<label for="chkAgree">비밀번호 설정(4~8자리 숫자)</label>
+													<label for="chkAgree">비밀번호 설정(4~8자리 숫자만 입력가능)</label>
 												</div>
 											</div>
 											<div class="mobilePauseSetPwd">
@@ -1031,7 +1031,7 @@
 												<label for="strPwdOk" class="chkPwdLabel pwdLabel labelPlaceholder">비밀번호 확인</label>
 												<input type="password" id="strPwdOk" class="pwdInput" size="30" name="strPwdOk" maxlength="" value="" title="비밀번호 확인" disabled="disabled" />
 											</div>
-											<p class="mobilePauseDesc">분실정지 신청시에 설정한 비밀번호 입력 후 해제가 가능합니다. 숫자 4~8자리로 입력해주세요.</p>
+											<p class="mobilePauseDesc">분실정지 신청시에 설정한 비밀번호 입력 후 해제가 가능합니다.</p>
 										</td>
 									</tr>
 								</tbody>
@@ -1107,13 +1107,13 @@
 								<input type="hidden" name="searchCtn" value=""/>
 								<input type="hidden" name="svcCntrNo" value=""/>
 								<!-- 화면 암호화 시작 -->
-							<input type="hidden" name="ENCRYPT_R_ENCKEY"        value="JLT5BwNxqH81ZFBWpvw12fQ44ehaIurPemJkbabjB8cokd1YQL9%2FFLN0CeZXU%2Fk9X4tOClMgAi3habuzUZaHND4HnCY64DSWyTTIG5hF%2FdV2cLrpkH6WLNxBWi%2FMzyF9dsNrnpzPQiavmD%2Bq98ilV0o2R04eLA5JtbmLBgzMLMs%3D"/>
-							<input type="hidden" name="ENCRYPT_S_searchAcntNo"  value="lUTuQz%2BQZf4617I4bSGz8g%3D%3D"/>       <!-- 암호화 ban -->
-							<input type="hidden" name="ENCRYPT_S_searchCtn"     value="IUiM9eLk4%2Bhn0BT21kF7WA%3D%3D"/>       <!-- 암호화 대표번호 -->
-							<input type="hidden" name="ENCRYPT_S_svcCntrNo"     value="8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D"/> <!-- 암호화 서비스번호 -->
-							<!-- 화면 암호화 끝   -->
-						</form>
-						<!-- 기타내용 끝// -->
+								<input type="hidden" name="ENCRYPT_R_ENCKEY"        value="JLT5BwNxqH81ZFBWpvw12fQ44ehaIurPemJkbabjB8cokd1YQL9%2FFLN0CeZXU%2Fk9X4tOClMgAi3habuzUZaHND4HnCY64DSWyTTIG5hF%2FdV2cLrpkH6WLNxBWi%2FMzyF9dsNrnpzPQiavmD%2Bq98ilV0o2R04eLA5JtbmLBgzMLMs%3D"/>
+								<input type="hidden" name="ENCRYPT_S_searchAcntNo"  value="lUTuQz%2BQZf4617I4bSGz8g%3D%3D"/>       <!-- 암호화 ban -->
+								<input type="hidden" name="ENCRYPT_S_searchCtn"     value="IUiM9eLk4%2Bhn0BT21kF7WA%3D%3D"/>       <!-- 암호화 대표번호 -->
+								<input type="hidden" name="ENCRYPT_S_svcCntrNo"     value="8GwyPp%2BUYtuX%2BXf9nBmh%2Bg%3D%3D"/> <!-- 암호화 서비스번호 -->
+								<!-- 화면 암호화 끝   -->
+							</form>
+							<!-- 기타내용 끝// -->
 					</div>
 				</div>
 
