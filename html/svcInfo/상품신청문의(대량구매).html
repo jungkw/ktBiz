@@ -128,23 +128,14 @@
 												<label for="companyName">회사명</label>
 											</th>
 											<td class="last">
-												<input type="text" id="companyName" value="지어소프트 ****" disabled="true" />
+												지어소프*
 											</td>
 										</tr>
 										<tr>
 											<th scope="row" class="left">회사 주소</th>
 											<td class="last">
-												<div class="radioGroup">
-													<div class="comm_radio">
-														<input type="radio" name="adrs_type_cd" id="rdEmail2" checked="true" /><i></i>
-														<label for="rdEmail2">지번주소</label>
-													</div>
-													<div class="comm_radio ml15">
-														<input type="radio" name="adrs_type_cd" id="rdEmail3" /><i></i>
-														<label for="rdEmail3">새주소</label>
-													</div>
-												</div>
-												<p class="mt8"><input type="text" disabled="true" class="mr5" title="번지수가 노출됩니다." /><a href="#postLayerPop" class="btnSty mid" id="postPopOpen" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">우편번호찾기</a></p>
+												
+												<p ><input type="text" disabled="true" class="mr5" title="번지수가 노출됩니다." /><a href="#postLayerPop" class="btnSty mid" id="postPopOpen" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">우편번호찾기</a></p>
 												<p class="mt8"><input type="text" class="w100p" disabled="true" title="기본주소가 노출됩니다." /></p>
 												<p class="mt8"><input type="text" class="w100p" disabled="true" title="상세주소가 노출됩니다." /></p>
 											</td>
@@ -242,6 +233,7 @@
 											</th>
 											<td class="last">
 												<input type="text" id="subject" class="w100p"  />
+												<p class="mt8 bulletDg bpt8 font13 color666">제목은 한글 50, 영문 100자 까지 입력이 가능합니다.</p>
 											</td>
 										</tr>
 										<tr>
@@ -250,6 +242,7 @@
 											</th>
 											<td class="last">
 												<textarea id="lostDesc" name="content" class="w100p h100 clientMemo" cols="30" rows="10" onkeyup="javascript:js_msgsize(this.value);"></textarea>
+												<p class="mt8 bulletDg bpt8 font13 color666">한글 1000, 영문 2000자 까지 입력이 가능하며, 초과된 문자는 제외됩니다.</p>
 											</td>
 										</tr>
 										
