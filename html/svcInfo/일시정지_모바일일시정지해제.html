@@ -30,6 +30,17 @@
 	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
 	<script language="javascript" src="../../js/bizNewSelectBox.js" type="text/javascript"></script>
 
+	<!-- 레이어 팝업 보여주기용. -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var target = getUrlParameter();
+
+			$('#' + target[0] ).trigger('click');
+
+		});
+	</script>
+	
 </head>
 
 
@@ -172,7 +183,7 @@
 									<!-- s : Input Contents -->
 									<div class="circuitInputCont" style="display:none">
 										<label for="circuitInput" class="blind">회선번호 입력</label>
-										<input type="text" id="circuitInput" class="w195 circuitCase01placeholder" value="예) 01012345678" />
+										<input type="text" id="circuitInput" class="w195 circuitCase01 placeholder" value="예) 01012345678" />
 										<a href="#billLayerPop" id="billPopOpen02" class="circuitCase02 circuitInputPop w195" style="display: none" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">회선번호 찾기 레이어 팝업 열림</span></a>
 										<a href="#" class="btnSty mid blk w26">조회</a>
 									</div>
@@ -289,7 +300,13 @@
 										<td class="center">010-1234-5678</td>
 										<td class="center">2016.06.01</td>
 										<td class="center">*****</td>
-										<td class="last center"><a href="" class="btnSty mid arr">일시정지 해제</a></td>
+										<td class="last center"><a href="#mPauseLayerPop" id="mPopOpen01" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;">일시정지 해제</a></td>
+									</tr>
+									<tr>
+										<td colspan="4" class="noContents last">조회된 데이터가 없습니다.</td>
+									</tr>
+									<tr>
+										<td colspan="4" class="noContents last">검색결과가 없습니다.</td>
 									</tr>
 								</tbody>
 							</table>
@@ -308,19 +325,88 @@
 						<li>
 							연간 일시정지 가능 기간은 년 최대 180일이고, 연 2회까지 가능합니다. <br/>(일시정지 신청 예시) 
 							<ul>
-								<li class="noIcon">2011년 12월 정지 후 2012년 1월에 정지 복구 시 2012년 정지 횟수 및 기간에 포함됩니다.</li>
-								<li class="noIcon">2012년 1월1일 일시정지하여 1월3일 복구하고 1월5일 다시 일시정지를 할 경우 잔여기간은 1월5일부터 178일간 정지가능</li>
+								<li>2011년 12월 정지 후 2012년 1월에 정지 복구 시 2012년 정지 횟수 및 기간에 포함됩니다.</li>
+								<li>2012년 1월1일 일시정지하여 1월3일 복구하고 1월5일 다시 일시정지를 할 경우 잔여기간은 1월5일부터 178일간 정지가능</li>
 							</ul>
 						</li>
-						<li>일시정지 기간 미선택시 신청일로 부터 180일 경과 후 바로 이용 중단되며, 이용 중단시 바로 무과금 됩니다.</li>
-						<li>이용중단 3개월 이후 직권해지 대상자에 포함됩니다.(*2008년11월1일 이전 일시정지 고객도 동일 적용)</li>
-						<li>분실정지 일수는 일시정지 180일에 포함되지 않습니다. </li>	
-						<li>일시정지 시 월정액 : 3,500(부가세 포함 3,850원)</li>
-						<li>발신정지는 30일만 가능하며, 30일 이후에는 착발신정지로 전환됩니다.</li>
+						<li>
+							<p>일시정지 기간 미선택시 신청일로 부터 180일 경과 후 바로 이용 중단되며, 이용 중단시 바로 무과금 됩니다.</p>
+							<p>이용중단 3개월 이후 직권해지 대상자에 포함됩니다.(*2008년11월1일 이전 일시정지 고객도 동일 적용)</p>
+							<p>분실정지 일수는 일시정지 180일에 포함되지 않습니다.</p>
+							<p>일시정지 시 월정액 : 3,500(부가세 포함 3,850원)</p>
+							<p>발신정지는 30일만 가능하며, 30일 이후에는 착발신정지로 전환됩니다.</p>
+						</li>
 						<li>일시정지 신청 후 이용중단 상태로 자동전환시 명세서를 통해 안내해드립니다.</li>
 						<li>일시정지 비밀번호 분실시 본인확인 수단(신분증, 사업자등록증, 위임장 등)을 지참하여 가까운 kt Plaza 혹은 고객센터 방문 후 해제 가능합니다.</li>
 					</ul>
 				</div>
+
+
+
+
+				<!-- s : 레이어 팝업 -->
+				<div class="pop_mask"></div>
+				<div class="pop_layerWrap" id="mPauseLayerPop" style="width:630px; display: none">
+
+					<div class="pop_wrap">
+
+						<!-- s : header -->
+						<div class="pop_header">
+							<h4>일시정지 해제</h4>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts" >
+							<div class="pop_contsContainer">
+								<div class="comm_tableBrdr pop_svcMytime">
+									<table class="comm_table" summary="서비스번호, 고객요청사항, 일시정지기간을 확인할 수 있는 표 입니다.">
+										<caption>일시정지 해제 정보</caption>
+										<colgroup>
+											<col width="30%">
+											<col width="70%">
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">서비스번호</th>
+											<td class="last">010-1234-5678</td>
+										</tr>
+										<tr>
+											<th scope="row">고객요청사항</th>
+											<td class="last">발신정지 (착신기능)</td>
+										</tr>
+										<tr>
+											<th scope="row">일시정지기간</th>
+											<td class="last">
+												2016.05.22 ~ 2016.11.22
+											</td>
+										</tr>
+
+										</tbody>
+									</table>
+								</div>
+								<p class="pointTxt mt10">일시정지를 해제하시겠습니까?</p>
+								<div class="pop_contsBtns">
+									<a href="" class="btnSty big red"><span>일시정지 해제</span></a>
+									<a href="#mPopOpen" class="btnSty big pop_btn_close" ><span>취소</span></a>
+								</div>
+							</div>
+						</div>
+						<!-- e : contents -->
+					</div>
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="#mPopOpen01"  title="레이어 닫힘">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 레이어 팝업 -->
+
+
 
 				<!-- e : 컨텐츠 영역  -->
 

@@ -309,7 +309,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>번호변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>일시정지</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>설치장소 변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>분실신고</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 분실신고</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>상품 신청/문의(대량구매)</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>신청/변경 현황</a></li>";
                                 gnbItem += "</ul>";
@@ -695,7 +695,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>번호변경</a></li>";
                                 gnbItem += "<li><a href='#'>일시정지</a></li>";
                                 gnbItem += "<li><a href='#'>설치장소 변경</a></li>";
-                                gnbItem += "<li><a href='#'>분실신고</a></li>";
+                                gnbItem += "<li><a href='#'>모바일 분실신고</a></li>";
                                 gnbItem += "<li><a href='#'>상품 신청/문의 (대량구매)</a></li>";
                                 gnbItem += "<li><a href='#'>신청/변경 현황</a></li>";
                               gnbItem += "</ul>";
@@ -1100,28 +1100,19 @@ $(document).ready(function(){
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEB'>일반전화</a></li>";
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
+
                   lnbItem += "<li id='li_BCF' class=''>";
-                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCF' title='하위메뉴 열기'>명의변경</a>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCF' title='하위메뉴 열기'>모바일 분실신고</a>";
                       lnbItem += "<ul id='sub_BCF' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFA'>인터넷</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFB'>tv</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFC'>일반전화</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFD'>인터넷전화</a></li>";
-                      lnbItem += "</ul>";
-                  lnbItem += "</li>";
-
-                  lnbItem += "<li id='li_BCG' class=''>";
-                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCG' title='하위메뉴 열기'>분실신고</a>";
-                      lnbItem += "<ul id='sub_BCG' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCGA'>신청/해제</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCFA'>신청</a></li>";
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
 
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BCH'>상품 신청/문의(대량구매)</a>";
+                    lnbItem += "<a href='#' id='BCG'>상품 신청/문의(대량구매)</a>";
                   lnbItem += "</li>";
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BCI'>신청/변경 현황</a>";
+                    lnbItem += "<a href='#' id='BCH'>신청/변경 현황</a>";
                   lnbItem += "</li>";
 
                 lnbItem += "</ul>"; 
