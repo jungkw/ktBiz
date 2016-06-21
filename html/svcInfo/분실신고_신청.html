@@ -1125,7 +1125,7 @@
 				</div>
 
 				<!-- s : 신청 팝업 -->
-				<div class="pop_layerWrap" id="applyLayerpop" style="width: 630px; display:none">
+				<div class="pop_layerWrap" id="applyLayerpop" style="margin-left:-315px; width: 630px; display:none">
 					<div class="pop_wrap">
 						<!-- s : header -->
 						<div class="pop_header">
@@ -1168,7 +1168,7 @@
 								</div>
 							</div>
 							<div class="pop_contsBtns">
-								<a href="" class="btnSty big red"><span>분실신고 신청</span></a>
+								<a href="#completeApplyLost" id="completeApplyOpen" class="btnSty big red" onclick="$('#applyLayerpop .pop_close a').trigger('click');$.ktBizPopClick(this); return false;" title="분실신고 신청완료 레이어 열림"><span>분실신고 신청</span></a>
 								<a href="#applyPopOpen" class="btnSty big" onclick="$('#applyLayerpop .pop_close a').trigger('click');return false;"><span>취소</span></a>
 							</div>
 						</div>
@@ -1188,7 +1188,7 @@
 				<!-- e : 신청 팝업 -->
 
 				<!-- s : 신청완료 팝업 -->
-				<div class="pop_layerWrap" id="completeApplyLost" style="width: 630px; display:none;">
+				<div class="pop_layerWrap" id="completeApplyLost" style="margin-left:-200px; width: 400px; display:none;">
 					<div class="pop_wrap">
 						<!-- s : header -->
 						<div class="pop_header">
@@ -1199,10 +1199,10 @@
 						<!-- s : contents -->
 						<div class="pop_conts">
 							<div class="pop_contsContainer">
-								<p>신청이 완료되었습니다.</p>
+								<p class="alignCenter">신청이 완료되었습니다.</p>
 							</div>
 							<div class="pop_contsBtns">
-								<a href="" class="btnSty big red"><span>확인</span></a>
+								<a href="applyPopOpen" class="btnSty big red" onclick="$('#completeApplyLost .pop_close a').trigger('click');return false;"><span>확인</span></a>
 							</div>
 						</div>
 						<!-- e : contents -->
@@ -1212,7 +1212,7 @@
 					<div class="pop_footer">
 						<div class="pop_footerInner">
 							<p class="pop_close">
-								<a href="" >닫기</a>
+								<a href="#applyPopOpen" >닫기</a>
 							</p>
 						</div>
 					</div>
