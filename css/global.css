@@ -192,7 +192,7 @@ border-radius: 3px 3px 3px 3px;
 .selectric-items:before {content:''; position: absolute; bottom: -1px; left: -1px; width: 3px; height:4px; background:url('../images/common/bg_selectbox_bottom_l.png') no-repeat left bottom;}
 .selectric-items:after {content:''; position: absolute; bottom: -1px; right: -1px; width: 3px; height:4px; background:url('../images/common/bg_selectbox_bottom_r.png') no-repeat left bottom;}
 .selectric-items .selectric-scroll {height: 100%; overflow: auto;}
-.selectric-above .selectric-items {top: auto; bottom: 100%;}
+.selectric-above .selectric-items {}
 .selectric-items ul,
 .selectric-items li {padding:0; margin: 0; font-size: 13px; line-height:22px; min-height: 22px;}
 .selectric-items li {display: block; padding: 0 9px; color: #333; cursor: pointer;}
