@@ -369,6 +369,8 @@ border-radius: 3px 3px 3px 3px;
 .br000 {border-right:1px solid #000;}
 .color666 {color: #666 !important}
 .lh28 {line-height: 28px !important;}
+.bt1 {border-top:1px solid #ccc;}
+.lrpadding {padding:0 29px;}
 
 /* width */
 .w100p {width:100% !important;}
