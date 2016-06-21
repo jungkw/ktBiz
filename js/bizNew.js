@@ -119,8 +119,9 @@ $(document).ready(function(){
         var $lh = $target.height();
         var $setTop = ($wh-$lh)/2;
 
-
-        $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
+        if($target.find('.pop_close a, .pop_btn_close').attr('href') === '') {
+          $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
+        }
         $target.show().css('top',$setTop+'px');
         /*$mask.show();*/
         $target.find('.pop_wrap').attr('tabindex',0).focus();
