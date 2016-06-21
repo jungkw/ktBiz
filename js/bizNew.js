@@ -62,11 +62,11 @@ $(document).ready(function(){
             $target.val($targetValue).addClass('active');
           }
       });
-     
+
       return false;
     };
 
-    
+
 
 
 
@@ -127,11 +127,12 @@ $(document).ready(function(){
         $target.find('.pop_close a, .pop_btn_close').click(function(){
             $target.hide();
             /*$mask.hide();*/
-            obj.focus();
+            /*obj.focus();*/
+            $('#' + $(this).attr('href').replace('#','')).focus();
             $target.find('.pop_conts').removeAttr('tabIndex');
             return false;
         });
-        
+
         return false;
     };
 
@@ -145,7 +146,7 @@ $(document).ready(function(){
     $.ktBizTabs = function(type, obj, division){
         var $target = $($(obj).attr('href')); // 노출될 division
         var $parents = $(obj).closest('li'); // this의 자신 부모 li
-        var $friend = $parents.closest('ul').children('li'); // 자신 부모 li 의 같은 레벨의 li 들 
+        var $friend = $parents.closest('ul').children('li'); // 자신 부모 li 의 같은 레벨의 li 들
         var $tabWrap = $parents.closest('ul').parents('div.comm_tabs'); // 현재 탭 wrapper
         var $subTab = $(obj).next('ul'); // sub ul
         var $division = $('#'+division); // 노출될 division의 wrapper
@@ -155,7 +156,7 @@ $(document).ready(function(){
         }else{
           $.ktBizTabs.type01($target, $parents, $tabWrap, $division, $subTab);
         }
-        
+
         return false;
     };
 
@@ -214,16 +215,16 @@ $(document).ready(function(){
 
 
 });
-    
+
     /**
     * common gnb include fn
-    * @param {string} 1depth menu validate value 
+    * @param {string} 1depth menu validate value
     */
     $.ktBizGnbView = function(){
-      
+
 
       var gnbItem = "";
-            
+
 
             gnbItem += "<!-- s : Logo -->";
             gnbItem += "<a href='http://biz.olleh.com/' class='cfmOllehY15logo' accesskey='0' >olleh</a>";
@@ -280,7 +281,7 @@ $(document).ready(function(){
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
                               gnbItem += "<strong>My페이지</strong>";
                               gnbItem += "<span>법인 고객님들을 위해 가입상품 및 요금, 청구서를 편리하게 조회할 수 있습니다.</span>";
-                          gnbItem += "</div>"; 
+                          gnbItem += "</div>";
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
                                 gnbItem += "<a href='#' class='group-heading'>요금조회/납부</a>";
@@ -327,7 +328,7 @@ $(document).ready(function(){
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
                               gnbItem += "<strong>전화</strong>";
                               gnbItem += "<span>기업환경에 최적화된 커뮤니케이션 방법, 고객님께 제안해 드려요.</span>";
-                          gnbItem += "</div>"; 
+                          gnbItem += "</div>";
 
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -383,7 +384,7 @@ $(document).ready(function(){
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
                               gnbItem += "<strong>인터넷/데이터</strong>";
                               gnbItem += "<span>빠른 속도와 완벽한 보안으로 기업 경쟁력을 강화하세요.</span>";
-                          gnbItem += "</div>"; 
+                          gnbItem += "</div>";
 
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -450,7 +451,7 @@ $(document).ready(function(){
                           gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
                               gnbItem += "<strong>모바일</strong>";
                               gnbItem += "<span>기업에 특화된 서비스로 스마트한 비즈니스 환경을 갖추세요.</span>";
-                          gnbItem += "</div>"; 
+                          gnbItem += "</div>";
 
                           gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                             gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -481,7 +482,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>olleh biz MCM</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
-                              
+
                           gnbItem += "</ul>";
                       gnbItem += "</div>";
                   gnbItem += "</li>";
@@ -497,7 +498,7 @@ $(document).ready(function(){
                               gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
                                   gnbItem += "<strong>IoT</strong>";
                                   gnbItem += "<span>정보와 사람을 연결한 서비스, 새로운 가치를 느껴보세요.</span>";
-                              gnbItem += "</div>"; 
+                              gnbItem += "</div>";
 
                               gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                                 gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -533,7 +534,7 @@ $(document).ready(function(){
                                       gnbItem += "<li class='group-item'><a href='#' class='group-link'>IoT무선서비스</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
-                                  
+
                               gnbItem += "</ul>";
                           gnbItem += "</div>";
                       gnbItem += "</li>";
@@ -549,7 +550,7 @@ $(document).ready(function(){
                               gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
                                   gnbItem += "<strong>기업솔루션</strong>";
                                   gnbItem += "<span>고객님의 사업관리에 필요한 다양한 상품들을 만나보세요.</span>";
-                              gnbItem += "</div>"; 
+                              gnbItem += "</div>";
 
                               gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                                 gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -596,7 +597,7 @@ $(document).ready(function(){
                                       gnbItem += "<li class='group-item'><a href='#' class='group-link'>메가/메디 프레임</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
-                                  
+
                               gnbItem += "</ul>";
                           gnbItem += "</div>";
                       gnbItem += "</li>";
@@ -611,7 +612,7 @@ $(document).ready(function(){
                               gnbItem += "<div class='cfmOllehGnb-submenu-title'>";
                                   gnbItem += "<strong>맞춤컨설팅</strong>";
                                   gnbItem += "<span>고객님의 성공적인 비즈니스를 위해 최고의 온라인 컨설팅을 준비했어요.</span>";
-                              gnbItem += "</div>"; 
+                              gnbItem += "</div>";
 
                               gnbItem += "<ul class='cfmOllehGnb-submenu-list'>";
                                 gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -632,8 +633,8 @@ $(document).ready(function(){
                                       gnbItem += "<li class='group-item'><a href='#' class='group-link'>1:1문의</a></li>";
                                     gnbItem += "</ul>";
                                   gnbItem += "</li>";
-                                 
-                                  
+
+
                               gnbItem += "</ul>";
                           gnbItem += "</div>";
                       gnbItem += "</li>";
@@ -642,7 +643,7 @@ $(document).ready(function(){
             gnbItem += "</ul>";
             gnbItem += "<!-- e : gnb -->";
 
-            
+
             gnbItem += "<!-- s : search -->";
             gnbItem += "<fieldset class='cfmOllehMainCommonSearch'>";
               gnbItem += "<form name='frmSch' id='searchFrm' method='get' onsubmit='return searchKwd();'>";
@@ -700,7 +701,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>신청/변경 현황</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
-                           
+
                           gnbItem += "</ul>";
                         gnbItem += "</div>";
                         gnbItem += "<!-- e : section item01 -->";
@@ -1001,7 +1002,7 @@ $(document).ready(function(){
                 gnbItem += "<!-- e : total section -->";
 
             document.write(gnbItem);
-            
+
       };
     /**
     * common lnb include fn
@@ -1014,7 +1015,7 @@ $(document).ready(function(){
               lnbItem += "<div id='cfmOllehLnb'>";
                 lnbItem += "<h3 id='cfmOllehLnbTitle' class='cfmOllehLnbTitle' >My페이지</h3>";
                 lnbItem += "<ul id='li_BA' class='cfmOllehLnbNewList' style='display:none'>";
-                  
+
                   lnbItem += "<!-- s : 요금조회/납부 -->";
                   lnbItem += "<li class='cfmOllehNewDontDepth' >";
                     lnbItem += "<a href='#'  id='BAA' >명세서 조회</a>";
@@ -1052,7 +1053,7 @@ $(document).ready(function(){
 
                 lnbItem += "<!-- s : 가입상품 조회/관리 -->";
                 lnbItem += "<ul id='li_BB' class='cfmOllehLnbNewList' style='display:none'>";
-                  
+
                   lnbItem += "<li id='li_BBA' class=''>";
                       lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>사용량 조회</a>";
                       lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
@@ -1115,7 +1116,7 @@ $(document).ready(function(){
                     lnbItem += "<a href='#' id='BCH'>신청/변경 현황</a>";
                   lnbItem += "</li>";
 
-                lnbItem += "</ul>"; 
+                lnbItem += "</ul>";
               lnbItem += "</div>";
 
           document.write(lnbItem);
@@ -1165,7 +1166,7 @@ $(document).ready(function(){
           var $parent = $obj.closest('li');
           if($code.length == '3'){
               $parent.toggleClass('cfmOllehNewSelected');
-              $obj.attr('title','하위메뉴 닫기'); 
+              $obj.attr('title','하위메뉴 닫기');
               if(!$parent.hasClass('cfmOllehNewSelected')){
                 $obj.attr('title', '하위메뉴 열기');
               }
@@ -1199,7 +1200,7 @@ $(document).ready(function(){
               $target.eq(i).children('a').addClass('on');
             }
           };
-         
+
       };
 
 
@@ -1239,12 +1240,12 @@ $(document).ready(function(){
                       footerItem += "<a href='https://my.olleh.com:444/kt12/price/Gui_CyberCancelApplyMain.jsp' >미환급금 조회</a>";
                     footerItem += "</li>";
                   footerItem += "</ul>";
-                  footerItem += "<ul class='ollehMainListinfo'>";     
-                    footerItem += "<li>(주)케이티 대표이사 황창규</li>";     
-                    footerItem += "<li>사업자등록번호 : 102-81-42945</li>";    
-                    footerItem += "<li class='down'>통신판매업신고 : 2002-경기성남-0048</li>";     
-                    footerItem += "<li class='upAddress'><address>주소 : 경기도 성남시 분당구 불정로 90 (정자동)</address></li>";    
-                    footerItem += "<li>TEL : <strong>국번없이 100</strong></li>";   
+                  footerItem += "<ul class='ollehMainListinfo'>";
+                    footerItem += "<li>(주)케이티 대표이사 황창규</li>";
+                    footerItem += "<li>사업자등록번호 : 102-81-42945</li>";
+                    footerItem += "<li class='down'>통신판매업신고 : 2002-경기성남-0048</li>";
+                    footerItem += "<li class='upAddress'><address>주소 : 경기도 성남시 분당구 불정로 90 (정자동)</address></li>";
+                    footerItem += "<li>TEL : <strong>국번없이 100</strong></li>";
                   footerItem += "</ul>";
                   footerItem += "<ul class='cfmOllehMainKTsns'>";
                     footerItem += "<li>";
@@ -1270,8 +1271,8 @@ $(document).ready(function(){
                   footerItem += "<p class='copy'>Copyright ⓒ2011 - 2016 kt corp. All rights reserved.</p>";
                 footerItem += "</div>";
 
-            
-            document.write(footerItem); 
+
+            document.write(footerItem);
       };
 
 
@@ -1339,6 +1340,6 @@ $(function(){
     }
     $.ktBizSvc();
 
-    
+
 
 });
