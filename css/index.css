@@ -122,6 +122,9 @@
 .cfmOllehMainPrd .prdItem h4.tv {background:url(../images/icon/index_prd_tv.png) no-repeat;}
 .cfmOllehMainPrd .prdItem h4.internet {background:url(../images/icon/index_prd_internet.png) no-repeat;}
 .cfmOllehMainPrd .prdItem h4.tel {background:url(../images/icon/index_prd_tel.png) no-repeat;}
+.cfmOllehMainPrd .prdItem h4.iTel {background:url(../images/icon/index_prd_itel.png) no-repeat;}
+.cfmOllehMainPrd .prdItem h4.wibro{background:url(../images/icon/index_prd_wibro.png) no-repeat;}
+.cfmOllehMainPrd .prdItem h4.wifi {background:url(../images/icon/index_prd_wifi.png) no-repeat;}
 .cfmOllehMainPrd .prdItem .amount {float:left; margin:22px 0; width:324px; height:58px; line-height:58px; font-size:21px; font-weight:700; text-align:center; border-left:1px solid #c6c6c6;}
 .cfmOllehMainPrd .prdItem a {float:left; margin:22px 0; width:160px; height:58px; border-left:1px solid #c6c6c6; text-align:center; color:#222; font-size:17px; line-height:58px; background:url(../images/index_bg_arrow.png) no-repeat 120px 50%;}
 
