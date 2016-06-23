@@ -217,6 +217,10 @@ border-radius: 3px 3px 3px 3px;
 .comm_contsBt {border-top:1px solid #ccc;}
 
 /* search common */
+.circuitSearchDiv {position: absolute;top:32px;right: 0}
+.circuitSearchDiv a.dummyInput {width: 180px;height: 30px;padding:0 7px; display: inline-block;line-height: 30px;font-size: 13px;color:#666;background: #ebebe4;border:1px solid #ccc; box-sizing: border-box;border-radius:2px; vertical-align: middle; }
+.circuitSearchDiv a.dummyInput:hover, .circuitSearchDiv a.dummyInput:focus, .circuitSearchDiv a.dummyInput:active {color:#666 !important; text-decoration: none !important}
+/* 공통 UI 변경
 .comm_circuitSearch {padding:25px 27px;margin-bottom:30px;border:1px solid #ddd; border-top:1px solid #333;background: #fff;}
 .comm_circuitSearch p.desc {padding:0 0 12px 0;color:#333;font-size: 15px;line-height: 15px;border-bottom: 1px dashed #cbcbcb;}
 .comm_circuitSearch .circuitSearchFn {padding:13px 0 0 0;}
@@ -230,7 +234,7 @@ border-radius: 3px 3px 3px 3px;
 .comm_circuitSearch .circuitSearchFn .circuitLabel {display:inline-block; margin-right:7px; color:#333; font-size:15px; vertical-align:middle;}
 .comm_circuitSearch .circuitSearchFn .circuitInlineCont {display:inline-block;}
 .comm_circuitSearch .circuitSearchFn .circuitDesc {display:inline-block; margin-left:6px; vertical-align:middle;}
-
+*/
 
 /* global css */
 .placeholder.active {color:#999;}
@@ -321,6 +325,7 @@ border-radius: 3px 3px 3px 3px;
 .mb12 {margin-bottom:12px}
 .mb14 {margin-bottom:14px;}
 .mb20 {margin-bottom:20px;}
+.mb25 {margin-bottom:25px !important;}
 .mb27 {margin-bottom:27px;}
 .mb29 {margin-bottom:29px;}
 .mb30 {margin-bottom:30px;}
@@ -370,6 +375,7 @@ border-radius: 3px 3px 3px 3px;
 .color666 {color: #666 !important}
 .lh28 {line-height: 28px !important;}
 .bt1 {border-top:1px solid #ccc;}
+.bb1 {border-bottom:1px solid #ccc;}
 .lrpadding {padding:0 29px;}
 
 /* width */
