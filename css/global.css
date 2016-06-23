@@ -35,7 +35,7 @@
 .comm_table td.tit {padding-left:20px;color:#333;text-align:left;}
 .comm_table td.gray {color:#666;}
 .comm_table td.right em.vat {display:inline-block;}
-.comm_table td .num {font-size:18px;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+.comm_table td .num, .comm_table td.num {font-size:18px;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
 .comm_table td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
 .comm_table td .card-num {display:block;font-size:13px;}
 .comm_table td.name {padding-left:10px;font-weight:700;color:#333;text-align:left;}
@@ -49,9 +49,10 @@
 .comm_table tr.tbline th, .comm_table tr.tbline td {border-top:1px solid #ccc;}
 .comm_table tfoot td.total {text-align:center;}
 .comm_table tfoot td.total .sum {margin:0 5px 0 0;font-weight:700;color:#333;}
-.comm_table tfoot th {padding:10px 0 13px;border-bottom:1px solid #ccc;text-align:left;color:#333;font-size:15px;}
+.comm_table tfoot th {padding:10px 0 13px;border-bottom:1px solid #ccc;text-align:left;color:#000;font-size:15px;}
+.comm_table tfoot.fullBorder th, .comm_table tfoot.fullBorder td {padding:16px 18px;}
 .comm_table tfoot th.center {text-align:center;}
-.comm_table tfoot td{padding:9px 15px 12px;border-bottom:1px solid #ccc;color:#666;font-size:15px;padding-left:10px;line-height:23px;}
+.comm_table tfoot td{padding:9px 15px 12px;border-bottom:1px solid #ccc;color:#000;font-size:15px;padding-left:10px;line-height:23px;}
 .comm_table tfoot td.right {padding-right:15px;text-align:right;}
 .comm_table tfoot td.center {text-align:center;padding-right:0;padding-left:0;}
 .comm_table tfoot td .money {font-size:18px;color:#ee2c2a;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
@@ -83,6 +84,10 @@ ul.bulletList li:first-child {margin:0;}
 .bulletDg {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 5px;}
 .bulletMinus {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_minus_smallBullet.gif') no-repeat 0 9px;}
 .pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.gif') no-repeat left 1px;}
+
+/* icon */
+.iconWarningRed {padding:0 0 0 17px;background: url('../images/icon/svc_icon_warning_red.png') 0 2px no-repeat;line-height: 13px;}
+
 
 
 /* paging */
@@ -144,6 +149,7 @@ border-radius: 3px 3px 3px 3px;
 
 /* btn icon */
 .btnSty.icon_print span {padding:0 0 0 25px;background:url('../images/icon/comm_icon_print.png') no-repeat left center;}
+.btnSty.icon_xls span {padding:0 0 0 25px;background:url('../images/icon/comm_icon_excelDown.png') no-repeat left center;}
 
 
 /* btn color */
@@ -246,6 +252,7 @@ border-radius: 3px 3px 3px 3px;
 .emp01 {color:#ef1c25 !important;}
 .emp02 {color:#333 !important;}
 .emp03 {color: #196bbb !important}
+.color000 {color:#000 !important;}
 .ma0 {margin:0 !important;}
 .m14 {margin:14px;}
 .ml1 {margin-left:1px;}
@@ -332,7 +339,9 @@ border-radius: 3px 3px 3px 3px;
 .mb40 {margin-bottom:40px;}
 
 .pb0 {padding-bottom:0 !important}
+.pb5 {padding-bottom:5px !important}
 .pb10 {padding-bottom:10px;}
+.pb20 {padding-bottom:20px;}
 .pb26 {padding-bottom:26px !important;}
 .pb30 {padding-bottom:30px !important;}
 .pb40 {padding-bottom:40px !important;}
@@ -340,6 +349,7 @@ border-radius: 3px 3px 3px 3px;
 .pl5 {padding-left:5px !important;}
 .pl10 {padding-left:10px;}
 .pl15 {padding-left:15px;}
+.pl17 {padding-left:17px;}
 .pl20 {padding-left:20px;}
 .pl28 {padding-left:28px !important;}
 .pl30 {padding-left:30px;}
@@ -380,6 +390,7 @@ border-radius: 3px 3px 3px 3px;
 
 /* width */
 .w100p {width:100% !important;}
+.w140p {width:140% !important;}
 .w19 {width:19px}
 .w20 {width:20px}
 .w26 {width:26px}
@@ -542,3 +553,6 @@ border-radius: 3px 3px 3px 3px;
 .comm_inputTel input {float:left; width:46px;}
 .comm_inputTel span {float:left; width:14px; line-height:27px; text-align:center;}
 
+
+/* no Contents */
+.comm_noContents {padding: 80px 0 36px;color: #666;font-size: 13px;text-align: center;line-height:23px;background:#fff url(../images/icon/comm_icon_searchNone.gif) no-repeat 50% 40px; border:1px solid #ddd; border-top:1px solid #333 }

@@ -1024,9 +1024,13 @@ $(document).ready(function(){
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
                     lnbItem += "<a href='#' id='BAB'>월별요금조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BAC'>실시간 요금</a>";
-                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BAC' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAC' title='하위메뉴 열기'>실시간 요금</a>";
+                      lnbItem += "<ul id='sub_BAC' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BACA'>회선별 실시간 요금</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BACB'>전체 실시간 요금</a></li>";
+                      lnbItem += "</ul>";
+                lnbItem += "</li>";
                   lnbItem += "<li id='li_BAD' class=''>";
                       lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAD' title='하위메뉴 열기'>사용량 조회</a>";
                       lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
