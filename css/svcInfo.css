@@ -14,7 +14,3 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 
 .svcInfo_planList {background:#fff; border:1px solid #ddd; border-bottom:0;}
 
-/* 실시간 요금조회 */
-.realtimePay_desc {padding:85px 0; text-align: center;color: #666; font-size: 13px;}
-.realtimePay_desc strong {color:#000;}
-.realtime_scrollConts {height: auto;overflow-x:auto;overflow-y:hidden;}
