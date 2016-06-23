@@ -61,6 +61,7 @@
 .comm_table tfoot th.total {padding-left:70px;}
 .comm_table tfoot th.total-first {padding-left:0;text-align:center;}
 .comm_table tbody th {border-bottom:1px solid #ddd; height:36px;}
+.comm_table tbody th.vt {padding-top:16px;}
 .comm_table tbody th + td {padding:16px 18px;}
 .comm_table a {font-size:15px;}
 .comm_table .textLink a {text-decoration:underline;}
@@ -532,7 +533,8 @@ border-radius: 3px 3px 3px 3px;
 
 
 /* telphone num */
-.comm_inputTel {display:inline-block; overflow:hidden;}
-.comm_inputTel input {float:left; width:46px;}
-.comm_inputTel span {float:left; width:14px; line-height:27px; text-align:center;}
+.comm_inputTel {display:inline-block;vertical-align:middle; font-size:0;}
+.comm_inputTel:after {content:''; display:block; clear:both;}
+.comm_inputTel input {display:inline-block; margin-right:4px; width:46px; vertical-align:top;}
+.comm_inputTel span {display:inline-block; margin-right:4px; font-size:15px; line-height:27px; text-align:center; vertical-align:top;}
 

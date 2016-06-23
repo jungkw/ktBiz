@@ -120,7 +120,7 @@ $(document).ready(function(){
         var $setTop = ($wh-$lh)/2;
 
         if($target.find('.pop_close a, .pop_btn_close').attr('href') === '') {
-          $target.find('.pop_close a, .pop_btn_close').attr('href', obj.id);
+          $target.find('.pop_close a, .pop_btn_close').attr('href', '#' + obj.id);
         }
         $target.show().css('top',$setTop+'px');
         /*$mask.show();*/
