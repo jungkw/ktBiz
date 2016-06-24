@@ -107,6 +107,7 @@
 .prod_itemWrap .detailWrap .infoWrap .prodImg img {max-width:100%; max-height:100%;}
 .prod_itemWrap .detailWrap .infoWrap li {position:relative; display:block; padding:0 0 0 82px; margin:5px 0 0 0; font-size:15px; color:#666;}
 .prod_itemWrap .detailWrap .infoWrap li .tit {display:block; position:absolute; top:0; left:0; width: 82px; font-weight: bold; color:#333;}
+.prod_itemWrap .detailWrap .infoWrap .commBtnWrap {text-align:left !important;}
 
 .prod_table {width:100%; border-left:1px solid #ccc; border-right:1px solid #ccc; border-top:1px solid #ccc; background:#fff; table-layout:fixed;}
 .prod_table th,
