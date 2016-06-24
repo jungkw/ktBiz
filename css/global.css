@@ -7,7 +7,7 @@
 .commTitleWrap {position: relative;}
 .commTitleWrap:after {content:''; display:block; clear:both;}
 .commTitleWrap .comm_scnTitle01 {font-size:23px;line-height: 26px;color: #333;font-weight: bold;}
-.commTitleWrap .comm_scnTitle02 {margin-bottom:15px;font-size:21px;line-height: 26px;color:#333;}
+.commTitleWrap .comm_scnTitle02 {margin-bottom:17px;font-size:21px;line-height: 30px;color:#333;}
 .commTitleWrap .comm_scnTitle03 {margin-bottom:15px;font-size:19px;line-height: 23px;color:#333;}
 .commTitleWrap .rightBtn {position: absolute;top:0;right:0;}
 
@@ -231,7 +231,7 @@ border-radius: 3px 3px 3px 3px;
 .commBoxWhite {padding:32px 30px; border:1px solid #ccc; background:#fff;}
 
 /* search common */
-.circuitSearchDiv {position: absolute;top:32px;right: 0}
+.circuitSearchDiv {position: absolute;top:34px;right: 0}
 .circuitSearchDiv a.dummyInput {width: 180px;height: 30px;padding:0 7px; display: inline-block;line-height: 30px;font-size: 13px;color:#666;background: #ebebe4;border:1px solid #ccc; box-sizing: border-box;border-radius:2px; vertical-align: middle; }
 .circuitSearchDiv a.dummyInput:hover, .circuitSearchDiv a.dummyInput:focus, .circuitSearchDiv a.dummyInput:active {color:#666 !important; text-decoration: none !important}
 
@@ -324,6 +324,7 @@ border-radius: 3px 3px 3px 3px;
 .pt20 {padding-top:20px !important;}
 .pt30 {padding-top:30px !important;}
 .pt34 {padding-top:34px !important;}
+.pt36 {padding-top:36px !important;}
 .mr1 {margin-right:20px;}
 .mr2 {margin-right:10px;}
 .mr5 {margin-right:5px;}
@@ -339,7 +340,8 @@ border-radius: 3px 3px 3px 3px;
 .mb10 {margin-bottom:10px}
 .mb12 {margin-bottom:12px}
 .mb14 {margin-bottom:14px;}
-.mb20 {margin-bottom:20px;}
+.mb20 {margin-bottom:20px !important;}
+.mb22 {margin-bottom:22px !important;}
 .mb25 {margin-bottom:25px !important;}
 .mb27 {margin-bottom:27px;}
 .mb29 {margin-bottom:29px;}
@@ -349,10 +351,12 @@ border-radius: 3px 3px 3px 3px;
 .pb0 {padding-bottom:0 !important}
 .pb5 {padding-bottom:5px !important}
 .pb10 {padding-bottom:10px;}
+.pb15 {padding-bottom:15px;}
 .pb20 {padding-bottom:20px;}
 .pb26 {padding-bottom:26px !important;}
 .pb30 {padding-bottom:30px !important;}
 .pb36 {padding-bottom:36px !important;}
+.pb37 {padding-bottom:37px !important;}
 .pb40 {padding-bottom:40px !important;}
 .pl0 {padding-left:0 !important;}
 .pl5 {padding-left:5px !important;}

@@ -5,6 +5,7 @@
 
 /* reset */
 fieldset,img{border:0}
+body,table {letter-spacing: -0.025em;}
 body,html,legend{height:100%;color:#000}
 html{background:#fff;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 article,aside,audio,blockquote,body,canvas,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,mark,menu,nav,ol,p,pre,section,summary,td,textarea,th,time,ul,video{margin:0;padding:0}

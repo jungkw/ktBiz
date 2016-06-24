@@ -34,7 +34,7 @@ $(document).ready(function(){
           $target.val("");
           $target.prop("disabled", false).focus();
         }else{
-          $target.prop("disabled", true);
+          $target.prop("disabled", true);  
           $target.val($val)
           if($val==""){
             $target.val("");
@@ -44,7 +44,7 @@ $(document).ready(function(){
     };
 
     /**
-    * check box & radio box IE8 fn
+    * check box & radio box IE8 fn  
      */
     $.ktBizCheckRadio = function(){
         $('input:radio:checked, input:checkbox:checked').next('i').addClass('checked');
