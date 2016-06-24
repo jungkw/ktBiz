@@ -45,6 +45,7 @@ $(document).ready(function(){
 
 
 
+
     /**
     * input placeholder fn
     */
@@ -227,6 +228,7 @@ $(document).ready(function(){
       var gnbItem = "";
 
 
+
             gnbItem += "<!-- s : Logo -->";
             gnbItem += "<a href='http://biz.olleh.com/' class='cfmOllehY15logo' accesskey='0' >olleh</a>";
             gnbItem += "<!-- e : Logo -->";
@@ -300,7 +302,7 @@ $(document).ready(function(){
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
                                 gnbItem += "<a href='#' class='group-heading'>가입상품 조회/관리</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>내상품 조회 </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>가입상품 조회 </a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -676,6 +678,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>명세서 조회</a></li>";
                                 gnbItem += "<li><a href='#'>월별요금조회</a></li>";
                                 gnbItem += "<li><a href='#'>실시간 요금</a></li>";
+                                gnbItem += "<li><a href='#'>사용량 조회</a></li>";
                                 gnbItem += "<li><a href='#'>분리납부내역 조회</a></li>";
                                 gnbItem += "<li><a href='#'>요금납부</a></li>";
                                 gnbItem += "<li><a href='#'>납부방법 변경</a></li>";
@@ -685,8 +688,7 @@ $(document).ready(function(){
                             gnbItem += "<li>";
                               gnbItem += "<h4><a href='#'>가입상품 조회/관리</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href='#'>내상품조회</a></li>";
-                                gnbItem += "<li><a href='#'>사용량조회</a></li>";
+                                gnbItem += "<li><a href='#'>가입상품 조회</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
@@ -1060,13 +1062,13 @@ $(document).ready(function(){
                 lnbItem += "<ul id='li_BB' class='cfmOllehLnbNewList' style='display:none'>";
 
                   lnbItem += "<li id='li_BBA' class=''>";
-                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>사용량 조회</a>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>가입상품 조회</a>";
                       lnbItem += "<ul id='sub_BBA' class='cfmOllehLnbNewListCont' style='display: none;'>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAA'>모바일</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAB'>인터넷</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAC'>tv</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAD'>일반전화</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAE'>인터넷전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAD'>인터넷전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAE'>일반전화</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAF'>WiBro</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAG'>WiFi</a></li>";
                       lnbItem += "</ul>";
@@ -1359,9 +1361,7 @@ $(function(){
 
 	function ktBizProdDetailShow(selector) {
 		var $container = $(selector),
-			$lis = $container.find('li'),
-
-			listTop = $container.offset().top;
+			$lis = $container.find('li');
 
 		$lis.each(function() {
 			var posY = $(this).offset().top;
@@ -1373,8 +1373,8 @@ $(function(){
 					$detailSection = $targetLi.find('.detailWrap'),
 					$others = $targetLi.siblings(),
 					$othersDetail = $others.find('.detailWrap'),
-					$othersBtn = $others.find('.btnDetail');
-
+					$othersBtn = $others.find('.btnDetail'),
+					listTop = $targetLi.closest('.prod_itemList').offset().top;
 
 				if( $targetLi.hasClass('selected') ) {
 					$detailSection.stop().slideUp(500);
