@@ -43,6 +43,9 @@ $(document).ready(function(){
         return false;
     };
 
+    /**
+    * check box & radio box IE8 fn
+     */
     $.ktBizCheckRadio = function(){
         $('input:radio:checked, input:checkbox:checked').next('i').addClass('checked');
         $('input:radio, input:checkbox').click(function(){
