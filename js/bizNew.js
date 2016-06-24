@@ -1370,7 +1370,9 @@ $(function(){
 $(function(){
 	//가입 상품 조회 리스트 상세 접기, 펼치기
 
-	ktBizProdDetailShow('.prod_itemList');
+  if ($('.prod_itemList').length) {
+    ktBizProdDetailShow('.prod_itemList');
+  }
 
 	function ktBizProdDetailShow(selector) {
 		var $container = $(selector),
@@ -1387,9 +1389,7 @@ $(function(){
 					$others = $targetLi.siblings(),
 					$othersDetail = $others.find('.detailWrap'),
 					$othersBtn = $others.find('.btnDetail'),
-					
-					listTop = $targetLi.closest('.prod_itemList').offset().top;;
-					
+					listTop = $targetLi.closest('.prod_itemList').offset().top;
 
 				if( $targetLi.hasClass('selected') ) {
 					$detailSection.stop().slideUp(500);
