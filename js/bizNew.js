@@ -1359,9 +1359,7 @@ $(function(){
 
 	function ktBizProdDetailShow(selector) {
 		var $container = $(selector),
-			$lis = $container.find('li'),
-
-			listTop = $container.offset().top;
+			$lis = $container.find('li');
 
 		$lis.each(function() {
 			var posY = $(this).offset().top;
@@ -1373,7 +1371,9 @@ $(function(){
 					$detailSection = $targetLi.find('.detailWrap'),
 					$others = $targetLi.siblings(),
 					$othersDetail = $others.find('.detailWrap'),
-					$othersBtn = $others.find('.btnDetail');
+					$othersBtn = $others.find('.btnDetail'),
+					
+					listTop = $targetLi.closest('.prod_itemList').offset().top;;
 					
 
 				if( $targetLi.hasClass('selected') ) {
