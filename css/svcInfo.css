@@ -14,3 +14,22 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 
 .svcInfo_planList {background:#fff; border:1px solid #ddd; border-bottom:0;}
 
+/* 번호변경 */
+.svcInfo_chgNumStep {margin:20px 0 40px; text-align:center; font-size:0;}
+.svcInfo_chgNumStep li {display:inline-block;}
+.svcInfo_chgNumStep li > div {padding-top:80px; text-align:center; width:96px; font-size:21px; color:#333; text-transform:uppercase; line-height:1;}
+.svcInfo_chgNumStep li span {display:block; margin-top:4px; font-size:13px; color:#666;}
+.svcInfo_chgNumStep .step1, .svcInfo_chgNumStep .step2 {margin-right:60px; padding-right:94px; background:url(../images/icon/svcInfo_chg_num_step.png) no-repeat 100% 34px;}
+.svcInfo_chgNumStep .step1 > div {background:url(../images/icon/svcInfo_chg_num01.png) no-repeat 50% 0;}
+.svcInfo_chgNumStep .step2 > div {background:url(../images/icon/svcInfo_chg_num02.png) no-repeat 50% 0;}
+.svcInfo_chgNumStep .step3 > div {background:url(../images/icon/svcInfo_chg_num03.png) no-repeat 50% 0;}
+.svcInfo_tdMsg {position:relative; margin-left:-18px; padding:5px 18px; background:#f8f8f8;}
+.svcInfo_tdMsg:after {content:''; position:absolute; top:0; right:-18px; bottom:0; width:18px; background:#f8f8f8;}
+.svcInfo-numList {position:relative;}
+.svcInfo-numListBox {overflow:hidden; border-bottom:1px dotted #eee;}
+.svcInfo-numListBox li {float:left; margin-bottom:6px; width:105px;}
+.svcInfo-numListBox label {color:#333; font-size:13px;}
+.svcInfo-numListSelect {position: absolute; bottom: -2px; right: 0; z-index: 1;}
+
+.comm_table .captcha {margin:20px 0 0 12px;}
+
