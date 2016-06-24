@@ -570,14 +570,11 @@ border-radius: 3px 3px 3px 3px;
 .comm_inputTel span {display:inline-block; margin-right:4px; font-size:15px; line-height:27px; text-align:center; vertical-align:top;}
 
 
-<<<<<<< HEAD
 /* captcha */
 .captcha:after {content: ''; display: block; clear: both;}
 .captcha .img {float:left; margin:0 10px 0 0;}
 .captcha .fn {float:left;}
 .captcha .fn .input {margin-top:4px;}
-=======
 
 /* no Contents */
 .comm_noContents {padding: 80px 0 36px;color: #666;font-size: 13px;text-align: center;line-height:23px;background:#fff url(../images/icon/comm_icon_searchNone.gif) no-repeat 50% 40px; border:1px solid #ddd; border-top:1px solid #333 }
->>>>>>> af92d01fc2afe3690906a5779b2b50344f49d934
