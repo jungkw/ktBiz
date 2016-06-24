@@ -1,43 +1,127 @@
 @charset "utf-8";
 
-.prodLink.blk {color:#000;}
-.prodTxt1 {color:#555; font-size: 14px;}
+/* 공통 머릿말  prod_  */
+.prod_prodInfoWrap {}
+.prod_prodInfoWrap .descTxt1 {color:#333; font-size: 15px; line-height: 1.4;}
+.prod_prodInfoWrap .txtCut {overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.prod_prodInfoWrap .mobilePauseHistoryDesc {min-height:16px; margin:15px 0 0 0; padding:0 0 15px 17px; color:#000; line-height: 1.38; background: url('../images/icon/comm_icon_warning_red.png') 0 4px no-repeat; border-bottom: 1px solid #ccc;}
 
-.prodCategoryWrap {position:relative; height:130px; background:url('../images/common/prod_bg_category.gif') repeat-x left top; border: 1px solid #000;}
-.prodCategoryWrap .viewWrap {position:absolute; top:0; left:0; overflow: hidden;}
+.prod_prodInfoWrap .prodTxtSty1 {display:inline-block; font-size: 19px; color:#000;}
+.prod_prodInfoWrap .prodTxtSty2 {display:block; font-size: 15px; color:#000;}
+.prod_prodInfoWrap .prodTxtSty2 .titW94 {display:inline-block; width:94px;}
+.prod_prodInfoWrap .prodTxtSty2 .titW75 {display:inline-block; width:75px;}
+.prod_prodInfoWrap .prodTxtSty3 {display:block; font-size: 15px; color:#666;}
 
-.prodDetailWrap {border-bottom: 2px solid #ccc;}
-.prodDetailWrap .comm_tableBrdr {border-top: 1px solid #ccc;}
-.prodDetailWrap .innerWrap1 {overflow:hidden; padding:25px 20px 46px 20px; background:url('../images/common/prod_bg_dotline.gif') repeat-x left bottom;}
-.prodDetailWrap .innerWrap1 .prodImg {float:left; display:inline-block; width: 225px; padding:0 15px 0 0;}
-.prodDetailWrap .innerWrap1 .prodImg img {width: 225px; height:225px;}
-.prodDetailWrap .innerWrap1 .prodName {display:block; padding:10px 0 0 0; font-size:16px; text-align: center; color:#000;}
-.prodDetailWrap .innerWrap1 .prodInfo {float:left; display:inline-block; width: 490px;}
-.prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr {border-top: 1px solid #ccc;}
-.prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr th {background: #fff;}
-.prodDetailWrap .innerWrap1 .prodInfo .comm_tableBrdr td {padding:15px 0 15px 20px}
-.prodDetailWrap .innerWrap1 .prodInfo .txtWrap {margin:-5px 0 -1px 0; padding:0 130px 0 0;}
-.prodDetailWrap .innerWrap2 {overflow:hidden; padding:0 0 50px 20px;}
-.prodDetailWrap .innerWrap2 .inner {float:left; width: 354px; margin:0 20px 0 0;}
-.prodDetailWrap .innerWrap2 .inner .txtWrap {padding:0 60px 0 0;}
-.prodDetailWrap .innerWrap2 .inner .txtWrap .btn{right:23px;}
-.prodDetailWrap .innerWrap2 .inner .comm_tableBrdr th {background: #fff;}
-.prodDetailWrap .innerWrap2 .inner .comm_tableBrdr td {padding:15px 0 15px 20px}
-.prodDetailWrap .txtWrap {position: relative;}
-.prodDetailWrap .txtWrap .date {display: block; font-size: 12px;}
-.prodDetailWrap .txtWrap .btnSty {position: absolute; top:50%; right:10px; margin-top:-10px}
-.prodDetailWrap .txtWrap .btn.red {color:#ef1c25;}
+.prod_prodInfoWrap .prodRoundBox1 {position: relative; display:inline-block; overflow:hidden; height:26px; padding:0 14px 0 0; text-align: center;}
+.prod_prodInfoWrap .prodRoundBox1:before {content:''; position:absolute; top:0; right:0; display:block; width: 14px; height:26px; background:url('../images/bg/comm_bg_roundbox.png') no-repeat right top;}
+.prod_prodInfoWrap .prodRoundBox1 .txt {display:inline-block; height:26px; line-height:26px; font-size:15px; color:#333; padding:0 0 0 14px; background:url('../images/bg/comm_bg_roundbox.png') no-repeat left top;}
 
-.prodPhoneCareService {overflow: hidden;}
-.prodPhoneCareService li {float:left; width:146px; margin:0 0 0 10px;}
-.prodPhoneCareService li:first-child {margin:0;}
-.prodPhoneCareService .phoneCareWrap {position:relative; display:block; height:160px; border: 1px solid #e0e0e0;}
-.prodPhoneCareService .phoneCareWrap span {position:absolute; bottom:16px; left:0; width: 100%; display: block; text-align: center; line-height:1.58;}
-.prodPhoneCareService .phoneCareWrap.ic1 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
-.prodPhoneCareService .phoneCareWrap.ic2 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
-.prodPhoneCareService .phoneCareWrap.ic3 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
-.prodPhoneCareService .phoneCareWrap.ic4 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
-.prodPhoneCareService .phoneCareWrap.ic5 {background:url('../images/common/prod_img_phonecare1.png') no-repeat center top;}
+.prod_prodInfoWrap .prodRoundBox2 {position: relative; display:inline-block; overflow:hidden; height:26px; padding:0 14px 0 0; text-align: center;}
+.prod_prodInfoWrap .prodRoundBox2:before {content:''; position:absolute; top:0; right:0; display:block; width: 14px; height:26px; background:url('../images/bg/comm_bg_roundbox.png') no-repeat right -26px;}
+.prod_prodInfoWrap .prodRoundBox2 .txt {display:inline-block; height:26px; line-height:26px; font-size:15px; color:#333; padding:0 0 0 14px; background:url('../images/bg/comm_bg_roundbox.png') no-repeat left -26px;}
 
-.prodInfoLinkList {margin-top:50px;}
-.prodInfoLinkList .btnSty {margin:0; letter-spacing:-1px;}
+.prod_greyBoxWrap {position:relative; padding:22px 40px; border: 1px solid #cacaca; background: #f8f8f8; box-sizing: border-box;}
+.prod_greyBoxWrap.backIc {min-height:155px; padding:22px 40px 22px 157px; background:#f8f8f8 url('../images/icon/comm_icon_searchback.png') no-repeat 29px 37px;}
+.prod_greyBoxWrap .deco {position:absolute; display: block; width: 6px; height:6px; background:url('../images/common/comm_img_graybox_sty1.png') no-repeat left top;}
+.prod_greyBoxWrap .deco.tl {top:-1px; left:-1px; background-position: 0 0;}
+.prod_greyBoxWrap .deco.tr {top:-1px; right:-1px; background-position: -6px 0;}
+.prod_greyBoxWrap .deco.bl {bottom:-1px; left:-1px; background-position: 0 -6px;}
+.prod_greyBoxWrap .deco.br {bottom:-1px; right:-1px; background-position: -6px -6px;}
+
+.prod_greyBoxWrap .searchWrap {overflow:hidden; margin:16px 0 0 0; padding:17px 0 0 0; background:url('../images/bg/comm_bg_dotline_sty1.png') repeat-x left top;}
+.prod_greyBoxWrap .searchWrap .txt1 {float:left; display:inline-block; height:36px; font-weight: bold; font-size: 15px; color:#000; line-height:36px;}
+.prod_greyBoxWrap .searchWrap .txt1 em {color:#ed1c24; font-weight: inherit;}
+.prod_greyBoxWrap .searchWrap form {float:left; display:inline-block; height:36px; margin:0 0 0 23px;}
+.prod_greyBoxWrap .searchWrap form input {width: 253px; height:36px;}
+.prod_greyBoxWrap .searchWrap form .btnSty {margin:0 0 0 5px;}
+
+.prod_searchResultNo {padding:212px 0 120px 0; text-align:center; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; background:url('../images/icon/comm_icon_searchnoback.png') no-repeat center 100px;}
+.prod_searchResultNo .txt {font-size: 19px; color:#666; font-weight: normal;}
+
+.prod_itemList {margin:20px 0 0 0;}
+.prod_itemList li{display:block; margin:10px 0 0 0;}
+.prod_itemList li.selected .prod_itemWrap .summaryWrap {background-position:0 -100px !important;}
+
+
+/* mobile / internet / tv / internetPhone / phone / wibro / wifi */
+.prod_itemList.mobile        .prod_itemWrap .summaryWrap {background:url('../images/common/prod_img_product_mobile.png') no-repeat 0 0;}
+.prod_itemList.internet      .prod_itemWrap .summaryWrap {background:url('../images/common/prod_img_product_internet.png') no-repeat 0 0;}
+.prod_itemList.tv            .prod_itemWrap .summaryWrap {background:url('../images/common/prod_img_product_tv.png') no-repeat 0 0;}
+.prod_itemList.internetPhone .prod_itemWrap .summaryWrap {background:url('../images/common/prod_img_product_internetPhone.png') no-repeat 0 0;}
+.prod_itemList.phone         .prod_itemWrap .summaryWrap {background:url('../images/common/prod_img_product_phone.png') no-repeat 0 0;}
+.prod_itemList.wibro         .prod_itemWrap .summaryWrap {background:url('../images/common/prod_img_product_wibro.png') no-repeat 0 0;}
+.prod_itemList.wifi          .prod_itemWrap .summaryWrap {background:url('../images/common/prod_img_product_wifi.png') no-repeat 0 0;}
+
+.prod_itemList.mobile        .prod_itemWrap .detailWrap {border-left:1px solid #196bbb; border-right:1px solid #196bbb;}
+.prod_itemList.internet      .prod_itemWrap .detailWrap {border-left:1px solid #bb196d; border-right:1px solid #bb196d;}
+.prod_itemList.tv            .prod_itemWrap .detailWrap {border-left:1px solid #6d19bb; border-right:1px solid #6d19bb;}
+.prod_itemList.internetPhone .prod_itemWrap .detailWrap {border-left:1px solid #59a10b; border-right:1px solid #59a10b;}
+.prod_itemList.phone         .prod_itemWrap .detailWrap {border-left:1px solid #b26a16; border-right:1px solid #b26a16;}
+.prod_itemList.wibro         .prod_itemWrap .detailWrap {border-left:1px solid #0ca595; border-right:1px solid #0ca595;}
+.prod_itemList.wifi          .prod_itemWrap .detailWrap {border-left:1px solid #9a9805; border-right:1px solid #9a9805;}
+
+.prod_itemList.mobile        .prod_itemWrap .detailWrap .bottom {background:url('../images/common/prod_img_product_mobile.png') no-repeat left bottom;}
+.prod_itemList.internet      .prod_itemWrap .detailWrap .bottom {background:url('../images/common/prod_img_product_internet.png') no-repeat left bottom;}
+.prod_itemList.tv            .prod_itemWrap .detailWrap .bottom {background:url('../images/common/prod_img_product_tv.png') no-repeat left bottom;}
+.prod_itemList.internetPhone .prod_itemWrap .detailWrap .bottom {background:url('../images/common/prod_img_product_internetPhone.png') no-repeat left bottom;}
+.prod_itemList.phone         .prod_itemWrap .detailWrap .bottom {background:url('../images/common/prod_img_product_phone.png') no-repeat left bottom;}
+.prod_itemList.wibro         .prod_itemWrap .detailWrap .bottom {background:url('../images/common/prod_img_product_wibro.png') no-repeat left bottom;}
+.prod_itemList.wifi          .prod_itemWrap .detailWrap .bottom {background:url('../images/common/prod_img_product_wifi.png') no-repeat left bottom;}
+
+
+/*모바일 - 디폴트*/
+.prod_itemWrap {position:relative;}
+.prod_itemWrap .summaryWrap {position:relative; height:100px; /* background:url('../images/common/prod_img_product_mobile.png') no-repeat left top; */}
+.prod_itemWrap .summaryWrap dl {position:relative; margin:0 73px 0 0; font-size:19px; color:#333;}
+.prod_itemWrap .summaryWrap dt {position:absolute; top:37px; left:155px; display:block; max-width:145px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+.prod_itemWrap .summaryWrap dd.posM {position:absolute; top:37px; left:318px; display:block; width:277px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-weight:bold; text-align:center; letter-spacing:-0.05em;}
+.prod_itemWrap .summaryWrap dd.posR {position:absolute; top:39px; right:0; display:block; max-width:80px; text-align:right; color:#ee1c24; font-size:17px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.prod_itemWrap .summaryWrap .btnDetail {position:absolute; top:44px; right:25px; display:block; width:25px; height:16px; text-indent:-9999px;}
+/*인터넷*/
+.internet .prod_itemWrap .summaryWrap dt {max-width:83px;}
+.internet .prod_itemWrap .summaryWrap dd.posM {left:257px; width:228px;}
+.internet .prod_itemWrap .summaryWrap dd.posR {max-width:192px; font-size:15px; color:#333;}
+/*tv*/
+.tv .prod_itemWrap .summaryWrap dt {max-width:83px;}
+.tv .prod_itemWrap .summaryWrap dd.posM {left:257px; width:228px;}
+.tv .prod_itemWrap .summaryWrap dd.posR {max-width:192px; font-size:15px; color:#333;}
+/*인터넷전화*/
+.internetPhone .prod_itemWrap .summaryWrap dd.posM {left:303px; width:180px;}
+.internetPhone .prod_itemWrap .summaryWrap dd.posR {max-width:192px; font-size:15px; color:#333;}
+/*일반전화*/
+.phone .prod_itemWrap .summaryWrap dd.posM {left:303px; width:180px;}
+.phone .prod_itemWrap .summaryWrap dd.posR {max-width:192px; font-size:15px; color:#333;}
+/*wibro, wifi (모바일과 동일)*/
+
+
+.prod_itemWrap .detailWrap {display:none; position:relative; padding:0 29px 32px 29px; background: #f0f0f0; /* border-left:1px solid #196bbb; border-right:1px solid #196bbb; */ border-top:none;}
+.prod_itemWrap .detailWrap .bottom {position:absolute; left:-1px; bottom:0; overflow:hidden; width:770px; height:6px; background:url('../images/common/prod_img_product_mobile.png') no-repeat left bottom;}
+.prod_itemWrap .detailWrap .commTitleWrap {height:36px;}
+.prod_itemWrap .detailWrap .commTitleWrap .comm_scnTitle02 {line-height:1;}
+.prod_itemWrap .adressTxt {margin:-15px 0 -6px 0;}
+.prod_itemWrap .adressTxt li {position:relative; display:block; padding:0 0 0 82px; margin:8px 0 0 0; font-size: 15px; color:#666;}
+.prod_itemWrap .adressTxt .title1 {position:absolute; top:0; left:0; width:82px;}
+
+.prod_itemWrap .detailWrap .infoWrap {position:relative; min-height:247px; padding:36px 30px 36px 288px; border:1px solid #ccc; border-bottom:none; box-sizing:border-box; background:#fff;}
+.prod_itemWrap .detailWrap .infoWrap .prodImg {position:absolute; top:36px; left:61px; width:174px; height:174px;}
+.prod_itemWrap .detailWrap .infoWrap .prodImg img {max-width:100%; max-height:100%;}
+.prod_itemWrap .detailWrap .infoWrap li {position:relative; display:block; padding:0 0 0 82px; margin:5px 0 0 0; font-size:15px; color:#666;}
+.prod_itemWrap .detailWrap .infoWrap li .tit {display:block; position:absolute; top:0; left:0; width: 82px; font-weight: bold; color:#333;}
+
+.prod_table {width:100%; border-left:1px solid #ccc; border-right:1px solid #ccc; border-top:1px solid #ccc; background:#fff; table-layout:fixed;}
+.prod_table th,
+.prod_table td {padding:26px 0 26px 0; line-height:20px; text-align:center; border-bottom:1px solid #ccc; box-sizing: border-box;}
+.prod_table th {position:relative; color:#333; font-size:17px; font-weight:bold;}
+.prod_table th:after {content:''; position:absolute; right:0; top:25%; bottom:25%; width:1px; height:50%; background:#eaeaea;}
+.prod_table th.right {padding:22px 30px 22px 0; text-align: right;}
+.prod_table th.left {padding:22px 0 22px 30px; text-align: left;}
+.prod_table th.backno:after {display:none;}
+.prod_table td {position:relative; color:#666; font-size:15px;}
+.prod_table td.right {padding:22px 30px 22px 0; text-align: right;}
+.prod_table td.left {text-align: left;}
+.prod_table td.left.pdL20 {padding:22px 0 22px 20px;}
+.prod_table .prodTxtWrap {margin:-10px 0; font-size: 15px; color:#666;}
+.prod_table .prodTxtWrap .includeNum {display:block; margin:3px 0 0 0; font-size: 18px; color:#666;}
+.prod_table .prodTxtWrap .includeNum .txtNum {font-size: 20px; color:#000 !important; font-family:'Spoqa Han Sans', arial; vertical-align: -2px;}
+.prod_table .prodTxtWrap1 {}
+.prod_table .prodBtnWrap {position:absolute; top:21px; right:30px;}

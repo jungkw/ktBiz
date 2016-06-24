@@ -1,0 +1,423 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 모바일 번호변경 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/svcInfo.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
+
+</head>
+
+
+
+<body>
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('.remote-btn01').on('click',function(){
+			$('.circuitCase01').show();
+			$('.circuitCase02').hide();
+			alert('변경완료. 현재상태 select box');
+			return false;
+		});
+
+		$('.remote-btn02').click(function(){
+			$('.circuitCase01').hide();
+			$('.circuitCase02').show();
+			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
+			return false;
+		});
+	});
+</script>
+<div class="ui-remote">
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn01">휴대폰 30이하 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
+	<button type="button" class="remote-btn02">휴대폰 30초과 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
+</div>
+<!-- e : UI GUIDE -->
+<h1 class="blind">올레닷컴(기업)</h1>
+<div id="cfmOllehWrap">
+
+	<!-- s : skip Navigation -->
+	<ul class="cfmOllehSkipNavi" id="cfmOllehSkipNavi">
+		<li><a href="#cfmOllehConts" ><span>본문으로 바로가기</span></a></li>
+		<li><a href="http://inside.olleh.com/html/WebAccessibility/Info.asp"><span>웹접근성 도움말 페이지로 이동하기</span></a></li>
+	</ul>
+	<!-- e : skip Navigation -->
+
+	<!-- s : gnb wrap -->
+	<div id="cfmOllehGnb">
+		<script type="text/javascript">$.ktBizGnbView();</script>
+	</div>
+	<!-- e : gnb wrap -->
+
+
+	<!-- s : cont container -->
+	<div id="cfmOllehContainer">
+
+		<!-- s : lnb -->
+
+		<div id="cfmOllehLnb" accesskey="4">
+			<script type="text/javascript">$.ktBizLnbView('BCC')</script>
+		</div>
+
+		<!-- e : lnb -->
+
+
+
+		<!-- s : content Body wrap -->
+		<hr />
+		<div id="cfmOllehConts" class="cfmOllehcontsLnbOn" accesskey="1">
+		<h2 class="blind">본문 영역</h2>
+			<div class="cfmOllehContsHeader">
+				<h3 class="cfmOllehContsTit"><img src="../../images/title/svcInfo_pause01.png" alt="신청" /></h3>
+				<div class="cfmOllehContsLocation">
+					<!--<script type="text/javascript">ktBizLocationBar();</script>-->
+					<a href="#home" class="home" onclick="" accesskey="0">
+						<img src="../../images/common/cfm_olleh_icon_home.png" alt="사이트 메인으로" />
+					</a><a href="" onclick="">My페이지</a> &gt; <a href="#home" onclick="">신청/변경</a> &gt; <a href="">모바일 번호변경</a>
+				</div>
+			</div>
+
+			<!-- s : content Body -->
+			<div class="cfmOllehContsMain">
+
+				<!-- s : 컨텐츠 영역 -->
+
+				<!-- s : gray box -->
+				<div class="comm_contsInner grayBox">
+					<div class="comm_contsInner grayBox pb36">
+						<h4 class="blind">모바일 번호변경 신청</h4>
+
+						<!-- s : search comm -->
+						<div class="commTitleWrap pt34 relative">
+							<fieldset>
+								<legend>휴대폰 번호 선택</legend>
+								<p class="comm_scnTitle02 mb25">번호변경 신청을 위해 휴대폰 번호를 선택하세요.</p>
+								<div class="circuitSearchDiv">
+									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">휴대폰 번호 찾기. 현재 선택된 휴대폰 번호 </span>0123456789012345</a>
+									<a href="#" class="btnSty mid blk w26">조회</a>
+
+									<!-- s : 레이어 팝업 -->
+									<div class="pop_mask"></div>
+									<div class="pop_layerWrap" id="billLayerPop" style="width:630px; display: none">
+
+										<div class="pop_wrap commBillPop">
+
+											<!-- s : header -->
+											<div class="pop_header">
+												<h5>휴대폰 번호 찾기</h5>
+
+												<!-- s : 검색 영역 -->
+												<div class="pop_billSrchWhiteBox">
+													<fieldset>
+														<legend>휴대폰 번호 검색 필드</legend>
+														<label for="billNumTxt" class="blind">휴대폰 번호</label>
+														<input type="text" id="billNumTxt" class="placeholder" value="예) 01012345678" /><a href="#" class="btnSty big blk"><span>검색</span></a>
+													</fieldset>
+												</div>
+												<!-- e : 검색 영역 -->
+											</div>
+											<!-- e : header -->
+
+											<!-- s : contents -->
+											<div class="pop_conts" >
+												<div class="pop_contsContainer pt14">
+													<p class="pop_scnTitle font15">찾으시려는 휴대폰 번호를 선택하세요.</p>
+													<ul class="pop_billNumListBox mt15">
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">98798456455</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">21324687984</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">64654987978</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">57987454132</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+													</ul>
+
+													<div class="comm_paging">
+														<a href="#" class="comm_pagingBtn prevBtn">
+															<img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
+														</a><a href="#" class="on" title="현재 페이지">11</a><a href="#">12</a><a href="#">13</a><a href="#">14</a><a href="#">15</a><a href="#" class="comm_pagingBtn nextBtn">
+															<img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
+														</a>
+													</div>
+												</div>
+											</div>
+											<!-- e : contents -->
+										</div>
+										<!-- s : footer -->
+										<div class="pop_footer">
+											<div class="pop_footerInner">
+												<p class="pop_close">
+													<a href="#billPopOpen01" >닫기</a>
+												</p>
+											</div>
+										</div>
+										<!-- e : footer -->
+									</div>
+								</div>
+								<!-- e : 레이어 팝업 -->
+
+							</fieldset>
+						</div>
+						<!-- e : search comm -->
+
+
+						<!-- s :  search result -->
+						<div class="comm_tableBrdr pb30">
+							<table class="comm_table" summary="신청대상 번호를 확인후 신청할 수 있는 표 입니다.">
+								<caption>모바일 번호변경 정보확인표</caption>
+								<colgroup>
+									<col width="165" />
+									<col width="*" />
+									<col width="165" />
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row" class="font17 fNormal">신청대상번호</th>
+										<td class="center noBorder font17 fBold">010-1234-5678</td>
+										<td class="center last">
+											<a href="#smsSendLayer" id="smsSendOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;">번호변경 신청</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- e : search result -->
+
+						<!-- s : sms인증 신청 팝업 -->
+						<div class="pop_layerWrap" id="smsSendLayer" style="margin-left: -250px; width: 500px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>SMS 인증 신청</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<p>인증번호는 가입하신 마스터아이디 핸드폰번호(010-3333-3333)로 발송됩니다</p>
+										<p>휴대폰으로 SMS(단문메시지) 인증번호를 받으시겠습니까?</p>
+									</div>
+									<div class="pop_contsBtns">
+										<a href="#smsInputLayer" id="smsInputOpen" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this); return false;">확인</a>
+										<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+									</div>
+								</div>
+								<!-- e : contents -->
+							</div>
+
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href=""><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : sms인증 신청 팝업 -->
+
+						<!-- s : sms인증번호 입력 팝업 -->
+						<div class="pop_layerWrap" id="smsInputLayer" style="margin-left: -250px; width: 500px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>SMS 인증 신청</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer alignCenter">
+										<form action="">
+											<fieldset>
+												<legend>인증번호입력</legend>
+												<p class="mb10"><label for="smsAuth">인증번호를 입력하세요.</label></p>
+												<input type="password" id="smsAuth" class="w195" />
+												<a href="#smsCompleteLayer" class="btnSty mid blk" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this); return false;">인증확인</a>
+											</fieldset>
+										</form>
+									</div>
+									<div class="pop_contsBtns">
+										<a href="#smsSendLayer" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this); return false;">인증번호 재전송</a>
+										<a href="#" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+									</div>
+								</div>
+								<!-- e : contents -->
+							</div>
+
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="#smsSendOpen"><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : sms인증번호 입력 팝업 -->
+
+						<!-- s : 인증완료 팝업 -->
+						<div class="pop_layerWrap" id="smsCompleteLayer" style="margin-left: -250px; width: 500px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>SMS 인증 완료</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<p class="alignCenter">인증이 완료되었습니다.</p>
+									</div>
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">확인</a>
+									</div>
+								</div>
+								<!-- e : contents -->
+							</div>
+
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="#smsSendOpen"><img src="../../images/btn/pop_btn_footClose.gif" alt="닫기" /></a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 인증완료 팝업 -->
+
+
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02">신청방법</h4>
+						</div>
+						<div class="commBoxWhite mb30">
+							<ul class="svcInfo_chgNumStep">
+								<li class="step1">
+									<div>Step1<span>sms인증</span></div>
+								</li>
+								<li class="step2">
+									<div>Step2<span>희망번호 선택</span></div>
+								</li>
+								<li class="step3">
+									<div>Step3<span>번호변경 완료</span></div>
+								</li>
+							</ul>
+							<ul class="bulletList">
+								<li>SMS 인증을 통한 본인인증 후 번호변경이 가능합니다.<br />단, SMS인증은 타인이 휴대폰 습득 시 유출될 가능성이 있으므로 휴대폰 관리에 주의 해주시기 바랍니다.</li>
+								<li>가입명의자와 실제 사용자 정보가 전산상에 상이할 경우, 본인인증을 통한 번호변경이 불가능합니다.</li>
+							</ul>
+						</div>
+
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02">번호변경이 제한되는 경우</h4>
+						</div>
+
+						<div class="commBoxWhite mb30">
+							<ul class="bulletList">
+							 	<li>분실 임대폰 및 신형 임대폰 사용자</li>
+							 	<li>SIMple 충전요금제/선불요금제/PDA/임대사업자/GVT/별정통신 가입자</li>
+							 	<li>회원 중 상품 미인증 고객</li>
+							 	<li>이번 달 휴대폰 번호를 2회 변경한 경우</li>
+							 	<li>미납 정지 고객, 일시 정지 고객</li>
+							 	<li>미납 요금이 있는 경우</li>
+							 	<li>특정 부가서비스 사용 고객(010번호 연결 서비스, 스팸차단서비스)등</li>
+							</ul>
+						</div>
+
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02">번호변경 주의사항</h4>
+						</div>
+
+						<div class="commBoxWhite">
+							<ul class="bulletList">
+								<li>특정번호는 변경이 불가능합니다.</li>
+								<li>0000, 1234, 7777 (선호번호) 및 1200, 4299, 0016, 1166, 1167, 1168, 1169 (7개 특수번호)와 같은 특정번호는 선택이 불가합니다. (일부 조회되더라도 선택 불가함)</li>
+								<li>휴대폰 번호 변경은 월 2회만 가능합니다.</li>
+								<li>KT번호일 경우 28일 이내에 KT플라자/대리점 방문을 통해 취소 가능 합니다.</li>
+								<li>단 01X(011, 016, 017, 018, 019)번호에서 010번호로 변경한 경우, 번호변경취소가 불가능합니다.</li>
+								<li>휴대폰 번호이동 및 전화신규(과거 2G 사용했던 고객이 3G로 변경한 경우) 이력이 있는 고객님께서는 월~금요일 10시~20시(토요일/일요일/공휴일 불가능) 업무시간 중에만 번호 조회 및 변경이 가능합니다.</li>
+								<li>번호변경 후에는 [회원정보 수정]에서 변경된 휴대폰 번호를 등록하셔야 정상적인  olleh.com 이용이 가능 합니다.</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="comm_contsInner grayBox bottom"></div>
+				</div>
+				<!-- e : gray box -->
+
+
+
+				<!-- e : 컨텐츠 영역  -->
+			</div>
+			<!-- e : content Body -->
+		</div>
+		<hr />
+		<!-- e : content Body wrap -->
+	</div>
+	<!-- e : cont container -->
+
+
+	<!-- s : footer -->
+	<div id="cfmOllehFooter">
+		<script type="text/javascript">$.ktBizFooterView();</script>
+	</div>
+	<!-- e : footer -->
+</div>
+</body>
+</html>
+
