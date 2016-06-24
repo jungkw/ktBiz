@@ -35,11 +35,13 @@
 .comm_table td.tit {padding-left:20px;color:#333;text-align:left;}
 .comm_table td.gray {color:#666;}
 .comm_table td.right em.vat {display:inline-block;}
-.comm_table td .num {font-size:18px;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
-.comm_table td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
-.comm_table td .card-num {display:block;font-size:13px;}
 .comm_table td.name {padding-left:10px;font-weight:700;color:#333;text-align:left;}
 .comm_table td.noContents {padding: 60px 0 16px;color: #666;font-size: 13px;text-align: center;line-height:23px;background:url(../images/icon/comm_icon_searchNone.gif) no-repeat 50% 20px;}
+.comm_table td.noBorder {border-right:0;}
+.comm_table td .num {font-size:18px;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+.comm_table td .desc {margin-left: 7px; font-size:13px; color:#666; vertical-align:middle; }
+.comm_table td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+.comm_table td .card-num {display:block;font-size:13px;}
 .comm_table td .vat {display:block;color:#666;font-size:13px;line-height:16px;}
 .comm_table td .data {display:block;color:#666;font-size:13px;line-height:16px;}
 .comm_table td .residual {display:block;font-weight:normal;font-size:15px;color:#333;}
@@ -78,7 +80,7 @@
 
 
 /* bullet */
-ul.bulletList li {margin:4px 0 0 0;padding:0 0 0 10px;font-size:13px;line-height:21px;color:#666;background:url(../images/icon/comm_icon_circle_smallBullet.png) no-repeat 0 10px;}
+ul.bulletList li {margin:10px 0 0 0;padding:0 0 0 10px;font-size:13px;line-height:21px;color:#666;background:url(../images/icon/comm_icon_circle_smallBullet.png) no-repeat 0 10px; letter-spacing:-0.025em; word-spacing:-0.025em;}
 ul.bulletList li:first-child {margin:0;}
 .bulletIcon {margin:0; padding: 0 0 0 10px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 7px; line-height:1.3; color:#666; font-size:13px;}
 .bulletDg {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 5px;}
@@ -145,6 +147,8 @@ border-radius: 3px 3px 3px 3px;
 
 /* btn icon */
 .btnSty.icon_print span {padding:0 0 0 25px;background:url('../images/icon/comm_icon_print.png') no-repeat left center;}
+.btnSty.icon_speaker span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_speaker.png') no-repeat left center;}
+.btnSty.icon_refresh span {padding:0 0 0 23px;background:url('../images/icon/comm_icon_refresh.png') no-repeat left center;}
 
 
 /* btn color */
@@ -216,6 +220,9 @@ border-radius: 3px 3px 3px 3px;
 .comm_contsInner .comm_contsInner.whiteBox {padding:0 29px;background: url('../images/bg/comm_bg_white_contsBottom.png') 0 100% no-repeat;}
 .comm_contsBb {border-bottom:1px solid #ccc;}
 .comm_contsBt {border-top:1px solid #ccc;}
+
+/* common contents box */
+.commBoxWhite {padding:32px 30px; border:1px solid #ccc; background:#fff;}
 
 /* search common */
 .circuitSearchDiv {position: absolute;top:32px;right: 0}
@@ -336,6 +343,7 @@ border-radius: 3px 3px 3px 3px;
 .pb10 {padding-bottom:10px;}
 .pb26 {padding-bottom:26px !important;}
 .pb30 {padding-bottom:30px !important;}
+.pb36 {padding-bottom:36px !important;}
 .pb40 {padding-bottom:40px !important;}
 .pl0 {padding-left:0 !important;}
 .pl5 {padding-left:5px !important;}
@@ -357,6 +365,7 @@ border-radius: 3px 3px 3px 3px;
 .font14 {font-size:14px !important;}
 .font15 {font-size:15px !important;}
 .font16 {font-size:16px;}
+.font17 {font-size:17px!important;}
 .font20 {font-size:20px;}
 .alignLeft {text-align:left;}
 .alignCenter {text-align:center;}
@@ -411,6 +420,7 @@ border-radius: 3px 3px 3px 3px;
 .w170 {width:170px}
 .w180 {width:180px}
 .w195 {width:195px}
+.w230{width:230px}
 .w240{width:240px}
 .w270{width:270px}
 .w330{width:330px}
@@ -544,3 +554,9 @@ border-radius: 3px 3px 3px 3px;
 .comm_inputTel input {display:inline-block; margin-right:4px; width:46px; vertical-align:top;}
 .comm_inputTel span {display:inline-block; margin-right:4px; font-size:15px; line-height:27px; text-align:center; vertical-align:top;}
 
+
+/* captcha */
+.captcha:after {content: ''; display: block; clear: both;}
+.captcha .img {float:left; margin:0 10px 0 0;}
+.captcha .fn {float:left;}
+.captcha .fn .input {margin-top:4px;}

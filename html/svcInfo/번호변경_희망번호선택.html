@@ -117,35 +117,10 @@
 				<!-- s : gray box -->
 				<div class="comm_contsInner grayBox">
 					<div class="comm_contsInner grayBox">
+						<h4 class="blind">모바일 희망변경번호 신청</h4>
+
 						<div class="commTitleWrap pt34">
-							<h4 class="comm_scnTitle02">현재 선택된 서비스번호 정보</h4>
-						</div>
-
-						<!-- s :  search result -->
-						<div class="comm_tableBrdr pb30">
-							<table class="comm_table" summary="상품구분, 서비스번호(ID)를 확인할 수 있는 표 입니다.">
-								<caption>서비스번호 정보확인표</caption>
-								<colgroup>
-									<col width="50%" />
-									<col width="*" />
-								</colgroup>
-
-								<thead>
-									<th scope="col">상품구분</th>
-									<th scope="col" class="last">서비스 번호</th>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="center">모바일</td>
-										<td class="center last">010-1234-5678</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!-- e : search result -->
-
-						<div class="commTitleWrap">
-							<h4 class="comm_scnTitle02">변경 희망번호 선택</h4>
+							<h4 class="comm_scnTitle02">희망번호를 선택해 주세요.</h4>
 						</div>
 
 						<div class="comm_tableBrdr mt20 pb30">
@@ -158,7 +133,11 @@
 
 								<tbody class="fullBorder">
 									<tr>
-										<th scope="row" class="left vt">희망번호 입력</th>
+										<th scope="row" class="left">선택대상번호</th>
+										<td class="last">010-1234-5678</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">희망번호 입력</th>
 										<td class="last">
 											<div class="comm_inputTel">
 												<span>010 -</span>
@@ -175,38 +154,106 @@
 												<span>-</span>
 												<input name="telNoNo" type="text"  size="4" maxlength="4" onblur="numDataFormat(this);" title="연락전화번호 뒷자리"/>
 											</div>
-											<a href="" class="btnSty mid gray">번호검색</a>
-											<span>(조회가능 횟수 : 50회)</span>
-											<p>번호검색은 5회 시도시마다 자동입력 방지 문자를 함께 입력하셔야 합니다.</p>
-											<p>아래 문자를 보이는 대로 입력해 주세요.</p>
-											<div class="captcha">
-												캡차영역
+											<a href="" class="btnSty mid blk">번호검색</a>
+											<span class="desc">(조회가능 횟수 : <span class="emp01">50</span>회)</span>
+											<div class="svcInfo_tdMsg mt11">
+												<p class="bulletIcon">번호검색은 5회 시도시마다 자동입력 방지 문자를 함께 입력하셔야 합니다.<br />아래 문자를 보이는 대로 입력해 주세요.</p>
 											</div>
+											<div class="captcha">
+												<div class="img">
+														<img src="../../images/temp_captcha.png" alt="캡차이미지" />
+												</div>
+												<div class="fn">
+													<div>
+														<a href="" class="btnSty sml icon_speaker"><span>음성듣기</span></a>
+														<a href="" class="btnSty sml icon_refresh"><span>새로고침</span></a>
+													</div>
+													<div class="input">
+														<label for="captcha" class="blind"></label>
+														<input type="text" id="captcha" class="w230" />
+														<a href="" class="btnSty mid red">확인</a>
+													</div>
 
-											<div class="svcInfo-numList pt14">
-												<p class="">희망번호 검색결과 입니다. 변경을 희망하는 휴대폰번호를 선택해주세요.</p>
-												<ul class="svcInfo-numListBox mt15">
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
-													<li><a href="">1111-1112</a></li>
+												</div>
+											</div>
+										 <div class="svcInfo-numList mt25">
+												<div class="svcInfo_tdMsg">
+													<p class="bulletIcon">희망번호 검색결과 입니다. 변경을 희망하는 휴대폰번호를 선택해주세요.</p>
+												</div>
+												<ul class="svcInfo-numListBox mt12">
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num01" name="chgNum" />
+															<i></i>
+															<label for="num01">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num02" name="chgNum" />
+															<i></i>
+															<label for="num02">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num03" name="chgNum" />
+															<i></i>
+															<label for="num03">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num04" name="chgNum" />
+															<i></i>
+															<label for="num04">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num05" name="chgNum" />
+															<i></i>
+															<label for="num05">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num06" name="chgNum" />
+															<i></i>
+															<label for="num06">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num07" name="chgNum" />
+															<i></i>
+															<label for="num07">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num08" name="chgNum" />
+															<i></i>
+															<label for="num08">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num09" name="chgNum" />
+															<i></i>
+															<label for="num09">1111-1112</label>
+														</div>
+													</li>
+													<li>
+														<div class="comm_radio">
+															<input type="radio" id="num10" name="chgNum" />
+															<i></i>
+															<label for="num10">1111-1112</label>
+														</div>
+													</li>
 												</ul>
+
+												<a href="" class="btnSty sml svcInfo-numListSelect">희망번호선택</a>
 
 												<div class="comm_paging">
 													<a href="#" class="comm_pagingBtn prevBtn">
