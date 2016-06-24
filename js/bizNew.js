@@ -34,7 +34,7 @@ $(document).ready(function(){
           $target.val("");
           $target.prop("disabled", false).focus();
         }else{
-          $target.prop("disabled", true);
+          $target.prop("disabled", true);  
           $target.val($val)
           if($val==""){
             $target.val("");
@@ -43,7 +43,25 @@ $(document).ready(function(){
         return false;
     };
 
+    /**
+    * check box & radio box IE8 fn  
+     */
+    $.ktBizCheckRadio = function(){
+        $('input:radio:checked, input:checkbox:checked').next('i').addClass('checked');
+        $('input:radio, input:checkbox').click(function(){
+          var name = $(this).attr('name');
+          $("input[name="+name+"]").next('i').removeClass('checked');
+          $(this).next('i').addClass('checked');
+          $('input:radio, input:checkbox').focusin(function(){
+              $(this).next('i').addClass('checked');
+          });
+        });
 
+          
+        
+    };
+
+    $.ktBizCheckRadio();
 
 
     /**
@@ -1355,7 +1373,9 @@ $(function(){
 $(function(){
 	//가입 상품 조회 리스트 상세 접기, 펼치기
 
-	ktBizProdDetailShow('.prod_itemList');
+  if ($('.prod_itemList').length) {
+    ktBizProdDetailShow('.prod_itemList');
+  }
 
 	function ktBizProdDetailShow(selector) {
 		var $container = $(selector),
@@ -1372,9 +1392,7 @@ $(function(){
 					$others = $targetLi.siblings(),
 					$othersDetail = $others.find('.detailWrap'),
 					$othersBtn = $others.find('.btnDetail'),
-					
-					listTop = $targetLi.closest('.prod_itemList').offset().top;;
-					
+					listTop = $targetLi.closest('.prod_itemList').offset().top;
 
 				if( $targetLi.hasClass('selected') ) {
 					$detailSection.stop().slideUp(500);
