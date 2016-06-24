@@ -43,7 +43,14 @@ $(document).ready(function(){
         return false;
     };
 
+    $.ktBizCheckRadio = function(){
+        $('input:radio:checked, input:checkbox:checked').next('i').addClass('bg01');
+        $('input:radio:checked, input:checkbox:checked').focusin(function(){
+            $(this).next('i').addClass('bg01');
+        });
+    };
 
+    $.ktBizCheckRadio();
 
 
     /**
