@@ -45,6 +45,7 @@ $(document).ready(function(){
 
 
 
+
     /**
     * input placeholder fn
     */
@@ -225,6 +226,7 @@ $(document).ready(function(){
 
 
       var gnbItem = "";
+
 
 
             gnbItem += "<!-- s : Logo -->";
@@ -1275,6 +1277,7 @@ $(document).ready(function(){
                   footerItem += "</a>";
                   footerItem += "<p class='copy'>Copyright ⓒ2011 - 2016 kt corp. All rights reserved.</p>";
                 footerItem += "</div>";
+                footerItem ="<!--[if lte IE 8]><script src='jquery/poly-checked.min.js'></script><![endif]-->";
 
 
             document.write(footerItem);
