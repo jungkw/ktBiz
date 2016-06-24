@@ -1024,9 +1024,13 @@ $(document).ready(function(){
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
                     lnbItem += "<a href='#' id='BAB'>월별요금조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BAC'>실시간 요금</a>";
-                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BAC' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAC' title='하위메뉴 열기'>실시간 요금</a>";
+                      lnbItem += "<ul id='sub_BAC' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BACA'>회선별 실시간 요금</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BACB'>전체 실시간 요금</a></li>";
+                      lnbItem += "</ul>";
+                lnbItem += "</li>";
                   lnbItem += "<li id='li_BAD' class=''>";
                       lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAD' title='하위메뉴 열기'>사용량 조회</a>";
                       lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
@@ -1057,7 +1061,7 @@ $(document).ready(function(){
 
                   lnbItem += "<li id='li_BBA' class=''>";
                       lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>사용량 조회</a>";
-                      lnbItem += "<ul id='sub_BAD' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                      lnbItem += "<ul id='sub_BBA' class='cfmOllehLnbNewListCont' style='display: none;'>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAA'>모바일</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAB'>인터넷</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAC'>tv</a></li>";
@@ -1341,6 +1345,56 @@ $(function(){
     }
     $.ktBizSvc();
 
+
+
+});
+
+
+$(function(){
+	//가입 상품 조회 리스트 상세 접기, 펼치기
+
+	ktBizProdDetailShow('.prod_itemList');
+
+	function ktBizProdDetailShow(selector) {
+		var $container = $(selector),
+			$lis = $container.find('li'),
+
+			listTop = $container.offset().top;
+
+		$lis.each(function() {
+			var posY = $(this).offset().top;
+
+			$(this).find('.btnDetail').click(function(e) {
+				e.preventDefault();
+
+				var $targetLi = $(this).closest('li'),
+					$detailSection = $targetLi.find('.detailWrap'),
+					$others = $targetLi.siblings(),
+					$othersDetail = $others.find('.detailWrap'),
+					$othersBtn = $others.find('.btnDetail');
+					
+
+				if( $targetLi.hasClass('selected') ) {
+					$detailSection.stop().slideUp(500);
+					setTimeout(function(){
+						$targetLi.removeClass('selected');
+					}, 500);
+					$('html, body').stop().animate({scrollTop:listTop - 10});
+					$(this).text('상세내용 펼치기');
+					$othersBtn.text('상세내용 접기');
+				} else {
+					$targetLi.addClass('selected');
+					$detailSection.stop().slideDown();
+					$others.removeClass('selected');
+					$othersDetail.stop().slideUp();
+					$('html, body').stop().animate({scrollTop:posY - 10});
+					$(this).text('상세내용 접기');
+					$othersBtn.text('상세내용 펼치기');
+				}
+
+			});
+		});
+	}
 
 
 });
