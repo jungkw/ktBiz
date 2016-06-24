@@ -44,10 +44,18 @@ $(document).ready(function(){
     };
 
     $.ktBizCheckRadio = function(){
-        $('input:radio:checked, input:checkbox:checked').next('i').addClass('bg01');
-        $('input:radio:checked, input:checkbox:checked').focusin(function(){
-            $(this).next('i').addClass('bg01');
+        $('input:radio:checked, input:checkbox:checked').next('i').addClass('checked');
+        $('input:radio, input:checkbox').click(function(){
+          var name = $(this).attr('name');
+          $("input[name="+name+"]").next('i').removeClass('checked');
+          $(this).next('i').addClass('checked');
+          $('input:radio, input:checkbox').focusin(function(){
+              $(this).next('i').addClass('checked');
+          });
         });
+
+          
+        
     };
 
     $.ktBizCheckRadio();

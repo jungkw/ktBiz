@@ -465,16 +465,16 @@ border-radius: 3px 3px 3px 3px;
 .comm_radio input:focus + i {background-position: -49px -1px;border: 1px dotted #000;}
 .comm_radio input.active:focus + i {border:0;}
 .comm_radio input:checked + i {background-position: -70px 0;}
-.comm_radio input:checked:focus + i {background-position: -71px -1px;}
+.comm_radio input:checked:focus + i{background-position: -71px -1px;}
 .comm_radio label, .comm_checkbox label {height:22px;line-height:22px;padding-left:28px;color: #333;font-size:15px;}
 .comm_radio i , .comm_checkbox i {width:22px;height:22px;display: block;position: absolute;top:0;left:0;background:url('../images/bg/comm_bg_formInput_spr.png') no-repeat;background-position: -48px 0; z-index: 0}
 
-.chrome .comm_radio input:focus + i, .Safari .comm_radio input:focus + i {background-position: -50px -2px !important;}
-.chrome .comm_radio input:checked + i, .Safari .comm_radio input:checked + i {background-position: -70px 0 !important;}
-.chrome .comm_radio input:checked:focus + i, .Safari .comm_radio input:checked:focus + i {background-position: -72px -2px !important;}
+.chrome .comm_radio input:focus + i, .Safari .comm_radio input:focus + i {background-position: -50px -2px ;}
+.chrome .comm_radio input:checked + i, .Safari .comm_radio input:checked + i {background-position: -70px 0 ;}
+.chrome .comm_radio input:checked:focus + i, .Safari .comm_radio input:checked:focus + i {background-position: -72px -2px ;}
 .chrome .comm_radio input:focus + i, .Safari .comm_radio input:focus + i ,.chrome .comm_checkbox input:focus + i, .Safari .comm_checkbox input:focus + i {border:2px solid #a6c8ff; border-radius: 3px; box-sizing: border-box;}
-
-.comm_radio .bg01 {background-position: -70px 0;}
+.comm_radio i.checked{background-position: -70px 0px !important;}
+.comm_radio input:focus + i.checked{background-position: -71px -1px !important;}
 
 /* checkbox */
 .comm_checkbox input {width:24px;height: 24px;}
