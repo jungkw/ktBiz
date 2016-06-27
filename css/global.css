@@ -134,7 +134,7 @@ border-radius: 3px 3px 3px 3px;
 }
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#df2428 !important; text-decoration: none !important; border-color:#df2428;}
 .btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 34px;}
-.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 26px;}
+.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 25px;}
 .btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 22px;}
 .btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 16px;}
 .btnSty.big.arr {padding:0 28px 0 14px; background-image:url(../images/btn/comm_btn_bg_arrowB2.png); background-repeat:no-repeat; background-position:100% 0;}
@@ -232,7 +232,7 @@ border-radius: 3px 3px 3px 3px;
 
 /* search common */
 .circuitSearchDiv {position: absolute;top:34px;right: 0}
-.circuitSearchDiv a.dummyInput {width: 180px;height: 30px;padding:0 7px; display: inline-block;line-height: 30px;font-size: 13px;color:#666;background: #ebebe4;border:1px solid #ccc; box-sizing: border-box;border-radius:2px; vertical-align: middle; }
+.circuitSearchDiv a.dummyInput {width: 180px;height: 30px;padding:0 7px; display: inline-block;line-height: 30px;font-size: 13px;color:#666;background: #fff;border:1px solid #ccc; box-sizing: border-box;border-radius:2px; vertical-align: middle; }
 .circuitSearchDiv a.dummyInput:hover, .circuitSearchDiv a.dummyInput:focus, .circuitSearchDiv a.dummyInput:active {color:#666 !important; text-decoration: none !important}
 
 .comm_circuitSearch {padding:25px 27px;margin-bottom:30px;border:1px solid #ddd; border-top:1px solid #333;background: #fff;}

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /* 실시간 요금조회 */
-.realtimePay_desc {padding:85px 0; text-align: center;color: #666; font-size: 13px;}
-.realtimePay_desc strong {color:#000;}
+.realtimePay_graybox {padding:20px 30px;background: #f0f0f0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;position: relative;}
+.realtimePay_graybox p {color: #000;font-size: 15px;}
+.realtimePay_graybox .rightBtn {position: absolute;top:16px;right: 30px}
 .realtime_scrollConts {height: auto;overflow-x:auto;overflow-y:hidden;}
