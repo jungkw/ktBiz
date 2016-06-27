@@ -46,37 +46,7 @@
 
 
 <body>
-<!-- s : UI GUIDE -->
-<style type="text/css">
-.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
-.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
-.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
-.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
-.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
-</style>
-<script type="text/javascript">
-	$(function(){
-		$('.remote-btn01').on('click',function(){
-			$('.circuitCase01').show();
-			$('.circuitCase02').hide();
-			alert('변경완료. 현재상태 select box');
-			return false;
-		});
 
-		$('.remote-btn02').click(function(){
-			$('.circuitCase01').hide();
-			$('.circuitCase02').show();
-			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
-			return false;
-		});
-	});
-</script>
-<div class="ui-remote">
-	<p>UI GUIDE</p>
-	<button type="button" class="remote-btn01">휴대폰 30이하 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
-	<button type="button" class="remote-btn02">휴대폰 30초과 일 경우<span>(조회영역 셀렉트 박스가 변동됩니다.)</span></button>
-</div>
-<!-- e : UI GUIDE -->
 <h1 class="blind">올레닷컴(기업)</h1>
 <div id="cfmOllehWrap">
 
@@ -113,12 +83,6 @@
 		<h2 class="blind">본문 영역</h2>
 			<div class="cfmOllehContsHeader">
 				<h3 class="cfmOllehContsTit"><img src="../../images/title/svcInfo_pause02.png" alt="해제" /></h3>
-				<div class="cfmOllehContsLocation">
-					<!--<script type="text/javascript">ktBizLocationBar();</script>-->
-					<a href="#home" class="home" onclick="" accesskey="0">
-						<img src="../../images/common/cfm_olleh_icon_home.png" alt="사이트 메인으로" />
-					</a><a href="" onclick="">My페이지</a> &gt; <a href="#home" onclick="">신청/변경</a> &gt; <a href="">일시정지</a> &gt; <a href="">해제</a>
-				</div>
 			</div>
 
 			<!-- s : content Body -->
@@ -133,11 +97,7 @@
 						<div class="commTitleWrap pt34 relative bb1">
 							<fieldset>
 								<legend>휴대폰 번호 선택</legend>
-<<<<<<< HEAD
-								<p class="comm_scnTitle02 mb20">조회를 원하는 휴대폰 번호를 찾아주세요.</p>
-=======
-								<p class="comm_scnTitle02 mb20">일시정지 해제를 위해 휴대폰 번호를 선택하세요.</p>
->>>>>>> 59b34330bcd3ac7b74c1a1ac5ea345e959058a87
+								<p class="comm_scnTitle02 mb20">일시정지 해제를 위해 서비스 번호를 선택하세요. </p>
 								<div class="circuitSearchDiv">
 									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">휴대폰 번호 찾기. 현재 선택된 휴대폰 번호 </span>0123456789012345</a>
 									<a href="#" class="btnSty mid blk w26">조회</a>
@@ -232,7 +192,7 @@
 
 						<!-- s :  search result -->
 						<div class="comm_tableBrdr pb30">
-							<table class="comm_table" summary="일시정지 휴대폰 번호의 정로를 휴대폰번호, 정지일자, 비밀번호, 정지해제 정보를 확인할 수 있는 표 입니다.">
+							<table class="comm_table" summary="일시정지 휴대폰 번호의 정로를 휴대폰번호, 정지일자, 비밀번호 정보를 확인할 수 있는 표 입니다.">
 								<caption>일시정지 휴대폰 정보</caption>
 								<colgroup>
 									<col width="34%" />
@@ -252,6 +212,12 @@
 										<td class="center">010-1234-5678</td>
 										<td class="center">2016.06.01</td>
 										<td class="center last">*****</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="noContents last">조회된 데이터가 없습니다.</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="noContents last">검색결과가 없습니다.</td>
 									</tr>
 								</tbody>
 							</table>
