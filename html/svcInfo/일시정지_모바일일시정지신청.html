@@ -132,27 +132,28 @@
 						<div class="commTitleWrap pt34 relative">
 							<fieldset>
 								<legend>휴대폰 번호 선택</legend>
-								<p class="comm_scnTitle02 mb20">일시정지 신청을 위해 휴대폰 번호를 선택하세요.</p>
+								<p class="comm_scnTitle02 mb20">회선별 실시간 요금조회를 위해 휴대폰 번호를 찾아주세요.</p>
 								<div class="circuitSearchDiv">
 									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">휴대폰 번호 찾기. 현재 선택된 휴대폰 번호 </span>0123456789012345</a>
 									<a href="#" class="btnSty mid blk w26">조회</a>
 
 									<!-- s : 레이어 팝업 -->
 									<div class="pop_mask"></div>
-									<div class="pop_layerWrap" id="billLayerPop" style="width:630px; display: none">
+									<div class="pop_layerWrap" id="billLayerPop" style="width:630px; display: none;">
 
 										<div class="pop_wrap commBillPop">
 
 											<!-- s : header -->
 											<div class="pop_header">
 												<h4>휴대폰 번호 찾기</h4>
-
+												
 												<!-- s : 검색 영역 -->
 												<div class="pop_billSrchWhiteBox">
 													<fieldset>
 														<legend>휴대폰 번호 검색 필드</legend>
 														<label for="billNumTxt" class="blind">휴대폰 번호</label>
-														<input type="text" id="billNumTxt" class="placeholder" value="예) 01012345678" /><a href="#" class="btnSty big blk"><span>검색</span></a>
+														<input type="text" id="billNumTxt" class="placeholder" value="예) 010-1234-5678" /><a href="#" class="btnSty big blk"><span>검색</span></a>
+														<p class="mt5 color666 font13 alignLeft pl10">50개 이상 회선은 검색을 이용하세요.</p>
 													</fieldset>
 												</div>
 												<!-- e : 검색 영역 -->
@@ -164,65 +165,42 @@
 												<div class="pop_contsContainer pt14">
 													<p class="pop_scnTitle font15">찾으시려는 휴대폰 번호를 선택하세요.</p>
 													<ul class="pop_billNumListBox mt15">
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">98798456455</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">21324687984</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">64654987978</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">57987454132</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">98798456455</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">21324687984</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">64654987978</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">57987454132</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">64654987978</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">57987454132</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">12345678901</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														
 													</ul>
 
-													<!-- <div class="comm_paging">
-														<a href="#" class="comm_pagingBtn prevBtn">
-															<img src="../../images/btn/comm_btn_pagingPrev.png" alt="이전 10페이지 보기" />
-														</a><a href="#" class="on" title="현재 페이지">11</a><a href="#">12</a><a href="#">13</a><a href="#">14</a><a href="#">15</a><a href="#" class="comm_pagingBtn nextBtn">
-															<img src="../../images/btn/comm_btn_pagingNext.png" alt="다음 10페이지 보기" />
-														</a>
-													</div> -->
+													<div class="comm_paging">
+														<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+													</div>
 												</div>
 											</div>
 											<!-- e : contents -->
