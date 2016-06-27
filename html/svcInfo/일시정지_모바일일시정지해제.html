@@ -133,7 +133,11 @@
 						<div class="commTitleWrap pt34 relative bb1">
 							<fieldset>
 								<legend>휴대폰 번호 선택</legend>
+<<<<<<< HEAD
 								<p class="comm_scnTitle02 mb20">조회를 원하는 휴대폰 번호를 찾아주세요.</p>
+=======
+								<p class="comm_scnTitle02 mb20">일시정지 해제를 위해 휴대폰 번호를 선택하세요.</p>
+>>>>>>> 59b34330bcd3ac7b74c1a1ac5ea345e959058a87
 								<div class="circuitSearchDiv">
 									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">휴대폰 번호 찾기. 현재 선택된 휴대폰 번호 </span>0123456789012345</a>
 									<a href="#" class="btnSty mid blk w26">조회</a>
@@ -147,7 +151,7 @@
 											<!-- s : header -->
 											<div class="pop_header">
 												<h4>휴대폰 번호 찾기</h4>
-												
+
 												<!-- s : 검색 영역 -->
 												<div class="pop_billSrchWhiteBox">
 													<fieldset>
@@ -196,7 +200,7 @@
 														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
 														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
 														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														
+
 													</ul>
 
 													<div class="comm_paging">
@@ -227,45 +231,38 @@
 
 
 						<!-- s :  search result -->
-						<div class="commTitleWrap mt34">
-							<h4 class="comm_scnTitle02">일시정지 휴대폰번호 리스트</h4>
-						</div>
 						<div class="comm_tableBrdr pb30">
 							<table class="comm_table" summary="일시정지 휴대폰 번호의 정로를 휴대폰번호, 정지일자, 비밀번호, 정지해제 정보를 확인할 수 있는 표 입니다.">
 								<caption>일시정지 휴대폰 정보</caption>
 								<colgroup>
-									<col width="25%" />
-									<col width="25%" />
-									<col width="25%" />
-									<col width="25%" />
+									<col width="34%" />
+									<col width="33%" />
+									<col width="33%" />
 								</colgroup>
 
 								<thead>
 									<tr>
 										<th scope="col">휴대폰번호</th>
 										<th scope="col">정지일자</th>
-										<th scope="col">비밀번호</th>
-										<th scope="col" class="last">정지해제</th>
+										<th scope="col" class="last">비밀번호</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td class="center">010-1234-5678</td>
 										<td class="center">2016.06.01</td>
-										<td class="center">*****</td>
-										<td class="last center"><a href="#mPauseLayerPop" id="mPopOpen01" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;">일시정지 해제</a></td>
-									</tr>
-									<tr>
-										<td colspan="4" class="noContents last">조회된 데이터가 없습니다.</td>
-									</tr>
-									<tr>
-										<td colspan="4" class="noContents last">검색결과가 없습니다.</td>
+										<td class="center last">*****</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 						<!-- e : search result -->
 					</div>
+
+					<div class="commBtnWrap pb37">
+						<a href="#mPauseLayerPop" id="mPopOpen01" class="btnSty big red" onclick="$.ktBizPopClick(this); return false;">일시정지 해제</a>
+					</div>
+
 					<div class="comm_contsInner grayBox bottom"></div>
 				</div>
 				<!-- e : gray box -->
