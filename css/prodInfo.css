@@ -78,7 +78,7 @@
 .prod_itemWrap .summaryWrap dd.posR {position:absolute; top:39px; right:0; display:block; width:80px; text-align:right; color:#ee1c24; font-size:17px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 .prod_itemWrap .summaryWrap .btnDetail {position:absolute; top:44px; right:25px; display:block; width:25px; height:16px; text-indent:-9999px;}
 
-/*인터넷, tv, wibro, wifi */
+/*인터넷, tv, wibro, wifi 
 .internet .prod_itemWrap .summaryWrap dt,
 .tv       .prod_itemWrap .summaryWrap dt,
 .wibro    .prod_itemWrap .summaryWrap dt,

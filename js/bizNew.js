@@ -1373,9 +1373,9 @@ $(function(){
 $(function(){
 	//가입 상품 조회 리스트 상세 접기, 펼치기
 
-  if ($('.prod_itemList').length) {
-    ktBizProdDetailShow('.prod_itemList');
-  }
+	if ($('.prod_itemList').length) {
+		ktBizProdDetailShow('.prod_itemList');
+	}
 
 	function ktBizProdDetailShow(selector) {
 		var $container = $(selector),
