@@ -1375,8 +1375,6 @@ $(function(){
 
 	if ($('.prod_itemList').length) {
 		ktBizProdPlaceholder();
-
-		ktBizProdDetailShow('.prod_itemList');
 	}
 
 	function ktBizProdDetailShow(selector) {
@@ -1417,32 +1415,6 @@ $(function(){
 			});
 		});
 	}
-
-	function ktBizProdPlaceholder() {
-		var $container = $('.prod_prodInfoWrap'),
-			$box = $container.find('.prod_greyBoxWrap input'),
-			$itemList = $container.find('.prod_itemList');
-
-		if ( $itemList.hasClass('mobile') ) {
-			$box.attr('value','예) 010-1234-5678');
-		} else if( $itemList.hasClass('internet') ) {
-			$box.attr('value','예) kt1234');
-		} else if( $itemList.hasClass('tv') ) {
-			$box.attr('value','예) z!123456');
-		} else if( $itemList.hasClass('internetPhone') ) {
-			$box.attr('value','예) 070-1234-5678');
-		} else if( $itemList.hasClass('phone') ) {
-			$box.attr('value','예) 031-1234-5678');
-		} else if( $itemList.hasClass('wibro') ) {
-			$box.attr('value','예) w7123456');
-		} else if( $itemList.hasClass('wifi') ) {
-			$box.attr('value','예) w7123456');
-		} else {
-			$box.attr('value','예) 12345678901');
-		}
-		
-	}
-
 
 
 });
