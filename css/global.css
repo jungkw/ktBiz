@@ -86,7 +86,7 @@ ul.bulletList li:first-child {margin:0;}
 .bulletIcon {margin:0; padding: 0 0 0 10px; background: url('../images/icon/comm_icon_circle_smallBullet.png') no-repeat 0 7px; line-height:1.3; color:#666; font-size:13px;}
 .bulletDg {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 5px;}
 .bulletMinus {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_minus_smallBullet.gif') no-repeat 0 9px;}
-.pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.gif') no-repeat left 1px;}
+.pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.png') no-repeat left 1px;}
 
 /* icon */
 .iconWarningRed {padding:0 0 0 17px;background: url('../images/icon/svc_icon_warning_red.png') 0 2px no-repeat;line-height: 13px;}
@@ -134,7 +134,7 @@ border-radius: 3px 3px 3px 3px;
 }
 .btnSty:hover, .btnSty:focus, .btnSty:active {color:#df2428 !important; text-decoration: none !important; border-color:#df2428;}
 .btnSty.big {height:34px;padding:0 14px; font-size:15px; line-height: 34px;}
-.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 25px;}
+.btnSty.mid {height:28px;padding:0 9px; font-size:13px; line-height: 26px;}
 .btnSty.sml {height:24px;padding:0 9px; font-size:13px; line-height: 22px;}
 .btnSty.mini {height:18px;padding:0 9px; font-size:13px; line-height: 16px;}
 .btnSty.big.arr {padding:0 28px 0 14px; background-image:url(../images/btn/comm_btn_bg_arrowB2.png); background-repeat:no-repeat; background-position:100% 0;}
@@ -232,8 +232,8 @@ border-radius: 3px 3px 3px 3px;
 
 /* search common */
 .circuitSearchDiv {position: absolute;top:34px;right: 0}
-.circuitSearchDiv a.dummyInput {width: 180px;height: 30px;padding:0 7px; display: inline-block;line-height: 30px;font-size: 13px;color:#666;background: #fff;border:1px solid #ccc; box-sizing: border-box;border-radius:2px; vertical-align: middle; }
-.circuitSearchDiv a.dummyInput:hover, .circuitSearchDiv a.dummyInput:focus, .circuitSearchDiv a.dummyInput:active {color:#666 !important; text-decoration: none !important}
+.circuitSearchDiv a.dummyInput {width: 180px;height: 30px;padding:0 7px; display: inline-block;line-height: 27px;font-size: 14px;color:#333;background: #fff;border:1px solid #ccc; box-sizing: border-box;border-radius:2px; vertical-align: middle; }
+.circuitSearchDiv a.dummyInput:hover, .circuitSearchDiv a.dummyInput:focus, .circuitSearchDiv a.dummyInput:active {color:#333 !important; text-decoration: none !important}
 
 .comm_circuitSearch {padding:25px 27px;margin-bottom:30px;border:1px solid #ddd; border-top:1px solid #333;background: #fff;}
 .comm_circuitSearch p.desc {padding:0 0 12px 0;color:#333;font-size: 15px;line-height: 15px;border-bottom: 1px dashed #cbcbcb;}
@@ -404,6 +404,7 @@ border-radius: 3px 3px 3px 3px;
 .lrpadding {padding:0 29px;}
 
 /* width */
+.w90p {width:90% !important;}
 .w100p {width:100% !important;}
 .w140p {width:140% !important;}
 .w19 {width:19px}
