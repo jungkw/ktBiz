@@ -4,4 +4,4 @@
 .realtimePay_graybox {padding:20px 30px;background: #f0f0f0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;position: relative;}
 .realtimePay_graybox p {color: #000;font-size: 15px;}
 .realtimePay_graybox .rightBtn {position: absolute;top:16px;right: 30px}
-.realtime_scrollConts {height: auto;overflow-x:auto;overflow-y:hidden;}
+.realtime_scrollConts {max-height: 990px;overflow-x:hidden;overflow-y:auto;}
