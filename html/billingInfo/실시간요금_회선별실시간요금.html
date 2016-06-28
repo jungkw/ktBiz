@@ -44,12 +44,6 @@
 </style>
 <script type="text/javascript">
 	$(function(){
-		$('.remote-btn01').on('click',function(){
-			$('.haveContents, .comm_noContents').hide();
-
-			return false;
-		});
-
 		$('.remote-btn02').click(function(){
 			$('.haveContents').hide();
 			$('.comm_noContents').show();
@@ -64,7 +58,6 @@
 </script>
 <div class="ui-remote">
 	<p>UI GUIDE</p>
-	<button type="button" class="remote-btn01">처음 진입시 (조회 전)</button>
 	<button type="button" class="remote-btn02">조회된 데이터가 없을 경우</button>
 	<button type="button" class="remote-btn03">조회된 데이터가 있을 경우</button>
 </div>
@@ -120,7 +113,7 @@
 						<div class="commTitleWrap pt34 relative">
 							<fieldset>
 								<legend>서비스 번호 선택</legend>
-								<p class="comm_scnTitle02 mb20">조회를 위해 서비스 번호를 찾아주세요.</p>
+								<p class="comm_scnTitle02 mb20">조회하실 서비스 번호를 선택하세요.</p>
 								<div class="circuitSearchDiv">
 									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>010-1234-5678</a>
 									<a href="#" class="btnSty mid blk w26 fBold">조회</a>
