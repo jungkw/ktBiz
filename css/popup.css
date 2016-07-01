@@ -54,6 +54,7 @@
 
 /*  명세서 번호 선택 */
 .pop_wrap .pop_billSrchWhiteBox {position:absolute; top:28px; right:29px; background: #fff;}
+.pop_wrap .pop_billSrchWhiteBox.indexPop {top:16px;}
 .pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:50px;}
 .pop_wrap .pop_billSrchWhiteBox input {width:203px; height:30px; line-height:30px; font-size:15px; color: #333;}
 .pop_wrap .pop_billSrchWhiteBox a {position: absolute; top:0;right: 0;}
