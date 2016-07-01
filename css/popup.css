@@ -12,8 +12,8 @@
 .pop_footer {width: 100%; min-width: 340px; max-width: 750px; height: 31px; position: absolute; bottom: -31px; left: 0; background: #555; }
 .pop_footer .pop_footerInner {width: 100%; padding: 0;overflow: hidden; margin-top: 0; position: static; bottom: 0; line-height: 30px;}
 .pop_footer .pop_footerInner .pop_check {float: left; padding: 0 0 0 27px}
-.pop_footer .pop_footerInner .pop_close {width:69px;height:31px;position: absolute; top:0; right: 0; padding: 0; background: url('../images/btn/pop_btn_footClose.png') right center no-repeat;}
-.pop_footerInner .pop_close a {padding:9px 34px 7px 5px; float: right; color:#fff;line-height: 100%; font-size: 15px;}
+.pop_footer .pop_footerInner .pop_close {width:69px;height:31px;position: absolute; top:0; right: 0; padding: 0; background: url('../images/btn/pop_btn_footClose.png') right 7px no-repeat;}
+.pop_footerInner .pop_close a {padding:8px 34px 8px 5px; float: right; color:#fff;line-height: 100%; font-size: 15px;}
 .pop_footerInner .pop_close a:hover, .pop_footerInner .pop_close a:focus, .pop_footerInner .pop_close a:active {color:#fff !important;}
 .pop_wrap ul.bulletList li {padding: 0 0 0 10px; background: url('../images/icon/comm_icon_square_smallBullet.png') no-repeat 0 9px;}
 .pop_wrap ul.bulletList li.mIcon {background: url('../images/icon/comm_icon_minus_smallBullet.gif') no-repeat 0 8px;}
