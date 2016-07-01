@@ -37,6 +37,8 @@
 
 .prod_searchResultNo {padding:212px 0 120px 0; text-align:center; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; background:url('../images/icon/comm_icon_searchnoback.png') no-repeat center 100px;}
 .prod_searchResultNo .txt {font-size: 19px; color:#666; font-weight: normal;}
+.prod_searchResultNo .txt1 {font-size: 15px; color:#666;}
+.prod_searchResultNo .txt1 .linkQuest {display:inline-block; font-size:inherit; color:#000; text-decoration: underline;}
 
 .prod_itemList {margin:20px 0 0 0;}
 .prod_itemList li{display:block; margin:10px 0 0 0;}
@@ -74,22 +76,9 @@
 .prod_itemWrap .summaryWrap {position:relative; height:100px; /* background:url('../images/common/prod_img_product_mobile.png') no-repeat left top; */}
 .prod_itemWrap .summaryWrap dl {position:relative; margin:0 73px 0 126px; font-size:19px; color:#333;}
 .prod_itemWrap .summaryWrap dt {position:absolute; top:37px; left:30px; display:block; width:130px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
-.prod_itemWrap .summaryWrap dd.posM {display:block; max-width:100%; padding:37px 90px 0 195px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-weight:bold; text-align:left; letter-spacing:-0.05em; box-sizing:border-box;}
-.prod_itemWrap .summaryWrap dd.posR {position:absolute; top:39px; right:0; display:block; width:80px; text-align:right; color:#ee1c24; font-size:17px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.prod_itemWrap .summaryWrap dd.posM {display:block; max-width:100%; padding:37px 112px 0 195px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-weight:bold; text-align:left; letter-spacing:-0.05em; box-sizing:border-box;}
+.prod_itemWrap .summaryWrap dd.posR {position:absolute; top:39px; right:0; display:block; width:72px; text-align:left; color:#ee1c24; font-size:17px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 .prod_itemWrap .summaryWrap .btnDetail {position:absolute; top:44px; right:25px; display:block; width:25px; height:16px; text-indent:-9999px;}
-
-/*인터넷, tv, wibro, wifi 
-.internet .prod_itemWrap .summaryWrap dt,
-.tv       .prod_itemWrap .summaryWrap dt,
-.wibro    .prod_itemWrap .summaryWrap dt,
-.wifi     .prod_itemWrap .summaryWrap dt {max-width:83px;}
-
-.internet .prod_itemWrap .summaryWrap dd.posM,
-.tv       .prod_itemWrap .summaryWrap dd.posM,
-.wibro    .prod_itemWrap .summaryWrap dd.posM,
-.wifi     .prod_itemWrap .summaryWrap dd.posM {left:261px; padding:37px 90px 0 136px;}
-/*일반전화, 인터넷전화 (모바일과 동일)*/
-
 
 .prod_itemWrap .detailWrap {display:none; position:relative; padding:0 29px 32px 29px; background: #f0f0f0; /* border-left:1px solid #196bbb; border-right:1px solid #196bbb; */ border-top:none;}
 .prod_itemWrap .detailWrap .bottom {position:absolute; left:-1px; bottom:0; overflow:hidden; width:770px; height:6px; background:url('../images/common/prod_img_product_mobile.png') no-repeat left bottom;}
