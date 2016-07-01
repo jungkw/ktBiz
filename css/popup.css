@@ -6,6 +6,7 @@
 .pop_wrap .pop_header h1, .pop_wrap .pop_header h2, .pop_wrap .pop_header h3, .pop_wrap .pop_header h4, .pop_wrap .pop_header h5, .pop_wrap .pop_header h6 {font-size: 21px;font-weight: bold;color: #333;}
 .pop_wrap .pop_conts {}
 .pop_wrap .pop_conts .pop_contsContainer {position: relative; padding:30px 29px; background:#f0f0f0; border-bottom: 1px solid #ccc;}
+.pop_wrap .pop_conts .pop_contsContainer.indexPop {padding: 23px 29px}
 .pop_wrap .pop_conts .pop_contsBtns {padding:20px 0; text-align:center;}
 .pop_wrap .pop_conts .pop_subTitle {position:relative; margin-bottom:18px; padding-top:28px; font-size: 19px; line-height:23px; font-weight: normal; z-index:1;}
 
@@ -55,6 +56,8 @@
 /*  명세서 번호 선택 */
 .pop_wrap .pop_billSrchWhiteBox {position:absolute; top:28px; right:29px; background: #fff;}
 .pop_wrap .pop_billSrchWhiteBox.indexPop {top:16px;}
+.pop_wrap .pop_billNumListBox.indexPop {background:#fff url('../images/bg/index_bg_line.png') center center no-repeat;}
+.pop_wrap .pop_billNumListBox.indexPop li {width:50%; padding:9px 0;}
 .pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:50px;}
 .pop_wrap .pop_billSrchWhiteBox input {width:203px; height:30px; line-height:30px; font-size:15px; color: #333;}
 .pop_wrap .pop_billSrchWhiteBox a {position: absolute; top:0;right: 0;}

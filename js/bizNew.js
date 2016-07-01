@@ -321,9 +321,15 @@ $(document).ready(function(){
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
-                                gnbItem += "<a href='#' class='group-heading'>가입상품 조회/관리</a>";
+                                gnbItem += "<a href='#' class='group-heading'>가입상품 관리</a>";
                                 gnbItem += "<ul class='group-list'>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>가입상품 조회 </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>인터넷 </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>tv </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>인터넷전화 </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>일반전화 </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>WiBro </a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>WiFi </a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -707,9 +713,15 @@ $(document).ready(function(){
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
-                              gnbItem += "<h4><a href='#'>가입상품 조회/관리</a></h4>";
+                              gnbItem += "<h4><a href='#'>가입상품 관리</a></h4>";
                               gnbItem += "<ul class='inlist'>";
-                                gnbItem += "<li><a href='#'>가입상품 조회</a></li>";
+                                gnbItem += "<li><a href='#'>모바일</a></li>";
+                                gnbItem += "<li><a href='#'>인터넷</a></li>";
+                                gnbItem += "<li><a href='#'>tv</a></li>";
+                                gnbItem += "<li><a href='#'>인터넷전화</a></li>";
+                                gnbItem += "<li><a href='#'>일반전화</a></li>";
+                                gnbItem += "<li><a href='#'>WiBro</a></li>";
+                                gnbItem += "<li><a href='#'>WiFi</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
@@ -1083,7 +1095,7 @@ $(document).ready(function(){
                 lnbItem += "<ul id='li_BB' class='cfmOllehLnbNewList' style='display:none'>";
 
                   lnbItem += "<li id='li_BBA' class=''>";
-                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>가입상품 조회</a>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BBA' title='하위메뉴 열기'>가입상품 관리</a>";
                       lnbItem += "<ul id='sub_BBA' class='cfmOllehLnbNewListCont' style='display: none;'>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAA'>모바일</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BBAB'>인터넷</a></li>";
@@ -1154,7 +1166,7 @@ $(document).ready(function(){
           var $depth2Number = $code.substring(0,3);
           var $depth3Number = $code.substring(0,4);
           var $depth4Number = $code.substring(0,5);
-          var $depth1NameArray =[["BA","BB","BC"],["요금조회/납부", "가입상품 조회/관리", "신청/변경"]];
+          var $depth1NameArray =[["BA","BB","BC"],["요금조회/납부", "가입상품 관리", "신청/변경"]];
           var $lnbTitle;
           for(var i =0; i <= $depth1NameArray.length; i++){
               if($depth1NameArray[0][i] == $depth1Number){
