@@ -137,11 +137,14 @@ $(document).ready(function(){
         var $wh = $(window).height();
         var $lh = $target.height();
         var $setTop = ($wh-$lh)/2;
+        var $lw = $target.width();
+        var $setLeft = $lw/2
 
         if($target.find('.pop_close a, .pop_btn_close').attr('href') === '') {
           $target.find('.pop_close a, .pop_btn_close').attr('href', '#' + obj.id);
         }
-        $target.show().css('top',$setTop+'px');
+        $target.show().css({'top':$setTop+'px', 'margin-left':'-'+$setLeft+'px'});
+
         /*$mask.show();*/
         $target.find('.pop_wrap').attr('tabindex',0).focus();
         $target.find('.pop_close a, .pop_btn_close').click(function(){
@@ -329,7 +332,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금제 신청</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>부가서비스 신청</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>번호변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>일시정지</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 일시정지</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>설치장소 변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 분실신고</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>상품 신청/문의(대량구매)</a></li>";
@@ -715,7 +718,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>요금제 신청</a></li>";
                                 gnbItem += "<li><a href='#'>부가서비스 신청</a></li>";
                                 gnbItem += "<li><a href='#'>번호변경</a></li>";
-                                gnbItem += "<li><a href='#'>일시정지</a></li>";
+                                gnbItem += "<li><a href='#'>모바일 일시정지</a></li>";
                                 gnbItem += "<li><a href='#'>설치장소 변경</a></li>";
                                 gnbItem += "<li><a href='#'>모바일 분실신고</a></li>";
                                 gnbItem += "<li><a href='#'>상품 신청/문의 (대량구매)</a></li>";
@@ -1112,7 +1115,7 @@ $(document).ready(function(){
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
                   lnbItem += "<li id='li_BCD' class=''>";
-                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCD' title='하위메뉴 열기'>일시정지</a>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCD' title='하위메뉴 열기'>모바일 일시정지</a>";
                       lnbItem += "<ul id='sub_BCD' class='cfmOllehLnbNewListCont' style='display: none;'>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDA'>신청</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCDB'>해제</a></li>";
