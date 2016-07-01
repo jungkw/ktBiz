@@ -53,17 +53,17 @@
 
 
 /*  명세서 번호 선택 */
-.pop_wrap .pop_billSrchWhiteBox {position:absolute; top:16px; right:29px; background: #fff;}
-.pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:66px;}
-.pop_wrap .pop_billSrchWhiteBox input {width:253px; height:36px; line-height:34px; font-size:15px; color: #333;}
+.pop_wrap .pop_billSrchWhiteBox {position:absolute; top:28px; right:29px; background: #fff;}
+.pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:50px;}
+.pop_wrap .pop_billSrchWhiteBox input {width:203px; height:30px; line-height:30px; font-size:15px; color: #333;}
 .pop_wrap .pop_billSrchWhiteBox a {position: absolute; top:0;right: 0;}
 .pop_wrap .pop_billSrchWhiteBox .placeholder.active {color:#333;}
-.pop_wrap .pop_billNumListBox {padding:12px 0 15px 0;border:1px solid #ccc; border-top:1px solid #333;background: #fff;overflow: hidden;}
-.pop_wrap .pop_billNumListBox li {display:inline-block; width:25%;padding:11px 0; float: left; text-align: center;}
+.pop_wrap .pop_billNumListBox {padding:10px 0;border:1px solid #ccc; border-top:1px solid #333;background: #fff;overflow: hidden;}
+.pop_wrap .pop_billNumListBox li {display:inline-block; width:20%;padding:11px 0; float: left; text-align: center;}
 .pop_wrap .pop_billNumListBox a {color:#666;font-size: 15px;}
 
 /*명세서 조회 팝업만 예외 케이스 */
-.pop_wrap.commBillPop .pop_header {padding:32px 0 34px}
+.pop_wrap.commBillPop .pop_header {padding:19px 0 21px}
 .pop_wrap.commBillPop .pop_header h4 {padding:0 0 0 30px; text-align: left;}
 
 
