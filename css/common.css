@@ -111,6 +111,7 @@ select:disabled, input[type=text]:disabled, input[type=password]:disabled {backg
 .cfmOllehGnb-submenu-title strong {font-size: 25px;font-weight: bold;color: #525252;line-height: 32px;letter-spacing: -2px;margin-bottom: 15px;display: block;}
 .cfmOllehGnb-submenu-title span {font-size:13px;line-height: 18px;color:#787878;display: block;}
 .cfmOllehGnb-submenu-item {width: 169px;float: left;padding: 0 0 25px 0;line-height: 16px;}
+.cfmOllehGnb-submenu-item.last {position: absolute;top:118px;left:468px;}
 .cfmOllehGnb-submenu-item .group-heading {font-size: 14px;color: #ed1c24;line-height: 18px;}
 .cfmOllehGnb-submenu-item .group-heading:hover {text-decoration: underline;}
 .cfmOllehGnb-submenu-item .group-list {padding: 4px 0 0 0;}
