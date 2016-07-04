@@ -5,7 +5,7 @@
 .pop_wrap .pop_header {padding: 22px 0 27px; text-align:center;background: #fff; border-bottom: 1px solid #ccc;background: #fff}
 .pop_wrap .pop_header h1, .pop_wrap .pop_header h2, .pop_wrap .pop_header h3, .pop_wrap .pop_header h4, .pop_wrap .pop_header h5, .pop_wrap .pop_header h6 {font-size: 21px;font-weight: bold;color: #333;}
 .pop_wrap .pop_conts {}
-.pop_wrap .pop_conts .pop_contsContainer {position: relative; padding:30px 29px 11px 29px; background:#f0f0f0; border-bottom: 1px solid #ccc;}
+.pop_wrap .pop_conts .pop_contsContainer {position: relative; padding:30px 29px; background:#f0f0f0; border-bottom: 1px solid #ccc;}
 .pop_wrap .pop_conts .pop_contsContainer.indexPop {padding: 23px 29px}
 .pop_wrap .pop_conts .pop_contsBtns {padding:20px 0; text-align:center;}
 .pop_wrap .pop_conts .pop_subTitle {position:relative; margin-bottom:18px; padding-top:28px; font-size: 19px; line-height:23px; font-weight: normal; z-index:1;}
