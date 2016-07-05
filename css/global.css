@@ -124,7 +124,8 @@ ul.bulletList li:first-child {margin:0;}
 .iconBtn {height:24px;padding:0 9px;display:inline-block;font-size:12px;color:#333;border:1px solid #e0e0e0;line-height: 24px;text-align: center;}
 .iconBtn:hover, .iconBtn:focus, .iconBtn:active {color:#333 !important; text-decoration: none !important;}
 .iconBtn.comm_btn_white01 span {padding:0 9px 0 0;background: url('../images/icon/comm_icon_red_arrow.gif') no-repeat right center;}
-
+.iconAroundGray {display: inline-block;margin:0 0 0 15px;padding: 0 15px 0 0;line-height: 26px;text-align: center;font-size: 15px;background: url('../images/icon/comm_icon_bg_aroundGray_right.png') no-repeat 100% 0;}
+.iconAroundGray .iconText {display: inline-block;margin: 0 0 0 -15px;padding: 0 0 0 15px;background: url('../images/icon/comm_icon_bg_aroundGray_left.png') no-repeat 0 0;color:#333;}
 
 /* btn size */
 .btnSty {display:inline-block; color:#333;border:1px solid #bbb; text-align: center; background: #fff;vertical-align: middle; letter-spacing:-0.025em; word-spacing:-0.025em;
