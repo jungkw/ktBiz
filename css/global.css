@@ -231,7 +231,7 @@ border-radius: 3px 3px 3px 3px;
 .commBoxWhite {padding:32px 30px; border:1px solid #ccc; background:#fff;}
 
 /* search common */
-.circuitSearchDiv {position: absolute;top:34px;right: 0}
+.circuitSearchDiv {position: absolute;top:29px;right: 0}
 .circuitSearchDiv a.dummyInput {width: 180px;height: 30px;padding:0 7px; display: inline-block;line-height: 27px;font-size: 14px;color:#333;background: #fff;border:1px solid #ccc; box-sizing: border-box;border-radius:2px; vertical-align: middle; }
 .circuitSearchDiv a.dummyInput:hover, .circuitSearchDiv a.dummyInput:focus, .circuitSearchDiv a.dummyInput:active {color:#333 !important; text-decoration: none !important}
 
@@ -322,6 +322,7 @@ border-radius: 3px 3px 3px 3px;
 .pt10 {padding-top:10px;}
 .pt14 {padding-top:14px !important;}
 .pt20 {padding-top:20px !important;}
+.pt29 {padding-top:29px !important;}
 .pt30 {padding-top:30px !important;}
 .pt34 {padding-top:34px !important;}
 .pt36 {padding-top:36px !important;}
