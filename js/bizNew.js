@@ -1340,11 +1340,14 @@ $(document).ready(function(){
 
 $(function(){
 
+
+
   /*
   * 신청/변경 함수 코어
   */
   $.ktBizSvc = function() {
       $.ktBizMobilePause();
+      $.ktBizsetPlaceChg();
   }
 
 
@@ -1355,6 +1358,7 @@ $(function(){
       $.ktBizMobilePause.labelPlaceholder();
       $.ktBizMobilePause.pwdChk();
   };
+
 
    /**
     *  일시정지 비밀번호 입력/확인
@@ -1399,7 +1403,53 @@ $(function(){
             }
         });
     }
+
+
+    /*
+    * 설치장소 변경 코어
+    */
+    $.ktBizsetPlaceChg = function (){
+        $.ktBizsetPlaceChg.chkBox();
+        $.ktBizsetPlaceChg.switch();
+    };
+
+
+    /*
+    * 설치장소변경 체크박스 1개만 선택 가능
+    */
+    $.ktBizsetPlaceChg.chkBox = function (){
+        var $target = $("input:checkbox[name='radioCheckBox']");
+        $target.click(function(){
+            $target.prop("checked",false);
+            $(this).attr("checked",true);
+
+        });
+        return false;
+    };
+
+    /*
+    *  설치장소변경 서비스 확인 toggle switch
+    */
+    $.ktBizsetPlaceChg.switch = function () {
+        var $target = $("input:radio[name='internetSvcChk']");
+        $target.click(function(){
+            if($(this).attr('id')=='internetLogin'){
+                $('.internetCon01').val('').attr('disabled',false);
+                $('.internetCon02').val('').attr('disabled',true);
+            }else{
+                $('.internetCon01').val('').attr('disabled',true);
+                $('.internetCon02').val('').attr('disabled',false);
+            }
+
+        });
+        return false;
+    };
+
+
     $.ktBizSvc();
+
+
+    
 
 
 

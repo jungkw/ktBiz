@@ -106,42 +106,7 @@
 
 
 <body>
-<!-- s : UI GUIDE -->
-<style type="text/css">
-.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
-.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
-.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
-.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
-.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
-</style>
-<script type="text/javascript">
-	$(function(){
-		$('.remote-btn01').click(function(){
-			$('.case01, .case02').hide();
-			$('.noBorder').show();
-			return false;
-		});
 
-		$('.remote-btn02').click(function(){
-			$('.noBorder, .case02').hide();
-			$('.case01').show();
-			return false;
-		});
-
-		$('.remote-btn03').click(function(){
-			$('.noBorder, .case01').hide();
-			$('.case02').show();
-			return false;
-		});
-	});
-</script>
-<div class="ui-remote">
-	<p>UI GUIDE</p>
-	<button type="button" class="remote-btn01">데이터가 있을 경우</button>
-	<button type="button" class="remote-btn02">가입된 회선이 없을 경우</button>
-	<button type="button" class="remote-btn03">조회된 데이터가 없을 경우</button>
-</div>
-<!-- e : UI GUIDE -->
 
 <h1 class="blind">올레닷컴(기업)</h1>
 <div id="cfmOllehWrap">
@@ -265,12 +230,12 @@
 							<div class="alignCenter">
 								<span class="color000">매체를 선택하시면 신청결과를 알려드립니다.</span>
 								<div class="comm_checkbox ml15">
-									<input type="checkbox" name="checkEx" id="checkEx01"><i></i>
-									<label for="checkEx01">휴대폰</label>
+									<input type="checkbox" class="radioCheckBox" name="radioCheckBox" id="phoneChk" value="phone"><i></i>
+									<label for="phoneChk">휴대폰</label>
 								</div>
 								<div class="comm_checkbox ml15">
-									<input type="checkbox" name="checkEx" id="checkEx02"><i></i>
-									<label for="checkEx02">이메일</label>
+									<input type="checkbox" class="radioCheckBox" name="radioCheckBox" id="emailChk" value="email"><i></i>
+									<label for="emailChk">이메일</label>
 								</div>
 							</div>
 							<!-- e : 고객님의 정보를 확인해 주세요 -->
@@ -297,23 +262,23 @@
 											<td class="last">
 												<div >
 													<div class="comm_radio w153">
-														<input type="radio" name="svcChk" id="internetLogin"  checked="checked">
+														<input type="radio" name="internetSvcChk" id="internetLogin"  checked="checked" />
 														<i class="checked"></i>
 														<label for="internetLogin">인터넷 로그인</label>
 													</div>
-													<input type="text" title="인터넷 로그인 서비스 번호를 입력란" class="w272" />
+													<input type="text" title="인터넷 로그인 서비스 번호를 입력란" class="w272 internetCon01" />
 												</div>
 												<div class="mt5">
 													<div class="comm_radio w153">
-														<input type="radio" name="svcChk" id="internetNum" >
+														<input type="radio" name="internetSvcChk" id="internetNum" />
 														<i></i>
 														<label for="internetNum">인터넷 접속번호</label>
 													</div>
-													<input type="text" size="7" maxlength="4" title="인터넷 접속번호 앞자리" disabled="true" /> 
+													<input type="text" class="internetCon02" size="7" maxlength="4" title="인터넷 접속번호 앞자리" disabled="true" /> 
 													<span>-</span>
-													<input type="text" size="7" maxlength="4"  title="인터넷 접속번호 가운데자리" disabled="true" />
+													<input type="text" class="internetCon02" size="7" maxlength="4"  title="인터넷 접속번호 가운데자리" disabled="true" />
 													<span>-</span>
-													<input type="text" size="7" maxlength="4"  title="인터넷 접속번호 뒷자리" disabled="true" />
+													<input type="text" class="internetCon02" size="7" maxlength="4"  title="인터넷 접속번호 뒷자리" disabled="true" />
 
 												</div>
 
@@ -390,7 +355,7 @@
 						<p><span class="emp01">핸드폰 SMS인증을 통해 통화내역 조회, 일시정지 신청/해제 등의 서비스를 받을 수 있음으로,</span> 타인의 핸드폰 습득시 고객님의<br/>통화내역이 유출 될 위험이 있으니, 본인 핸드폰 관리에 주의를 기울여 주시기 바랍니다. </p>
 						<p>또한 kt는 전산 시스템 문제를 제외하고는 타인의 핸드폰 습득으로 인한 개인정보 유출 및 기타 서비스 이용에 대해서는<br/>어떠한 책임도 부담하지 않음을 유의하셔야 합니다. </p>
 						<div class="commBtnWrap pt20 pb40">
-							<a href="#" class="btnSty red big" >설치장소 변경 신청</a>
+							<a href="#" class="btnSty red big" title="새창열림" target="_blank">설치장소 변경 신청</a>
 							<a href="#" class="btnSty big">취소</a>
 						</div>
 					</div>

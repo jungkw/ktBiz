@@ -125,6 +125,9 @@ ul.bulletList li:first-child {margin:0;}
 .iconBtn.comm_btn_white01 span {padding:0 9px 0 0;background: url('../images/icon/comm_icon_red_arrow.gif') no-repeat right center;}
 .iconAroundGray {display: inline-block;margin:0 0 0 15px;padding: 0 15px 0 0;line-height: 26px;text-align: center;font-size: 15px;background: url('../images/icon/comm_icon_bg_aroundGray_right.png') no-repeat 100% 0;}
 .iconAroundGray .iconText {display: inline-block;margin: 0 0 0 -15px;padding: 0 0 0 15px;background: url('../images/icon/comm_icon_bg_aroundGray_left.png') no-repeat 0 0;color:#333;}
+.iconAroundBlack {display: inline-block;margin:0 0 0 10px;padding: 0 10px 0 0;line-height: 20px;text-align: center;font-size: 13px;background: url('../images/icon/comm_icon_bg_aroundBlack_right.png') no-repeat 100% 0;}
+.iconAroundBlack .iconText {display: inline-block;margin: 0 0 0 -10px;padding: 0 0 0 10px;background: url('../images/icon/comm_icon_bg_aroundBlack_left.png') no-repeat 0 0;color:#fff;}
+
 .iconRedStar {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_star_red.png') no-repeat 0 5px;}
 
 /* calander */
@@ -336,6 +339,7 @@ border-radius: 3px 3px 3px 3px;
 .pt30 {padding-top:30px !important;}
 .pt34 {padding-top:34px !important;}
 .pt36 {padding-top:36px !important;}
+.pt48 {padding-top:45px !important;}
 .mr1 {margin-right:20px;}
 .mr2 {margin-right:10px;}
 .mr5 {margin-right:5px;}
@@ -357,6 +361,7 @@ border-radius: 3px 3px 3px 3px;
 .mb27 {margin-bottom:27px;}
 .mb29 {margin-bottom:29px;}
 .mb30 {margin-bottom:30px;}
+.mb35 {margin-bottom:35px;}
 .mb40 {margin-bottom:40px;}
 
 .pb0 {padding-bottom:0 !important}
@@ -374,7 +379,8 @@ border-radius: 3px 3px 3px 3px;
 .pl5 {padding-left:5px !important;}
 .pl10 {padding-left:10px;}
 .pl15 {padding-left:15px;}
-.pl17 {padding-left:17px;}
+.pl16 {padding-left:16px !important;}
+.pl17 {padding-left:17px !important;}
 .pl20 {padding-left:20px;}
 .pl28 {padding-left:28px !important;}
 .pl30 {padding-left:30px;}
@@ -384,6 +390,7 @@ border-radius: 3px 3px 3px 3px;
 .pl130 {padding-left:130px;}
 .pr0 {padding-right:0 !important;}
 .pr10 {padding-right:10px !important;}
+.pr16 {padding-right:16px !important;}
 .pr17 {padding-right:17px !important;}
 .pr20 {padding-right:20px !important;}
 .pr30 {padding-right:30px !important;}
@@ -394,7 +401,9 @@ border-radius: 3px 3px 3px 3px;
 .font15 {font-size:15px !important;}
 .font16 {font-size:16px;}
 .font17 {font-size:17px !important;}
+.font19 {font-size:19px !important;}
 .font20 {font-size:20px;}
+.font24 {font-size:24px;}
 .alignLeft {text-align:left;}
 .alignCenter {text-align:center;}
 .alignRight {text-align:right;}

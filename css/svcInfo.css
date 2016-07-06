@@ -44,3 +44,6 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 .svcInfo_postDataView dt, .svcInfo_postDataView dd {float: left;color:#000;margin-top:8px;font-size: 15px;line-height: 30px}
 .svcInfo_postDataView dt {width: 97px;}
 .svcInfo_postDataView dd {width: 400px;}
+.svcInfo_setPlaceAdd dt, .svcInfo_setPlaceAdd dd {float:left; }
+.svcInfo_setPlaceAdd dt {width:72px;}
+.svcInfo_setPlaceAdd dd {width:460px;}
