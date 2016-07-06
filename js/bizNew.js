@@ -333,7 +333,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>부가서비스 신청</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>번호변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 일시정지</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>설치장소 변경</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>인터넷 설치장소 변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 분실신고</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>상품 신청/문의(대량구매)</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>신청/변경 현황</a></li>";
@@ -736,7 +736,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>부가서비스 신청</a></li>";
                                 gnbItem += "<li><a href='#'>번호변경</a></li>";
                                 gnbItem += "<li><a href='#'>모바일 일시정지</a></li>";
-                                gnbItem += "<li><a href='#'>설치장소 변경</a></li>";
+                                gnbItem += "<li><a href='#'>인터넷 설치장소 변경</a></li>";
                                 gnbItem += "<li><a href='#'>모바일 분실신고</a></li>";
                                 gnbItem += "<li><a href='#'>상품 신청/문의 (대량구매)</a></li>";
                                 gnbItem += "<li><a href='#'>신청/변경 현황</a></li>";
@@ -1157,10 +1157,9 @@ $(document).ready(function(){
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
                   lnbItem += "<li id='li_BCE' class=''>";
-                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCE' title='하위메뉴 열기'>설치장소 변경</a>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCE' title='하위메뉴 열기'>인터넷 설치장소 변경</a>";
                       lnbItem += "<ul id='sub_BCE' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEA'>인터넷</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEB'>일반전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEA'>신청</a></li>";
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
 
