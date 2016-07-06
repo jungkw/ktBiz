@@ -38,7 +38,7 @@
 .comm_table td.name {padding-left:10px;font-weight:700;color:#333;text-align:left;}
 .comm_table td.noContents {padding: 60px 0 16px;color: #666;font-size: 13px;text-align: center;line-height:23px;background:url(../images/icon/comm_icon_searchNone.gif) no-repeat 50% 20px;}
 .comm_table td.noBorder {border-right:0;}
-.comm_table td .num, .comm_table td.num {font-size:18px;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
+.comm_table td .num, .comm_table td.num {font-size:18px;font-weight:400;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;vertical-align:-1px;}
 .comm_table td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
 .comm_table td .card-num {display:block;font-size:13px;}
 .comm_table td .desc {margin-left: 7px; font-size:13px; color:#666; vertical-align:middle; }
@@ -227,6 +227,7 @@ border-radius: 3px 3px 3px 3px;
 .comm_contsInner .comm_contsInner.whiteBox {padding:0 29px;background: url('../images/bg/comm_bg_white_contsBottom.png') 0 100% no-repeat;}
 .comm_contsBb {border-bottom:1px solid #ccc;}
 .comm_contsBt {border-top:1px solid #ccc;}
+.comm_contsInnerFullBox {margin-left: -28px; margin-right: -28px;}
 
 /* common contents box */
 .commBoxWhite {padding:32px 30px; border:1px solid #ccc; background:#fff;}
@@ -258,6 +259,7 @@ border-radius: 3px 3px 3px 3px;
 .fl {float:left;}
 .fr {float:right;}
 .fr20 {float:right;padding-right:20px;}
+.num {font-weight:400; font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
 .emp01 {color:#ef1c25 !important;}
 .emp02 {color:#333 !important;}
 .emp03 {color: #196bbb !important}
@@ -317,6 +319,7 @@ border-radius: 3px 3px 3px 3px;
 .mt49 {margin-top:49px;}
 .mt50 {margin-top:50px;}
 .mt57 {margin-top:57px;}
+.mt69 {margin-top:69px;}
 .pt0 {padding-top:0px !important;}
 .pt5 {padding-top:5px !important;}
 .pt8 {padding-top:8px !important;}

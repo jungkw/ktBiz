@@ -34,7 +34,7 @@ $(document).ready(function(){
           $target.val("");
           $target.prop("disabled", false).focus();
         }else{
-          $target.prop("disabled", true);  
+          $target.prop("disabled", true);
           $target.val($val)
           if($val==""){
             $target.val("");
@@ -44,7 +44,7 @@ $(document).ready(function(){
     };
 
     /**
-    * check box & radio box IE8 fn  
+    * check box & radio box IE8 fn
      */
     $.ktBizCheckRadio = function(){
         $('input:radio:checked, input:checkbox:checked').next('i').addClass('checked');
@@ -57,8 +57,8 @@ $(document).ready(function(){
           });
         });
 
-          
-        
+
+
     };
 
     $.ktBizCheckRadio();
@@ -131,16 +131,19 @@ $(document).ready(function(){
     * layerPopup accessibility focus fn
     * @param {object} this.
     */
-    $.ktBizPopClick = function(obj){
+    $.ktBizPopClick = function(obj, returnId){
         var $target = $($(obj).attr('href'));
         /*var $mask =$target.prev('.pop_mask');*/
         var $wh = $(window).height();
         var $lh = $target.height();
         var $setTop = ($wh-$lh)/2;
         var $lw = $target.width();
-        var $setLeft = $lw/2
+        var $setLeft = $lw/2;
 
-        if($target.find('.pop_close a, .pop_btn_close').attr('href') === '') {
+        if(returnId) {
+          returnId = returnId.replace('#', '');
+          $target.find('.pop_close a, .pop_btn_close').attr('href', '#' + returnId);
+        } else {
           $target.find('.pop_close a, .pop_btn_close').attr('href', '#' + obj.id);
         }
         $target.show().css({'top':$setTop+'px', 'margin-left':'-'+$setLeft+'px'});

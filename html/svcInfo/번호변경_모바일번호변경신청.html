@@ -226,7 +226,7 @@
 										<P class="mt10">인증번호를 받으시겠습니까?</P>
 									</div>
 									<div class="pop_contsBtns">
-										<a href="#smsInputLayer" id="smsInputOpen" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this); return false;" title="인증번호 입력 레이어팝업 열림">확인</a>
+										<a href="#smsInputLayer" id="smsInputOpen" class="btnSty big red" onclick="$(this, 'smsSendOpen').closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, 'smsSendOpen'); return false;" title="인증번호 입력 레이어팝업 열림">확인</a>
 										<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
 									</div>
 								</div>
@@ -263,12 +263,12 @@
 												<legend>인증번호입력</legend>
 												<p class="mb10"><label for="smsAuth">인증번호를 입력하세요.</label></p>
 												<input type="password" id="smsAuth" class="w195" />
-												<a href="#smsCompleteLayer" id="smsAuthOpen" class="btnSty mid blk" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this); return false;">인증확인</a>
+												<a href="#smsCompleteLayer" id="smsAuthOpen" class="btnSty mid blk" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, 'smsSendOpen'); return false;">인증확인</a>
 											</fieldset>
 										</form>
 									</div>
 									<div class="pop_contsBtns">
-										<a href="#smsSendLayer" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this); return false;">인증번호 재전송</a>
+										<a href="#smsSendLayer" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, 'smsSendOpen'); return false;">인증번호 재전송</a>
 										<a href="#" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
 									</div>
 								</div>
@@ -303,7 +303,7 @@
 										<p class="alignCenter">인증이 완료되었습니다.</p>
 									</div>
 									<div class="pop_contsBtns">
-										<a href="" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">확인</a>
+										<a href="" class="btnSty big red" onclick="$(this, 'smsSendOpen').closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">확인</a>
 									</div>
 								</div>
 								<!-- e : contents -->
