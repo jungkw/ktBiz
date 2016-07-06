@@ -17,9 +17,10 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 /* 번호변경 */
 .svcInfo_chgNumStep {margin:20px 0 40px; text-align:center; font-size:0;}
 .svcInfo_chgNumStep li {display:inline-block;}
-.svcInfo_chgNumStep li > div {padding-top:80px; text-align:center; width:96px; font-size:21px; color:#333; text-transform:uppercase; line-height:1;}
-.svcInfo_chgNumStep li span {display:block; margin-top:4px; font-size:13px; color:#666;}
-.svcInfo_chgNumStep .step1, .svcInfo_chgNumStep .step2 {margin-right:60px; padding-right:94px; background:url(../images/icon/svcInfo_chg_num_step.png) no-repeat 100% 34px;}
+.svcInfo_chgNumStep li > div {padding-top:80px; text-align:center; width:128px; font-size:21px; color:#333; text-transform:uppercase; line-height:1;}
+.svcInfo_chgNumStep li span {display:block; margin-top:4px; font-size:13px; color:#666;line-height: 18px;}
+.svcInfo_chgNumStep li span strong {display: block;text-align:center;}
+.svcInfo_chgNumStep .step1, .svcInfo_chgNumStep .step2 {margin-right:45px; padding-right:79px; background:url(../images/icon/svcInfo_chg_num_step.png) no-repeat 100% 34px;}
 .svcInfo_chgNumStep .step1 > div {background:url(../images/icon/svcInfo_chg_num01.png) no-repeat 50% 0;}
 .svcInfo_chgNumStep .step2 > div {background:url(../images/icon/svcInfo_chg_num02.png) no-repeat 50% 0;}
 .svcInfo_chgNumStep .step3 > div {background:url(../images/icon/svcInfo_chg_num03.png) no-repeat 50% 0;}
@@ -33,86 +34,21 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 
 .comm_table .captcha {margin:20px 0 0 12px;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 설치장소 */
+.svcInfo_setPlaceVisual {max-height: 204px; padding:33px 177px 30px 30px; border:1px solid #ddd; background:#fff url('../images/bg/svcInfo_bg_setPlaceVisualThumb.png') 563px 40px  no-repeat;}
+.svcInfo_svcChkDesc {overflow: hidden;margin-top: 20px}
+.svcInfo_svcChkDesc dt, .svcInfo_svcChkDesc dd {float:left;font-size: 13px;color:#666; line-height: 22px;display: block}
+.svcInfo_svcChkDesc dt {width:72px;padding-left:10px;}
+.svcInfo_svcChkDesc dd {width: 380px;}
+.svcInfo_postDataView {overflow: hidden;}
+.svcInfo_postDataView dt, .svcInfo_postDataView dd {float: left;color:#000;margin-top:10px;font-size: 15px;line-height: 30px}
+.svcInfo_postDataView dt {width: 97px;}
+.svcInfo_postDataView dd {width: 380px;}
+.svcInfo_setPlaceAdd dt, .svcInfo_setPlaceAdd dd {float:left; }
+.svcInfo_setPlaceAdd dt {width:72px;}
+.svcInfo_setPlaceAdd dd {width:460px;}
+
+/* 요금제 신청 */
 .svcInfo_plan {border: solid #ccc; border-width:1px 0; background:#fff;}
 .svcInfo_plan .cur {padding:16px 0 15px 29px; font-size:17px; color:#666; border-bottom: 1px solid #ddd;}
 .svcInfo_plan .cur span {color:#000;}
@@ -134,12 +70,3 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 .svcInfo_planTabPanel table td.plan_radio {padding-left: 25px; color: #000;}
 #tvChannelLayer .pop_footer {max-width:100%;}
 #slChannelLayer .pop_footer {max-width:100%;}
-
-
-
-
-
-
-
-
-

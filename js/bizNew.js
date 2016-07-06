@@ -336,7 +336,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>부가서비스 신청</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>번호변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 일시정지</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>설치장소 변경</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>인터넷 설치장소 변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>모바일 분실신고</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>상품 신청/문의(대량구매)</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>신청/변경 현황</a></li>";
@@ -739,7 +739,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>부가서비스 신청</a></li>";
                                 gnbItem += "<li><a href='#'>번호변경</a></li>";
                                 gnbItem += "<li><a href='#'>모바일 일시정지</a></li>";
-                                gnbItem += "<li><a href='#'>설치장소 변경</a></li>";
+                                gnbItem += "<li><a href='#'>인터넷 설치장소 변경</a></li>";
                                 gnbItem += "<li><a href='#'>모바일 분실신고</a></li>";
                                 gnbItem += "<li><a href='#'>상품 신청/문의 (대량구매)</a></li>";
                                 gnbItem += "<li><a href='#'>신청/변경 현황</a></li>";
@@ -1160,10 +1160,9 @@ $(document).ready(function(){
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
                   lnbItem += "<li id='li_BCE' class=''>";
-                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCE' title='하위메뉴 열기'>설치장소 변경</a>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCE' title='하위메뉴 열기'>인터넷 설치장소 변경</a>";
                       lnbItem += "<ul id='sub_BCE' class='cfmOllehLnbNewListCont' style='display: none;'>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEA'>인터넷</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEB'>일반전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCEA'>신청</a></li>";
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
 
@@ -1344,11 +1343,14 @@ $(document).ready(function(){
 
 $(function(){
 
+
+
   /*
   * 신청/변경 함수 코어
   */
   $.ktBizSvc = function() {
       $.ktBizMobilePause();
+      $.ktBizsetPlaceChg();
   }
 
 
@@ -1359,6 +1361,7 @@ $(function(){
       $.ktBizMobilePause.labelPlaceholder();
       $.ktBizMobilePause.pwdChk();
   };
+
 
    /**
     *  일시정지 비밀번호 입력/확인
@@ -1403,7 +1406,53 @@ $(function(){
             }
         });
     }
+
+
+    /*
+    * 설치장소 변경 코어
+    */
+    $.ktBizsetPlaceChg = function (){
+        $.ktBizsetPlaceChg.chkBox();
+        $.ktBizsetPlaceChg.switch();
+    };
+
+
+    /*
+    * 설치장소변경 체크박스 1개만 선택 가능
+    */
+    $.ktBizsetPlaceChg.chkBox = function (){
+        var $target = $("input:checkbox[name='radioCheckBox']");
+        $target.click(function(){
+            $target.prop("checked",false);
+            $(this).attr("checked",true);
+
+        });
+        return false;
+    };
+
+    /*
+    *  설치장소변경 서비스 확인 toggle switch
+    */
+    $.ktBizsetPlaceChg.switch = function () {
+        var $target = $("input:radio[name='internetSvcChk']");
+        $target.click(function(){
+            if($(this).attr('id')=='internetLogin'){
+                $('.internetCon01').val('').attr('disabled',false);
+                $('.internetCon02').val('').attr('disabled',true);
+            }else{
+                $('.internetCon01').val('').attr('disabled',true);
+                $('.internetCon02').val('').attr('disabled',false);
+            }
+
+        });
+        return false;
+    };
+
+
     $.ktBizSvc();
+
+
+    
 
 
 
