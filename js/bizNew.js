@@ -1145,7 +1145,8 @@ $(document).ready(function(){
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCAB'>tv</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCAC'>일반전화</a></li>";
                           lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCAD'>인터넷전화</a></li>";
-                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCAE'>기업전용상품</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCAE'>국제전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCAF'>기업전용상품</a></li>";
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
 
