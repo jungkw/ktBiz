@@ -125,13 +125,15 @@
 .pop_svcTv .pop_header,
 .pop_svcTv .pop_footer {max-width:900px;}
 .pop_svc .pop_svcTvHeader {padding:15px 0 0 15px; height:130px; background:#fff url(../images/pop/img_visual_tv_channel_tv.jpg) no-repeat 100% 15px;}
-.pop_svc .pop_svcTvIframe iframe {height:3600px; background:#fff;}
+.pop_svc .pop_svcTvIframe {background: #fff url(../images/common/comm_spinner.gif) no-repeat 50% 140px;}
+.pop_svc .pop_svcTvIframe iframe {height:3600px;}
 /* skylife 채널안내*/
 .pop_svcSky,
 .pop_svcSky .pop_header,
 .pop_svcSky .pop_footer {max-width:900px;}
 .pop_svc .pop_svcSkyHeader {padding:15px 0 0 15px; height:130px; background:#fff url(../images/pop/img_visual_tv_channel_skylife.jpg) no-repeat 100% 15px;}
-.pop_svc .pop_svcSkyIframe iframe {height:3000px; background:#fff;}
+.pop_svc .pop_svcSkyIframe {background: #fff url(../images/common/comm_spinner.gif) no-repeat 50% 140px;}
+.pop_svc .pop_svcSkyIframe iframe {height:3000px;}
 /* 패키지부가서비스란? */
 .pop_svc .pop_svcPkgPrice {box-sizing:border-box; padding:50px 0; width:100%; background:#fff url(../images/pop/pop_svc_pkg_bg.png) no-repeat 50% 50px; border:1px solid #ccc;}
 .pop_svc .pop_svcPkgPrice h2, .pop_svc .pop_svcPkgPrice p {margin:0 auto; width:495px;}
