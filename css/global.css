@@ -239,6 +239,7 @@ border-radius: 3px 3px 3px 3px;
 .comm_contsBt {border-top:1px solid #ccc;}
 .comm_contsInnerFullBox {margin-left: -28px; margin-right: -28px;}
 
+
 /* common contents box */
 .commBoxWhite {padding:32px 30px; border:1px solid #ccc; background:#fff;}
 
@@ -606,6 +607,11 @@ border-radius: 3px 3px 3px 3px;
 .comm_tabs.styleDetail ul a:after {content:''; position:absolute; top:50%; right:10px; display:block; margin-top:-1px; border-top:4px solid #ef1c25; border-left:4px solid transparent; border-right:4px solid transparent;}
 .comm_tabs.styleDetail ul li.selected a {color:#ef1c25;}
 .comm_tabs.styleDetail ul li.selected a:after {margin-top:-5px; border-top-color:transparent; border-bottom:4px solid #ef1c25;}
+
+
+/* tab in fullbox */
+.comm_contsInnerFullBox .comm_tabs.style02 {margin: 0; padding-bottom: 14px; background: #fff;}
+.comm_contsInnerFullBox .comm_tabs.style02 .tabsCategory {padding-left: 52px; height: 55px; background: #f8f8f8;}
 
 
 /* telphone num */

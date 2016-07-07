@@ -51,7 +51,7 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 /* 요금제 신청 */
 .svcInfo_plan {border: solid #ccc; border-width:1px 0; background:#fff;}
 .svcInfo_plan .cur {padding:16px 0 15px 29px; font-size:17px; color:#666; border-bottom: 1px solid #ddd;}
-.svcInfo_plan .cur span {color:#000;}
+.svcInfo_plan .cur span {margin-left: 5px; color:#000;}
 .svcInfo_plan .curDetail {padding: 29px 29px 28px; overflow:hidden;}
 .svcInfo_plan .curDetailPlan {float: left; width:300px;}
 .svcInfo_plan .curDetailPlan p {margin-top: 12px; font-size:27px;}
@@ -62,8 +62,6 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 .svcInfo_plan .curDetailInfo.price dd {font-size:15px; color:#666;}
 .svcInfo_plan .curDetailInfo.price dd span {font-size:24px;}
 .svcInfo_plan .curDetailInfo.sDate dd {margin-top: 5px; font-size:20px; color:#333;}
-.svcInfo_planTab.comm_tabs {margin: 0; padding-bottom: 14px; background: #fff;}
-.svcInfo_planTab.comm_tabs .tabsCategory {padding-left: 52px; height: 55px; background: #f8f8f8;}
 .svcInfo_planTabPanel table {border-left: 0; border-right: 0;}
 .svcInfo_planTabPanel table .comm_radio {vertical-align: middle;}
 .svcInfo_planTabPanel table td span {font-size: 15px; color: #666;}
