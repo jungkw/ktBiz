@@ -1150,9 +1150,18 @@ $(document).ready(function(){
                       lnbItem += "</ul>";
                   lnbItem += "</li>";
 
-                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BCB'>부가서비스 신청</a>";
+                  lnbItem += "<li id='li_BCB'>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCB' title='하위메뉴 열기'>부가서비스 신청</a>";
+                      lnbItem += "<ul id='sub_BCB' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCBA'>모바일</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCBB'>인터넷</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCBC'>일반전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCBD'>인터넷전화</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BCBE'>기업전용상품</a></li>";
+                      lnbItem += "</ul>";
                   lnbItem += "</li>";
+
+
                   lnbItem += "<li id='li_BCC' class=''>";
                       lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BCC' title='하위메뉴 열기'>번호변경</a>";
                       lnbItem += "<ul id='sub_BCC' class='cfmOllehLnbNewListCont' style='display: none;'>";
