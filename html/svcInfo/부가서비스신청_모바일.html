@@ -1,0 +1,1985 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 모바일 요금제신청 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/svcInfo.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
+
+	<!-- 레이어 팝업 보여주기용. -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var target = getUrlParameter();
+
+			$('#' + target[0] ).trigger('click');
+
+		});
+	</script>
+
+	<!-- s: 기존소스유지 -->
+	<script language="javascript" type="text/javascript">
+	<!--
+
+			var PANELCHECK = "null";
+			var B_session = "true";
+			var KTFSERVLET = "ktfServlet";
+	//-->
+	</script>
+
+	<script language="javascript" type="text/javascript">
+	<!--
+
+
+	function top07() {
+
+			alert("죄송합니다. 고객님은 멤버스플러스 대상이 아닙니다");
+
+	}
+	//-->
+	</script>
+
+	<iframe name="log_out" style="display:none;" src="/blank.html" title="빈프레임" ></iframe>
+
+
+
+	<form name="formLogOut" method="post" target="log_out" action="http://ktflogon.show.co.kr/Logon/Logoff.asp">
+			<input type="hidden" name="URL" value="http://csmobile.biz.olleh.com/blank.html" />
+	</form>
+	<script language="javascript" type="text/javascript">
+	<!--
+			function log_out() {
+			//formLogOut.submit();
+			//location.href="http://ktflogon.show.co.kr/Logon/Logoff.asp?URL=http://csmobile.biz.olleh.com";
+			location.href= NoSSL("/doLogout.html");
+			//setTimeout("log_out_action()",4000);
+		}
+		function log_out_action() {
+			location.href="/doLogout.action";
+		}
+
+
+
+	//-->
+	</script>
+	<!-- //SSL js -->
+	<script	language='javascript' src="/js/SSLlib.js"></script>
+	<script language=JavaScript src="/js/blocking.js"></script>
+	<script	language='javascript' >
+	function NoSSLsubmit(ifrm) {
+		ifrm.action = NoSSL(ifrm.action);
+		ifrm.submit();
+	}
+	browserCheck();
+
+	</script>
+
+
+	<link rel="stylesheet" href="/css/prodsystem.css" type="text/css" />
+
+
+
+
+	<script type="text/javascript" src="/js/SvcRegularSocInfo.js"></script><!-- beginEnc.inc파일이전에 선언을 해줘야 스크립트 오류가 안남  -->
+
+	<script type="text/javascript">
+	<!--
+		var ctnAge=33
+	//-->
+	</script>
+	<script type="text/javascript">
+	<!--
+		function init() {
+			URL = "SvcRegularSocInfo2.action?membersYn=Y&mainCd=14&brandCd=A";
+			//location.target = '_self';
+			document.location.href = SSL(URL);
+		}
+
+		var chkCnt = 0;
+		//요금조회 버튼
+		function paymentInfo() {
+			if(chkCnt == 0) {
+				ing_layer('show','search_ing');//진행중 상태표시
+		    	SSLsubmit(document.acntSearch);
+				chkCnt =1;
+			}else {
+				alert("처리중입니다.\n\n처리가 완료될 때까지 잠시만 기다려 주세요.");
+			}
+		}
+
+		//내가 사용중인 부가서비스 청구항목 보기 버튼
+		function doMyPopup() {
+			var pop;
+			var params = "searchBan="+document.acntSearch.searchBan.value;
+			//params += "&searchAcntNo="+document.acntSearch.searchAcntNo.value;
+			//params += "&searchCtn="+document.acntSearch.searchCtn.value;
+			//params += "&svcCntrNo="+document.acntSearch.svcCntrNo.value;
+
+			params += "&searchAcntNo=&searchCtn=&svcCntrNo=";
+			params += "&ENCRYPT_R_ENCKEY="+document.acntSearch.ENCRYPT_R_ENCKEY.value;
+			params += "&ENCRYPT_S_searchAcntNo="+document.acntSearch.ENCRYPT_S_searchAcntNo.value;
+			params += "&ENCRYPT_S_searchCtn="+document.acntSearch.ENCRYPT_S_searchCtn.value;
+			params += "&ENCRYPT_S_svcCntrNo="+document.acntSearch.ENCRYPT_S_svcCntrNo.value;
+
+			//var URL = "/SvcRegularMainBillMy.action?" + params;
+			var URL = "/SvcRegularMainBillMy.action";
+		    pop = window.open('', 'billMyPop','resizable=yes,width=770,height=290');
+		    document.acntSearch.target = "billMyPop";
+	        document.acntSearch.action = SSL(URL);
+	        SSLsubmit(document.acntSearch);
+	        //location.target = "billMyPop";
+	        //document.location.href = SSL(URL);
+	        //pop.focus();
+		}
+
+
+		function goApplyCat02(mainCd , brandCd){
+			if(chkCnt == 0) {
+				ing_layer('show','search_ing');//진행중 상태표시
+				document.acntSearch.brandCd.value = brandCd;
+				document.acntSearch.action = "/SvcRegularSocInfo2.action";
+				document.acntSearch.target="_self";
+				SSLsubmit(document.acntSearch);
+				chkCnt =1;
+			}else {
+				alert("처리중입니다.\n\n처리가 완료될 때까지 잠시만 기다려 주세요.");
+			}
+		}
+
+
+		//패키지 부가서비스란 버튼
+		function packagPop() {
+			window.open('../serviceinfo/package_pop.html','패키지부가서비스란','width=600,height=760,resizable=yes');
+		}
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		    window.open(SSL(theURL),winName,features);
+		}
+		function getCookieVal (offset) {
+		    var endstr = document.cookie.indexOf (";", offset);
+	    	if (endstr == -1)
+			    endstr = document.cookie.length;
+		    return unescape(document.cookie.substring(offset, endstr));
+	    }
+	    function GetCookie(name) {
+		    var arg = name + "=";
+		    var alen = arg.length;
+		    var clen = document.cookie.length;
+		    var i = 0;
+		    while (i < clen) {
+		    var j = i + alen;
+		    if (document.cookie.substring(i, j) == arg)
+		        return getCookieVal (j);
+		        i = document.cookie.indexOf(" ", i) + 1;
+			    if (i == 0) break;
+		    }
+		    return null;
+	    }
+		function goPage(url) {
+		    location.href = url;
+		}
+		///////////  인재///////////////
+		function numDataFormat(argObj) {
+		    //   var numValue = argObj.value.substr(argObj.value.length -1, 1);
+		         var numValue = argObj.value;
+
+		       if (numValue != "/" && numValue != "-") {
+		           if (isNaN(numValue)) {
+		               alert("죄송합니다.\n\n전화번호는 숫자로만 입력해 주세요.");
+		               argObj.value =  "";
+		               return false;
+		           }
+		       }
+		}
+		function autoTab(input) {
+		 var value1 = document.tel_far.ctnfirst.value;
+		 if (value1.length>=3) {
+		  document.tel_far.ctnsec.focus();
+		 }
+		}
+		function autoTab1(input) {
+		 var value1 = document.tel_far.ctnsec.value;
+		 if (value1.length>=4) {
+		  document.tel_far.ctnfinal.focus();
+		 }
+		}
+		function autoTab2(input) {
+		 var value1 = document.tel_far.ctnfinal.value;
+		 if (value1.length>=4) {
+		  document.tel_far.ctnbtn1.focus();
+		 }
+		}
+		function keyEnter() {
+		    if(event.keyCode  == 13) {
+		        ctn_check();
+		    }
+		}
+
+		function ctn_check(){
+		        if(document.tel_far.ctnfirst.value == ""){
+		        alert('조회하실 번호의 국번을 입력해 주세요.');
+		        document.tel_far.ctnfirst.focus();
+		        return;
+		        }
+		        if(document.tel_far.ctnsec.value == ""){
+		        alert('조회하실 번호의 중간번호를 입력해 주세요.');
+		        document.tel_far.ctnsec.focus();
+		        return;
+		        }
+		        if(document.tel_far.ctnfinal.value == ""){
+		        alert('조회하실 번호의 마지막 번호를 입력해 주세요.');
+		        document.tel_far.ctnfinal.focus();
+		        return;
+		        }
+		//  url = "/KTFmasterPriceInfo.action";
+		//  location.target="_self";
+		//  document.location.href = SSL(url);
+		            document.tel_far.target="_self";
+		            SSLsubmit(document.tel_far);
+		}
+		/////////인재끝 ////////////////////
+		//DR-2009-02918 START
+		//SvcRegularCoupleNumber.jsp 팝업에서 지정번호문자 무제한 변경후 호출
+		function limit_mmss_check_dir() {
+			if (132615 > 235000 || 132615 < 1000) {
+				alert("시스템 작업으로 23:50 ~ 00:10 까지 신청/변경/해지가 불가능합니다.");
+				return;
+			}else{
+				var newNum = document.dirSocChange.ftrNewParam.value;
+				var oldNum = document.dirSocChange.ftrOldParam.value;
+				document.dirSocChange.curPpSoc.value = "ULMSMSCPL";
+
+				// =====================================
+				// 고도화 2차 START 2014.02.21
+				// ★★★[KSH] <R14-13> 수정권한여부 추가
+				// =====================================
+				var AuthDataChgInd = 'Y';
+
+				if(AuthDataChgInd == "N") {
+					alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+					return;
+				}
+				// 고도화 2차 END
+
+				if (newNum == oldNum) {
+					alert("변경하신 서비스가 없습니다.\n\n변경하실 서비스를 선택하신 후 확인버튼을 클릭해 주십시오.");
+					return;
+				} else {
+					var f = document.dirSocChange;
+					f.featureCode.value = "USMSCP";
+					f.ftrDescription.value = "지정번호 문자 무제한(1회선)";
+					f.ftrSoc.value = "ULMSMSCPL";
+					f.serviceType.value = "R";
+					f.bundleInd.value ="";
+					SSLsubmit(document.dirSocChange);
+				}
+			}
+		}
+		// 지정번호 관련 상품 중 변경 불가 상품  안내 팝업
+	    // SOC : COUPLEP, COUPLEP1X, BIGIRFND
+		function JijunBunho_f(ftrOldParam, soc, ftr) {
+			var curPpSoc     = soc;
+			if(curPpSoc == "COUPLEP" || curPpSoc == "COUPLEP1X" || curPpSoc == "BIGIRFND") {
+				strAlert = "현재 폐지된 상품으로 사이버고객센터에서 커플번호 변경이 불가능합니다. \nKT 고객센터로 문의하거나 가까운 KT Plaza를 이용하세요.";
+				alert(strAlert);
+				return;
+			}
+			//var ftrOldParam= '';
+			var srvMode = "I";
+			if(ftrOldParam != null && ftrOldParam.length > 0) {
+				srvMode = "U";
+			}
+
+			// =====================================
+			// 고도화 2차 START 2014.02.21
+			// ★★★[KSH] <R14-13> 수정권한여부 추가
+			// =====================================
+			var AuthDataChgInd = 'Y';
+
+			if(AuthDataChgInd == "N") {
+				alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+				return;
+			}
+			// 고도화 2차 END
+
+			dirSocChange.fandfSoc.value = curPpSoc;
+			dirSocChange.ftr.value = "FANDF";
+			dirSocChange.featureCode.value = "FANDF";
+			dirSocChange.ftrDescription.value = "지정번호할인";
+			dirSocChange.ftrSoc.value = "FANDF";
+			dirSocChange.bundleInd.value = "N";
+			dirSocChange.serviceType.value = "O";
+			dirSocChange.ind.value = '0';
+			var URL = "/FarPriceFandfChgInfo.action?ind=6&curPpSoc="+curPpSoc+"&defaultParam="+document.dirSocChange.defaultParam.value+"&ftrParamNum="+document.dirSocChange.ftrParamNum.value+"&ftrOldParam="+ftrOldParam+"&ftr=FANDF&srvMode="+srvMode+"&fandfSoc=FF6WFRID&cmd=SOC";
+			//alert("URL: "+URL);
+			window.open(SSL(URL), 'FANDF','scrollbars=yes,resizable=no,toolbar=no,menubar=no,location=no,top=100,left=250,width=482,height=500');
+			//location.target = "FANDF";
+			//document.location.href = SSL(URL);
+		}
+		function jijung_p(){
+			document.dirSocChange.target="_self";
+			SSLsubmit(document.dirSocChange);
+		}
+		/////////DR-2009-02918 END////////////////////
+		function gcs_p(){
+			loadBgLayer();
+			document.gcsSocChange.target="_self";
+			SSLsubmit(document.gcsSocChange);
+
+		}
+		function gcs_p2(){
+			loadBgLayer();
+			document.gcsSocChange2.target="_self";
+			SSLsubmit(document.gcsSocChange2);
+
+		}
+		//DR-2009-11750/특정번호수신차단서비스 사이트내 번호등록 START//////
+		function special_direct_chg() {
+
+			// =====================================
+			// 고도화 2차 START 2014.02.21
+			// ★★★[KSH] <R14-13> 수정권한여부 추가
+			// =====================================
+			var AuthDataChgInd = 'Y';
+
+			if(AuthDataChgInd == "N") {
+				alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+				return;
+			}
+			// 고도화 2차 END
+
+			var f = document.dirSocChangeNospam;
+			f.bundleInd.value = "N";
+			f.serviceType.value = "O";
+			f.action = "/SvcRegularSocChge.action";
+			document.dirSocChangeNospam.target="_self";
+			//alert(f.ftrNewParam.value);
+			//alert("f.curPpSoc.value="+f.curPpSoc.value+"f.defaultParam.value="+f.defaultParam.value+"f.featureCode.value="+f.featureCode.value+"f.ftrDescription.value="+f.ftrDescription.value+"f.ftr.value="+f.ftr.value+
+			//"f.ftrSoc.value="+f.ftrSoc.value+"f.ftrOldParam.value="+f.ftrOldParam.value+"f.ftrNewParam.value="+f.ftrNewParam.value);
+			SSLsubmit(document.dirSocChangeNospam);
+		}
+		//DR-2009-11750/특정번호수신차단서비스 사이트내 번호등록 END//////
+		function limit_mmss_check(mainCd) {
+			if (132615 > 235000 || 132615 < 1000) {
+				alert("시스템 작업으로 23:50 ~ 00:10 까지 신청/변경/해지가 불가능합니다.");
+				return;
+			}else{
+
+				// =====================================
+				// 고도화 2차 START 2014.02.21
+				// ★★★[KSH] <R14-13> 수정권한여부 추가
+				// =====================================
+				var AuthDataChgInd = 'Y';
+
+				if(AuthDataChgInd == "N") {
+					alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+					return;
+				}
+				// 고도화 2차 END
+
+				UpdateCheck(mainCd);
+			}
+		}
+		function MMSScheck() {
+
+				//limit_mmss_check('14' ,132615);
+			if (132615 > 235000 || 132615 < 1000) {
+				alert("시스템 작업으로 23:50 ~ 00:10 까지 신청/변경/해지가 불가능합니다.");
+				return;
+			} else {
+
+
+				// =====================================
+				// 고도화 2차 START 2014.02.21
+				// ★★★[KSH] <R14-13> 수정권한여부 추가
+				// =====================================
+				var AuthDataChgInd = 'Y';
+
+				if(AuthDataChgInd == "N") {
+					alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+					return;
+				}
+				// 고도화 2차 END
+
+				//ing_layer('show','search_ing');//진행중 상태표시
+				UpdateCheck("14");
+
+			}
+
+		}
+
+		function MMSScheck2() {
+
+
+				// =====================================
+				// 고도화 2차 START 2014.02.21
+				// ★★★[KSH] <R14-13> 수정권한여부 추가
+				// =====================================
+				var AuthDataChgInd = 'Y';
+
+				if(AuthDataChgInd == "N") {
+					alert("해당 ID 는 데이터 변경이 불가하도록 설정 되어 요청된 작업을 수행 할 수 없습니다.");
+					return;
+				}
+				// 고도화 2차 END
+
+				//ing_layer('show','search_ing');//진행중 상태표시
+				limit_mmss_check('44',132615);
+
+		}
+
+
+		var freeWifiSoc = new Array(74);
+
+
+				freeWifiSoc[0] = "BIGIRSM20";
+
+				freeWifiSoc[1] = "BIGIRSM26";
+
+				freeWifiSoc[2] = "BUSASAUP";
+
+				freeWifiSoc[3] = "BUSAUP44";
+
+				freeWifiSoc[4] = "BUSAUP95";
+
+				freeWifiSoc[5] = "CPSSMT340";
+
+				freeWifiSoc[6] = "CPSSMT440";
+
+				freeWifiSoc[7] = "HAPYOMAN3";
+
+				freeWifiSoc[8] = "HAPYOMAN4";
+
+				freeWifiSoc[9] = "KTFSAUP";
+
+				freeWifiSoc[10] = "KTFSAUPD";
+
+				freeWifiSoc[11] = "NPHDT1000";
+
+				freeWifiSoc[12] = "NPHDT2500";
+
+				freeWifiSoc[13] = "NPHDT4000";
+
+				freeWifiSoc[14] = "NPHDT500";
+
+				freeWifiSoc[15] = "NPHDT500B";
+
+				freeWifiSoc[16] = "NTALCNT35";
+
+				freeWifiSoc[17] = "NTALCNT45";
+
+				freeWifiSoc[18] = "NTALCNT55";
+
+				freeWifiSoc[19] = "NTALCNT65";
+
+				freeWifiSoc[20] = "NTALCNT80";
+
+				freeWifiSoc[21] = "OLLEHMBLM";
+
+				freeWifiSoc[22] = "OMARTMEDI";
+
+				freeWifiSoc[23] = "OMARTPREM";
+
+				freeWifiSoc[24] = "OMARTSPCL";
+
+				freeWifiSoc[25] = "OMARTVALU";
+
+				freeWifiSoc[26] = "SHKPACKI";
+
+				freeWifiSoc[27] = "SMARTLIGH";
+
+				freeWifiSoc[28] = "SMARTLTVC";
+
+				freeWifiSoc[29] = "SMARTMEDI";
+
+				freeWifiSoc[30] = "SMARTPREM";
+
+				freeWifiSoc[31] = "SMARTSLIM";
+
+				freeWifiSoc[32] = "SMARTSPCL";
+
+				freeWifiSoc[33] = "SMARTVALU";
+
+				freeWifiSoc[34] = "SMRTVOC28";
+
+				freeWifiSoc[35] = "SMRTVOC35";
+
+				freeWifiSoc[36] = "SMRTVOC45";
+
+				freeWifiSoc[37] = "SMRTVOC55";
+
+				freeWifiSoc[38] = "SMRTVOC65";
+
+				freeWifiSoc[39] = "SMRTVOC80";
+
+				freeWifiSoc[40] = "SMRTVOC95";
+
+				freeWifiSoc[41] = "SMTDTTNG2";
+
+				freeWifiSoc[42] = "SMTDTTNG3";
+
+				freeWifiSoc[43] = "SMTSILVER";
+
+				freeWifiSoc[44] = "SSMATLIGH";
+
+				freeWifiSoc[45] = "SSMATLTVC";
+
+				freeWifiSoc[46] = "SSMATMEDI";
+
+				freeWifiSoc[47] = "SSMATPREM";
+
+				freeWifiSoc[48] = "SSMATSLIM";
+
+				freeWifiSoc[49] = "SSMATSPCL";
+
+				freeWifiSoc[50] = "SSMATVALU";
+
+				freeWifiSoc[51] = "SSMTR1500";
+
+				freeWifiSoc[52] = "SSMTR500";
+
+				freeWifiSoc[53] = "TTALCNT35";
+
+				freeWifiSoc[54] = "TTALCNT45";
+
+				freeWifiSoc[55] = "TTALCNT55";
+
+				freeWifiSoc[56] = "TTALCNT65";
+
+				freeWifiSoc[57] = "TTALCNT80";
+
+				freeWifiSoc[58] = "TTALCNT95";
+
+				freeWifiSoc[59] = "W3GMONITR";
+
+				freeWifiSoc[60] = "WBUSASAUP";
+
+				freeWifiSoc[61] = "WBUSAU145";
+
+				freeWifiSoc[62] = "WBUSAUP95";
+
+				freeWifiSoc[63] = "WDBDMBIGI";
+
+				freeWifiSoc[64] = "WDBDMBR35";
+
+				freeWifiSoc[65] = "WDBDMBR45";
+
+				freeWifiSoc[66] = "WDDSMT2";
+
+				freeWifiSoc[67] = "WDDSMT3";
+
+				freeWifiSoc[68] = "WKTFBUSIN";
+
+				freeWifiSoc[69] = "WKTSAUP";
+
+				freeWifiSoc[70] = "WTBTMBIGI";
+
+				freeWifiSoc[71] = "WTBTMBR35";
+
+				freeWifiSoc[72] = "WTBTMBR45";
+
+				freeWifiSoc[73] = "ZKTFBUSIN";
+
+	//-->
+	</script>
+	<!-- e: 기존소스유지 -->
+
+</head>
+
+
+
+<body>
+<h1 class="blind">올레닷컴(기업)</h1>
+<div id="cfmOllehWrap">
+
+	<!-- s : skip Navigation -->
+	<ul class="cfmOllehSkipNavi" id="cfmOllehSkipNavi">
+		<li><a href="#cfmOllehConts" ><span>본문으로 바로가기</span></a></li>
+		<li><a href="http://inside.olleh.com/html/WebAccessibility/Info.asp"><span>웹접근성 도움말 페이지로 이동하기</span></a></li>
+	</ul>
+	<!-- e : skip Navigation -->
+
+	<!-- s : gnb wrap -->
+	<div id="cfmOllehGnb">
+		<script type="text/javascript">$.ktBizGnbView();</script>
+	</div>
+	<!-- e : gnb wrap -->
+
+
+	<!-- s : cont container -->
+	<div id="cfmOllehContainer">
+
+		<!-- s : lnb -->
+
+		<div id="cfmOllehLnb" accesskey="4">
+			<script type="text/javascript">$.ktBizLnbView('BCBA')</script>
+		</div>
+
+		<!-- e : lnb -->
+
+
+
+		<!-- s : content Body wrap -->
+		<hr />
+		<div id="cfmOllehConts" class="cfmOllehcontsLnbOn" accesskey="1">
+		<h2 class="blind">본문 영역</h2>
+			<div class="cfmOllehContsHeader">
+				<h3 class="cfmOllehContsTit"><img src="../../images/title/svcInfo_addSvc_mobile.png" alt="부가서비스 신청/모바일" /></h3>
+			</div>
+
+			<!-- s : content Body -->
+			<div class="cfmOllehContsMain">
+
+				<!-- s : 컨텐츠 영역 -->
+
+				<!-- s : gray box -->
+				<div class="comm_contsInner grayBox">
+					<div class="comm_contsInner grayBox pb36">
+						<h4 class="blind">서비스 번호변경 신청</h4>
+
+						<form name="acntSearch" method="post" action="/SvcRegularSocInfo2.action" onsubmit="return false;">
+						<!-- s : search comm -->
+						<div class="commTitleWrap pt29 relative">
+							<fieldset>
+								<legend>서비스 번호 선택</legend>
+								<p class="comm_scnTitle02 mb20">신청하실 서비스 번호를 선택해주세요.</p>
+								<div class="circuitSearchDiv">
+									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>01012345678</a>
+									<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+
+									<!-- s : 레이어 팝업 -->
+									<div class="pop_mask"></div>
+									<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
+
+										<div class="pop_wrap commBillPop">
+
+											<!-- s : header -->
+											<div class="pop_header">
+												<h4>서비스 번호 찾기</h4>
+												<p class="mt10 color666 font13 alignLeft pl30">50개 이상 회선은 검색을 이용하세요.</p>
+												<!-- s : 검색 영역 -->
+												<div class="pop_billSrchWhiteBox">
+													<fieldset>
+														<legend>서비스 번호 검색 필드</legend>
+														<label for="billNumTxt" class="blind">서비스 번호</label>
+														<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+													</fieldset>
+												</div>
+												<!-- e : 검색 영역 -->
+											</div>
+											<!-- e : header -->
+
+											<!-- s : contents -->
+											<div class="pop_conts" >
+												<div class="pop_contsContainer pb15">
+													<ul class="pop_billNumListBox">
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
+													</ul>
+
+													<div class="comm_paging mt10">
+														<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+													</div>
+												</div>
+											</div>
+											<!-- e : contents -->
+										</div>
+										<!-- s : footer -->
+										<div class="pop_footer">
+											<div class="pop_footerInner">
+												<p class="pop_close">
+													<a href="#billPopOpen01" >닫기</a>
+												</p>
+											</div>
+										</div>
+										<!-- e : footer -->
+									</div>
+								</div>
+								<!-- e : 레이어 팝업 -->
+							</fieldset>
+						</div>
+						<!-- e : search comm -->
+						</form>
+
+						<!-- s : search result -->
+						<div class="comm_tableBrdr">
+							<table class="comm_table" summary="신청대상 서비스 번호를 확인하실 수 있는 표 입니다.">
+								<caption>신청대상 서비스 번호 확인 표</caption>
+								<colgroup>
+									<col width="220">
+									<col width="*">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row" class="font17 fNormal">신청대상 서비스 번호</th>
+										<td class="left num pl104 noBorder font17 fBold last">010-1234-5678</td>
+										<td class="noContents02 last pl70 font17 case01" style="display: none;">가입된 회선이 없습니다.</td>
+										<td class="noContents02 last pl70 font17 case02" style="display: none;">조회된 데이터가 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- e : search result -->
+
+						<!-- s: 이용중인 부가서비스 -->
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02 pt29">이용중인 부가서비스</h4>
+							<a href="#curAddSvcLayer" id="curAddSvcOpen" class="btnSty mid absolute top30 right0" onclick="$.ktBizPopClick(this); return false;" title="청구항목 안내 레이어팝업 열림">청구항목 보기</a>
+						</div>
+
+						<!-- s : 청구항목보기 팝업 -->
+						<div class="pop_layerWrap" id="curAddSvcLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>청구항목 안내</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h2 class="pop_subTitle pt0">이용중인 부가서비스 청구항목 보기</h2>
+											<div class="comm_tableBrdr">
+												<table class="comm_table" summary="사용중인 부가서비스의 상품명과 분류를 확인할 수 있습니다.">
+													<caption>부가서비스 청구항목 안내</caption>
+													<colgroup>
+														<col width="20%" />
+														<col width="20%" />
+														<col width="20%" />
+														<col width="20%" />
+														<col width="20%" />
+													</colgroup>
+													<thead class="multiRow">
+														<tr>
+															<th rowspan="2" scope="col"><div>상품명</div></th>
+															<th colspan="2" scope="colgroup"><div>2G 상품</div></th>
+															<th colspan="2" scope="colgroup" class="noRight"><div>SHOW 상품</div></th>
+														</tr>
+														<tr>
+															<th scope="col"><div>대분류</div></th>
+															<th scope="col"><div>중분류</div></th>
+															<th scope="col"><div>대분류</div></th>
+															<th scope="col" class="noRight"><div>중분류</div></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="center">
+																캐치콜 서비스
+															</td>
+															<td class="center">
+																부가서비스(음성형)
+															</td>
+															<td class="center">
+																캐치콜서비스
+															</td>
+															<td class="center">
+																부가서비스(음성형)
+															</td>
+															<td class="last center">
+																캐치콜서비스
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- e : contents -->
+							</div>
+
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 청구항목보기 팝업 -->
+
+						<script type="text/javascript">
+						<!--
+						    function firealert(i)
+						    {
+						        var frm = document.frmnewfire;
+
+						        if(frm.usenewfire[i].checked == true)
+						        {
+						            alert("해당 상품은 판매종료되어 해지 후 신규 가입이 불가능합니다");
+						        }
+						    }
+						   //-->
+						</script>
+
+						<form name="frmnewfire" method="post" action="/SvcRegularSocCancelOk.action">
+							<fieldset>
+							 <legend>현재 사용중인 부가서비스 목록게시판</legend>
+		   					<input type="hidden" name="whereis_new" value="fire_new" />
+		    				<input type="hidden" name="click_cnt_new" value=0 />
+		    				<input type="hidden" name="returnUrl" id="returnUrl" value="/SvcRegularSocInfo2.action" />
+		    				<input type="hidden" name="moonjaUse_new" value="Y" />
+								<input type="hidden" name="moonjaCurUse_new" value="Y" />
+		   					<input type="hidden" name="soc_description_tmp" value="" />
+		   					<input type="hidden" name="massgeCd_tmp" value="" />
+		   					<input type="hidden" name="mainCd_tmp" value="" />
+
+							<input type="hidden" name="searchBan" value="" /> <!-- ban 조회 B, ctn 조회 S-->
+							<input type="hidden" name="searchAcntNo" value="" /><!-- ban -->
+							<input type="hidden" name="searchCtn" value="" /> <!-- 전화번호 -->
+							<input type="hidden" name="svcCntrNo" value="" /><!-- 서비스번호 -->
+							<!-- 화면 암호화 시작 -->
+							<input type="hidden" name="ENCRYPT_R_ENCKEY"        value="mGErW1BJ%2FGrBvBlZWRb29%2BUjHbGrvkGX%2F05PmduJG8xEjxnVhuTkOD%2BIAdEhCWMe4bS2dzDiSahYzngYMvsRCO0J4RlC6mXg2F02zaUq3GAThcEPFin3qFJjAbB66CWUvllUk6HrunGDO2uW6NP0WKQh%2FMDeHBpgH0oQL0Ki1WY%3D"/>
+							<input type="hidden" name="ENCRYPT_S_searchAcntNo"  value="76DxIRkrpj4gUAXOid1LxA%3D%3D"/>       <!-- 암호화 ban -->
+							<input type="hidden" name="ENCRYPT_S_searchCtn"     value="aI%2FE2Xwk5JkncUBSbstsxw%3D%3D"/>       <!-- 암호화 대표번호 -->
+							<input type="hidden" name="ENCRYPT_S_svcCntrNo"     value="CK2kF6oXclDPVTg6vm8k4A%3D%3D"/> <!-- 암호화 서비스번호 -->
+							<!-- 화면 암호화 끝   -->
+
+						<div class="comm_tableBrdr svcInfo_planTable pb15">
+							<table class="comm_table" summary="이용중인 부가서비스명, 이용요금(부가세포함), 신청일자, 부가정보를 확인할 수 있는 표 입니다.">
+								<caption>이용중인 부가서비스 표</caption>
+								<colgroup>
+									<col width="320" />
+									<col width="150" />
+									<col width="120" />
+									<col width="*" />
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">부가서비스명</th>
+										<th scope="col">이용요금<br />(부가세 포함)</th>
+										<th scope="col">신청일자</th>
+										<th scope="col" class="last">부가정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="pl25">
+											<span class="comm_radio">
+												<input type="radio" id="choice0" name="usenewfire" disabled="disabled" readonly="readonly" style="background-color:#f1f1f1" />
+												<i class="checked"></i>
+												<label for="choice0">기업무선상품관리</label>
+											</span>
+
+											<input type="hidden" name="soc_new" value="ENPRDPDMN" />
+											<input type="hidden" name="soc_description" value="기업무선상품관리" />
+											<input type="hidden" name="TERMNT_SOC_YN_new" value="" />
+											<input type="hidden" name="ftr_new" value="ENPRPM" />
+											<input type="hidden" name="ftrDescription_new" value="기업무선상품관리" /><!-- ftrDescription_new[i]  -->
+											<input type="hidden" name="ftrSoc_new" value="ENPRDPDMN" />
+											<input type="hidden" name="bundleInd_new" value="01" />
+											<input type="hidden" name="serviceType_new" value="R" />
+											<input type="hidden" name="ftrParamNum_new" value="3" />
+											<input type="hidden" name="ftrOldParam_new" value="PRDC_CD=215|ENPNO=1101111468754|STATE_FLAG=X|ERR_CD=|ERR_MSG=|" />
+											<input type="hidden" name="ftrNewParam_new" value="" />
+											<input type="hidden" name="defaultParam_new" value="PRDC_CD=215|ENPNO=1101111468754|STATE_FLAG=X|ERR_CD=|ERR_MSG=|" />
+											<input type="hidden" name="termntSocYn_new" value="" />
+											<input type="hidden" name="ftrCertInd_new" value="" />
+											<input type="hidden" name="ftrOrgUse_new" value="true" />
+											<input type="hidden" name="ftrUseYN_new" />
+											<input type="hidden" name="socSeqNo" value="1418310907" />
+											<input type="hidden" name="ftrSocSeqNo" value="" />
+											<input type="hidden" name="socnewsale_yn" value="N" />
+
+											<input type="hidden" name="enc_ftrOldParam_new" value="" />
+											<input type="hidden" name="enc_defaultParam_new" value="" />
+										</td>
+										<td class="center num"><span class="font15">무료</span></td>
+										<td class="center gray"><span class="num font15 ">2016.01.01</span></td>
+										<td class="center last">
+											<a href="" id="" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="상품명 신청 레이어팝업 열림">설정</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="pl25">
+											<span class="comm_radio">
+												<input type="radio" id="choice1" name="usenewfire" title="SMS(문자서비스) 기본제공 선택" />
+												<i></i>
+												<label for="choice1">SMS(문자서비스) 기본제공</label>
+											</span>
+										</td>
+										<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+										<td class="center gray"><span class="num font15 ">2016.01.01</span></td>
+										<td class="center last">
+											<a href="" id="" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="상품명 신청 레이어팝업 열림">설정</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="pl25">
+											<span class="comm_radio">
+												<input type="radio" id="choice2" name="usenewfire" title="MMS수신도우미 outdialing 사용 선택" />
+												<i></i>
+												<label for="choice2">MMS수신도우미 outdialing 사용</label>
+											</span>
+										</td>
+										<td class="center num"><span class="font15">무료</span></td>
+										<td class="center gray"><span class="num font15 ">2016.01.01</span></td>
+										<td class="center last">
+											<a href="" id="" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="상품명 신청 레이어팝업 열림">설정</a>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="4" class="noContents last">가입하신 부가서비스가 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="commBtnWrap pb40">
+							<a href="#closeAddSvcLayer" id="closeAddSvcOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 해지 레이어팝업 열림">해지</a>
+							<a href="#noDataLayer" id="noDataOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 해지 레이어팝업 열림">해지(선택한 항목이 없는 경우)</a>
+						</div>
+						<!-- e: 이용중인 부가서비스 -->
+
+						</form>
+
+						<!-- s : 부가서비스 해지 팝업 -->
+						<div class="pop_layerWrap" id="closeAddSvcLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>부가서비스 해지</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h2 class="pop_subTitle pt0 alignCenter">모바일 010-1234-567*</h2>
+
+											<div class="comm_tableBrdr">
+												<table class="comm_table" summary="신청된 요금제와 해지된 부가서비스를 확인 할 수 있습니다.">
+													<caption>부가서비스 해지</caption>
+													<colgroup>
+														<col width="50%" />
+														<col width="50%" />
+													</colgroup>
+													<thead>
+													<tr>
+														<th scope="col">선택 부가서비스</th>
+														<th scope="col">이용요금(부가세포함)</th>
+													</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="center">
+																<span class="fBold">상품명</span>
+															</td>
+															<td class="last center num">
+															 	월 99,000<span>원(99,999원)</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">변경하신 요금제는 즉시 적용되어 과금처리 되어집니다.</p>
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+										<a href="" class="btnSty big blk" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+									</div>
+
+									<div class="comm_noticeBox">
+										<h2 class="title">꼭 확인하세요!</h2>
+										<ul class="notice-list">
+											<li>확인 버튼을 클릭하시면, 선택하신 서비스가 사용가능한 경우 신청됩니다.</li>
+											<li>해지시 바로 재가입이 불가능한 부가서비스가 있으므로 주의바랍니다. (부가서비스 신청/변경 화면 하단의 "알아두세요" 참조)</li>
+											<li>부가서비스 월중 신청/해지 시 해당 월 월정액 및 무료제공 혜택은 각각 일할 적용 됩니다. 단, dosirak파티 상품은 30일 단위로 선결제되는 상품으로 일할 적용되지 않습니다.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 해지 팝업 -->
+
+						<!-- s : 선택된 항목이 없을경우 팝업 -->
+						<div class="pop_layerWrap" id="noDataLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>알림</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer alignCenter">
+										<p>선택하신 서비스가 없습니다.<br />
+											변경하실 서비스를 선택하신 후 확인버튼을 클릭 해 주세요.</p>
+									</div>
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 선택된 항목이 없을경우 팝업 -->
+
+						<!-- s: 패키지 부가서비스 -->
+						<div class="commTitleWrap bt1 ">
+							<h4 class="comm_scnTitle02 pt29">이용중인 패키지 부가서비스</h4>
+							<a href="#pkgSvcInfoLayer" id="pkgSvcInfoOpen" class="btnSty mid absolute top30 right0" onclick="$.ktBizPopClick(this); return false;" title="패키지 부가서비스안내 레이어팝업 열림">패키지 부가서비스란?</a>
+						</div>
+
+						<!-- s : 패키지 부가서비스 팝업 -->
+						<div class="pop_layerWrap" id="pkgSvcInfoLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>패키지 부가서비스란?</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h2 class="pop_subTitle pt0">패키지 부가서비스란?</h2>
+											<ul class="bulletList">
+												<li>쓰리팩(발신번호표시+링투유+캐치콜)과 같이 특정 부가서비스를 신청했을 때, 패키지형 부가서비스로 자동 인식되어 요금할인을 받을 수 있습니다.</li>
+												<li>현재 사용중인 전체 부가서비스 조회에서는 할인 적용이 되지 않은 요금이 나타납니다.</li>
+											</ul>
+											<h2 class="pop_subTitle">할인금액이란?</h2>
+											<ul class="bulletList">
+												<li>쓰리팩, 포팩, 파이브팩, V팩 등 다양한 패키지 부가서비스 상품에 가입하셨을 경우, 패키지 가입으로 할인혜택 받은 요금이 표시됩니다.</li>
+												<li>
+													예) 쓰리팩가입시
+													<ul class="subList">
+														<li>발신번호표시 1,000원 + 캐치콜 1,000원 + 링투유 900원 = 2,900원</li>
+														<li>패키지 할인 금액 700원을 적용</li>
+														<li>실제 청구금액 = 2,900원 - 700원 = 2,200원</li>
+													</ul>
+												</li>
+											</ul>
+											<h2 class="pop_subTitle">패키지 상품을 이용하려면?</h2>
+											<ul class="bulletList">
+												<li>패키지로 상품은 패키지로 구성된 상품에 각각 가입하면 자동으로 패키지 가입이 이루어집니다.</li>
+												<li>즉, 예를 들어 발신번호표시, 캐치콜, 링투유를 각각 가입하시면 자동으로 쓰리팩 할인을 받으실 수 있습니다.</li>
+												<li>자동가입과 마찬가지로 위의 3가지 상품 중 하나만 해지하더라도 쓰리팩 할인 혜택은 자동으로 사라지므로 패키지 상품 이용시에는 주의하시기 바랍니다.</li>
+											</ul>
+
+											<div class="mt50 pop_svcPkgPrice">
+												<h2>
+													<img src="../../images/pop/pop_svc_pkg_title3.gif" alt="쓰리팩, 포팩, 파이브팩으로 저렴하게 즐기세요!" />
+												</h2>
+												<p class="mt10">
+													<img src="../../images/pop/pop_svc_pkg_title3_text1.gif" alt="쓰리팩: 발신번호표시(1,000원)+링투유(900원)+캐치콜(500원)=2,400원에서 2,200원으로 할인, 캐치콜 서비스는 발신번호표시 서비스와 동시이용시 500원임" />
+												</p>
+												<p class="mt10">
+													<img src="../../images/pop/pop_svc_pkg_title3_text2.gif" alt="포팩: 쓰리팩(2,200원)+메시지매니저 일반(800원)=3,000원에서 2,700원으로 할인, 쓰리팩(2,200원)+메시지매니저 프리미엄(1,500원)=3,700원에서 3,400원으로 할인" />
+												</p>
+												<p class="mt10">
+													<img src="../../images/pop/pop_svc_pkg_title3_text3.gif" alt="파이브팩: 쓰리팩(2,200원)+통화가능알리미(500원)+통화요구알리미(500원)=3,200원에서 2,600원으로 할인" />
+												</p>
+												<p class="mt10">
+													<img src="../../images/pop/pop_svc_pkg_title3_text4.gif" alt="캐치콜팩: 캐치콜(500원)+통화가능알리미(500원)+통화요구알리미(500원)=1,500원에서 900원으로" />
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- e : contents -->
+							</div>
+
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 패키지 부가서비스 팝업 -->
+
+						<div class="comm_tableBrdr svcInfo_planTable">
+							<table class="comm_table" summary="패키지 상품명, 일반금액(부가세포함), 할인금액, 정구금액을 확인할 수 있는 표 입니다.">
+								<caption>패키지 부가서비스 조회표</caption>
+								<colgroup>
+									<col width="280" />
+									<col width="150" />
+									<col width="140" />
+									<col width="*" />
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">상품명</th>
+										<th scope="col">일반금액<br />(부가세 포함)</th>
+										<th scope="col">할인금액</th>
+										<th scope="col" class="last">청구금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="pl25">MMS수신도우미 outdialing 사용</td>
+										<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+										<td class="center">99,000<span>원</span></td>
+										<td class="center last"><span class="num emp01">99,000</span>원</td>
+									</tr>
+									<tr>
+										<td colspan="4" class="noContents last">가입하신 패키지 상품 내역이 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="iconWarningRed mt10 mb40 color000">괄호안의 금액은 부가세가 포함된 실제 지불금액입니다.</p>
+						<!-- e: 패키지 부가서비스 -->
+
+						<!-- s: 부가서비스 신청 -->
+						<div class="comm_contsInnerFullBox pb15 bt1d">
+
+							<div class="comm_tabs style02 svcInfo_addSvcTab">
+								<ul class="tabsCategory">
+									<li class="selected"><a href="#comm_tabs01" onclick="$.ktBizTabs(01, this, 'comm_tabs'); return false;">LTE전용</a></li>
+									<li> <a href="#comm_tabs02" onclick="$.ktBizTabs(01, this, 'comm_tabs'); return false;">안심/안전</a></li>
+									<li> <a href="#comm_tabs03" onclick="$.ktBizTabs(01, this, 'comm_tabs'); return false;">통화/편의</a></li>
+									<li> <a href="#comm_tabs04" onclick="$.ktBizTabs(01, this, 'comm_tabs'); return false;">로밍</a></li>
+								</ul>
+							</div>
+
+							<form name="prevChkForm" id="prevChkForm" method="post" action="">
+								<fieldset>
+								<legend>상품 리스트 체크 항목</legend>
+								<input type="hidden" name="realInd" />
+								<input type="hidden" name="strSoc" />
+								<input type="hidden" name="strUseYn" />
+								</fieldset>
+							</form>
+
+							<form name="form" id="form" method="post" action="/SvcRegularSocChge.action" >
+								<fieldset>
+								<legend>통화편의, 문자/메일, 음악/링투유, 사생활, 금융증권, 게임/다운로드팩, 교통/위치, 생활/정보, 재미/채팅운세, 영상/사진/꾸미기, 자녀/교육, 패키지, 로밍리스트</legend>
+								<!-- 기존 jsp가 javascript안에  안들어가게 하기 위해 hidden값 처리함 start -->
+								<input type="hidden" name="ERROR_CHECK" value="" />
+								<input type="hidden" name="CODE_IND" value="" />
+								<input type="hidden" name="OPTGM_ERROR_CHECK" value="" />
+								<input type="hidden" name="OPTGM_CODE_IND" value="" />
+								<input type="hidden" name="checkAgree" id="checkAgree" value="" />
+								<input type="hidden" name="agm4" id="agm4" value="" />
+								<input type="hidden" name="agm5" id="agm5" value="" />
+								<input type="hidden" name="searchBan" value="" /> <!-- ban 조회 B, ctn 조회 S-->
+								<input type="hidden" name="searchAcntNo" value="" /><!-- ban -->
+								<input type="hidden" name="searchCtn" value="" /> <!-- 전화번호 -->
+								<input type="hidden" name="svcCntrNo"  value="" /><!-- 서비스번호 -->
+
+								<!-- 화면 암호화 시작 -->
+								<input type="hidden" name="ENCRYPT_R_ENCKEY"        value="mGErW1BJ%2FGrBvBlZWRb29%2BUjHbGrvkGX%2F05PmduJG8xEjxnVhuTkOD%2BIAdEhCWMe4bS2dzDiSahYzngYMvsRCO0J4RlC6mXg2F02zaUq3GAThcEPFin3qFJjAbB66CWUvllUk6HrunGDO2uW6NP0WKQh%2FMDeHBpgH0oQL0Ki1WY%3D"/>
+								<input type="hidden" name="ENCRYPT_S_searchAcntNo"  value="76DxIRkrpj4gUAXOid1LxA%3D%3D"/>       <!-- 암호화 ban -->
+								<input type="hidden" name="ENCRYPT_S_searchCtn"     value="aI%2FE2Xwk5JkncUBSbstsxw%3D%3D"/>       <!-- 암호화 대표번호 -->
+								<input type="hidden" name="ENCRYPT_S_svcCntrNo"     value="CK2kF6oXclDPVTg6vm8k4A%3D%3D"/> <!-- 암호화 서비스번호 -->
+								<!-- 화면 암호화 끝   -->
+
+							<div id="comm_tabs" class="svcInfo_addSvcPanel">
+								<div id="comm_tabs01">
+									<h4 class="blind">LTE전용</h4>
+									<div class="comm_tableBrdr svcInfo_planTable">
+										<table class="comm_table" summary="부가서비스명, 내용, 이용요금, 부가정보를 확인하고 선택할 수 있는 표 입니다.">
+											<caption>LTE전용 부가서비스 목록표</caption>
+											<colgroup>
+												<col width="290" />
+												<col width="250" />
+												<col width="120" />
+												<col width="*" />
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">부가서비스명</th>
+													<th scope="col">내용</th>
+													<th scope="col">이용요금<br />(부가세 포함)</th>
+													<th scope="col" class="last">부가정보</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use0" />
+															<i></i>
+															<label for="use0">기업무선상품관리</label>
+														</span>
+
+														<input type="hidden" name="featureCode"    value="MTPLN1" />
+														<input type="hidden" name="ftrDescription" value="My time plan(LTE)" />
+														<input type="hidden" name="ftrSoc"          value="MYTMPLAN1" />
+														<input type="hidden" name="bundleInd"      value="" />
+														<input type="hidden" name="serviceType"    value="R" />
+														<input type="hidden" name="ftrParamNum"    value="" />
+														<input type="hidden" name="ftrOldParam"    value="" />
+														<input type="hidden" name="ftrNewParam"    value="" />
+														<input type="hidden" name="defaultParam"    value="TIME_OPTION1|" />
+														<input type="hidden" name="ftrOrgUse" value="false" />
+														<input type="hidden" name="ftrUseYN" />
+														<input type="hidden" name="ftrCertInd"     value="" />
+														<input type="hidden" name="termntSocYn"     value="" />
+														<input type="hidden" name="moonjaUse"     value="" />
+														<input type="hidden" name="moonjaCurUse"     value="" />
+													</td>
+													<td class="">원하는 시간을 선택하면 데이터 무제한(속도 제어) 제공</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last">
+														<a href="" id="" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="상품명 부가정보 레이어팝업 열림">부가정보</a>
+													</td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use1" />
+															<i></i>
+															<label for="use1">SMS(문자서비스) 기본제공</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use2" />
+															<i></i>
+															<label for="use2">MMS수신도우미 outdialing 사용</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td colspan="4" class="noContents last">가입할 수 있는 상품이 없습니다.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div id="comm_tabs02" style="display:none;">
+									<h4 class="blind">안심/안전</h4>
+									<div class="comm_tableBrdr svcInfo_planTable">
+										<table class="comm_table" summary="부가서비스명, 내용, 이용요금, 부가정보를 확인하고 선택할 수 있는 표 입니다.">
+											<caption>안심/안전 부가서비스 목록표</caption>
+											<colgroup>
+												<col width="290" />
+												<col width="250" />
+												<col width="120" />
+												<col width="*" />
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">부가서비스명</th>
+													<th scope="col">내용</th>
+													<th scope="col">이용요금<br />(부가세 포함)</th>
+													<th scope="col" class="last">부가정보</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use5" />
+															<i></i>
+															<label for="use5">SMS(문자서비스) 기본제공</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use6" />
+															<i></i>
+															<label for="use6">MMS수신도우미 outdialing 사용</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use4" />
+															<i></i>
+															<label for="use4">기업무선상품관리</label>
+														</span>
+													</td>
+													<td class="">원하는 시간을 선택하면 데이터 무제한(속도 제어) 제공</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last">
+														<a href="" id="" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="상품명 부가정보 레이어팝업 열림">부가정보</a>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="4" class="noContents last">가입할 수 있는 상품이 없습니다.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div id="comm_tabs03" style="display:none;">
+									<h4 class="blind">통화/편의</h4>
+									<div class="comm_tableBrdr svcInfo_planTable">
+										<table class="comm_table" summary="부가서비스명, 내용, 이용요금, 부가정보를 확인하고 선택할 수 있는 표 입니다.">
+											<caption>통화/편의 부가서비스 목록표</caption>
+											<colgroup>
+												<col width="290" />
+												<col width="250" />
+												<col width="120" />
+												<col width="*" />
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">부가서비스명</th>
+													<th scope="col">내용</th>
+													<th scope="col">이용요금<br />(부가세 포함)</th>
+													<th scope="col" class="last">부가정보</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use9" />
+															<i></i>
+															<label for="use9">MMS수신도우미 outdialing 사용</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use8" />
+															<i></i>
+															<label for="use8">SMS(문자서비스) 기본제공</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use7" />
+															<i></i>
+															<label for="use7">기업무선상품관리</label>
+														</span>
+													</td>
+													<td class="">원하는 시간을 선택하면 데이터 무제한(속도 제어) 제공</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last">
+														<a href="" id="" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="상품명 부가정보 레이어팝업 열림">부가정보</a>
+													</td>
+												</tr>
+
+												<tr>
+													<td colspan="4" class="noContents last">가입할 수 있는 상품이 없습니다.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div id="comm_tabs04" style="display:none;">
+									<h4 class="blind">로밍</h4>
+									<div class="comm_tableBrdr svcInfo_planTable">
+										<table class="comm_table" summary="부가서비스명, 내용, 이용요금, 부가정보를 확인하고 선택할 수 있는 표 입니다.">
+											<caption>로밍 부가서비스 목록표</caption>
+											<colgroup>
+												<col width="290" />
+												<col width="250" />
+												<col width="120" />
+												<col width="*" />
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">부가서비스명</th>
+													<th scope="col">내용</th>
+													<th scope="col">이용요금<br />(부가세 포함)</th>
+													<th scope="col" class="last">부가정보</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use11" />
+															<i></i>
+															<label for="use11">SMS(문자서비스) 기본제공</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use10" />
+															<i></i>
+															<label for="use10">기업무선상품관리</label>
+														</span>
+													</td>
+													<td class="">원하는 시간을 선택하면 데이터 무제한(속도 제어) 제공</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last">
+														<a href="" id="" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="상품명 부가정보 레이어팝업 열림">부가정보</a>
+													</td>
+												</tr>
+												<tr>
+													<td class="plan_radio">
+														<span class="comm_radio">
+															<input type="radio" name="use" id="use12" />
+															<i></i>
+															<label for="use12">MMS수신도우미 outdialing 사용</label>
+														</span>
+													</td>
+													<td class="">부족한 데이터를 즉시 충전 가능한 1회성 충전 서비스</td>
+													<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+													<td class="center last"></td>
+												</tr>
+												<tr>
+													<td colspan="4" class="noContents last">가입할 수 있는 상품이 없습니다.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- // #comm_tabs -->
+
+							<input type="hidden" name="returnUrl"    value="/SvcRegularSocInfo2.action" />
+							<input type="hidden" name="hd_safe_chk"  value="N" />
+							<input type="hidden" name="safecard_chk"  value="N" />
+							<input type="hidden" name="citicareChk" value="N" />
+							<input type="hidden" name="allChk"  value="" />
+							<input type="hidden" name="brandCd"  value="L" />
+							<input type="hidden" name="kwd"  value="" />
+							<input type="hidden" name="membersYn"  value="Y" />
+
+							 </fieldset>
+						</form>
+
+						<form name="formChk" method="post" action="">
+							<input type="hidden" name="gvLevel"     value="" />
+							<input type="hidden" name="customerSsn" value="" />
+							<input type="hidden" name="ftrCount"    value="7" />
+							<input type="hidden" name="curPpSoc"    value="LTEPIG275" />
+							<input type="hidden" name="fandfSoc"    value="" />
+							<input type="hidden" name="clickCount"  value="0" />
+						</form>
+
+						<form name="moonjaForm" id="moonjaForm" method="post" action="/SvcRegularMnumInfo.action">
+							<input type="hidden" name="moonja"  id="moonja" value="" />
+						</form>
+
+						<form name="specialSpamForm" method="post" action="/SvcRegularSpamPop_up.jsp">
+
+						</form>
+
+						<form name="termntForm" method="post" action="/SvcRegularSpecial.action">
+							<fieldset>
+							<legend>부가서비스 SOC 코드 항목</legend>
+							<input type="hidden" name="tuse" />
+							<input type="hidden" name="tfeatureCode"    value="" />
+							<input type="hidden" name="tftrDescription" value="" />
+							<input type="hidden" name="tftrSoc"         value="" /> <!-- // 부가서비스 SOC 코드 - // WISE 2005.07 버전업 추가 사항 -->
+							<input type="hidden" name="tbundleInd"      value="" />
+							<input type="hidden" name="tserviceType"    value="" />
+							<input type="hidden" name="tftrParamNum"    value="" />
+							<input type="hidden" name="tftrOldParam"    value="" />
+							<input type="hidden" name="tftrNewParam"    value="" />
+							<input type="hidden" name="tdefaultParam"    value="" />
+							<input type="hidden" name="tftrOrgUse"      value="" />
+							<input type="hidden" name="tftrUseYN"        />
+							<input type="hidden" name="tftrCertInd"     value="" />
+							<input type="hidden" name="ttermntSocYn"     value="Y" />
+							</fieldset>
+						</form>
+
+						<form name="silPackForm" method="post" action="/SvcRegularSocDependInfo.action">
+							<input type="hidden" name="suse" />
+							<input type="hidden" name="sfeatureCode"    value="" />
+							<input type="hidden" name="sftrDescription" value="" />
+							<input type="hidden" name="sftrSoc"         value="" />
+							<input type="hidden" name="sbundleInd"      value="" />
+							<input type="hidden" name="sserviceType"    value="" />
+							<input type="hidden" name="sftrParamNum"    value="" />
+							<input type="hidden" name="sftrOldParam"    value="" />
+							<input type="hidden" name="sftrNewParam"    value="" />
+							<input type="hidden" name="sdefaultParam"    value="" />
+							<input type="hidden" name="sftrOrgUse"      value="" />
+							<input type="hidden" name="sftrUseYN"       />
+							<input type="hidden" name="sftrCertInd"     value="" />
+							<input type="hidden" name="stermntSocYn"     value="Y" />
+							<input type="hidden" name="StermntSoc"   value="SMSPLUSP" />
+						</form>
+
+						<form name="ringToUPRForm" method="post" action="/SvcRegularSocDependInfo2.action">
+							<input type="hidden" name="suse" />
+							<input type="hidden" name="sfeatureCode"    value="" />
+							<input type="hidden" name="sftrDescription" value="" />
+							<input type="hidden" name="sftrSoc"         value="" />
+							<input type="hidden" name="sbundleInd"      value="" />
+							<input type="hidden" name="sserviceType"    value="" />
+							<input type="hidden" name="sftrParamNum"    value="" />
+							<input type="hidden" name="sftrOldParam"    value="" />
+							<input type="hidden" name="sftrNewParam"    value="" />
+							<input type="hidden" name="sdefaultParam"    value="" />
+							<input type="hidden" name="sftrOrgUse"      value="" />
+							<input type="hidden" name="sftrUseYN"        />
+							<input type="hidden" name="sftrCertInd"     value="" />
+							<input type="hidden" name="stermntSocYn"    value="Y" />
+
+							<input type="hidden" name="sfeatureCode2"    value="" />
+							<input type="hidden" name="sftrDescription2" value="" />
+							<input type="hidden" name="sftrSoc2"         value="" />
+							<input type="hidden" name="sbundleInd2"      value="" />
+							<input type="hidden" name="sserviceType2"    value="" />
+							<input type="hidden" name="sftrParamNum2"    value="" />
+							<input type="hidden" name="sftrOldParam2"    value="" />
+							<input type="hidden" name="sftrNewParam2"    value="" />
+							<input type="hidden" name="sdefaultParam2"    value="" />
+							<input type="hidden" name="sftrOrgUse2"      value="" />
+							<input type="hidden" name="sftrUseYN2"        />
+							<input type="hidden" name="sftrCertInd2"     value="" />
+							<input type="hidden" name="stermntSocYn2"    value="Y" />
+
+							<input type="hidden" name="StermntSoc"  id="StermntSoc" value="RNGTOUPR4" />
+						</form>
+
+						<form name="catchCallSvForm" method="post" action="/CatchCallSaveJoinInfo.action">
+							<input type="hidden" name="suse" />
+							<input type="hidden" name="sfeatureCode"    value="" />
+							<input type="hidden" name="sftrDescription" value="" />
+							<input type="hidden" name="sftrSoc"         value="" />
+							<input type="hidden" name="sbundleInd"      value="" />
+							<input type="hidden" name="sserviceType"    value="" />
+							<input type="hidden" name="sftrParamNum"    value="" />
+							<input type="hidden" name="sftrOldParam"    value="" />
+							<input type="hidden" name="sftrNewParam"    value="" />
+							<input type="hidden" name="sftrOrgUse"      value="" />
+							<input type="hidden" name="sftrUseYN"        />
+							<input type="hidden" name="sftrCertInd"     value="" />
+						</form>
+
+						<form name="chngCfuSusForm" method="post" action="/SvcRegularSocArrivalSuspend.jsp">
+							<input type="hidden" name="ftrSoc"          value="" />
+							<input type="hidden" name="featureCode"     value="" />
+							<input type="hidden" name="ftrDescription"  value="" />
+							<input type="hidden" name="bundleInd"       value="" />
+							<input type="hidden" name="serviceType"     value="" />
+							<input type="hidden" name="ftrParamNum"     value="" />
+							<input type="hidden" name="ftrOldParam"     value="" />
+							<input type="hidden" name="ftrNewParam"     value="" />
+							<input type="hidden" name="defaultParam"    value="" />
+							<input type="hidden" name="ftrOrgUse"       value="" />
+							<input type="hidden" name="ftrUseYN"        value="" />
+							<input type="hidden" name="srvMode"         value="" />
+							<input type="hidden" name="ind"             value="" />
+							<input type="hidden" name="switchCode"      value="" />
+							<input type="hidden" name="returnUrl"       value="/SvcRegularSocInfo2.action" />
+						</form>
+
+						<!-- DR-2009-02918 지정번호문자 관련 폼  -->
+						<form name="dirSocChange" id="dirSocChange" method="post" action="/SvcRegularSocChge.action">
+							<fieldset>
+							<legend>지정번호 문자 관련 항목</legend>
+							<input type="hidden" name="curPpSoc" value="LTEPIG275" />
+							<input type="hidden" name="defaultParam" value="" />
+							<input type="hidden" name="ftrParamNum" value="6" />
+							<input type="hidden" name="fandfSoc" value="" />
+							<input type="hidden" name="ind" value="0" />
+							<input type="hidden" name="returnUrl"      value="/SvcRegularSocInfo2.action" />
+							<input type="hidden" name="brandCd"      value="L" />
+							<input type="hidden" name="mainCd"    value="14" />
+							<input type="hidden" name="featureCode"    value="USMSCP" />
+							<input type="hidden" name="srvMode" value="U" />
+							<input type="hidden" name="ftrDescription" value="지정번호 문자 무제한(1회선)" />
+							<input type="hidden" name="ftr" value="ULMSMSCPL" />
+							<input type="hidden" name="ftrSoc"          value="ULMSMSCPL" />
+							<input type="hidden" name="bundleInd"      value="" />
+							<input type="hidden" name="serviceType"    value="R" />
+							<input type="hidden" name="ftrOldParam"    value="" />
+							<input type="hidden" name="ftrNewParam"    value="" />
+							<input type="hidden" name="ftrOrgUse"		value="true" />
+							<input type="hidden" name="ftrUseYN"       value="true" />
+							<input type="hidden" name="ftrCertInd"     value="" />
+							<input type="hidden" name="termntSocYn"     value="" />
+							<input type="hidden" name="moonjaUse"     value="" />
+
+							<input type="hidden" name="siteGubun" value="U" />
+							<input type="hidden" name="servicemenu"      value="0" />
+
+							<input type="hidden" name="moonjaCurUse"     value="" />
+							</fieldset>
+						</form>
+
+						<!-- DR-2009-02918 특수문자 지정번호 관련 폼  -->
+						<form name="dirSocChangeNospam" id="dirSocChangeNospam" method="post" action="/SvcRegularSocChge.action">
+							<fieldset>
+							<legend>특수문자 지정번호 관련 항목</legend>
+							<input type="hidden" name="cmd" value="DIR" />
+							<input type="hidden" name="curPpSoc" value="LTEPIG275" />
+							<input type="hidden" name="defaultParam" value="" />
+							<input type="hidden" name="ftrParamNum" value="6" />
+							<input type="hidden" name="fandfSoc" value="" />
+							<input type="hidden" name="ind" value="0" />
+							<input type="hidden" name="returnUrl"      value="/SvcRegularSocInfo2.action" />
+							<input type="hidden" name="brandCd"      value="L" />
+							<input type="hidden" name="mainCd"    value="14" />
+							<input type="hidden" name="featureCode"    value="" />
+							<input type="hidden" name="srvMode" value="U" />
+							<input type="hidden" name="ftrDescription" value="" />
+							<input type="hidden" name="ftr" value="" />
+							<input type="hidden" name="ftrSoc"         value="" />
+							<input type="hidden" name="bundleInd"      value="" />
+							<input type="hidden" name="serviceType"    value="R" />
+							<input type="hidden" name="ftrOldParam"    value="" />
+							<input type="hidden" name="ftrNewParam"    value="" />
+							<input type="hidden" name="ftrOrgUse"		value="true" />
+							<input type="hidden" name="ftrUseYN"       value="true" />
+							<input type="hidden" name="ftrCertInd"    value="" />
+							<input type="hidden" name="termntSocYn"     value="" />
+							<input type="hidden" name="moonjaUse"     value="" />
+
+							<input type="hidden" name="siteGubun" id="siteGubun" value="U" />
+							<input type="hidden" name="servicemenu"      value="0" />
+
+							<input type="hidden" name="moonjaCurUse"     value="" />
+							</fieldset>
+						</form>
+
+						<!-- DR-2009-11643 01X발신표시 서비스 상품 개발 요청 관련 폼  -->
+						<form name="gcsSocChange" id="gcsSocChange" method="post" action="/SvcRegularSocChge.action">
+							<fieldset>
+							<legend>01X발신표시 서비스 상품 항목</legend>
+							<input type="hidden" name="curPpSoc" value="LTEPIG275" />
+							<input type="hidden" name="defaultParam" value="" />
+							<input type="hidden" name="ftrParamNum" value="1" />
+							<input type="hidden" name="fandfSoc" value="" />
+							<input type="hidden" name="ind" value="0" />
+							<input type="hidden" name="returnUrl"      value="/SvcRegularSocInfo2.action" />
+							<input type="hidden" name="brandCd"      value="L" />
+							<input type="hidden" name="mainCd"   value="14" />
+							<input type="hidden" name="featureCode"    value="PLUGCS" />
+							<input type="hidden" name="srvMode" value="U" />
+							<input type="hidden" name="ftrDescription" value="010번호연결서비스" />
+							<input type="hidden" name="ftr" value="PLUGCS" />
+							<input type="hidden" name="ftrSoc"         value="PLUGCS" />
+							<input type="hidden" name="bundleInd"     value="01" />
+							<input type="hidden" name="serviceType"    value="R" />
+							<input type="hidden" name="ftrOldParam"    value="" />
+							<input type="hidden" name="ftrNewParam"    value="" />
+							<input type="hidden" name="ftrOrgUse"		value="true" />
+							<input type="hidden" name="ftrUseYN"       value="true" />
+							<input type="hidden" name="ftrCertInd"     value="" />
+							<input type="hidden" name="termntSocYn"     value="" />
+							<input type="hidden" name="moonjaUse"     value="" />
+							<input type="hidden" name="moonjaCurUse"     value="" />
+							</fieldset>
+						</form>
+
+						<form name="gcsSocChange2" id="gcsSocChange2" method="post" action="/SvcRegularSocChge.action">
+							<fieldset>
+							<legend>010 이전번호표시서비스 항목</legend>
+							<input type="hidden" name="curPpSoc" value="LTEPIG275" />
+							<input type="hidden" name="defaultParam" value="" />
+							<input type="hidden" name="ftrParamNum" value="1" />
+							<input type="hidden" name="fandfSoc" value="" />
+							<input type="hidden" name="ind" value="0" />
+							<input type="hidden" name="returnUrl"      value="/SvcRegularSocInfo2.action" />
+							<input type="hidden" name="brandCd"      value="L" />
+							<input type="hidden" name="mainCd"    value="14" />
+							<input type="hidden" name="featureCode"    value="CNIPX" />
+							<input type="hidden" name="srvMode" value="U" />
+							<input type="hidden" name="ftrDescription" value="010 이전번호표시서비스" />
+							<input type="hidden" name="ftr" value="CNIPX" />
+							<input type="hidden" name="ftrSoc"         value="CNIPX" />
+							<input type="hidden" name="bundleInd"      value="01" />
+							<input type="hidden" name="serviceType"    value="R" />
+							<input type="hidden" name="ftrOldParam"    value="" />
+							<input type="hidden" name="ftrNewParam"    value="" />
+							<input type="hidden" name="ftrOrgUse"		value="true" />
+							<input type="hidden" name="ftrUseYN"       value="true" />
+							<input type="hidden" name="ftrCertInd"     value="" />
+							<input type="hidden" name="termntSocYn"     value="" />
+							<input type="hidden" name="moonjaUse"     value="" />
+							<input type="hidden" name="moonjaCurUse"     value="" />
+							</fieldset>
+						</form>
+						<form name="popupForm" id="popupForm" method="post" action="/">
+							<input type="hidden" name="curPpSoc" value="LTEPIG275" />
+							<input type="hidden" name="defaultParam" value="" />
+							<input type="hidden" name="ftrParamNum" value="" />
+							<input type="hidden" name="fandfSoc" value="" />
+							<input type="hidden" name="ind" value="0" />
+							<input type="hidden" name="returnUrl"      value="SvcRegularSocInfo.action" />
+							<input type="hidden" name="brandCd"      value="L" />
+							<input type="hidden" name="mainCd"    value="14" />
+							<input type="hidden" name="featureCode"    value="" />
+							<input type="hidden" name="srvMode" value="" />
+							<input type="hidden" name="ftrDescription" value="" />
+							<input type="hidden" name="ftr" value="" />
+							<input type="hidden" name="ftrSoc"         value="" />
+							<input type="hidden" name="bundleInd"      value="" />
+							<input type="hidden" name="serviceType"    value="R" />
+							<input type="hidden" name="ftrOldParam"    value="0" />
+							<input type="hidden" name="ENCRYPT_S_ftrOldParam"    value="" />
+							<input type="hidden" name="ENCRYPT_S_oldParam"    value="" />
+
+							<input type="hidden" name="ftrNewParam"    value="" />
+							<input type="hidden" name="ftrOrgUse"		value="" />
+							<input type="hidden" name="ftrUseYN"       value="" />
+							<input type="hidden" name="ftrCertInd"     value="" />
+							<input type="hidden" name="termntSocYn"     value="" />
+							<input type="hidden" name="moonjaUse"     value="" />
+							<input type="hidden" name="moonjaCurUse"     value="" />
+							<input type="hidden" name="soc"     value="" />
+							<input type="hidden" name="flag_gcs"     value="" />
+							<input type="hidden" name="AGM4"     value="" />
+							<input type="hidden" name="AGM5"     value="" />
+							<input type="hidden" name="oldParam"     value="" />
+							<input type="hidden" name="moonjaSoc"     value="" />
+							<input type="hidden" name="moonjaFtr"     value="" />
+							<input type="hidden" name="cmd"     value="" />
+							<input type="hidden" name="mode"     value="" />
+							<input type="hidden" name="param"    value="" />
+							<input type="hidden" name="ENCRYPT_S_param"     value="" />
+							<input type="hidden" name="switchCode"     value="" />
+							<input type="hidden" name="gubun"     value="" />
+							<input type="hidden" name="chkARS"     value="Y" />
+							<input type="hidden" name="ftrOldParam_tmp"     value="" />
+
+							<input type="hidden" name="ENCRYPT_S_defaultParam"    value="" />
+							<input type="hidden" name="ENCRYPT_R_ENCKEY"    value="" />
+							<input type="hidden" name="ENCRYPT_S_searchAcntNo"    value="" />
+							<input type="hidden" name="ENCRYPT_S_searchCtn"    value="" />
+							<input type="hidden" name="ENCRYPT_S_svcCntrNo"    value="" />
+						</form>
+							<!-- DR-2010-20775-01X번호표시서비스 사이버고객센터 가입해지 추가  -->
+						<form name="gcsSocChange3" id="gcsSocChange3" method="post" >
+							<fieldset>
+							<legend>01X번호표시서비스 사이버고객센터 가입해지 추가 항목</legend>
+							<input type="hidden" name="beCNIPX" id="beCNIPX" value="N" />
+							<input type="hidden" name="joinYn01X" id="joinYn01X" value="N" />
+							<input type="hidden" name="param01X" id="param01X" value="N" />
+							<input type="hidden" name="arsONChk" id="arsONChk" value="N" />
+							</fieldset>
+						</form>
+
+						</div>
+						<!-- // .comm_contsInnerFullBox -->
+						<!-- e: 부가서비스 신청 -->
+						<div class="commBtnWrap">
+							<a href="#applyAddSvcLayer" id="applyAddSvcOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 신청 레이어팝업 열림">신청</a>
+							<a href="#noDataLayer" id="noDataOpen2" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 신청 레이어팝업 열림">신청(선택한 항목이 없는 경우)</a>
+							<a href="#" class="btnSty big">취소</a>
+						</div>
+
+						<!-- s : 부가서비스 신청 팝업 -->
+						<div class="pop_layerWrap" id="applyAddSvcLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>부가서비스 신청</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h2 class="pop_subTitle pt0 alignCenter">모바일 010-1234-567*</h2>
+
+											<div class="comm_tableBrdr">
+												<table class="comm_table" summary="신청할 부가서비스와 이용요금(부가세포함)을 확인 할 수 있습니다.">
+													<caption>부가서비스 신청</caption>
+													<colgroup>
+														<col width="50%" />
+														<col width="50%" />
+													</colgroup>
+													<thead>
+													<tr>
+														<th scope="col">선택 부가서비스</th>
+														<th scope="col">이용요금(부가세포함)</th>
+													</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="center">
+																<span class="fBold">상품명</span>
+															</td>
+															<td class="last center num">
+															 	월 99,000<span>원(99,999원)</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">변경하신 요금제는 즉시 적용되어 과금처리 되어집니다.</p>
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+										<a href="" class="btnSty big blk" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+									</div>
+
+									<div class="comm_noticeBox">
+										<h2 class="title">꼭 확인하세요!</h2>
+										<ul class="notice-list">
+											<li>확인 버튼을 클릭하시면, 선택하신 서비스가 사용가능한 경우 신청됩니다.</li>
+											<li>해지시 바로 재가입이 불가능한 부가서비스가 있으므로 주의바랍니다. (부가서비스 신청/변경 화면 하단의 "알아두세요" 참조)</li>
+											<li>부가서비스 월중 신청/해지 시 해당 월 월정액 및 무료제공 혜택은 각각 일할 적용 됩니다. 단, dosirak파티 상품은 30일 단위로 선결제되는 상품으로 일할 적용되지 않습니다.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 신청 팝업 -->
+
+					</div>
+					<div class="comm_contsInner grayBox bottom"></div>
+				</div>
+				<!-- e : gray box -->
+
+				<div class="comm_noticeBox">
+					<h4 class="title">꼭 확인하세요!</h4>
+					<ul class="notice-list">
+						<li>당일 신청하신 서비스는 당일 해지를 하실 수 없습니다.</li>
+						<li>메시지매니저 서비스를 해지 하시는 경우 해지일로부터 30일 내에는 재가입 하실 수 없습니다.</li>
+						<li>부가서비스 월 중 신청/해지 시 해 이번달 월정액 및 무료제공 혜택은 각각 일할 적용됩니다.</li>
+						<li>신규 가입이 제한된 서비스의 해지는 고객센터 및 플라자
+						/대리점에서 가능합니다.</li>
+						<li>고속도로1500, 출퇴근교통1500, 통합교통2000 서비스를 해지하는 경우 해지일로부터 15일 내에는 재가입할 수 없습니다.</li>
+						<li>고속도로1500, 출퇴근교통1500을 가입한 경우에는 통합교통2000을 가입하실 수 없습니다.</li>
+						<li>문자번호(인터넷), 문자번호(Cash), 문자번호(포탈) 서비스 이용 고객께서는 해지 시 문자번호 서비스 우측의 변경버튼을 클릭 후 이용해주세요.</li>
+					</ul>
+				</div>
+
+				<!-- e : 컨텐츠 영역  -->
+			</div>
+			<!-- e : content Body -->
+		</div>
+		<hr />
+		<!-- e : content Body wrap -->
+	</div>
+	<!-- e : cont container -->
+
+
+	<!-- s : footer -->
+	<div id="cfmOllehFooter">
+		<script type="text/javascript">$.ktBizFooterView();</script>
+	</div>
+	<!-- e : footer -->
+</div>
+</body>
+</html>
+

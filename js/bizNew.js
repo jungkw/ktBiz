@@ -50,11 +50,11 @@ $(document).ready(function(){
         $('input:radio:checked, input:checkbox:checked').next('i').addClass('checked');
         $('input:radio, input:checkbox').click(function(){
           var name = $(this).attr('name');
-          $("input[name="+name+"]").next('i').removeClass('checked');
+          $("input[name="+name+"]:enabled").next('i').removeClass('checked');
           $(this).next('i').addClass('checked');
-          $('input:radio, input:checkbox').focusin(function(){
-              $(this).next('i').addClass('checked');
-          });
+        });
+        $('input:radio, input:checkbox').focusin(function(){
+          $(this).next('i').addClass('checked');
         });
 
 

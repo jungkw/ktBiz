@@ -1,0 +1,448 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 모바일 요금제신청 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/svcInfo.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
+
+	<!-- 레이어 팝업 보여주기용. -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var target = getUrlParameter();
+
+			$('#' + target[0] ).trigger('click');
+
+		});
+	</script>
+
+	<!-- s: 기존소스유지 -->
+
+	<!-- e: 기존소스유지 -->
+
+</head>
+
+
+
+<body>
+<h1 class="blind">올레닷컴(기업)</h1>
+<div id="cfmOllehWrap">
+
+	<!-- s : skip Navigation -->
+	<ul class="cfmOllehSkipNavi" id="cfmOllehSkipNavi">
+		<li><a href="#cfmOllehConts" ><span>본문으로 바로가기</span></a></li>
+		<li><a href="http://inside.olleh.com/html/WebAccessibility/Info.asp"><span>웹접근성 도움말 페이지로 이동하기</span></a></li>
+	</ul>
+	<!-- e : skip Navigation -->
+
+	<!-- s : gnb wrap -->
+	<div id="cfmOllehGnb">
+		<script type="text/javascript">$.ktBizGnbView();</script>
+	</div>
+	<!-- e : gnb wrap -->
+
+
+	<!-- s : cont container -->
+	<div id="cfmOllehContainer">
+
+		<!-- s : lnb -->
+
+		<div id="cfmOllehLnb" accesskey="4">
+			<script type="text/javascript">$.ktBizLnbView('BCBA')</script>
+		</div>
+
+		<!-- e : lnb -->
+
+
+
+		<!-- s : content Body wrap -->
+		<hr />
+		<div id="cfmOllehConts" class="cfmOllehcontsLnbOn" accesskey="1">
+		<h2 class="blind">본문 영역</h2>
+			<div class="cfmOllehContsHeader">
+				<h3 class="cfmOllehContsTit"><img src="../../images/title/svcInfo_addSvc_itel.png" alt="인터넷전화" /></h3>
+			</div>
+
+			<!-- s : content Body -->
+			<div class="cfmOllehContsMain">
+
+				<!-- s : 컨텐츠 영역 -->
+
+				<!-- s : gray box -->
+				<div class="comm_contsInner grayBox">
+					<div class="comm_contsInner grayBox pb36">
+						<h4 class="blind">서비스 번호변경 신청</h4>
+
+						<!-- s : search comm -->
+						<div class="commTitleWrap pt29 relative">
+							<fieldset>
+								<legend>서비스 번호 선택</legend>
+								<p class="comm_scnTitle02 mb20">신청하실 서비스 번호를 선택해주세요.</p>
+								<div class="circuitSearchDiv">
+									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>gaea1234</a>
+									<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+
+									<!-- s : 레이어 팝업 -->
+									<div class="pop_mask"></div>
+									<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
+
+										<div class="pop_wrap commBillPop">
+
+											<!-- s : header -->
+											<div class="pop_header">
+												<h4>서비스 번호 찾기</h4>
+												<p class="mt10 color666 font13 alignLeft pl30">50개 이상 회선은 검색을 이용하세요.</p>
+												<!-- s : 검색 영역 -->
+												<div class="pop_billSrchWhiteBox">
+													<fieldset>
+														<legend>서비스 번호 검색 필드</legend>
+														<label for="billNumTxt" class="blind">서비스 번호</label>
+														<input type="text" id="billNumTxt" class="placeholder" value="gaea1234" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+													</fieldset>
+												</div>
+												<!-- e : 검색 영역 -->
+											</div>
+											<!-- e : header -->
+
+											<!-- s : contents -->
+											<div class="pop_conts" >
+												<div class="pop_contsContainer pb15">
+													<ul class="pop_billNumListBox">
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+														<li><a href="#billPopOpen01" class="pop_btn_close">gaea1234</a></li>
+
+													</ul>
+
+													<div class="comm_paging mt10">
+														<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+													</div>
+												</div>
+											</div>
+											<!-- e : contents -->
+										</div>
+										<!-- s : footer -->
+										<div class="pop_footer">
+											<div class="pop_footerInner">
+												<p class="pop_close">
+													<a href="#billPopOpen01" >닫기</a>
+												</p>
+											</div>
+										</div>
+										<!-- e : footer -->
+									</div>
+								</div>
+								<!-- e : 레이어 팝업 -->
+
+							</fieldset>
+						</div>
+						<!-- e : search comm -->
+
+						<div class="svcInfo_addSvc">
+							<p class="cur">신청대상 서비스번호 <span class="num fBold">gaea1234</span></p>
+						</div>
+
+						<!-- s: 이용중인 부가서비스 -->
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02 pt29 mb13">이용중인 부가서비스</h4>
+						</div>
+
+						<div class="comm_tableBrdr svcInfo_planTable">
+							<table class="comm_table" summary="이용중인 부가서비스명, 이용요금(부가세포함), 신청일자, 부가정보를 확인할 수 있는 표 입니다.">
+								<caption>이용중인 부가서비스 목록표</caption>
+								<colgroup>
+									<col width="210" />
+									<col width="130" />
+									<col width="130" />
+									<col width="*" />
+									<col width="110" />
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">부가서비스명</th>
+										<th scope="col">이용요금<br />(부가세 포함)</th>
+										<th scope="col">가입일</th>
+										<th scope="col">기타</th>
+										<th scope="col" class="last">변경/해지</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="">상품명</a></td>
+										<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+										<td class="center">2016.01.01</td>
+										<td class="center">-</td>
+										<td class="center last">
+											<a href="#closeAddSvcLayer" id="closeAddSvcOpen" class="btnSty red mid" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 해지 레이어팝업 열림">해지</a>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="noContents last">가입하신 부가서비스가 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- e: 이용중인 부가서비스 -->
+
+						<!-- s : 부가서비스 해지 팝업 -->
+						<div class="pop_layerWrap" id="closeAddSvcLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>부가서비스 해지</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h2 class="pop_subTitle pt0 alignCenter">인터넷 gaea1234</h2>
+
+											<div class="comm_tableBrdr">
+												<table class="comm_table" summary="신청된 요금제와 해지된 부가서비스를 확인 할 수 있습니다.">
+													<caption>부가서비스 해지</caption>
+													<colgroup>
+														<col width="50%" />
+														<col width="50%" />
+													</colgroup>
+													<thead>
+													<tr>
+														<th scope="col">선택 부가서비스</th>
+														<th scope="col">이용요금(부가세포함)</th>
+													</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="center">
+																<span class="fBold">상품명</span>
+															</td>
+															<td class="last center num">
+															 	월 99,000<span>원(99,999원)</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">변경하신 요금제는 즉시 적용되어 과금처리 되어집니다.</p>
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+										<a href="" class="btnSty big blk" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+									</div>
+
+									<div class="comm_noticeBox">
+										<h2 class="title">꼭 확인하세요!</h2>
+										<ul class="notice-list">
+											<li>확인 버튼을 클릭하시면, 선택하신 서비스가 사용가능한 경우 신청됩니다.</li>
+											<li>해지시 바로 재가입이 불가능한 부가서비스가 있으므로 주의바랍니다. (부가서비스 신청/변경 화면 하단의 "알아두세요" 참조)</li>
+											<li>부가서비스 월중 신청/해지 시 해당 월 월정액 및 무료제공 혜택은 각각 일할 적용 됩니다. 단, dosirak파티 상품은 30일 단위로 선결제되는 상품으로 일할 적용되지 않습니다.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 해지 팝업 -->
+
+						<!-- s: 부가서비스 신청 해지 -->
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02 pt29 mb13">부가서비스 신청/해지</h4>
+						</div>
+
+						<div class="comm_tableBrdr">
+							<table class="comm_table" summary="패키지 상품명, 일반금액(부가세포함), 할인금액, 정구금액을 확인할 수 있는 표 입니다.">
+								<caption>부가서비스 신청 해지 조회표</caption>
+								<colgroup>
+									<col width="210" />
+									<col width="130" />
+									<col width="*" />
+									<col width="110" />
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">상품명</th>
+										<th scope="col">일반금액<br />(부가세 포함)</th>
+										<th scope="col">할인금액</th>
+										<th scope="col" class="last">청구금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>상품명</td>
+										<td class="center num">99,900<span>원<br />(99,999원)</span></td>
+										<td class="center num">99,000원</td>
+										<td class="center last num">99,000원</td>
+									</tr>
+									<tr>
+										<td colspan="4" class="noContents last">가입하신 패키지 상품 내역이 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- e: 부가서비스 신청 해지 -->
+
+						<!-- s : 부가서비스 신청 팝업 -->
+						<div class="pop_layerWrap" id="applyAddSvcLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>부가서비스 신청</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h2 class="pop_subTitle pt0 alignCenter">모바일 010-1234-567*</h2>
+
+											<div class="comm_tableBrdr">
+												<table class="comm_table" summary="신청할 부가서비스와 이용요금(부가세포함)을 확인 할 수 있습니다.">
+													<caption>부가서비스 신청</caption>
+													<colgroup>
+														<col width="50%" />
+														<col width="50%" />
+													</colgroup>
+													<thead>
+													<tr>
+														<th scope="col">선택 부가서비스</th>
+														<th scope="col">이용요금(부가세포함)</th>
+													</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="center">
+																<span class="fBold">상품명</span>
+															</td>
+															<td class="last center num">
+															 	월 99,000<span>원(99,999원)</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">변경하신 요금제는 즉시 적용되어 과금처리 되어집니다.</p>
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+										<a href="" class="btnSty big blk" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+									</div>
+
+									<div class="comm_noticeBox">
+										<h2 class="title">꼭 확인하세요!</h2>
+										<ul class="notice-list">
+											<li>확인 버튼을 클릭하시면, 선택하신 서비스가 사용가능한 경우 신청됩니다.</li>
+											<li>해지시 바로 재가입이 불가능한 부가서비스가 있으므로 주의바랍니다. (부가서비스 신청/변경 화면 하단의 "알아두세요" 참조)</li>
+											<li>부가서비스 월중 신청/해지 시 해당 월 월정액 및 무료제공 혜택은 각각 일할 적용 됩니다. 단, dosirak파티 상품은 30일 단위로 선결제되는 상품으로 일할 적용되지 않습니다.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 신청 팝업 -->
+
+					</div>
+					<div class="comm_contsInner grayBox bottom"></div>
+				</div>
+				<!-- e : gray box -->
+
+				<!-- e : 컨텐츠 영역  -->
+			</div>
+			<!-- e : content Body -->
+		</div>
+		<hr />
+		<!-- e : content Body wrap -->
+	</div>
+	<!-- e : cont container -->
+
+
+	<!-- s : footer -->
+	<div id="cfmOllehFooter">
+		<script type="text/javascript">$.ktBizFooterView();</script>
+	</div>
+	<!-- e : footer -->
+</div>
+</body>
+</html>
+

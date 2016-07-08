@@ -48,6 +48,13 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 .svcInfo_setPlaceAdd dt {width:72px;}
 .svcInfo_setPlaceAdd dd {width:460px;}
 
+/* 요금제 신청 & 부가서비스 공통 */
+.svcInfo_planTable table {border-left: 0; border-right: 0;}
+.svcInfo_planTable table .comm_radio {vertical-align: middle;}
+.svcInfo_planTable table td span {font-size: 15px; color: #666;}
+.svcInfo_planTable table td.plan_radio {padding-left: 25px; color: #000;}
+.svcInfo_planTable table td.plan_radio a {color: #000;}
+
 /* 요금제 신청 */
 .svcInfo_plan {border: solid #ccc; border-width:1px 0; background:#fff;}
 .svcInfo_plan .cur {padding:16px 0 15px 29px; font-size:17px; color:#666; border-bottom: 1px solid #ddd;}
@@ -62,9 +69,19 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 .svcInfo_plan .curDetailInfo.price dd {font-size:15px; color:#666;}
 .svcInfo_plan .curDetailInfo.price dd span {font-size:24px;}
 .svcInfo_plan .curDetailInfo.sDate dd {margin-top: 5px; font-size:20px; color:#333;}
-.svcInfo_planTabPanel table {border-left: 0; border-right: 0;}
-.svcInfo_planTabPanel table .comm_radio {vertical-align: middle;}
-.svcInfo_planTabPanel table td span {font-size: 15px; color: #666;}
-.svcInfo_planTabPanel table td.plan_radio {padding-left: 25px; color: #000;}
 #tvChannelLayer .pop_footer {max-width:100%;}
 #slChannelLayer .pop_footer {max-width:100%;}
+
+/* 부가서비스 신청 */
+.svcInfo_addSvcList {border: 1px solid #ccc; background: #fff;}
+.svcInfo_addSvcList li {padding: 20px 0; overflow:hidden;}
+.svcInfo_addSvcList li + li {border-top: 1px solid #ccc;}
+.svcInfo_addSvcList .thumb {float: left; width: 140px; height:90px; line-height: 90px; text-align:center; border-right: 1px solid #eaeaea; font-size: 0;}
+.svcInfo_addSvcList .thumb:after {content: ''; display: inline-block; height:90px; vertical-align: middle;}
+.svcInfo_addSvcList .info {float: left; box-sizing:border-box; padding: 0 50px 0 28px; width: 387px; color:#333;}
+.svcInfo_addSvcList .info .title {font-size: 18px; font-weight: 700; line-height: 1;}
+.svcInfo_addSvcList .info .desc {margin-top: 8px; font-size: 15px; line-height: 1.4;}
+.svcInfo_addSvcList .links {float:left; padding-top: 30px;}
+.pop_layerWrap .pop_footer {max-width:100%;}
+
+
