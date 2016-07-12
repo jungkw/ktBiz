@@ -5,3 +5,31 @@
 .realtimePay_graybox p {color: #000;font-size: 15px;}
 .realtimePay_graybox .rightBtn {position: absolute;top:16px;right: 30px}
 .realtime_scrollConts {max-height: 990px;overflow-x:hidden;overflow-y:auto;}
+
+/* 명세서 조회 */
+.billTopWhiteBox {background: #fff;border:1px solid #ddd;margin-top: 20px;position: relative;}
+.billTopWhiteBox .billTopWhiteFnc {height: 50px;border-bottom:1px solid #ddd;position: relative;}
+.billTopWhiteBox .billTopWhiteFnc .billLeftBox, .billTopWhiteBox .billTopWhiteFnc .billRightBox {width:50%;float:left;}
+.billTopWhiteBox .billTopWhiteFnc .billLeftBox label {color:#333;font-size: 13px;margin:0 6px 0 29px;line-height: 50px;}
+.billTopWhiteBox .billTopWhiteFnc .billLeftBox .selectWrap {margin-top:-4px;}
+.billTopWhiteBox .billTopWhiteFnc .billRightBox dd {line-height: 50px;color: #666; font-size: 15px; text-align: right;margin-right:110px}
+.billTopWhiteBox .billTopWhiteFnc .billRightBox a {position: absolute;top:15px;right:30px;}
+.billTopWhiteBox .billTopCenterPayBox {height: 150px; text-align: center;}
+.billTopWhiteBox .billTopCenterPayBox p {font-size: 27px;color:#333;line-height: 150px;}
+.billTopWhiteBox .billTopCenterPayBox p span {color:#df2428;font-family: 'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial}
+.billTopWhiteBox .billTopCenterPayBox p .billPayTxt {font-size: 44px}
+.billTopWhiteBox .billTopFootQuickBox {height:90px;background:#f8f8f8; }
+.billTopWhiteBox .billTopFootQuickBox .quickContBox {width:233px;height:51px;float: left;border-left:1px solid #e5e5e5;margin:15px 0;position: relative;}
+.billTopWhiteBox .billTopFootQuickBox .quickContBox.first {width:232px;border-left: 0;}
+.billTopWhiteBox .billTopFootQuickBox .quickContBox dt {color:#333;font-size:17px;padding-top:3px;}
+.billTopWhiteBox .billTopFootQuickBox .quickContBox dt , .billTopWhiteBox .billTopFootQuickBox .quickContBox dd {padding-left:22px;}
+.billTopWhiteBox .billTopFootQuickBox .quickContBox.first dt, .billTopWhiteBox .billTopFootQuickBox .quickContBox.first dd {padding-left:31px;}
+.billTopWhiteBox .billTopFootQuickBox .quickContBox dd {color:#666;font-size: 13px;padding-top:8px;}
+.billTopWhiteBox .billTopFootQuickBox .quickContBox a {position: absolute;top:8px;right:30px;}
+.billTopWhiteBox table td {padding:14px 20px 10px 0 !important;}
+.billTopWhiteBox table tfoot td, .billTopWhiteBox table tfoot th {background: #fbfbfb !important}
+.billTopWhiteBox table tfoot tr.total td, .billTopWhiteBox table tfoot tr.total th {padding:22px 20px 17px 22px !important;background: #fff !important;font-size: 17px;}
+.billTopWhiteBox table tfoot tr.total td span {font-size: 24px}
+.billTopWhiteBox .billReSend, .billTopWhiteBox .listPrint {position: absolute;top:39px;}
+.billTopWhiteBox .billReSend {right: 138px;}
+.billTopWhiteBox .listPrint {right: 30px}

@@ -15,8 +15,18 @@ $(document).ready(function(){
     $.ktBizCommSearch = function(){
         $("input[name='circuitSearchRadio']").on( "click", function(){
             var $target = $(this).val();
-            $('.circuitInputCont, .circuitSelectCont').hide();
+            var $txt01 = $(this).attr('desc01');
+            var $txt02 = $(this).attr('desc02');
+            var $txt03 = $(this).attr('desc03');
+            var $data = $(this).attr('data');
+            var $legend = $('.pop_billSrchWhiteBox > fieldset > legend');
+            $('.searchCommBillType01, .searchCommBillType02').hide();
             $('.'+$target).show();
+            $('.pop_header').children('h4').text($txt01);
+            $legend.text($txt02);
+            $legend.next('label').text($txt03);
+            $('.pop_billNumListBox > li > a').text($data);
+
         });
     }
     $.ktBizCommSearch();
@@ -1469,6 +1479,23 @@ $(function(){
 
     $.ktBizSvc();
 
+
+
+
+    /*
+    *  명세서 재발송 radio
+    */
+    $.ktBizBillReSendRadio = function () {
+        var $target = $("input:radio[name='billReSendType']");
+        var $elemId;
+        $target.click(function(){
+            $elemId = $(this).attr('id');
+            $('.billReSendType').hide();
+            $('.'+$elemId).show();
+        });
+        return false;
+    };
+    $.ktBizBillReSendRadio();
 
 
 
