@@ -9,6 +9,7 @@
 .commTitleWrap .comm_scnTitle01 {font-size:23px;line-height: 26px;color: #333;font-weight: bold;}
 .commTitleWrap .comm_scnTitle02 {margin-bottom:17px;font-size:21px;line-height: 30px;color:#333;}
 .commTitleWrap .comm_scnTitle03 {margin-bottom:15px;font-size:19px;line-height: 23px;color:#333;}
+.commTitleWrap .comm_scnTitle04 {margin-bottom:12px;font-size:15px;color:#333;}
 .commTitleWrap .rightBtn {position: absolute;top:0;right:0;}
 
 .chrome .index_selectbox.on, .Safari .index_selectbox.on {width:386px;height: 28px;border:2px solid #a6c8ff; border-radius: 3px; box-sizing: unset;}
@@ -163,7 +164,7 @@ border-radius: 3px 3px 3px 3px;
 
 /* btn icon */
 .btnSty.icon_print span {padding:0 0 0 25px;background:url('../images/icon/comm_icon_print.png') no-repeat left center;}
-.btnSty.icon_xls span {padding:0 0 0 25px;background:url('../images/icon/comm_icon_excelDown.png') no-repeat left center;}
+.btnSty.icon_xls span {padding:0 0 0 21px;background:url('../images/icon/comm_icon_excelDown.png') no-repeat left center;}
 .btnSty.icon_speaker span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_speaker.png') no-repeat left center;}
 .btnSty.icon_refresh span {padding:0 0 0 23px;background:url('../images/icon/comm_icon_refresh.png') no-repeat left center;}
 
