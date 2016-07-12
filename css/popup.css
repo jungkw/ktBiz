@@ -9,6 +9,8 @@
 .pop_wrap .pop_conts .pop_contsContainer.indexPop {padding: 23px 29px}
 .pop_wrap .pop_conts .pop_contsBtns {padding:20px 0; text-align:center;}
 .pop_wrap .pop_conts .pop_subTitle {position:relative; margin-bottom:18px; padding-top:28px; font-size: 19px; line-height:23px; font-weight: normal; z-index:1;}
+.pop_wrap .pop_conts .pop_subTitle1 {position:relative; margin-bottom:30px; margin-top:-4px; font-size: 21px; line-height:1; color:#333; font-weight: normal; z-index:1;}
+.pop_wrap .pop_conts .pop_subTitle1 .txtNum {display:inline-block; vertical-align:-2px; font-size:24px; color:inherit;}
 
 .pop_footer {width: 100%; min-width: 340px; max-width: 750px; height: 31px; position: absolute; bottom: -31px; left: 0; background: #555; }
 .pop_footer .pop_footerInner {width: 100%; padding: 0;overflow: hidden; margin-top: 0; position: static; bottom: 0; line-height: 30px;}
@@ -33,7 +35,7 @@
 
 
 /* 꼭 확인하세요 */
-.pop_wrap .comm_noticeBox {margin:20px 30px;}
+.pop_wrap .comm_noticeBox {margin:20px 29px;}
 
 /* 이메일 명세서 도움말 */
 .comm_tabs.pop_emailHelpTab li a {font-size:13px;}
