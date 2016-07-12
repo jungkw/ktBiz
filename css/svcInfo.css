@@ -57,7 +57,7 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 
 /* 요금제 신청 */
 .svcInfo_plan {border: solid #ccc; border-width:1px 0; background:#fff;}
-.svcInfo_plan .cur {padding:16px 0 15px 29px; font-size:17px; color:#666; border-bottom: 1px solid #ddd;}
+.svcInfo_plan .cur {padding:16px 0 15px 29px; font-size:17px; color:#333; border-bottom: 1px solid #ddd;}
 .svcInfo_plan .cur span {margin-left: 5px; color:#000;}
 .svcInfo_plan .curDetail {padding: 29px 29px 28px; overflow:hidden;}
 .svcInfo_plan .curDetailPlan {float: left; width:300px;}
