@@ -24,8 +24,8 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 .svcInfo_chgNumStep .step1 > div {background:url(../images/icon/svcInfo_chg_num01.png) no-repeat 50% 0;}
 .svcInfo_chgNumStep .step2 > div {background:url(../images/icon/svcInfo_chg_num02.png) no-repeat 50% 0;}
 .svcInfo_chgNumStep .step3 > div {background:url(../images/icon/svcInfo_chg_num03.png) no-repeat 50% 0;}
-.svcInfo_tdMsg {position:relative; margin-left:-18px; padding:5px 18px; background:#f8f8f8;}
-.svcInfo_tdMsg:after {content:''; position:absolute; top:0; right:-18px; bottom:0; width:18px; background:#f8f8f8;}
+.svcInfo_tdMsg {position:relative; margin-left:-15px; padding:5px 18px; background:#f8f8f8;}
+.svcInfo_tdMsg:after {content:''; position:absolute; top:0; right:-15px; bottom:0; width:15px; background:#f8f8f8;}
 .svcInfo-numList {position:relative;}
 .svcInfo-numListBox {overflow:hidden; border-bottom:1px dotted #eee;}
 .svcInfo-numListBox li {float:left; margin-bottom:6px; width:105px;}

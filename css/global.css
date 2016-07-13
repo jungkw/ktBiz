@@ -648,7 +648,7 @@ border-radius: 3px 3px 3px 3px;
 
 /* captcha */
 .captcha:after {content: ''; display: block; clear: both;}
-.captcha .img {float:left; margin:0 10px 0 0;}
+.captcha .img {float:left; margin:0 10px 0 0; width: 212px; height: 60px; line-height:60px; text-align: center;}
 .captcha .fn {float:left;}
 .captcha .fn .input {margin-top:4px;}
 
