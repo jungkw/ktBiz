@@ -39,6 +39,7 @@
 .comm_table td.name {padding-left:10px;font-weight:700;color:#333;text-align:left;}
 .comm_table td.noContents {padding: 60px 0 16px;color: #666;font-size: 13px;text-align: center;line-height:23px;background:url(../images/icon/comm_icon_searchNone.gif) no-repeat 50% 20px;}
 .comm_table td.noContents02 {padding: 20px;color: #666;font-size: 13px;text-align: left;line-height:23px;background:url(../images/icon/comm_icon_searchNone.gif) no-repeat 25px center;}
+.comm_table td.noContents03 {padding:0; color: #666;font-size: 13px;text-align: left;line-height:23px;}
 .comm_table td.noBorder {border-right:0;}
 .comm_table td .num, .comm_table td.num {font-size:18px;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
 .comm_table td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
