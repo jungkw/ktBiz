@@ -17,10 +17,10 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 /* 번호변경 */
 .svcInfo_chgNumStep {margin:20px 0 40px; text-align:center; font-size:0;}
 .svcInfo_chgNumStep li {display:inline-block;}
-.svcInfo_chgNumStep li > div {padding-top:80px; text-align:center; width:128px; font-size:21px; color:#333; text-transform:uppercase; line-height:1;}
+.svcInfo_chgNumStep li > div {padding-top:80px; text-align:center; width:135px; font-size:21px; color:#333; text-transform:uppercase; line-height:1;}
 .svcInfo_chgNumStep li span {display:block; margin-top:4px; font-size:13px; color:#666;line-height: 18px;}
 .svcInfo_chgNumStep li span strong {display: block;text-align:center;}
-.svcInfo_chgNumStep .step1, .svcInfo_chgNumStep .step2 {margin-right:45px; padding-right:79px; background:url(../images/icon/svcInfo_chg_num_step.png) no-repeat 100% 34px;}
+.svcInfo_chgNumStep .step1, .svcInfo_chgNumStep .step2 {margin-right:45px; padding-right:70px; background:url(../images/icon/svcInfo_chg_num_step.png) no-repeat 100% 34px;}
 .svcInfo_chgNumStep .step1 > div {background:url(../images/icon/svcInfo_chg_num01.png) no-repeat 50% 0;}
 .svcInfo_chgNumStep .step2 > div {background:url(../images/icon/svcInfo_chg_num02.png) no-repeat 50% 0;}
 .svcInfo_chgNumStep .step3 > div {background:url(../images/icon/svcInfo_chg_num03.png) no-repeat 50% 0;}
