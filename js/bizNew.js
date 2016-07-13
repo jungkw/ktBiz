@@ -1380,28 +1380,11 @@ $(function(){
 
 
 
-  /*
-  * 신청/변경 함수 코어
-  */
-  $.ktBizSvc = function() {
-      $.ktBizMobilePause();
-      $.ktBizsetPlaceChg();
-  }
-
-
-  /*
-  * 일시정지
-  */
-  $.ktBizMobilePause = function(){
-      $.ktBizMobilePause.labelPlaceholder();
-      $.ktBizMobilePause.pwdChk();
-  };
-
 
    /**
     *  일시정지 비밀번호 입력/확인
     */
-    $.ktBizMobilePause.labelPlaceholder = function(){
+    $.ktBizMobilePauseLabelPlaceholder = function(){
       var $obj = $('.pwdInput');
       var target = $obj.attr('for');
       var $target = $('#'+target);
@@ -1427,12 +1410,13 @@ $(function(){
       });
       return false;
     };
+    $.ktBizMobilePauseLabelPlaceholder();
 
 
     /*
     * 일시정지 비밀번호 설정 체크박스
     */
-    $.ktBizMobilePause.pwdChk = function(){
+    $.ktBizMobilePausePwdChk = function(){
         $('#setPwd').click(function(){
             if($("#setPwd").is(":checked")){
               $('.pwdInput').attr('disabled',false);
@@ -1441,21 +1425,15 @@ $(function(){
             }
         });
     }
+    $.ktBizMobilePausePwdChk();
 
 
-    /*
-    * 설치장소 변경 코어
-    */
-    $.ktBizsetPlaceChg = function (){
-        $.ktBizsetPlaceChg.chkBox();
-        $.ktBizsetPlaceChg.switch();
-    };
 
 
     /*
     * 설치장소변경 체크박스 1개만 선택 가능
     */
-    $.ktBizsetPlaceChg.chkBox = function (){
+    $.ktBizsetPlaceChgChkBox = function (){
         var $target = $("input:checkbox[name='radioCheckBox']");
         $target.click(function(){
             $target.prop("checked",false);
@@ -1464,11 +1442,12 @@ $(function(){
         });
         return false;
     };
+    $.ktBizsetPlaceChgChkBox();
 
     /*
     *  설치장소변경 서비스 확인 toggle switch
     */
-    $.ktBizsetPlaceChg.switch = function () {
+    $.ktBizsetPlaceChgSwitch = function () {
         var $target = $("input:radio[name='internetSvcChk']");
         $target.click(function(){
             if($(this).attr('id')=='internetLogin'){
@@ -1482,9 +1461,8 @@ $(function(){
         });
         return false;
     };
+    $.ktBizsetPlaceChgSwitch();
 
-
-    $.ktBizSvc();
 
 
 
