@@ -66,6 +66,7 @@
 .comm_table tfoot th.total {padding-left:70px;}
 .comm_table tfoot th.total-first {padding-left:0;text-align:center;}
 .comm_table tbody th {border-bottom:1px solid #ddd; height:36px;}
+.comm_table tbody td.h36 {height:36px;}
 /* .comm_table tbody th + td {padding:16px 18px;} */
 .comm_table a {font-size:15px;}
 .comm_table .textLink a {text-decoration:underline;}
@@ -89,7 +90,7 @@ ul.bulletList li:first-child {margin:0;}
 .bulletDg {margin:0; padding: 0 0 0 15px !important; background: url('../images/icon/comm_icon_danggu.png') no-repeat 0 5px !important;}
 .bulletMinus {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_minus_smallBullet.gif') no-repeat 0 9px;}
 .pointTxt {display:inline-block; min-height:13px; padding:0 0 0 17px; font-size:11px; color:#666; line-height:1; background:url('../images/icon/comm_icon_point.png') no-repeat left 1px;}
-
+.bulletArrow {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_arrowtwo.png') no-repeat 0 5px; line-height:1.3; color:#333; font-size:13px;}
 
 
 /* paging */
@@ -280,6 +281,7 @@ border-radius: 3px 3px 3px 3px;
 .emp02 {color:#333 !important;}
 .emp03 {color: #196bbb !important}
 .color000 {color:#000 !important;}
+.color333 {color:#333 !important;}
 .ma0 {margin:0 !important;}
 .m14 {margin:14px;}
 .ml1 {margin-left:1px;}

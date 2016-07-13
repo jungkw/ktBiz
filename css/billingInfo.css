@@ -31,7 +31,7 @@
 .billTopWhiteBox table thead th {padding:20px 0 23px 0;}
 .billTopWhiteBox table td {padding:14px 20px 10px 0 !important;}
 .billTopWhiteBox table tfoot td, .billTopWhiteBox table tfoot th {background: #fbfbfb !important}
-.billTopWhiteBox table tfoot tr.total td, .billTopWhiteBox table tfoot tr.total th {padding:22px 20px 17px 22px !important;background: #fff !important;font-size: 17px;}
+.billTopWhiteBox table tfoot tr.total td, .billTopWhiteBox table tfoot tr.total th {padding:20px 20px 19px 22px !important;background: #fff !important;font-size: 17px;}
 .billTopWhiteBox table tfoot tr.total td span {font-size: 24px}
 .billTopWhiteBox .billReSend, .billTopWhiteBox .listPrint {position: absolute;top:39px;}
 .billTopWhiteBox .billReSend {right: 141px;}
