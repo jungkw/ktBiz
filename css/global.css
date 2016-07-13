@@ -29,7 +29,7 @@
 .comm_table td.last {border-right:0;}
 .comm_table td.left {text-align:left;}
 .comm_table td.right {text-align:right;}
-.comm_table td.center {text-align:center;}
+.comm_table td.center {text-align:center; padding-left:0; padding-right:0;}
 .comm_table td.desc {font-size:13px;line-height:21px;}
 .comm_table td.lineL {border-left:1px solid #eaeaea;}
 .comm_table td.title {padding-left:30px;color:#333;text-align:left;}

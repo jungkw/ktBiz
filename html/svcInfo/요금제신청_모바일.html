@@ -9,7 +9,7 @@
 	<meta http-equiv="Cache-Control" content="No-Cache" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="Author-Date(Date)" content="2016-06-01" />
-	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다. 법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
 	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
 	<meta name="format-detection" content="telephone=no" />
 
@@ -130,9 +130,9 @@
 		}
 
 			// 커플번호 조회 Popup(2007.11.16 KMK)
-			function getCoupleNumber() {
+			function getCoupleNuMBer() {
 					document.formCoupleNum.action="FarPricePlanInfoCoupleNum.action";
-					window.open('','formCoupleNum','width=380,height=290,left=400,top=200,scrollbars=no');    //380*300
+					window.open('','formCoupleNum','width=380,height=290,left=400,top=200,scrollbars=no');  //380*300
 					document.all.formCoupleNum.target="formCoupleNum";
 					SSLsubmit(document.formCoupleNum);
 					return false;
@@ -154,7 +154,7 @@
 			function getOilDiscount() {
 					var yearmonth = formOilDiscount.yearmonth.value;
 					var URL = "/FarPricePlanInfoOilDiscount.action?yearmonth="+yearmonth;
-					window.open(SSL(URL),'formOilDiscount','width=720,height=590,left=400,top=200,scrollbars=yes');    //720*590
+					window.open(SSL(URL),'formOilDiscount','width=720,height=590,left=400,top=200,scrollbars=yes');  //720*590
 			}
 
 			// SHOW 알캡 150 PLUS
@@ -298,9 +298,9 @@
 					}
 			}
 
-			function EmartPromotion_0701(){        // 배너
+			function EmartPromotion_0701(){    // 배너
 						if (GetCookie("EmartPromotion_0701") != "done") {
-							MM_openBrWindow('http://www.ktfmembers.com/event/080701_emartcoupon.html', 'EmartPromotion_0701', 'width=667, height=535, top=50, left=300, resize=no, scrollbars=no');
+							MM_openBrWindow('http://www.ktfmeMBers.com/event/080701_emartcoupon.html', 'EmartPromotion_0701', 'width=667, height=535, top=50, left=300, resize=no, scrollbars=no');
 					}
 			}
 
@@ -308,11 +308,11 @@
 				var altMsg = "고객님은 현재 쇼킹스폰서 골드형을 이용하고 있습니다.\n";
 				altMsg += "요금제를 변경하시면, 단말기할인 및 요금할인 혜택이 중단 또는 변경될 수 있습니다.\n\n";
 				altMsg += "다시 한번 확인해 주시기 바랍니다.\n\n";
-				altMsg += "※  혜택 중단 및 변경 경우는 다음과 같습니다.\n";
+				altMsg += "※ 혜택 중단 및 변경 경우는 다음과 같습니다.\n";
 				altMsg += "1. 무료 요금이 아닌 다른 요금제로 변경 시\n";
-				altMsg += "  : 단말기할인/요금할인 혜택 모두 중단\n";
+				altMsg += " : 단말기할인/요금할인 혜택 모두 중단\n";
 				altMsg += "2. 무료 요금 내에서 변경 시(무료 850->무료 250)\n";
-				altMsg += "  : 단말기할인/요금할인 혜택 변경\n";
+				altMsg += " : 단말기할인/요금할인 혜택 변경\n";
 				return altMsg;
 		}
 
@@ -334,8 +334,8 @@
 				// 고도화 2차 END
 				//
 				// 요금상품선택 여부 체크
-				var newPpSoc      = "";
-				var newPpSocDesc  = "";
+				var newPpSoc   = "";
+				var newPpSocDesc = "";
 				var isAddInfoSoc = "";
 				var newEfctStrtDt = "";
 				var newEfctEndDt = "";
@@ -343,11 +343,11 @@
 						if(selSoc == form.soc[i].value) {
 							form.soc[i].checked = true;
 
-								newPpSoc      = form.soc[i].value;
-								newPpSocDesc  = form.socDesc[i].value;
-								isAddInfoSoc =  form.addInfoSoc[i].value;
-								newEfctStrtDt =  form.newEfctStrtDt[i].value;
-								newEfctEndDt =  form.newEfctEndDt[i].value;
+								newPpSoc   = form.soc[i].value;
+								newPpSocDesc = form.socDesc[i].value;
+								isAddInfoSoc = form.addInfoSoc[i].value;
+								newEfctStrtDt = form.newEfctStrtDt[i].value;
+								newEfctEndDt = form.newEfctEndDt[i].value;
 								break;
 						}
 				}
@@ -388,7 +388,7 @@
 				}
 
 				// 현재 고객의 요금상품이 정책적으로 만료된 상품인지 체크
-				var curPpSocExpInd   = form.curPpSocExpInd.value;
+				var curPpSocExpInd  = form.curPpSocExpInd.value;
 				if(curPpSocExpInd == "Y") {
 						strAlert = "현재 고객님께서 사용하시는 요금상품은 이용약관 개정으로 요금\n적용내용이 개편되었습니다.";
 						strAlert += "\n\n본 상품을 다시 신청하실 경우에는 개편된 요금적용을 받으시게\n됩니다."
@@ -396,14 +396,14 @@
 				}
 
 				// VIP 요금에서 타 요금으로 변경시 발신번호표시 신청 유도 메시지 처리
-				var curPpSoc     = form.curPpSoc.value;
+				var curPpSoc   = form.curPpSoc.value;
 				if(curPpSoc == "VIP400" || curPpSoc == "VIP800") {
 						if(newPpSoc == "VIP400" || newPpSoc == "VIP800") {
 						} else {
 								strAlert = "고객님께서는 현재 VIP요금을 사용 중이며, 발신번호표시 서비스를\n무료로 이용하고 계십니다.";
 								strAlert += "\n\n현재의 요금상품을 변경하시면 더 이상 발신번호표시 서비스가 무료로\n";
-								strAlert  += "제공되지 않습니다.\n\n발신번호표시 서비스를 계속해서 이용하시려면, 부가서비스신청\n";
-								strAlert  += "화면에서 유료 발신번호표시 서비스를 신청해 주시기 바랍니다."
+								strAlert += "제공되지 않습니다.\n\n발신번호표시 서비스를 계속해서 이용하시려면, 부가서비스신청\n";
+								strAlert += "화면에서 유료 발신번호표시 서비스를 신청해 주시기 바랍니다."
 								alert(strAlert);
 						}
 				}
@@ -417,7 +417,7 @@
 				}
 
 				// 신규 요금상품 전달
-				formSave.newPpSoc.value     = newPpSoc;
+				formSave.newPpSoc.value   = newPpSoc;
 				formSave.newPpSocDesc.value = newPpSocDesc;
 				formSave.newEfctStrtDt.value = newEfctStrtDt;
 				formSave.newEfctEndDt.value = newEfctEndDt;
@@ -456,13 +456,13 @@
 				loadBgLayer();
 						subwin = window.open('', 'farPricePlanCh','resizable=yes,width=470,height=610');
 						frm.target = "farPricePlanCh";
-						if ('' != URL)   frm.action = URL;
+						if ('' != URL)  frm.action = URL;
 						SSLsubmit(frm);
 				} catch(error) {
 						loadBgLayer();
 						subwin = window.open('', 'farPricePlanCh','resizable=yes,width=470,height=610');
 						frm.target = "farPricePlanCh";
-						if ('' != URL)   frm.action = URL;
+						if ('' != URL)  frm.action = URL;
 						SSLsubmit(frm);
 				}
 		}
@@ -489,11 +489,11 @@
 			}
 		}
 
-		// 부가입력 창이 있는 요금상품 체크     - 2007.11.30 KMK
+		// 부가입력 창이 있는 요금상품 체크   - 2007.11.30 KMK
 		function addInfo(ind, butInd) {
 				// 요금상품선택 여부 체크
-				var newPpSoc         = form.soc[ind].value;      // 부가서비스 코드
-				var newPpSocDesc     = form.socDesc[ind].value;   // 부가서비스명
+				var newPpSoc     = form.soc[ind].value;   // 부가서비스 코드
+				var newPpSocDesc   = form.socDesc[ind].value;  // 부가서비스명
 
 				form.soc[ind].checked = true;
 
@@ -509,22 +509,22 @@
 						formSave.newPpParam.value = "";
 
 						var f = document.formSave;
-					    var URL = "FarPricePlanAgree.action";
-					    f.enc.value = "true";
-					    f.newPpSocDesc.value = "newPpSocDesc";
-					    f.newPpParamNum.value = "0";
-					    f.curPpSoc.value = "LTEPIG275";
-					    f.curPpParam.value = "null";
-					    f.srvMode.value = "I";
-					    f.AGM4.value = "N";
-					    f.AGM5.value = "N";
-					    f.newPpSoc.value = "newPpSoc";
-					    f.ENCRYPT_S_svcCntrNo.value = "lu6MT8qFSRBkEfSv0kMXmw%3D%3D";
+					  var URL = "FarPricePlanAgree.action";
+					  f.enc.value = "true";
+					  f.newPpSocDesc.value = "newPpSocDesc";
+					  f.newPpParamNum.value = "0";
+					  f.curPpSoc.value = "LTEPIG275";
+					  f.curPpParam.value = "null";
+					  f.srvMode.value = "I";
+					  f.AGM4.value = "N";
+					  f.AGM5.value = "N";
+					  f.newPpSoc.value = "newPpSoc";
+					  f.ENCRYPT_S_svcCntrNo.value = "lu6MT8qFSRBkEfSv0kMXmw%3D%3D";
 
-					    f.action = SSL(URL);
-					    window.open('','Agree','scrollbars=no,resizable=yes,toolbar=no,menubar=no,location=no,top=100,left=250,width=700,height=405');
-					    f.target = 'Agree';
-					    SSLsubmit(f);
+					  f.action = SSL(URL);
+					  window.open('','Agree','scrollbars=no,resizable=yes,toolbar=no,menubar=no,location=no,top=100,left=250,width=700,height=405');
+					  f.target = 'Agree';
+					  SSLsubmit(f);
 				}
 		}
 
@@ -591,14 +591,14 @@
 								<legend>서비스 번호 선택</legend>
 								<p class="comm_scnTitle02 mb20">신청하실 서비스 번호를 선택해주세요.</p>
 								<div class="circuitSearchDiv">
-									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>01012345678</a>
+									<a href="#billLayerPop" id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>01012345678</a>
 									<a href="#" class="btnSty mid blk w26 fBold">조회</a>
 
 									<!-- s : 레이어 팝업 -->
 									<div class="pop_mask"></div>
 									<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
 
-										<div class="pop_wrap commBillPop">
+										<div class="pop_wrap comMBillPop">
 
 											<!-- s : header -->
 											<div class="pop_header">
@@ -718,12 +718,12 @@
 											<table class="comm_table" summary="LTE 요금제명, 월정액(부가세포함), 데이터, 음성 문자 설명을 확인하고 선택할 수 있는 표 입니다.">
 												<caption>LTE요금제 목록표</caption>
 												<colgroup>
-													<col width="210" />
-													<col width="130" />
+													<col width="220" />
 													<col width="110" />
-													<col width="130" />
+													<col width="120" />
+													<col width="125" />
 													<col width="*" />
-													<col width="110" />
+													<col width="100" />
 												</colgroup>
 
 												<thead>
@@ -740,16 +740,16 @@
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab010" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab010" />
 																<i></i>
 																<label for="socmy_fee_tab010" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">LTE 데이터 선택 299</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 999</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">99,900<span>원<br />(109,890원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(30GB+일2GB)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 200분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
 															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab010_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
@@ -757,16 +757,16 @@
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab011" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab011" />
 																<i></i>
 																<label for="socmy_fee_tab011" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">LTE 데이터 선택 299</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 699</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">69,900<span>원<br />(76,890원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(15GB+일2GB)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 200분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
 															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab011_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
@@ -774,16 +774,16 @@
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab012" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab012" />
 																<i></i>
 																<label for="socmy_fee_tab012" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">LTE 데이터 선택 299</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 599</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">59,900<span>원<br />(65,890원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(10GB+일2GB)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 200분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
 															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab012_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
@@ -791,16 +791,33 @@
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab013" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab035" />
+																<i></i>
+																<label for="socmy_fee_tab035" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 499</a>
+														</td>
+														<td class="center num">49,900<span>원<br />(54,890원)</span></td>
+														<td class="center">6GB<br /><span class="font13">(+밀당)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 30분)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab035_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab013" />
 																<i></i>
 																<label for="socmy_fee_tab013" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">LTE 데이터 선택 299</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 449</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">44,900<span>원<br />(49,390원)</span></td>
+														<td class="center">3GB<br /><span class="font13">(+밀당)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 30분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
 															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab013_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
@@ -808,18 +825,188 @@
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab014" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab014" />
 																<i></i>
 																<label for="socmy_fee_tab014" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">LTE 데이터 선택 299</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 399</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">39,900<span>원<br />(43,890원)</span></td>
+														<td class="center">2GB<br /><span class="font13">(+밀당)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 30분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
 															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab014_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab015" />
+																<i></i>
+																<label for="socmy_fee_tab015" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 349</a>
+														</td>
+														<td class="center num">34,900<span>원<br />(38,390원)</span></td>
+														<td class="center">1GB<br /><span class="font13">(+밀당)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 30분)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab015_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab016" />
+																<i></i>
+																<label for="socmy_fee_tab016" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터 선택 299</a>
+														</td>
+														<td class="center num">29,900<span>원<br />(32,890원)</span></td>
+														<td class="center">300MB<br /><span class="font13">(+밀당)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 30분)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab016_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab017" />
+																<i></i>
+																<label for="socmy_fee_tab017" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">순 광대역 안심무한 51</a>
+														</td>
+														<td class="center num">51,000<span>원<br />(56,100원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(15GB+속도제어)</span></td>
+														<td class="center">100분<br /><span class="font13">(kt 1회선 무제한)</span></td>
+														<td class="center">100건</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab017_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab018" />
+																<i></i>
+																<label for="socmy_fee_tab018" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">순 모두다올레 41</a>
+														</td>
+														<td class="center num">41,000<span>원<br />(45,100원)</span></td>
+														<td class="center">2.5GB<br /><span class="font13">(남은데이터이월)</span></td>
+														<td class="center">250분<br /><span class="font13">(k끼리 무제한)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab018_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab019" />
+																<i></i>
+																<label for="socmy_fee_tab019" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">순 모두다올레 34</a>
+														</td>
+														<td class="center num">34,000<span>원<br />(37,400원)</span></td>
+														<td class="center">1.5GB<br /><span class="font13">(남은데이터이월)</span></td>
+														<td class="center">185분<br /><span class="font13">(k끼리 무제한)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab019_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab020" />
+																<i></i>
+																<label for="socmy_fee_tab020" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">순 모두다올레 28</a>
+														</td>
+														<td class="center num">28,000<span>원<br />(30,800원)</span></td>
+														<td class="center">750MB<br /><span class="font13">(남은데이터이월)</span></td>
+														<td class="center">130분<br /><span class="font13">(k끼리 무제한)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab020_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab021" />
+																<i></i>
+																<label for="socmy_fee_tab021" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">데이터안심무한</a>
+														</td>
+														<td class="center num">99,000<span>원<br />(108,900원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(35GB+속도제어)</span></td>
+														<td class="center"></td>
+														<td class="center"></td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab021_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab022" />
+																<i></i>
+																<label for="socmy_fee_tab022" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">순 데이터 6.4GB</a>
+														</td>
+														<td class="center num">30,000<span>원<br />(33,000원)</span></td>
+														<td class="center">6.4GB<br /></td>
+														<td class="center"></td>
+														<td class="center"></td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab022_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab023" />
+																<i></i>
+																<label for="socmy_fee_tab023" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">순 데이터 3.2GB</a>
+														</td>
+														<td class="center num">22,500<span>원<br />(24,750원)</span></td>
+														<td class="center">3.2GB<br /></td>
+														<td class="center"></td>
+														<td class="center"></td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab023_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab024" />
+																<i></i>
+																<label for="socmy_fee_tab024" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">순 데이터 1.6GB</a>
+														</td>
+														<td class="center num">18,000<span>원<br />(19,800원)</span></td>
+														<td class="center">1.6GB<br /></td>
+														<td class="center"></td>
+														<td class="center"></td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab024_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
 													</tr>
 												</tbody>
@@ -833,12 +1020,12 @@
 											<table class="comm_table" summary="3G 요금제명, 월정액(부가세포함), 데이터, 음성 문자 설명을 확인하고 선택할 수 있는 표 입니다.">
 												<caption>3G요금제 목록표</caption>
 												<colgroup>
-													<col width="210" />
-													<col width="130" />
+													<col width="220" />
 													<col width="110" />
-													<col width="130" />
+													<col width="120" />
+													<col width="125" />
 													<col width="*" />
-													<col width="110" />
+													<col width="100" />
 												</colgroup>
 
 												<thead>
@@ -855,86 +1042,171 @@
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab020" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab025" />
 																<i></i>
-																<label for="socmy_fee_tab020" class="blind">요금제선택</label>
+																<label for="socmy_fee_tab025" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한51(3G)</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한 99(3G)</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">99,000<span>원<br />(108,900원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(25GB+일2GB)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 200분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab020_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab025_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
 													</tr>
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab021" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab026" />
 																<i></i>
-																<label for="socmy_fee_tab021" class="blind">요금제선택</label>
+																<label for="socmy_fee_tab026" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한51(3G)</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한 77(3G)</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">77,000<span>원<br />(84,700원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(17GB+일2GB)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 200분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab021_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab026_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
 													</tr>
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab022" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab027" />
 																<i></i>
-																<label for="socmy_fee_tab022" class="blind">요금제선택</label>
+																<label for="socmy_fee_tab027" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한51(3G)</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한 61(3G)</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">61,000<span>원<br />(67,100원)</span></td>
+														<td class="center">무제한<br /><span class="font13">(10GB+일2GB)</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 200분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab022_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab027_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
 													</tr>
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab023" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab028" />
 																<i></i>
-																<label for="socmy_fee_tab023" class="blind">요금제선택</label>
+																<label for="socmy_fee_tab028" class="blind">요금제선택</label>
 															</span>
 															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한51(3G)</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">51,000<span>원<br />(56,100원)</span></td>
+														<td class="center">5GB<br /><span class="font13">남은데이터이월</span></td>
+														<td class="center">무제한<br /><span class="font13">(+영상/부가 200분)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab023_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab028_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
 													</tr>
 													<tr>
 														<td class="plan_radio">
 															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab024" value="KJPLTE029" />
+																<input type="radio" name="soc" id="socmy_fee_tab029" />
 																<i></i>
-																<label for="socmy_fee_tab024" class="blind">요금제선택</label>
+																<label for="socmy_fee_tab029" class="blind">요금제선택</label>
 															</span>
-															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 완전무한51(3G)</a>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 모두다올레 41(3G)</a>
 														</td>
-														<td class="center num">99,900<span>원<br />(99,999원)</span></td>
-														<td class="center">무한<br /><span class="font13">(10GB+무한)</span></td>
-														<td class="center">무한<br /><span class="font13">(200분 추가제공)</span></td>
-														<td class="center">무한</td>
+														<td class="center num">41,000<span>원<br />(45,100원)</span></td>
+														<td class="center">2.5GB<br /><span class="font13">(남은데이터이월)</span></td>
+														<td class="center">250분<br /><span class="font13">(kt끼리 무제한)</span></td>
+														<td class="center">기본제공</td>
 														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab024_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab029_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab030" />
+																<i></i>
+																<label for="socmy_fee_tab030" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 모두다올레34(3G)</a>
+														</td>
+														<td class="center num">34,000<span>원<br />(37,400원)</span></td>
+														<td class="center">1.5GB<br /><span class="font13">(남은데이터이월)</span></td>
+														<td class="center">185분<br /><span class="font13">(kt끼리 무제한)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab030_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab031" />
+																<i></i>
+																<label for="socmy_fee_tab031" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 모두다올레 28(3G)</a>
+														</td>
+														<td class="center num">28,000<span>원<br />(30,800원)</span></td>
+														<td class="center">750MB<br /><span class="font13">(남은데이터이월)</span></td>
+														<td class="center">130분<br /><span class="font13">(kt끼리 무제한)</span></td>
+														<td class="center">기본제공</td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab031_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab032" />
+																<i></i>
+																<label for="socmy_fee_tab032" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 데이터 1GB(3G)</a>
+														</td>
+														<td class="center num">12,500<span>원<br />(13,750원)</span></td>
+														<td class="center">1GB</td>
+														<td class="center">olleh WiFi 제공</td>
+														<td class="center"></td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab032_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab033" />
+																<i></i>
+																<label for="socmy_fee_tab033" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 데이터 2GB(3G)</a>
+														</td>
+														<td class="center num">16,000<span>원<br />(17,600원)</span></td>
+														<td class="center">2GB<br /></td>
+														<td class="center"></td>
+														<td class="center"></td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab033_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="plan_radio">
+															<span class="comm_radio">
+																<input type="radio" name="soc" id="socmy_fee_tab034" />
+																<i></i>
+																<label for="socmy_fee_tab034" class="blind">요금제선택</label>
+															</span>
+															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/productDetail.do?ItemCode=1013');" title="새창 열림">순 데이터 4GB(3G)</a>
+														</td>
+														<td class="center num">24,500<span>원<br />(26,950원)</span></td>
+														<td class="center">4GB<br /></td>
+														<td class="center"></td>
+														<td class="center"></td>
+														<td class="center last">
+															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab034_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
 														</td>
 													</tr>
 												</tbody>
@@ -966,32 +1238,32 @@
 								<input type="hidden" name="curPpParam" id="curPpParam" value="" />
 								<input type="hidden" name="newPpParam" id="newPpParam" value="" />
 
-								<input type="hidden" name="massgeCnt"   id="massgeCnt"  value="" />
-								<input type="hidden" name="massgeCd"    id="massgeCd"   value="" />
-								<input type="hidden" name="massgeGubn"  id="massgeGubn" value="" />
+								<input type="hidden" name="massgeCnt"  id="massgeCnt" value="" />
+								<input type="hidden" name="massgeCd"  id="massgeCd"  value="" />
+								<input type="hidden" name="massgeGubn" id="massgeGubn" value="" />
 								<input type="hidden" name="massgeGroup" id="massgeGroup" value="" />
-								<input type="hidden" name="msiteGubun"  id="msiteGubun" value="" />
-								<input type="hidden" name="agreeChk"    id="agreeChk"   value="" />
-								<input type="hidden" name="checkAgree"  id="checkAgree" value="" />
-								<input type="hidden" name="agm4"        id="agm4"       value="" />
-								<input type="hidden" name="agm5"        id="agm5"       value="" />
+								<input type="hidden" name="msiteGubun" id="msiteGubun" value="" />
+								<input type="hidden" name="agreeChk"  id="agreeChk"  value="" />
+								<input type="hidden" name="checkAgree" id="checkAgree" value="" />
+								<input type="hidden" name="agm4"    id="agm4"    value="" />
+								<input type="hidden" name="agm5"    id="agm5"    value="" />
 								<input type="hidden" name="curPpPrdcSbscAftrChngPsblDate" id="curPpPrdcSbscAftrChngPsblDate" value="20150930" />
 
-								<input type="hidden" name="searchBan"    value="" /> <!-- ban 조회 B, ctn 조회 S-->
-								<input type="hidden" name="searchAcntNo"    value="" /><!-- ban -->
-								<input type="hidden" name="searchCtn"    value="" /> <!-- 전화번호 -->
-								<input type="hidden" name="svcCntrNo"    value="" /><!-- 서비스번호 -->
-								<input type="hidden" name="searchCustNo"    value="" /> <!-- 회원번호 -->
+								<input type="hidden" name="searchBan"  value="" /> <!-- ban 조회 B, ctn 조회 S-->
+								<input type="hidden" name="searchAcntNo"  value="" /><!-- ban -->
+								<input type="hidden" name="searchCtn"  value="" /> <!-- 전화번호 -->
+								<input type="hidden" name="svcCntrNo"  value="" /><!-- 서비스번호 -->
+								<input type="hidden" name="searchCustNo"  value="" /> <!-- 회원번호 -->
 
-								<input type="hidden" name="enc"    value="" />
-								<input type="hidden" name="newPpParamNum"    value="" />
+								<input type="hidden" name="enc"  value="" />
+								<input type="hidden" name="newPpParamNum"  value="" />
 								<input type="hidden" name="AGM4" value="" />
 								<input type="hidden" name="AGM5" value="" />
 
-								<input type="hidden" name="ENCRYPT_S_searchAcntNo"    value="Iv5CnMkJ%2FuAW%2BxkusvpK7w%3D%3D" />
-								<input type="hidden" name="ENCRYPT_S_searchCtn"    value="NHeDK1V7WghmOjsl0HB84g%3D%3D" />
-								<input type="hidden" name="ENCRYPT_S_svcCntrNo"    value="QcbWs8AYxOX7m%2FEWXWpAyA%3D%3D" />
-								<input type="hidden" name="ENCRYPT_S_searchCustNo"    value="C9VFTwiATfH5NbixhcXZBw%3D%3D" />
+								<input type="hidden" name="ENCRYPT_S_searchAcntNo"  value="Iv5CnMkJ%2FuAW%2BxkusvpK7w%3D%3D" />
+								<input type="hidden" name="ENCRYPT_S_searchCtn"  value="NHeDK1V7WghmOjsl0HB84g%3D%3D" />
+								<input type="hidden" name="ENCRYPT_S_svcCntrNo"  value="QcbWs8AYxOX7m%2FEWXWpAyA%3D%3D" />
+								<input type="hidden" name="ENCRYPT_S_searchCustNo"  value="C9VFTwiATfH5NbixhcXZBw%3D%3D" />
 								</fieldset>
 							</form>
 
@@ -1056,7 +1328,7 @@
 												<tbody>
 													<tr>
 														<td class="center font19 h36">
-															LTE 데이터 선택 299
+															데이터 선택 299
 														</td>
 														<td class="last center font19 h36">
 															LTE-골든275(안심차단)
@@ -1136,7 +1408,7 @@
 				</div>
 				<!-- e : 요금제 신청완료 팝업 -->
 
-				<!-- e : 컨텐츠 영역  -->
+				<!-- e : 컨텐츠 영역 -->
 			</div>
 			<!-- e : content Body -->
 		</div>
