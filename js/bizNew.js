@@ -136,6 +136,13 @@ $(document).ready(function(){
 		maxHeight: 440
 	});
 
+	/**
+    * main select box
+    */
+	$('#reSendMail select').selectric({
+		maxHeight: 103
+	});
+
 
     /**
     * layerPopup accessibility focus fn

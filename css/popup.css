@@ -58,9 +58,9 @@
 
 /*  명세서 번호 선택 */
 .pop_wrap .pop_billSrchWhiteBox {position:absolute; top:28px; right:29px; background: #fff;}
-.pop_wrap .pop_billSrchWhiteBox.indexPop {top:16px;}
-.pop_wrap .pop_billNumListBox.indexPop {background:#fff url('../images/bg/index_bg_line.png') center center no-repeat;}
-.pop_wrap .pop_billNumListBox.indexPop li {width:50%; padding:9px 0;}
+.pop_wrap .pop_billSrchWhiteBox.indexPop, .pop_wrap .pop_billSrchWhiteBox.billPop {top:16px;}
+.pop_wrap .pop_billNumListBox.indexPop,.pop_wrap .pop_billNumListBox.billPop {background:#fff url('../images/bg/index_bg_line.png') center center no-repeat;}
+.pop_wrap .pop_billNumListBox.indexPop li,.pop_wrap .pop_billNumListBox.billPop li {width:50%; padding:9px 0;}
 .pop_wrap .pop_billSrchWhiteBox fieldset {position: relative;padding-right:50px;}
 .pop_wrap .pop_billSrchWhiteBox input {width:203px; height:30px; line-height:30px; font-size:15px; color: #333;}
 .pop_wrap .pop_billSrchWhiteBox a {position: absolute; top:0;right: 0;}
@@ -204,13 +204,21 @@
 
 
 
+/* 회선별 상세 요금내역  */
+.pop_billWhiteBoxWrap {background: #fff;border:1px solid #ddd;position: relative;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop {height: 50px;border-bottom:1px solid #ddd;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox {width:70%;float:left;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopRightBox {width:30%;float:right;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dt,.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dd {float:left;line-height: 50px;font-size: 17px;color:#333;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dt {margin-left:30px;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dd {margin-left:11px;font-weight: bold}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopRightBox dd {line-height: 50px;color:#666;font-size: 15px;margin-right:29px;}
 
-
-
-
-
-
-
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice {height: 150px; text-align: center;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice p {font-size: 27px;color:#333;line-height: 150px;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice p span {color:#df2428;font-family: 'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice p .billPayTxt {font-size: 44px}
+.pop_contsContainer  .billTopWhiteBox  table tfoot tr.total th, .pop_contsContainer  .billTopWhiteBox  table tfoot tr.total td {background: #fbfbfb !important; color:#df2428;}
 
 
 

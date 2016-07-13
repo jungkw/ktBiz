@@ -36,3 +36,7 @@
 .billTopWhiteBox .billReSend, .billTopWhiteBox .listPrint {position: absolute;top:39px;}
 .billTopWhiteBox .billReSend {right: 141px;}
 .billTopWhiteBox .listPrint {right: 30px}
+.bill_scnTitle02 {margin-bottom:17px;font-size:21px;line-height: 30px;color:#333;}
+
+/* 월별요금조회 : 명세서조회 CSS 상속 */
+.billTopWhiteBox table td.pl20 {padding-left: 20px !important}
