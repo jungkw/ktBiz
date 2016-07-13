@@ -204,13 +204,21 @@
 
 
 
+/* 회선별 상세 요금내역  */
+.pop_billWhiteBoxWrap {background: #fff;border:1px solid #ddd;position: relative;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop {height: 50px;border-bottom:1px solid #ddd;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox {width:70%;float:left;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopRightBox {width:30%;float:right;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dt,.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dd {float:left;line-height: 50px;font-size: 17px;color:#333;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dt {margin-left:30px;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopLeftBox dd {margin-left:11px;font-weight: bold}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxTop .billWhiteTopRightBox dd {line-height: 50px;color:#666;font-size: 15px;margin-right:29px;}
 
-
-
-
-
-
-
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice {height: 150px; text-align: center;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice p {font-size: 27px;color:#333;line-height: 150px;}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice p span {color:#df2428;font-family: 'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial}
+.pop_billWhiteBoxWrap .pop_billWhiteBoxPrice p .billPayTxt {font-size: 44px}
+.pop_contsContainer  .billTopWhiteBox  table tfoot tr.total th, .pop_contsContainer  .billTopWhiteBox  table tfoot tr.total td {background: #fbfbfb !important; color:#df2428;}
 
 
 
