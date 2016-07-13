@@ -443,6 +443,8 @@ border-radius: 3px 3px 3px 3px;
 .vt {vertical-align:top !important;}
 .bpt8 {background-position: 0 8px !important}
 .br000 {border-right:1px solid #000;}
+.bgNone {background: none!important}
+.bl0after:after{border-left:0 !important;}
 .color666 {color: #666 !important}
 .lh28 {line-height: 28px !important;}
 .lh24 {line-height: 24px !important;}
