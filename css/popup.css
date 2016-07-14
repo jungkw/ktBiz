@@ -26,9 +26,6 @@
 .pop_mask {width:100%;height:100%;position: fixed;top:0;left:0;background: url('../images/bg/pop_bg_mask.png'); z-index: 4000;display: none}
 
 .pop_wrap .pop_scnTitle {font-size:19px;font-weight:normal;line-height:23px;}
-.pop_wrap .btnSty.icon_print {padding:0 9px 0 34px;height:28px;color:#fff!important;font-size:13px;line-height:25px;background:#df2428 url(../images/icon/comm_icon_print2.png) no-repeat 9px 50%; border:1px solid #c10004;}
-.pop_wrap .btnSty.icon_print span {padding:0; background:none;}
-.pop_wrap .btnSty.icon_print:focus {border:1px dotted #fff;}
 
 
 /* 기본 박스 */
