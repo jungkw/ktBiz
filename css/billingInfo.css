@@ -10,7 +10,7 @@
 .billTopWhiteBox {background: #fff;border:1px solid #ddd;margin-top: 20px;position: relative;}
 .billTopWhiteBox .billTopWhiteFnc {height: 50px;border-bottom:1px solid #ddd;position: relative;}
 .billTopWhiteBox .billTopWhiteFnc .billLeftBox, .billTopWhiteBox .billTopWhiteFnc .billRightBox {width:50%;float:left;}
-.billTopWhiteBox .billTopWhiteFnc .billLeftBox label {color:#333;font-size: 13px;margin:0 6px 0 29px;line-height: 50px;}
+.billTopWhiteBox .billTopWhiteFnc .billLeftBox label {color:#333;font-size: 15px;margin:0 6px 0 29px;line-height: 50px;}
 .billTopWhiteBox .billTopWhiteFnc .billLeftBox .selectWrap {margin-top:-4px;}
 .billTopWhiteBox .billTopWhiteFnc .billRightBox dd {line-height: 50px;color: #666; font-size: 15px; text-align: right;margin-right:110px}
 .billTopWhiteBox .billTopWhiteFnc .billRightBox a {position: absolute;top:15px;right:30px;}
