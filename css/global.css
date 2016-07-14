@@ -20,7 +20,7 @@
 /* table */
 .comm_tableBrdr {border-top:1px solid #333;}
 .comm_table {width:100%;border-collapse:separate; border-left:1px solid #ddd;border-right:1px solid #ddd;background:#fff;}
-.comm_table th {padding:11px 0 12px;border-bottom:1px solid #ccc;line-height:19px;color:#333;font-size:13px;text-align:center;font-weight:700;background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 50%;}
+.comm_table th {padding:11px 0 12px;border-bottom:1px solid #ccc;line-height:19px;color:#333;font-size:15px;text-align:center;font-weight:700;background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 50%;}
 .comm_table th.last {background:none;}
 .comm_table th.left {padding-left:20px; text-align:left;}
 .comm_table th.right {padding-right:20px; text-align:right;}
@@ -41,7 +41,7 @@
 .comm_table td.noContents02 {padding: 20px;color: #666;font-size: 13px;text-align: left;line-height:23px;background:url(../images/icon/comm_icon_searchNone.gif) no-repeat 25px center;}
 .comm_table td.noContents03 {padding:0; color: #666;font-size: 13px;text-align: left;line-height:23px;}
 .comm_table td.noBorder {border-right:0;}
-.comm_table td .num, .comm_table td.num {font-size:18px;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
+.comm_table td .num, .comm_table td.num {font-size:15px;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
 .comm_table td .bSmoney {font-size:16px;color:#333;font-weight:400;font-family:'Spoqa Han Sans', arial;vertical-align:-1px;}
 .comm_table td .card-num {display:block;font-size:13px;}
 .comm_table td .desc {margin-left: 7px; font-size:13px; color:#666; vertical-align:middle; }
