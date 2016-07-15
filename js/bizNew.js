@@ -1486,6 +1486,72 @@ $(function(){
 
 
 
+  /*
+   *  사용량 조회 그래프
+  */
+  $.fn.grap = function(options){
+    var config = $.extend({
+      item : '.now-grap',
+      speed : 1000,
+      wDefault : 0,
+      vertical : false,
+      overCharge : false
+    }, options);
+
+    return this.each(function(){
+      var self = this,
+        $self = $(self),
+        $item = $self.find(config.item),
+        $itemWidth =  $item.width(),
+        $itemHeight =  $item.height(),
+        $locations = $item.find('.location');
+
+        vertical = config.vertical == true ? vertical() : horizontal();
+
+        function horizontal(){
+          $item.css('width',config.wDefault);
+          
+          if(config.overCharge) {
+            setTimeout(function(){
+              $item
+                .animate({
+                  'width' : $itemWidth
+                }, config.speed, function(){
+                  $locations.css('display', 'block')
+                  $item.find('span').css({
+                    'right' : '-7px'
+                  })
+                  
+                })
+            }, 1000);
+
+            return false;
+          }
+
+          $item
+            .animate({
+              'width' : $itemWidth
+            }, config.speed, function(){
+              $item.find('span').css({
+                'right' : '-7px'
+              })
+            })
+        }
+        
+        function vertical(){
+          $item.css('height',config.wDefault);
+
+          $item
+            .animate({
+              'height' : $itemHeight
+            }, config.speed)
+        }
+
+    })
+  }
+
+
+
 
 });
 

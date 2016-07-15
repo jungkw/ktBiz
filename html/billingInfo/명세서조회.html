@@ -432,7 +432,7 @@
 									<h4 class="comm_scnTitle02 mb11">사용내역</h4>
 								</div>
 								
-								<div class="comm_tableBrdr pb14">
+								<div class="comm_tableBrdr pb15">
 									<table class="comm_table" summary="서비스 항목, 사용항목, 할인 전 금액, 할인금액, 청구금액 순서로 사용내역을 확인할 수 있는 표 입니다.">
 										<caption>사용내역 확인 표</caption>
 										<colgroup>
@@ -561,10 +561,14 @@
 										</tbody>
 									</table>
 								</div>
+								<div class="h26">
+									<a href="#billReSendLayerPop" class="btnSty sml blk billReSend" id="billReSendPop" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">명세서 재발송</a>
+									<a href="#billPricePrintLayerPop" class="btnSty sml icon_print listPrint" id="billPricePrintPop" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;"><span>내역 인쇄</span></a>
+								</div>
 								<!-- e : 사용내역 -->
 
 								<!-- s : 할인내역 -->
-								<div class="commTitleWrap pt20"> 
+								<div class="commTitleWrap mt34"> 
 									<h4 class="comm_scnTitle02 mb11">할인내역</h4>
 								</div>
 								
@@ -629,8 +633,7 @@
 								<!-- e : 할인내역 -->
 
 
-								<a href="#billReSendLayerPop" class="btnSty sml blk billReSend" id="billReSendPop" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">명세서 재발송</a>
-								<a href="#billPricePrintLayerPop" class="btnSty sml icon_print listPrint" id="billPricePrintPop" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;"><span>내역 인쇄</span></a>
+
 							</div>
 						</div>
 						<!-- e : 데이터가 있을 경우 -->

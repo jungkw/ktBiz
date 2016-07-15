@@ -13,7 +13,7 @@
 .billTopWhiteBox .billTopWhiteFnc .billLeftBox label {color:#333;font-size: 15px;margin:0 6px 0 29px;line-height: 50px;}
 .billTopWhiteBox .billTopWhiteFnc .billLeftBox .selectWrap {margin-top:-4px;}
 .billTopWhiteBox .billTopWhiteFnc .billRightBox dd {line-height: 50px;color: #666; font-size: 15px; text-align: right;margin-right:110px}
-.billTopWhiteBox .billTopWhiteFnc .billRightBox a {position: absolute;top:15px;right:30px;}
+.billTopWhiteBox .billTopWhiteFnc .billRightBox a {position: absolute;top:15px;right:30px;border:1px solid #df2428;color: #df2428}
 .billTopWhiteBox .billTopCenterPayBox {height: 150px; text-align: center;}
 .billTopWhiteBox .billTopCenterPayBox p {font-size: 27px;color:#333;line-height: 150px;}
 .billTopWhiteBox .billTopCenterPayBox p span {color:#df2428;font-family: 'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial}
@@ -33,13 +33,44 @@
 .billTopWhiteBox table tfoot td, .billTopWhiteBox table tfoot th {background: #fbfbfb !important}
 .billTopWhiteBox table tfoot tr.total td, .billTopWhiteBox table tfoot tr.total th {padding:20px 20px 19px 22px !important;background: #fff !important;font-size: 17px;}
 .billTopWhiteBox table tfoot tr.total td span {font-size: 24px}
-.billTopWhiteBox .billReSend, .billTopWhiteBox .listPrint {position: absolute;top:39px;}
-.billTopWhiteBox .billReSend {right: 141px;}
-.billTopWhiteBox .listPrint {right: 30px}
+
+.billTopWhiteBox .billReSend {float:left;}
+.billTopWhiteBox .listPrint {float: right}
 .bill_scnTitle02 {margin-bottom:17px;font-size:21px;line-height: 30px;color:#333;}
 
 /* 월별요금조회 : 명세서조회 CSS 상속 */
 .billTopWhiteBox table td.pl20 {padding-left: 20px !important}
+
+/* 사용량 조회 */
+.billTopWhiteBox.usage {border:0;border-top:1px solid #ddd;margin:0 1px;}
+.billTopWhiteBox .billTopWhiteFnc.usage .billLeftBox, .billTopWhiteBox .billTopWhiteFnc.usage .billRightBox {height: 50px;}
+.billTopWhiteBox .billTopWhiteFnc.usage .billRightBox dd {text-align: left;float:right;padding:10px 0;}
+.billTopWhiteBox .billTopWhiteFnc.usage .billLeftBox dt {padding-left:29px;font-size: 17px;color:#333; line-height: 50px; float: left}
+.billTopWhiteBox .billTopWhiteFnc.usage .billLeftBox dd {padding-left:18px;font-size: 17px;color:#333; line-height: 50px; float: left;font-weight: bold}
+.billTopWhiteBox .billTopUsageInfo {height: 108px;overflow: hidden;border-bottom: 1px solid #ccc}
+.billTopWhiteBox .billTopUsageInfo .usageInfoDetail {width:231px;height:66px;float:left;border-left:1px solid #eaeaea;margin:21px 0;padding-left:25px;}
+.billTopWhiteBox .billTopUsageInfo .usageInfoDetail.first {width:217px;border-left: 0;padding-left:37px;}
+.billTopWhiteBox .billTopUsageInfo .usageInfoDetail dt {color:#333;font-size: 15px;font-weight: bold;}
+.billTopWhiteBox .billTopUsageInfo .usageInfoDetail dd {color:#333;font-size: 21px;}
+.billTopWhiteBox .billTopUsageInfo .usageInfoDetail dd .num {color:#df2428;font-size: 26px;font-weight: bold}
+.billTopWhiteBox .billTopUsageInfo .usageInfoDetail dd a.setNoti {font-size: 22px;color: #df2428;font-weight: bold;text-decoration: underline;line-height: 34px;}
+div.month-pattern {margin:0 29px;padding:30px 29px 60px 29px;background-color:#fff;border:1px solid #ccc;}
+div.month-pattern .default-size {display:inline-block;padding:6px 10px 6px 10px;background:#666;border-radius:12px;color:#fff;}
+div.month-pattern ul.data-view {min-height:261px;margin:30px 0 0 0;padding:0 0 0 75px;background:url('../images/bg/bill_bg_default_grap.png') no-repeat 0 100%;}
+div.month-pattern ul.data-view li {position:relative;float:left;min-height:231px;width:79px;margin:40px 0 0 0;font-size:15px;color:#666;}
+div.month-pattern ul.data-view li.selected {margin:0;}
+div.month-pattern ul.data-view li .month {position:absolute;bottom:-30px;left:0;font-weight:normal;}
+div.month-pattern ul.data-view li.selected .month {bottom:-60px;}
+div.month-pattern ul.data-view li.one-year-ago .month {left:-26px;}
+div.month-pattern ul.data-view li.selected .month {color:#df2428;}
+div.month-pattern ul.data-view li div.up-garp {position:relative;width:47px;height:200px;}
+div.month-pattern ul.data-view li.selected div.up-garp {height:240px;}
+div.month-pattern ul.data-view li div.up-garp div.in-up-grap {position:absolute;bottom:0;left:0;width:47px;background:url('../images/bg/bill_bg_default_hori.png') no-repeat 0 100%;}
+div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap {background:url('../images/bg/bill_bg_default_hori_selected.png') no-repeat 0 100%;}
+div.month-pattern ul.data-view li div.up-garp div.in-up-grap .now {position:absolute;top:0;left:0;width:29px;height:10px;background:url('../images/bg/bill_bg_grap_hori_top.png') no-repeat 0 0;}
+div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .now {position:absolute;top:0;left:0;width:29px;height:10px;background:url('../images/bg/bill_bg_grap_hori_top_selected.png') no-repeat 0 0;}
+div.month-pattern ul.data-view li div.up-garp div.in-up-grap .data {position:absolute;top:-20px;left:12px;min-width:110px;padding:0 0 0 15px;font-weight:normal;background:url('../images/icon/bill_icon_dot_grap.png') no-repeat 0 4px;}
+div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .data {color:#df2428;background:url('../images/icon/bill_icon_dot_grap_selected.png') no-repeat 0 4px;}
 
 /* 명세서 변경 */
 .billInfo_setPlaceAdd dt, .billInfo_setPlaceAdd dd {float:left;}
