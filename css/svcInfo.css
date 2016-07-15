@@ -49,7 +49,6 @@ p.mobilePauseHistoryDesc {margin-top:8px;padding:0 0 0 17px;background: url('../
 .svcInfo_setPlaceAdd dd {width:460px;}
 
 /* 요금제 신청 & 부가서비스 공통 */
-.svcInfo_planTable table {border-left: 0; border-right: 0;}
 .svcInfo_planTable table .comm_radio {vertical-align: middle;}
 .svcInfo_planTable table td span {font-size: 15px; color: #666;}
 .svcInfo_planTable table td.plan_radio {padding-left: 25px; color: #000;}
