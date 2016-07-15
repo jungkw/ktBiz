@@ -913,9 +913,18 @@
 								<tbody>
 									<tr>
 										<td class="pl25">
+											<!-- 선택불가 상품은 disabled속성과 i태그에 checked클래스 추가 -->
+											<!-- disabled예시
 											<span class="comm_radio">
-												<input type="radio" id="choice0" name="usenewfire" disabled="disabled" readonly="readonly" style="background-color:#f1f1f1" />
+												<input type="radio" id="choice0" name="usenewfire" disabled="disabled" style="background-color:#f1f1f1" />
 												<i class="checked"></i>
+												<label for="choice0">기업무선상품관리</label>
+											</span>
+											-->
+
+											<span class="comm_radio">
+												<input type="radio" id="choice0" name="usenewfire" style="background-color:#f1f1f1" />
+												<i></i>
 												<label for="choice0">기업무선상품관리</label>
 											</span>
 
@@ -984,6 +993,7 @@
 						<div class="commBtnWrap pb40">
 							<a href="#closeAddSvcLayer" id="closeAddSvcOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 해지 레이어팝업 열림">해지</a>
 							<a href="#noDataLayer" id="noDataOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 해지 레이어팝업 열림">해지(선택한 항목이 없는 경우)</a>
+							<a href="#noCloseLayer" id="noCloseOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;" title="부가서비스 해지 레이어팝업 열림">해지(해지불가 항목일 경우)</a>
 						</div>
 						<!-- e: 이용중인 부가서비스 -->
 							</fieldset>
@@ -1031,7 +1041,7 @@
 									</div>
 
 									<div class="pop_contsBtns">
-										<a href="" class="btnSty big red"><span>확인</span></a>
+										<a href="" class="btnSty big red"><span>해지</span></a>
 										<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
 									</div>
 
@@ -1090,6 +1100,37 @@
 							<!-- e : footer -->
 						</div>
 						<!-- e : 선택된 항목이 없을경우 팝업 -->
+
+						<!-- s : 해지 불가능 할 경우 팝업 -->
+						<div class="pop_layerWrap" id="noCloseLayer" style="display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h1>알림</h1>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer alignCenter">
+										<p class="popTxt18">선택하신 서비스는 해지가 불가능합니다.</p>
+									</div>
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 해지 불가능 할 경우 팝업 -->
 
 						<!-- s: 패키지 부가서비스 -->
 						<div class="commTitleWrap bt1 ">
@@ -1273,7 +1314,7 @@
 												<tr>
 													<td class="plan_radio">
 														<span class="comm_radio">
-															<input type="radio" name="use" id="use0" disabled="disabled" />
+															<input type="radio" name="use" id="use0" />
 															<i></i>
 															<label for="use0">기업무선상품관리</label>
 														</span>
