@@ -143,6 +143,15 @@ $(document).ready(function(){
 		maxHeight: 103
 	});
 
+    /**
+      * main select box
+      */
+    $('.circuitSearchDiv > .selectWrap').find('select').selectric({
+      maxHeight: 440
+    });
+
+
+    
 
     /**
     * layerPopup accessibility focus fn
