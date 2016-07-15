@@ -13,7 +13,7 @@
 .billTopWhiteBox .billTopWhiteFnc .billLeftBox label {color:#333;font-size: 15px;margin:0 6px 0 29px;line-height: 50px;}
 .billTopWhiteBox .billTopWhiteFnc .billLeftBox .selectWrap {margin-top:-4px;}
 .billTopWhiteBox .billTopWhiteFnc .billRightBox dd {line-height: 50px;color: #666; font-size: 15px; text-align: right;margin-right:110px}
-.billTopWhiteBox .billTopWhiteFnc .billRightBox a {position: absolute;top:15px;right:30px;}
+.billTopWhiteBox .billTopWhiteFnc .billRightBox a {position: absolute;top:15px;right:30px;border:1px solid #df2428;color: #df2428}
 .billTopWhiteBox .billTopCenterPayBox {height: 150px; text-align: center;}
 .billTopWhiteBox .billTopCenterPayBox p {font-size: 27px;color:#333;line-height: 150px;}
 .billTopWhiteBox .billTopCenterPayBox p span {color:#df2428;font-family: 'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial}
@@ -33,9 +33,9 @@
 .billTopWhiteBox table tfoot td, .billTopWhiteBox table tfoot th {background: #fbfbfb !important}
 .billTopWhiteBox table tfoot tr.total td, .billTopWhiteBox table tfoot tr.total th {padding:20px 20px 19px 22px !important;background: #fff !important;font-size: 17px;}
 .billTopWhiteBox table tfoot tr.total td span {font-size: 24px}
-.billTopWhiteBox .billReSend, .billTopWhiteBox .listPrint {position: absolute;top:39px;}
-.billTopWhiteBox .billReSend {right: 141px;}
-.billTopWhiteBox .listPrint {right: 30px}
+
+.billTopWhiteBox .billReSend {float:left;}
+.billTopWhiteBox .listPrint {float: right}
 .bill_scnTitle02 {margin-bottom:17px;font-size:21px;line-height: 30px;color:#333;}
 
 /* 월별요금조회 : 명세서조회 CSS 상속 */
