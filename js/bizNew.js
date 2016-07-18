@@ -1496,7 +1496,7 @@ $(function(){
 
 
   /*
-   *  사용량 조회 그래프
+   *  사용량 조회 그래프 Wibro & 기가인터넷 (뉴마이올레 copy)
   */
   $.fn.grap = function(options){
     var config = $.extend({
@@ -1559,6 +1559,104 @@ $(function(){
     })
   }
 
+
+  /*
+   *  모바일 사용량 조회 
+  */
+  $.ktBizMobileUsage = function(type){
+      var $type = type;
+      var $case = ["dataCase", "callCase", "smsCase"];
+      var $totalDate = $.ktBizMobileUsage.setDate();
+      for(var i =0; i <= $case.length; i++ ){
+          if($case[i] == $type){
+            $.ktBizMobileUsage.dataCase($type);
+            $.ktBizMobileUsage.restDate($type, $totalDate)
+          }
+      }
+
+      return false;
+  };
+
+  // 날짜계산
+  $.ktBizMobileUsage.setDate = function(){
+
+     // 날짜계산
+      var time = new Date();
+      var year = time.getYear(); 
+      var month = time.getMonth() +1;
+      var day = time.getDate()>9 ? ''+time.getDate() : '0'+time.getDate();
+      var totalDate;
+     
+
+      if(month==4 || month==6 || month==9 || month==11){
+          totalDate = 30;
+      }else if(month==2){ // 2월
+        if(year%4 == 0){ // 2월이면서 윤년일 때
+            totalDate = 29;
+        }else{// 2월이면서 윤년이 아닐 때
+            totalDate = 28;
+        }      
+      }else{
+          totalDate = 31;
+      }
+
+      $('.restDateTooltip > span').text(totalDate-day);
+
+      return totalDate;
+  }
+
+
+  // restDate 
+  $.ktBizMobileUsage.restDate = function(type, totalDate){
+      var $obj = $('.'+type);
+      // 잔여일 처리
+      var $day = parseInt($obj.find(".restDateTooltip span").text() / totalDate * 263);
+      $(".restDate").animate({height:$day},1000);
+      $(".restDateTooltip").animate({bottom:55+$day},1000);
+  }
+
+  // data Graph
+  $.ktBizMobileUsage.dataCase = function(type){
+      var $obj = $('.'+type);
+      var $restItem = $obj.find('.rest-data');
+      var $overItem = $obj.find('.over-data');
+      var $restSh = (265-$restItem.height());
+      var $overSh = (265-$overItem.height());
+      var $overValidate, $overfullValidate, $restValidate = false; 
+      
+      // 데이터가 초과 인 상태인지 확인
+      if($overItem.height() > 0){
+          $overValidate = true;
+          if($overSh == 0){
+              $overfullValidate =true;
+          }
+      }
+
+      // 현재 데이터가 100% 인지 확인
+      if($restItem.height() == 265){
+          $restSh = 50;
+          $restValidate = true;
+      }
+
+      $restItem.height('100%');
+      $restItem.animate({'marginTop' : $restSh}, 1000, function() {
+          if($restValidate){
+            $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full')})
+          }
+          if($overValidate){
+              $restItem.hide();
+              if($overfullValidate){
+                  $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full')})
+              }else{
+                  $overItem.animate({'marginTop' : $overSh}, 1000);
+              }
+              
+          }
+      });
+
+  };
+
+  $.ktBizMobileUsage('dataCase');
 
 
 
