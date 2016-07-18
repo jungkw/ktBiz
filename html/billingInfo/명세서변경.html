@@ -168,6 +168,35 @@
 										<div class="selectWrap w250">
 											<select id="billSelectBox">
 												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
 											</select>
 										</div>
 										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
@@ -430,14 +459,162 @@
 							</div>
 							<!-- e : 명세서 청구항목안내 팝업 -->
 
-							<div class="billInfo pb15">
-
+							<div class="pb15">
+								<div class="billInfo_chgStateType">
+									<div>
+										<span class="comm_radio">
+											<input type="radio" id="chgType01" name="chgType" />
+											<i></i>
+											<label for="chgType01">이메일명세서</label>
+										</span>
+										<span class="fr">
+											<a href="" class="btnSty sml icon_question"><span>도움말</span></a>
+											<a href="" class="btnSty sml icon_note"><span>샘플보기</span></a>
+										</span>
+									</div>
+									<div>
+											<span class="comm_radio">
+												<input type="radio" id="chgType02" name="chgType" />
+												<i></i>
+												<label for="chgType02">스마트명세서 (MMS)</label>
+											</span>
+											<span class="fr">
+												<a href="" class="btnSty sml icon_note"><span>샘플보기</span></a>
+											</span>
+									</div>
+									<div>
+											<span class="comm_radio">
+												<input type="radio" id="chgType03" name="chgType" />
+												<i></i>
+												<label for="chgType03">우편명세서</label>
+											</span>
+											<span class="fr">
+												<a href="" class="btnSty sml icon_note"><span>샘플보기</span></a>
+											</span>
+									</div>
+								</div>
 							</div>
 
-							<div class="commBtnWrap pb40">
+							<div class="commBtnWrap">
 								<a href="" class="btnSty red big">명세서 유형 변경하기</a>
 							</div>
 							<!-- e: 명세서 유형변경 -->
+
+
+							<!-- s: 우편물 수령주소 변경-->
+							<div class="commTitleWrap">
+								<h4 class="comm_scnTitle02 pt29">우편물(요금명세서 등) 수령주소 변경</h4>
+							</div>
+
+							<div class="comm_tableBrdr">
+								<table class="comm_table" summary="명세서 번호, 명세서 유형, 청구지 정보 순서로 정보를 확인할 수 있는 표 입니다.">
+									<caption>이용중인 납부방법 상세 표</caption>
+									<colgroup>
+										<col width="150" />
+										<col width="*" />
+										<col width="100" />
+									</colgroup>
+
+									<tbody>
+										<tr>
+											<th scope="row">우편물 수령주소</th>
+											<td class="last">
+												<dl class="billInfo_setPlaceAdd">
+													<dt class="old">
+														<p class="iconAroundBlack">
+															<span class="iconText">도로명</span>
+														</p>
+													</dt>
+													<dd class="old">서울 종로구 세종로 ***</dd>
+													<dt>
+														<p class="iconAroundBlack pr17">
+															<span class="iconText pl16">지번</span>
+														</p>
+													</dt>
+													<dd>서울 종로구 종로동 ***</dd>
+												</dl>
+											</td>
+											<td>
+												<a href="" class="btnSty mid">변경</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="clearfix pt15">
+								<p class="fl color000">지난달 명세서를 받지 못하셨나요?</p>
+								<div class="btns fr">
+									<a href="" class="btnSty mid">발송현황보기</a>
+									<a href="" class="btnSty mid blk">명세서 재발송</a>
+								</div>
+							</div>
+
+							<!-- s : 명세서 청구항목안내 팝업 -->
+							<div class="pop_layerWrap" id="curAddSvcLayer" style="width: 800px; margin-left:-400px;display:none">
+							</div>
+							<!-- e : 명세서 청구항목안내 팝업 -->
+
+
+							<!-- s: 영문/점자 명세서 신청/해지 -->
+							<div class="commTitleWrap">
+								<h4 class="comm_scnTitle02 pt29">영문/점자 명세서 신청/해지</h4>
+							</div>
+
+							<div class="billInfo_chgStatelang">
+								<div class="clearfix">
+									<div class="header fl">
+										<h5 class="fl">명세서 언어를 변경하시겠습니까?</h5>
+										<a href="" class="fr btnSty sml icon_question"><span>도움말</span></a>
+									</div>
+									<div class="body fr">
+										<div class="fl">
+											<span class="comm_radio">
+												<input type="radio" id="stateLang01" name="stateLang" />
+												<i></i>
+												<label for="stateLang01">국문</label>
+											</span>
+											<span class="comm_radio">
+												<input type="radio" id="stateLang02" name="stateLang" />
+												<i></i>
+												<label for="stateLang02">영문</label>
+											</span>
+										</div>
+										<div class="fr">
+											<a href="" class="btnSty sml">변경</a>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix">
+									<div class="header fl">
+										<h5 class="fl">점자 명세서를 신청 또는 해지하시겠습니까?</h5>
+										<a href="" class="fr btnSty sml icon_question"><span>도움말</span></a>
+									</div>
+									<div class="body fr">
+										<div class="fl">
+											<span class="comm_radio">
+												<input type="radio" id="stateLangType01" name="stateLangType" />
+												<i></i>
+												<label for="stateLangType01">신청</label>
+											</span>
+											<span class="comm_radio">
+												<input type="radio" id="stateLangType02" name="stateLangType" />
+												<i></i>
+												<label for="stateLangType02">해지</label>
+											</span>
+										</div>
+										<div class="fr">
+											<a href="" class="btnSty sml">변경</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- s : 명세서 청구항목안내 팝업 -->
+							<div class="pop_layerWrap" id="curAddSvcLayer" style="width: 800px; margin-left:-400px;display:none">
+							</div>
+							<!-- e : 명세서 청구항목안내 팝업 -->
+
+							<!-- e: 영문/점자 명세서 신청/해지 -->
 						</div>
 						<!-- e : 데이터가 있을 경우 -->
 

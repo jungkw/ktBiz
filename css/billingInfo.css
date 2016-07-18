@@ -73,7 +73,19 @@ div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .data {col
 /* 명세서 변경 */
 .billInfo_setPlaceAdd dt, .billInfo_setPlaceAdd dd {float:left;}
 .billInfo_setPlaceAdd dt.old, .billInfo_setPlaceAdd dd.old {margin-bottom: 7px;}
-.billInfo_setPlaceAdd dt {width:72px;}
-.billInfo_setPlaceAdd dd {width:450px;}
+.billInfo_setPlaceAdd dt {clear: left; width:72px;}
+.billInfo_setPlaceAdd dd {width:355px;}
 .billInfo_resend {position: relative;}
 .billInfo_resend a {position: absolute; top: 15px; right: 20px;}
+.billInfo_chgStateType {border:1px solid #ccc; border-top-color: #333; background: #fff;}
+.billInfo_chgStateType > div {padding: 17px 30px; overflow: hidden;}
+.billInfo_chgStateType > div .comm_radio {margin-top: 2px;}
+.billInfo_chgStateType > div + div {border-top: 1px solid #ccc;}
+.billInfo_chgStatelang {border:1px solid #ccc; border-top-color: #333; background: #fff;}
+.billInfo_chgStatelang > div + div {border-top: 1px solid #ccc;}
+.billInfo_chgStatelang .header {padding: 17px 20px; width: 60%; border-right: 1px solid #ccc; box-sizing: border-box;}
+.billInfo_chgStatelang .header h5 {margin-top:4px; color: #333;}
+.billInfo_chgStatelang .body {padding: 17px 30px 17px 15px; width: 40%; box-sizing: border-box;}
+.billInfo_chgStatelang .body .comm_radio {margin: 2px 0 0 5px;}
+
+

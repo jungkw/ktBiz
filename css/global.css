@@ -170,6 +170,8 @@ border-radius: 3px 3px 3px 3px;
 .btnSty.icon_xls span {padding:0 0 0 21px;background:url('../images/icon/comm_icon_excelDown.png') no-repeat left center;}
 .btnSty.icon_speaker span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_speaker.png') no-repeat left center;}
 .btnSty.icon_refresh span {padding:0 0 0 23px;background:url('../images/icon/comm_icon_refresh.png') no-repeat left center;}
+.btnSty.icon_question span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_question.png') no-repeat left center;}
+.btnSty.icon_note span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_note.png') no-repeat left center;}
 
 
 /* btn color */
@@ -279,6 +281,7 @@ border-radius: 3px 3px 3px 3px;
 .fl {float:left;}
 .fr {float:right;}
 .fr20 {float:right;padding-right:20px;}
+.clearfix:after {content: ''; display: block; clear: both;}
 .num {font-weight:400; font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
 .emp01 {color:#ef1c25 !important;}
 .emp02 {color:#333 !important;}
