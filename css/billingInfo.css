@@ -74,7 +74,7 @@ div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .data {col
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail {width:134px;}
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.first {width: 253px;}
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.last {width: 132px;}
-.billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail span.priceProductName {font-size: 21px;color: #df2428;font-weight: bold;line-height: 34px;}
+.billTopWhiteBox .billTopUsageInfo .usageInfoDetail span.redTxt {font-size: 21px;color: #df2428;font-weight: bold;line-height: 34px;}
 div.grap-group {position:relative;margin:25px 0 0 0;min-height:53px;}
 div.grap-group .name {font-weight:bold;font-size:13px;color:#333;}
 div.grap-group div.default-grap {height:10px;margin:9px 0 0 0;padding:0 7px 0 0;background:url('../images/bg/bill_bg_grap_default.png') no-repeat 0 0;}
@@ -107,6 +107,31 @@ div.wibro-egg div.default-grap div.now-grap .location {background:url('../images
 div.wibro-egg div.over-grap {float:left;width:209px;height:10px;margin:9px 0 0 0;padding:0 7px 0 0;background:url('../images/bg/bill_bg_grap_default.png') no-repeat 100% 0;}
 div.wibro-egg div.over-grap div.now-grap {position:relative;height:10px;background:url('../images/bg/bill_bg_pink_grap.png') no-repeat 100% 0;}
 div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absolute;top:0;right:-7px;width:7px;height:10px;background:url('../images/bg/bill_bg_grap_pink_arr.png') no-repeat 100% 0;}
+
+
+/* 사용량 조회 모바일 */
+.bill_graphBoxWrap {padding-top:65px;overflow: hidden;position: relative;background: #fff;border-left: 1px solid #ccc;border-right: 1px solid #ccc;}
+.bill_graphBoxWrap h4 {position: absolute;top:77px;left:399px;font-size: 21px;font-weight: bold;color: #333}
+.bill_graphBoxWrap h4 + dl {position: absolute;top:80px;right:28px;font-size:15px;color:#666;}
+.bill_graphBoxWrap .graphVisualBlock {width: 399px;height:395px;position:relative;float: left;background: url('../images/bg/bill_bg_usageMobile01.png') 67px 0 no-repeat;}
+.bill_graphBoxWrap .graphVisualBlock .topText {position: absolute;left:126px;top:22px; font-size: 13px;color:#333;}
+.bill_graphBoxWrap .graphVisualBlock .topText span {font-weight: bold;color: #df2428;font-size: 13px;}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual {width:160px;height:265px;margin:53px 142px 77px 97px;overflow: hidden;}
+.bill_graphBoxWrap .graphTableBlock {width: 369px;float: right;}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data {background: url('../images/bg/bill_bg_restDataRed.png');}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data.full {background: url('../images/bg/bill_bg_restDataRed.png') 0 -2px;}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data {background: url('../images/bg/bill_bg_overDataBlue.png');margin-top:265px;}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full {background: url('../images/bg/bill_bg_overDataBlue.png') 0 -2px;}
+.bill_graphBoxWrap .graphVisualBlock .restDate {width: 4px;height: 263px;max-height: 263px;position: absolute;bottom:77px;right:107px;background: url('../images/bg/bill_bg_dateBar.gif') no-repeat; }
+.bill_graphBoxWrap .graphVisualBlock .restDateTooltip {width:42px;height:40px;padding:4px 0 0 5px;position: absolute;bottom:317px;right:60px;font-size:11px;text-align:center;background: url('../images/bg/bill_bg_dateToolTip.png') no-repeat; }
+.bill_graphBoxWrap .graphVisualBlock .restDateTooltip span {display:block;margin-top:-2px;font-family:'Spoqa Han Sans';font-size: 16px;}
+.graphTableBlock .comm_tableBrdr {width:340px;margin-top:52px;}
+.graphTableBlock table.comm_table {border-left:0; border-right:0;}
+.graphTableBlock table.comm_table th, .graphTableBlock table.comm_table td {height:15px;padding:22px 1px 5px 2px;}
+.graphTableBlock table.comm_table th {background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 75%;font-size: 15px; color: #333;font-weight: normal}
+.graphTableBlock table.comm_table td {font-size: 15px; color: #000}
+.graphTableBlock table.comm_table td span.num {font-size: 15px !important}
+
 
 /* 명세서 변경 */
 .billInfo_setPlaceAdd dt, .billInfo_setPlaceAdd dd {float:left;}

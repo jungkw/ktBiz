@@ -435,7 +435,7 @@ a.color333 {color:#333 !important;}
 .font19 {font-size:19px !important;}
 .font20 {font-size:20px;}
 .font21 {font-size:21px;}
-.font24 {font-size:24px;}
+.font24 {font-size:24px !important;}
 .alignLeft {text-align:left;}
 .alignCenter {text-align:center;}
 .alignRight {text-align:right;}
