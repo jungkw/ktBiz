@@ -39,7 +39,7 @@
 /* 월별요금조회 : 명세서조회 CSS 상속 */
 .billTopWhiteBox table td.pl20 {padding-left: 20px !important}
 
-/* 사용량 조회 */
+/* 사용량 조회 공통 */
 .billTopWhiteBox.usage {border:0;border-top:1px solid #ddd;margin:0 1px;}
 .billTopWhiteBox .billTopWhiteFnc.usage .billLeftBox, .billTopWhiteBox .billTopWhiteFnc.usage .billRightBox {height: 50px;}
 .billTopWhiteBox .billTopWhiteFnc.usage .billRightBox dd {text-align: left;float:right;padding:10px 0;}
@@ -69,6 +69,44 @@ div.month-pattern ul.data-view li div.up-garp div.in-up-grap .now {position:abso
 div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .now {position:absolute;top:0;left:0;width:29px;height:10px;background:url('../images/bg/bill_bg_grap_hori_top_selected.png') no-repeat 0 0;}
 div.month-pattern ul.data-view li div.up-garp div.in-up-grap .data {position:absolute;top:-20px;left:12px;min-width:110px;padding:0 0 0 15px;font-weight:normal;background:url('../images/icon/bill_icon_dot_grap.png') no-repeat 0 4px;}
 div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .data {color:#df2428;background:url('../images/icon/bill_icon_dot_grap_selected.png') no-repeat 0 4px;}
+
+/* 사용량 조회 WiBro */
+.billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail {width:134px;}
+.billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.first {width: 253px;}
+.billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.last {width: 132px;}
+.billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail span.priceProductName {font-size: 21px;color: #df2428;font-weight: bold;line-height: 34px;}
+div.grap-group {position:relative;margin:25px 0 0 0;min-height:53px;}
+div.grap-group .name {font-weight:bold;font-size:13px;color:#333;}
+div.grap-group div.default-grap {height:10px;margin:9px 0 0 0;padding:0 7px 0 0;background:url('../images/bg/bill_bg_grap_default.png') no-repeat 0 0;}
+div.grap-group div.default-grap div.now-grap {position:relative;height:10px;background:url('../images/bg/bill_bg_pink_grap.png') no-repeat 0 0;}
+div.grap-group .total,
+div.grap-group .ndata,
+div.grap-group .data {position:absolute;font-size:13px;color:#333;}
+div.grap-group .ndata span.desc {color:#666;}
+div.grap-group div.default-grap div.now-grap .location {position:absolute;top:0;right:-7px;width:7px;height:10px;background:url('../images/contents/bg_grap_pink_arr.png') no-repeat 100% 0;}
+
+div.wibro-grap {position:relative;margin:30px 28px 0 28px;padding:0 29px 91px 29px;border:1px solid #ccc;background:#fff;}
+div.wibro-grap .list-dot {position:absolute;bottom:0;left:0;width:681px;min-height:37px;padding:22px 0 0  29px;border-top:1px solid #ccc;}
+div.wibro-grap ul.over-charge {position:absolute;bottom:18px;right:29px;}
+div.wibro-grap ul.over-charge li {height:22px;float:left;margin:0 0 0 29px;padding:0 0 0 20px;background:url('../images/bg/bill_bg_grap_etc_pink.png') no-repeat 0 5px;}
+div.wibro-grap ul.over-charge li:first-child {margin:0;background:url('../images/bg/bill_bg_grap_etc_red.png') no-repeat 0 4px;}
+div.wibro-grap ul.over-charge li .data {margin:0 0 0 6px;font-family:'Spoqa Han Sans';font-size:16px;color:#df2428;vertical-align:-2px;}
+div.wibro-grap ul.over-charge li .data .gb, 
+div.wibro-grap ul.over-charge li .data .won {margin:0 0 0 3px;font-weight:normal;color:#333;}
+div.wibro-grap ul.over-charge li .data .won {vertical-align:1px;}
+div.wibro-grap div.default-grap {background: url('../images/bg/bill_bg_grap_default1.png') no-repeat 0 0;}
+div.wibro-line{padding:15px 0;background:url('../images/bg/bill_bg_wibro_line.png') no-repeat 436px 0;}
+div.wibro-line .total{top:15px;right:226px;}
+div.wibro-line .data{bottom:10px;right:226px;}
+div.wibro-line .ndata{bottom:10px;}
+div.wibro-line .over-text{position: absolute;top:15px;right:0;font-size: 13px;color: #333;font-weight:bold;}
+div.wibro-egg {width:100%;overflow:hidden;}
+div.wibro-egg div.default-grap {float:left;width:429px;}
+div.wibro-egg div.default-grap div.now-grap {background:url('../images/bg/bill_bg_red_grap.png') no-repeat 0 0;}
+div.wibro-egg div.default-grap div.now-grap .location {background:url('../images/bg/bill_bg_grap_red_arr.png') no-repeat 100% 0}
+div.wibro-egg div.over-grap {float:left;width:209px;height:10px;margin:9px 0 0 0;padding:0 7px 0 0;background:url('../images/bg/bill_bg_grap_default.png') no-repeat 100% 0;}
+div.wibro-egg div.over-grap div.now-grap {position:relative;height:10px;background:url('../images/bg/bill_bg_pink_grap.png') no-repeat 100% 0;}
+div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absolute;top:0;right:-7px;width:7px;height:10px;background:url('../images/bg/bill_bg_grap_pink_arr.png') no-repeat 100% 0;}
 
 /* 명세서 변경 */
 .billInfo_setPlaceAdd dt, .billInfo_setPlaceAdd dd {float:left;}

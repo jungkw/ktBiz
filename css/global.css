@@ -365,6 +365,7 @@ a.color333 {color:#333 !important;}
 .mr2 {margin-right:10px;}
 .mr5 {margin-right:5px;}
 .mr8 {margin-right:5px;}
+.mr12 {margin-right:12px;}
 .mr26 {margin-right: 26px !important}
 .mr29 {margin-right: 29px !important}
 .mr30 {margin-right:30px;}
@@ -430,6 +431,7 @@ a.color333 {color:#333 !important;}
 .font15 {font-size:15px !important;}
 .font16 {font-size:16px;}
 .font17 {font-size:17px !important;}
+.font18 {font-size:18px !important;}
 .font19 {font-size:19px !important;}
 .font20 {font-size:20px;}
 .font21 {font-size:21px;}
@@ -451,17 +453,22 @@ a.color333 {color:#333 !important;}
 .br000 {border-right:1px solid #000;}
 .bgNone {background: none!important}
 .bl0after:after{border-left:0 !important;}
+.bl0 {border-left:0 !important;}
+.br0 {border-right:0 !important;}
 .color666 {color: #666 !important}
 .lh28 {line-height: 28px !important;}
 .lh24 {line-height: 24px !important;}
 .lh20 {line-height: 20px !important;}
+.lh15 {line-height: 15px !important;}
 .b0{border:0 !important;}
+.bt0 {border-top:0 !important;}
 .bt1 {border-top:1px solid #ccc;}
 .bt1d {border-top:1px solid #ddd;}
 .bb1 {border-bottom:1px solid #ccc;}
 .bb1dashed {border-bottom:1px dashed #ccc;}
 .lrpadding {padding:0 29px;}
 .tbpadding29 {padding:29px !important;}
+.lrmargin {margin: 0 29px !important}
 
 /* width */
 .w90p {width:90% !important;}
