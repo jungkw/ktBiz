@@ -1162,7 +1162,6 @@ $(document).ready(function(){
                 lnbItem += "</ul>";
                 lnbItem += "<!-- e : 가입상품 조회/관리 -->";
 
-
                 lnbItem += "<ul id='li_BC' class='cfmOllehLnbNewList' style='display:none'>";
 
                   lnbItem += "<li id='li_BCA'>";
@@ -1226,6 +1225,16 @@ $(document).ready(function(){
                   lnbItem += "</li>";
 
                 lnbItem += "</ul>";
+
+                lnbItem += "<!-- s : 법인명의 본인확인 -->";
+                lnbItem += "<ul id='li_BD' class='cfmOllehLnbNewList' style='display:none'>";
+
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BDA'>법인명의 본인확인 승인</a>";
+                  lnbItem += "</li>";
+
+                lnbItem += "</ul>";
+                lnbItem += "<!-- e : 법인명의 본인확인 -->";
               lnbItem += "</div>";
 
           document.write(lnbItem);
@@ -1235,7 +1244,7 @@ $(document).ready(function(){
           var $depth2Number = $code.substring(0,3);
           var $depth3Number = $code.substring(0,4);
           var $depth4Number = $code.substring(0,5);
-          var $depth1NameArray =[["BA","BB","BC"],["요금조회/납부", "가입상품 관리", "신청/변경"]];
+          var $depth1NameArray =[["BA","BB","BC","BD"],["요금조회/납부", "가입상품 관리", "신청/변경", "법인명의 본인확인"]];
           var $lnbTitle;
           for(var i =0; i <= $depth1NameArray.length; i++){
               if($depth1NameArray[0][i] == $depth1Number){
