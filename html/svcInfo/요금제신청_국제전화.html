@@ -548,12 +548,12 @@
 .ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
 </style>
 <div class="ui-remote">
-	<p>부가설정 팝업</p>
-	<button type="button" class="remote-btn03" href="#addSvcSettingG01" id="addSvcSettingG01Open" onclick="$.ktBizPopClick(this); return false;">알짜요금제</button>
-	<button type="button" class="remote-btn03" href="#addSvcSettingG02" id="addSvcSettingG02Open" onclick="$.ktBizPopClick(this); return false;">001 모바일파워</button>
-	<button type="button" class="remote-btn03" href="#addSvcSettingG03" id="addSvcSettingG03Open" onclick="$.ktBizPopClick(this); return false;">통금요금제</button>
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn03" href="#addSvcSettingG01" id="addSvcSettingG01Open" onclick="$.ktBizPopClick(this); return false;">알짜요금제 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingG02" id="addSvcSettingG02Open" onclick="$.ktBizPopClick(this); return false;">001 모바일파워 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingG03" id="addSvcSettingG03Open" onclick="$.ktBizPopClick(this); return false;">통금요금제 : 팝업</button>
 	<br />
-	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">미설정 알림</button>
+	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">미설정 알림 : 팝업</button>
 </div>
 <!-- e : UI GUIDE -->
 
@@ -1079,22 +1079,22 @@
 										</colgroup>
 										<tbody class="fullBorder">
 											<tr>
-												<th scope="row">요금안내</th>
+												<th scope="row" class="left">요금안내</th>
 												<td class="last">
 													<span class="comm_radio">
-														<input name="type" id="type01" type="radio">
+														<input name="type" id="type01" type="radio" checked="checked">
 														<i></i>
-														<label for="type01">홈무한3000</label>
+														<label for="type01">신청</label>
 													</span>
 													<span class="comm_radio ml15">
 														<input name="type" id="type02" type="radio">
 														<i></i>
-														<label for="type02">소호무한3000</label>
+														<label for="type02">미신청</label>
 													</span>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">
+												<th scope="row" class="left">
 													<label for="wishdate">변경희망일</label>
 												</th>
 												<td class="last">
@@ -1156,7 +1156,7 @@
 										</colgroup>
 										<tbody class="fullBorder">
 											<tr>
-												<th scope="row">
+												<th scope="row" class="left">
 													<label for="setNum">사용휴대폰번호</label>
 												</th>
 												<td class="last">
@@ -1173,10 +1173,10 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">요금안내</th>
+												<th scope="row" class="left">요금안내</th>
 												<td class="last">
 													<span class="comm_radio">
-														<input name="mpType" id="mpType01" type="radio">
+														<input name="mpType" id="mpType01" type="radio" checked="checked">
 														<i></i>
 														<label for="mpType01">신청</label>
 													</span>
@@ -1188,7 +1188,7 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">변경적용일</th>
+												<th scope="row" class="left">변경적용일</th>
 												<td class="last">
 													신청 후 즉시 적용
 												</td>
@@ -1246,7 +1246,7 @@
 										</colgroup>
 										<tbody class="fullBorder">
 											<tr>
-												<th scope="row"><label for="country">국가그룹</label></th>
+												<th scope="row" class="left"><label for="country">국가그룹</label></th>
 												<td class="last">
 													<div class="selectWrap">
 														<select id="country">
@@ -1257,10 +1257,10 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">서비스종류</th>
+												<th scope="row" class="left">서비스종류</th>
 												<td class="last">
 													<span class="comm_radio">
-														<input name="bType" id="bType01" type="radio">
+														<input name="bType" id="bType01" type="radio" checked="checked">
 														<i></i>
 														<label for="bType01">A형 30분</label>
 													</span>
@@ -1272,10 +1272,10 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">요금안내</th>
+												<th scope="row" class="left">요금안내</th>
 												<td class="last">
 													<span class="comm_radio">
-														<input name="bpType" id="bpType01" type="radio">
+														<input name="bpType" id="bpType01" type="radio" checked="checked">
 														<i></i>
 														<label for="bpType01">신청</label>
 													</span>
@@ -1287,7 +1287,7 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">
+												<th scope="row" class="left">
 													<label for="wishdate">변경희망일</label>
 												</th>
 												<td class="last">

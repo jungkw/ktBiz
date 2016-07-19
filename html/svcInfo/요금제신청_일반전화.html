@@ -546,9 +546,9 @@
 .ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
 </style>
 <div class="ui-remote">
-	<p>부가설정 팝업</p>
-	<button type="button" class="remote-btn03" href="#addSvcSettingT01" id="addSvcSettingT01Open" onclick="$.ktBizPopClick(this); return false;">olleh 일반전화 무한요금제</button>
-	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">미설정 알림</button>
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn03" href="#addSvcSettingT01" id="addSvcSettingT01Open" onclick="$.ktBizPopClick(this); return false;">olleh 일반전화 무한요금제 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">미설정 알림 : 팝업</button>
 </div>
 <!-- e : UI GUIDE -->
 
@@ -1115,10 +1115,10 @@
 										</colgroup>
 										<tbody class="fullBorder">
 											<tr>
-												<th scope="row">요금제 구분</th>
+												<th scope="row" class="left">요금제 구분</th>
 												<td class="last">
 													<span class="comm_radio">
-														<input name="type" id="type01" type="radio">
+														<input name="type" id="type01" type="radio" checked="checked">
 														<i></i>
 														<label for="type01">홈무한3000</label>
 													</span>
@@ -1130,10 +1130,10 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">약정기간</th>
+												<th scope="row" class="left">약정기간</th>
 												<td class="last">
 													<span class="comm_radio">
-														<input name="term" id="term01" type="radio">
+														<input name="term" id="term01" type="radio" checked="checked">
 														<i></i>
 														<label for="term01">무약정</label>
 													</span>
@@ -1150,7 +1150,7 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">변경적용일</th>
+												<th scope="row" class="left">변경적용일</th>
 												<td class="last">
 													신청 후 즉시 적용
 												</td>
@@ -1163,7 +1163,7 @@
 
 							<div class="pop_contsBtns">
 								<a href="" class="btnSty big red">등록</a>
-								<a href="" class="btnSty big">취소</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
 							</div>
 						</div>
 						<!-- e : contents -->
