@@ -537,6 +537,21 @@
 
 
 <body onfocus = "javascript:stayStatus();" onclick="javascript:stayStatus();" onload="init();">
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<div class="ui-remote">
+	<p>부가설정 팝업</p>
+	<button type="button" class="remote-btn03" href="#addSvcSettingM01" id="addSvcSettingM01Open" onclick="$.ktBizPopClick(this); return false;">순 광대역 안심무한 51</button>
+	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">미설정 알림</button>
+</div>
+<!-- e : UI GUIDE -->
+
 <h1 class="blind">올레닷컴(기업)</h1>
 <div id="cfmOllehWrap">
 
@@ -1401,6 +1416,17 @@
 								</div>
 
 
+								<!-- s : 꼭 확인하세요 -->
+								<div class="comm_noticeBox mt30">
+									<h4 class="title">꼭 확인하세요</h4>
+									<ul class="notice-list">
+										<li>요금상품 변경은 월 1회에 한하므로, 이번 달 내 다른 요금상품으로의 재변경이 불가능합니다.</li>
+										<li>요금상품을 변경하실 경우, 이전 요금상품의 부가혜택이 없어질 수 있습니다.</li>
+										<li>요금제 변경 시 이미 당겨쓰기 한 데이터량이 변경 신청할 요금제의 기본제공량을 초과할 경우, 다음달 초과분에 대한 요금이 청구됩니다.</li>
+										<li>요금제를 월 중 변경할 경우 해당월의 월정액 및 무료제공 혜택이 각각 일할 적용되며, 초과 사용분은 다음달에 청구 요금에 반영됩니다.</li>
+									</ul>
+								</div>
+								<!-- e : 꼭 확인하세요 -->
 
 
 								<div class="pop_contsBtns">
@@ -1457,6 +1483,108 @@
 					<!-- e : footer -->
 				</div>
 				<!-- e : 요금제 신청완료 팝업 -->
+
+
+				<!-- s : 부가설정: 순광대역 안심무한51 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingM01" style="margin-left: -300px; width: 598px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h1>순 광대역 안심무한 51</h1>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+
+								<ul class="bulletList">
+									<li>지정번호는 월 1회만 변경 가능합니다.</li>
+									<li>지정번호는 KT 휴대폰 번호만 입력하실 수 있습니다.</li>
+								</ul>
+								<div class="comm_tableBrdr mt20">
+									<table class="comm_table" summary="전화번호를 입력할 수 있는 표 입니다.">
+										<caption>전화번호 입력</caption>
+										<colgroup>
+											<col width="25%" />
+											<col width="*" />
+										</colgroup>
+										<tbody class="fullBorder">
+											<tr>
+												<th scope="row">
+													<label for="setNum">전화번호 1</label>
+												</th>
+												<td class="last">
+													<div class="selectWrap w75">
+														<select id="phone">
+															<option value="010">010</option>
+															<option value="011">011</option>
+														</select>
+													</div>
+													<span>-</span>
+													<input type="text" title="연락처 중간자리 입력란" name="tel_no2" maxlength="4" class="w75" value="1234" />
+													<span>-</span>
+													<input type="text" title="연락처 끝자리 입력란" name="tel_no3" maxlength="4" class="w75"  value="5678" />
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red">등록</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 부가설정: 순광대역 안심무한51 팝업 -->
+
+
+				<!-- s : 미설정 알림 팝업 -->
+				<div class="pop_layerWrap" id="addSvcNoSetting" style="margin-left: -300px; width: 598px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h1>알림</h1>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+								<p class="alignCenter">완료되지 않은 설정사항이 있습니다.</p>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 미설정 알림 팝업 -->
 
 				<!-- e : 컨텐츠 영역 -->
 			</div>

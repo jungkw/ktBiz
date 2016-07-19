@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.pop_layerWrap {position: fixed;top:170px;left:50%;margin-left:-375px;z-index: 4010;}
+.pop_layerWrap {position: fixed;top:170px;left:50%;margin-left:-375px;z-index: 99;}
 .pop_wrap {min-width: 340px; max-width: 750px; max-height:600px;height: 100%; font-size:14px; line-height:1.3; box-sizing:border-box; color:#333; border:1px #333 solid; position: relative;overflow-y:auto; background:#fff;}
 .pop_wrap .pop_header {padding: 22px 0 27px; text-align:center;background: #fff; border-bottom: 1px solid #ccc;background: #fff}
 .pop_wrap .pop_header h1, .pop_wrap .pop_header h2, .pop_wrap .pop_header h3, .pop_wrap .pop_header h4, .pop_wrap .pop_header h5, .pop_wrap .pop_header h6 {font-size: 23px;font-weight: bold;color: #333;}
