@@ -1849,16 +1849,16 @@ $(function(){
 	}
 
 	/*
-    *  납부방법 변경 radio
+    *  납부방법 변경 radio, 요금납부 같이 사용
 	*/
 
-	if ($('.bill_payChangeWrap').length) {
+	if ($('.bill_payChangeWrap, .bill_payWrap').length) {
 		ktBizBillPayRadio('.billHasData');
 	}
 
 	function ktBizBillPayRadio(selector) {
 		var $container = $(selector),
-			$target = $("input:radio[name='payChangeOpt'], input:radio[name='payChangeOptSub']");
+			$target = $("input:radio[name='payChangeOpt'], input:radio[name='payChangeOptSub'], input:radio[name='payNowOpt']");
 		
 		$target.each(function() {
 			radioChk( $(this) );
@@ -1888,6 +1888,12 @@ $(function(){
 				} else if ( chkItemID == 'payChangeOpt2' ) {
 					$('.payChangeOpt2').show();
 					$('.payChangeOpt1').hide();
+				} else if ( chkItemID == 'payNowOpt1' ) {
+					$('.payNowOpt1').show();
+					$('.payNowOpt2').hide();
+				} else if ( chkItemID == 'payNowOpt2' ) {
+					$('.payNowOpt2').show();
+					$('.payNowOpt1').hide();
 				}
 			}
 		}
