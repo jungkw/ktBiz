@@ -197,10 +197,14 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billGuideTabWrap li.billGuide2 .menuBtn {right:210px; width:120px;}
 .billGuideTabWrap li.billGuide3 .menuBtn {right:120px;}
 .billGuideTabWrap li.billGuide4 .menuBtn {right:30px; background: none;}
+.billGuideTabWrap.payNow .menuBtn {top:-49px; width:151px; height:26px;}
+.billGuideTabWrap.payNow li.billGuide1 .menuBtn {right:374px;}
+.billGuideTabWrap.payNow li.billGuide2 .menuBtn {right:181px; width:193px;}
+.billGuideTabWrap.payNow li.billGuide3 .menuBtn {right:30px; background: none;}
 .billGuideTabWrap li.selected .menuBtn {color:#fff; background: #666; text-decoration: none !important;}
 .billGuideTabWrap li.selected .menuBtn:hover,
 .billGuideTabWrap li.selected .menuBtn:focus,
-.billGuideTabWrap li.selected .menuBtn:active {color:#fff !important; text-decoration: none !important;}
+.billGuideTabWrap li.selected .menuBtn:active {color:#fff !important; background: #666 !important; text-decoration: none !important;}
 
 .billGuideTabWrap .billGuideCont {position: relative; display:none;}
 .billGuideTabWrap li.selected .billGuideCont {display:block;}
@@ -234,4 +238,27 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billPayChangeBox {padding:20px 0; font-size:17px; color:#333; font-weight:bold; text-align:center; background:#fff; border:1px solid #ccc;}
 .billPayChangeBox em {color:#666; font-weight:bold;}
 
+/* 요금납부 */
+.bill_payWrap {}
+.bill_payWrap .useNum {font-size:17px; font-weight: bold; color:#000;}
 
+.bill_payWrap .commTitleWrap .total {position: absolute; top:11px; right:0; color:#666; font-size: 13px;}
+.bill_payWrap .commTitleWrap .total em {color:#df2428; font-weight: bold;}
+
+.bill_payWrap .totalBox {padding:18px 0; font-size:15px; color:#333; font-weight:bold; line-height:1; text-align:center; background:#fff; border:1px solid #ccc;}
+.bill_payWrap .totalBox .num {color:#df2428; font-size: 18px; font-weight:bold; vertical-align:-1px; font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
+.bill_payWrap .totalBox .won {color:#666; font-weight:normal;}
+
+.bill_payWrap .payNowOpt1,
+.bill_payWrap .payNowOpt2 {display:none;}
+
+.billGuideTabWrap .payGuideStep1 ul {overflow: hidden; height:66px; background: url('../images/common/bill_img_04.gif') no-repeat left top;}
+.billGuideTabWrap .payGuideStep1 li {display: block; float:left; width:230px; height:66px; padding:14px 0 0 63px; font-size:13px; color:#333; line-height:1.4; box-sizing: border-box;}
+
+.bill_payTxtWrap {position: relative;}
+.bill_payTxtWrap .txt {font-size: 18px; color:#333;}
+.bill_payTxtWrap .comm_checkbox {position: absolute; top:0; right:0;}
+
+.bill_payHistoryWrap .commTitleWrap .posR {position: absolute; top:2px; right:0;}
+.bill_payHistoryWrap .commTitleWrap .btnList ul {overflow: hidden;}
+.bill_payHistoryWrap .commTitleWrap .btnList li {float:left; margin:0 0 0 5px;}
