@@ -345,7 +345,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>실시간 요금</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>사용량 조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>분리납부내역 조회</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부/조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>납부방법 변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 관리</a></li>";
                                 gnbItem += "</ul>";
@@ -748,7 +748,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>실시간 요금</a></li>";
                                 gnbItem += "<li><a href='#'>사용량 조회</a></li>";
                                 gnbItem += "<li><a href='#'>분리납부내역 조회</a></li>";
-                                gnbItem += "<li><a href='#'>요금납부</a></li>";
+                                gnbItem += "<li><a href='#'>요금납부/조회</a></li>";
                                 gnbItem += "<li><a href='#'>납부방법 변경</a></li>";
                                 gnbItem += "<li><a href='#'>명세서 관리</a></li>";
                               gnbItem += "</ul>";
@@ -1129,9 +1129,13 @@ $(document).ready(function(){
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
                     lnbItem += "<a href='#' id='BAE'>분리납부내역 조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BAF'>요금납부</a>";
-                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BAF' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAF' title='하위메뉴 열기'>요금납부/조회</a>";
+                      lnbItem += "<ul id='sub_BAF' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BAFA'>요금납부</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BAFB'>납부내역조회</a></li>";
+                      lnbItem += "</ul>";
+                lnbItem += "</li>";
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
                     lnbItem += "<a href='#' id='BAG'>납부방법 변경</a>";
                   lnbItem += "</li>";
@@ -1161,7 +1165,6 @@ $(document).ready(function(){
 
                 lnbItem += "</ul>";
                 lnbItem += "<!-- e : 가입상품 조회/관리 -->";
-
 
                 lnbItem += "<ul id='li_BC' class='cfmOllehLnbNewList' style='display:none'>";
 
@@ -1226,6 +1229,16 @@ $(document).ready(function(){
                   lnbItem += "</li>";
 
                 lnbItem += "</ul>";
+
+                lnbItem += "<!-- s : 법인명의 본인확인 -->";
+                lnbItem += "<ul id='li_BD' class='cfmOllehLnbNewList' style='display:none'>";
+
+                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
+                    lnbItem += "<a href='#' id='BDA'>법인명의 본인확인 승인</a>";
+                  lnbItem += "</li>";
+
+                lnbItem += "</ul>";
+                lnbItem += "<!-- e : 법인명의 본인확인 -->";
               lnbItem += "</div>";
 
           document.write(lnbItem);
@@ -1235,16 +1248,17 @@ $(document).ready(function(){
           var $depth2Number = $code.substring(0,3);
           var $depth3Number = $code.substring(0,4);
           var $depth4Number = $code.substring(0,5);
-          var $depth1NameArray =[["BA","BB","BC"],["요금조회/납부", "가입상품 관리", "신청/변경"]];
+          
+          var $depth1NameArray =[["BA","BB","BC","BD"],["요금조회/납부", "가입상품 관리", "신청/변경", "법인명의 본인확인"]];
           var $lnbTitle;
-          for(var i =0; i <= $depth1NameArray.length; i++){
+          for(var i =0; i <= 3; i++){
               if($depth1NameArray[0][i] == $depth1Number){
-                lnbTitle = $depth1NameArray[1][i];
+                $lnbTitle = $depth1NameArray[1][i];
                 break;
               }
           };
 
-          $('#cfmOllehLnbTitle').empty().text(lnbTitle);
+          $('#cfmOllehLnbTitle').empty().text($lnbTitle);
           if($code.length==3){
             $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
             $('#'+$depth2Number).closest('li').addClass('cfmOllehLnbtSelectedNoDepth');
@@ -1565,14 +1579,16 @@ $(function(){
   */
   $.ktBizMobileUsage = function(type){
       var $type = type;
-      var $case = ["dataCase", "callCase", "smsCase"];
+      var $case = ["dataCase", "voiceCase", "smsCase"];
       var $totalDate = $.ktBizMobileUsage.setDate();
-      for(var i =0; i <= $case.length; i++ ){
-          if($case[i] == $type){
-            $.ktBizMobileUsage.dataCase($type);
-            $.ktBizMobileUsage.restDate($type, $totalDate)
-          }
+      if($case[0] == $type){
+        $.ktBizMobileUsage.dataCase($type);
+      }else if($case[1] == $type){
+        $.ktBizMobileUsage.voiceCase($type);
+      }else if($case[2] == $type){
+          $.ktBizMobileUsage.smsCase($type);
       }
+      $.ktBizMobileUsage.restDate($type, $totalDate);
 
       return false;
   };
@@ -1618,11 +1634,12 @@ $(function(){
   // data Graph
   $.ktBizMobileUsage.dataCase = function(type){
       var $obj = $('.'+type);
-      var $restItem = $obj.find('.rest-data');
-      var $overItem = $obj.find('.over-data');
-      var $restSh = (265-$restItem.height());
-      var $overSh = (265-$overItem.height());
-      var $overValidate, $overfullValidate, $restValidate = false; 
+      var $restItem = $obj.find('.rest-data');                                   // 잔여 사용량 Object
+      var $overItem = $obj.find('.over-data');                                   // 초과 사용량 Object
+      var $restSh = (265-$restItem.height());                                   //사용량 margin 값 계산
+      var $overSh = (265-$overItem.height());                                   // 초과 사용량 margin 값 계산
+      var $txtPosition = ($restSh-30)/2;                                              // 텍스트 포지션 계산
+      var $overValidate, $overfullValidate, $restValidate = false;  // 체크용도
       
       // 데이터가 초과 인 상태인지 확인
       if($overItem.height() > 0){
@@ -1634,30 +1651,110 @@ $(function(){
 
       // 현재 데이터가 100% 인지 확인
       if($restItem.height() == 265){
-          $restSh = 50;
+          $restSh = 30;
           $restValidate = true;
       }
 
       $restItem.height('100%');
       $restItem.animate({'marginTop' : $restSh}, 1000, function() {
-          if($restValidate){
-            $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full')})
-          }
+          // 초과 사용량일 경우
           if($overValidate){
               $restItem.hide();
+
+              // 초과 사용량이 100% 일 경우
               if($overfullValidate){
-                  $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full')})
+                  $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full');$overItem.children('span').removeClass('blind');});
+              // 초과 사용량이 100% 미만 일 경우
               }else{
-                  $overItem.animate({'marginTop' : $overSh}, 1000);
+                  $overItem.animate({'marginTop' : $overSh}, 1000, function(){$overItem.children('span').removeClass('blind');});
               }
-              
+          
+          // 잔여량 일 경우
+          }else{
+              // 잔여량이 100% 일 경우
+              if($restValidate){
+                $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restItem.children('span').removeClass('blind');});
+
+              //잔여량이 100% 미만 일 경우
+              }else{
+                 $restItem.children('span').removeClass('blind');
+
+              }
+             
           }
       });
 
   };
 
-  $.ktBizMobileUsage('dataCase');
 
+  // voice Graph
+  $.ktBizMobileUsage.voiceCase = function(type){
+      var $setMargin;
+      var $type = ["internal-data", "media-data", "outside-data"];
+      var $fullValidate = [];
+      for(var i=0; i<$type.length; i++){
+          var $target = $('.'+$type[i]);
+          var $targetHeight = $target.height(); 
+          $setMargin = (265-$target.height());
+
+          //  잔여량이 100% 일 경우
+          if($targetHeight == 265){
+              $setMargin = 30;
+              $fullValidate[i] = $type[i];
+          }
+
+          $target.height('100%');
+          $target.animate({'marginTop' : $setMargin}, 1000, function(){
+              // 잔여량이 100% 일 경우
+              if($fullValidate.length > 0) {
+                  for(var n=0; n<$fullValidate.length; n++){
+                    $('.'+$fullValidate[n]).animate({'marginTop' : 0}, 1000, function() {$(this).addClass('full')});
+                  }
+
+              // 100% 미만 일 경우
+              }else{
+
+              }
+
+          });
+      }
+  };
+
+
+  // sms Graph
+  $.ktBizMobileUsage.smsCase = function(type){
+      var $obj = $('.'+type);
+      var $restItem = $obj.find('.rest-data');                                   // 잔여 사용량 Object
+      var $restSh = (265-$restItem.height());                                   //사용량 margin 값 계산
+      var $txtPosition = ($restSh-30)/2;                                              // 텍스트 포지션 계산
+      var $restValidate = false;                                                           // 체크용도
+
+      // 현재 데이터가 100% 인지 확인
+      if($restItem.height() == 265){
+          $restSh = 30;
+          $restValidate = true;
+      }
+
+      $restItem.height('100%');
+      $restItem.animate({'marginTop' : $restSh}, 1000, function() {
+           // 잔여량이 100% 일 경우
+            if($restValidate){
+              $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restItem.children('span').removeClass('blind');});
+
+            //잔여량이 100% 미만 일 경우
+            }else{
+               $restItem.children('span').removeClass('blind');
+
+            }
+      });
+
+
+  }
+
+
+  $.ktBizMobileUsage('dataCase');
+  $.ktBizMobileUsage('voiceCase');
+  $.ktBizMobileUsage('smsCase');
 
 
 });
@@ -1706,6 +1803,69 @@ $(function(){
 				}
 
 			});
+		});
+	}
+
+	/*
+    *  납부방법 변경 radio
+	*/
+
+	if ($('.bill_payChangeWrap').length) {
+		ktBizBillPayRadio('.billHasData');
+	}
+
+	function ktBizBillPayRadio(selector) {
+		var $container = $(selector),
+			$target = $("input:radio[name='payChangeOpt'], input:radio[name='payChangeOptSub']");
+		
+		$target.each(function() {
+			radioChk( $(this) );
+		});
+
+		$target.on('click', function() {
+			radioChk( $(this) );
+		});
+
+		function radioChk(idx) {
+			var chkItem = idx,
+				chkItemID = chkItem.attr('id');
+
+			if( chkItem.is(':checked') ) {
+				if ( chkItemID == 'payOpt_giro' ) {
+					$('.payOpt_giro').show();
+					$('.payOpt_card, .payOpt_bank').hide();
+				} else if ( chkItemID == 'payOpt_bank' ) {
+					$('.payOpt_bank').show();
+					$('.payOpt_card, .payOpt_giro').hide();
+				} else if ( chkItemID == 'payOpt_card' ) {
+					$('.payOpt_card').show();
+					$('.payOpt_giro, .payOpt_bank').hide();
+				} else if ( chkItemID == 'payChangeOpt1' ) {
+					$('.payChangeOpt1').show();
+					$('.payChangeOpt2').hide();
+				} else if ( chkItemID == 'payChangeOpt2' ) {
+					$('.payChangeOpt2').show();
+					$('.payChangeOpt1').hide();
+				}
+			}
+		}
+	};
+
+
+	/*
+    *  안내드립니다. 탭
+	*/
+	if ($('.billGuideTabWrap').length) {
+		billGuideTab('.billGuideTabWrap');
+	}
+
+	function billGuideTab(selector) {
+		var $container = $(selector)
+			$item = $container.children('ul').children('li');
+
+		$item.find('.menuBtn').on('click focus', function(e) {
+			e.preventDefault();
+			$(this).closest('li').addClass('selected').siblings().removeClass('selected');
 		});
 	}
 
