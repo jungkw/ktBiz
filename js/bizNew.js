@@ -1244,16 +1244,17 @@ $(document).ready(function(){
           var $depth2Number = $code.substring(0,3);
           var $depth3Number = $code.substring(0,4);
           var $depth4Number = $code.substring(0,5);
+          
           var $depth1NameArray =[["BA","BB","BC","BD"],["요금조회/납부", "가입상품 관리", "신청/변경", "법인명의 본인확인"]];
           var $lnbTitle;
-          for(var i =0; i <= $depth1NameArray.length; i++){
+          for(var i =0; i <= 3; i++){
               if($depth1NameArray[0][i] == $depth1Number){
-                lnbTitle = $depth1NameArray[1][i];
+                $lnbTitle = $depth1NameArray[1][i];
                 break;
               }
           };
 
-          $('#cfmOllehLnbTitle').empty().text(lnbTitle);
+          $('#cfmOllehLnbTitle').empty().text($lnbTitle);
           if($code.length==3){
             $('#li_'+$depth1Number).addClass('cfmOllehNewSelected').show();
             $('#'+$depth2Number).closest('li').addClass('cfmOllehLnbtSelectedNoDepth');

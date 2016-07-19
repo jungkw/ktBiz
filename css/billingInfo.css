@@ -43,6 +43,7 @@
 .billTopWhiteBox.usage {border:0;border-top:1px solid #ddd;margin:0 1px;}
 .billTopWhiteBox .billTopWhiteFnc.usage .billLeftBox, .billTopWhiteBox .billTopWhiteFnc.usage .billRightBox {height: 50px;}
 .billTopWhiteBox .billTopWhiteFnc.usage .billRightBox dd {text-align: left;float:right;padding:10px 0;}
+.billTopWhiteBox .billTopWhiteFnc.usage .billRightBox dd span.searchDate {float: right;display: block;margin-top:8px;}
 .billTopWhiteBox .billTopWhiteFnc.usage .billLeftBox dt {padding-left:29px;font-size: 17px;color:#333; line-height: 50px; float: left}
 .billTopWhiteBox .billTopWhiteFnc.usage .billLeftBox dd {padding-left:18px;font-size: 17px;color:#333; line-height: 50px; float: left;font-weight: bold}
 .billTopWhiteBox .billTopUsageInfo {height: 108px;overflow: hidden;border-bottom: 1px solid #ccc}
