@@ -1,0 +1,969 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 납부방법 변경 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/billingInfo.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/temp.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
+
+	<!-- 레이어 팝업 보여주기용. -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var target = getUrlParameter();
+
+			$('#' + target[0] ).trigger('click');
+
+		});
+	</script>
+
+</head>
+
+
+
+<body>
+
+
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('.remote-btn01').on('click',function(){
+			$('.billChoice01').show();
+			$('.billChoice02').hide();
+			alert('변경완료. 현재상태 select box');
+			return false;
+		});
+
+		$('.remote-btn02').click(function(){
+			$('.billChoice01').hide();
+			$('.billChoice02').show();
+			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
+			return false;
+		});
+		
+		$('.remote-btn03').click(function(){
+			$('.billNoData').show();
+			$('.billHasData, .billHasDataAgree').hide();
+			return false;
+		});
+		
+		$('.remote-btn04').click(function(){
+			$('.billNoData').hide();
+			$('.billHasData, .billHasDataAgree').show();
+			$('.billHasData .type_bank').addClass('active');
+			$('.billHasData .type_card').removeClass('active');
+			$('.billHasData .type_giro').removeClass('active');
+		});
+		
+		$('.remote-btn05').click(function(){
+			$('.billNoData').hide();
+			$('.billHasData, .billHasDataAgree').show();
+			$('.billHasData .type_card').addClass('active');
+			$('.billHasData .type_bank').removeClass('active');
+			$('.billHasData .type_giro').removeClass('active');
+		});
+		
+		$('.remote-btn06').click(function(){
+			$('.billNoData').hide();
+			$('.billHasData, .billHasDataAgree').show();
+			$('.billHasData .type_giro').addClass('active');
+			$('.billHasData .type_bank').removeClass('active');
+			$('.billHasData .type_card').removeClass('active');
+		});
+	});
+</script>
+<div class="ui-remote">
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn01"><strong>[명세서 번호 선택]</strong><br/>30개 이하일 경우</button>
+	<button type="button" class="remote-btn02"><strong>[명세서 번호 선택]</strong><br/>30개 초과일 경우</button>
+	<button type="button" class="remote-btn03"><strong>조회된 데이터 없음</strong></button>
+	<button type="button" class="remote-btn04"><strong>납부방법 : 은행</strong></button>
+	<button type="button" class="remote-btn05"><strong>납부방법 : 카드</strong></button>
+	<button type="button" class="remote-btn06"><strong>납부방법 : 지로</strong></button>
+</div>
+<!-- e : UI GUIDE -->
+
+
+<h1 class="blind">올레닷컴(기업)</h1>
+<div id="cfmOllehWrap">
+
+	<!-- s : skip Navigation -->
+	<ul class="cfmOllehSkipNavi" id="cfmOllehSkipNavi">
+		<li><a href="#cfmOllehConts" ><span>본문으로 바로가기</span></a></li>
+		<li><a href="http://inside.olleh.com/html/WebAccessibility/Info.asp"><span>웹접근성 도움말 페이지로 이동하기</span></a></li>
+	</ul>
+	<!-- e : skip Navigation -->
+
+	<!-- s : gnb wrap -->
+	<div id="cfmOllehGnb">
+		<script type="text/javascript">$.ktBizGnbView();</script>
+	</div>
+	<!-- e : gnb wrap -->
+
+
+	<!-- s : cont container -->
+	<div id="cfmOllehContainer">
+
+		<!-- s : lnb -->
+
+		<div id="cfmOllehLnb" accesskey="4">
+			<script type="text/javascript">$.ktBizLnbView('BAG')</script>
+		</div>
+
+		<!-- e : lnb -->
+
+
+
+		<!-- s : content Body wrap -->
+		<hr />
+		<div id="cfmOllehConts" class="cfmOllehcontsLnbOn" accesskey="1">
+		<h2 class="blind">본문 영역</h2>
+			<div class="cfmOllehContsHeader">
+				<h3 class="cfmOllehContsTit"><img src="../../images/title/bill_title_bill07.png" alt="납부방법 변경" /></h3>
+			</div>
+
+			<!-- s : content Body -->
+			<div class="cfmOllehContsMain">
+
+				<!-- s : 컨텐츠 영역 -->
+
+
+
+
+				<!-- s : gray box -->
+				<div class="comm_contsInner grayBox">
+					<div class="comm_contsInner grayBox">
+
+						<!-- s : search comm -->
+						<div class="commBillSearchWrap pt32 relative">
+							<fieldset>
+								<legend>명세서/서비스번호 조회</legend>
+
+								<div class="comm_radio">
+									<input type="radio" name="circuitSearchRadio" id="billChoice" checked="true" value="searchCommBillType01" desc01="명세서 번호 찾기" desc02="명세서 번호 검색 필드" desc03="명세서 번호" data="5845124***** (010-1234-5678)" /><i></i>
+									<label for="billChoice">명세서 번호 선택</label>
+								</div>
+								<div class="comm_radio ml20">
+									<input type="radio" name="circuitSearchRadio" id="svcChoice" value="searchCommBillType02" desc01="서비스 번호 찾기" desc02="서비스 번호 검색 필드" desc03="서비스 번호"  data="010-1234-5678" /><i></i>
+									<label for="svcChoice">서비스 번호 조회</label>
+								</div>
+
+								<!-- s : 명세서 번호 선택 -->
+								<div class="searchCommBillType01" >
+									
+
+									<!-- s : 30개 이하 -->
+									<div class="circuitSearchDiv billChoice01">
+										<label for="billSelectBox" class="blind">명세서 번호 선택</label>
+										<div class="selectWrap w250">
+											<select id="billSelectBox">
+												<option>5845124***** (010-1234-5678)</option>
+											</select>
+										</div>
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+									</div>
+									<!-- e : 30개 이하 -->
+
+									<!-- s : 30개 초과 -->
+									<div class="circuitSearchDiv billChoice02" style="display: none">
+										<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput w250" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">명세서 번호 찾기. 현재 선택된 명세서 번호 </span>5845124***** (010-1234-5678)</a>
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+									</div>
+									<!-- e : 30개 초과 -->
+								</div>
+								<!-- s : 명세서 번호 선택 -->
+
+
+									
+								<!-- s : 레이어 팝업 -->
+								<div class="pop_mask"></div>
+								<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
+
+									<div class="pop_wrap commBillPop">
+
+										<!-- s : header -->
+										<div class="pop_header">
+											<h4>명세서 번호 찾기</h4>
+											<p class="mt10 color666 font13 alignLeft pl30">30개 이상 명세서는 검색을 이용하세요.</p>
+											<!-- s : 검색 영역 -->
+											<div class="pop_billSrchWhiteBox">
+												<fieldset>
+													<legend>명세서 번호 검색 필드</legend>
+													<label for="billNumTxt" class="blind">명세서 번호</label>
+													<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+												</fieldset>
+											</div>
+											<!-- e : 검색 영역 -->
+										</div>
+										<!-- e : header -->
+
+										<!-- s : contents -->
+										<div class="pop_conts" >
+											<div class="pop_contsContainer indexPop">
+												<ul class="pop_billNumListBox billPop">
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+
+												</ul>
+
+												<div class="comm_paging mt10">
+													<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+												</div>
+											</div>
+										</div>
+										<!-- e : contents -->
+									</div>
+									<!-- s : footer -->
+									<div class="pop_footer">
+										<div class="pop_footerInner">
+											<p class="pop_close">
+												<a href="#billPopOpen01" >닫기</a>
+											</p>
+										</div>
+									</div>
+									<!-- e : footer -->
+								</div>
+								<!-- e : 레이어 팝업 -->
+
+
+
+								<div class="searchCommBillType02" style="display: none">
+									<div class="circuitSearchDiv">
+										<label for="svcSelectBox" class="blind">서비스 번호 상품 선택</label>
+										<div class="selectWrap w120">
+											<select id="svcSelectBox">
+												<option>모바일</option>
+												<option>인터넷</option>
+												<option>tv</option>
+												<option>일반전화</option>
+												<option>인터넷전화</option>
+												<option>WiBro</option>
+												<option>WiFi</option>
+											</select>
+										</div>
+										<a href="#billLayerPopService" id="billPopOpen02" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>010-1234-5678</a>
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+									</div>
+
+								</div>
+
+
+								<!-- s : 레이어 팝업 -->
+								<div class="pop_mask"></div>
+								<div class="pop_layerWrap" id="billLayerPopService" style="width:670px; display: none;">
+
+									<div class="pop_wrap commBillPop">
+
+										<!-- s : header -->
+										<div class="pop_header">
+											<h4>명세서 번호 찾기</h4>
+											<p class="mt10 color666 font13 alignLeft pl30">50개 이상 회선은 검색을 이용하세요.</p>
+											<!-- s : 검색 영역 -->
+											<div class="pop_billSrchWhiteBox">
+												<fieldset>
+													<legend>명세서 번호 검색 필드</legend>
+													<label for="billNumTxt" class="blind">명세서 번호</label>
+													<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+												</fieldset>
+											</div>
+											<!-- e : 검색 영역 -->
+										</div>
+										<!-- e : header -->
+
+										<!-- s : contents -->
+										<div class="pop_conts" >
+											<div class="pop_contsContainer">
+												<ul class="pop_billNumListBox">
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+												</ul>
+
+												<div class="comm_paging mt10">
+													<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+												</div>
+											</div>
+										</div>
+										<!-- e : contents -->
+									</div>
+									<!-- s : footer -->
+									<div class="pop_footer">
+										<div class="pop_footerInner">
+											<p class="pop_close">
+												<a href="#billPopOpen02" >닫기</a>
+											</p>
+										</div>
+									</div>
+									<!-- e : footer -->
+								</div>
+								<!-- e : 레이어 팝업 -->
+							</fieldset>
+						</div>
+						<!-- e : search comm -->
+						
+						<!-- s : 데이터가 없을 경우 -->
+						<div class="bill_payChangeWrap billNoData pb30" style="display:none;">
+							<div class="comm_noContents mt23">
+								<p><strong>조회된 데이터가 없습니다.</strong></p>
+							</div>
+							<div class="comm_contsInner grayBox bottom"></div>
+						</div>
+						<!-- e : 데이터가 없을 경우 -->
+
+
+						<!-- s : 데이터가 있을 경우 -->
+						<div class="bill_payChangeWrap billHasData mt23 pb30">	
+							<div class="commTitleWrap mt23">
+								<h4 class="comm_scnTitle02">이용중인 납부 방법</h4>
+							</div>
+							
+							<!-- 은행계좌 자동이체 ( type_bank ) -->
+							<div class="comm_tableBrdr type_bank active">
+								<table class="comm_table" summary="명세서번호, 납부방법, 은행명, 납부 기준일, 계좌번호, 예금주를 확인 할 수 있는 표 입니다.">
+									<caption>은행계좌 자동이체 세부 항목표</caption>
+									<colgroup>
+										<col width="114" />
+										<col width="241" />
+										<col width="114" />
+										<col width="*" />
+									</colgroup>
+								
+									<tbody>
+										<tr>
+											<th scope="row" class="left">명세서번호</th>
+											<td>5845124***** (010-1234-4567)</td>
+											<th scope="row" class="left">납부방법</th>
+											<td class="last">은행계좌 자동이체</td>
+										</tr>
+										<tr>
+											<th scope="row" class="left">은행명</th>
+											<td>신한</td>
+											<th scope="row" class="left">납부 기준일</th>
+											<td class="last">21일</td>
+										</tr>
+										<tr>
+											<th scope="row" class="left">계좌번호</th>
+											<td>123456***********</td>
+											<th scope="row" class="left">예금주</th>
+											<td class="last">주식회사 지어소프*</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- 신용카드 자동납부 ( type_card )-->
+							<div class="comm_tableBrdr type_card">
+								<table class="comm_table" summary="명세서번호, 납부방법, 신용카드 종류, 납부 기준일, 카드번호를 확인 할 수 있는 표 입니다.">
+									<caption>신용카드 자동납부 세부 항목표</caption>
+									<colgroup>
+										<col width="114" />
+										<col width="241" />
+										<col width="114" />
+										<col width="*" />
+									</colgroup>
+								
+									<tbody>
+										<tr>
+											<th scope="row" class="left">명세서번호</th>
+											<td>5845124***** (010-1234-4567)</td>
+											<th scope="row" class="left">납부방법</th>
+											<td class="last">신용카드 자동납부</td>
+										</tr>
+										<tr>
+											<th scope="row" class="left">신용카드</th>
+											<td>비씨</td>
+											<th scope="row" class="left">납부 기준일</th>
+											<td class="last">말일</td>
+										</tr>
+										<tr>
+											<th scope="row" class="left">카드번호</th>
+											<td class="last" colspan="3">1234-11**-****-****1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- 지로 납부 ( type_giro )-->
+							<div class="comm_tableBrdr type_giro">
+								<table class="comm_table" summary="명세서번호, 납부방법, 납부 기준일, 청구주소를 확인 할 수 있는 표 입니다.">
+									<caption>지로 납부 세부 항목표</caption>
+									<colgroup>
+										<col width="114" />
+										<col width="241" />
+										<col width="114" />
+										<col width="*" />
+									</colgroup>
+								
+									<tbody>
+										<tr>
+											<th scope="row" class="left">명세서번호</th>
+											<td>5845124***** (010-1234-4567)</td>
+											<th scope="row" class="left">납부방법</th>
+											<td class="last">지로 납부</td>
+										</tr>
+										<tr>
+											<th scope="row" class="left">납부 기준일</th>
+											<td class="last" colspan="3">27일</td>
+										</tr>
+										<tr>
+											<th scope="row" class="left">청구주소</th>
+											<td class="last" colspan="3">
+												<div class="addressList">
+													<ul>
+														<li><p class="iconAroundBlack"><span class="iconText">도로명</span></p>서울 종로구 세종로 123</li>
+														<li><p class="iconAroundBlack"><span class="iconText">지번</span></p>서울 종로구 종로동 123</li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<form action="post" class="">
+							<div class="commTitleWrap mt23">
+								<h4 class="comm_scnTitle02">납부방법 변경</h4>
+							</div>
+							
+							<div class="comm_tableBrdr">
+								<table class="comm_table" summary="변경내용, 납부방법 선택할 수 있는 표 입니다.">
+									<caption>변경할 납부 방법 선택표</caption>
+									<colgroup>
+										<col width="179" />
+										<col width="*" />
+									</colgroup>
+								
+									<tbody>
+										<tr>
+											<th scope="row" class="left">변경 내용</th>
+											<td class="last">
+												<div class="comm_radio">
+													<input type="radio" name="payChangeOpt" id="payChangeOpt1" checked="checked" /><i></i>
+													<label for="payChangeOpt1">납부방법+납부기준일</label>
+												</div>
+												<div class="comm_radio ml15">
+													<input type="radio" name="payChangeOpt" id="payChangeOpt2" /><i></i>
+													<label for="payChangeOpt2">납부기준일</label>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<!-- 납부방법+납부기준일 ( payChangeOpt1 )-->
+								<div class="payChangeOpt1">
+									<fieldset>
+									<legend>납부방법 선택</legend>
+										<table class="comm_table" summary="납부방법을 선택할 수 있는 표 입니다.">
+											<caption>납부방법 설정표</caption>
+											<colgroup>
+												<col width="179" />
+												<col width="*" />
+											</colgroup>
+											
+											<tbody>
+												<tr>
+													<th scope="row" class="left">납부방법</th>
+													<td class="last">
+														<div class="comm_radio">
+															<input type="radio" name="payChangeOptSub" id="payOpt_card" checked="checked" /><i></i>
+															<label for="payOpt_card">신용카드 자동납부</label>
+														</div>
+														<div class="comm_radio ml15">
+															<input type="radio" name="payChangeOptSub" id="payOpt_bank" /><i></i>
+															<label for="payOpt_bank">은행계좌 자동이체</label>
+														</div>
+														<div class="comm_radio ml15">
+															<input type="radio" name="payChangeOptSub" id="payOpt_giro" /><i></i>
+															<label for="payOpt_giro">지로납부</label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+									
+									<!-- 신용카드 자동이체 ( payOpt_bank )-->
+									<fieldset class="payOpt_bank">
+									<legend>은행계좌 자동이체</legend>
+										<table class="comm_table" summary="은행선택, 계좌번호, 사업자등록번호, 예금주명, 납부일을 선택할 수 있는 표 입니다.">
+											<caption>은행계좌 자동이체 상세항목표</caption>
+											<colgroup>
+												<col width="179" />
+												<col width="*" />
+											</colgroup>
+											
+											<tbody>
+												<tr>
+													<th scope="row" class="left"><label for="billSelectBox_bank">은행 선택</label></th>
+													<td class="last">
+														<div class="selectWrap w170">
+															<select id="billSelectBox_bank">
+																<option>선택하세요</option>
+																<option>국민은행</option>
+																<option>하나은행</option>
+																<option>기업은행</option>
+															</select>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left"><label for="type_bank_account">계좌번호</label></th>
+													<td class="last">
+														<input type="text" id="type_bank_account" class="w180" />
+														<span class="pl10 font13 color666">"-" 없이 숫자만 입력해주세요.</span>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left"><label for="type_bank_sanum">사업자등록번호</label></th>
+													<td class="last">
+														<input type="text" id="type_bank_sanum" class="w180" />
+														<span class="pl10 font13 color666">"-" 없이 숫자만 입력해주세요.</span>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left"><label for="type_bank_name">예금주 명</label></th>
+													<td class="last">
+														<input type="text" id="type_bank_name" class="w110" />
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">납부일</th>
+													<td class="last">
+														<div class="comm_radio">
+															<input type="radio" name="bankPayDate" id="type_bank_PayDate1" checked="" /><i></i>
+															<label for="type_bank_PayDate1">21일</label>
+														</div>
+														<div class="comm_radio ml15">
+															<input type="radio" name="bankPayDate" id="type_bank_PayDate2" /><i></i>
+															<label for="type_bank_PayDate2">25일</label>
+														</div>
+														<div class="comm_radio ml15">
+															<input type="radio" name="bankPayDate" id="type_bank_PayDate3" /><i></i>
+															<label for="type_bank_PayDate3">27일</label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+									
+									<!-- 신용카드 자동이체 ( payOpt_card )-->
+									<fieldset class="payOpt_card">
+									<legend>신용카드 자동납부</legend>
+										<table class="comm_table" summary="카드종류, 카드번호, 유효기간, 할부기간, 납부기준일을 선택할 수 있는 표 입니다.">
+											<caption>신용카드 자동납부 상세항목표</caption>
+											<colgroup>
+												<col width="179" />
+												<col width="*" />
+											</colgroup>
+											
+											<tbody>
+												<tr>
+													<th scope="row" class="left"><label for="type_card_kind">카드종류</label></th>
+													<td class="last">
+														<div class="selectWrap w170">
+															<select id="type_card_kind">
+																<option>선택하세요</option>
+																<option>국민은행</option>
+																<option>하나은행</option>
+																<option>기업은행</option>
+															</select>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left"><label for="type_card_kind">카드번호</label></th>
+													<td class="last">
+														<input type="text" id="type_card_kind" class="w180" />
+														<span class="pl10 font13 color666">"-" 없이 숫자만 입력해주세요.</span>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left"><label for="type_card_validDate1">유효기간</label></th>
+													<td class="last">
+														<input type="text" id="type_card_validDate1" class="w80" />
+														<span class="pl10 font13 color666">월 /</span>
+														<label for="type_card_validDate2" class="blind">유효기간 년도</label>
+														<input type="text" id="type_card_validDate2" class="w90" />
+														<span class="pl10 font13 color666">년</span>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left"><label for="type_card_halbu">할부기간</label></th>
+													<td class="last">
+														<div class="selectWrap w100">
+															<select id="type_card_halbu">
+																<option>일시불</option>
+																<option>1개월</option>
+																<option>2개월</option>
+																<option>3개월</option>
+															</select>
+														</div>
+														<span class="iconWarningGray ml10 font13 color666">납부하실 금액이 5만원 이상인 경우 할부 선택이 가능합니다.</span>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">납부기준일</th>
+													<td class="last">
+														<div class="comm_radio">
+															<input type="radio" name="type_bank_payDate" id="type_card_PayDate1" /><i></i>
+															<label for="type_card_PayDate1">말일</label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+									
+									<!-- 지로 납부 ( payOpt_giro )-->
+									<fieldset class="payOpt_giro">
+									<legend>지로 납부</legend>
+										<table class="comm_table" summary="청구지 정보, 납부일을 선택할 수 있는 표 입니다.">
+											<caption>지로 납부 상세항목표</caption>
+											<colgroup>
+												<col width="179" />
+												<col width="*" />
+											</colgroup>
+											
+											<tbody>
+												<tr>
+													<th scope="row" class="left">청구지 정보</th>
+													<td class="last">
+														<div class="addressList hasBtn">
+															<ul>
+																<li><p class="iconAroundBlack"><span class="iconText">도로명</span></p>서울 종로구 세종로 123</li>
+																<li><p class="iconAroundBlack"><span class="iconText">지번</span></p>서울 종로구 종로동 123</li>
+															</ul>
+															<div class="posR">
+																<a href="" id="addInfoSocmy_fee_tab010_open" class="btnSty mid">변경</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">납부일</th>
+													<td class="last">
+														<div class="comm_radio">
+															<input type="radio" name="type_giro_payDate" id="type_giro_PayDate1" checked="" /><i></i>
+															<label for="type_giro_PayDate1">25일</label>
+														</div>
+														<div class="comm_radio ml15">
+															<input type="radio" name="type_giro_payDate" id="type_giro_PayDate2" /><i></i>
+															<label for="type_giro_PayDate2">27일</label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+								</div>
+								
+								<!-- 납부기준일 ( payChangeOpt2 )-->
+								<div class="payChangeOpt2">
+									<fieldset>
+									<legend>납부 기준일</legend>
+										<table class="comm_table" summary="납부기준일을 선택할 수 있는 표 입니다.">
+											<caption>납부기준일 설정표</caption>
+											<colgroup>
+												<col width="179">
+												<col width="*">
+											</colgroup>
+											
+											<tbody>
+												<tr class="payChangeOpt2">
+													<th scope="row" class="left">납부일</th>
+													<td class="last">
+														<div class="comm_radio">
+															<input type="radio" name="searchDate" id="years" checked="" /><i></i>
+															<label for="years">25일</label>
+														</div>
+														<div class="comm_radio ml15">
+															<input type="radio" name="searchDate" id="allDate" /><i></i>
+															<label for="allDate">27일</label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+								</div>
+								
+							</div>
+							</form>
+						</div>
+						<!-- e : 데이터가 있을 경우 -->
+						
+					</div>
+				</div>
+				<!-- e : gray box -->
+				
+				<div class="comm_contsInner whiteBox comm_contsBt billHasDataAgree">
+					<div class="comm_contsInner whiteBox pt30">
+						<p class="emp01 font15">납부 방법 변경을 위해 본인 인증이 필요합니다.</p>
+						<p>납부방법 변경 버튼을 클릭하시면 본인 인증 절차가 진행됩니다.</p>
+						<div class="comm_checkbox mt10">
+							<input type="checkbox" id="chkAgree" name="chkAgree" onclick="chkValue();" /><i></i>
+							<label for="chkAgree" class="color666">본인확인 절차 진행에 동의합니다.</label>
+						</div>
+						<div class="commBtnWrap pt20 pb40">
+							<a href="납부방법변경_완료.html" class="btnSty red big">납부방법 변경</a>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- s : 알려드립니다 -->
+				<div class="comm_noticeBox billGuideWrap">
+					<h4 class="title">안내드립니다.</h4>
+					
+					<div class="guideWrap">
+						
+						<div class="billGuideTabWrap">
+							<ul>
+								<!-- 납부방법 변경안내 -->
+								<li class="billGuide1 selected">
+									<a href="" class="menuBtn">납부방법<br />변경안내</a>
+									
+									<div class="billGuideCont">
+										<p class="guideTitle">선택가능한 납부 방법</p>
+										<div class="payGuide11 mt10">
+											<ul class="payOpt">
+												<li class="bg1"><span>은행계좌</span></li>
+												<li class="bg2"><span>신용카드</span></li>
+												<li class="bg3"><span>지로</span></li>
+											</ul>
+											<ul class="notice-list">
+												<li>상품 가입 명의자(법인사업자)의 계좌 또는 신용카드로만<br />변경 가능합니다.</li>
+												<li>타인명의의 계좌 또는 신용카드로 변경을 원하실 경우 구비서류를<br />지참하시고 가까운 대리점 혹은 kt플라자로 신청하시기 바랍니다.</li>
+												<li>구비서류 : 납부방법 변경 동의서 혹은 신청서, 법인사업자등록증<br />사본, 위임장, 대리인 및 납부자 신분증, 법인인감증명서,<br />납부자(예금주) 신분증</li>
+											</ul>
+										</div>
+										
+										<p class="guideTitle">변경 가능한 납부 기준일</p>
+										<div class="payGuide12 mt20">
+											<dl>
+												<dt>은행계좌</dt>
+												<dd>매월 21일, 25일, 27일</dd>
+											</dl>
+											<dl>
+												<dt>신용카드</dt>
+												<dd>매월 말일</dd>
+											</dl>
+											<dl>
+												<dt>지로</dt>
+												<dd>매월 25일, 27일</dd>
+											</dl>
+										</div>
+										
+										<p class="guideTitle">납부방법 변경 적용 안내</p>
+										<div class="comm_tableBrdr mt18">
+											<table class="comm_table" summary="정보를 확인할 수 있는 표입니다.">
+												<caption> 정보 표</caption>
+												<colgroup>
+													<col width="220">
+													<col width="*">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="col" class="font13 left">동일한 방법으로 변경 시<br />(예 : 은행 ↔ 은행)</th>
+														<td class="last"><span class="font13 color666">납부정보 및 납기일을 변경 시, 당월 적용 됩니다.<br />* 은행, 카드사로 당월 납부요청이 지난 후 변경 시, 다음달부터 적용됩니다. </span></td>
+													</tr>
+													<tr>
+														<th scope="col" class="font13 left">다른 방법으로 변경 시<br />(예 : 은행 ↔ 신용카드)</th>
+														<td class="last"><span class="font13 color666">납부정보 및 납기일을 변경 시, 다음 달 적용 됩니다.</span></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+								
+								<!-- 은행계좌 자동이체 안내 -->
+								<li class="billGuide2">
+									<a href="" class="menuBtn">은행계좌<br />자동이체 안내</a>
+									
+									<div class="billGuideCont">
+										<p class="guideTitle">납부가능 은행</p>
+										<div class="mt17">
+											<ul class="notice-list">
+												<li>
+													경남은행, 광주은행, 국민(주택)은행, 기업은행, 농협, 대구은행, 부산은행, 산림조합, 산업은행, 새마을금고, 수협중앙회, <br />
+													신한(조흥)은행, 신협, 우리은행, 우체국, 전북은행, 제주은행, KEB 하나은행, 한국시티(한미)은행, SC은행(SC제일),BOA<br />
+													(BankofAmerica), 대우증권, 메리츠증권, 미래에셋증권, 삼성증권, 신영증권 , SK증권, 신한금융투자, 우리투자증권,<br />
+													유안타(동양)증권, 유진투자증권, 하나대투증권, 하이투자증권, 한국투자증권, 한화증권, 현대증권, HMC증권
+												</li>
+											</ul>
+										</div>
+										<p class="guideTitle">은행계좌 자동이체 등록 유의 사항안내</p>
+										<div class="mt17">
+											<ul class="notice-list">
+												<li>은행계좌, 자동이체 신청/변경은 해당은행과 계좌인증 절차가 필요하므로, 은행 업무시간에만 가능합니다.</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								
+								<!-- 신용카드 납부안내 -->
+								<li class="billGuide3">
+									<a href="" class="menuBtn">신용카드<br />납부안내</a>
+									
+									<div class="billGuideCont">
+										<p class="guideTitle">자동납부 가능 카드</p>
+										<div class="mt17">
+											<ul class="notice-list">
+												<li>국내카드 전체 가능</li>
+											</ul>
+										</div>
+										<p class="guideTitle">자동납부 승인일</p>
+										<div class="payGuideStep mt25">
+											<ol>
+												<li class="li1">1차 승인 <strong>10일</strong></li>
+												<li class="side">미승인시</li>
+												<li class="li2">2차 승인 <strong>17일</strong></li>
+												<li class="side">미승인시</li>
+												<li class="li3">3차 승인 <strong>24일</strong></li>
+											</ol>
+										</div>
+										<div class="mt15">
+											<ul class="notice-list">
+												<li>
+													실제 처리 과정에서 카드사마다 실제 승인일은 약간 다를 수 있습니다.
+												</li>
+												<li>
+													신용카드 납부방법으로 설정하신 고객님 중 체크카드의 경우, 명세서 도착보다 먼저 출금이 될 수 있습니다.
+												</li>
+												<li>
+													신용카드사에서 발행하는 이용대금명세서에 당사의 승인요청 금액이 포함되는 시기는 고객님의 카드사 신청 결제일에 따라<br />당사가 승인 요청한 당월 또는 익월에 포함하여 청구됩니다.
+												</li>
+											</ul>
+										</div>
+										<p class="guideTitle">자동납부 등록 유의사항</p>
+										<div class="mt17">
+											<ul class="notice-list">
+												<li>
+													해외카드(외국계카드사) 자동납부 등록시 카드 유효성 체크를 위해서 1,000원 선 결제 후 자동으로 결제 취소 됩니다.<br />(유효성 체크 오류가 발생할 경우 1,000원 선결제 처리가 되지 않습니다.)
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								
+								<!-- 지로 납부안내 -->
+								<li class="billGuide4">
+									<a href="" class="menuBtn">지로<br />납부안내</a>
+									
+									<div class="billGuideCont">
+										<p class="guideTitle">지로납부 안내</p>
+										<div class="mt17">
+											<ul class="notice-list">
+												<li>지로납부는 외국인 혹은 개인명의로 신청/변경이 불가합니다.</li>
+												<li>지로납부 신청 시 청구주소 변경을 하면 명세서 수령방법의 주소도 동일하게 변경됩니다.</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e : 알려드립니다 -->
+
+
+				
+
+
+				<!-- e : 컨텐츠 영역  -->
+			</div>
+			<!-- e : content Body -->
+		</div>
+		<hr />
+		<!-- e : content Body wrap -->
+	</div>
+	<!-- e : cont container -->
+
+
+	<!-- s : footer -->
+	<div id="cfmOllehFooter">
+		<script type="text/javascript">$.ktBizFooterView();</script>
+	</div>
+	<!-- e : footer -->
+</div>
+</body>
+</html>
+
