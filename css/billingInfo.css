@@ -128,10 +128,10 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphVisualBlock .restDateTooltip span {display:block;margin-top:-2px;font-family:'Spoqa Han Sans';font-size: 16px;}
 .graphTableBlock .comm_tableBrdr {width:340px;margin-top:52px;}
 .graphTableBlock table.comm_table {border-left:0; border-right:0;}
-.graphTableBlock table.comm_table th, .graphTableBlock table.comm_table td {height:15px;padding:22px 1px 5px 2px;}
-.graphTableBlock table.comm_table th {background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 75%;font-size: 15px; color: #333;font-weight: normal}
-.graphTableBlock table.comm_table td {font-size: 15px; color: #000}
-.graphTableBlock table.comm_table td span.num {font-size: 15px !important}
+.graphTableBlock.diffTableCase table.comm_table th, .graphTableBlock.diffTableCase table.comm_table td {height:15px;padding:22px 1px 5px 2px;}
+.graphTableBlock.diffTableCase table.comm_table th {background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 75%;font-size: 15px; color: #333;font-weight: normal}
+.graphTableBlock.diffTableCase table.comm_table td {font-size: 15px; color: #000}
+.graphTableBlock.diffTableCase table.comm_table td span.num {font-size: 15px !important}
 
 
 /* 명세서 변경 */

@@ -345,7 +345,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>실시간 요금</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>사용량 조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>분리납부내역 조회</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부/조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>납부방법 변경</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 관리</a></li>";
                                 gnbItem += "</ul>";
@@ -748,7 +748,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>실시간 요금</a></li>";
                                 gnbItem += "<li><a href='#'>사용량 조회</a></li>";
                                 gnbItem += "<li><a href='#'>분리납부내역 조회</a></li>";
-                                gnbItem += "<li><a href='#'>요금납부</a></li>";
+                                gnbItem += "<li><a href='#'>요금납부/조회</a></li>";
                                 gnbItem += "<li><a href='#'>납부방법 변경</a></li>";
                                 gnbItem += "<li><a href='#'>명세서 관리</a></li>";
                               gnbItem += "</ul>";
@@ -1129,9 +1129,13 @@ $(document).ready(function(){
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
                     lnbItem += "<a href='#' id='BAE'>분리납부내역 조회</a>";
                   lnbItem += "</li>";
-                  lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BAF'>요금납부</a>";
-                  lnbItem += "</li>";
+                  lnbItem += "<li id='li_BAF' class=''>";
+                      lnbItem += "<a href='#' onclick='$.ktBizLnbView.click(this); return false;'  id='BAF' title='하위메뉴 열기'>요금납부/조회</a>";
+                      lnbItem += "<ul id='sub_BAF' class='cfmOllehLnbNewListCont' style='display: none;'>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BAFA'>요금납부</a></li>";
+                          lnbItem += "<li class='cfmOllehLnbNewNoDepth'><a href='#' id='BAFB'>납부내역조회</a></li>";
+                      lnbItem += "</ul>";
+                lnbItem += "</li>";
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
                     lnbItem += "<a href='#' id='BAG'>납부방법 변경</a>";
                   lnbItem += "</li>";
@@ -1575,7 +1579,7 @@ $(function(){
   */
   $.ktBizMobileUsage = function(type){
       var $type = type;
-      var $case = ["dataCase", "callCase", "smsCase"];
+      var $case = ["dataCase", "voiceCase", "smsCase"];
       var $totalDate = $.ktBizMobileUsage.setDate();
       for(var i =0; i <= $case.length; i++ ){
           if($case[i] == $type){
