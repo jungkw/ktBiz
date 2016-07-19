@@ -113,7 +113,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 /* 사용량 조회 모바일 */
 .bill_graphBoxWrap {padding-top:65px;overflow: hidden;position: relative;background: #fff;border-left: 1px solid #ccc;border-right: 1px solid #ccc;}
 .bill_graphBoxWrap h4 {position: absolute;top:77px;left:399px;font-size: 21px;font-weight: bold;color: #333}
-.bill_graphBoxWrap h4dl {position: absolute;top:80px;right:28px;font-size:15px;color:#666;}
+.bill_graphBoxWrap h4 + dl {position: absolute;top:80px;right:28px;font-size:15px;color:#666;}
 .bill_graphBoxWrap .graphVisualBlock {width: 399px;height:395px;position:relative;float: left;background: url('../images/bg/bill_bg_usageMobile01.png') 67px 0 no-repeat;}
 .bill_graphBoxWrap .graphVisualBlock .topText {width:160px;position: absolute;left:97px;top:22px; font-size: 13px;color:#333;}
 .bill_graphBoxWrap .graphVisualBlock .topText p {text-align:center;}
