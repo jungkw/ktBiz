@@ -170,6 +170,8 @@ border-radius: 3px 3px 3px 3px;
 .btnSty.icon_xls span {padding:0 0 0 21px;background:url('../images/icon/comm_icon_excelDown.png') no-repeat left center;}
 .btnSty.icon_speaker span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_speaker.png') no-repeat left center;}
 .btnSty.icon_refresh span {padding:0 0 0 23px;background:url('../images/icon/comm_icon_refresh.png') no-repeat left center;}
+.btnSty.icon_question span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_question.png') no-repeat left center;}
+.btnSty.icon_note span {padding:0 0 0 18px;background:url('../images/icon/comm_icon_note.png') no-repeat left center;}
 
 
 /* btn color */
@@ -279,6 +281,7 @@ border-radius: 3px 3px 3px 3px;
 .fl {float:left;}
 .fr {float:right;}
 .fr20 {float:right;padding-right:20px;}
+.clearfix:after {content: ''; display: block; clear: both;}
 .num {font-weight:400; font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
 .emp01 {color:#ef1c25 !important;}
 .emp02 {color:#333 !important;}
@@ -365,6 +368,7 @@ a.color333 {color:#333 !important;}
 .mr2 {margin-right:10px;}
 .mr5 {margin-right:5px;}
 .mr8 {margin-right:5px;}
+.mr12 {margin-right:12px;}
 .mr26 {margin-right: 26px !important}
 .mr29 {margin-right: 29px !important}
 .mr30 {margin-right:30px;}
@@ -373,7 +377,7 @@ a.color333 {color:#333 !important;}
 .mb2 {margin-bottom:2px;}
 .mb5 {margin-bottom:5px;}
 .mb6 {margin-bottom:6px;}
-.mb7{margin-bottom:7px;}oot
+.mb7{margin-bottom:7px;}
 .mb8{margin-bottom:8px !important;}
 .mb10 {margin-bottom:10px !important}
 .mb11 {margin-bottom:11px !important}
@@ -430,10 +434,11 @@ a.color333 {color:#333 !important;}
 .font15 {font-size:15px !important;}
 .font16 {font-size:16px;}
 .font17 {font-size:17px !important;}
+.font18 {font-size:18px !important;}
 .font19 {font-size:19px !important;}
 .font20 {font-size:20px;}
 .font21 {font-size:21px;}
-.font24 {font-size:24px;}
+.font24 {font-size:24px !important;}
 .alignLeft {text-align:left;}
 .alignCenter {text-align:center;}
 .alignRight {text-align:right;}
@@ -451,17 +456,22 @@ a.color333 {color:#333 !important;}
 .br000 {border-right:1px solid #000;}
 .bgNone {background: none!important}
 .bl0after:after{border-left:0 !important;}
+.bl0 {border-left:0 !important;}
+.br0 {border-right:0 !important;}
 .color666 {color: #666 !important}
 .lh28 {line-height: 28px !important;}
 .lh24 {line-height: 24px !important;}
 .lh20 {line-height: 20px !important;}
+.lh15 {line-height: 15px !important;}
 .b0{border:0 !important;}
+.bt0 {border-top:0 !important;}
 .bt1 {border-top:1px solid #ccc;}
 .bt1d {border-top:1px solid #ddd;}
 .bb1 {border-bottom:1px solid #ccc;}
 .bb1dashed {border-bottom:1px dashed #ccc;}
 .lrpadding {padding:0 29px;}
 .tbpadding29 {padding:29px !important;}
+.lrmargin {margin: 0 29px !important}
 
 /* width */
 .w90p {width:90% !important;}
@@ -504,6 +514,7 @@ a.color333 {color:#333 !important;}
 .w250{width:250px !important}
 .w270{width:270px}
 .w272{width:272px}
+.w315{width:315px}
 .w330{width:330px}
 .w340{width:340px}
 .w400{width:400px}
@@ -546,7 +557,7 @@ a.color333 {color:#333 !important;}
 .right30 {right:30px;}
 .left0 {left:0;}
 .left20 {left:20px;}
-
+.m0auto {margin:0 auto!important;}
 
 /* radio  */
 .comm_radio, .comm_checkbox {position: relative;display: inline-block; min-width:24px; min-height:24px;}
