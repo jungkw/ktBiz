@@ -1634,11 +1634,15 @@ $(function(){
   // data Graph
   $.ktBizMobileUsage.dataCase = function(type){
       var $obj = $('.'+type);
+      var $txtSize = 60;                                                                      // 텍스트 사이즈
       var $restItem = $obj.find('.rest-data');                                   // 잔여 사용량 Object
       var $overItem = $obj.find('.over-data');                                   // 초과 사용량 Object
       var $restSh = (265-$restItem.height());                                   //사용량 margin 값 계산
       var $overSh = (265-$overItem.height());                                   // 초과 사용량 margin 값 계산
-      var $txtPosition = ($restSh-30)/2;                                              // 텍스트 포지션 계산
+      var $txtPosition01 = (($restItem.height()-$txtSize)/2)+10;           // 텍스트 포지션 계산 
+      var $txtPosition02 = (($overItem.height()-$txtSize)/2)+10;
+      var $restSpan = $restItem.children('span');
+      var $overSpan = $overItem.children('span');
       var $overValidate, $overfullValidate, $restValidate = false;  // 체크용도
       
       // 데이터가 초과 인 상태인지 확인
@@ -1651,7 +1655,7 @@ $(function(){
 
       // 현재 데이터가 100% 인지 확인
       if($restItem.height() == 265){
-          $restSh = 30;
+          $restSh = 30; // 100% marginTop 사이즈
           $restValidate = true;
       }
 
@@ -1660,24 +1664,49 @@ $(function(){
           // 초과 사용량일 경우
           if($overValidate){
               $restItem.hide();
-
+              $overSpan.css('paddingTop', $txtPosition02);
               // 초과 사용량이 100% 일 경우
               if($overfullValidate){
-                  $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full');$overItem.children('span').removeClass('blind');});
+                  $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full');$overSpan.removeClass('blind');});
               // 초과 사용량이 100% 미만 일 경우
               }else{
-                  $overItem.animate({'marginTop' : $overSh}, 1000, function(){$overItem.children('span').removeClass('blind');});
+                    $overItem.animate({'marginTop' : $overSh}, 1000, function(){
+                    $overSpan.removeClass('blind');
+
+                    // 글자가 밖으로 나와야 하는 경우. 
+                   // 265는 margin값.
+                   // 80은 txtSize의 여유값
+                    if($overSh > (265/2)){ 
+                        $overSpan.addClass('outTxt');
+                        $overSpan.css({'marginLeft':'-'+($overSpan.width()/2)+'px', 'top':($overSh-$txtSize)/2+'px'});
+                        console.log($overSpan.width()/2)
+                    }
+                });
+                  
+
               }
           
           // 잔여량 일 경우
           }else{
+
+              $restSpan.css('paddingTop', $txtPosition01);
+
               // 잔여량이 100% 일 경우
               if($restValidate){
-                $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restItem.children('span').removeClass('blind');});
+                $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restSpan.removeClass('blind');});
 
               //잔여량이 100% 미만 일 경우
               }else{
-                 $restItem.children('span').removeClass('blind');
+                 $restSpan.removeClass('blind');
+                 // 글자가 밖으로 나와야 하는 경우. 
+                 // 265는 margin값.
+                 // 80은 txtSize의 여유값
+                  if($restSh > (265/2)){ 
+
+                      $restSpan.addClass('outTxt');
+                      $restSpan.css({'marginLeft':'-'+($restSpan.width()/2)+'px', 'top':($restSh-$txtSize)/2+'px'});
+
+                  }
 
               }
              
@@ -1724,9 +1753,11 @@ $(function(){
   // sms Graph
   $.ktBizMobileUsage.smsCase = function(type){
       var $obj = $('.'+type);
+      var $txtSize = 60;
       var $restItem = $obj.find('.rest-data');                                   // 잔여 사용량 Object
       var $restSh = (265-$restItem.height());                                   //사용량 margin 값 계산
-      var $txtPosition = ($restSh-30)/2;                                              // 텍스트 포지션 계산
+      var $txtPosition = (($restItem.height()-$txtSize)/2)+10;         // 텍스트 포지션 계산
+      var $restSpan = $restItem.children('span');
       var $restValidate = false;                                                           // 체크용도
 
       // 현재 데이터가 100% 인지 확인
@@ -1737,13 +1768,24 @@ $(function(){
 
       $restItem.height('100%');
       $restItem.animate({'marginTop' : $restSh}, 1000, function() {
+
+          $restSpan.css('paddingTop', $txtPosition);
            // 잔여량이 100% 일 경우
             if($restValidate){
               $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restItem.children('span').removeClass('blind');});
 
             //잔여량이 100% 미만 일 경우
             }else{
-               $restItem.children('span').removeClass('blind');
+               $restSpan.removeClass('blind');
+                 // 글자가 밖으로 나와야 하는 경우. 
+                 // 265는 margin값.
+                 // 80은 txtSize의 여유값
+                  if($restSh > (265/2)){ 
+
+                      $restSpan.addClass('outTxt');
+                      $restSpan.css({'marginLeft':'-'+($restSpan.width()/2)+'px', 'top':($restSh-$txtSize)/2+'px'});
+
+                  }
 
             }
       });
