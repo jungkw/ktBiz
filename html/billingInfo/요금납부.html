@@ -652,7 +652,7 @@
 								</div>
 							</div>
 							<div class="pop_contsBtns">
-								<a href="#billCertifyDetailLayerPop" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, $(this).closest('.pop_layerWrap').find('.pop_close a').attr('href')); return false;"><span>범용 공인인증서 인증</span></a>
+								<a href="#billCertifyDetailLayerPop" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, $(this).closest('.pop_layerWrap').find('.pop_close a').attr('href')); return false;" id="billCertifyDetailOpenPop01"><span>범용 공인인증서 인증</span></a>
 							</div>
 						</div>
 						<!-- e : contents -->
@@ -776,7 +776,11 @@
 					<!-- e : footer -->
 				</div>
 				<!-- e : 요금납부 레이어 팝업 -->
+
+
 				
+				<a href="#billBankServiceLayerPop" class="blind" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, $(this).closest('.pop_layerWrap').find('.pop_close a').attr('href')); return false;" id="billBankServiceOpenPop01"><span>은행별 서비스 가능 시간 팝업보기 임시버튼입니다. 개발시 지워주세요.</span></a>
+
 				<!-- s : 은행별 서비스 가능 시간 레이어 팝업 -->
 				<div class="pop_layerWrap" id="billBankServiceLayerPop" style="margin-left:-375px; width: 750px; display:none;">
 					<div class="pop_wrap">
