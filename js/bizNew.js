@@ -1719,5 +1719,68 @@ $(function(){
 		});
 	}
 
+	/*
+    *  납부방법 변경 radio
+	*/
+
+	if ($('.bill_payChangeWrap').length) {
+		ktBizBillPayRadio('.billHasData');
+	}
+
+	function ktBizBillPayRadio(selector) {
+		var $container = $(selector),
+			$target = $("input:radio[name='payChangeOpt'], input:radio[name='payChangeOptSub']");
+		
+		$target.each(function() {
+			radioChk( $(this) );
+		});
+
+		$target.on('click', function() {
+			radioChk( $(this) );
+		});
+
+		function radioChk(idx) {
+			var chkItem = idx,
+				chkItemID = chkItem.attr('id');
+
+			if( chkItem.is(':checked') ) {
+				if ( chkItemID == 'payOpt_giro' ) {
+					$('.payOpt_giro').show();
+					$('.payOpt_card, .payOpt_bank').hide();
+				} else if ( chkItemID == 'payOpt_bank' ) {
+					$('.payOpt_bank').show();
+					$('.payOpt_card, .payOpt_giro').hide();
+				} else if ( chkItemID == 'payOpt_card' ) {
+					$('.payOpt_card').show();
+					$('.payOpt_giro, .payOpt_bank').hide();
+				} else if ( chkItemID == 'payChangeOpt1' ) {
+					$('.payChangeOpt1').show();
+					$('.payChangeOpt2').hide();
+				} else if ( chkItemID == 'payChangeOpt2' ) {
+					$('.payChangeOpt2').show();
+					$('.payChangeOpt1').hide();
+				}
+			}
+		}
+	};
+
+
+	/*
+    *  안내드립니다. 탭
+	*/
+	if ($('.billGuideTabWrap').length) {
+		billGuideTab('.billGuideTabWrap');
+	}
+
+	function billGuideTab(selector) {
+		var $container = $(selector)
+			$item = $container.children('ul').children('li');
+
+		$item.find('.menuBtn').on('click focus', function(e) {
+			e.preventDefault();
+			$(this).closest('li').addClass('selected').siblings().removeClass('selected');
+		});
+	}
+
 
 });
