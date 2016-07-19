@@ -135,6 +135,21 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span strong {font-size:26px;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;} 
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data.full span,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full span {padding-top:100px;} 
+
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span,
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span {font-size:13px;color:#fff;display: block;text-align: center;letter-spacing: -1px}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data em, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data em,
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data em {display: block;}
+
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span.outTxt, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt,
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {width:54px;position: absolute;top:0;color:#df2428;padding:0 !important;} 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt {color: #e5782b}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {color: #5a9c42}
+
+
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div {width:53px;float:left;}
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.internal-data {width:54px;background: url('../images/bg/bill_bg_internalDataRed.png');}
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.media-data {background: url('../images/bg/bill_bg_mediaDataYellow.png');}
