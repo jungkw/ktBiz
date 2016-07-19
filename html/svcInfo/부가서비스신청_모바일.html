@@ -611,6 +611,26 @@
 
 
 <body>
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<div class="ui-remote">
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn03" href="#addSvcSettingM01" id="addSvcSettingM01Open" onclick="$.ktBizPopClick(this); return false;">정보제공사업자<br />수신 차단 번호 설정 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingM02" id="addSvcSettingM02Open" onclick="$.ktBizPopClick(this); return false;">데이터로밍 하루종일 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingM03" id="addSvcSettingM03Open" onclick="$.ktBizPopClick(this); return false;">데이터로밍<br />하루종일 LTE : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingM04" id="addSvcSettingM04Open" onclick="$.ktBizPopClick(this); return false;">데이터로밍 설정 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingM05" id="addSvcSettingM05Open" onclick="$.ktBizPopClick(this); return false;">olleh LTE my time plan<br />서비스 설정 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingM06" id="addSvcSettingM06Open" onclick="$.ktBizPopClick(this); return false;">음성로밍 하루종일 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">설정 미완료 알림 : 팝업</button>
+</div>
+<!-- e : UI GUIDE -->
+
 <h1 class="blind">올레닷컴(기업)</h1>
 <div id="cfmOllehWrap">
 
@@ -1995,6 +2015,829 @@
 				</div>
 
 				<!-- e : 컨텐츠 영역  -->
+
+
+				<!-- s : 정보제공사업자 수신 차단 번호 설정 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingM01" style="width: 750px; display:none;">
+					<div class="pop_wrap">
+
+						<!-- s : header -->
+						<div class="pop_header">
+							<h1>정보제공사업자 수신 차단 번호 설정</h1>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+								<div class="pop_svc">
+									<div class="infoBox mt0">
+										<h2 class="blind">주의사항</h2>
+										<p>수신차단 번호는 10개까지 설정이 가능합니다.</p>
+										<p>수신차단 번호 별로 음성/문자/음성+문자 차단 기능을 선택하셔야 합니다.</p>
+										<p>수신차단 번호는 030,060,080,15XX,16XX 등 지정된 식별 번호만 선택 지정 가능합니다.</p>
+										<p>식별 번호를 포함한 최소 3자리에서 최대 8자리까지 지정 가능합니다.</p>
+									</div>
+
+									<h2 class="blind">번호입력</h2>
+									<div class="comm_tableBrdr pop_svcBlockNum mt15">
+										<table class="comm_table" summary="번호입력에 관련된 차단번호 01 차단번호 02 차단번호 03 차단번호 04 차단번호 05 차단번호 06 차단번호 07 차단번호 08 차단번호 09 차단번호 10에 대한 내용을 테이블로 제공합니다.">
+											<caption>번호입력 글쓰기게시판</caption>
+											<colgroup>
+												<col width="130" />
+												<col width="*" />
+											</colgroup>
+											<tbody class="fullBorder">
+
+												<tr>
+													<th scope="row"><label for="prefixnum1">차단번호 01</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum1" title="차단번호 01 선택항목">
+																	<option value="">선택</option>
+																	<option value="030" >030</option>
+																	<option value="060" selected="selected">060</option>
+																	<option value="080" >080</option>
+																	<option value="150" >150</option>
+																	<option value="151" >151</option>
+																	<option value="152" >152</option>
+																	<option value="153" >153</option>
+																	<option value="154" >154</option>
+																	<option value="155" >155</option>
+																	<option value="156" >156</option>
+																	<option value="157" >157</option>
+																	<option value="158" >158</option>
+																	<option value="159" >159</option>
+																	<option value="160" >160</option>
+																	<option value="161" >161</option>
+																	<option value="162" >162</option>
+																	<option value="163" >163</option>
+																	<option value="164" >164</option>
+																	<option value="165" >165</option>
+																	<option value="166" >166</option>
+																	<option value="167" >167</option>
+																	<option value="168" >168</option>
+																	<option value="169" >169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input" value="" maxlength="5" title="차단번호 01 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type0" id="sound0" size="3" value="1" />
+																<i></i>
+																<label for="sound0" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type0" id="character0"  size="3" value="2" />
+																<i></i>
+																<label for="character0" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type0" id="type0" size="3" value="3" checked="checked" />
+																<i></i>
+																<label for="type0" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="3" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum2">차단번호 02</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum2" title="차단번호 02 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 02 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type1" id="sound1" size="3" value="1" />
+																<i></i>
+																<label for="sound1" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type1" id="character1"  size="3" value="2" />
+																<i></i>
+																<label for="character1" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type1" id="type1" size="3" value="3" />
+																<i></i>
+																<label for="type1" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum3">차단번호 03</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum3" title="차단번호 03 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 03 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type2" id="sound2" size="3" value="1" />
+																<i></i>
+																<label for="sound2" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type2" id="character2"  size="3" value="2" />
+																<i></i>
+																<label for="character2" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type2" id="type2" size="3" value="3" />
+																<i></i>
+																<label for="type2" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum4">차단번호 04</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum4" title="차단번호 04 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 04 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type3" id="sound3" size="3" value="1" />
+																<i></i>
+																<label for="sound3" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type3" id="character3"  size="3" value="2" />
+																<i></i>
+																<label for="character3" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type3" id="type3" size="3" value="3" />
+																<i></i>
+																<label for="type3" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum5">차단번호 05</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum5" title="차단번호 05 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 05 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type4" id="sound4" size="3" value="1" />
+																<i></i>
+																<label for="sound4" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type4" id="character4"  size="3" value="2" />
+																<i></i>
+																<label for="character4" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type4" id="type4" size="3" value="3" />
+																<i></i>
+																<label for="type4" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum6">차단번호 06</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum6" title="차단번호 06 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 06 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type5" id="sound5" size="3" value="1" />
+																<i></i>
+																<label for="sound5" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type5" id="character5"  size="3" value="2" />
+																<i></i>
+																<label for="character5" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type5" id="type5" size="3" value="3" />
+																<i></i>
+																<label for="type5" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum7">차단번호 07</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum7" title="차단번호 07 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 07 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type6" id="sound6" size="3" value="1" />
+																<i></i>
+																<label for="sound6" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type6" id="character6"  size="3" value="2" />
+																<i></i>
+																<label for="character6" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type6" id="type6" size="3" value="3" />
+																<i></i>
+																<label for="type6" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum8">차단번호 08</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum8" title="차단번호 08 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 08 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type7" id="sound7" size="3" value="1" />
+																<i></i>
+																<label for="sound7" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type7" id="character7"  size="3" value="2" />
+																<i></i>
+																<label for="character7" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type7" id="type7" size="3" value="3" />
+																<i></i>
+																<label for="type7" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum9">차단번호 09</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum9" title="차단번호 09 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 09 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type8" id="sound8" size="3" value="1" />
+																<i></i>
+																<label for="sound8" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type8" id="character8"  size="3" value="2" />
+																<i></i>
+																<label for="character8" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type8" id="type8" size="3" value="3" />
+																<i></i>
+																<label for="type8" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+
+													</td>
+												</tr>
+
+												<tr>
+													<th scope="row"><label for="prefixnum10">차단번호 10</label></th>
+													<td>
+															<div class="selectWrap w70">
+																<select name="prefixnum" id="prefixnum10" title="차단번호 10 선택항목">
+																	<option value="">선택</option>
+																	<option value="030">030</option>
+																	<option value="060">060</option>
+																	<option value="080">080</option>
+																	<option value="150">150</option>
+																	<option value="151">151</option>
+																	<option value="152">152</option>
+																	<option value="153">153</option>
+																	<option value="154">154</option>
+																	<option value="155">155</option>
+																	<option value="156">156</option>
+																	<option value="157">157</option>
+																	<option value="158">158</option>
+																	<option value="159">159</option>
+																	<option value="160">160</option>
+																	<option value="161">161</option>
+																	<option value="162">162</option>
+																	<option value="163">163</option>
+																	<option value="164">164</option>
+																	<option value="165">165</option>
+																	<option value="166">166</option>
+																	<option value="167">167</option>
+																	<option value="168">168</option>
+																	<option value="169">169</option>
+																</select>
+															</div>
+															<input name="ctn" type="text" class="form_input"  maxlength="5" title="차단번호 10 입력란" />
+															<div class="comm_radio ml7">
+																<input type="radio" name="type9" id="sound9" size="3" value="1" />
+																<i></i>
+																<label for="sound9" class="mr10">음성</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type9" id="character9"  size="3" value="2" />
+																<i></i>
+																<label for="character9" class="mr10">문자</label>
+															</div>
+															<div class="comm_radio">
+																<input type="radio" name="type9" id="type9" size="3" value="3" />
+																<i></i>
+																<label for="type9" class="mr10">음성+문자</label>
+															</div>
+															<input type="hidden" name="radiovalue" value="" />
+															<input type="hidden" name="commonData" value="" />
+															<input type="hidden" name="spamNumData" value="" />
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="pop_contsBtns">
+								<a href="#confirm" onclick="javascript:setData();" class="btnSty big red"><span>확인</span></a>
+								<a href="#cancel" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 정보제공사업자 수신 차단 번호 설정 팝업-->
+
+
+				<!-- s : 데이터로밍 하루종일 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingM02" style="width: 750px; display:none;">
+				</div>
+				<!-- e : 데이터로밍 하루종일 팝업 -->
+
+
+				<!-- s : 데이터로밍 하루종일 LTE 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingM03" style="width: 750px; display:none;">
+				</div>
+				<!-- e : 데이터로밍 하루종일 LTE 팝업 -->
+
+
+				<!-- s : 데이터로밍 설정 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingM04" style="width: 750px; display:none;">
+				</div>
+				<!-- e : 데이터로밍 설정 팝업 -->
+
+
+				<!-- s : olleh LTE my time plan 서비스 설정 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingM05" style="width: 750px; display:none;">
+					<div class="pop_wrap">
+
+						<!-- s : header -->
+						<div class="pop_header">
+							<h1>My time plan</h1>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+								<div class="pop_svc">
+									<h2 class="pop_subTitle pt0 mb7">서비스 시간대 선택</h2>
+									<p class="mb14">변경할 서비스 시간대를 선택하세요</p>
+									<div class="comm_tableBrdr pop_svcMytime">
+										<table class="comm_table" summary="원하는 서비스 시간대를 선택 할 수 있습니다.">
+											<caption>시간대 선택</caption>
+											<colgroup>
+												<col width="170" />
+												<col width="*" />
+											</colgroup>
+											<tbody class="fullBorder">
+											<tr>
+												<th scope="row">서비스 시간대 선택</th>
+												<td>
+													<div class="selectWrap w170">
+														<select id="selectUserDate" title="서비스 시간대 선택">
+															<option value="">선택하세요</option>
+
+															<option value="24" desc="00시 부터 03시" a1="0" a2="3">
+																0시 ~ 3시
+															</option>
+
+															<option value="1" desc="01시 부터 04시" a1="1" a2="4">
+																1시 ~ 4시
+															</option>
+
+															<option value="2" desc="02시 부터 05시" a1="2" a2="5">
+																2시 ~ 5시
+															</option>
+
+															<option value="3" desc="03시 부터 06시" a1="3" a2="6">
+																3시 ~ 6시
+															</option>
+
+															<option value="4" desc="04시 부터 07시" a1="4" a2="7">
+																4시 ~ 7시
+															</option>
+
+															<option value="5" desc="05시 부터 08시" a1="5" a2="8">
+																5시 ~ 8시
+															</option>
+
+															<option value="6" desc="06시 부터 09시" a1="6" a2="9">
+																6시 ~ 9시
+															</option>
+
+															<option value="7" desc="07시 부터 10시" a1="7" a2="10">
+																7시 ~ 10시
+															</option>
+
+															<option value="8" desc="08시 부터 11시" a1="8" a2="11">
+																8시 ~ 11시
+															</option>
+
+															<option value="9" desc="09시 부터 12시" a1="9" a2="12">
+																9시 ~ 12시
+															</option>
+
+															<option value="10" desc="10시 부터 13시" a1="10" a2="13">
+																10시 ~ 13시
+															</option>
+
+															<option value="11" desc="11시 부터 14시" a1="11" a2="14">
+																11시 ~ 14시
+															</option>
+
+															<option value="12" desc="12시 부터 15시" a1="12" a2="15">
+																12시 ~ 15시
+															</option>
+
+															<option value="13" desc="13시 부터 16시" a1="13" a2="16">
+																13시 ~ 16시
+															</option>
+
+															<option value="14" desc="14시 부터 17시" a1="14" a2="17">
+																14시 ~ 17시
+															</option>
+
+															<option value="15" desc="15시 부터 18시" a1="15" a2="18">
+																15시 ~ 18시
+															</option>
+
+															<option value="16" desc="16시 부터 19시" a1="16" a2="19">
+																16시 ~ 19시
+															</option>
+
+															<option value="17" desc="17시 부터 20시" a1="17" a2="20">
+																17시 ~ 20시
+															</option>
+
+															<option value="18" desc="18시 부터 21시" a1="18" a2="21">
+																18시 ~ 21시
+															</option>
+
+															<option value="19" desc="19시 부터 22시" a1="19" a2="22">
+																19시 ~ 22시
+															</option>
+
+															<option value="20" desc="20시 부터 23시" a1="20" a2="23">
+																20시 ~ 23시
+															</option>
+
+															<option value="21" desc="21시 부터 24시" a1="21" a2="24">
+																21시 ~ 24시
+															</option>
+
+														</select>
+													</div>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="infoBox">
+										<h2 class="blind">주의사항</h2>
+										<p>월중 신청/해지 시 해당월 월정액은 일할 적용됩니다.</p>
+										<p>olleh LTE my time plan 서비스 이용 시간대 변경은 즉시 적용됩니다.</p>
+										<p>시간대 변경은 월2회 가능합니다.</p>
+										<p>해지 시, 당월 재가입 불가능합니다.</p>
+										<p>컨텐츠 팩 상품(Ex. 올레tv 모바일 팩 등)과 동시 가입한 고객이 해당 시간대에서 컨텐츠를 사용 시, 컨텐츠 팩 상품 데이터부터 선차감 적용됩니다.<br />Ex) My time plan과 올레tv모바일팩을 동시에 가입한 경우 올레tv모바일팩 10GB를 모두 소진한 후에 My time plan의 데이터가 사용됩니다.</p>
+										<p>My time plan 데이터를 이용하여 음성통화(mVoIP)는 사용 불가합니다<br />- My time plan 시간대에서 mVoIP(Ex.보이스톡, 스카이프 등)을 이용하시면 요금제의 기본 데이터에서 차감도비니다.</p>
+										<p>LTE 데이터쉐어링 및 테더링은 이용하실 수 없습니다.</p>
+										<p>서비스 시간이 종료되면, 기본제공 데이터에서 차감됩니다<br />Ex)17시-20시 My time plan을 이용하고 있는 고객이 19시-20시 20분동안 데이터를 사용한 경우 : 20시 My time plan시간이 종료되어 초과 사용한 20분은 기본 데이터에서 차감됩니다.</p>
+									</div>
+								</div>
+							</div>
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red">설정</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+							</div>
+						</div>
+						<!-- e : contents -->
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : olleh LTE my time plan 서비스 설정 팝업 -->
+
+
+				<!-- s : 음성로밍 하루종일 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingM06" style="width: 750px; display:none;">
+				</div>
+				<!-- e : 음성로밍 하루종일 팝업 -->
+
+
+				<!-- s : 미설정 알림 팝업 -->
+				<div class="pop_layerWrap" id="addSvcNoSetting" style="margin-left: -300px; width: 598px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h1>알림</h1>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+								<p class="alignCenter">완료되지 않은 설정사항이 있습니다.</p>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 미설정 알림 팝업 -->
+
 			</div>
 			<!-- e : content Body -->
 		</div>
