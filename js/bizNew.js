@@ -1581,12 +1581,14 @@ $(function(){
       var $type = type;
       var $case = ["dataCase", "voiceCase", "smsCase"];
       var $totalDate = $.ktBizMobileUsage.setDate();
-      for(var i =0; i <= $case.length; i++ ){
-          if($case[i] == $type){
-            $.ktBizMobileUsage.dataCase($type);
-            $.ktBizMobileUsage.restDate($type, $totalDate)
-          }
+      if($case[0] == $type){
+        $.ktBizMobileUsage.dataCase($type);
+      }else if($case[1] == $type){
+        $.ktBizMobileUsage.voiceCase($type);
+      }else if($case[2] == $type){
+          $.ktBizMobileUsage.smsCase($type);
       }
+      $.ktBizMobileUsage.restDate($type, $totalDate);
 
       return false;
   };
@@ -1632,11 +1634,12 @@ $(function(){
   // data Graph
   $.ktBizMobileUsage.dataCase = function(type){
       var $obj = $('.'+type);
-      var $restItem = $obj.find('.rest-data');
-      var $overItem = $obj.find('.over-data');
-      var $restSh = (265-$restItem.height());
-      var $overSh = (265-$overItem.height());
-      var $overValidate, $overfullValidate, $restValidate = false; 
+      var $restItem = $obj.find('.rest-data');                                   // 잔여 사용량 Object
+      var $overItem = $obj.find('.over-data');                                   // 초과 사용량 Object
+      var $restSh = (265-$restItem.height());                                   //사용량 margin 값 계산
+      var $overSh = (265-$overItem.height());                                   // 초과 사용량 margin 값 계산
+      var $txtPosition = ($restSh-30)/2;                                              // 텍스트 포지션 계산
+      var $overValidate, $overfullValidate, $restValidate = false;  // 체크용도
       
       // 데이터가 초과 인 상태인지 확인
       if($overItem.height() > 0){
@@ -1648,30 +1651,110 @@ $(function(){
 
       // 현재 데이터가 100% 인지 확인
       if($restItem.height() == 265){
-          $restSh = 50;
+          $restSh = 30;
           $restValidate = true;
       }
 
       $restItem.height('100%');
       $restItem.animate({'marginTop' : $restSh}, 1000, function() {
-          if($restValidate){
-            $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full')})
-          }
+          // 초과 사용량일 경우
           if($overValidate){
               $restItem.hide();
+
+              // 초과 사용량이 100% 일 경우
               if($overfullValidate){
-                  $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full')})
+                  $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full');$overItem.children('span').removeClass('blind');});
+              // 초과 사용량이 100% 미만 일 경우
               }else{
-                  $overItem.animate({'marginTop' : $overSh}, 1000);
+                  $overItem.animate({'marginTop' : $overSh}, 1000, function(){$overItem.children('span').removeClass('blind');});
               }
-              
+          
+          // 잔여량 일 경우
+          }else{
+              // 잔여량이 100% 일 경우
+              if($restValidate){
+                $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restItem.children('span').removeClass('blind');});
+
+              //잔여량이 100% 미만 일 경우
+              }else{
+                 $restItem.children('span').removeClass('blind');
+
+              }
+             
           }
       });
 
   };
 
-  $.ktBizMobileUsage('dataCase');
 
+  // voice Graph
+  $.ktBizMobileUsage.voiceCase = function(type){
+      var $setMargin;
+      var $type = ["internal-data", "media-data", "outside-data"];
+      var $fullValidate = [];
+      for(var i=0; i<$type.length; i++){
+          var $target = $('.'+$type[i]);
+          var $targetHeight = $target.height(); 
+          $setMargin = (265-$target.height());
+
+          //  잔여량이 100% 일 경우
+          if($targetHeight == 265){
+              $setMargin = 30;
+              $fullValidate[i] = $type[i];
+          }
+
+          $target.height('100%');
+          $target.animate({'marginTop' : $setMargin}, 1000, function(){
+              // 잔여량이 100% 일 경우
+              if($fullValidate.length > 0) {
+                  for(var n=0; n<$fullValidate.length; n++){
+                    $('.'+$fullValidate[n]).animate({'marginTop' : 0}, 1000, function() {$(this).addClass('full')});
+                  }
+
+              // 100% 미만 일 경우
+              }else{
+
+              }
+
+          });
+      }
+  };
+
+
+  // sms Graph
+  $.ktBizMobileUsage.smsCase = function(type){
+      var $obj = $('.'+type);
+      var $restItem = $obj.find('.rest-data');                                   // 잔여 사용량 Object
+      var $restSh = (265-$restItem.height());                                   //사용량 margin 값 계산
+      var $txtPosition = ($restSh-30)/2;                                              // 텍스트 포지션 계산
+      var $restValidate = false;                                                           // 체크용도
+
+      // 현재 데이터가 100% 인지 확인
+      if($restItem.height() == 265){
+          $restSh = 30;
+          $restValidate = true;
+      }
+
+      $restItem.height('100%');
+      $restItem.animate({'marginTop' : $restSh}, 1000, function() {
+           // 잔여량이 100% 일 경우
+            if($restValidate){
+              $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restItem.children('span').removeClass('blind');});
+
+            //잔여량이 100% 미만 일 경우
+            }else{
+               $restItem.children('span').removeClass('blind');
+
+            }
+      });
+
+
+  }
+
+
+  $.ktBizMobileUsage('dataCase');
+  $.ktBizMobileUsage('voiceCase');
+  $.ktBizMobileUsage('smsCase');
 
 
 });
