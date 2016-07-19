@@ -49,13 +49,13 @@
 <script type="text/javascript">
 	$(function(){
 		$('.remote-btn01').click(function(){
-			$('.comm_noContents').hide();
+			$('.comm_noContents, .noContents').hide();
 			$('.haveContents').show();
 			return false;
 		});
 
 		$('.remote-btn02').click(function(){
-			$('.comm_noContents').show();
+			$('.comm_noContents, .noContents').show();
 			$('.haveContents').hide();
 			return false;
 		});
@@ -364,7 +364,7 @@
 
 
 						<!-- 서비스 번호가 없을 경우 -->
-						<div class="comm_noContents lrmargin" style="display: none">
+						<div class="comm_noContents lrmargin mb36" style="display: none">
 							가입된 서비스 번호가 없습니다.
 						</div>
 						<!--// 서비스 번호가 없을 경우 -->
@@ -651,7 +651,8 @@
 
 
 					</div>
-					<div class="comm_contsInner whiteBox bottom"></div>
+					<div class="comm_contsInner whiteBox bottom haveContents"></div>
+					<div class="comm_contsInner grayBox bottom noContents" style="display: none"></div>
 
 
 				</div>

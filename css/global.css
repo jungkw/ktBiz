@@ -277,6 +277,7 @@ border-radius: 3px 3px 3px 3px;
 .commBillSearchWrap .circuitSearchDiv .label {font-size:14px;}
 
 /* global css */
+.lrmargin {margin: 0 29px !important}
 .placeholder.active {color:#999;}
 .hidden {visibility:hidden; }
 .textLink a.detail {padding:0 8px 0 0; text-decoration: underline; color:#00a5b8; background: url('../images/icon/comm_icon_red_arrow.gif') no-repeat right center; color:#ed1c24;}
@@ -394,6 +395,7 @@ a.color333 {color:#333 !important;}
 .mb29 {margin-bottom:29px;}
 .mb30 {margin-bottom:30px;}
 .mb35 {margin-bottom:35px;}
+.mb36 {margin-bottom:36px !important;}
 .mb40 {margin-bottom:40px;}
 
 .pb0 {padding-bottom:0 !important}
@@ -475,7 +477,7 @@ a.color333 {color:#333 !important;}
 .bb1dashed {border-bottom:1px dashed #ccc;}
 .lrpadding {padding:0 29px;}
 .tbpadding29 {padding:29px !important;}
-.lrmargin {margin: 0 29px !important}
+
 
 /* width */
 .w90p {width:90% !important;}
