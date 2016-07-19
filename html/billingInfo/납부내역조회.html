@@ -1,0 +1,716 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 납부내역조회 - 대한민국 1등 비즈니스 성공 파트너</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/billingInfo.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
+
+	<!-- 레이어 팝업 보여주기용. -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var target = getUrlParameter();
+
+			$('#' + target[0] ).trigger('click');
+
+		});
+	</script>
+
+</head>
+
+
+
+<body>
+
+
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('.remote-btn01').on('click',function(){
+			$('.billChoice01').show();
+			$('.billChoice02').hide();
+			alert('변경완료. 현재상태 select box');
+			return false;
+		});
+
+		$('.remote-btn02').click(function(){
+			$('.billChoice01').hide();
+			$('.billChoice02').show();
+			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
+			return false;
+		});
+	});
+</script>
+<div class="ui-remote">
+	<p>UI GUIDE</p>
+	<button type="button" class="remote-btn01"><strong>[명세서 번호 선택]</strong><br/>30개 이하일 경우</button>
+	<button type="button" class="remote-btn02"><strong>[명세서 번호 선택]</strong><br/>30개 초과일 경우</button>
+</div>
+<!-- e : UI GUIDE -->
+
+
+<h1 class="blind">올레닷컴(기업)</h1>
+<div id="cfmOllehWrap">
+
+	<!-- s : skip Navigation -->
+	<ul class="cfmOllehSkipNavi" id="cfmOllehSkipNavi">
+		<li><a href="#cfmOllehConts" ><span>본문으로 바로가기</span></a></li>
+		<li><a href="http://inside.olleh.com/html/WebAccessibility/Info.asp"><span>웹접근성 도움말 페이지로 이동하기</span></a></li>
+	</ul>
+	<!-- e : skip Navigation -->
+
+	<!-- s : gnb wrap -->
+	<div id="cfmOllehGnb">
+		<script type="text/javascript">$.ktBizGnbView();</script>
+	</div>
+	<!-- e : gnb wrap -->
+
+
+	<!-- s : cont container -->
+	<div id="cfmOllehContainer">
+
+		<!-- s : lnb -->
+
+		<div id="cfmOllehLnb" accesskey="4">
+			<script type="text/javascript">$.ktBizLnbView('BAFB')</script>
+		</div>
+
+		<!-- e : lnb -->
+
+
+
+		<!-- s : content Body wrap -->
+		<hr />
+		<div id="cfmOllehConts" class="cfmOllehcontsLnbOn" accesskey="1">
+		<h2 class="blind">본문 영역</h2>
+			<div class="cfmOllehContsHeader">
+				<h3 class="cfmOllehContsTit"><img src="../../images/title/bill_title_bill06_1.png" alt="납부내역조회" /></h3>
+			</div>
+
+			<!-- s : content Body -->
+			<div class="cfmOllehContsMain">
+
+				<!-- s : 컨텐츠 영역 -->
+
+
+				<!-- s : gray box -->
+				<div class="comm_contsInner grayBox">
+					<div class="comm_contsInner grayBox">
+
+						<!-- s : search comm -->
+						<div class="commBillSearchWrap pt32 relative">
+							<fieldset>
+								<legend>명세서/서비스번호 조회</legend>
+
+								<div class="comm_radio">
+									<input type="radio" name="circuitSearchRadio" id="billChoice" checked="true" value="searchCommBillType01" desc01="명세서 번호 찾기" desc02="명세서 번호 검색 필드" desc03="명세서 번호" data="5845124***** (010-1234-5678)" /><i></i>
+									<label for="billChoice">명세서 번호 선택</label>
+								</div>
+								<div class="comm_radio ml20">
+									<input type="radio" name="circuitSearchRadio" id="svcChoice" value="searchCommBillType02" desc01="서비스 번호 찾기" desc02="서비스 번호 검색 필드" desc03="서비스 번호"  data="010-1234-5678" /><i></i>
+									<label for="svcChoice">서비스 번호 조회</label>
+								</div>
+
+								<!-- s : 명세서 번호 선택 -->
+								<div class="searchCommBillType01" >
+									
+
+									<!-- s : 30개 이하 -->
+									<div class="circuitSearchDiv billChoice01">
+										<label for="billSelectBox" class="blind">명세서 번호 선택</label>
+										<div class="selectWrap w250">
+											<select id="billSelectBox">
+												<option>5845124***** (010-1234-5678)</option>
+											</select>
+										</div>
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+									</div>
+									<!-- e : 30개 이하 -->
+
+									<!-- s : 30개 초과 -->
+									<div class="circuitSearchDiv billChoice02" style="display: none">
+										<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput w250" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">명세서 번호 찾기. 현재 선택된 명세서 번호 </span>5845124***** (010-1234-5678)</a>
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+									</div>
+									<!-- e : 30개 초과 -->
+								</div>
+								<!-- s : 명세서 번호 선택 -->
+
+
+									
+								<!-- s : 레이어 팝업 -->
+								<div class="pop_mask"></div>
+								<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
+
+									<div class="pop_wrap commBillPop">
+
+										<!-- s : header -->
+										<div class="pop_header">
+											<h4>명세서 번호 찾기</h4>
+											<p class="mt10 color666 font13 alignLeft pl30">30개 이상 명세서는 검색을 이용하세요.</p>
+											<!-- s : 검색 영역 -->
+											<div class="pop_billSrchWhiteBox">
+												<fieldset>
+													<legend>명세서 번호 검색 필드</legend>
+													<label for="billNumTxt" class="blind">명세서 번호</label>
+													<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+												</fieldset>
+											</div>
+											<!-- e : 검색 영역 -->
+										</div>
+										<!-- e : header -->
+
+										<!-- s : contents -->
+										<div class="pop_conts" >
+											<div class="pop_contsContainer indexPop">
+												<ul class="pop_billNumListBox billPop">
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+
+												</ul>
+
+												<div class="comm_paging mt10">
+													<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+												</div>
+											</div>
+										</div>
+										<!-- e : contents -->
+									</div>
+									<!-- s : footer -->
+									<div class="pop_footer">
+										<div class="pop_footerInner">
+											<p class="pop_close">
+												<a href="#billPopOpen01" >닫기</a>
+											</p>
+										</div>
+									</div>
+									<!-- e : footer -->
+								</div>
+								<!-- e : 레이어 팝업 -->
+
+
+
+								<div class="searchCommBillType02" style="display: none">
+									<div class="circuitSearchDiv">
+										<label for="svcSelectBox" class="blind">서비스 번호 상품 선택</label>
+										<div class="selectWrap w120">
+											<select id="svcSelectBox">
+												<option>모바일</option>
+												<option>인터넷</option>
+												<option>tv</option>
+												<option>일반전화</option>
+												<option>인터넷전화</option>
+												<option>WiBro</option>
+												<option>WiFi</option>
+											</select>
+										</div>
+										<a href="#billLayerPopService" id="billPopOpen02" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>010-1234-5678</a>
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+									</div>
+
+								</div>
+
+
+								<!-- s : 레이어 팝업 -->
+								<div class="pop_mask"></div>
+								<div class="pop_layerWrap" id="billLayerPopService" style="width:670px; display: none;">
+
+									<div class="pop_wrap commBillPop">
+
+										<!-- s : header -->
+										<div class="pop_header">
+											<h4>명세서 번호 찾기</h4>
+											<p class="mt10 color666 font13 alignLeft pl30">50개 이상 회선은 검색을 이용하세요.</p>
+											<!-- s : 검색 영역 -->
+											<div class="pop_billSrchWhiteBox">
+												<fieldset>
+													<legend>명세서 번호 검색 필드</legend>
+													<label for="billNumTxt" class="blind">명세서 번호</label>
+													<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+												</fieldset>
+											</div>
+											<!-- e : 검색 영역 -->
+										</div>
+										<!-- e : header -->
+
+										<!-- s : contents -->
+										<div class="pop_conts" >
+											<div class="pop_contsContainer">
+												<ul class="pop_billNumListBox">
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+													<li><a href="#billPopOpen02" class="pop_btn_close">010-1234-5678</a></li>
+												</ul>
+
+												<div class="comm_paging mt10">
+													<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+												</div>
+											</div>
+										</div>
+										<!-- e : contents -->
+									</div>
+									<!-- s : footer -->
+									<div class="pop_footer">
+										<div class="pop_footerInner">
+											<p class="pop_close">
+												<a href="#billPopOpen02" >닫기</a>
+											</p>
+										</div>
+									</div>
+									<!-- e : footer -->
+								</div>
+								<!-- e : 레이어 팝업 -->
+							</fieldset>
+						</div>
+						<!-- e : search comm -->
+						
+						
+						<div class="bill_payHistoryWrap mt23 pb30">
+							
+							<div class="comm_tableBrdr type_bank active">
+								<table class="comm_table" summary="이용중인 명세서번호를 확인 하는 표 입니다.">
+									<caption>이용중인 명세서번호 정보표</caption>
+									<colgroup>
+										<col width="221" />
+										<col width="*" />
+									</colgroup>
+								
+									<tbody>
+										<tr>
+											<th scope="row" class="left color666">이용중인 명세서번호</th>
+											<td class="last pl104 useNum">5845124***** (010-1234-5678)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+								
+							<div class="commTitleWrap mt23">
+								<h4 class="comm_scnTitle02">납부하신 금액</h4>
+								<div class="posR btnList">
+									<ul>
+										<li><a href="#" class="btnSty mid">3개월</a></li>
+										<li><a href="#" class="btnSty mid">6개월</a></li>
+										<li><a href="#" class="btnSty mid">1년</a></li>
+									</ul>
+								</div>
+							</div>
+								
+							<div class="comm_tableBrdr">
+								<table class="comm_table" summary="청구월, 입금확인 일자, 납부방법, 납부금액, 납부확인서를 확인할 수 있는 표 입니다.">
+									<caption>납부한 내역표</caption>
+									<colgroup>
+										<col width="130" />
+										<col width="130" />
+										<col width="*" />
+										<col width="160" />
+										<col width="130" />
+									</colgroup>
+	
+									<thead>
+										<tr>
+											<th scope="col">청구월</th>
+											<th scope="col">입금확인 일자</th>
+											<th scope="col">납부방법</th>
+											<th scope="col">납부금액</th>
+											<th scope="col" class="last">납부확인서</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="center color666">2016.05</td>
+											<td class="center color666">2016.05.25</td>
+											<td class="center">신용카드 자동납부</td>
+											<td class="center"><span class="num">1,000,000</span><span class="color666">원</span></td>
+											<td class="center last">
+												<a href="#monthPricePrintLayerPop" class="btnSty sml icon_print " id="monthPricePrintPop" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;"><span>인쇄</span></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="center color666">2016.04</td>
+											<td class="center color666">2016.04.25</td>
+											<td class="center">신용카드 자동납부</td>
+											<td class="center"><span class="num">1,000,000</span><span class="color666">원</span></td>
+											<td class="center last">
+												<a href="#monthPricePrintLayerPop" class="btnSty sml icon_print " id="monthPricePrintPop" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;"><span>인쇄</span></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="center color666">2016.03</td>
+											<td class="center color666">2016.03.25</td>
+											<td class="center">신용카드 자동납부</td>
+											<td class="center"><span class="num">1,000,000</span><span class="color666">원</span></td>
+											<td class="center last">
+												<a href="#monthPricePrintLayerPop" class="btnSty sml icon_print " id="monthPricePrintPop" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;"><span>인쇄</span></a>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" class="noContents last">납부하실 금액이 없습니다.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+					</div>
+					<div class="comm_contsInner grayBox bottom"></div>
+				</div>
+				<!-- e : gray box -->
+				
+				<!-- s : 인쇄 팝업 -->
+				<div class="pop_layerWrap" id="monthPricePrintLayerPop" style="margin-left:-375px; width: 750px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h5>요금 납부 확인 프린트</h5>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer pt15 relative">
+								<h6 class="pop_subTitle2 mt14">납부 정보 확인</h6>
+								<div class="comm_tableBrdr">
+									<table class="comm_table" summary="고객명, 사업자등록증, 휴대폰번호, 고객등급를 확인할 수 있는 표 입니다.">
+										<caption>납부정보표</caption>
+										<colgroup>
+											<col width="140">
+											<col width="204">
+											<col width="140">
+											<col width="*">
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">고객명</th>
+											<td>주식회사 케이티디에스</td>
+											<th scope="row">사업자등록증</th>
+											<td class="last">117-81-******</td>
+										</tr>
+										<tr>
+											<th scope="row">휴대폰번호</th>
+											<td>010-7384-4600</td>
+											<th scope="row">고객등급</th>
+											<td class="last">기타</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+								
+								<h6 class="pop_subTitle2 mt30">요금 납부 내역</h6>
+								<div class="comm_tableBrdr mt15">
+									<table class="comm_table" summary="청구월, 납부 기준일, 청구금액, 납부금액, 납부하실 금액을 확인할 수 있는 표입니다.">
+										<caption>요금제변경 확인</caption>
+										<colgroup>
+											<col width="140">
+											<col width="172">
+											<col width="172">
+											<col width="*">
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">청구번호</th>
+											<th scope="col">고객납부일</th>
+											<th scope="col">입금확인일</th>
+											<th scope="col" class="last">고객납부액</th>
+										</tr>
+										</thead>
+										<tbody>
+											<tr class="fullBorder">
+												<td class="center"><span class="num font15 color000">671418209</span></td>
+												<td class="center">2016/04/12</td>
+												<td class="center">2016/04/15</td>
+												<td class="last right pr47"><span class="num">86,937,800</span><span class="color666">원</span></td>
+											</tr>
+											<tr class="fullBorder">
+												<td class="center"><span class="num font15 color000">959844969</span></td>
+												<td class="center">2016/04/12</td>
+												<td class="center">2016/04/15</td>
+												<td class="last right pr47"><span class="num">30,800</span><span class="color666">원</span></td>
+											</tr>
+											<tr class="fullBorder">
+												<td class="center"><span class="num font15 color000">689105026</span></td>
+												<td class="center">2016/04/12</td>
+												<td class="center">2016/04/15</td>
+												<td class="last right pr47"><span class="num">85,552,000</span><span class="color666">원</span></td>
+											</tr>
+											<tr class="fullBorder">
+												<td class="center"><span class="num font15 color000">959844990</span></td>
+												<td class="center">2016/04/12</td>
+												<td class="center">2016/04/15</td>
+												<td class="last right pr47"><span class="num">37,400</span><span class="color666">원</span></td>
+											</tr>
+											<tr class="fullBorder">
+												<td class="center"><span class="num font15 color000">967670270</span></td>
+												<td class="center">2016/04/12</td>
+												<td class="center">2016/04/15</td>
+												<td class="last right pr47"><span class="num">30,250</span><span class="color666">원</span></td>
+											</tr>
+											<tr class="fullBorder">
+												<td class="center"><span class="num font15 color000">976924456</span></td>
+												<td class="center">2016/04/12</td>
+												<td class="center">2016/04/15</td>
+												<td class="last right pr47"><span class="num">482,650</span><span class="color666">원</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+								<p class="mt25 alignCenter color333 font15">2016년 04월 14일</p>
+								<p class="mt28 alignCenter"><img src="../../images/common/bill_img_stamp.png" alt="(주)케이티" /></p>
+								
+								<a href="#" class="btnSty sml icon_print absolute top24 right29" id="" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;"><span>인쇄</span></a>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="#monthPricePrintPop" >닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 인쇄 팝업 -->
+
+
+				<!-- s : 알려드립니다 -->
+				<div>
+					<div class="comm_noticeBox billGuideWrap">
+						<h4 class="title">안내드립니다.</h4>
+						
+						<div class="guideWrap">
+							
+							<div class="billGuideTabWrap payNow">
+								<ul>
+									<!-- 이용요금 납부 안내 -->
+									<li class="billGuide1 selected">
+										<a href="" class="menuBtn">이용요금 납부 안내</a>
+										
+										<div class="billGuideCont">
+											<p class="guideTitle">이용요금 납부 안내</p>
+											<div class="mt17">
+												<ul class="notice-list">
+													<li>자동납부(계좌/카드)를 이용하시는 경우, 당원 청구금액 납부 시 이중 납부가 될 수 있으니 납부일 및 계좌/카드 거래내역<br />확인 후 이용하시기 바랍니다.</li>
+													<li>입금확인 일자는 은행, 신용카드 등에서 kt에 납부사실을 통보한 일자로, 납부하신 날짜와 입금확인 일자가 다소<br />차이가 날 수 있습니다.</li>
+													<li>납부사실 통보에 소요되는 시간이 각 은행과 신용카드 기관별로 차이가 있기 때문에, 입금 확인 일자가 서로 다를 수<br />있습니다.</li>
+												</ul>
+											</div>
+											
+											<p class="guideTitle">납부 방법 입금 확인일</p>
+											<div class="comm_tableBrdr mt18">
+												<table class="comm_table" summary="정보를 확인할 수 있는 표입니다.">
+													<caption> 정보 표</caption>
+													<colgroup>
+														<col width="125">
+														<col width="125">
+														<col width="157">
+														<col width="157">
+														<col width="*">
+													</colgroup>
+													<thead class="multiRow">
+														<tr>
+															<th scope="col" rowspan="2" class="noLeft"><div>납부방법</div></th>
+															<th scope="col" rowspan="2" class="noLeft"><div>자동이체</div></th>
+															<th scope="colgroup" colspan="2" class="noRight"><div>지로</div></th>
+															<th scope="col" rowspan="2" class="noRight"><div>대리점/영업점</div></th>
+														</tr>
+														<tr>
+															<th scope="col"><div>CD/ATM, 인터넷지로</div></th>
+															<th scope="col" class="noRight"><div>장표납부</div></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="center">입금확인일</td>
+															<td class="center">1~3일 확인</td>
+															<td class="center">실시간 즉시확인</td>
+															<td class="center">2~4일 후 확인</td>
+															<td class="center last">실시간 즉시확인</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</li>
+									
+									<!-- 실시간 계좌이체 납부 안내 -->
+									<li class="billGuide2">
+										<a href="" class="menuBtn">실시간 계좌이체 납부 안내</a>
+										
+										<div class="billGuideCont">
+											<p class="guideTitle">실시간 계좌이체 납부 가능일 안내</p>
+											<div class="payGuideStep1 mt25">
+												<ul>
+													<li>미납금 납부 가능일<br /><span class="color666">상시 가능</span></li>
+													<li>이번달명세서 납부 가능일<br /><span class="color666">10~13일 이후</span></li>
+													<li>납부 가능시간<br /><span class="color666">04:00 ~ 23:00</span></li>
+												</ul>
+											</div>
+											<div class="mt15">
+												<ul class="notice-list">
+													<li>
+														은행계좌 자동이체 또는 신용카드 자동납부 고객인 경우, 납부 기준일에 따라 이중납부가 될 수 있으니 납부 전 통장 또는<br />신용카드 거래내역을 확인하시기 바랍니다.  
+													</li>
+												</ul>
+											</div>
+											
+											<p class="guideTitle">실시간 계좌이체 가능 은행</p>
+											<div class="mt15">
+												<ul class="notice-list">
+													<li>국민은행, 기업은행, 농협, 신한은행, 우리은행, 하나은행, SC은행</li>
+												</ul>
+											</div>
+											
+											<p class="mt40 font13">※ 본인 명의의 계좌만 가능합니다.</p>
+										</div>
+									</li>
+									
+									<!-- 신용카드납부 안내 -->
+									<li class="billGuide3">
+										<a href="" class="menuBtn">신용카드납부 안내</a>
+										
+										<div class="billGuideCont">
+											<p class="guideTitle">신용카드 납부 가능일 안내</p>
+											<div class="payGuideStep1 mt25">
+												<ul>
+													<li>미납금 납부 가능일<br /><span class="color666">상시 가능</span></li>
+													<li>이번달명세서 납부 가능일<br /><span class="color666">10~13일 이후</span></li>
+													<li>납부 가능시간<br /><span class="color666">상시가능</span></li>
+												</ul>
+											</div>
+											<div class="mt15">
+												<ul class="notice-list">
+													<li>
+														은행계좌 자동이체 또는 신용카드 자동납부 고객인 경우, 납부 기준일에 따라 이중납부가 될 수 있으니 납부 전 통장 또는<br />신용카드 거래내역을 확인하시기 바랍니다.  
+													</li>
+												</ul>
+											</div>
+											
+											<p class="guideTitle">납부 가능 카드</p>
+											<div class="mt15">
+												<ul class="notice-list">
+													<li>국민은행, 기업은행, 농협, 신한은행, 우리은행, 하나은행, SC은행</li>
+												</ul>
+											</div>
+											
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="comm_noticeBox">
+						<h4 class="title">꼭 확인하세요.</h4>
+						<ul class="notice-list">
+							<li>미납요금계에 마이너스(-)로 표기된 경우는 지난달 과납 등으로 발생한 금액입니다.</li>
+							<li>상세내역은 최대 12개월까지 요금내역만 제공됩니다.</li>
+							<li>조회한 시점에 미납요금이 있는 고객에 한해 정확한 미납내역을 확인 할 수 있습니다.</li>
+						</ul>
+					</div>
+					
+				</div>
+				<!-- e : 알려드립니다 -->
+
+
+				
+
+
+				<!-- e : 컨텐츠 영역  -->
+			</div>
+			<!-- e : content Body -->
+		</div>
+		<hr />
+		<!-- e : content Body wrap -->
+	</div>
+	<!-- e : cont container -->
+
+
+	<!-- s : footer -->
+	<div id="cfmOllehFooter">
+		<script type="text/javascript">$.ktBizFooterView();</script>
+	</div>
+	<!-- e : footer -->
+</div>
+</body>
+</html>
+

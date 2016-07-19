@@ -65,50 +65,82 @@
 			$('.comm_noContents').hide();
 			$('.haveContents').show();
 			
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:0"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
+			$('.dataCase').find('.graphVisual').html('');
 			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
 			$.ktBizMobileUsage('dataCase');
 		});
 
-		$('.remote-btn04').click(function(){
+		$.graph01 = function(obj){
+			var $objValue = $(obj).val()+'%';
+			var ti = obj.id;
+			$(obj).next('span').text($objValue);
+
+			var val01 = $('#data01').val();
+			var val02 = $('#data02').val();
+
+			if(ti=='data01'){
+				val02 = 0;
+				$('#data02').val(0);
+				$('#data02').next('span').text('0%');
+			}else if(ti=='data02'){
+				console.log(0);
+				val01 = 0;
+				$('#data01').val(0);
+				$('#data01').next('span').text('0%');
+			}
+
+
+
+			$('.comm_noContents').hide();
+			$('.haveContents').show();
+			
+
+			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: '+val01+'%"><span class="blind">잔여량<em><strong>2.5</strong> GB</em></span></div><div class="over-data" style="height:'+val02+'%"><span class="blind">초과 사용량<em><strong>2.5</strong> GB</em></span></div>');
+			
+			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
+			$.ktBizMobileUsage('dataCase');
+		
+		}
+
+
+		$.graph02 = function(obj){
+
+			var $objValue = $(obj).val()+'%';
+			$(obj).next('span').text($objValue);
+			var $data01 = $('#data03').val();
+			var $data02 = $('#data04').val();
+			var $data03 = $('#data05').val();
+			$('.comm_noContents').hide();
+			$('.haveContents').show();
+			
+
+			$('.voiceCase').find('.graphVisual').html('<div class="internal-data" style="height: '+$data01+'%"><span class="blind">국내통화<em><strong>무제한</strong></em></span></div><div class="media-data" style="height: '+$data02+'%"><span class="blind">영상/부가서비스<em><strong>200</strong> 분</em></span></div><div class="outside-data" style="height:'+$data03+'%"><span class="blind">국제통화<em><strong>0</strong> 분 <strong>0</strong> 초</em></span></div>');
+			
+			$('.voiceCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
+			$.ktBizMobileUsage('voiceCase');
+		}
+
+
+		$.graph03 = function(obj){
+
+			
 			$('.comm_noContents').hide();
 			$('.haveContents').show();
 
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 50%"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:0"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
-			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
-			$.ktBizMobileUsage('dataCase');
+			if(obj.id == 'data06'){
+				var $objValue = $(obj).val()+'%';
+				$(obj).next('span').text($objValue);
+				$('.smsCase').find('.graphVisual').html('<div class="rest-data" style="height: '+$objValue+'"><span class="blind">잔여량<em><strong>200</strong> 건</em></span></div>');
+			}else{
+				$('.smsCase').find('.graphVisual').html('<div class="rest-data" style="height: 85%"><span class="blind infinite">무제한</span></div>');
+			}
 			
-		});
 
-		$('.remote-btn05').click(function(){
-			$('.comm_noContents').hide();
-			$('.haveContents').show();
-
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 100%"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:0"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
-			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
-			$.ktBizMobileUsage('dataCase');
 			
-		});
-
-		$('.remote-btn06').click(function(){
-			$('.comm_noContents').hide();
-			$('.haveContents').show();
-
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:50%"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
-			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
-			$.ktBizMobileUsage('dataCase');
 			
-		});
-
-		$('.remote-btn07').click(function(){
-			$('.comm_noContents').hide();
-			$('.haveContents').show();
-
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:100%"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
-			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
-			$.ktBizMobileUsage('dataCase');
-			
-		});
+			$('.smsCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
+			$.ktBizMobileUsage('smsCase');
+		}
 
 	}); 
 </script>
@@ -117,13 +149,75 @@
 	<button type="button" class="remote-btn01">서비스 번호가 있을 경우</button>
 	<button type="button" class="remote-btn02">서비스 번호가 없을 경우</button>
 
-	<p class="mt20">GRAPH</p>
-	<button type="button" class="remote-btn03">데이터 그래프 잔여량 0%</button>
-	<button type="button" class="remote-btn04">데이터 그래프 잔여량 50%</button>
-	<button type="button" class="remote-btn05">데이터 그래프 잔여량 100%</button>
+	<p class="mt20">데이터 그래프</p>
+	
+	<div style="height:50px;">
+		<div class="fl" style="width:80px;line-height: 30px;">
+			<label for="data01" class="mr10 mt10">잔여량</label>
+		</div>
+		<div class="fr" style="width:120px">
+			<input class="mt10" id="data01" type="range" min="0" max="100" value="50" onchange="$.graph01(this)" style="width:100px" />
+			<span style="display:block;">50%</span>
+		</div>
+	</div>
+	
 
-	<button type="button" class="remote-btn06">데이터 그래프 초과 50%</button>
-	<button type="button" class="remote-btn07">데이터 그래프 초과 100%</button>
+	<div style="height:50px;">
+		<div class="fl" style="width:80px;line-height: 30px;">
+			<label for="data02" class="mr10 mt10">초과 사용량</label>
+		</div>
+		<div class="fr" style="width:120px">
+			<input class="mt10" id="data02" type="range" min="0" max="100" value="0" onchange="$.graph01(this)" style="width:100px" />
+			<span style="display:block;">0%</span>
+		</div>
+	</div>
+
+
+	<p class="mt20">음성통화 그래프</p>
+	<div style="height:50px;">
+		<div class="fl" style="width:80px;line-height: 30px;">
+			<label for="data03" class="mr10 mt10">국내통화</label>
+		</div>
+		<div class="fr" style="width:120px">
+			<input class="mt10" id="data03" type="range" min="0" max="100" value="80" onchange="$.graph02(this)" style="width:100px" />
+			<span style="display:block;">80%</span>
+		</div>
+	</div>
+
+	<div style="height:50px;">
+		<div class="fl" style="width:80px;line-height: 30px;">
+			<label for="data04" class="mr10 mt10">영상/부가</label>
+		</div>
+		<div class="fr" style="width:120px">
+			<input class="mt10" id="data04" type="range" min="0" max="100" value="50" onchange="$.graph02(this)" style="width:100px" />
+			<span style="display:block;">50%</span>
+		</div>
+	</div>
+
+	<div style="height:50px;">
+		<div class="fl" style="width:80px;line-height: 30px;">
+			<label for="data05" class="mr10 mt10">국제통화</label>
+		</div>
+		<div class="fr" style="width:120px">
+			<input class="mt10" id="data05" type="range" min="0" max="100" value="30" onchange="$.graph02(this)" style="width:100px" />
+			<span style="display:block;">30%</span>
+		</div>
+	</div>
+
+
+
+	<p class="mt20">문자 그래프</p>
+	<div style="height:50px;">
+		<div class="fl" style="width:80px;line-height: 30px;">
+			<label for="data06" class="mr10 mt10">잔여량</label>
+		</div>
+		<div class="fr" style="width:120px">
+			<input class="mt10" id="data06" type="range" min="0" max="100" value="85" onchange="$.graph03(this)" style="width:100px" />
+			<span style="display:block;">85%</span>
+		</div>
+	</div>
+	<button type="button" id="data07" style="width:100px; margin-right:10px" class="fr"  onclick="$.graph03(this);">무제한</button>
+
 </div>
 <!-- e : UI GUIDE -->
 
@@ -376,8 +470,8 @@
 									<p>기본제공량 <span>10GB</span></p>
 								</div>
 								<div class="graphVisual">
-									<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div>
-									<div class="over-data" style="height:50%"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>
+									<div class="rest-data" style="height: 50%"><span class="blind">잔여량<em><strong>2.5</strong> GB</em></span></div>
+									<div class="over-data" style="height:0"><span class="blind">초과 사용량<em><strong>2.5</strong> GB</em></span></div>
 								</div>
 								<div class="restDateBlock">
 									<div class="restDate"></div>
@@ -436,9 +530,9 @@
 							<div class="graphVisualBlock voiceCase">
 								<p class="topText left140"><img src="../../images/bg/bill_bg_usageVoice.png" alt="voice"/></p>
 								<div class="graphVisual">
-									<div class="internal-data" style="height: 80%"></div>
-									<div class="media-data" style="height: 50%"></div>
-									<div class="outside-data" style="height:30%"></div>
+									<div class="internal-data" style="height: 80%"><span class="blind">국내통화<em><strong>무제한</strong></em></span></div>
+									<div class="media-data" style="height: 50%"><span class="blind">영상/부가서비스<em><strong>200</strong> 분</em></span></div>
+									<div class="outside-data" style="height:30%"><span class="blind">국제통화<em><strong>0</strong> 분 <strong>0</strong> 초</em></span></div>
 								</div>
 								<div class="restDateBlock">
 									<div class="restDate"></div>
@@ -513,7 +607,7 @@
 									<p>기본제공량 <span>무제한</span></p>
 								</div>
 								<div class="graphVisual">
-									<div class="rest-data" style="height: 50%"></div>
+									<div class="rest-data" style="height: 85%"><span class="blind">잔여량<em><strong>200</strong> 건</em></span></div>
 								</div>
 								<div class="restDateBlock">
 									<div class="restDate"></div>
