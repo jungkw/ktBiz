@@ -137,6 +137,7 @@ ul.bulletList li:first-child {margin:0;}
 
 /* calander */
 .calendar {display:inline-block;width:30px;height:30px;vertical-align:middle;background:url('../images/icon/comm_icon_calander.png') no-repeat;}
+.calendar.iconTime {background-image:url('../images/icon/comm_icon_calander2.png');}
 .calendar:hover,
 .calendar:focus,
 .calendar:active {background-position:0 -30px;}
@@ -351,6 +352,7 @@ a.color333 {color:#333 !important;}
 .mt50 {margin-top:50px;}
 .mt57 {margin-top:57px;}
 .mt69 {margin-top:69px;}
+.mt130 {margin-top:130px;}
 .pt0 {padding-top:0px !important;}
 .pt5 {padding-top:5px !important;}
 .pt8 {padding-top:8px !important;}

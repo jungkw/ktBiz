@@ -65,7 +65,7 @@
 			$('.comm_noContents').hide();
 			$('.haveContents').show();
 			
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"></div><div class="over-data" style="height:0"></div>');
+			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:0"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
 			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
 			$.ktBizMobileUsage('dataCase');
 		});
@@ -74,7 +74,7 @@
 			$('.comm_noContents').hide();
 			$('.haveContents').show();
 
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 50%"></div><div class="over-data" style="height:0"></div>');
+			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 50%"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:0"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
 			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
 			$.ktBizMobileUsage('dataCase');
 			
@@ -84,7 +84,7 @@
 			$('.comm_noContents').hide();
 			$('.haveContents').show();
 
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 100%"></div><div class="over-data" style="height:0"></div>');
+			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 100%"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:0"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
 			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
 			$.ktBizMobileUsage('dataCase');
 			
@@ -94,7 +94,7 @@
 			$('.comm_noContents').hide();
 			$('.haveContents').show();
 
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"></div><div class="over-data" style="height:50%"></div>');
+			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:50%"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
 			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
 			$.ktBizMobileUsage('dataCase');
 			
@@ -104,7 +104,7 @@
 			$('.comm_noContents').hide();
 			$('.haveContents').show();
 
-			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"></div><div class="over-data" style="height:100%"></div>');
+			$('.dataCase').find('.graphVisual').html('<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div><div class="over-data" style="height:100%"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>');
 			$('.dataCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
 			$.ktBizMobileUsage('dataCase');
 			
@@ -376,8 +376,8 @@
 									<p>기본제공량 <span>10GB</span></p>
 								</div>
 								<div class="graphVisual">
-									<div class="rest-data" style="height: 0"></div>
-									<div class="over-data" style="height:50%"></div>
+									<div class="rest-data" style="height: 0"><span class="blind">사용량<strong>2.5</strong>GB</span></div>
+									<div class="over-data" style="height:50%"><span class="blind">초과 사용량<strong>2.5</strong>GB</span></div>
 								</div>
 								<div class="restDateBlock">
 									<div class="restDate"></div>
@@ -436,8 +436,9 @@
 							<div class="graphVisualBlock voiceCase">
 								<p class="topText left140"><img src="../../images/bg/bill_bg_usageVoice.png" alt="voice"/></p>
 								<div class="graphVisual">
-									<div class="rest-data" style="height: 0"></div>
-									<div class="over-data" style="height:50%"></div>
+									<div class="internal-data" style="height: 80%"></div>
+									<div class="media-data" style="height: 50%"></div>
+									<div class="outside-data" style="height:30%"></div>
 								</div>
 								<div class="restDateBlock">
 									<div class="restDate"></div>
@@ -446,11 +447,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="graphTableBlock voiceCase">
+							<div class="graphTableBlock dffTableCase">
 
 								<div class="comm_tableBrdr">
 									<table class="comm_table" summary="구분, 총제공량, 사용량, 잔여량 순서로 음성통화 현황 을 확인할 수 있는 표 입니다.">
-										<caption>데이터 현황</caption>
+										<caption>음성통화 현황</caption>
 										<colgroup>
 											<col width="*" />
 											<col width="23%" />
@@ -507,11 +508,12 @@
 								<dd>2016.01.01~2016.01.31</dd>
 							</dl>
 							
-							<div class="graphVisualBlock dataCase">
-								<p class="topText">기본제공량 <span>무제한</span></p>
+							<div class="graphVisualBlock smsCase">
+								<div class="topText">
+									<p>기본제공량 <span>무제한</span></p>
+								</div>
 								<div class="graphVisual">
-									<div class="rest-data" style="height: 0"></div>
-									<div class="over-data" style="height:50%"></div>
+									<div class="rest-data" style="height: 50%"></div>
 								</div>
 								<div class="restDateBlock">
 									<div class="restDate"></div>
@@ -523,8 +525,8 @@
 							<div class="graphTableBlock diffTableCase">
 
 								<div class="comm_tableBrdr">
-									<table class="comm_table" summary="기본 제공량, 사용량, 잔여량, 초과 사용량, 요금 청구액 순서로 데이터 현황 을 확인할 수 있는 표 입니다.">
-										<caption>데이터 현황</caption>
+									<table class="comm_table" summary="기본 제공량, 잔여량, 사용량 순서로 문자 현황 을 확인할 수 있는 표 입니다.">
+										<caption>문자 현황</caption>
 										<colgroup>
 											<col width="130px" />
 											<col width="*" />
@@ -533,25 +535,17 @@
 										<tbody>
 											<tr>
 												<th scope="row" class="left">기본 제공량</th>
-												<td class="right last"><span class="num">10</span> GB</td>
-											</tr>
-											<tr>
-												<th scope="row" class="left">사용량</th>
-												<td class="right last"><span class="num">2.5</span> GB</td>
+												<td class="right last">무제한</td>
 											</tr>
 											<tr>
 												<th scope="row" class="left">잔여량</th>
-												<td class="right last"><span class="num">7.5</span> GB</td>
+												<td class="right last">무제한</td>
 											</tr>
 											<tr>
-												<th scope="row" class="left">초과 사용량량</th>
-												<td class="right last"><span class="num">0.0</span> GB</td>
+												<th scope="row" class="left">사용량</th>
+												<td class="right last"><span class="num">23</span> 건</td>
 											</tr>
-											<tr>
-												<th scope="row" class="left">요금 청구액</th>
-												<td class="right last"><span class="num emp01">0</span> 원</td>
-											</tr>
-											
+										
 										</tbody>
 									</table>
 								</div>
