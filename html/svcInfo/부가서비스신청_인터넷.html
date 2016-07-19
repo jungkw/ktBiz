@@ -248,7 +248,7 @@
 										</td>
 									</tr>
 									<tr>
-										<td colspan="5" class="noContents last">가입하신 부가서비스가 없습니다.</td>
+										<td colspan="5" class="noContents last">이용중인 부가서비스가 없습니다.</td>
 									</tr>
 								</tbody>
 							</table>
@@ -325,53 +325,78 @@
 						</div>
 						<!-- e : 부가서비스 해지 팝업 -->
 
-						<!-- s: 부가서비스 신청 -->
-						<h4 class="blind">부가서비스 목록</h4>
-
-						<div class="svcInfo_addSvcList mt15">
-							<ul>
-								<li>
-									<div class="thumb">
-										<img src="../../images/temp_addSvcI01.png" alt="pc안심 썸네일" />
-									</div>
-									<div class="info">
-										<p class="title">PC 안심</p>
-										<p class="desc">안전하고 최적화된 PC사용을 위한 Total PC Care 서비스로 전문가 1:1 원격점검을 제공하는 서비스</p>
-									</div>
-									<div class="links">
-										<a href="#applyAddSvcLayer" id="applyAddSvcOpen" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
-										<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;" title="PC안심 자세히보기 레이어팝업 열림">자세히보기</a>
-									</div>
-								</li>
-								<li>
-									<div class="thumb">
-										<img src="../../images/temp_addSvcI02.png" alt="우리아이 썸네일" />
-									</div>
-									<div class="info">
-										<p class="title">부가서비스명</p>
-										<p class="desc">상품 설명</p>
-									</div>
-									<div class="links">
-										<a href="#applyAddSvcLayer" id="applyAddSvcOpen1" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
-										<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open1" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;" title="PC안심 자세히보기 레이어팝업 열림">자세히보기</a>
-									</div>
-								</li>
-								<li>
-									<div class="thumb">
-										<img src="../../images/temp_addSvcI03.png" alt="ucloud office 썸네일" />
-									</div>
-									<div class="info">
-										<p class="title">ucloud office</p>
-										<p class="desc">상품 설명</p>
-									</div>
-									<div class="links">
-										<a href="#applyAddSvcLayer" id="applyAddSvcOpen2" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
-										<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open2" class="btnSty mid arr" onclick="$.ktBizPopClick(this); return false;" title="PC안심 자세히보기 레이어팝업 열림">자세히보기</a>
-									</div>
-								</li>
-							</ul>
+						<!-- s: 부가서비스 신청/해지 -->
+						<div class="commTitleWrap">
+							<h4 class="comm_scnTitle02 pt29 mb13">부가서비스 신청/해지</h4>
 						</div>
-						<!-- e: 부가서비스 신청 -->
+
+						<div class="comm_tableBrdr svcInfo_planTable">
+							<table class="comm_table" summary="부가서비스명, 내용, 이용요금, 부가정보를 확인하고 선택할 수 있는 표 입니다.">
+								<caption>LTE전용 부가서비스 목록표</caption>
+								<colgroup>
+									<col width="175">
+									<col width="*">
+									<col width="130">
+									<col width="165">
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col" class="">부가서비스명</th>
+										<th scope="col" class="">내용</th>
+										<th scope="col" class="">이용요금<br>(부가세 포함)</th>
+										<th scope="col" class="last ">부가정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="plan_radio">
+											<span class="comm_radio">
+												<input name="use" id="use0" type="radio">
+												<i></i>
+												<label for="use0">PC 안심</label>
+											</span>
+										</td>
+										<td class="">안전하고 최적화된 PC사용을 위한 Total PC Care 서비스로 전문가 1:1 원격점검을 제공하는 서비스</td>
+										<td class="center num">999,900<span>원</span></td>
+										<td class="right last">
+											<a href="#applyAddSvcLayer" id="applyAddSvcOpen" class="btnSty sml gray" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
+											<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 자세히보기 레이어팝업 열림">자세히보기</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="plan_radio">
+											<span class="comm_radio">
+												<input name="use" id="use1" type="radio">
+												<i></i>
+												<label for="use1">PC 안심</label>
+											</span>
+										</td>
+										<td class="">상품설명</td>
+										<td class="center num">999,900<span>원</span></td>
+										<td class="right last">
+											<a href="#applyAddSvcLayer" id="applyAddSvcOpen1" class="btnSty sml gray" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
+											<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open1" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 자세히보기 레이어팝업 열림">자세히보기</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="plan_radio">
+											<span class="comm_radio">
+												<input name="use" id="use3" type="radio">
+												<i></i>
+												<label for="use3">PC 안심</label>
+											</span>
+										</td>
+										<td class="">안전하고 최적화된 PC사용을 위한 Total PC Care 서비스로 전문가 1:1 원격점검을 제공하는 서비스</td>
+										<td class="center num">999,900<span>원</span></td>
+										<td class="right last">
+											<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open2" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 자세히보기 레이어팝업 열림">자세히보기</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- e: 부가서비스 신청/해지 -->
 
 						<!-- s : 부가서비스 신청 팝업 -->
 						<div class="pop_layerWrap" id="applyAddSvcLayer" style="width: 750px; display:none;">
