@@ -121,9 +121,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphVisualBlock .graphVisual {width:160px;height:265px;margin:53px 142px 77px 97px;overflow: hidden;position: relative;}
 .bill_graphBoxWrap .graphTableBlock {width: 369px;float: right;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data {background: url('../images/bg/bill_bg_restDataRed.png');}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data.full {background: url('../images/bg/bill_bg_restDataRed.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data {background: url('../images/bg/bill_bg_overDataBlue.png');margin-top:265px;}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full {background: url('../images/bg/bill_bg_overDataBlue.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span, 
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span {font-size:15px;color:#fff;display: block;text-align:center;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span.outTxt, 
@@ -135,15 +133,26 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span strong {font-size:26px;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;} 
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data.full span,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full span {padding-top:100px;} 
+
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span,
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span {font-size:13px;color:#fff;display: block;text-align: center;letter-spacing: -1px}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data em, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data em,
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data em {display: block;}
+
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span.outTxt, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt,
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {width:54px;position: absolute;top:0;color:#df2428;padding:0 !important;} 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt {color: #e5782b}
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {color: #5a9c42}
+
+
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div {width:53px;float:left;}
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.internal-data {width:54px;background: url('../images/bg/bill_bg_internalDataRed.png');}
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.media-data {background: url('../images/bg/bill_bg_mediaDataYellow.png');}
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.outside-data {background: url('../images/bg/bill_bg_outsideDataGreen.png');}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.internal-data.full {background: url('../images/bg/bill_bg_internalDataRed.png') 0 -2px;}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.media-data .full{background: url('../images/bg/bill_bg_mediaDataYellow.png') 0 -2px;}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.outside-data.full {background: url('../images/bg/bill_bg_outsideDataGreen.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data {background: url('../images/bg/bill_bg_restDataPurple.png');}
-.bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data.full {background: url('../images/bg/bill_bg_restDataPurple.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data span.outTxt {position: absolute;top:0;left:50%;color:#69318d;padding:0 !important;}
 .bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data span.infinite {height:57px;background: url('../images/bg/bill_bg_infinite.png') center bottom no-repeat;}
 
@@ -168,9 +177,9 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billInfo_chgStateType {border:1px solid #ccc; border-top-color: #333; background: #fff;}
 .billInfo_chgStateType > div {padding: 17px 30px; overflow: hidden;}
 .billInfo_chgStateType > div .comm_radio {margin-top: 2px;}
-.billInfo_chgStateType > div + div {border-top: 1px solid #ccc;}
+.billInfo_chgStateType > divdiv {border-top: 1px solid #ccc;}
 .billInfo_chgStatelang {border:1px solid #ccc; border-top-color: #333; background: #fff;}
-.billInfo_chgStatelang > div + div {border-top: 1px solid #ccc;}
+.billInfo_chgStatelang > divdiv {border-top: 1px solid #ccc;}
 .billInfo_chgStatelang .header {padding: 17px 20px; width: 60%; border-right: 1px solid #ccc; box-sizing: border-box;}
 .billInfo_chgStatelang .header h5 {margin-top:4px; color: #333;}
 .billInfo_chgStatelang .body {padding: 17px 30px 17px 15px; width: 40%; box-sizing: border-box;}
@@ -211,20 +220,23 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 
 .billGuideTabWrap {position: relative;}
 .billGuideTabWrap ul {overflow: hidden;}
-.billGuideTabWrap li.billGuide1 {}
-.billGuideTabWrap li.billGuide2 {}
-.billGuideTabWrap li.billGuide3 {}
-.billGuideTabWrap li.billGuide4 {}
+
 
 .billGuideTabWrap .menuBtn {position: absolute; top:-58px; right:0; display:block; width:90px; height:44px; padding:4px 0 0 0; text-align: center; color:#333; font-size: 13px; line-height: 1.3; box-sizing: border-box; background: url('../images/bg/bill_bg_tabbg.png') no-repeat center right;}
 .billGuideTabWrap li.billGuide1 .menuBtn {right:330px;}
 .billGuideTabWrap li.billGuide2 .menuBtn {right:210px; width:120px;}
 .billGuideTabWrap li.billGuide3 .menuBtn {right:120px;}
 .billGuideTabWrap li.billGuide4 .menuBtn {right:30px; background: none;}
+.billGuideTabWrap.payNow .menuBtn {top:-49px; width:151px; height:26px;}
+.billGuideTabWrap.payNow li.billGuide1 .menuBtn {right:374px;}
+.billGuideTabWrap.payNow li.billGuide2 .menuBtn {right:181px; width:193px;}
+.billGuideTabWrap.payNow li.billGuide3 .menuBtn {right:30px; background: none;}
+
 .billGuideTabWrap li.selected .menuBtn {color:#fff; background: #666; text-decoration: none !important;}
 .billGuideTabWrap li.selected .menuBtn:hover,
 .billGuideTabWrap li.selected .menuBtn:focus,
-.billGuideTabWrap li.selected .menuBtn:active {color:#fff !important; text-decoration: none !important;}
+.billGuideTabWrap li.selected .menuBtn:active {color:#fff !important; background: #666 !important; text-decoration: none !important;}
+
 
 .billGuideTabWrap .billGuideCont {position: relative; display:none;}
 .billGuideTabWrap li.selected .billGuideCont {display:block;}
@@ -259,3 +271,27 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billPayChangeBox em {color:#666; font-weight:bold;}
 
 
+/* 요금납부/조회 */
+.bill_payWrap {}
+.bill_payWrap .useNum {font-size:17px; font-weight: bold; color:#000;}
+   
+.bill_payWrap .commTitleWrap .total {position: absolute; top:11px; right:0; color:#666; font-size: 13px;}
+.bill_payWrap .commTitleWrap .total em {color:#df2428; font-weight: bold;}
+
+.bill_payWrap .totalBox {padding:18px 0; font-size:15px; color:#333; font-weight:bold; line-height:1; text-align:center; background:#fff; border:1px solid #ccc;}
+.bill_payWrap .totalBox .num {color:#df2428; font-size: 18px; font-weight:bold; vertical-align:-1px; font-family:'Spoqa Han Sans', 'Malgun Gothic', 'ë§‘ì€ ê³ ë”•', arial;}
+.bill_payWrap .totalBox .won {color:#666; font-weight:normal;}
+
+.bill_payWrap .payNowOpt1,
+.bill_payWrap .payNowOpt2 {display:none;}
+
+.billGuideTabWrap .payGuideStep1 ul {overflow: hidden; height:66px; background: url('../images/common/bill_img_04.gif') no-repeat left top;}
+.billGuideTabWrap .payGuideStep1 li {display: block; float:left; width:230px; height:66px; padding:14px 0 0 63px; font-size:13px; color:#333; line-height:1.4; box-sizing: border-box;}
+
+.bill_payTxtWrap {position: relative;}
+.bill_payTxtWrap .txt {font-size: 18px; color:#333;}
+.bill_payTxtWrap .comm_checkbox {position: absolute; top:0; right:0;}
+
+.bill_payHistoryWrap .commTitleWrap .posR {position: absolute; top:2px; right:0;}
+.bill_payHistoryWrap .commTitleWrap .btnList ul {overflow: hidden;}
+.bill_payHistoryWrap .commTitleWrap .btnList li {float:left; margin:0 0 0 5px;}

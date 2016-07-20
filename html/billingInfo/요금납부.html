@@ -81,14 +81,22 @@
 			$('.billHasData').show();
 			return false;
 		});
+
+		$('.remote-btn05').click(function(){
+			$('#billBankServiceLayerPop').show();
+			return false;
+		});
 	});
 </script>
+
+
 <div class="ui-remote">
 	<p>UI GUIDE</p>
 	<button type="button" class="remote-btn01"><strong>[명세서 번호 선택]</strong><br/>30개 이하일 경우</button>
 	<button type="button" class="remote-btn02"><strong>[명세서 번호 선택]</strong><br/>30개 초과일 경우</button>
 	<button type="button" class="remote-btn03"><strong>조회된 데이터 없음</strong></button>
 	<button type="button" class="remote-btn04"><strong>조회된 데이터 있음</strong></button>
+	<button type="button" class="remote-btn05"><strong>은행별 서비스 가능 시간 팝업</strong></button>
 </div>
 <!-- e : UI GUIDE -->
 
@@ -254,6 +262,7 @@
 
 								<div class="searchCommBillType02" style="display: none">
 									<div class="circuitSearchDiv">
+										<!--
 										<label for="svcSelectBox" class="blind">서비스 번호 상품 선택</label>
 										<div class="selectWrap w120">
 											<select id="svcSelectBox">
@@ -266,6 +275,7 @@
 												<option>WiFi</option>
 											</select>
 										</div>
+										-->
 										<a href="#billLayerPopService" id="billPopOpen02" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>010-1234-5678</a>
 										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
 									</div>
@@ -377,7 +387,7 @@
 									
 										<tbody>
 											<tr>
-												<th scope="row" class="left color666">이용중인 명세서번호</th>
+												<th scope="row" class="font17 fNormal">이용중인 명세서번호</th>
 												<td class="last pl104 useNum">5845124***** (010-1234-5678)</td>
 											</tr>
 										</tbody>
@@ -779,8 +789,6 @@
 
 
 				
-				<a href="#billBankServiceLayerPop" class="blind" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, $(this).closest('.pop_layerWrap').find('.pop_close a').attr('href')); return false;" id="billBankServiceOpenPop01"><span>은행별 서비스 가능 시간 팝업보기 임시버튼입니다. 개발시 지워주세요.</span></a>
-
 				<!-- s : 은행별 서비스 가능 시간 레이어 팝업 -->
 				<div class="pop_layerWrap" id="billBankServiceLayerPop" style="margin-left:-375px; width: 750px; display:none;">
 					<div class="pop_wrap">
@@ -888,7 +896,7 @@
 					<div class="pop_footer">
 						<div class="pop_footerInner">
 							<p class="pop_close">
-								<a href="#billCertifyOpenPop01" >닫기</a>
+								<a href="#billCertifyOpenPop01" onclick="$(this).closest('.pop_layerWrap').hide();">닫기</a>
 							</p>
 						</div>
 					</div>

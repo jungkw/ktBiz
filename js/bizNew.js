@@ -347,7 +347,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>분리납부내역 조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부/조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>납부방법 변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 관리</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 변경</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -750,7 +750,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>분리납부내역 조회</a></li>";
                                 gnbItem += "<li><a href='#'>요금납부/조회</a></li>";
                                 gnbItem += "<li><a href='#'>납부방법 변경</a></li>";
-                                gnbItem += "<li><a href='#'>명세서 관리</a></li>";
+                                gnbItem += "<li><a href='#'>명세서 변경</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
@@ -1140,7 +1140,7 @@ $(document).ready(function(){
                     lnbItem += "<a href='#' id='BAG'>납부방법 변경</a>";
                   lnbItem += "</li>";
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BAH'>명세서 관리</a>";
+                    lnbItem += "<a href='#' id='BAH'>명세서 변경</a>";
                   lnbItem += "</li>";
 
                 lnbItem += "</ul>";
@@ -1584,9 +1584,11 @@ $(function(){
       if($case[0] == $type){
         $.ktBizMobileUsage.dataCase($type);
       }else if($case[1] == $type){
-        $.ktBizMobileUsage.voiceCase($type);
+        $.ktBizMobileUsage.defaultCase($type, 'internal-data' , 40, false, 5);
+        $.ktBizMobileUsage.defaultCase($type, 'media-data', 40, false, 5);
+        $.ktBizMobileUsage.defaultCase($type, 'outside-data', 60, false,5 );
       }else if($case[2] == $type){
-          $.ktBizMobileUsage.smsCase($type);
+          $.ktBizMobileUsage.defaultCase($type, 'rest-data', 60, true, 10);
       }
       $.ktBizMobileUsage.restDate($type, $totalDate);
 
@@ -1660,6 +1662,12 @@ $(function(){
       }
 
       $restItem.height('100%');
+      $overItem.height('100%');
+
+      // 0~4 % 일 경우 margin-top 254px 로 고정
+      if($restSh >= 254){
+          $restSh = 254;
+      }
       $restItem.animate({'marginTop' : $restSh}, 1000, function() {
           // 초과 사용량일 경우
           if($overValidate){
@@ -1670,6 +1678,11 @@ $(function(){
                   $overItem.animate({'marginTop' : 0}, 1000, function() {$overItem.addClass('full');$overSpan.removeClass('blind');});
               // 초과 사용량이 100% 미만 일 경우
               }else{
+
+                    // 0~4 % 일 경우 margin-top 254px 로 고정
+                    if($overSh >= 254){
+                        $overSh = 254;
+                    }
                     $overItem.animate({'marginTop' : $overSh}, 1000, function(){
                     $overSpan.removeClass('blind');
 
@@ -1679,7 +1692,6 @@ $(function(){
                     if($overSh > (265/2)){ 
                         $overSpan.addClass('outTxt');
                         $overSpan.css({'marginLeft':'-'+($overSpan.width()/2)+'px', 'top':($overSh-$txtSize)/2+'px'});
-                        console.log($overSpan.width()/2)
                     }
                 });
                   
@@ -1716,49 +1728,19 @@ $(function(){
   };
 
 
-  // voice Graph
-  $.ktBizMobileUsage.voiceCase = function(type){
-      var $setMargin;
-      var $type = ["internal-data", "media-data", "outside-data"];
-      var $fullValidate = [];
-      for(var i=0; i<$type.length; i++){
-          var $target = $('.'+$type[i]);
-          var $targetHeight = $target.height(); 
-          $setMargin = (265-$target.height());
-
-          //  잔여량이 100% 일 경우
-          if($targetHeight == 265){
-              $setMargin = 30;
-              $fullValidate[i] = $type[i];
-          }
-
-          $target.height('100%');
-          $target.animate({'marginTop' : $setMargin}, 1000, function(){
-              // 잔여량이 100% 일 경우
-              if($fullValidate.length > 0) {
-                  for(var n=0; n<$fullValidate.length; n++){
-                    $('.'+$fullValidate[n]).animate({'marginTop' : 0}, 1000, function() {$(this).addClass('full')});
-                  }
-
-              // 100% 미만 일 경우
-              }else{
-
-              }
-
-          });
-      }
-  };
 
 
-  // sms Graph
-  $.ktBizMobileUsage.smsCase = function(type){
+
+  // default Graph
+  $.ktBizMobileUsage.defaultCase = function(type, data, txtSize, widthSize, topPx){
       var $obj = $('.'+type);
-      var $txtSize = 60;
-      var $restItem = $obj.find('.rest-data');                                   // 잔여 사용량 Object
+      var $txtSize = txtSize;
+      var $restItem = $obj.find('.'+data);                                   // 잔여 사용량 Object
       var $restSh = (265-$restItem.height());                                   //사용량 margin 값 계산
-      var $txtPosition = (($restItem.height()-$txtSize)/2)+10;         // 텍스트 포지션 계산
+      var $txtPosition = (($restItem.height()-$txtSize)/2)+topPx;         // 텍스트 포지션 계산
       var $restSpan = $restItem.children('span');
       var $restValidate = false;                                                           // 체크용도
+
 
       // 현재 데이터가 100% 인지 확인
       if($restItem.height() == 265){
@@ -1767,12 +1749,16 @@ $(function(){
       }
 
       $restItem.height('100%');
+      // 0~4 % 일 경우 margin-top 254px 로 고정
+      if($restSh >= 254){
+          $restSh = 254;
+      }
       $restItem.animate({'marginTop' : $restSh}, 1000, function() {
 
           $restSpan.css('paddingTop', $txtPosition);
            // 잔여량이 100% 일 경우
             if($restValidate){
-              $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restItem.children('span').removeClass('blind');});
+              $restItem.animate({'marginTop' : 0}, 1000, function() {$restItem.addClass('full'); $restSpan.removeClass('blind');});
 
             //잔여량이 100% 미만 일 경우
             }else{
@@ -1783,7 +1769,18 @@ $(function(){
                   if($restSh > (265/2)){ 
 
                       $restSpan.addClass('outTxt');
-                      $restSpan.css({'marginLeft':'-'+($restSpan.width()/2)+'px', 'top':($restSh-$txtSize)/2+'px'});
+                      if(widthSize){
+                          $restSpan.css({'marginLeft':'-'+($restSpan.width()/2)+'px', 'top':($restSh-$txtSize)/2+'px'});
+                      }else{
+                          if(data=='internal-data'){
+                              $restSpan.css({'left':'0', 'top':($restSh-$txtSize)+'px'});
+                          }else if(data=='media-data'){
+                              $restSpan.css({'left':'53px', 'top':($restSh-$txtSize)+'px'});
+                          }else if(data=='outside-data'){
+                              $restSpan.css({'right':'0', 'top':($restSh-$txtSize)+'px'});
+                          }
+                      }
+                      
 
                   }
 
@@ -1792,6 +1789,9 @@ $(function(){
 
 
   }
+
+
+
 
 
   $.ktBizMobileUsage('dataCase');
