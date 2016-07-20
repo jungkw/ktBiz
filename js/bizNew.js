@@ -63,10 +63,6 @@ $(document).ready(function(){
           $("input[name="+name+"]:enabled").next('i').removeClass('checked');
           $(this).next('i').addClass('checked');
         });
-        $('input:radio, input:checkbox').focusin(function(){
-          $(this).next('i').addClass('checked');
-        });
-
 
 
     };
