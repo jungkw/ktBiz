@@ -69,13 +69,13 @@
 			alert('변경완료. 현재상태 클릭시 레이어팝업 열림');
 			return false;
 		});
-		
+
 		$('.remote-btn03').click(function(){
 			$('.billNoData').show();
 			$('.billHasData, .billHasDataAgree').hide();
 			return false;
 		});
-		
+
 		$('.remote-btn04').click(function(){
 			$('.billNoData').hide();
 			$('.billHasData, .billHasDataAgree').show();
@@ -83,7 +83,7 @@
 			$('.billHasData .type_card').removeClass('active');
 			$('.billHasData .type_giro').removeClass('active');
 		});
-		
+
 		$('.remote-btn05').click(function(){
 			$('.billNoData').hide();
 			$('.billHasData, .billHasDataAgree').show();
@@ -91,7 +91,7 @@
 			$('.billHasData .type_bank').removeClass('active');
 			$('.billHasData .type_giro').removeClass('active');
 		});
-		
+
 		$('.remote-btn06').click(function(){
 			$('.billNoData').hide();
 			$('.billHasData, .billHasDataAgree').show();
@@ -179,7 +179,7 @@
 
 								<!-- s : 명세서 번호 선택 -->
 								<div class="searchCommBillType01" >
-									
+
 
 									<!-- s : 30개 이하 -->
 									<div class="circuitSearchDiv billChoice01">
@@ -203,7 +203,7 @@
 								<!-- s : 명세서 번호 선택 -->
 
 
-									
+
 								<!-- s : 레이어 팝업 -->
 								<div class="pop_mask"></div>
 								<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
@@ -218,8 +218,8 @@
 											<div class="pop_billSrchWhiteBox">
 												<fieldset>
 													<legend>명세서 번호 검색 필드</legend>
-													<label for="billNumTxt" class="blind">명세서 번호</label>
-													<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+													<label for="billNumTxt2" class="blind">명세서 번호</label>
+													<input type="text" id="billNumTxt2" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
 												</fieldset>
 											</div>
 											<!-- e : 검색 영역 -->
@@ -376,7 +376,7 @@
 							</fieldset>
 						</div>
 						<!-- e : search comm -->
-						
+
 						<!-- s : 데이터가 없을 경우 -->
 						<div class="bill_payChangeWrap billNoData pb30" style="display:none;">
 							<div class="comm_noContents mt23">
@@ -388,11 +388,11 @@
 
 
 						<!-- s : 데이터가 있을 경우 -->
-						<div class="bill_payChangeWrap billHasData mt23 pb30">	
+						<div class="bill_payChangeWrap billHasData mt23 pb30">
 							<div class="commTitleWrap mt23">
 								<h4 class="comm_scnTitle02">이용중인 납부 방법</h4>
 							</div>
-							
+
 							<!-- 은행계좌 자동이체 ( type_bank ) -->
 							<div class="comm_tableBrdr type_bank active">
 								<table class="comm_table" summary="명세서 번호, 납부방법, 은행명, 납부 기준일, 계좌번호, 예금주를 확인 할 수 있는 표 입니다.">
@@ -403,7 +403,7 @@
 										<col width="114" />
 										<col width="*" />
 									</colgroup>
-								
+
 									<tbody>
 										<tr>
 											<th scope="row" class="left">명세서 번호</th>
@@ -426,7 +426,7 @@
 									</tbody>
 								</table>
 							</div>
-							
+
 							<!-- 신용카드 자동납부 ( type_card )-->
 							<div class="comm_tableBrdr type_card">
 								<table class="comm_table" summary="명세서 번호, 납부방법, 신용카드 종류, 납부 기준일, 카드번호를 확인 할 수 있는 표 입니다.">
@@ -437,7 +437,7 @@
 										<col width="114" />
 										<col width="*" />
 									</colgroup>
-								
+
 									<tbody>
 										<tr>
 											<th scope="row" class="left">명세서 번호</th>
@@ -458,7 +458,7 @@
 									</tbody>
 								</table>
 							</div>
-							
+
 							<!-- 지로 납부 ( type_giro )-->
 							<div class="comm_tableBrdr type_giro">
 								<table class="comm_table" summary="명세서 번호, 납부방법, 납부 기준일, 청구주소를 확인 할 수 있는 표 입니다.">
@@ -469,7 +469,7 @@
 										<col width="114" />
 										<col width="*" />
 									</colgroup>
-								
+
 									<tbody>
 										<tr>
 											<th scope="row" class="left">명세서 번호</th>
@@ -495,12 +495,12 @@
 									</tbody>
 								</table>
 							</div>
-							
+
 							<form action="post" class="">
 							<div class="commTitleWrap mt23">
 								<h4 class="comm_scnTitle02">납부방법 변경</h4>
 							</div>
-							
+
 							<div class="comm_tableBrdr">
 								<table class="comm_table" summary="변경내용, 납부방법 선택할 수 있는 표 입니다.">
 									<caption>변경할 납부 방법 선택표</caption>
@@ -508,7 +508,7 @@
 										<col width="179" />
 										<col width="*" />
 									</colgroup>
-								
+
 									<tbody>
 										<tr>
 											<th scope="row" class="left">변경 내용</th>
@@ -536,7 +536,7 @@
 												<col width="179" />
 												<col width="*" />
 											</colgroup>
-											
+
 											<tbody>
 												<tr>
 													<th scope="row" class="left">납부방법</th>
@@ -558,7 +558,7 @@
 											</tbody>
 										</table>
 									</fieldset>
-									
+
 									<!-- 신용카드 자동이체 ( payOpt_bank )-->
 									<fieldset class="payOpt_bank">
 									<legend>은행계좌 자동이체</legend>
@@ -568,7 +568,7 @@
 												<col width="179" />
 												<col width="*" />
 											</colgroup>
-											
+
 											<tbody>
 												<tr>
 													<th scope="row" class="left"><label for="billSelectBox_bank">은행 선택</label></th>
@@ -623,7 +623,7 @@
 											</tbody>
 										</table>
 									</fieldset>
-									
+
 									<!-- 신용카드 자동이체 ( payOpt_card )-->
 									<fieldset class="payOpt_card">
 									<legend>신용카드 자동납부</legend>
@@ -633,7 +633,7 @@
 												<col width="179" />
 												<col width="*" />
 											</colgroup>
-											
+
 											<tbody>
 												<tr>
 													<th scope="row" class="left"><label for="type_card_kind">카드종류</label></th>
@@ -649,9 +649,9 @@
 													</td>
 												</tr>
 												<tr>
-													<th scope="row" class="left"><label for="type_card_kind">카드번호</label></th>
+													<th scope="row" class="left"><label for="type_card_num">카드번호</label></th>
 													<td class="last">
-														<input type="text" id="type_card_kind" class="w180" />
+														<input type="text" id="type_card_num" class="w180" />
 														<span class="pl10 font13 color666">"-" 없이 숫자만 입력해주세요.</span>
 													</td>
 												</tr>
@@ -691,7 +691,7 @@
 											</tbody>
 										</table>
 									</fieldset>
-									
+
 									<!-- 지로 납부 ( payOpt_giro )-->
 									<fieldset class="payOpt_giro">
 									<legend>지로 납부</legend>
@@ -701,7 +701,7 @@
 												<col width="179" />
 												<col width="*" />
 											</colgroup>
-											
+
 											<tbody>
 												<tr>
 													<th scope="row" class="left">청구지 정보</th>
@@ -734,7 +734,7 @@
 										</table>
 									</fieldset>
 								</div>
-								
+
 								<!-- 납부기준일 ( payChangeOpt2 )-->
 								<div class="payChangeOpt2">
 									<fieldset>
@@ -742,10 +742,10 @@
 										<table class="comm_table" summary="납부기준일을 선택할 수 있는 표 입니다.">
 											<caption>납부기준일 설정표</caption>
 											<colgroup>
-												<col width="179">
-												<col width="*">
+												<col width="179" />
+												<col width="*" />
 											</colgroup>
-											
+
 											<tbody>
 												<tr class="payChangeOpt2">
 													<th scope="row" class="left">납부일</th>
@@ -764,16 +764,16 @@
 										</table>
 									</fieldset>
 								</div>
-								
+
 							</div>
 							</form>
 						</div>
 						<!-- e : 데이터가 있을 경우 -->
-						
+
 					</div>
 				</div>
 				<!-- e : gray box -->
-				
+
 				<div class="comm_contsInner whiteBox comm_contsBt billHasDataAgree">
 					<div class="comm_contsInner whiteBox pt30">
 						<p class="emp01 font15">납부 방법 변경을 위해 공인 인증이 필요합니다.</p>
@@ -792,15 +792,15 @@
 				<!-- s : 알려드립니다 -->
 				<div class="comm_noticeBox billGuideWrap">
 					<h4 class="title">안내드립니다.</h4>
-					
+
 					<div class="guideWrap">
-						
+
 						<div class="billGuideTabWrap">
 							<ul>
 								<!-- 납부방법 변경안내 -->
 								<li class="billGuide1 selected">
 									<a href="" class="menuBtn">납부방법<br />변경안내</a>
-									
+
 									<div class="billGuideCont">
 										<p class="guideTitle">선택가능한 납부 방법</p>
 										<div class="payGuide11 mt10">
@@ -815,7 +815,7 @@
 												<li>구비서류 : 납부방법 변경 동의서 혹은 신청서, 법인사업자등록증<br />사본, 위임장, 대리인 및 납부자 신분증, 법인인감증명서,<br />납부자(예금주) 신분증</li>
 											</ul>
 										</div>
-										
+
 										<p class="guideTitle">변경 가능한 납부 기준일</p>
 										<div class="payGuide12 mt20">
 											<dl>
@@ -831,7 +831,7 @@
 												<dd>매월 25일, 27일</dd>
 											</dl>
 										</div>
-										
+
 										<p class="guideTitle">납부방법 변경 적용 안내</p>
 										<div class="comm_tableBrdr mt18">
 											<table class="comm_table" summary="정보를 확인할 수 있는 표입니다.">
@@ -854,11 +854,11 @@
 										</div>
 									</div>
 								</li>
-								
+
 								<!-- 은행계좌 자동이체 안내 -->
 								<li class="billGuide2">
 									<a href="" class="menuBtn">은행계좌<br />자동이체 안내</a>
-									
+
 									<div class="billGuideCont">
 										<p class="guideTitle">납부가능 은행</p>
 										<div class="mt17">
@@ -879,11 +879,11 @@
 										</div>
 									</div>
 								</li>
-								
+
 								<!-- 신용카드 납부안내 -->
 								<li class="billGuide3">
 									<a href="" class="menuBtn">신용카드<br />납부안내</a>
-									
+
 									<div class="billGuideCont">
 										<p class="guideTitle">자동납부 가능 카드</p>
 										<div class="mt17">
@@ -924,11 +924,11 @@
 										</div>
 									</div>
 								</li>
-								
+
 								<!-- 지로 납부안내 -->
 								<li class="billGuide4">
 									<a href="" class="menuBtn">지로<br />납부안내</a>
-									
+
 									<div class="billGuideCont">
 										<p class="guideTitle">지로납부 안내</p>
 										<div class="mt17">
@@ -946,7 +946,7 @@
 				<!-- e : 알려드립니다 -->
 
 
-				
+
 
 
 				<!-- e : 컨텐츠 영역  -->
