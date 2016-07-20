@@ -63,6 +63,7 @@
 	<button type="button" class="remote-btn03" href="#addSvcSettingT02" id="addSvcSettingT02Open" onclick="$.ktBizPopClick(this); return false;">멀티넘버 서비스 해지 : 팝업</button>
 	<button type="button" class="remote-btn03" href="#addSvcSettingT03" id="addSvcSettingT03Open" onclick="$.ktBizPopClick(this); return false;">알림콜 서비스 설정 : 팝업</button>
 	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">설정 미완료 알림 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcNoClose" id="addSvcNoCloseOpen" onclick="$.ktBizPopClick(this); return false;">부가서비스 해지 : 팝업</button>
 </div>
 <!-- e : UI GUIDE -->
 
@@ -278,7 +279,7 @@
 
 								<!-- s : header -->
 								<div class="pop_header">
-									<h1>부가서비스 해지</h1>
+									<h4>부가서비스 해지</h4>
 								</div>
 								<!-- e : header -->
 
@@ -286,7 +287,7 @@
 								<div class="pop_conts">
 									<div class="pop_contsContainer">
 										<div class="pop_svc">
-											<h2 class="pop_subTitle1 alignCenter">일반전화 <span class="txtNum">02-1234-5687</span></h2>
+											<h5 class="pop_subTitle1 alignCenter">일반전화 <span class="txtNum">02-1234-5687</span></h5>
 
 											<div class="comm_tableBrdr">
 												<table class="comm_table" summary="신청된 요금제와 해지된 부가서비스를 확인 할 수 있습니다.">
@@ -421,7 +422,7 @@
 
 								<!-- s : header -->
 								<div class="pop_header">
-									<h1>부가서비스 신청</h1>
+									<h4>부가서비스 신청</h4>
 								</div>
 								<!-- e : header -->
 
@@ -429,7 +430,7 @@
 								<div class="pop_conts">
 									<div class="pop_contsContainer">
 										<div class="pop_svc">
-											<h2 class="pop_subTitle1 alignCenter">일반전화 <span class="txtNum">02-1234-5687</span></h2>
+											<h5 class="pop_subTitle1 alignCenter">일반전화 <span class="txtNum">02-1234-5687</span></h5>
 
 											<div class="comm_tableBrdr">
 												<table class="comm_table" summary="신청할 부가서비스와 이용요금(부가세포함)을 확인 할 수 있습니다.">
@@ -492,7 +493,7 @@
 
 								<!-- s : header -->
 								<div class="pop_header">
-									<h1>Kt 인터넷 가족안심</h1>
+									<h4>Kt 인터넷 가족안심</h4>
 								</div>
 								<!-- e : header -->
 
@@ -501,7 +502,7 @@
 									<div class="pop_contsContainer">
 										<div class="pop_svc">
 											<div class="pop_svcAddonHeader family">
-												<h2 class="pop_subTitle pt0">인터넷/스마트폰 자녀보호 안심서비스</h2>
+												<h5 class="pop_subTitle pt0">인터넷/스마트폰 자녀보호 안심서비스</h5>
 												<img class="prdImg" src="../../images/pop/pop_svc_family_bg.png" alt="인터넷, 스마트폰 유해사이트 차단 및 시간관리" />
 												<div class="price">
 													<p class="price-ori">월 <span>3,000</span> 원</p>
@@ -787,18 +788,292 @@
 
 				<!-- s : 멀티넘버 서비스 설정 팝업 -->
 				<div class="pop_layerWrap" id="addSvcSettingT01" style="width: 750px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h4>멀티넘버 서비스 설정</h4>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+
+								<ul class="bulletList">
+									<li>멀티넘버는 일반전화 당 최대 10개까지 이용 가능하며, 한번에 1개씩 신청할 수 있습니다.</li>
+									<li>멀티넘버 이용요금은 번호당 1,100원(부가세포함)입니다.</li>
+								</ul>
+
+								<h5 class="pop_subTitle">이용중인 멀티넘버</h5>
+
+								<div class="comm_tableBrdr mt20">
+									<table class="comm_table" summary="멀티넘버 번호, 가입일, 해지 내용을 확인할 수 있는 표입니다.">
+										<caption>멀티넘버 내역조회</caption>
+										<colgroup>
+											<col width="34%" />
+											<col width="33%" />
+											<col width="33%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">멀티넘버</th>
+												<th scope="col">가입일</th>
+												<th scope="col" class="last">해지</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="center">02-1234-4567</td>
+												<td class="center">2016.04.04</td>
+												<td class="center last">
+													<a href="" class="btnSty mini">해지</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="center">02-1234-4567</td>
+												<td class="center">2016.04.04</td>
+												<td class="center last">
+													<a href="" class="btnSty mini">해지</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="center">02-1234-4567</td>
+												<td class="center">2016.04.04</td>
+												<td class="center last">
+													<a href="" class="btnSty mini">해지</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<h5 class="pop_subTitle">이용가능 멀티넘버</h5>
+
+								<div class="comm_tableBrdr mt20">
+									<table class="comm_table" summary="이용가능한 멀티넘버를 확인하고 선택할 수 있는 표입니다.">
+										<caption>이용가능 멀티넘버 내역조회</caption>
+										<colgroup>
+											<col width="120" />
+											<col width="*" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">선택</th>
+												<th scope="col" class="last">이용할 멀티넘버</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="center">
+													<span class="comm_radio">
+														<input type="radio" id="selectMn01" />
+														<i></i>
+														<label for="selectMn01" class="blind">현재 행 번호 선택</label>
+													</span>
+												</td>
+												<td class="center">
+													010-1234-1234
+												</td>
+											</tr>
+											<tr>
+												<td class="center">
+													<span class="comm_radio">
+														<input type="radio" id="selectMn01" />
+														<i></i>
+														<label for="selectMn01" class="blind">현재 행 번호 선택</label>
+													</span>
+												</td>
+												<td class="center">
+													010-1234-1234
+												</td>
+											</tr>
+											<tr>
+												<td class="center">
+													<span class="comm_radio">
+														<input type="radio" id="selectMn01" />
+														<i></i>
+														<label for="selectMn01" class="blind">현재 행 번호 선택</label>
+													</span>
+												</td>
+												<td class="center">
+													010-1234-1234
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<p class="bulletIcon mt10 mb5">멀티넘버는 개별적 계약 변경 관련 일부 제약 사항이 있습니다.</p>
+								<p class="bulletMinus font13 color666">멀티넘버의 번호변경, 멀티넘버가 부여된 기본전화 변경, 멀티넘버에 대한 설치장소 이전/번호이동/일시 이용중단 등 불가</p>
+								<p class="bulletMinus font13 color666">멀티넘버 번호 변경 등 계약변경이 필요할 경우 해지 후 재가입을 통해 변경 가능</p>
+
+							</div>
+
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red">설정</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
 				</div>
 				<!-- e : 멀티넘버 서비스 설정 팝업 -->
 
 
 				<!-- s : 멀티넘버 서비스 해지 팝업 -->
-				<div class="pop_layerWrap" id="addSvcSettingT02" style="width: 750px; display:none;">
+				<div class="pop_layerWrap" id="addSvcSettingT02" style="margin-left: -300px; width: 598px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h4>알림</h4>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+								<p class="alignCenter">선택하신 멀티넘버 서비스를 해지하시겠습니까?</p>
+							</div>
+
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red">해지</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
 				</div>
 				<!-- e : 멀티넘버 서비스 해지 팝업 -->
 
 
 				<!-- s : 알림콜 서비스 설정 팝업 -->
 				<div class="pop_layerWrap" id="addSvcSettingT03" style="width: 750px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h4>알림콜 서비스 설정</h4>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+
+								<ul class="bulletList">
+									<li>1545번(이동전화에서 발신의 경우 지역번호 포함 1545번)으로 전화를 걸어 문자수신 여부(일시 중지, 수신 개시) 및 문자수신번호 등을 언제든지 변경 가능 합니다.</li>
+								</ul>
+								<div class="comm_tableBrdr mt20">
+									<table class="comm_table" summary="알림콜 수신번호, 비밀번호, 서비스 일시정지, 알림콜 해지 설정을 입력할 수 있는 표 입니다.">
+										<caption>알림콜 서비스 설정 부가정보</caption>
+										<colgroup>
+											<col width="150" />
+											<col width="*" />
+										</colgroup>
+										<tbody class="fullBorder">
+											<tr>
+												<th scope="row" class="left">
+													<label for="callNum">알림콜수신번호</label>
+												</th>
+												<td class="last">
+													<div class="selectWrap w75">
+														<select id="callNum">
+															<option value="010">010</option>
+															<option value="011">011</option>
+														</select>
+													</div>
+													<span>-</span>
+													<input type="text" title="알림콜 수신번호 중간자리 입력란" name="tel_no2" maxlength="4" class="w75" value="1234" />
+													<span>-</span>
+													<input type="text" title="알림콜 수신번호 끝자리 입력란" name="tel_no3" maxlength="4" class="w75"  value="5678" />
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="left">
+													<label for="callNumPw">비밀번호</label>
+												</th>
+												<td class="last">
+													<div>
+														<input type="text" class="w75" maxlength="4" />
+														<span class="font13 color666 ml7">숫자4자리로 입력하세요</span>
+													</div>
+													<p class="iconWarningGray mt10 color666">사용 중인 알림콜 서비스의 수신번호 변경 시 필요한 비밀번호입니다.</p>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="left">서비스 일시정지</th>
+												<td class="last">
+													<div>
+														<span class="comm_checkbox">
+															<input type="checkbox" id="holdCall" />
+															<i></i>
+															<label for="holdCall">서비스를 잠시 이용하지 않습니다.</label>
+														</span>
+													</div>
+													<p class="iconWarningGray mt10 color666">체크박스를 해제하시면 서비스를 다시 이용하실 수 있습니다.</p>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="left">알림콜 해지</th>
+												<td class="last">
+													<span>알림콜을 해지합니다.</span>
+													<span class="comm_radio ml50">
+														<input name="callClose" id="callCloseY" type="radio" checked="checked">
+														<i></i>
+														<label for="callCloseY">예</label>
+													</span>
+													<span class="comm_radio ml15">
+														<input name="callClose" id="callCloseN" type="radio">
+														<i></i>
+														<label for="callCloseN">아니오</label>
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red">설정</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
 				</div>
 				<!-- e : 알림콜 서비스 설정 팝업 -->
 
@@ -808,7 +1083,7 @@
 					<div class="pop_wrap">
 						<!-- s : header -->
 						<div class="pop_header">
-							<h1>알림</h1>
+							<h4>알림</h4>
 						</div>
 						<!-- e : header -->
 
@@ -833,6 +1108,44 @@
 					<!-- e : footer -->
 				</div>
 				<!-- e : 미설정 알림 팝업 -->
+
+
+				<!-- s : 부가서비스 해지불가 팝업 -->
+				<div class="pop_layerWrap" id="addSvcNoClose" style="margin-left: -300px; width: 598px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h4>부가서비스 해지</h4>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer alignCenter">
+								<p class="font18">선택하신 부가서비스는<br />온라인으로 해지가 불가능합니다.<br />고객센터 전화상담 및 플라자/대리점에서 가능합니다.</p>
+								<p class="font21 color333 fBold mt20">모바일: 114(무료)</p>
+								<p class="font21 color333 fBold mt4">일반전화: 1588-0010(유료)</p>
+							</div>
+
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">확인</a>
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 부가서비스 해지불가 팝업 -->
 
 
 				<!-- e : 컨텐츠 영역  -->
