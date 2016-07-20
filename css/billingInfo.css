@@ -121,9 +121,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphVisualBlock .graphVisual {width:160px;height:265px;margin:53px 142px 77px 97px;overflow: hidden;position: relative;}
 .bill_graphBoxWrap .graphTableBlock {width: 369px;float: right;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data {background: url('../images/bg/bill_bg_restDataRed.png');}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data.full {background: url('../images/bg/bill_bg_restDataRed.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data {background: url('../images/bg/bill_bg_overDataBlue.png');margin-top:265px;}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full {background: url('../images/bg/bill_bg_overDataBlue.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span, 
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span {font-size:15px;color:#fff;display: block;text-align:center;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span.outTxt, 
@@ -154,11 +152,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.internal-data {width:54px;background: url('../images/bg/bill_bg_internalDataRed.png');}
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.media-data {background: url('../images/bg/bill_bg_mediaDataYellow.png');}
 .bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.outside-data {background: url('../images/bg/bill_bg_outsideDataGreen.png');}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.internal-data.full {background: url('../images/bg/bill_bg_internalDataRed.png') 0 -2px;}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.media-data .full{background: url('../images/bg/bill_bg_mediaDataYellow.png') 0 -2px;}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.outside-data.full {background: url('../images/bg/bill_bg_outsideDataGreen.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data {background: url('../images/bg/bill_bg_restDataPurple.png');}
-.bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data.full {background: url('../images/bg/bill_bg_restDataPurple.png') 0 -2px;}
 .bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data span.outTxt {position: absolute;top:0;left:50%;color:#69318d;padding:0 !important;}
 .bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data span.infinite {height:57px;background: url('../images/bg/bill_bg_infinite.png') center bottom no-repeat;}
 
