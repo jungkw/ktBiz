@@ -347,7 +347,7 @@ $(document).ready(function(){
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>분리납부내역 조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>요금납부/조회</a></li>";
                                   gnbItem += "<li class='group-item'><a href='#' class='group-link'>납부방법 변경</a></li>";
-                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 관리</a></li>";
+                                  gnbItem += "<li class='group-item'><a href='#' class='group-link'>명세서 변경</a></li>";
                                 gnbItem += "</ul>";
                               gnbItem += "</li>";
                               gnbItem += "<li class='cfmOllehGnb-submenu-item'>";
@@ -750,7 +750,7 @@ $(document).ready(function(){
                                 gnbItem += "<li><a href='#'>분리납부내역 조회</a></li>";
                                 gnbItem += "<li><a href='#'>요금납부/조회</a></li>";
                                 gnbItem += "<li><a href='#'>납부방법 변경</a></li>";
-                                gnbItem += "<li><a href='#'>명세서 관리</a></li>";
+                                gnbItem += "<li><a href='#'>명세서 변경</a></li>";
                               gnbItem += "</ul>";
                             gnbItem += "</li>";
                             gnbItem += "<li>";
@@ -1140,7 +1140,7 @@ $(document).ready(function(){
                     lnbItem += "<a href='#' id='BAG'>납부방법 변경</a>";
                   lnbItem += "</li>";
                   lnbItem += "<li class='cfmOllehNewDontDepth'>";
-                    lnbItem += "<a href='#' id='BAH'>명세서 관리</a>";
+                    lnbItem += "<a href='#' id='BAH'>명세서 변경</a>";
                   lnbItem += "</li>";
 
                 lnbItem += "</ul>";
