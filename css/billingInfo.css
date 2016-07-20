@@ -92,7 +92,7 @@ div.wibro-grap ul.over-charge {position:absolute;bottom:18px;right:29px;}
 div.wibro-grap ul.over-charge li {height:22px;float:left;margin:0 0 0 29px;padding:0 0 0 20px;background:url('../images/bg/bill_bg_grap_etc_pink.png') no-repeat 0 5px;}
 div.wibro-grap ul.over-charge li:first-child {margin:0;background:url('../images/bg/bill_bg_grap_etc_red.png') no-repeat 0 4px;}
 div.wibro-grap ul.over-charge li .data {margin:0 0 0 6px;font-family:'Spoqa Han Sans';font-size:16px;color:#df2428;vertical-align:-2px;}
-div.wibro-grap ul.over-charge li .data .gb, 
+div.wibro-grap ul.over-charge li .data .gb,
 div.wibro-grap ul.over-charge li .data .won {margin:0 0 0 3px;font-weight:normal;color:#333;}
 div.wibro-grap ul.over-charge li .data .won {vertical-align:1px;}
 div.wibro-grap div.default-grap {background: url('../images/bg/bill_bg_grap_default1.png') no-repeat 0 0;}
@@ -122,28 +122,28 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphTableBlock {width: 369px;float: right;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data {background: url('../images/bg/bill_bg_restDataRed.png');}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data {background: url('../images/bg/bill_bg_overDataBlue.png');margin-top:265px;}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span {font-size:15px;color:#fff;display: block;text-align:center;}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span.outTxt, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span.outTxt,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span.outTxt {position: absolute;top:0;left:50%;color:#df2428;padding:0 !important;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span.outTxt {color:#266bc4;}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span em, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span em,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span em { display:block;font-size:23px;}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span strong, 
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span strong {font-size:26px;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;} 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data span strong,
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data span strong {font-size:26px;font-family:'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', arial;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data.full span,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full span {padding-top:100px;} 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full span {padding-top:100px;}
 
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span {font-size:13px;color:#fff;display: block;text-align: center;letter-spacing: -1px}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data em, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data em,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data em,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data em {display: block;}
 
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span.outTxt, 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span.outTxt,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {width:54px;position: absolute;top:0;color:#df2428;padding:0 !important;} 
+.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {width:54px;position: absolute;top:0;color:#df2428;padding:0 !important;}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt {color: #e5782b}
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {color: #5a9c42}
 
@@ -177,9 +177,9 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billInfo_chgStateType {border:1px solid #ccc; border-top-color: #333; background: #fff;}
 .billInfo_chgStateType > div {padding: 17px 30px; overflow: hidden;}
 .billInfo_chgStateType > div .comm_radio {margin-top: 2px;}
-.billInfo_chgStateType > divdiv {border-top: 1px solid #ccc;}
+.billInfo_chgStateType > div + div {border-top: 1px solid #ccc;}
 .billInfo_chgStatelang {border:1px solid #ccc; border-top-color: #333; background: #fff;}
-.billInfo_chgStatelang > divdiv {border-top: 1px solid #ccc;}
+.billInfo_chgStatelang > div + div {border-top: 1px solid #ccc;}
 .billInfo_chgStatelang .header {padding: 17px 20px; width: 60%; border-right: 1px solid #ccc; box-sizing: border-box;}
 .billInfo_chgStatelang .header h5 {margin-top:4px; color: #333;}
 .billInfo_chgStatelang .body {padding: 17px 30px 17px 15px; width: 40%; box-sizing: border-box;}
@@ -274,7 +274,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 /* 요금납부/조회 */
 .bill_payWrap {}
 .bill_payWrap .useNum {font-size:17px; font-weight: bold; color:#000;}
-   
+
 .bill_payWrap .commTitleWrap .total {position: absolute; top:11px; right:0; color:#666; font-size: 13px;}
 .bill_payWrap .commTitleWrap .total em {color:#df2428; font-weight: bold;}
 
