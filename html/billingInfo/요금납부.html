@@ -397,6 +397,10 @@
 										</tbody>
 									</table>
 								</div>
+								
+								<div class="payTotalBox">
+									납부하실 금액은 <span class="num">1,272,760</span>원
+								</div>
 
 								<div class="commTitleWrap mt23">
 									<h4 class="comm_scnTitle02">납부하실 금액 선택을 선택해 주세요.</h4>
@@ -434,8 +438,8 @@
 														<label for="billPaySelected01" class="blind">납부할 금액 선택</label>
 													</span>
 												</td>
-												<td class="center color666">2016.05</td>
-												<td class="center color666">2016.05.25</td>
+												<td class="center">2016.05</td>
+												<td class="center">2016.05.25</td>
 												<td class="center"><span class="num">1,272,760</span><span class="color666">원</span></td>
 												<td class="center"><span class="num">0</span><span class="color666">원</span></td>
 												<td class="center last"><span class="num">1,272,760</span><span class="color666">원</span></td>
@@ -448,8 +452,8 @@
 														<label for="billPaySelected02" class="blind">납부할 금액 선택</label>
 													</span>
 												</td>
-												<td class="center color666">2016.05</td>
-												<td class="center color666">2016.05.25</td>
+												<td class="center">2016.05</td>
+												<td class="center">2016.05.25</td>
 												<td class="center"><span class="num">1,272,760</span><span class="color666">원</span></td>
 												<td class="center"><span class="num">0</span><span class="color666">원</span></td>
 												<td class="center last"><span class="num">1,272,760</span><span class="color666">원</span></td>
@@ -567,7 +571,7 @@
 											납부신청 버튼을 클릭하시면 인증 절차가 진행 됩니다.
 										</p>
 										<div class="commBtnWrap mt15">
-											<a href="#billCertifyLayerPop" class="btnSty red big" title="레이어 열림" id="billCertifyOpenPop01" onclick="$.ktBizPopClick(this); return false;">납부 신청</a><a href="" class="btnSty big">취소</a>
+											<a href="#billCertifyDetailLayerPop" class="btnSty red big" title="레이어 열림" id="billCertifyOpenPop01" onclick="$.ktBizPopClick(this); return false;">납부 신청</a><a href="" class="btnSty big">취소</a>
 										</div>
 									</div>
 									<!-- e : 신용카드 자동이체 ( payNowOpt1 )-->
@@ -625,7 +629,7 @@
 											납부신청 버튼을 클릭하시면 인증 절차가 진행 됩니다.
 										</p>
 										<div class="commBtnWrap mt15">
-											<a href="#billCertifyLayerPop" class="btnSty red big" title="레이어 열림" id="billCertifyOpenPop02" onclick="$.ktBizPopClick(this); return false;">즉시납부 신청</a><a href="" class="btnSty big">취소</a>
+											<a href="#billCertifyDetailLayerPop" class="btnSty red big" title="레이어 열림" id="billCertifyOpenPop02" onclick="$.ktBizPopClick(this); return false;">즉시납부 신청</a><a href="" class="btnSty big">취소</a>
 										</div>
 									</div>
 									<!-- e : 실시간 자동이체 ( payNowOpt2 )-->
@@ -641,50 +645,6 @@
 				</div>
 				<!-- e : gray box -->
 
-
-				<!-- s : 요금납부 공인인증 레이어 팝업 -->
-				<div class="pop_layerWrap" id="billCertifyLayerPop" style="margin-left:-300px; width: 600px; display:none;">
-					<div class="pop_wrap">
-						<!-- s : header -->
-						<div class="pop_header">
-							<h5 >요금납부 공인인증</h5>
-						</div>
-						<!-- e : header -->
-
-						<!-- s : contents -->
-						<div class="pop_conts">
-							<div class="pop_contsContainer relative">
-
-								<p class="font21 alignCenter lh28">요금납부를 하시려면 공인인증이 필요합니다.</p>
-								<p class="font19 alignCenter lh28 mt14">
-									안전한 서비스 이용 및 고객님의 개인정보 보호를 위해<br />공인인증을 받으신 고객분만 이용가능 합니다.<br />서비스 이용을 위해 공인인증 절차를 진행해주세요.
-								</p>
-
-								<div class="alignCenter mt26">
-									<div class="comm_checkbox">
-										<input type="checkbox" name="mmsAgree" id="mmsAgree" checked="checked"/><i></i>
-										<label for="mmsAgree">납부 정보를 확인했습니다.</label>
-									</div>
-								</div>
-							</div>
-							<div class="pop_contsBtns">
-								<a href="#billCertifyDetailLayerPop" class="btnSty big red" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');$.ktBizPopClick(this, $(this).closest('.pop_layerWrap').find('.pop_close a').attr('href')); return false;" id="billCertifyDetailOpenPop01"><span>범용 공인인증서 인증</span></a>
-							</div>
-						</div>
-						<!-- e : contents -->
-
-					</div>
-					<!-- s : footer -->
-					<div class="pop_footer">
-						<div class="pop_footerInner">
-							<p class="pop_close">
-								<a href="#billCertifyOpenPop01" >닫기</a>
-							</p>
-						</div>
-					</div>
-					<!-- e : footer -->
-				</div>
-				<!-- e : 요금납부 공인인증 레이어 팝업 -->
 
 				<!-- s : 요금납부 레이어 팝업 -->
 				<div class="pop_layerWrap" id="billCertifyDetailLayerPop" style="margin-left:-375px; width: 750px; display:none;">
@@ -768,7 +728,7 @@
 									<p class="txt">위 납부정보가 틀림 없습니까?</p>
 									<div class="comm_checkbox">
 										<input type="checkbox" name="mmsAgree" id="bill_payAgree" checked="checked"/><i></i>
-										<label for="bill_payAgree">공인 인증 절차 진행에 동의합니다.</label>
+										<label for="bill_payAgree">납부 정보를 확인했습니다.</label>
 									</div>
 								</div>
 

@@ -302,3 +302,6 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_payHistoryWrap .commTitleWrap .posR {position: absolute; top:2px; right:0;}
 .bill_payHistoryWrap .commTitleWrap .btnList ul {overflow: hidden;}
 .bill_payHistoryWrap .commTitleWrap .btnList li {float:left; margin:0 0 0 5px;}
+
+.bill_payWrap .payTotalBox {margin: -1px 0 0 0; padding:45px 0; font-size:27px; color:#333; line-height:1; text-align:center; background:#fff; border:1px solid #ccc;}
+.bill_payWrap .payTotalBox .num {color:#df2428; font-size: 34px; font-weight:bold; vertical-align:-3px; font-family:'Spoqa Han Sans', 'Malgun Gothic',  arial;}
