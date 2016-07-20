@@ -72,11 +72,18 @@ div.month-pattern ul.data-view li div.up-garp div.in-up-grap .data {position:abs
 div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .data {color:#df2428;background:url('../images/icon/bill_icon_dot_grap_selected.png') no-repeat 0 4px;}
 
 /* 사용량 조회 WiBro */
+
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail {width:134px;}
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.first {width: 253px;}
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.last {width: 132px;}
 .billTopWhiteBox .billTopUsageInfo .usageInfoDetail span.redTxt {font-size: 21px;color: #df2428;font-weight: bold;line-height: 34px;}
-div.grap-group {position:relative;margin:25px 0 0 0;min-height:53px;}
+.billGraphDateSearch {height:30px;margin:30px 0 0 28px;}
+.billGraphDateSearch .leftSelectBox {float:left;}
+.billGraphDateSearch dt {font-weight: bold;margin:0 10px 0 10px;}
+.billGraphDateSearch dt, .billGraphDateSearch dd {float: left;color:#333; font-size: 15px;line-height: 30px;}
+
+
+div.grap-group {position:relative;margin:15px 0 0 0;min-height:53px;}
 div.grap-group .name {font-weight:bold;font-size:13px;color:#333;}
 div.grap-group div.default-grap {height:10px;margin:9px 0 0 0;padding:0 7px 0 0;background:url('../images/bg/bill_bg_grap_default.png') no-repeat 0 0;}
 div.grap-group div.default-grap div.now-grap {position:relative;height:10px;background:url('../images/bg/bill_bg_pink_grap.png') no-repeat 0 0;}
@@ -86,7 +93,7 @@ div.grap-group .data {position:absolute;font-size:13px;color:#333;}
 div.grap-group .ndata span.desc {color:#666;}
 div.grap-group div.default-grap div.now-grap .location {position:absolute;top:0;right:-7px;width:7px;height:10px;background:url('../images/contents/bg_grap_pink_arr.png') no-repeat 100% 0;}
 
-div.wibro-grap {position:relative;margin:30px 28px 0 28px;padding:0 29px 91px 29px;border:1px solid #ccc;background:#fff;}
+div.wibro-grap {position:relative;margin:15px 28px 0 28px;padding:0 29px 91px 29px;border:1px solid #ccc;background:#fff;}
 div.wibro-grap .list-dot {position:absolute;bottom:0;left:0;width:681px;min-height:37px;padding:22px 0 0  29px;border-top:1px solid #ccc;}
 div.wibro-grap ul.over-charge {position:absolute;bottom:18px;right:29px;}
 div.wibro-grap ul.over-charge li {height:22px;float:left;margin:0 0 0 29px;padding:0 0 0 20px;background:url('../images/bg/bill_bg_grap_etc_pink.png') no-repeat 0 5px;}
