@@ -130,8 +130,8 @@ ul.bulletList li:first-child {margin:0;}
 .iconBtn.comm_btn_white01 span {padding:0 9px 0 0;background: url('../images/icon/comm_icon_red_arrow.gif') no-repeat right center;}
 .iconAroundGray {display: inline-block;margin:0 0 0 15px;padding: 0 15px 0 0;line-height: 26px;text-align: center;font-size: 15px;background: url('../images/icon/comm_icon_bg_aroundGray_right.png') no-repeat 100% 0;}
 .iconAroundGray .iconText {display: inline-block;margin: 0 0 0 -15px;padding: 0 0 0 15px;background: url('../images/icon/comm_icon_bg_aroundGray_left.png') no-repeat 0 0;color:#333;}
-.iconAroundBlack {display: inline-block;margin:0 0 0 10px;padding: 0 10px 0 0;line-height: 20px;text-align: center;font-size: 13px;background: url('../images/icon/comm_icon_bg_aroundBlack_right.png') no-repeat 100% 0;}
-.iconAroundBlack .iconText {display: inline-block;margin: 0 0 0 -10px;padding: 0 0 0 10px;background: url('../images/icon/comm_icon_bg_aroundBlack_left.png') no-repeat 0 0;color:#fff;}
+.iconAroundBlack {height:20px;display: inline-block;margin:0 0 0 10px;padding: 0 10px 0 0;line-height: 18px;text-align: center;font-size: 13px;background: url('../images/icon/comm_icon_bg_aroundBlack_right.png') no-repeat 100% 0;}
+.iconAroundBlack .iconText {height:20px;display: inline-block;margin: 0 0 0 -10px;padding: 0 0 0 10px;background: url('../images/icon/comm_icon_bg_aroundBlack_left.png') no-repeat 0 0;color:#fff;}
 
 .iconRedStar {margin:0; padding: 0 0 0 15px; background: url('../images/icon/comm_icon_star_red.png') no-repeat 0 5px;}
 
@@ -314,6 +314,7 @@ a.color333 {color:#333 !important;}
 .ml32 {margin-left:32px;}
 .ml38 {margin-left:38px;}
 .ml40 {margin-left:40px;}
+.ml50 {margin-left:50px;}
 .ml75 {margin-left:75px;}
 .ml95 {margin-left:95px;}
 .ml110 {margin-left:110px;}
