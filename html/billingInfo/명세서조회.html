@@ -147,7 +147,7 @@
 
 								<!-- s : 명세서 번호 선택 -->
 								<div class="searchCommBillType01" >
-									
+
 
 									<!-- s : 30개 이하 -->
 									<div class="circuitSearchDiv billChoice01">
@@ -200,7 +200,7 @@
 								<!-- s : 명세서 번호 선택 -->
 
 
-									
+
 								<!-- s : 레이어 팝업 -->
 								<div class="pop_mask"></div>
 								<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
@@ -308,8 +308,8 @@
 											<div class="pop_billSrchWhiteBox">
 												<fieldset>
 													<legend>명세서 번호 검색 필드</legend>
-													<label for="billNumTxt" class="blind">명세서 번호</label>
-													<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+													<label for="billNumTxt2" class="blind">명세서 번호</label>
+													<input type="text" id="billNumTxt2" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
 												</fieldset>
 											</div>
 											<!-- e : 검색 영역 -->
@@ -370,8 +370,8 @@
 									<!-- e : footer -->
 								</div>
 								<!-- e : 레이어 팝업 -->
-								
-								
+
+
 
 							</fieldset>
 						</div>
@@ -387,7 +387,7 @@
 						<div class="haveContents">
 							<!-- s : 상단 금액 영역  -->
 							<div class="billTopWhiteBox mt23">
-								
+
 								<div class="billTopWhiteFnc">
 									<div class="billLeftBox">
 										<label for="billMonth">조회 기준 월</label>
@@ -443,13 +443,13 @@
 							<!-- e : 상단 금액 영역 -->
 
 
-							
+
 							<div class="billTopWhiteBox pl30 pr30 mt15">
 								<!-- s : 사용내역 -->
-								<div class="commTitleWrap pt34"> 
+								<div class="commTitleWrap pt34">
 									<h4 class="comm_scnTitle02 mb11">사용내역</h4>
 								</div>
-								
+
 								<div class="comm_tableBrdr pb15">
 									<table class="comm_table" summary="서비스 항목, 사용항목, 할인 전 금액, 할인금액, 청구금액 순서로 사용내역을 확인할 수 있는 표 입니다.">
 										<caption>사용내역 확인 표</caption>
@@ -513,7 +513,7 @@
 												<td class="right last">-1,000 원</td>
 												<td class="right last">8,791 원</td>
 											</tr>
-											
+
 											<tr>
 												<th scope="row" class="left last" rowspan="4">일반전화</th>
 												<td class="left last">기본료</td>
@@ -539,7 +539,7 @@
 												<td class="right last">-1,512 원</td>
 												<td class="right last">2,627 원</td>
 											</tr>
-											
+
 											<tr>
 												<th scope="row" class="left last" rowspan="2">인터넷 전화</th>
 												<td class="left last">기본료</td>
@@ -586,10 +586,10 @@
 								<!-- e : 사용내역 -->
 
 								<!-- s : 할인내역 -->
-								<div class="commTitleWrap mt34"> 
+								<div class="commTitleWrap mt34">
 									<h4 class="comm_scnTitle02 mb11">할인내역</h4>
 								</div>
-								
+
 								<div class="comm_tableBrdr pb29">
 									<table class="comm_table" summary="서비스 항목, 사용항목, 할인금액 순서로 할인내역을 확인할 수 있는 표 입니다.">
 										<caption>할인 확인 표</caption>
@@ -625,7 +625,7 @@
 												<td class="left last">소계</td>
 												<td class="right last">-9,791 원</td>
 											</tr>
-											
+
 											<tr>
 												<th scope="row" class="left last" rowspan="4">일반전화</th>
 												<td class="left last">기본료</td>
@@ -643,7 +643,7 @@
 												<td class="left last">소계</td>
 												<td class="right last">-4,139 원</td>
 											</tr>
-											
+
 
 										</tbody>
 									</table>
@@ -710,7 +710,7 @@
 										<input type="radio" name="billReSendType" id="billReSendType02" /><i></i>
 										<label for="billReSendType02">우편 명세서</label>
 									</div>
-								</div>	
+								</div>
 
 								<!-- s : 이메일 명세서 -->
 								<div class="comm_tableBrdr mt10 billReSendType billReSendType01">
@@ -742,7 +742,7 @@
 													</div>
 												</td>
 											</tr>
-										
+
 										</tbody>
 									</table>
 								</div>
@@ -782,7 +782,7 @@
 													<p>
 														<input type="text" disabled="true" class="mr5" id="chgPlace" /><a href="#postLayerPop" class="btnSty mid" id="postPopOpen" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">우편번호 검색</a>
 													</p>
-													<p class="mt10"><input type="text" disabled="true"  class="w100p" /></p>
+													<p class="mt10"><input type="text" disabled="true"  class="w100p" title="상세주소" /></p>
 												</td>
 											</tr>
 											<tr>
@@ -804,12 +804,12 @@
 													<textarea class="w100p"></textarea>
 												</td>
 											</tr>
-										
+
 										</tbody>
 									</table>
 								</div>
 								<!-- e : 우편 명세서 -->
-							
+
 							</div>
 							<div class="pop_contsBtns">
 								<a href="#billReSendPop" class="btnSty big red"><span>확인</span></a>
@@ -825,7 +825,7 @@
 										</ul>
 									</li>
 									<li class="bulletDg">고객님의 납부방법 또는 휴일 등의 사유로 일부 지연될 수 있습니다.</li>
-									
+
 								</ul>
 							</div>
 						</div>
@@ -866,7 +866,7 @@
 											<col width="20%" />
 											<col width="*" />
 										</colgroup>
-										
+
 										<tbody >
 											<tr>
 												<th scope="row" class="center">고객명</th>
@@ -939,15 +939,15 @@
 												<td class="right">0</td>
 												<td class="right last">59,635</td>
 											</tr>
-											
-											
+
+
 
 										</tbody>
 									</table>
 								</div>
-								
+
 								<a href="" class="btnSty sml icon_print absolute top15 right29"><span>인쇄</span></a>
-							
+
 							</div>
 						</div>
 						<!-- e : contents -->
@@ -1123,7 +1123,7 @@
 						</div>
 						<!-- e : contents -->
 
-				
+
 					</div>
 					<!-- s : footer -->
 					<div class="pop_footer">
