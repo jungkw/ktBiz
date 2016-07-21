@@ -472,6 +472,7 @@ a.color333 {color:#333 !important;}
 .br0 {border-right:0 !important;}
 .color666 {color: #666 !important}
 .lh28 {line-height: 28px !important;}
+.lh30 {line-height: 30px !important;}
 .lh24 {line-height: 24px !important;}
 .lh20 {line-height: 20px !important;}
 .lh15 {line-height: 15px !important;}
@@ -542,6 +543,7 @@ a.color333 {color:#333 !important;}
 /* height */
 .h16 {height:16px;}
 .h26 {height:26px;}
+.h30 {height:30px;}
 .h44 {height:44px;}
 .h100 {height:100px;}
 .h110 {height:110px;}
