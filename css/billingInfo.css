@@ -196,6 +196,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billInfo_setPlaceAdd dt, .billInfo_setPlaceAdd dd {float:left;}
 .billInfo_setPlaceAdd dt.old, .billInfo_setPlaceAdd dd.old {margin-bottom: 7px;}
 .billInfo_setPlaceAdd dt {clear: left; width:72px;}
+.billInfo_setPlaceAdd dt .linH {line-height:16px;}
 .billInfo_setPlaceAdd dd {width:355px;}
 .billInfo_resend {position: relative;}
 .billInfo_resend a {position: absolute; top: 15px; right: 20px;}
