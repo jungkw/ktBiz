@@ -154,90 +154,133 @@
 					<div class="comm_contsInner grayBox">
 
 						<!-- s : search comm -->
-						<div class="commTitleWrap pt29 relative">
+						<div class="commBillSearchWrap pt32 relative">
 							<fieldset>
-								<legend>명세서 번호 선택</legend>
-								<p class="comm_scnTitle02 mb20">신청하실 명세서 번호를 선택해주세요.</p>
-								<div class="circuitSearchDiv">
-									<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">서비스 번호 찾기. 현재 선택된 서비스 번호 </span>010-1234-5678</a>
-									<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+								<legend>명세서/서비스번호 조회</legend>
 
-									<!-- s : 레이어 팝업 -->
-									<div class="pop_mask"></div>
-									<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
+								<p class="comm_scnTitle02 font21">신청하실 명세서 번호를 선택해주세요.</p>
 
-										<div class="pop_wrap commBillPop">
+								<!-- s : 명세서 번호 선택 -->
+								<div class="searchCommBillType01" >
 
-											<!-- s : header -->
-											<div class="pop_header">
-												<h4>서비스 번호 찾기</h4>
-												<p class="mt10 color666 font13 alignLeft pl30">50개 이상 회선은 검색을 이용하세요.</p>
-												<!-- s : 검색 영역 -->
-												<div class="pop_billSrchWhiteBox">
-													<fieldset>
-														<legend>서비스 번호 검색 필드</legend>
-														<label for="billNumTxt" class="blind">서비스 번호</label>
-														<input type="text" id="billNumTxt" class="placeholder" value="010-1234-5678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
-													</fieldset>
-												</div>
-												<!-- e : 검색 영역 -->
-											</div>
-											<!-- e : header -->
 
-											<!-- s : contents -->
-											<div class="pop_conts" >
-												<div class="pop_contsContainer pb15">
-													<ul class="pop_billNumListBox">
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-														<li><a href="#billPopOpen01" class="pop_btn_close">010-1234-5678</a></li>
-
-													</ul>
-
-													<div class="comm_paging mt10">
-														<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
-													</div>
-												</div>
-											</div>
-											<!-- e : contents -->
+									<!-- s : 30개 이하 -->
+									<div class="circuitSearchDiv billChoice01">
+										<label for="billSelectBox" class="blind">명세서 번호 선택</label>
+										<div class="selectWrap w250">
+											<select id="billSelectBox">
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+												<option>5845124***** (010-1234-5678)</option>
+											</select>
 										</div>
-										<!-- s : footer -->
-										<div class="pop_footer">
-											<div class="pop_footerInner">
-												<p class="pop_close">
-													<a href="#billPopOpen01" >닫기</a>
-												</p>
-											</div>
-										</div>
-										<!-- e : footer -->
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
 									</div>
+									<!-- e : 30개 이하 -->
+
+									<!-- s : 30개 초과 -->
+									<div class="circuitSearchDiv billChoice02" style="display: none">
+										<a href="#billLayerPop"  id="billPopOpen01" class="dummyInput w250" onclick="$.ktBizPopClick(this); return false;" ><span class="blind">명세서 번호 찾기. 현재 선택된 명세서 번호 </span>5845124***** (010-1234-5678)</a>
+										<a href="#" class="btnSty mid blk w26 fBold">조회</a>
+									</div>
+									<!-- e : 30개 초과 -->
+								</div>
+								<!-- s : 명세서 번호 선택 -->
+
+
+
+								<!-- s : 레이어 팝업 -->
+								<div class="pop_mask"></div>
+								<div class="pop_layerWrap" id="billLayerPop" style="width:670px; display: none;">
+
+									<div class="pop_wrap commBillPop">
+
+										<!-- s : header -->
+										<div class="pop_header">
+											<h4>명세서 번호 찾기</h4>
+											<p class="mt10 color666 font13 alignLeft pl30">30개 이상 명세서는 검색을 이용하세요.</p>
+											<!-- s : 검색 영역 -->
+											<div class="pop_billSrchWhiteBox">
+												<fieldset>
+													<legend>명세서 번호 검색 필드</legend>
+													<label for="billNumTxt" class="blind">명세서 번호</label>
+													<input type="text" id="billNumTxt" class="placeholder" value="01012345678" /><a href="#" class="btnSty mid blk w26 fBold">검색</a>
+												</fieldset>
+											</div>
+											<!-- e : 검색 영역 -->
+										</div>
+										<!-- e : header -->
+
+										<!-- s : contents -->
+										<div class="pop_conts" >
+											<div class="pop_contsContainer indexPop">
+												<ul class="pop_billNumListBox billPop">
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+													<li><a href="#billPopOpen01" class="pop_btn_close">5845124***** (010-1234-5678)</a></li>
+
+												</ul>
+
+												<div class="comm_paging mt10">
+													<a href="#" class="on" title="현재 페이지">1</a><a href="#">2</a>
+												</div>
+											</div>
+										</div>
+										<!-- e : contents -->
+									</div>
+									<!-- s : footer -->
+									<div class="pop_footer">
+										<div class="pop_footerInner">
+											<p class="pop_close">
+												<a href="#billPopOpen01" >닫기</a>
+											</p>
+										</div>
+									</div>
+									<!-- e : footer -->
 								</div>
 								<!-- e : 레이어 팝업 -->
 
@@ -246,7 +289,7 @@
 						<!-- e : search comm -->
 
 
-						<div class="bill_payWrap pb30">
+						<div class="bill_payWrap pb30 mt18">
 							<!-- s : 데이터가 없을 경우 -->
 							<div class="comm_noContents billNoData" style="display:none;">
 								<p><strong>조회된 데이터가 없습니다.</strong></p>
@@ -281,11 +324,11 @@
 								</div>
 
 								<div class="commTitleWrap mt23">
-									<h4 class="comm_scnTitle02">납부하실 금액 선택을 선택해 주세요.</h4>
+									<h4 class="comm_scnTitle02">납부하실 금액을 선택해 주세요.</h4>
 									<span class="total"><em>2건</em>의 납부하실 내역이 조회되었습니다.</span>
 								</div>
 
-								<div class="comm_tableBrdr">
+								<div class="comm_tableBrdr mt_4">
 									<table class="comm_table" summary="패키지 상품명, 일반금액(부가세포함), 할인금액, 정구금액을 확인할 수 있는 표 입니다.">
 										<caption>패키지 부가서비스 조회표</caption>
 										<colgroup>
@@ -351,7 +394,7 @@
 									<h4 class="comm_scnTitle02">납부 정보를 입력하신 후 납부 신청 버튼을 클릭해주세요.</h4>
 								</div>
 
-								<div class="comm_tableBrdr">
+								<div class="comm_tableBrdr mt_4">
 									<table class="comm_table" summary="납부 방법을 신용카드, 실시간 자동이체 중 선택 할 수 있는 표 입니다.">
 										<caption>변경할 납부 방법 선택표</caption>
 										<colgroup>
