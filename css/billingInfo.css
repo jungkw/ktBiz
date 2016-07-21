@@ -53,7 +53,7 @@
 .billTopWhiteBox .billTopUsageInfo .usageInfoDetail dd {color:#333;font-size: 21px;}
 .billTopWhiteBox .billTopUsageInfo .usageInfoDetail dd .num {color:#df2428;font-size: 26px;font-weight: bold}
 .billTopWhiteBox .billTopUsageInfo .usageInfoDetail dd a.setNoti {font-size: 22px;color: #df2428;font-weight: bold;text-decoration: underline;line-height: 34px;}
-div.month-pattern {margin:0 29px;padding:30px 29px 60px 29px;background-color:#fff;border:1px solid #ccc;}
+div.month-pattern {margin:0 29px;padding:30px 29px 130px 29px;background-color:#fff;border:1px solid #ccc;position: relative;}
 div.month-pattern .default-size {display:inline-block;padding:6px 10px 6px 10px;background:#666;border-radius:12px;color:#fff;}
 div.month-pattern ul.data-view {min-height:261px;margin:30px 0 0 0;padding:0 0 0 75px;background:url('../images/bg/bill_bg_default_grap.png') no-repeat 0 100%;}
 div.month-pattern ul.data-view li {position:relative;float:left;min-height:231px;width:79px;margin:40px 0 0 0;font-size:15px;color:#666;}
@@ -70,9 +70,16 @@ div.month-pattern ul.data-view li div.up-garp div.in-up-grap .now {position:abso
 div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .now {position:absolute;top:0;left:0;width:29px;height:10px;background:url('../images/bg/bill_bg_grap_hori_top_selected.png') no-repeat 0 0;}
 div.month-pattern ul.data-view li div.up-garp div.in-up-grap .data {position:absolute;top:-20px;left:12px;min-width:110px;padding:0 0 0 15px;font-weight:normal;background:url('../images/icon/bill_icon_dot_grap.png') no-repeat 0 4px;}
 div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .data {color:#df2428;background:url('../images/icon/bill_icon_dot_grap_selected.png') no-repeat 0 4px;}
+div.month-pattern .graphLegend {position: absolute;bottom: 30px;left:392px;}
+div.month-pattern .graphLegend dt, div.month-pattern .graphLegend dd {float:left;}
+div.month-pattern .graphLegend dt {width:11px;height: 11px;margin-top:2px}
+div.month-pattern .graphLegend dd {height: 13px;padding-left:6px;line-height: 13px;color: #333}
+div.month-pattern .graphLegend dt.use-data {background: #989898;margin-left:37px;}
+div.month-pattern .graphLegend dt.over-data {background: #ed1c22}
+
+
 
 /* 사용량 조회 WiBro */
-
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail {width:134px;}
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.first {width: 253px;}
 .billTopWhiteBox .billTopUsageInfo.wibroUsage .usageInfoDetail.last {width: 132px;}
@@ -172,7 +179,18 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .graphTableBlock.diffTableCase table.comm_table th {background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 50%;font-size: 15px; color: #333;font-weight: normal}
 .graphTableBlock.diffTableCase table.comm_table td {font-size: 15px; color: #000}
 .graphTableBlock.diffTableCase table.comm_table td span.num {font-size: 15px !important}
+.graphTableBlock.voiceTableBlock table.comm_table td {padding:6px 15px 6px;}
 
+.graphTableBlock .graphLegend {width:340px;overflow: hidden;}
+.graphTableBlock .graphLegend dt {width:11px;height: 11px;float:left;margin:11px 0 0 5px;}
+.graphTableBlock .graphLegend dd {width:318px;height: 13px;float: left;padding-left:6px;line-height: 13px;margin-top:10px;color: #666}
+.graphTableBlock .graphLegend dt.use-data {background: #b4b4b4}
+.graphTableBlock .graphLegend dt.rest-data {background: #ff5554}
+.graphTableBlock .graphLegend dt.over-data {background: #549cff}
+.graphTableBlock .graphLegend dt.internal-data {background: #ff5e5d}
+.graphTableBlock .graphLegend dt.media-data {background: #ffa343}
+.graphTableBlock .graphLegend dt.outside-data {background: #71d463}
+.graphTableBlock .graphLegend dt.sms-rest-data {background: #9160af}
 
 /* 명세서 변경 */
 .billInfo_setPlaceAdd dt, .billInfo_setPlaceAdd dd {float:left;}
