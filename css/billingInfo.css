@@ -317,7 +317,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_payTxtWrap .txt {font-size: 18px; color:#333;}
 .bill_payTxtWrap .comm_checkbox {position: absolute; top:0; right:0;}
 
-.bill_payHistoryWrap .commTitleWrap .posR {position: absolute; top:2px; right:0;}
+.bill_payHistoryWrap .commTitleWrap .posR {position: absolute; top:-2px; right:0;}
 .bill_payHistoryWrap .commTitleWrap .btnList ul {overflow: hidden;}
 .bill_payHistoryWrap .commTitleWrap .btnList li {float:left; margin:0 0 0 5px;}
 
