@@ -684,6 +684,8 @@ a.color333 {color:#333 !important;}
 /* tab in fullbox */
 .comm_contsInnerFullBox .comm_tabs.style02 {margin: 0; padding-bottom: 14px; background: #fff;}
 .comm_contsInnerFullBox .comm_tabs.style02 .tabsCategory {padding-left: 52px; height: 55px; background: #f8f8f8;}
+.comm_contsInnerFullBox .comm_tabs.style02.onTop {border-top: 0;}
+.comm_contsInnerFullBox .comm_tabs.style02.onTop .tabsCategory {background: #f8f8f8 url(../images/bg/comm_bg_lightgray_contsTop.png) no-repeat;}
 
 
 /* telphone num */
