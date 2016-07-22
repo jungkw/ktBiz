@@ -90,6 +90,10 @@
 	<button type="button" class="remote-btn02"><strong>[명세서 번호 선택]</strong><br/>30개 초과일 경우</button>
 	<button type="button" class="remote-btn03">조회된 데이터가 없을 경우</button>
 	<button type="button" class="remote-btn04">조회된 데이터가 있을 경우</button>
+	<button type="button" href="#emailStateApply" id="emailStateApplyOpen2" onclick="$.ktBizPopClick(this); return false;">명세서 유형 변경하기 :<br />이메일명세서</button>
+	<button type="button" href="#smartStateApply" id="smartStateApplyOpen" onclick="$.ktBizPopClick(this); return false;">명세서 유형 변경하기 :<br />스마트명세서</button>
+	<button type="button" href="#postStateApply" id="postStateApplyOpen" onclick="$.ktBizPopClick(this); return false;">명세서 유형 변경하기 :<br />우편명세서</button>
+
 </div>
 <!-- e : UI GUIDE -->
 
@@ -691,9 +695,7 @@
 							</div>
 
 							<div class="commBtnWrap">
-								<a href="#emailStateApply" id="emailStateApplyOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;">명세서 유형 변경하기(이메일)</a>
-								<a href="#smartStateApply" id="smartStateApplyOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;">명세서 유형 변경하기(스마트)</a>
-								<a href="#postStateApply" id="postStateApplyOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;">명세서 유형 변경하기(우편)</a>
+								<a href="#emailStateApply" id="emailStateApplyOpen" class="btnSty red big" onclick="$.ktBizPopClick(this); return false;">명세서 유형 변경하기</a>
 							</div>
 							<!-- e: 명세서 유형변경 -->
 
