@@ -126,8 +126,9 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 
 /* 사용량 조회 모바일 */
 .bill_graphBoxWrap {padding-top:65px;overflow: hidden;position: relative;background: #fff;border-left: 1px solid #ccc;border-right: 1px solid #ccc;}
-.bill_graphBoxWrap h4 {position: absolute;top:77px;left:399px;font-size: 21px;font-weight: bold;color: #333}
-.bill_graphBoxWrap h4 + dl {position: absolute;top:80px;right:28px;font-size:15px;color:#666;}
+.bill_graphBoxWrap h4 {font-size: 21px;font-weight: bold;color: #333}
+.bill_graphBoxWrap.dataGraphBoxWrap h4 {position: absolute;top:77px;left:399px;}
+.bill_graphBoxWrap.dataGraphBoxWrap h4 + dl {position: absolute;top:80px;right:28px;font-size:15px;color:#666;}
 .bill_graphBoxWrap .graphVisualBlock {width: 399px;height:395px;position:relative;float: left;background: url('../images/bg/bill_bg_usageMobile01.png') 67px 0 no-repeat;}
 .bill_graphBoxWrap .graphVisualBlock .topText {width:160px;position: absolute;left:97px;top:22px; font-size: 13px;color:#333;}
 .bill_graphBoxWrap .graphVisualBlock .topText p {text-align:center;}
@@ -148,38 +149,24 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .rest-data.full span,
 .bill_graphBoxWrap .graphVisualBlock .graphVisual .over-data.full span {padding-top:100px;}
 
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span {font-size:13px;color:#fff;display: block;text-align: center;letter-spacing: -1px}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data em,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data em,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data em {display: block;}
-
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .internal-data span.outTxt,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt,
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {width:54px;position: absolute;top:0;color:#df2428;padding:0 !important;}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .media-data span.outTxt {color: #e5782b}
-.bill_graphBoxWrap .graphVisualBlock .graphVisual .outside-data span.outTxt {color: #5a9c42}
-
-
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div {width:53px;float:left;}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.internal-data {width:54px;background: url('../images/bg/bill_bg_internalDataRed.png');}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.media-data {background: url('../images/bg/bill_bg_mediaDataYellow.png');}
-.bill_graphBoxWrap .graphVisualBlock.voiceCase .graphVisual div.outside-data {background: url('../images/bg/bill_bg_outsideDataGreen.png');}
-.bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data {background: url('../images/bg/bill_bg_restDataPurple.png');}
-.bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data span.outTxt {position: absolute;top:0;left:50%;color:#69318d;padding:0 !important;}
-.bill_graphBoxWrap .graphVisualBlock.smsCase .graphVisual .rest-data span.infinite {height:57px;background: url('../images/bg/bill_bg_infinite.png') center bottom no-repeat;}
-
 .bill_graphBoxWrap .graphVisualBlock .restDate {width: 4px;height: 263px;max-height: 263px;position: absolute;bottom:77px;right:107px;background: url('../images/bg/bill_bg_dateBar.png') no-repeat; }
 .bill_graphBoxWrap .graphVisualBlock .restDateTooltip {width:42px;height:40px;padding:4px 0 0 5px;position: absolute;bottom:317px;right:60px;font-size:11px;text-align:center;background: url('../images/bg/bill_bg_dateToolTip.png') no-repeat; }
 .bill_graphBoxWrap .graphVisualBlock .restDateTooltip span {display:block;margin-top:-2px;font-family:'Spoqa Han Sans';font-size: 16px;}
 .graphTableBlock .comm_tableBrdr {width:340px;margin-top:52px;}
 .graphTableBlock table.comm_table {border-left:0; border-right:0;}
+
+
 .graphTableBlock.diffTableCase table.comm_table th, .graphTableBlock.diffTableCase table.comm_table td {height:15px;padding:10px 6px 9px 2px;}
 .graphTableBlock.diffTableCase table.comm_table th {background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 50%;font-size: 15px; color: #333;font-weight: normal}
 .graphTableBlock.diffTableCase table.comm_table td {font-size: 15px; color: #000}
 .graphTableBlock.diffTableCase table.comm_table td span.num {font-size: 15px !important}
-.graphTableBlock.voiceTableBlock table.comm_table td {padding:6px 15px 6px;}
+
+.graphTableBlock.voiceTableBlock, .graphTableBlock.smsTableBlock {width:340px;position: relative;}
+.graphTableBlock.voiceTableBlock {float:left;}
+.graphTableBlock.smsTableBlock {float: right}
+
+
+
 
 .graphTableBlock .graphLegend {width:340px;overflow: hidden;}
 .graphTableBlock .graphLegend dt {width:11px;height: 11px;float:left;margin:11px 0 0 5px;}
@@ -187,10 +174,6 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .graphTableBlock .graphLegend dt.use-data {background: #b4b4b4}
 .graphTableBlock .graphLegend dt.rest-data {background: #ff5554}
 .graphTableBlock .graphLegend dt.over-data {background: #549cff}
-.graphTableBlock .graphLegend dt.internal-data {background: #ff5e5d}
-.graphTableBlock .graphLegend dt.media-data {background: #ffa343}
-.graphTableBlock .graphLegend dt.outside-data {background: #71d463}
-.graphTableBlock .graphLegend dt.sms-rest-data {background: #9160af}
 
 /* 명세서 변경 */
 .billInfo_setPlaceAdd dt, .billInfo_setPlaceAdd dd {float:left;}

@@ -102,45 +102,6 @@
 		}
 
 
-		$.graph02 = function(obj){
-
-			var $objValue = $(obj).val()+'%';
-			$(obj).next('span').text($objValue);
-			var $data01 = $('#data03').val();
-			var $data02 = $('#data04').val();
-			var $data03 = $('#data05').val();
-			$('.comm_noContents').hide();
-			$('.haveContents').show();
-			
-
-			$('.voiceCase').find('.graphVisual').html('<div class="internal-data" style="height: '+$data01+'%"><span class="blind">국내통화<em><strong>무제한</strong></em></span></div><div class="media-data" style="height: '+$data02+'%"><span class="blind">영상/부가<em><strong>200</strong> 분</em></span></div><div class="outside-data" style="height:'+$data03+'%"><span class="blind">국제통화<em><strong>0</strong> 분<br/><strong>0</strong> 초</em></span></div>');
-			
-			$('.voiceCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
-			$.ktBizMobileUsage('voiceCase');
-		}
-
-
-		$.graph03 = function(obj){
-
-			
-			$('.comm_noContents').hide();
-			$('.haveContents').show();
-
-			if(obj.id == 'data06'){
-				var $objValue = $(obj).val()+'%';
-				$(obj).next('span').text($objValue);
-				$('.smsCase').find('.graphVisual').html('<div class="rest-data" style="height: '+$objValue+'"><span class="blind">잔여량<em><strong>200</strong> 건</em></span></div>');
-			}else{
-				$('.smsCase').find('.graphVisual').html('<div class="rest-data" style="height: 85%"><span class="blind infinite">무제한</span></div>');
-			}
-			
-
-			
-			
-			$('.smsCase').find('.restDateBlock').html('<div class="restDate"></div><div class="restDateTooltip">잔여일<span></span></div>');
-			$.ktBizMobileUsage('smsCase');
-		}
-
 	}); 
 </script>
 <div class="ui-remote">
@@ -171,51 +132,6 @@
 		</div>
 	</div>
 
-
-	<p class="mt20">음성통화 그래프</p>
-	<div style="height:50px;">
-		<div class="fl" style="width:80px;line-height: 30px;">
-			<label for="data03" class="mr10 mt10">국내통화</label>
-		</div>
-		<div class="fr" style="width:120px">
-			<input class="mt10" id="data03" type="range" min="0" max="100" value="80" onchange="$.graph02(this)" style="width:100px" />
-			<span style="display:block;">80%</span>
-		</div>
-	</div>
-
-	<div style="height:50px;">
-		<div class="fl" style="width:80px;line-height: 30px;">
-			<label for="data04" class="mr10 mt10">영상/부가</label>
-		</div>
-		<div class="fr" style="width:120px">
-			<input class="mt10" id="data04" type="range" min="0" max="100" value="50" onchange="$.graph02(this)" style="width:100px" />
-			<span style="display:block;">50%</span>
-		</div>
-	</div>
-
-	<div style="height:50px;">
-		<div class="fl" style="width:80px;line-height: 30px;">
-			<label for="data05" class="mr10 mt10">국제통화</label>
-		</div>
-		<div class="fr" style="width:120px">
-			<input class="mt10" id="data05" type="range" min="0" max="100" value="10" onchange="$.graph02(this)" style="width:100px" />
-			<span style="display:block;">10%</span>
-		</div>
-	</div>
-
-
-
-	<p class="mt20">문자 그래프</p>
-	<div style="height:50px;">
-		<div class="fl" style="width:80px;line-height: 30px;">
-			<label for="data06" class="mr10 mt10">잔여량</label>
-		</div>
-		<div class="fr" style="width:120px">
-			<input class="mt10" id="data06" type="range" min="0" max="100" value="85" onchange="$.graph03(this)" style="width:100px" />
-			<span style="display:block;">85%</span>
-		</div>
-	</div>
-	<button type="button" id="data07" style="width:100px; margin-right:10px" class="fr"  onclick="$.graph03(this);">무제한</button>
 
 </div>
 <!-- e : UI GUIDE -->
@@ -457,12 +373,8 @@
 
 
 						<!-- s : 데이터 그래프 영역 -->
-						<div class="bill_graphBoxWrap haveContents">
+						<div class="bill_graphBoxWrap dataGraphBoxWrap haveContents">
 							<h4>5월 데이터 현황</h4>
-							<dl>
-								<dt class="blind">조회기간</dt>
-								<dd>2016.01.01~2016.01.31</dd>
-							</dl>
 							
 							<div class="graphVisualBlock dataCase">
 								<div class="topText">
@@ -526,31 +438,14 @@
 						</div>
 						<!-- e : 데이터 그래프 영역 -->
 
-						<!-- s : 음성 그래프 영역 -->
-						<div class="bill_graphBoxWrap haveContents">
-							<h4>5월 음성통화 현황</h4>
-							<dl>
-								<dt class="blind">조회기간</dt>
-								<dd>2016.01.01~2016.01.31</dd>
-							</dl>
-							
-							<div class="graphVisualBlock voiceCase">
-								<p class="topText left140"><img src="../../images/bg/bill_bg_usageVoice.png" alt="voice"/></p>
-								<div class="graphVisual">
-									<div class="internal-data" style="height: 80%"><span class="blind">국내통화<em><strong>무제한</strong></em></span></div>
-									<div class="media-data" style="height: 50%"><span class="blind">영상/부가<em><strong>200</strong> 분</em></span></div>
-									<div class="outside-data" style="height:10%"><span class="blind">국제통화<em><strong>0</strong> 분<br/><strong>0</strong> 초</em></span></div>
-								</div>
-								<div class="restDateBlock">
-									<div class="restDate"></div>
-									<div class="restDateTooltip">
-										잔여일<span></span>
-									</div>
-								</div>
-							</div>
-							<div class="graphTableBlock dffTableCase voiceTableBlock">
+						<!-- s : 음성/문자 영역 -->
+						<div class="bill_graphBoxWrap haveContents pb60">
 
-								<div class="comm_tableBrdr">
+							<!-- s : 음성 테이블 영역 -->
+							<div class="graphTableBlock dffTableCase voiceTableBlock ml30">
+								<h4>5월 음성통화 현황</h4>
+
+								<div class="comm_tableBrdr mt19">
 									<table class="comm_table" summary="구분, 총제공량, 사용량, 잔여량 순서로 음성통화 현황 을 확인할 수 있는 표 입니다.">
 										<caption>음성통화 현황</caption>
 										<colgroup>
@@ -596,46 +491,14 @@
 										</tbody>
 									</table>
 								</div>
-
-								<dl class="graphLegend">
-									<dt class="internal-data"><img src="../../images/bg/bill_bg_graphLegendCircle.png" alt="첫번째 빨간색 물결 영역"/></dt>
-									<dd>국내통화</dd>
-									<dt class="media-data"><img src="../../images/bg/bill_bg_graphLegendCircle.png" alt="두번째 주황색 물결 영역"/></dt>
-									<dd>영상/부가서비스</dd>
-									<dt class="outside-data"><img src="../../images/bg/bill_bg_graphLegendCircle.png" alt="세번째 초록색 물결 영역"/></dt>
-									<dd>국제통화</dd>
-								</dl>
-
 							</div>
-						</div>
-						<!-- e : 음성 그래프 영역 -->
+							<!-- e : 음성 테이블 영역 -->
 
 
-						<!-- s : 문자 그래프 영역 -->
-						<div class="bill_graphBoxWrap haveContents pb60">
-							<h4>5월 문자 현황</h4>
-							<dl>
-								<dt class="blind">조회기간</dt>
-								<dd>2016.01.01~2016.01.31</dd>
-							</dl>
-							
-							<div class="graphVisualBlock smsCase ">
-								<div class="topText">
-									<p>기본제공량 <span>무제한</span></p>
-								</div>
-								<div class="graphVisual">
-									<div class="rest-data" style="height: 85%"><span class="blind">잔여량<em><strong>200</strong> 건</em></span></div>
-								</div>
-								<div class="restDateBlock">
-									<div class="restDate"></div>
-									<div class="restDateTooltip">
-										잔여일<span></span>
-									</div>
-								</div>
-							</div>
-							<div class="graphTableBlock diffTableCase">
-
-								<div class="comm_tableBrdr">
+							<!-- s : 문자 테이블 영역 -->
+							<div class="graphTableBlock diffTableCase smsTableBlock mr30">
+								<h4>5월 문자 현황</h4>
+								<div class="comm_tableBrdr mt19">
 									<table class="comm_table" summary="기본 제공량, 잔여량, 사용량 순서로 문자 현황 을 확인할 수 있는 표 입니다.">
 										<caption>문자 현황</caption>
 										<colgroup>
@@ -660,17 +523,13 @@
 										</tbody>
 									</table>
 								</div>
-
-								<dl class="graphLegend">
-									<dt class="use-data"><img src="../../images/bg/bill_bg_graphLegendCircle.png" alt="회색 배경 영역"/></dt>
-									<dd>사용량</dd>
-									<dt class="sms-rest-data"><img src="../../images/bg/bill_bg_graphLegendCircle.png" alt="빨간색 물결 영역"/></dt>
-									<dd>잔여량</dd>
-								</dl>
-
 							</div>
+							<!-- e : 문자 테이블 영역 -->
 						</div>
-						<!-- e : 문자 그래프 영역 -->
+						<!-- e : 음성 /문자 영역 -->
+
+
+
 
 
 					
