@@ -190,10 +190,11 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billInfo_chgStateType > div + div {border-top: 1px solid #ccc;}
 .billInfo_chgStatelang {border:1px solid #ccc; border-top-color: #333; background: #fff;}
 .billInfo_chgStatelang > div + div {border-top: 1px solid #ccc;}
-.billInfo_chgStatelang .header {padding: 17px 20px; width: 60%; border-right: 1px solid #ccc; box-sizing: border-box;}
+.billInfo_chgStatelang .header {padding: 17px 20px; width: 70%; border-right: 1px solid #ccc; box-sizing: border-box;}
 .billInfo_chgStatelang .header h5 {margin-top:4px; color: #333;}
-.billInfo_chgStatelang .body {padding: 17px 30px 17px 15px; width: 40%; box-sizing: border-box;}
-.billInfo_chgStatelang .body .comm_radio {margin: 2px 0 0 5px;}
+.billInfo_chgStatelang .body {padding: 17px 15px; width: 30%; box-sizing: border-box; text-align: center;}
+.billInfo_chgStatelang .body .comm_radio {margin-top: 2px;}
+.billInfo_chgStatelang .body .comm_radio:first-child {margin-right: 15px;}
 
 
 /* 납부방법 변경 */
