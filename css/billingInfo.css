@@ -170,8 +170,8 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 
 
 .graphTableBlock .graphLegend {width:340px;overflow: hidden;}
-.graphTableBlock .graphLegend dt {width:11px;height: 11px;float:left;margin:11px 0 0 5px;}
-.graphTableBlock .graphLegend dd {width:318px;height: 14px;float: left;padding-left:6px;line-height: 14px;margin-top:10px;color: #666}
+.graphTableBlock .graphLegend dt {width:11px;height: 11px;float:left;margin:11px 0 0 5px; float:left;}
+.graphTableBlock .graphLegend dd {height: 14px;float: left;padding-left:6px;line-height: 14px;margin:10px 15px 0 0;color: #666;float:left;}
 .graphTableBlock .graphLegend dt.use-data {background: #b4b4b4}
 .graphTableBlock .graphLegend dt.rest-data {background: #ff5554}
 .graphTableBlock .graphLegend dt.over-data {background: #549cff}
