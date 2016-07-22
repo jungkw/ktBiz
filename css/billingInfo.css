@@ -156,11 +156,11 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .graphTableBlock table.comm_table {border-left:0; border-right:0;}
 
 
-.graphTableBlock.diffTableCase table.comm_table th, .graphTableBlock.diffTableCase table.comm_table td {height:15px;padding:10px 6px 9px 2px;}
+.graphTableBlock.diffTableCase table.comm_table th, .graphTableBlock.diffTableCase table.comm_table td {height:15px;padding:16px 6px 15px 2px;}
 .graphTableBlock.diffTableCase table.comm_table th {background:url(../images/bg/comm_bg_th.gif) no-repeat 100% 50%;font-size: 15px; color: #333;font-weight: normal}
 .graphTableBlock.diffTableCase table.comm_table td {font-size: 15px; color: #000}
 .graphTableBlock.diffTableCase table.comm_table td span.num {font-size: 15px !important}
-.graphTableBlock.voiceTableBlock table.comm_table td {padding:10px 6px 9px 2px;}
+.graphTableBlock.voiceTableBlock table.comm_table td, .graphTableBlock.smsTableBlock table.comm_table td {padding:10px 6px 9px 2px;}
 
 .graphTableBlock.voiceTableBlock, .graphTableBlock.smsTableBlock {width:340px;position: relative;}
 .graphTableBlock.voiceTableBlock {float:left;}
@@ -169,7 +169,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 
 
 
-.graphTableBlock .graphLegend {width:340px;overflow: hidden;}
+.graphTableBlock .graphLegend {width:340px;margin-top:7px;overflow: hidden;}
 .graphTableBlock .graphLegend dt {width:11px;height: 11px;float:left;margin:11px 0 0 5px; float:left;}
 .graphTableBlock .graphLegend dd {height: 14px;float: left;padding-left:6px;line-height: 14px;margin:10px 15px 0 0;color: #666;float:left;}
 .graphTableBlock .graphLegend dt.use-data {background: #b4b4b4}

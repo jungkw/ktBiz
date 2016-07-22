@@ -132,16 +132,17 @@
 								<legend>명세서/서비스번호 조회</legend>
 
 								<div class="comm_radio">
-									<input type="radio" name="circuitSearchRadio" id="billChoice" checked="true" value="searchCommBillType01" desc01="명세서 번호 찾기" desc02="명세서 번호 검색 필드" desc03="명세서 번호" data="5845124***** (010-1234-5678)" /><i></i>
-									<label for="billChoice">명세서 번호 선택</label>
-								</div>
-								<div class="comm_radio ml20">
-									<input type="radio" name="circuitSearchRadio" id="svcChoice" value="searchCommBillType02" desc01="서비스 번호 찾기" desc02="서비스 번호 검색 필드" desc03="서비스 번호"  data="010-1234-5678" /><i></i>
+									<input type="radio" name="circuitSearchRadio" id="svcChoice" checked="true" value="searchCommBillType02" desc01="서비스 번호 찾기" desc02="서비스 번호 검색 필드" desc03="서비스 번호"  data="010-1234-5678" /><i></i>
 									<label for="svcChoice">서비스 번호 선택</label>
 								</div>
 
+								<div class="comm_radio ml20">
+									<input type="radio" name="circuitSearchRadio" id="billChoice" value="searchCommBillType01" desc01="명세서 번호 찾기" desc02="명세서 번호 검색 필드" desc03="명세서 번호" data="5845124***** (010-1234-5678)" /><i></i>
+									<label for="billChoice">명세서 번호 선택</label>
+								</div>
+								
 								<!-- s : 명세서 번호 선택 -->
-								<div class="searchCommBillType01" >
+								<div class="searchCommBillType01" style="display: none">
 
 
 									<!-- s : 30개 이하 -->
@@ -266,7 +267,7 @@
 
 
 
-								<div class="searchCommBillType02" style="display: none">
+								<div class="searchCommBillType02" >
 									<div class="circuitSearchDiv">
 										<label for="svcSelectBox" class="blind">서비스 번호 상품 선택</label>
 										<div class="selectWrap w120">
@@ -431,31 +432,31 @@
 										<tr>
 											<td class="left font13 last pl20 color333 textLink"><a href="#monthPricePop" class="color333" id="item01" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">010-1234-*678</a></td>
 											<td class="right last"><span class="num">36,000</span>원</td>
-											<td class="right last"><span class="num">0</span>원</td>
+											<td class="right last"><span class="num emp01">0</span>원</td>
 											<td class="right last"><span class="num">36,000</span>원</td>
 										</tr>
 										<tr>
 											<td class="left font13 last pl20 color333 textLink"><a href="#monthPricePop" class="color333" id="item02" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">010-1234-*679</a></td>
 											<td class="right last"><span class="num">36,000</span>원</td>
-											<td class="right last"><span class="num">0</span>원</td>
+											<td class="right last"><span class="num emp01">0</span>원</td>
 											<td class="right last"><span class="num">36,000</span>원</td>
 										</tr>
 										<tr>
 											<td class="left font13 last pl20 color333 textLink"><a href="#monthPricePop" class="color333" id="item03" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">ktkt****</a></td>
 											<td class="right last"><span class="num">36,000</span>원</td>
-											<td class="right last"><span class="num">0</span>원</td>
+											<td class="right last"><span class="num emp01">0</span>원</td>
 											<td class="right last"><span class="num">36,000</span>원</td>
 										</tr>
 										<tr>
 											<td class="left font13 last pl20 color333 textLink"><a href="#monthPricePop" class="color333" id="item04" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">alleh****</a></td>
 											<td class="right last"><span class="num">36,000</span>원</td>
-											<td class="right last"><span class="num">0</span>원</td>
+											<td class="right last"><span class="num emp01">0</span>원</td>
 											<td class="right last"><span class="num">36,000</span>원</td>
 										</tr>
 										<tr>
 											<td class="left font13 last pl20 color333 textLink"><a href="#monthPricePop" class="color333" id="item05" title="레이어 열림" onclick="$.ktBizPopClick(this); return false;">s!182738***</a></td>
 											<td class="right last"><span class="num">36,000</span>원</td>
-											<td class="right last"><span class="num">0</span>원</td>
+											<td class="right last"><span class="num emp01">0</span>원</td>
 											<td class="right last"><span class="num">36,000</span>원</td>
 										</tr>
 
