@@ -114,6 +114,7 @@ ul.bulletList li:first-child {margin:0;}
 .comm_noticeBox .notice-list li ul {margin:5px 0 0 0;}
 .comm_noticeBox .notice-list li ul li {margin:5px 0 0 0;background:url(../images/icon/comm_icon_minus_smallBullet.gif) no-repeat 0 10px;}
 .comm_noticeBox .notice-list li ul li.noIcon {background:none;padding-left:0;}
+.comm_noticeBox .notice-list .noIcon {background:none;padding-left:0;}
 
 /* button */
 .commBtnWrap{text-align: center;}
