@@ -73,9 +73,10 @@ div.month-pattern ul.data-view li.selected div.up-garp div.in-up-grap .data {col
 div.month-pattern .graphLegend {position: absolute;bottom: 30px;left:392px;}
 div.month-pattern .graphLegend dt, div.month-pattern .graphLegend dd {float:left;}
 div.month-pattern .graphLegend dt {width:11px;height: 11px;margin-top:2px}
+div.month-pattern .graphLegend dt img {vertical-align: top;}
 div.month-pattern .graphLegend dd {height: 13px;padding-left:6px;line-height: 13px;color: #333}
 div.month-pattern .graphLegend dt.use-data {background: #989898;margin-left:37px;}
-div.month-pattern .graphLegend dt.over-data {background: #ed1c22}
+div.month-pattern .graphLegend dt.over-data {background: #ed1c22;}
 
 
 
@@ -171,6 +172,7 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 
 .graphTableBlock .graphLegend {width:340px;margin-top:7px;overflow: hidden;}
 .graphTableBlock .graphLegend dt {width:11px;height: 11px;float:left;margin:11px 0 0 5px; float:left;}
+.graphTableBlock .graphLegend dt img {vertical-align: top;}
 .graphTableBlock .graphLegend dd {height: 14px;float: left;padding-left:6px;line-height: 14px;margin:10px 15px 0 0;color: #666;float:left;}
 .graphTableBlock .graphLegend dt.use-data {background: #b4b4b4}
 .graphTableBlock .graphLegend dt.rest-data {background: #ff5554}
