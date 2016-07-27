@@ -255,6 +255,91 @@
 						</div>
 						<!-- e: 이용중인 부가서비스 -->
 
+
+						<!-- s : 동시착신(무료형) 팝업 -->
+						<div class="pop_layerWrap" id="sameTimeLayer" style="width: 750px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h4>동시착신(무료형)</h4>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+
+
+										<div class="comm_tableBrdr">
+											<table class="comm_table" summary="전화번호, 서비스 유형 순서로 동시착신(무료형) 정보를 입력할 수 있는 표 입니다.">
+												<caption>동시착신(무료형) 신청 표</caption>
+												<colgroup>
+													<col width="25%">
+													<col width="*">
+												</colgroup>
+
+												<tbody>
+													<tr>
+														<th scope="row" class="center"><label for="telecom">전화번호</label></th>
+														<td class="last">
+															<input type="text" size="5" name="tel_no1" maxlength="4" id="telecom" />
+															<span>-</span>
+															<input type="text" title="전화번호 중간자리 입력란" name="tel_no2" size="5" maxlength="4"/>
+															<span>-</span>
+															<input type="text" title="전화번호 끝자리 입력란" name="tel_no3" size="5" maxlength="4" />
+															<a href="#" class="btnSty mid">조회</a>
+															<p class="mobilePauseDesc"><span class="emp01">전화번호를</span> 입력하신 후 <span class="emp01">조회버튼</span>을 눌러주세요.</p>
+														</td>
+													</tr>
+
+													<tr>
+														<th scope="row" class="center"><label for="svcType">서비스 유형</label></th>
+														<td class="last">
+															<div class="selectWrap ">
+																<select id="svcType">
+																	<option>동시벨</option>
+																</select>
+															</div>
+															<input type="text" title="전화번호 첫번째자리 입력란" size="5" name="svcType_no1" maxlength="4" />
+															<span>-</span>
+															<input type="text" title="전화번호 중간자리 입력란" name="svcType_no2" size="5" maxlength="4"/>
+															<span>-</span>
+															<input type="text" title="전화번호 끝자리 입력란" name="svcType_no3" size="5" maxlength="4" />
+															<a href="#" class="btnSty mid">인증</a>
+															<p class="mobilePauseDesc w100p"><span class="emp01">동시착신(무료형)서비스</span>를 신청하실 전화번호를 입력 후 인증해 주십시오.</p>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+
+
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+										<a href="" class="btnSty big pop_btn_close">취소</span></a>
+									</div>
+
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="sameTimeOpenLayer">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 동시착신(무료형) 팝업 -->
+
+
 						<!-- s : 부가서비스 해지 팝업 -->
 						<div class="pop_layerWrap" id="closeAddSvcLayer" style="width: 750px; display:none;">
 							<div class="pop_wrap">
@@ -334,10 +419,10 @@
 							<table class="comm_table" summary="부가서비스명, 내용, 이용요금, 부가정보를 확인하고 선택할 수 있는 표 입니다.">
 								<caption>LTE전용 부가서비스 목록표</caption>
 								<colgroup>
-									<col width="175" />
+									<col width="190" />
 									<col width="*" />
-									<col width="130" />
-									<col width="165" />
+									<col width="125" />
+									<col width="155" />
 								</colgroup>
 
 								<thead>
@@ -352,45 +437,59 @@
 									<tr>
 										<td class="plan_radio">
 											<span class="comm_radio">
-												<input name="use" id="use0" type="radio" />
+												<input name="use" id="use01" type="radio" />
 												<i></i>
-												<label for="use0">PC 안심</label>
+												<label for="use01">동시착신(무료형)</label>
 											</span>
 										</td>
-										<td class="">안전하고 최적화된 PC사용을 위한 Total PC Care 서비스로 전문가 1:1 원격점검을 제공하는 서비스</td>
-										<td class="center num">999,900<span>원</span></td>
-										<td class="right last">
-											<a href="#applyAddSvcLayer" id="applyAddSvcOpen" class="btnSty sml gray" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
-											<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 바로보기 레이어팝업 열림">바로보기</a>
+										<td class=""> 인터넷전화 또는 집전화로 걸려오는 전화를 인터넷전화와 집전화 동시에 벨이 울려 먼저 받는 전화에 통화가 연결되는 서비스이며 어느 한쪽이 통화중일 때 다른 쪽으로 연결되어 통화가 연결됩니다.</td>
+										<td class="center num"><span>무료</span></td>
+										<td class="center last">
+											<a href="#sameTimeLayer" id="sameTimeOpenLayer" class="btnSty sml gray" onclick="$.ktBizPopClick(this); return false;" title="동시착신(무료형) 레이어 팝업 열림">신청</a>
 										</td>
 									</tr>
 									<tr>
 										<td class="plan_radio">
 											<span class="comm_radio">
-												<input name="use" id="use1" type="radio" />
+												<input name="use" id="use02" type="radio" />
 												<i></i>
-												<label for="use1">PC 안심</label>
+												<label for="use02">PC 안심</label>
+											</span>
+										</td>
+										<td class="">안전하고 최적화된 PC사용을 위한 Total PC Care 서비스로 전문가 1:1 원격점검을 제공하는 서비스</td>
+										<td class="center num">999,900<span>원</span></td>
+										<td class="right last">
+											<a href="#applyAddSvcLayer" id="applyAddSvcOpen02" class="btnSty sml gray" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
+											<a href="#applyAddSvcI01Layer" id="applyAddSvcI02Open" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 바로보기 레이어팝업 열림">바로보기</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="plan_radio">
+											<span class="comm_radio">
+												<input name="use" id="use03" type="radio" />
+												<i></i>
+												<label for="use03">PC 안심</label>
 											</span>
 										</td>
 										<td class="">상품설명</td>
 										<td class="center num">999,900<span>원</span></td>
 										<td class="right last">
-											<a href="#applyAddSvcLayer" id="applyAddSvcOpen1" class="btnSty sml gray" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
-											<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open1" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 바로보기 레이어팝업 열림">바로보기</a>
+											<a href="#applyAddSvcLayer" id="applyAddSvcOpen03" class="btnSty sml gray" onclick="$.ktBizPopClick(this); return false;" title="PC안심 신청 레이어팝업 열림">신청</a>
+											<a href="#applyAddSvcI01Layer" id="applyAddSvcI03Open" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 바로보기 레이어팝업 열림">바로보기</a>
 										</td>
 									</tr>
 									<tr>
 										<td class="plan_radio">
 											<span class="comm_radio">
-												<input name="use" id="use3" type="radio" />
+												<input name="use" id="use04" type="radio" />
 												<i></i>
-												<label for="use3">PC 안심</label>
+												<label for="use04">PC 안심</label>
 											</span>
 										</td>
 										<td class="">안전하고 최적화된 PC사용을 위한 Total PC Care 서비스로 전문가 1:1 원격점검을 제공하는 서비스</td>
 										<td class="center num">999,900<span>원</span></td>
 										<td class="right last">
-											<a href="#applyAddSvcI01Layer" id="applyAddSvcI01Open2" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 바로보기 레이어팝업 열림">바로보기</a>
+											<a href="#applyAddSvcI01Layer" id="applyAddSvcI04Open" class="btnSty sml" onclick="$.ktBizPopClick(this); return false;" title="PC안심 바로보기 레이어팝업 열림">바로보기</a>
 										</td>
 									</tr>
 								</tbody>
