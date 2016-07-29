@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* reset */
+fieldset,img{border:0}
+body,table {letter-spacing: -0.025em;}
+body,html,legend{height:100%;color:#000}
+html{background:#fff;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+article,aside,audio,blockquote,body,canvas,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,mark,menu,nav,ol,p,pre,section,summary,td,textarea,th,time,ul,video{margin:0;padding:0}
+body{background-color:#fff;font-size:12px;font-family:"맑은 고딕", Dotum,"돋움",Gulim,"굴림","Helvetica Neue",Helvetica,Arial,Verdana,Tahoma,sans-serif;line-height:14px;}
+img{vertical-align:middle}
+button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
+table{border-spacing:0;border-collapse:collapse}
+address,caption,cite,code,dfn,em,th,var{font-weight:400;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%;line-height:1}
+caption,hr,legend{width:0;height:0;font-size:1px;text-indent:-9999em;line-height:0;margin:0;padding:0;border:0;}
+hr {display:none;}
+a,a:active,a:focus,a:hover,a:link,a:visited{text-decoration:none}
+
+/* common placeholder */
+::-webkit-input-placeholder{color:#919191;font-size:13px;line-height:12px;font-family:"맑은 고딕",Dotum,"돋움";}
+:-moz-placeholder{/* Firefox 18- */color:#919191;font-size:13px;font-family:"맑은 고딕",Dotum,"돋움";}
+::-moz-placeholder{/* Firefox 19+ */color:#919191;font-size:13px;font-family:"맑은 고딕",Dotum,"돋움";}
+:-ms-input-placeholder{color:#919191;font-size:13px;font-family:"맑은 고딕",Dotum,"돋움";}
+
+/* default */
+a {font-size: 12px;color: #666;text-decoration: none;}
+/*.textLink a {text-decoration:underline;color:#00a5b8}*/
+.blind {display:block;position:absolute;left:-1000%;top:0;width:0;height:0;font-size:0;line-height:0;overflow:hidden;}
+.checkbox, .radio {width:13px;height:13px;margin-right:5px;vertical-align:top;}
+input[type=text], input[type=password] {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif; padding:0 7px;line-height: 28px;font-size: 13px; color: #666; border-radius:2px; vertical-align: middle;}
+textarea {padding:7px;border: 1px solid #ccc;box-sizing: border-box;font-family:'맑은 고딕', 'Malgun Gothic', sans-serif;}
+select {height: 30px;border: 1px solid #ccc;box-sizing: border-box;font-size: 14px;padding:0 0 0 9px;}
+select:disabled, input[type=text]:disabled, input[type=password]:disabled {background: #ebebe4}
+.clear {clear:both;}
+
+/* ERROR */
+div#cfmErrorWrap {padding-top:100px;}
+div#cfmErrorWrap .cfmErrorWrapBox {width:517px;min-height:373px; padding:61px 0 70px 287px;margin:0 auto;background:url('../images/common/biz_error_bg.png') no-repeat 113px 67px ; border:solid 1px #e0e0e0; }
+div#cfmErrorWrap .cfmErrorWrapBox.pageError {width:590px;}
+div#cfmErrorWrap .errorTitle {font-size: 26px;color:#df2428;padding-bottom: 12px;line-height: 32px;letter-spacing: -1px}
+div#cfmErrorWrap .errorDesc {font-size: 12px; color: #666; line-height: 18px;padding: 15px 0 0 0;}
+div#cfmErrorWrap .errorDesc strong {color:#333;padding:3px 0;display: block;}
+div#cfmErrorWrap .errorDesc span, div#cfmErrorWrap .errorTitle span {display: block;}
+div#cfmErrorWrap .errorDesc span.topMg {margin-top: 15px;}
+div#cfmErrorWrap ul li {padding:3px 0; color:#666;}
+div#cfmErrorWrap ul li strong {display:block;padding:3px 0;color:#333;}
+div#cfmErrorWrap div.topPd {padding-top: 27px;}
+div#cfmErrorWrap dl {margin-top:20px;overflow: hidden;}
+div#cfmErrorWrap dl dt {width:67px;color:#333;font-weight: bold; float:left;padding-bottom: 6px;}
+div#cfmErrorWrap dl dd {width:450px;color:#666;float:left;padding-bottom: 6px;}
+div#cfmErrorWrap .errorBlackBtn {display:inline-block;height:30px;padding:0 15px;font-size:12px;background:#444;color:#fff;line-height: 30px}
+div#cfmErrorWrap div.copyright {padding-top:47px;}
+div#cfmErrorWrap div.copyright p {margin-right: 60px;font-size: 11px;line-height:19px;float: left;}
+div#cfmErrorWrap div.copyright a {height:19px;display: block;float:left;}
+div#cfmErrorWrap div.copyright a  img {height:19px; }
