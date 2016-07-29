@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My페이지] 모바일 요금제신청 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My페이지] 일반전화 요금제신청 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
@@ -548,6 +548,8 @@
 <div class="ui-remote">
 	<p>UI GUIDE</p>
 	<button type="button" class="remote-btn03" href="#addSvcSettingT01" id="addSvcSettingT01Open" onclick="$.ktBizPopClick(this); return false;">olleh 일반전화 무한요금제 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingT02" id="addSvcSettingT02Open" onclick="$.ktBizPopClick(this); return false;">통화당 무제한 요금제 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#addSvcSettingT03" id="addSvcSettingT03Open" onclick="$.ktBizPopClick(this); return false;">전국단일요금제 : 팝업</button>
 	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">미설정 알림 : 팝업</button>
 </div>
 <!-- e : UI GUIDE -->
@@ -927,7 +929,7 @@
 							<div class="pop_conts">
 								<div class="pop_contsContainer">
 									<div class="pop_svc">
-										<h5 class="pop_subTitle1 pt0 alignCenter num">모바일 <span class="txtNum">010-1234-*678</span></h5>
+										<h5 class="pop_subTitle1 pt0 alignCenter num">일반전화 <span class="txtNum">010-1234-*678</span></h5>
 										<div class="comm_tableBrdr">
 											<table class="comm_table" summary="변경 전 요금제와 월정액(부가세포함)과 변경 후 요금제와 월정액(부가세포함)을 확인 할 수 있는 표입니다.">
 												<caption>요금제변경 확인</caption>
@@ -1182,6 +1184,122 @@
 					<!-- e : footer -->
 				</div>
 				<!-- e : 부가설정: olleh 일반전화 무한요금제 팝업 -->
+
+
+				<!-- s : 부가설정: 통화당 무제한 요금제 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingT02" style="margin-left: -300px; width: 598px; display:none;">
+					<div class="pop_wrap">
+
+						<!-- s : header -->
+						<div class="pop_header">
+							<h4>요금제 변경</h4>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+								<div class="pop_svc">
+									<h5 class="pop_subTitle1 pt0 alignCenter num">일반전화 <span class="txtNum">010-1234-*678</span></h5>
+									<div class="comm_tableBrdr">
+										<table class="comm_table" summary="변경할 요금제 명을 확인 할 수 있는 표입니다.">
+											<caption>요금제변경 확인</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+											</colgroup>
+											<tbody class="fullBorder">
+												<tr>
+													<th scope="row" class="left">변경할 요금제명</th>
+													<td class="last">통화당무제한요금제</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">유형</th>
+													<td class="last">시내+시외 2,500원 월정액</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red">등록</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+							</div>
+						</div>
+
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 부가설정: 통화당 무제한 요금제 팝업 -->
+
+
+				<!-- s : 부가설정: 전국단일요금제 팝업 -->
+				<div class="pop_layerWrap" id="addSvcSettingT03" style="margin-left: -300px; width: 598px; display:none;">
+					<div class="pop_wrap">
+
+						<!-- s : header -->
+						<div class="pop_header">
+							<h4>요금제 변경</h4>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+								<div class="pop_svc">
+									<h5 class="pop_subTitle1 pt0 alignCenter num">일반전화 <span class="txtNum">010-1234-*678</span></h5>
+									<div class="comm_tableBrdr">
+										<table class="comm_table" summary="변경할 요금제 명을 확인 할 수 있는 표입니다.">
+											<caption>요금제변경 확인</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+											</colgroup>
+											<tbody class="fullBorder">
+												<tr>
+													<th scope="row" class="left">변경할 요금제명</th>
+													<td class="last">전국단일요금제</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="pop_contsBtns">
+								<a href="" class="btnSty big red">등록</a>
+								<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;">취소</a>
+							</div>
+						</div>
+
+						<!-- e : contents -->
+
+					</div>
+
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="">닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 부가설정: 전국단일요금제 팝업 -->
 
 
 				<!-- s : 미설정 알림 팝업 -->
