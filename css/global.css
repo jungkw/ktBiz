@@ -295,6 +295,7 @@ border-radius: 3px 3px 3px 3px;
 a.color333 {color:#333 !important;}
 .ma0 {margin:0 !important;}
 .m14 {margin:14px;}
+.ml0 {margin-left:0!important;}
 .ml1 {margin-left:1px;}
 .ml2 {margin-left:2px;}
 .ml3 {margin-left:3px;}
@@ -523,7 +524,7 @@ a.color333 {color:#333 !important;}
 .w115 {width:115px;}
 .w120 {width:125px;}
 .w125 {width:125px}
-.w140 {width:140px}
+.w140 {width:140px!important;}
 .w148 {width:148px}
 .w149 {width:149px}
 .w150 {width:150px}
@@ -693,13 +694,15 @@ a.color333 {color:#333 !important;}
 /* telphone num */
 .comm_inputTel {display:inline-block;vertical-align:middle; font-size:0;}
 .comm_inputTel:after {content:''; display:block; clear:both;}
+.comm_inputTel .selectWrap {margin-right: 4px;}
 .comm_inputTel input {display:inline-block; margin-right:4px; width:46px; vertical-align:top;}
 .comm_inputTel span {display:inline-block; margin-right:4px; font-size:15px; line-height:27px; text-align:center; vertical-align:top;}
 
 
 /* captcha */
 .captcha:after {content: ''; display: block; clear: both;}
-.captcha .img {float:left; margin:0 10px 0 0; width: 212px; height: 60px; line-height:60px; text-align: center;}
+.captcha .img {float:left; margin:0 10px 0 0; width: 212px; height: 60px; line-height:60px; text-align: center; font-size: 0;}
+.captcha .img:after {content: ''; display: inline-block; height: 60px; vertical-align: middle;}
 .captcha .fn {float:left;}
 .captcha .fn .input {margin-top:4px;}
 
