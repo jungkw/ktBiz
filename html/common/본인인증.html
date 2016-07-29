@@ -1,0 +1,443 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author-Date(Date)" content="2016-06-01" />
+	<meta name="Description" content="올레닷컴 Biz My페이지 입니다.  법인 고객님들의 요금, 상품, 요금제, 명세서 조회/신청/변경을 할 수 있습니다." />
+	<meta name="Keyword" content="올레, 올레닷컴, 올레닷컴 법인, 올레닷컴 기업, 기업, My페이지, 법인, 요금조회, 실시간요금조회, 가입상품조회, 납부방법, 자동납부신청, 요금합산신청, 명세서조회, 청구주소변경, 사용량 조회, 요금제 변경, 부가서비스 신청, 부가서비스 변경, 핸드폰 일시정지, 기기변경, 분실핸드폰관리, 개통이력조회" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
+
+	<title>[My페이지] 본인인증 공통팝업</title>
+
+	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
+
+	<script language="javascript" src="../../js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+	<script language="javascript" src="../../js/jquery/jqueryCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizGnbLnbCommon.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/function.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/bizNew.js" type="text/javascript"></script>
+	<script language="javascript" src="../../js/jquery.selectric.min.js" type="text/javascript"></script>
+
+	<!-- 레이어 팝업 보여주기용. -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var target = getUrlParameter();
+
+			$('#' + target[0] ).trigger('click');
+
+		});
+	</script>
+</head>
+
+
+
+<body>
+<!-- s : UI GUIDE -->
+<style type="text/css">
+.ui-remote {width:200px;height:100%;position: fixed;top:0;left:0; background: #f6f6f6; border-right:1px solid #dbdbdb; text-align: center;z-index: 9999;}
+.ui-remote p {font-size:16px;color:#333;text-align: center; font-weight: bold;padding:20px 0 15px 0; border-bottom:1px dashed #777;}
+.ui-remote button {background:#fff;color:#666;border:1px solid #dbdbdb; padding:5px;margin:15px 0 0 0;cursor: pointer;font-size: 14px;}
+.ui-remote button span {display: block;font-size: 11px; letter-spacing: -1px;}
+.ui-remote button:hover, .ui-remote button:focus, .ui-remote button:active {background: #666; color:#fff;}
+</style>
+<div class="ui-remote">
+	<p>UI GUIDE</p>
+	<button type="button" href="#authId" id="authIdOpen" onclick="$.ktBizPopClick(this); return false;">본인인증 : 팝업</button>
+	<button type="button" href="#authSms" id="authSmsOpen" onclick="$.ktBizPopClick(this); return false;">SMS 인증: 팝업</button>
+	<button type="button" href="#authSmsInput" id="authSmsInputOpen" onclick="$.ktBizPopClick(this); return false;">SMS 인증번호 입력: 팝업</button>
+	<button type="button" href="#authCredit" id="authCreditOpen" onclick="$.ktBizPopClick(this); return false;">신용카드 본인인증 : 팝업</button>
+</div>
+<!-- e : UI GUIDE -->
+
+<div id="cfmOllehWrap">
+
+	<!-- s : 본인인증 팝업 -->
+	<div class="pop_layerWrap" id="authId" style="width: 750px; display:none;">
+		<div class="pop_wrap">
+
+			<!-- s : header -->
+			<div class="pop_header">
+				<h4>본인 인증</h4>
+			</div>
+			<!-- e : header -->
+
+			<!-- s : contents -->
+			<div class="pop_conts">
+				<div class="pop_contsContainer">
+					<h5 class="pop_subTitle pt0 alignCenter">안전한 서비스 이용 및 고객님의 개인정보 보호를 위해 <br />본인 인증을 받으신 고객분만 이용가능 합니다.</h5>
+
+					<p class="pop_subTitle">신청내용에 대한 결과를 안내 받으실 방법을 선택해주세요.</p>
+					<div class="comm_tableBrdr mt15">
+						<table class="comm_table" summary="처리결과를 통보받을 수 있는 수단을 입력하는 표 입니다.">
+							<caption>통보수단 입력</caption>
+							<colgroup>
+								<col width="22%" />
+								<col width="*" />
+							</colgroup>
+							<tbody class="fullBorder">
+								<tr>
+									<th scope="row" class="left">처리결과 통보</th>
+									<td colspan="3" class="last">
+										<span class="comm_checkbox">
+											<input type="checkbox" id="toMail" />
+											<i></i>
+											<label for="toMail" class="mr10">이메일</label>
+										</span>
+										<input id="mailAddr" class="comm_mailInput01 ml10" size="15" maxlength="15" type="text" title="이메일 아이디" />
+										<span>@</span>
+										<input type="text" class="comm_mailInput02" size="15" maxlength="15" title="메일 도메인을 입력해주세요." disabled="disabled" />
+										<div class="selectWrap">
+											<select id="emailAddr2" class="comm_mailInput03" title="메일 도메인을 선택해주세요." onchange="$.ktBizMailChg(this); return false;">
+												<option value="">선택하세요.</option>
+												<option value="naver.com">naver.com</option>
+												<option value="daum.net">daum.net</option>
+												<option value="hanmail.net">hanmail.net</option>
+												<option value="nate.com">nate.com</option>
+												<option value="gmail.com">gmail.com</option>
+												<option value="kornet.net">kornet.net</option>
+												<option value="self">직접 입력</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="alignCenter mt23 pt20 bt1">
+						<p class="font21">본인확인 절차에 동의하신 후 범용공인인증서 인증을 진행해 주세요.</p>
+						<span class="comm_checkbox mt20">
+							<input type="checkbox" id="authAgree" />
+							<i></i>
+							<label for="authAgree" class="mr10">본인 확인 절차 진행에 동의 합니다.</label>
+						</span>
+						<div class="authToCert">
+							<p>범용공인인증서로<br />본인인증</p>
+							<a href="" class="btnSty mid arr">인증하기</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- e : contents -->
+
+		</div>
+		<!-- s : footer -->
+		<div class="pop_footer">
+			<div class="pop_footerInner">
+				<p class="pop_close">
+					<a href="">닫기</a>
+				</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- e : 본인인증 팝업 -->
+
+
+	<!-- s : SMS인증 팝업 -->
+	<div class="pop_layerWrap" id="authSms" style="display:none;">
+		<div class="pop_wrap">
+
+			<!-- s : header -->
+			<div class="pop_header">
+				<h4>SMS 인증</h4>
+			</div>
+			<!-- e : header -->
+
+			<!-- s : contents -->
+			<div class="pop_conts">
+				<div class="pop_contsContainer">
+					<ul class="bulletList">
+						<li>휴대폰 인증을 위하여 입력한 정보는 항상 암호화되어 처리되며 서비스 제공사의 본인 확인용으로만 사용됩니다.</li>
+						<li>고객님 본인 소유의 휴대폰 번호를 입력해 주시기 바랍니다.</li>
+						<li>고객 요청으로 이용 차단된 휴대폰일 경우, 인증이 불가능합니다.</li>
+					</ul>
+
+					<div class="comm_tableBrdr mt30">
+						<table class="comm_table" summary="통신사 선택, 전화번호, 보안문자를 입력할 수 있는 표 입니다.">
+							<caption>sms 인증정보 입력</caption>
+							<colgroup>
+								<col width="22%" />
+								<col width="*" />
+							</colgroup>
+							<tbody class="fullBorder">
+								<tr>
+									<th scope="row" class="left">통신사 선택</th>
+									<td>
+										<div>
+											<span class="comm_radio">
+												<input type="radio" name="carrier" id="carrier01" />
+												<i></i>
+												<label for="carrier01" class="mr10">KT</label>
+											</span>
+											<span class="comm_radio ml20">
+												<input type="radio" name="carrier" id="carrier02" />
+												<i></i>
+												<label for="carrier02" class="mr10">SKT</label>
+											</span>
+											<span class="comm_radio ml20">
+												<input type="radio" name="carrier" id="carrier03" />
+												<i></i>
+												<label for="carrier03" class="mr10">LG U+</label>
+											</span>
+										</div>
+										<div class="mt10">
+											<span class="comm_radio">
+												<input type="radio" name="carrier" id="carrier04" />
+												<i></i>
+												<label for="carrier04" class="mr10">KT알뜰폰</label>
+											</span>
+											<span class="comm_radio ml20">
+												<input type="radio" name="carrier" id="carrier05" />
+												<i></i>
+												<label for="carrier05" class="mr10">SKT알뜰폰</label>
+											</span>
+											<span class="comm_radio ml20">
+												<input type="radio" name="carrier" id="carrier06" />
+												<i></i>
+												<label for="carrier06" class="mr10">LG U+알뜰폰</label>
+											</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="left">
+										<label for="setNum">전화번호</label>
+									</th>
+									<td class="last">
+										<div class="comm_inputTel">
+											<div class="selectWrap w75">
+												<select id="setNum">
+													<option value="010">010</option>
+													<option value="011">011</option>
+												</select>
+											</div>
+											<span>-</span>
+											<input type="text" title="전화번호 중간자리 입력란" maxlength="4" value="1234" />
+											<span>-</span>
+											<input type="text" title="전화번호 끝자리 입력란" maxlength="4"  value="5678" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="left">보안문자</th>
+									<td class="last">
+										<div class="captcha">
+											<div class="img w140">
+													<img src="../../images/temp_captcha.png" alt="캡차이미지" />
+											</div>
+											<div class="fn">
+												<div>
+													<a href="" class="btnSty sml icon_speaker"><span>음성듣기</span></a>
+													<a href="" class="btnSty sml icon_refresh"><span>새로고침</span></a>
+												</div>
+												<div class="input">
+													<label for="captcha" class="blind"></label>
+													<input type="text" id="captcha" class="w195" />
+													<a href="" class="btnSty mid red">확인</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="pop_contsBtns">
+					<a href="#confirm" onclick="javascript:setData();" class="btnSty big red">인증번호 발송</a>
+					<a href="#cancel" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+				</div>
+			</div>
+			<!-- e : contents -->
+
+		</div>
+		<!-- s : footer -->
+		<div class="pop_footer">
+			<div class="pop_footerInner">
+				<p class="pop_close">
+					<a href="">닫기</a>
+				</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- e : SMS인증 팝업 -->
+
+
+	<!-- s : SMS인증번호 입력 팝업 -->
+	<div class="pop_layerWrap" id="authSmsInput" style="width: 750px; display:none;">
+		<div class="pop_wrap">
+
+			<!-- s : header -->
+			<div class="pop_header">
+				<h4>SMS 인증</h4>
+			</div>
+			<!-- e : header -->
+
+			<!-- s : contents -->
+			<div class="pop_conts">
+				<div class="pop_contsContainer">
+					<ul class="bulletList">
+						<li>생년월일과 휴대폰에 전송된 인증번호 6자리를 입력해주세요.</li>
+						<li>SMS(단문메세지)는 시스템 사정에 따라, 다소 지연될 수 있습니다.</li>
+						<li>SMS 인증번호 발송이 지연되는 경우 인증번호 재발송 버튼을 눌러주세요.</li>
+					</ul>
+
+					<div class="comm_tableBrdr mt30">
+						<table class="comm_table" summary="생년월일, 인증서 번호를 입력할 수 있는 표 입니다.">
+							<caption>sms 인증정보 입력</caption>
+							<colgroup>
+								<col width="22%" />
+								<col width="*" />
+							</colgroup>
+							<tbody class="fullBorder">
+								<tr>
+									<th scope="row" class="left"><label for="birthDate">생년월일</label></th>
+									<td>
+										<input type="text" id="birthDate" class="w115" />
+										<span class="desc">8자리 숫자만 입력해주세요.</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="left">
+										<label for="authNum">인증번호</label>
+									</th>
+									<td class="last">
+										<input type="text" id="authNum" class="w115"" />
+										<a href="" class="btnSty mid red">인증번호 재발송</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="pop_contsBtns">
+					<a href="#confirm" onclick="javascript:setData();" class="btnSty big red">확인</a>
+					<a href="#cancel" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+				</div>
+			</div>
+			<!-- e : contents -->
+
+		</div>
+		<!-- s : footer -->
+		<div class="pop_footer">
+			<div class="pop_footerInner">
+				<p class="pop_close">
+					<a href="">닫기</a>
+				</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- e : SMS인증번호 입력 팝업 -->
+
+
+	<!-- s : 신용카드 인증 팝업 -->
+	<div class="pop_layerWrap" id="authCredit" style="width: 750px; display:none;">
+		<div class="pop_wrap">
+
+			<!-- s : header -->
+			<div class="pop_header">
+				<h4>신용카드 본인 인증</h4>
+			</div>
+			<!-- e : header -->
+
+			<!-- s : contents -->
+			<div class="pop_conts">
+				<div class="pop_contsContainer">
+					<ul class="bulletList">
+						<li>본인 명의의 신용카드 정보를 입력해주세요. 단 신한카드, 현대카드는 인증이 불가합니다.</li>
+						<li>인증 시도 3회 이상 오류 시 해당 카드로 인증이 제한됩니다.</li>
+					</ul>
+
+					<div class="comm_tableBrdr mt30">
+						<table class="comm_table" summary="카드번호, 유효기간, 비밀번호 앞 두자리를 입력할 수 있는 표 입니다.">
+							<caption>신용카드 인증정보 입력</caption>
+							<colgroup>
+								<col width="22%" />
+								<col width="*" />
+							</colgroup>
+							<tbody class="fullBorder">
+								<tr>
+									<th scope="row" class="left"><label for="creditNum">카드번호</label></th>
+									<td>
+										<div class="comm_inputTel">
+											<input type="text" maxlength="4" id="creditNum" />
+											<span>-</span>
+											<input type="text" maxlength="4" title="카드번호 두번째 자리" />
+											<span>-</span>
+											<input type="text" maxlength="4" title="카드번호 세번째 자리" />
+											<span>-</span>
+											<input type="text" maxlength="4" title="카드번호 네번째 자리" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="left">
+										<label for="validDate">유효기간</label>
+									</th>
+									<td class="last">
+										<input type="text" id="validDate" class="w75" maxlength="2" title="신용카드 유효기간 월" />
+										<span class="desc ml0 mr5">월 /</span>
+										<input type="text" class="w75" maxlength="2" title="신용카드 유효기간 년도" />
+										<span class="desc ml0">년</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="left">
+										<label for="creditPw">비밀번호</label>
+									</th>
+									<td class="last">
+										<input type="text" id="creditPw" class="w75" maxlength="2" />
+										<span>**</span>
+										<span class="desc">비밀번호 앞 2자리를 입력하세요.</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="pop_contsBtns">
+					<a href="#confirm" onclick="javascript:setData();" class="btnSty big red">신용카드 본인인증</a>
+					<a href="#cancel" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
+				</div>
+			</div>
+			<!-- e : contents -->
+
+		</div>
+		<!-- s : footer -->
+		<div class="pop_footer">
+			<div class="pop_footerInner">
+				<p class="pop_close">
+					<a href="">닫기</a>
+				</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- e : 신용카드 인증 팝업 -->
+
+
+
+
+
+</div>
+</body>
+</html>
+
