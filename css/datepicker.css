@@ -265,7 +265,8 @@ button.ui-button::-moz-focus-inner {
 .ui-widget-header .ui-state-active {
     background: #ff1620;
     font-weight: bold;
-    color: #fff;
+    color: #fff !important;
+    border:0;
 }
 .ui-state-active a,
 .ui-state-active a:link,

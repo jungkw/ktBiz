@@ -221,5 +221,41 @@
 
 
 
+/* 희망일자 선택 */
+.pop_visitContsBox {overflow: hidden;}
+.visitDateBox, .visitTimeBox {float:left;}
+.visitDateBox .visitLeftBox {width: 400px;height: 360px;border:1px solid #ddd; border-right:0; background: #fff;}
+.visitTimeBox .visitLeftBox {width:188px;height: 360px;border:1px solid #ddd; border-left:0;background: #f9f9f9;}
+.visitTimeBox .visitLeftBox dl .visitSelectDate {padding: 30px 0 25px 24px;font-size: 19px;line-height: 20px;}
+.visitTimeBox .visitLeftBox .visitTimeList li {padding:0 24px; font-size: 15px;color:#666;line-height: 27px;}
+.visitTimeBox .visitLeftBox .visitTimeList li a {font-size: 15px;color:#666;line-height: 27px;}
+.visitTimeBox .visitLeftBox .visitTimeList li em {width:50px;height:18px;display: inline-block;margin: 0 0 0 10px; color:#df2428;font-size: 13px;text-align: center;line-height: 18px;background: url('../images/bg/pop_bg_visitAround.png') no-repeat;}
+.visitTimeBox .visitLeftBox .visitTimeList li:hover,
+.visitTimeBox .visitLeftBox .visitTimeList li:focus, .visitTimeBox .visitLeftBox .visitTimeList li.checked {background:#fbeef0;}
+.visitTimeBox .visitLeftBox .visitTimeList li.disable em {color:#666;}
+.visitTimeBox .visitLeftBox .visitTimeList li.disable:hover,
+.visitTimeBox .visitLeftBox .visitTimeList li.disable:focus {background:none;}
 
+/* 희망일자 선택 datapicker 수정 */
+.visitDateBox .ui-widget-content  {width: 340px;margin:17px auto;border:0;}
+.visitDateBox .ui-widget-header {height:49px;background: #fff; color:#333; font-size: 19px;border:0;}
+.visitDateBox .ui-datepicker .ui-datepicker-title {line-height:49px;}
+.visitDateBox .ui-datepicker .ui-datepicker-title .ui-datepicker-year, 
+.visitDateBox .ui-datepicker .ui-datepicker-title .ui-datepicker-month {font-family:"맑은 고딕", Malgun Gothic, dotum, "돋움", arial, hevetica;font-size: 19px;font-weight: normal}
+.visitDateBox .ui-datepicker .ui-datepicker-prev, 
+.visitDateBox .ui-datepicker .ui-datepicker-next {top:18px;}
+.visitDateBox .ui-datepicker .ui-datepicker-prev {left:12px;}
+.visitDateBox .ui-datepicker .ui-datepicker-next {right:12px;}
+.visitDateBox .ui-datepicker .ui-datepicker-next span {width:10px;height:15px;background: url(../images/btn/comm_btn_month_next.png) no-repeat}
+.visitDateBox .ui-datepicker .ui-datepicker-prev span {width:10px;height:15px;background: url(../images/btn/comm_btn_month_prev.png) no-repeat}
+.visitDateBox .ui-datepicker .ui-datepicker-prev.ui-state-disabled span {background: url(../images/btn/comm_btn_month_prev_disable.png) no-repeat}
+.visitDateBox .ui-datepicker .ui-datepicker-prev-hover,
+.visitDateBox .ui-datepicker .ui-datepicker-next-hover {border:0;}
+.visitDateBox .ui-datepicker th {font-family:"맑은 고딕", Malgun Gothic, dotum, "돋움", arial, hevetica;font-size:15px;}
+.visitDateBox .ui-datepicker .ui-state-default, 
+.visitDateBox .ui-datepicker .ui-widget-content .ui-state-default {padding:7px 0 !important;font-family:"맑은 고딕", Malgun Gothic, dotum, "돋움", arial, hevetica;font-size:15px;font-weight: normal}
+.visitDateBox .ui-state-disabled span.ui-state-default  {color: #d7d7d7}
+.visitDateBox .ui-state-active, 
+.visitDateBox .ui-widget-content .ui-state-active, 
+.visitDateBox .ui-widget-header .ui-state-active {background:#df2428;}
 .popTxt18 {font-size:18px; line-height:1.3;}

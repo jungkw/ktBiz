@@ -147,7 +147,18 @@ $(document).ready(function(){
     });
 
 
-    
+
+    /* *
+    * get Date 
+    */
+    $.ktBizGetDate = function(){
+        var time = new Date();
+        var year = time.getFullYear(); 
+        var month = time.getMonth() +1;
+        var day = time.getDate()>9 ? ''+time.getDate() : '0'+time.getDate();
+        var txt = year+'-'+(month>9 ? ''+month : '0'+month)+'-'+day
+        return txt;
+    }
 
     /**
     * layerPopup accessibility focus fn
@@ -174,6 +185,7 @@ $(document).ready(function(){
         $target.find('.pop_wrap').wrapInner("<div class='pop_inner'></div>");
         $target.find('.pop_inner').attr('tabindex',0).focus();
         $target.find('.pop_close a, .pop_btn_close').click(function(){
+          
             $target.hide();
             /*$mask.hide();*/
             /*obj.focus();*/
@@ -1820,6 +1832,20 @@ $(function(){
 			}
 		}
 	};
+
+
+      /**
+      *   설치장소변경 희망일자 선택
+      */
+      $.ktBizVisitDateClick = function(){
+          $('.visitTimeList').find('a').click(function(){
+              $('.visitTimeList').find('li').removeClass('checked');
+              $(this).closest('li').addClass('checked');
+              return false;
+          });
+      };
+      $.ktBizVisitDateClick();
+
 
 
 	/*
