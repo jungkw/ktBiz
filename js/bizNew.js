@@ -172,10 +172,16 @@ $(document).ready(function(){
         var $setTop = ($wh-$lh)/2;
         var $lw = $target.width();
         var $setLeft = $lw/2;
+        var $setDp;
 
         if(returnId) {
-          returnId = returnId.replace('#', '');
-          $target.find('.pop_close a, .pop_btn_close').attr('href', '#' + returnId);
+          if(returnId == "datepicker"){
+              $setDp = '#dateInfoStart';
+          }else {
+             returnId = returnId.replace('#', '');
+              $target.find('.pop_close a, .pop_btn_close').attr('href', '#' + returnId);
+          }
+         
         } else {
           $target.find('.pop_close a, .pop_btn_close').attr('href', '#' + obj.id);
         }
@@ -183,7 +189,13 @@ $(document).ready(function(){
 
         /*$mask.show();*/
         $target.find('.pop_wrap').wrapInner("<div class='pop_inner'></div>");
-        $target.find('.pop_inner').attr('tabindex',0).focus();
+        
+        if($setDp){
+          $target.find($setDp).attr('tabindex',0).focus();
+        }else{
+          $target.find('.pop_inner').attr('tabindex',0).focus();
+        }
+        
         $target.find('.pop_close a, .pop_btn_close').click(function(){
           
             $target.hide();
