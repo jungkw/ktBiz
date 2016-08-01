@@ -198,6 +198,31 @@ div.wibro-egg div.over-grap div.now-grap .location {display:none;position: absol
 .billInfo_chgStatelang .body .comm_radio {margin-top: 2px;}
 .billInfo_chgStatelang .body .comm_radio:first-child {margin-right: 15px;}
 
+.billInfo_chgStateType .backFFF {background: #fff !important;}
+.billInfo_chgStateType .hiddenCont{display:block; overflow:hidden; visibility:hidden; position:absolute; top:-9999px; z-index:-1;}
+.billInfo_smartAppWrap .visual{width:690px; height:260px; margin-bottom:60px; background:url('../images/common/bill_img_smartapp01.gif') no-repeat left top;}
+.billInfo_smartAppWrap .ollehSmart{position:relative; width:690px; height:550px; margin-bottom:40px; background:url("../images/common/bill_img_smartapp02.gif") no-repeat left top;}
+.billInfo_smartAppWrap .ollehSmart p {position:absolute; top:150px; left:0; width:690px; height:400px; background:url("../images/common/bill_img_smartapp03.gif") no-repeat left top;}
+.billInfo_smartAppWrap .ollehSmartDown{position:relative; width:690px; height:90px; margin-bottom:20px; background:url("../images/common/bill_img_smartapp04.gif") no-repeat left top;}
+.billInfo_smartAppWrap dl.step01{width:690px; height:220px; position:relative; margin-bottom:20px; background:url("../images/common/bill_img_smartapp05.gif") no-repeat left top;}
+.billInfo_smartAppWrap dl.step01 ul.qrcode{position:absolute; top:134px; left:42px;}
+.billInfo_smartAppWrap dl.step01 ul.qrcode li{float:left;}
+.billInfo_smartAppWrap dl.step01 ul.qrcode li a{display:inline-block;}
+.billInfo_smartAppWrap dl.step01 ul.qrcode li a.iphone{width:275px;margin-right:54px;}
+.billInfo_smartAppWrap dl.step01 ul.qrcode li a.and{width:275px;}
+.billInfo_smartAppWrap dl.step02{width:690px; height:200px; position:relative; margin-bottom:20px; background:url("../images/common/bill_img_smartapp06.gif") no-repeat left top;}
+.billInfo_smartAppWrap dl.step03{width:690px; height:200px; position:relative; margin-bottom:20px; background:url("../images/common/bill_img_smartapp07.gif") no-repeat left top;}
+.billInfo_smartAppWrap .ollehSmartHowto{width:690px; height:350px; margin-bottom:40px; background:url("../images/common/bill_img_smartapp08.gif") no-repeat left top;}
+.billInfo_smartAppWrap .ollehSmartRecep .ollehSmartRecepTit{width:690px; height:87px; margin-bottom:20px; background:url("../images/common/bill_img_smartapp09.gif") no-repeat left top;}
+.billInfo_smartAppWrap .ollehSmartRecep .ollehSmartRecepInfo{width:690px; height:470px; margin-bottom:20px; background:url("../images/common/bill_img_smartapp10.gif") no-repeat left top;}
+
+.app-list {width:590px; margin:29px auto 0 auto; overflow:hidden;}
+.app-list li {position:relative; float:left; width:190px; margin:0 0 0 7px; padding:85px 0 50px 0; border:1px solid #ccc; border-radius:2px; font-size:19px; background-color:#fff; color:#333;	text-align:center;}
+.app-list li:first-child {margin:0;background:#fff url('../images/common/bill_icon_appstore.png') no-repeat 50% 20px;}
+.app-list li.google {background:#fff url('../images/common/bill_icon_googleplay.png') no-repeat 50% 20px;}
+.app-list li.market {background:#fff url('../images/common/bill_icon_olleh_market.png') no-repeat 50% 20px;}
+.app-list li .btnSty {position:absolute; bottom:14px; left:50%; margin:0 0 0 -35px;}
+
 
 /* 납부방법 변경 */
 .bill_payChangeWrap {}
