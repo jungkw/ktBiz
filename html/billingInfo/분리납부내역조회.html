@@ -40,8 +40,6 @@
 		});
 	</script>
 
-	<!-- s: 기존소스유지 -->
-	<!-- e: 기존소스유지 -->
 
 </head>
 
@@ -388,7 +386,7 @@
 						</div>
 
 						<div class="comm_tableBrdr">
-							<table class="comm_table" summary="분리납부한 휴대폰번호, 적용기준, 유형, 지원금액, 개인금액, 총액을 확인할 수 있는 표 입니다.">
+							<table class="comm_table" summary="분리납부한 휴대폰 번호, 적용기준, 유형, 지원금액, 개인금액, 총액을 확인할 수 있는 표 입니다.">
 								<caption>분리납부 내역표</caption>
 								<colgroup>
 									<col width="160" />
@@ -401,7 +399,7 @@
 
 								<thead>
 									<tr>
-										<th scope="col">휴대폰번호</th>
+										<th scope="col">휴대폰 번호</th>
 										<th scope="col">적용기준</th>
 										<th scope="col">유형</th>
 										<th scope="col">지원금액</th>
@@ -411,7 +409,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="center num font15">010-2776-*582</td>
+										<td class="center num font15"><a href="#userNameLayerPop" id="userNameOpenLayer01" title="레이어 열림" class="underline color000" onclick="$.ktBizPopClick(this); return false;">010-2776-*582</a></td>
 										<td class="center gray">월말</td>
 										<td class="center gray">금액</td>
 										<td class="center num font15">67,000</td>
@@ -419,7 +417,7 @@
 										<td class="center num font15 last">105,825</td>
 									</tr>
 									<tr>
-										<td class="center num font15">010-2776-*582</td>
+										<td class="center num font15"><a href="#userNameLayerPop" id="userNameOpenLayer02" title="레이어 열림" class="underline color000" onclick="$.ktBizPopClick(this); return false;">010-2776-*582</a></td>
 										<td class="center gray">월말</td>
 										<td class="center gray">금액</td>
 										<td class="center num font15">67,000</td>
@@ -427,7 +425,7 @@
 										<td class="center num font15 last">67,000</td>
 									</tr>
 									<tr>
-										<td class="center num font15">010-2776-*582</td>
+										<td class="center num font15"><a href="#userNameLayerPop" id="userNameOpenLayer03" title="레이어 열림" class="underline color000" onclick="$.ktBizPopClick(this); return false;">010-2776-*582</a></td>
 										<td class="center gray">월말</td>
 										<td class="center gray">금액</td>
 										<td class="center num font15">67,000</td>
@@ -435,7 +433,7 @@
 										<td class="center num font15 last">123,269</td>
 									</tr>
 									<tr>
-										<td class="center num font15">010-2776-*582</td>
+										<td class="center num font15"><a href="#userNameLayerPop" id="userNameOpenLayer04" title="레이어 열림" class="underline color000" onclick="$.ktBizPopClick(this); return false;">010-2776-*582</a></td>
 										<td class="center gray">월말</td>
 										<td class="center gray">금액</td>
 										<td class="center num font15">67,000</td>
@@ -468,6 +466,41 @@
 				</div>
 
 				<!-- e : 컨텐츠 영역  -->
+
+
+				<!-- s : 인쇄 팝업 -->
+				<div class="pop_layerWrap" id="userNameLayerPop" style="margin-left:-250px; width: 500px; display:none;">
+					<div class="pop_wrap">
+						<!-- s : header -->
+						<div class="pop_header">
+							<h5>분리납부조회 사용자명</h5>
+						</div>
+						<!-- e : header -->
+
+						<!-- s : contents -->
+						<div class="pop_conts">
+							<div class="pop_contsContainer">
+
+								<p class="font16">휴대폰 번호 <span class="num">010-1234-5678</span>의 사용자는 홍길동입니다.</p>
+
+							</div>
+						</div>
+						<!-- e : contents -->
+
+					</div>
+					<!-- s : footer -->
+					<div class="pop_footer">
+						<div class="pop_footerInner">
+							<p class="pop_close">
+								<a href="#userNameOpenLayer01" >닫기</a>
+							</p>
+						</div>
+					</div>
+					<!-- e : footer -->
+				</div>
+				<!-- e : 인쇄 팝업 -->
+
+
 			</div>
 			<!-- e : content Body -->
 		</div>
