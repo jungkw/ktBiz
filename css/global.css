@@ -278,6 +278,7 @@ border-radius: 3px 3px 3px 3px;
 .commBillSearchWrap .circuitSearchDiv .label {font-size:14px;}
 
 /* global css */
+.displayBlock {display: block;}
 .lrmargin {margin: 0 29px !important}
 .placeholder.active {color:#999;}
 .hidden {visibility:hidden; }
@@ -496,6 +497,7 @@ a.color333 {color:#333 !important;}
 
 
 /* width */
+.w50p {width:50% !important;}
 .w90p {width:90% !important;}
 .w100p {width:100% !important;}
 .w140p {width:140% !important;}

@@ -1498,7 +1498,7 @@
 											<!-- s :  우편명세서 -->
 											<div class="comm_conts02 commConts" style="display: none;">
 												<div class="comm_tableBrdr mt12">
-													<table class="comm_table" summary="현재 우편 주소, 받으실 주소 순서로 우편명세서 재발송 신청을 할 수 있는 표 입니다.">
+													<table class="comm_table" summary="현재 우편 주소, 받으실 주소, 발송유형, 신청사유 순서로 우편명세서 재발송 신청을 할 수 있는 표 입니다.">
 														<caption>우편명세서 주소 정보 입력</caption>
 														<colgroup>
 															<col width="25%" />
@@ -1532,6 +1532,27 @@
 																	<p><input type="text" id="addrUpdate2" disabled="" class="mr5" /><a href="#postLayerPop" id="postLayerPopOpen3" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="우편번호검색 레이어팝업 열림">우편번호검색</a></p>
 																	<p class="mt8"><input type="text" class="w100p" disabled="" title="기본주소가 노출됩니다." /></p>
 																	<p class="mt8"><input type="text" class="w100p" disabled="" title="상세주소가 노출됩니다." /></p>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row">발송유형</th>
+																<td class="last">
+																	<div class="comm_radio mr10">
+																		<input type="radio" name="mailType" id="regualmail" class="mr5" checked="" />
+																		<i></i>
+																		<label for="regualmail" class="vm">일반우편</label>
+																	</div>
+																	<div class="comm_radio">
+																		<input type="radio" name="mailType" id="registeredmail" class="mr5"  />
+																		<i></i>
+																		<label for="registeredmail" class="vm">등기우편</label>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<th scope="row"><label for="appliDesc">신청사유</label></th>
+																<td class="last">
+																	<input type="text" class="w100p" id="appliDesc" />
 																</td>
 															</tr>
 														</tbody>

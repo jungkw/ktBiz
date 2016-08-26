@@ -15,7 +15,7 @@
 
 	<link rel="shortcut icon" href="http://www.olleh.com/favicon.ico" />
 
-	<title>[My페이지] 모바일 부가서비스신청 - 대한민국 1등 비즈니스 성공 파트너</title>
+	<title>[My페이지] 모바일 부가서비스 신청 - 대한민국 1등 비즈니스 성공 파트너</title>
 
 	<link rel="stylesheet" href="../../css/common.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/popup.css" type="text/css" />
@@ -630,6 +630,10 @@
 	<button type="button" class="remote-btn03" href="#addSvcSettingM05" id="addSvcSettingM05Open" onclick="$.ktBizPopClick(this); return false;">olleh LTE my time plan<br />서비스 설정 : 팝업</button>
 	<button type="button" class="remote-btn03" href="#addSvcSettingM06" id="addSvcSettingM06Open" onclick="$.ktBizPopClick(this); return false;">음성로밍 하루종일 : 팝업</button>
 	<button type="button" class="remote-btn03" href="#addSvcNoSetting" id="addSvcNoSettingOpen" onclick="$.ktBizPopClick(this); return false;">설정 미완료 알림 : 팝업</button>
+	<button type="button" class="remote-btn03" href="#autoCancelSvcLayer" id="autoCancelSvcOpenLayer" onclick="$.ktBizPopClick(this); return false;">자동 해지 부가서비스</button>
+	<button type="button" class="remote-btn03" href="#addSvcCompleteLayer" id="addSvcCompleteOpenLayer" onclick="$.ktBizPopClick(this); return false;">부가서비스 신청 완료</button>
+	<button type="button" class="remote-btn03" href="#addSvcImposLayer" id="addSvcImposOpenLayer" onclick="$.ktBizPopClick(this); return false;">부가서비스 신청 불가</button>
+	<button type="button" class="remote-btn03" href="#closeAddSvcCompleteLayer" id="closeAddSvcCompleteOpenLayer" onclick="$.ktBizPopClick(this); return false;">부가서비스 해지 완료</button>
 </div>
 <!-- e : UI GUIDE -->
 
@@ -1090,6 +1094,72 @@
 							<!-- e : footer -->
 						</div>
 						<!-- e : 부가서비스 해지 팝업 -->
+
+						<!-- s : 부가서비스 해지 완료 팝업 -->
+						<div class="pop_layerWrap" id="closeAddSvcCompleteLayer" style="width: 750px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h4>부가서비스 해지</h4>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h5 class="pop_subTitle pt0 alignCenter lh30">모바일 <span class="txtNum">010-1234-567*</span><br/>부가서비스 해지가 완료되었습니다.</h5>
+
+											<div class="comm_tableBrdr">
+												<table class="comm_table" summary="신청된 요금제와 해지된 부가서비스 그리고 변경 적용일를 확인 할 수 있습니다.">
+													<caption>부가서비스 해지</caption>
+													<colgroup>
+														<col width="195" />
+														<col width="%" />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row" class="left">선택 부가서비스</th>
+															<td class="last">
+																<span class="color666">기본팩플러스</span>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row"  class="left">이용요금 (부가세 포함)</th>
+															<td class="last smallSize color666">월&nbsp;<span class="num color000">21,290</span>원</td>
+														</tr>
+														<tr>
+															<th scope="row"  class="left">변경 적용일</th>
+															<td class="last color666">0000년 00월00일 00:00</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">5월 요금 청구 시 해지일 이전까지 사용한 요금이 일할 계산되어 부과됩니다.</p>
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+									</div>
+
+								
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="#closeAddSvcCompleteOpenLayer">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 해지 완료 팝업 -->
 
 						<!-- s : 선택된 항목이 없을경우 팝업 -->
 						<div class="pop_layerWrap" id="noDataLayer" style="display:none;">
@@ -1928,6 +1998,104 @@
 							<a href="#" class="btnSty big">취소</a>
 						</div>
 
+
+
+						<!-- s : 부가서비스 자동해지 팝업 -->
+						<div class="pop_layerWrap" id="autoCancelSvcLayer" style="width: 750px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h4>부가서비스 신청</h4>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h5 class="pop_subTitle1 pt0 alignCenter">모바일 <span class="txtNum">010-1234-567*</span></h5>
+											<p class="font19 alignCenter">신청하신 [캐치콜서비스]는 이용 중인 [캐치콜플러스첫달 100원] 와 동시 이용하실 수 없습니다.</p>
+
+											<div class="comm_tableBrdr mt30">
+												<table class="comm_table" summary="신청할 부가서비스와 이용요금(부가세포함)을 확인 할 수 있습니다.">
+													<caption>부가서비스 신청</caption>
+													<colgroup>
+														<col width="195" />
+														<col width="%" />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row" class="left">선택 부가서비스</th>
+															<td class="last">
+																<span class="color666">캐치콜서비스</span>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row"  class="left">이용요금 (부가세 포함)</th>
+															<td class="last smallSize color666">월&nbsp;<span class="num color000">10,000</span>원 (11,000원)</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<h6 class="pop_subTitle pt0 mb7 mt30">서비스 시간대 선택</h6>
+											<p class="font15">부가서비스 신청에 따라 동일 계열 상품이 자동 해지 됩니다.</p>
+											<div class="comm_tableBrdr mt20">
+												<table class="comm_table" summary="부가서비스 명, 이용요금(부가세 포함), 신청일, 사유 순서로 자동 해지 부가서비스에 대한 정보를 나타낸 표 입니다.">
+													<caption>자동 해지 부가서비스</caption>
+													<colgroup>
+														<col width="195" />
+														<col width="*" />
+														<col width="*" />
+														<col width="*" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">부가서비스 명</th>
+															<th scope="col">이용요금<br/>(부가세 포함)</th>
+															<th scope="col">신청일</th>
+															<th scope="col" class="last">사유</th>
+														</tr>
+													</thead>
+													<tbody>
+														
+														<tr>
+															<td class="center">캐치콜 플러스 첫달 100원</td>
+															<td class="smallSize color666 center"><span class="num color000">100</span>원<br/>(110원)</td>
+															<td class="center">2016-04-20</td>
+															<td class="center last">요금제 동일 계열 포함</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">다음카카오팩은 부가서비스 가입 시 월정액 요금이 즉시 과금 처리 되므로 해지하더라도 일할 적용되지 않습니다.</p>
+
+
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>신청</span></a>
+										<a href="#autoCancelSvcOpenLayer" class="btnSty big pop_btn_close"><span>취소</span></a>
+									</div>
+
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="#autoCancelSvcOpenLayer">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 자동해지 팝업 -->
+
 						<!-- s : 부가서비스 신청 팝업 -->
 						<div class="pop_layerWrap" id="applyAddSvcLayer" style="width: 750px; display:none;">
 							<div class="pop_wrap">
@@ -1970,14 +2138,14 @@
 									</div>
 
 									<div class="pop_contsBtns">
-										<a href="" class="btnSty big red"><span>확인</span></a>
+										<a href="" class="btnSty big red"><span>신청</span></a>
 										<a href="" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
 									</div>
 
 									<div class="comm_noticeBox mt0">
 										<h2 class="title">꼭 확인하세요!</h2>
 										<ul class="notice-list">
-											<li>확인 버튼을 클릭하시면, 선택하신 서비스가 사용가능한 경우 신청됩니다.</li>
+											<li>신청 버튼을 클릭하시면, 선택하신 서비스가 사용가능한 경우 신청됩니다.</li>
 											<li>해지시 바로 재가입이 불가능한 부가서비스가 있으므로 주의바랍니다.<br />(부가서비스 신청/변경 화면 하단의 "꼭 확인하세요!" 참조)</li>
 											<li>부가서비스 월중 신청/해지 시 해당 월 월정액 및 무료제공 혜택은 각각 일할 적용 됩니다.</li>
 										</ul>
@@ -1997,6 +2165,153 @@
 							<!-- e : footer -->
 						</div>
 						<!-- e : 부가서비스 신청 팝업 -->
+
+
+						<!-- s : 부가서비스 신청 완료 팝업 -->
+						<div class="pop_layerWrap" id="addSvcCompleteLayer" style="width: 750px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h4>부가서비스 신청</h4>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h5 class="pop_subTitle1 pt0 alignCenter lh30">모바일 <span class="txtNum">010-1234-567*</span><br/>부가서비스 신청이 완료되었습니다.</h5>
+
+											<div class="comm_tableBrdr">
+												<table class="comm_table" summary="신청할 부가서비스와 이용요금(부가세포함) 그리고 변경 적용일을 확인 할 수 있습니다.">
+													<caption>부가서비스 신청</caption>
+													<colgroup>
+														<col width="195" />
+														<col width="%" />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row" class="left">선택 부가서비스</th>
+															<td class="last">
+																<span class="color666">기본팩플러스</span>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row"  class="left">이용요금 (부가세 포함)</th>
+															<td class="last smallSize color666">월&nbsp;<span class="num color000">21,290</span>원 (11,000원)</td>
+														</tr>
+														<tr>
+															<th scope="row"  class="left">변경 적용일</th>
+															<td class="last color666">0000년 00월 00일 00:00</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">5월 요금 청구 시 신청일 부터 말일까지의 사용 요금이 일할 계산되어 부과되며, 그 다음 달부터는 월 이용요금이 550원이 부과됩니다.</p>
+											<p class="bulletIcon mt10">GiGA 로열클럽 대상으로 “미디어팩”이 무료로 제공됩니다.</p>
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+									</div>
+
+								
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="#addSvcCompleteOpenLayer">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 신청 완료 팝업 -->
+
+
+						<!-- s : 부가서비스 신청 불가 팝업 -->
+						<div class="pop_layerWrap" id="addSvcImposLayer" style="width: 750px; display:none;">
+							<div class="pop_wrap">
+
+								<!-- s : header -->
+								<div class="pop_header">
+									<h4>부가서비스 신청</h4>
+								</div>
+								<!-- e : header -->
+
+								<!-- s : contents -->
+								<div class="pop_conts">
+									<div class="pop_contsContainer">
+										<div class="pop_svc">
+											<h5 class="pop_subTitle1 pt0 alignCenter lh30 w50p m0auto">모바일 <span class="txtNum">010-1234-567*</span><br/>"olleh 데이터 로밍 무제한" 자동 해지 처리가 불가능하여 부가서비스 신청이 완료 되지 않았습니다.</h5>
+
+											<div class="comm_tableBrdr mt30">
+												<table class="comm_table" summary="신청할 부가서비스와 이용요금(부가세포함) 그리고 자동 해지 불가 사유를 확인 할 수 있습니다.">
+													<caption>부가서비스 신청</caption>
+													<colgroup>
+														<col width="195" />
+														<col width="%" />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row" class="left">선택 부가서비스</th>
+															<td class="last">
+																<span class="color666">olleh 데이터 로밍 무제한</span>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row"  class="left">이용요금 (부가세 포함)</th>
+															<td class="last smallSize color666">월&nbsp;<span class="num color000">21,290</span>원 (11,000원)</td>
+														</tr>
+														<tr>
+															<th scope="row"  class="left">자동 해지 불가 사유</th>
+															<td class="last color666">대리점 방문 해제</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="bulletIcon mt10">자동 해지 불가로 인한 부가서비스 신청 불가에 대한 보다 자세한 안내를 원하실 경우, KT 고객센터(국번 없이 100번/휴대폰 이용 시 지역 번호 포함)로 전화 주시거나 KT플라자로 방문하시면 됩니다.</p>
+											<p class="bulletIcon mt10">가까운 KT플라자 조회 방법: 올레닷컴(www.olleh.com) → 고객센터 → 매장/고객센터 안내→ 매장 찾기</p>
+											<p class="bulletIcon mt10">
+												업무 시간 안내<br />
+												KT 고객센터 (국번 없이 100번)<br />
+												- 월~금요일: 오전 9시 ~ 오후 6시 (토요일, 법정 공휴일 휴무)<br />
+												<!-- 2016-07-08 수정 -->
+												KT플라자<br />
+												- 매장별 운영 시간이 다릅니다. 방문 전에 꼭 확인하세요.
+
+											</p>
+										</div>
+									</div>
+
+									<div class="pop_contsBtns">
+										<a href="" class="btnSty big red"><span>확인</span></a>
+									</div>
+
+								
+								</div>
+								<!-- e : contents -->
+
+							</div>
+							<!-- s : footer -->
+							<div class="pop_footer">
+								<div class="pop_footerInner">
+									<p class="pop_close">
+										<a href="#addSvcImposOpenLayer">닫기</a>
+									</p>
+								</div>
+							</div>
+							<!-- e : footer -->
+						</div>
+						<!-- e : 부가서비스 신청 불가 팝업 -->
+
+
 
 					</div>
 					<div class="comm_contsInner grayBox bottom"></div>
@@ -2586,7 +2901,7 @@
 								</div>
 							</div>
 							<div class="pop_contsBtns">
-								<a href="#confirm" onclick="javascript:setData();" class="btnSty big red"><span>확인</span></a>
+								<a href="#confirm" onclick="javascript:setData();" class="btnSty big red"><span>설정</span></a>
 								<a href="#cancel" class="btnSty big" onclick="$(this).closest('.pop_layerWrap').find('.pop_close a').trigger('click');return false;"><span>취소</span></a>
 							</div>
 						</div>
@@ -2780,7 +3095,6 @@
 								<ul class="bulletList">
 									<li>서비스를 이용하실 날짜를 선택해주세요.(한국시간 기준)</li>
 									<li>시작일자로부터 15일간 이용가능한 상품입니다.</li>
-									<li>서비스 이용가능 국가 및 사업자를 확인하신 후 신청해 주세요. <a href="http://roaming.olleh.com/safety/_service/product/data/dru_auto.asp" class="btnSty sml ml3" target="_blank" title="새창열림">지원가능 국가 확인</a></li>
 								</ul>
 								<div class="comm_tableBrdr mt20">
 									<table class="comm_table" summary="시작일자를 입력할 수 있는 표 입니다.">

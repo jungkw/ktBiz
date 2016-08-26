@@ -727,68 +727,51 @@
 									<div id="comm_tabs01">
 										<h4 class="blind">국제전화 요금제</h4>
 										<div class="comm_tableBrdr svcInfo_planTable">
-											<table class="comm_table" summary="국제전화 요금제명, 요금제 설명을 확인하고 선택할 수 있는 표 입니다.">
+											<table class="comm_table" summary="구분, 이용요금, 요금제 설명을 확인/선택할 수 있는 표 입니다.">
 												<caption>국제전화요금제 목록표</caption>
 												<colgroup>
 													<col width="210" />
 													<col width="120" />
 													<col width="*" />
-													<col width="110" />
 												</colgroup>
 
 												<thead>
 													<tr>
-														<th scope="col">요금제명</th>
-														<th scope="col">이용요금<br />(부가세포함)</th>
-														<th scope="col">요금제 설명</th>
-														<th scope="col" class="last">신청/변경</th>
+														<th scope="col">구분</th>
+														<th scope="col">이용요금</th>
+														<th scope="col" class="last">요금제 설명</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
 														<td class="plan_radio">
-															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab010" value="KJPLTE029" />
-																<i></i>
-																<label for="socmy_fee_tab010" class="blind">요금제선택</label>
-															</span>
 															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">001 모바일파워</a>
+															<p class="mt5">
+																<a href="#applyChkLayer" id="addInfoSocmy_fee_tab010_open" class="btnSty mini gray" onclick="$.ktBizPopClick(this); return false;" title="001 모바일파워 요금제 신청/변경 레이어 열림">신청/변경</a>
+															</p>
 														</td>
 														<td class="center num">1,100<span>원</span></td>
-														<td>전세계 20개국 대상 휴대폰 국내통화료와 동일 수준의 요금으로 국제전화</td>
-														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab010_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
-														</td>
+														<td class="font14 last">전세계 20개국 대상 휴대폰 국내통화료와 동일 수준의 요금으로 국제전화</td>
 													</tr>
 													<tr>
 														<td class="plan_radio">
-															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab011" value="KJPLTE029" />
-																<i></i>
-																<label for="socmy_fee_tab011" class="blind">요금제선택</label>
-															</span>
 															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">통큰요금제</a>
+															<p class="mt5">
+																<a href="#applyChkLayer" id="addInfoSocmy_fee_tab011_open" class="btnSty mini gray" onclick="$.ktBizPopClick(this); return false;" title="통큰요금제 신청/변경 레이어 열림">신청/변경</a>
+															</p>
 														</td>
 														<td class="center num">3,300<span>원</span></td>
-														<td>국가를 지정하고 월정액을 납부하면 최대 1,000분까지 무료통화</td>
-														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab011_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
-														</td>
+														<td class="font14 last">국가를 지정하고 월정액을 납부하면 최대 1,000분까지 무료통화</td>
 													</tr>
 													<tr>
 														<td class="plan_radio">
-															<span class="comm_radio">
-																<input type="radio" name="soc" id="socmy_fee_tab012" value="KJPLTE029" />
-																<i></i>
-																<label for="socmy_fee_tab012" class="blind">요금제선택</label>
-															</span>
 															<a href="javascript:goInfoPop('http://product.olleh.com/wDic/my2Outproduct.do?ItemCode=1037');" title="새창 열림">알짜요금제</a>
+															<p class="mt5">
+																<a href="#applyChkLayer" id="addInfoSocmy_fee_tab012_open" class="btnSty mini gray" onclick="$.ktBizPopClick(this); return false;" title="알짜요금제 신청/변경 레이어 열림">신청/변경</a>
+															</p>
 														</td>
 														<td class="center num">1,100<span>원</span></td>
-														<td>기본료 1,000원으로 표준요금 대비 평균 62%를 할인</td>
-														<td class="center last">
-															<a href="#applyChkLayer" id="addInfoSocmy_fee_tab012_open" class="btnSty mid" onclick="$.ktBizPopClick(this); return false;" title="요금제 신청 레이어 열림">신청/변경</a>
-														</td>
+														<td class="font14 last">기본료 1,000원으로 표준요금 대비 평균 62%를 할인</td>
 													</tr>
 												</tbody>
 											</table>
@@ -932,6 +915,13 @@
 										</div>
 
 										<p class="pop_comm_box alignCenter mt5"><span class="fBold color000 mr10">변경적용일</span> 2016년 04월 20일 신청 즉시</p>
+										<div class="mt20">
+											<div class="comm_checkbox">
+												<input name="chkAgree" id="chkAgree" type="checkbox" />
+												<i></i>
+												<label for="chkAgree">변경하고자 하는 요금제의 무제한 혜택 관련 주요 제한 사항을 확인 했으며, 해당 요금제로의 <span class="displayBlock pl30">변경에 동의 합니다.</span></label>
+											</div>
+										</div>
 
 										<h5 class="pop_subTitle2 mt28 mb10">자동 해지 부가서비스</h5>
 										<p>요금제 변경에 따라 동일 계열 상품이 자동 해지 됩니다.</p>
